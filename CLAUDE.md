@@ -8,7 +8,7 @@
 ## Project Overview
 - **Project**: faf.one website
 - **Stack**: SvelteKit with Svelte 5 runes
-- **Purpose**: The official format authority for .faf - The JPEG for AI
+- **Purpose**: The official format authority for .faf - Project DNA ✨ for ANY AI - AI Context, On-Demand.
 
 ## Real Achievements Only
 - ☑️ MCP (Model Context Protocol) with 800+ weekly downloads
@@ -29,7 +29,8 @@
 - **Approved emojis**: 🧡 ⚡️ 🏁 🏆 🏎️ 🍊 ⌚ ☑️ (use ☑️ not ✅ wherever possible)
 - **Format**: YAML and 🍜 noodles for AI, converts to markdown/TXT for humans
 - **Brand Name**: Always `.faf` (lowercase) when referring to the format
-- **Tagline Style**: "The JPEG for AI™" - ALWAYS white, bold, and underlined for maximum impact
+- **Tagline**: "Project DNA ✨ for ANY AI - AI Context, On-Demand." with 🧡 (human) and 🩵 (AI) heart emojis
+- **Tagline Style**: White, bold, underlined for maximum impact
 - **Tagline Alignment**: Can be left-aligned or right-aligned, but NEVER centered
 
 ## Development Rules - TRUST IS EVERYTHING

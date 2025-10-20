@@ -62,6 +62,7 @@
 		
 		<div class="footer-bottom">
 			<p>© {currentYear} .faf Format Authority. Built with 🧡 in Atlanta.</p>
+			<p class="footer-creator">Creator: James Wolfe (Wolfe-Jam) | <a href="https://orcid.org/0009-0007-0801-3841" target="_blank" rel="noopener noreferrer">ORCID: 0009-0007-0801-3841</a></p>
 		</div>
 	</div>
 </footer>
@@ -168,6 +169,21 @@
 		margin: 0;
 		color: #666;
 		font-size: 0.875rem;
+	}
+
+	.footer-creator {
+		margin-top: 0.5rem !important;
+		font-size: 0.8rem !important;
+	}
+
+	.footer-creator a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.footer-creator a:hover {
+		text-decoration: underline;
 	}
 	
 	.footer-social {

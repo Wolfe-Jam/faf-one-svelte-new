@@ -103,9 +103,9 @@
 			<!-- BLOCK 2: Authority Statements -->
 			<ScrollRevealText threshold={0.5} delay={0}>
 				<div class="text-block authority-statement">
-					<div>The AI Context MCP with 3,400+ downloads and growing</div>
-					<div>The AI Chrome Extension, LIVE and approved by Google,</div>
-					<div><em>Ready, and waiting for Claude-beta and Gemini</em></div>
+					<div><strong>🏆 Anthropic-Approved MCP Server</strong> — Published to official MCP registry</div>
+					<div>8,700+ Total Downloads • CLI: 5.1k 🏆 • MCP: 3.6k 🤖</div>
+					<div>Google-Approved Chrome Extension — LIVE in Web Store</div>
 				</div>
 			</ScrollRevealText>
 			

@@ -217,7 +217,7 @@ section {
 }
 
 .text-cyan {
-	color: var(--faf-cyan);
+	color: var(--faf-cyan-dark);
 }
 
 .text-green {

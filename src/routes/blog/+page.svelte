@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/stop-explaining-start-jamming',
+			title: 'Stop Explaining. Start Jamming.',
+			date: 'October 20, 2025',
+			timestamp: '2025-10-20',
+			excerpt: "I'm not using AI to code. I'm jamming with AI. Like playing music with a master musician. Why coding with AI is actually music, and .faf is the score that makes the magic happen. ✨",
+			emoji: '🎸',
+			category: 'Philosophy'
+		},
+		{
 			slug: 'blog/mcp-registry-launch',
 			title: 'claude-faf-mcp Published to Official MCP Registry',
 			date: 'October 16, 2025',
@@ -189,6 +198,11 @@
 
 	.post-card[href*="v3-launch"] .post-category {
 		background: var(--faf-cyan-dark);
+	}
+
+	.post-card[href*="stop-explaining-start-jamming"] .post-category,
+	.post-card[href*="philosophy"] .post-category {
+		background: #9B59B6;
 	}
 
 	.post-card[href*="68-minutes"] .post-category,
