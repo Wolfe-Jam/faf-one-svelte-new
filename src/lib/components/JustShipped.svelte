@@ -1,0 +1,442 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+
+	// Just Shipped - Latest releases showcase as dismissable popup that stays on page
+	let showAsPopup = $state(false);
+	let showOnPage = $state(false);
+
+	onMount(() => {
+		// Check if user has dismissed the popup before
+		const dismissed = browser && sessionStorage.getItem('just-shipped-dismissed');
+
+		if (!dismissed) {
+			// Show popup after a brief delay
+			setTimeout(() => {
+				showAsPopup = true;
+			}, 1000);
+		} else {
+			// Already dismissed, just show on page
+			showOnPage = true;
+		}
+	});
+
+	function closePopup() {
+		showAsPopup = false;
+		showOnPage = true; // Now show it on the page
+		if (browser) {
+			sessionStorage.setItem('just-shipped-dismissed', 'true');
+		}
+	}
+</script>
+
+{#if showAsPopup}
+<div class="popup-overlay" onclick={closePopup}>
+	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
+		<button class="close-button" onclick={closePopup} aria-label="Close">✕</button>
+
+<section class="just-shipped popup-mode">
+	<div class="container">
+		<h2 class="section-title">🏁 Just Shipped</h2>
+
+		<div class="total-stats stats-top">
+			<p>
+				<strong>8,700+ Total Downloads</strong> •
+				<strong>208/208 Tests Passing</strong> •
+				<strong>MIT License, FREE FOREVER</strong>
+			</p>
+		</div>
+
+		<div class="releases-grid">
+			<!-- CLI v3.0.4 -->
+			<div class="release-card">
+				<div class="release-header">
+					<h3>🩵⚡️ faf-cli v3.0.4</h3>
+					<span class="badge">Championship Edition</span>
+				</div>
+				<p class="release-description">
+					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
+				</p>
+				<ul class="release-features">
+					<li>☑️ 5,100+ downloads (npm)</li>
+					<li>☑️ 173/173 tests passing</li>
+					<li>☑️ 100% TypeScript strict mode</li>
+					<li>☑️ &lt;50ms championship performance</li>
+					<li>☑️ 41 commands including FAF Family</li>
+				</ul>
+				<div class="release-links">
+					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
+						View on npm
+					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="link-button secondary">
+						GitHub
+					</a>
+				</div>
+			</div>
+
+			<!-- MCP v2.6.3 -->
+			<div class="release-card">
+				<div class="release-header">
+					<h3>🧡⚡️ claude-faf-mcp v2.6.3</h3>
+					<span class="badge anthropic">Anthropic-Approved</span>
+				</div>
+				<p class="release-description">
+					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
+				</p>
+				<ul class="release-features">
+					<li>☑️ 3,600+ downloads (npm)</li>
+					<li>☑️ 35/35 tests passing</li>
+					<li>☑️ PR #2759 MERGED</li>
+					<li>☑️ 33+ MCP tools</li>
+					<li>☑️ Format-Driven Architecture</li>
+				</ul>
+				<div class="release-links">
+					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
+						View on npm
+					</a>
+					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-button secondary">
+						PR #2759
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="total-stats">
+			<p>
+				<strong>8,700+ Total Downloads</strong> •
+				<strong>208/208 Tests Passing</strong> •
+				<strong>MIT License, FREE Forever</strong>
+			</p>
+		</div>
+	</div>
+</section>
+
+	</div>
+</div>
+{/if}
+
+{#if showOnPage}
+<section class="just-shipped page-mode">
+	<div class="container">
+		<h2 class="section-title">🏁 Just Shipped</h2>
+
+		<div class="releases-grid">
+			<!-- CLI v3.0.4 -->
+			<div class="release-card">
+				<div class="release-header">
+					<h3>🩵⚡️ faf-cli v3.0.4</h3>
+					<span class="badge">Championship Edition</span>
+				</div>
+				<p class="release-description">
+					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
+				</p>
+				<ul class="release-features">
+					<li>☑️ 5,100+ downloads (npm)</li>
+					<li>☑️ 173/173 tests passing</li>
+					<li>☑️ 100% TypeScript strict mode</li>
+					<li>☑️ &lt;50ms championship performance</li>
+					<li>☑️ 41 commands including FAF Family</li>
+				</ul>
+				<div class="release-links">
+					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
+						View on npm
+					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="link-button secondary">
+						GitHub
+					</a>
+				</div>
+			</div>
+
+			<!-- MCP v2.6.3 -->
+			<div class="release-card">
+				<div class="release-header">
+					<h3>🧡⚡️ claude-faf-mcp v2.6.3</h3>
+					<span class="badge anthropic">Anthropic-Approved</span>
+				</div>
+				<p class="release-description">
+					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
+				</p>
+				<ul class="release-features">
+					<li>☑️ 3,600+ downloads (npm)</li>
+					<li>☑️ 35/35 tests passing</li>
+					<li>☑️ PR #2759 MERGED</li>
+					<li>☑️ 33+ MCP tools</li>
+					<li>☑️ Format-Driven Architecture</li>
+				</ul>
+				<div class="release-links">
+					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
+						View on npm
+					</a>
+					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-button secondary">
+						PR #2759
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="total-stats">
+			<p>
+				<strong>8,700+ Total Downloads</strong> •
+				<strong>208/208 Tests Passing</strong> •
+				<strong>MIT License, FREE Forever</strong>
+			</p>
+		</div>
+	</div>
+</section>
+{/if}
+
+<style>
+	.popup-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.8);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 9999;
+		padding: 2rem;
+		animation: fadeIn 0.3s ease;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.popup-content {
+		position: relative;
+		max-width: 900px;
+		max-height: 90vh;
+		overflow-y: auto;
+		background: var(--faf-cream);
+		border-radius: 16px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		animation: slideUp 0.3s ease;
+	}
+
+	@keyframes slideUp {
+		from {
+			transform: translateY(50px);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.close-button {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		width: 40px;
+		height: 40px;
+		border: none;
+		background: rgba(0, 0, 0, 0.1);
+		color: var(--faf-black);
+		font-size: 1.5rem;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.2s ease;
+		z-index: 10;
+	}
+
+	.close-button:hover {
+		background: var(--faf-orange);
+		color: white;
+		transform: scale(1.1);
+	}
+
+	.just-shipped {
+		background: var(--faf-cream);
+		padding: 4rem 2rem;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 800;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--faf-black);
+	}
+
+	.releases-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.release-card {
+		background: white;
+		border-radius: 12px;
+		padding: 2rem;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.release-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	}
+
+	.release-header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.release-header h3 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin: 0;
+	}
+
+	.badge {
+		background: linear-gradient(135deg, var(--faf-orange) 0%, #FF914D 100%);
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 999px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		white-space: nowrap;
+	}
+
+	.badge.anthropic {
+		background: linear-gradient(135deg, var(--faf-cyan-dark) 0%, #00E5E5 100%);
+	}
+
+	.release-description {
+		color: #555;
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
+
+	.release-features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.release-features li {
+		padding: 0.5rem 0;
+		color: var(--faf-black);
+		font-weight: 500;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.release-features li:last-child {
+		border-bottom: none;
+	}
+
+	.release-links {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.link-button {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background: linear-gradient(135deg, var(--faf-orange) 0%, #FF914D 100%);
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+		text-align: center;
+	}
+
+	.link-button:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+	}
+
+	.link-button.secondary {
+		background: linear-gradient(135deg, #4a4a4a 0%, #2c3e50 100%);
+	}
+
+	.link-button.secondary:hover {
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
+
+	.total-stats {
+		text-align: center;
+		padding: 2rem;
+		background: rgba(0, 229, 229, 0.1);
+		border-radius: 12px;
+		margin-top: 2rem;
+	}
+
+	.stats-top {
+		margin-top: 0;
+		margin-bottom: 2rem;
+		background: linear-gradient(135deg, var(--faf-orange) 0%, #FF914D 100%);
+	}
+
+	.stats-top p {
+		color: white;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	.stats-top strong {
+		color: white;
+	}
+
+	.total-stats p {
+		font-size: 1.125rem;
+		color: var(--faf-black);
+		margin: 0;
+	}
+
+	.total-stats strong {
+		font-weight: 700;
+		color: var(--faf-black);
+	}
+
+	@media (max-width: 768px) {
+		.just-shipped {
+			padding: 3rem 1rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.releases-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.release-card {
+			padding: 1.5rem;
+		}
+
+		.release-header h3 {
+			font-size: 1.25rem;
+		}
+
+		.total-stats p {
+			font-size: 1rem;
+		}
+	}
+</style>

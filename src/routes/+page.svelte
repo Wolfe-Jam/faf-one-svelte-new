@@ -3,6 +3,8 @@
 	import { browser } from '$app/environment';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Hero from '$lib/components/Hero.svelte';
+	import JustShipped from '$lib/components/JustShipped.svelte';
+	// import TheNewStandard from '$lib/components/TheNewStandard.svelte';
 	import TrustVsHope from '$lib/components/TrustVsHope.svelte';
 	import LiveDemo from '$lib/components/LiveDemo.svelte';
 	import Journey from '$lib/components/Journey.svelte';
@@ -95,6 +97,12 @@
 	<div id="hero">
 		<Hero />
 	</div>
+	<div id="just-shipped">
+		<JustShipped />
+	</div>
+	<!-- <div id="new-standard">
+		<TheNewStandard />
+	</div> -->
 	<div id="features">
 		<TrustVsHope />
 	</div>

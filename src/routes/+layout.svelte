@@ -1,8 +1,14 @@
 <script>
 	import '../app.css';
 	import SideNav from '$lib/components/SideNav.svelte';
+	// import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
+	// import { isDarkMode, toggleTheme } from '$lib/theme-store';
 
 	let { children } = $props();
+
+	// function handleThemeToggle() {
+	// 	toggleTheme();
+	// }
 </script>
 
 <SideNav />
@@ -10,20 +16,43 @@
 <!-- 3-Section Banner -->
 <div class="official-banner">
 	<a href="/press-release" class="banner-section">
-		🚀 PRESS RELEASE 🚀
+		🏁 Just Shipped 🏁
 	</a>
 	<div class="banner-section-center">
-		🏎️⚡️ 7,400+ Downloads • CLI: 4.4k 🏆 vs MCP: 3k 🤖
+		8.8k Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
 	</div>
-	<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="banner-section">
-		⚡️ MCP #2759 Pending ⚡️
+	<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="banner-section">
+		⚡️ MCP #2759 MERGED ⚡️
 	</a>
 	<div class="banner-shine"></div>
 </div>
 
 {@render children?.()}
 
+<!-- WolfejamGizmo Theme Toggle - Hidden until full theme implementation -->
+<!-- <div class="theme-toggle-container">
+	<WolfejamGizmo
+		isDark={$isDarkMode}
+		size={48}
+		ontoggle={handleThemeToggle}
+	/>
+</div> -->
+
 <style>
+	/* .theme-toggle-container {
+		position: fixed;
+		bottom: 24px;
+		right: 24px;
+		z-index: 1000;
+	}
+
+	@media (max-width: 640px) {
+		.theme-toggle-container {
+			bottom: 16px;
+			right: 16px;
+		}
+	} */
+
 	.official-banner {
 		background: linear-gradient(135deg,
 			#4a4a4a 0%,
@@ -46,6 +75,7 @@
 		grid-template-columns: 1fr 2fr 1fr;
 		align-items: center;
 		text-align: center;
+		min-width: fit-content;
 	}
 
 	.banner-section {
@@ -63,6 +93,12 @@
 	.banner-section-center {
 		font-size: 1em;
 		font-weight: 700;
+	}
+
+	.anthropic-approved {
+		color: var(--faf-orange);
+		font-weight: 800;
+		text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
 	}
 
 	.banner-home-link {
