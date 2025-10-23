@@ -39,9 +39,26 @@
 	<div class="container">
 		<h2 class="section-title">🏁 Just Shipped</h2>
 
+		<!-- NEW: Chrome Extension One-Liner -->
+		<div class="featured-release">
+			<div class="featured-content">
+				<span class="featured-emoji">⚡</span>
+				<div class="featured-text">
+					<strong>Chrome Extension v1.0.3</strong> — Instant AI-readiness analysis. One-click .txt downloads.
+					<span class="badge-inline google">Google-Approved</span>
+				</div>
+			</div>
+			<div class="featured-actions">
+				<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="btn-install">
+					Install Now →
+				</a>
+				<a href="/blog/chrome-extension-launch" class="btn-learn">Learn More</a>
+			</div>
+		</div>
+
 		<div class="total-stats stats-top">
 			<p>
-				<strong>8,700+ Total Downloads</strong> •
+				<strong>9,000+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -99,11 +116,37 @@
 					</a>
 				</div>
 			</div>
+
+			<!-- Chrome Extension v1.0.3 -->
+			<div class="release-card">
+				<div class="release-header">
+					<h3>⚡ Chrome Extension v1.0.3</h3>
+					<span class="badge google">Google-Approved</span>
+				</div>
+				<p class="release-description">
+					Instant AI-readiness analysis. One-click .txt downloads to share with any AI tool.
+				</p>
+				<ul class="release-features">
+					<li>☑️ Live in Chrome Web Store</li>
+					<li>☑️ Privacy-first (zero data collection)</li>
+					<li>☑️ Works with GitHub, Monaco, StackBlitz</li>
+					<li>☑️ Professional scoring & reports</li>
+					<li>☑️ Gateway to full .faf integration</li>
+				</ul>
+				<div class="release-links">
+					<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="link-button">
+						Install Extension
+					</a>
+					<a href="/blog/chrome-extension-launch" class="link-button secondary">
+						Learn More
+					</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="total-stats">
 			<p>
-				<strong>8,700+ Total Downloads</strong> •
+				<strong>9,000+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -119,6 +162,23 @@
 <section class="just-shipped page-mode">
 	<div class="container">
 		<h2 class="section-title">🏁 Just Shipped</h2>
+
+		<!-- NEW: Chrome Extension One-Liner -->
+		<div class="featured-release">
+			<div class="featured-content">
+				<span class="featured-emoji">⚡</span>
+				<div class="featured-text">
+					<strong>Chrome Extension v1.0.3</strong> — Instant AI-readiness analysis. One-click .txt downloads.
+					<span class="badge-inline google">Google-Approved</span>
+				</div>
+			</div>
+			<div class="featured-actions">
+				<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="btn-install">
+					Install Now →
+				</a>
+				<a href="/blog/chrome-extension-launch" class="btn-learn">Learn More</a>
+			</div>
+		</div>
 
 		<div class="releases-grid">
 			<!-- CLI v3.0.4 -->
@@ -172,11 +232,37 @@
 					</a>
 				</div>
 			</div>
+
+			<!-- Chrome Extension v1.0.3 -->
+			<div class="release-card">
+				<div class="release-header">
+					<h3>⚡ Chrome Extension v1.0.3</h3>
+					<span class="badge google">Google-Approved</span>
+				</div>
+				<p class="release-description">
+					Instant AI-readiness analysis. One-click .txt downloads to share with any AI tool.
+				</p>
+				<ul class="release-features">
+					<li>☑️ Live in Chrome Web Store</li>
+					<li>☑️ Privacy-first (zero data collection)</li>
+					<li>☑️ Works with GitHub, Monaco, StackBlitz</li>
+					<li>☑️ Professional scoring & reports</li>
+					<li>☑️ Gateway to full .faf integration</li>
+				</ul>
+				<div class="release-links">
+					<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="link-button">
+						Install Extension
+					</a>
+					<a href="/blog/chrome-extension-launch" class="link-button secondary">
+						Learn More
+					</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="total-stats">
 			<p>
-				<strong>8,700+ Total Downloads</strong> •
+				<strong>9,000+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -325,6 +411,97 @@
 		background: linear-gradient(135deg, var(--faf-cyan-dark) 0%, #00E5E5 100%);
 	}
 
+	.badge.google {
+		background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 75%, #EA4335 100%);
+	}
+
+	/* Featured Release One-Liner */
+	.featured-release {
+		background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+		border-radius: 12px;
+		padding: 1.5rem 2rem;
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		box-shadow: 0 4px 20px rgba(44, 62, 80, 0.3);
+	}
+
+	.featured-content {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		flex: 1;
+	}
+
+	.featured-emoji {
+		font-size: 2rem;
+		line-height: 1;
+	}
+
+	.featured-text {
+		color: white;
+		font-size: 1.1rem;
+		line-height: 1.4;
+	}
+
+	.featured-text strong {
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.badge-inline {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		margin-left: 0.5rem;
+		vertical-align: middle;
+	}
+
+	.badge-inline.google {
+		background: white;
+		background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 75%, #EA4335 100%);
+		color: white;
+	}
+
+	.featured-actions {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	.btn-install {
+		background: white;
+		color: #FF6B35;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 700;
+		white-space: nowrap;
+		transition: all 0.2s;
+	}
+
+	.btn-install:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-learn {
+		color: white;
+		text-decoration: none;
+		font-weight: 600;
+		white-space: nowrap;
+		border-bottom: 2px solid transparent;
+		transition: border-color 0.2s;
+	}
+
+	.btn-learn:hover {
+		border-bottom-color: white;
+	}
+
 	.release-description {
 		color: #555;
 		margin-bottom: 1.5rem;
@@ -437,6 +614,41 @@
 
 		.total-stats p {
 			font-size: 1rem;
+		}
+
+		.featured-release {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 1.25rem;
+		}
+
+		.featured-content {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.75rem;
+		}
+
+		.featured-emoji {
+			font-size: 1.5rem;
+		}
+
+		.featured-text {
+			font-size: 1rem;
+		}
+
+		.featured-actions {
+			width: 100%;
+			flex-direction: column;
+		}
+
+		.btn-install,
+		.btn-learn {
+			width: 100%;
+			text-align: center;
+		}
+
+		.btn-install {
+			padding: 0.75rem 1rem;
 		}
 	}
 </style>

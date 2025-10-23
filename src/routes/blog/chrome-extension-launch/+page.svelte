@@ -23,8 +23,8 @@
 		<div class="breadcrumb">
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Chrome Extension Launch
 		</div>
-		<h1>Chrome Extension: Grab Any Codebase as .txt</h1>
-		<p class="subtitle">One-click context extraction from GitHub, Monaco, StackBlitz, and 15+ dev environments</p>
+		<h1>FAF Chrome Extension: Instant AI Context</h1>
+		<p class="subtitle">Extract AI context from any dev environment—instantly to your Downloads as clean .txt</p>
 		<div class="meta">
 			<time datetime="2025-10-23">October 23, 2025</time>
 			<span class="separator">•</span>
@@ -37,34 +37,51 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>FAF Chrome Extension</strong> is now live in the Chrome Web Store. Extract any codebase from any dev environment—GitHub repos, Monaco editor, StackBlitz, GitLab, Replit—as clean .txt in one click.
+				<strong>One-click analysis.</strong> Get instant AI-readiness scores (0-100%) for any development environment. Download comprehensive reports as .txt files—a gateway to full FAF capabilities.
 			</p>
 		</section>
 
 		<section class="why-this-exists">
-			<h2>🎯 Why This Exists</h2>
+			<h2>⚡ ONE-CLICK ANALYSIS</h2>
 			<p>
-				<strong>The Problem:</strong> You're testing something in StackBlitz. You need to ask Claude about it. But copying code manually is a pain.
+				Analyze web-based development environments for AI-readiness. Professional scoring and reporting for GitHub and modern development platforms.
 			</p>
 			<p>
-				<strong>The Solution:</strong> One click. Entire codebase → clipboard as clean .txt. Works everywhere.
+				Click the extension → Get instant AI-readiness scores → Download .txt report to your Downloads folder. Ready to share with any AI assistant or coding tool.
 			</p>
+
+			<h2>🎯 KEY FEATURES</h2>
+			<ul>
+				<li><strong>Web-based development platform analysis</strong></li>
+				<li><strong>AI-readiness scoring</strong> with detailed breakdowns</li>
+				<li><strong>Professional downloadable reports</strong> (.txt format - gateway to full .faf capabilities)</li>
+				<li><strong>Development-focused scope</strong> (no generic website rating)</li>
+				<li><strong>100% private</strong> - no data collection</li>
+				<li><strong>Zero network requests</strong></li>
+			</ul>
+
+			<h2>📖 Built for Real Developers</h2>
 			<p>
-				<strong>My Story:</strong> Built it for myself while testing. Needed it. Google approved it. Success. Nine downloads at launch. Zero reviews. But it's <strong>top-notch</strong> as you'd expect—when you need it, you NEED it.
+				Built it for myself while testing. Needed it. Google approved it. Nine downloads at launch, zero reviews, but it's <strong>top-notch</strong> because when you need it, you NEED it.
 			</p>
-			<p>
-				<strong>The Format:</strong> The .txt output is a <strong>pre-cursor to .faf</strong>—any FAF tool gobbles it up like an appetizer. It's the universal handoff format for AI context.
+			<p class="subtle">
+				<em>The .txt download introduces you to the FAF format—upgrade to full .faf integration via MCP for advanced features. But the .txt alone works with any AI tool today.</em>
 			</p>
 		</section>
 
 		<section class="features">
-			<h2>What It Does</h2>
+			<h2>🤖 UNIVERSAL COMPATIBILITY</h2>
+			<p>
+				Generated reports work seamlessly with any AI assistant or coding tool that accepts context files. Claude, Cursor, Copilot—whatever you use.
+			</p>
+
+			<h2>🔒 PRIVACY FIRST</h2>
 			<ul>
-				<li><strong>Works on 15+ platforms</strong> - GitHub, Monaco, CodeMirror, StackBlitz, GitLab, Replit</li>
-				<li><strong>One-click extraction</strong> - Entire codebase → clipboard in &lt;300ms</li>
-				<li><strong>Clean .txt format</strong> - Human-readable, AI-ready, .faf-compatible</li>
-				<li><strong>Zero config</strong> - Install, click icon, done</li>
-				<li><strong>Google Approved</strong> - Passed security review, live in Chrome Web Store</li>
+				<li><strong>Everything runs locally</strong> - Your code never leaves your machine</li>
+				<li><strong>No tracking</strong></li>
+				<li><strong>No accounts required</strong></li>
+				<li><strong>No network requests</strong> - Complete offline operation</li>
+				<li><strong>Google approved</strong> - Passed Chrome Web Store security review</li>
 			</ul>
 		</section>
 
@@ -430,5 +447,15 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 		padding: 3rem 0;
 		border-top: 2px solid #f0f0f0;
 		margin-top: 4rem;
+	}
+
+	.subtle {
+		font-size: 0.95rem;
+		color: #666;
+		font-style: italic;
+		margin-top: 1.5rem;
+		padding: 1rem;
+		background: #f9f9f9;
+		border-left: 3px solid #FF6B35;
 	}
 </style>

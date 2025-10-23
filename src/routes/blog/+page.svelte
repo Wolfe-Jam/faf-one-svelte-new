@@ -2,21 +2,12 @@
 	const posts = [
 		{
 			slug: 'blog/chrome-extension-launch',
-			title: 'Chrome Extension: Grab Any Codebase as .txt',
+			title: 'FAF Chrome Extension: Instant AI Context',
 			date: 'October 23, 2025',
 			timestamp: '2025-10-23',
-			excerpt: "Google-approved Chrome extension that extracts code context from ANY dev environment. GitHub, Monaco, StackBlitz, GitLab—one click, done. Built it for myself, 9 downloads at launch, but it's top-notch when you need it.",
-			emoji: '🚀',
+			excerpt: "One-click AI-readiness analysis for any dev environment. Download .txt reports instantly to your Downloads folder. Google-approved, privacy-first, works with any AI tool. Nine downloads at launch—but top-notch when you need it.",
+			emoji: '⚡',
 			category: 'Launch'
-		},
-		{
-			slug: 'blog/stop-explaining-start-jamming',
-			title: 'Stop Explaining. Start Jamming.',
-			date: 'October 20, 2025',
-			timestamp: '2025-10-20',
-			excerpt: "I'm not using AI to code. I'm jamming with AI. Like playing music with a master musician. Why coding with AI is actually music, and .faf is the score that makes the magic happen. ✨",
-			emoji: '🎸',
-			category: 'Philosophy'
 		},
 		{
 			slug: 'blog/mcp-registry-launch',
