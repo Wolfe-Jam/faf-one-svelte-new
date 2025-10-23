@@ -23,6 +23,9 @@
 		<div class="breadcrumb">
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Chrome Extension Launch
 		</div>
+		<div class="hero-image">
+			<img src="https://lh3.googleusercontent.com/yjKU-b0kvpNjkGSGjVKCEsR_5mKjGfqwXGkL3USHWY8Jdm-VTVEOuqwuLqI0jVpBEZ1CFlqmTXWMnD0tMjAiSzpxmQ=s1280-w1280-h800" alt="AI-Context Fast AF - Chrome Extension" />
+		</div>
 		<h1>FAF Chrome Extension: Instant AI Context</h1>
 		<p class="subtitle">Extract AI context from any dev environment—instantly to your Downloads as clean .txt</p>
 		<div class="meta">
@@ -256,6 +259,18 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 
 	.breadcrumb a:hover {
 		text-decoration: underline;
+	}
+
+	.hero-image {
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.hero-image img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 	}
 
 	h1 {
