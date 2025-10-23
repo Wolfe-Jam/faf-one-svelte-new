@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/chrome-extension-launch',
+			title: 'Chrome Extension: Grab Any Codebase as .txt',
+			date: 'October 23, 2025',
+			timestamp: '2025-10-23',
+			excerpt: "Google-approved Chrome extension that extracts code context from ANY dev environment. GitHub, Monaco, StackBlitz, GitLab—one click, done. Built it for myself, 9 downloads at launch, but it's top-notch when you need it.",
+			emoji: '🚀',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/stop-explaining-start-jamming',
 			title: 'Stop Explaining. Start Jamming.',
 			date: 'October 20, 2025',
