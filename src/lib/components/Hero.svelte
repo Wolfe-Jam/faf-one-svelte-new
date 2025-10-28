@@ -104,8 +104,8 @@
 			<ScrollRevealText threshold={0.5} delay={0}>
 				<div class="text-block authority-statement">
 					<div><strong>🏆 Anthropic-Approved MCP Server</strong> — Published to official MCP registry</div>
-					<div>8,700+ Total Downloads • CLI: 5.1k 🏆 • MCP: 3.6k 🤖</div>
-					<div>Google-Approved Chrome Extension — LIVE in Web Store</div>
+					<div>10,067 Downloads • Anthropic-Approved</div>
+					<div><strong>First and only persistent project context server</strong> in official Anthropic ecosystem</div>
 				</div>
 			</ScrollRevealText>
 			

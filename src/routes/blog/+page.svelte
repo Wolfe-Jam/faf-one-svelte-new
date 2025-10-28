@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/faf-hits-10k',
+			title: '.FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real',
+			date: 'October 28, 2025',
+			timestamp: '2025-10-28',
+			excerpt: 'From desktop frustration to Anthropic approval - .FAF reaches 10,067 downloads (5,619 CLI + 4,448 MCP) as the Foundational AI context format gains ecosystem traction.',
+			emoji: '🏆',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/chrome-extension-launch',
 			title: 'FAF Chrome Extension: Instant AI Context',
 			date: 'October 23, 2025',
@@ -190,6 +199,10 @@
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		margin-bottom: 1rem;
+	}
+
+	.post-card[href*="faf-hits-10k"] .post-category {
+		background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
 	}
 
 	.post-card[href*="mcp-registry-launch"] .post-category {

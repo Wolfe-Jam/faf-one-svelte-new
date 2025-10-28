@@ -39,26 +39,9 @@
 	<div class="container">
 		<h2 class="section-title">🏁 Just Shipped</h2>
 
-		<!-- NEW: Chrome Extension One-Liner -->
-		<div class="featured-release">
-			<div class="featured-content">
-				<span class="featured-emoji">⚡</span>
-				<div class="featured-text">
-					<strong>Chrome Extension v1.0.3</strong> — Instant AI-readiness analysis. One-click .txt downloads.
-					<span class="badge-inline google">Google-Approved</span>
-				</div>
-			</div>
-			<div class="featured-actions">
-				<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="btn-install">
-					Install Now →
-				</a>
-				<a href="/blog/chrome-extension-launch" class="btn-learn">Learn More</a>
-			</div>
-		</div>
-
 		<div class="total-stats stats-top">
 			<p>
-				<strong>9,000+ Total Downloads</strong> •
+				<strong>10,067 Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -75,7 +58,7 @@
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 5,100+ downloads (npm)</li>
+					<li>☑️ 5,619 downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -101,7 +84,7 @@
 					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 3,600+ downloads (npm)</li>
+					<li>☑️ 4,448 downloads (npm)</li>
 					<li>☑️ 35/35 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 33+ MCP tools</li>
@@ -117,36 +100,11 @@
 				</div>
 			</div>
 
-			<!-- Chrome Extension v1.0.3 -->
-			<div class="release-card">
-				<div class="release-header">
-					<h3>⚡ Chrome Extension v1.0.3</h3>
-					<span class="badge google">Google-Approved</span>
-				</div>
-				<p class="release-description">
-					Instant AI-readiness analysis. One-click .txt downloads to share with any AI tool.
-				</p>
-				<ul class="release-features">
-					<li>☑️ Live in Chrome Web Store</li>
-					<li>☑️ Privacy-first (zero data collection)</li>
-					<li>☑️ Works with GitHub, Monaco, StackBlitz</li>
-					<li>☑️ Professional scoring & reports</li>
-					<li>☑️ Gateway to full .faf integration</li>
-				</ul>
-				<div class="release-links">
-					<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="link-button">
-						Install Extension
-					</a>
-					<a href="/blog/chrome-extension-launch" class="link-button secondary">
-						Learn More
-					</a>
-				</div>
-			</div>
 		</div>
 
 		<div class="total-stats">
 			<p>
-				<strong>9,000+ Total Downloads</strong> •
+				<strong>10,067 Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -191,7 +149,7 @@
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 5,100+ downloads (npm)</li>
+					<li>☑️ 5,619 downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -217,7 +175,7 @@
 					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 3,600+ downloads (npm)</li>
+					<li>☑️ 4,448 downloads (npm)</li>
 					<li>☑️ 35/35 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 33+ MCP tools</li>
@@ -233,36 +191,11 @@
 				</div>
 			</div>
 
-			<!-- Chrome Extension v1.0.3 -->
-			<div class="release-card">
-				<div class="release-header">
-					<h3>⚡ Chrome Extension v1.0.3</h3>
-					<span class="badge google">Google-Approved</span>
-				</div>
-				<p class="release-description">
-					Instant AI-readiness analysis. One-click .txt downloads to share with any AI tool.
-				</p>
-				<ul class="release-features">
-					<li>☑️ Live in Chrome Web Store</li>
-					<li>☑️ Privacy-first (zero data collection)</li>
-					<li>☑️ Works with GitHub, Monaco, StackBlitz</li>
-					<li>☑️ Professional scoring & reports</li>
-					<li>☑️ Gateway to full .faf integration</li>
-				</ul>
-				<div class="release-links">
-					<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="link-button">
-						Install Extension
-					</a>
-					<a href="/blog/chrome-extension-launch" class="link-button secondary">
-						Learn More
-					</a>
-				</div>
-			</div>
 		</div>
 
 		<div class="total-stats">
 			<p>
-				<strong>9,000+ Total Downloads</strong> •
+				<strong>10,067 Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>

@@ -23,3 +23,11 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .env*
 node_modules/
+
+# Strategy docs (live in FAF-GOLD/PLANET-FAF)
+test-n8n-workflows/
+
+# WIP pages
+src/routes/drift/
+src/routes/sponsors/
+static/welcome.html
