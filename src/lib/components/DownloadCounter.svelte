@@ -1,46 +1,23 @@
 <script>
 	import { onMount } from 'svelte';
 
+	// 10k milestone numbers (Oct 28, 2025)
+	const CLI_DOWNLOADS = 5619;
+	const MCP_DOWNLOADS = 4448;
+	const TOTAL_DOWNLOADS = 10067;
+
 	let cliDownloads = $state(0);
 	let mcpDownloads = $state(0);
 	let totalDownloads = $state(0);
 	let loading = $state(true);
-	let error = $state(null);
 
-	async function fetchNpmDownloads(packageName) {
-		try {
-			const response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${packageName}`);
-			if (!response.ok) throw new Error('Failed to fetch');
-			const data = await response.json();
-			return data.downloads || 0;
-		} catch (err) {
-			console.error(`Error fetching ${packageName}:`, err);
-			return 0;
-		}
-	}
+	onMount(() => {
+		loading = false;
 
-	onMount(async () => {
-		try {
-			// Fetch real npm stats
-			const [cli, mcp] = await Promise.all([
-				fetchNpmDownloads('faf-cli'),
-				fetchNpmDownloads('claude-faf-mcp')
-			]);
-
-			cliDownloads = cli;
-			mcpDownloads = mcp;
-			totalDownloads = cli + mcp;
-			loading = false;
-
-			// Animate counters from 0
-			animateCounter('cli', cli);
-			animateCounter('mcp', mcp);
-			animateCounter('total', cli + mcp);
-
-		} catch (err) {
-			error = 'Failed to load download stats';
-			loading = false;
-		}
+		// Animate counters from 0 to milestone numbers
+		animateCounter('cli', CLI_DOWNLOADS);
+		animateCounter('mcp', MCP_DOWNLOADS);
+		animateCounter('total', TOTAL_DOWNLOADS);
 	});
 
 	function animateCounter(type, target) {
@@ -66,9 +43,7 @@
 
 <div class="npm-stats">
 	{#if loading}
-		<div class="loading">Loading npm stats...</div>
-	{:else if error}
-		<div class="error">{error}</div>
+		<div class="loading">Loading stats...</div>
 	{:else}
 		<div class="stats-container">
 			<!-- CLI Downloads -->
@@ -105,7 +80,7 @@
 			</div>
 		</div>
 
-		<p class="update-note">Last 30 days • Updated live from npm</p>
+		<p class="update-note">10k Milestone • Oct 28, 2025</p>
 	{/if}
 </div>
 
@@ -114,8 +89,7 @@
 		margin: 2rem 0;
 	}
 
-	.loading,
-	.error {
+	.loading {
 		text-align: center;
 		padding: 1rem;
 		color: var(--faf-gray-dark);
