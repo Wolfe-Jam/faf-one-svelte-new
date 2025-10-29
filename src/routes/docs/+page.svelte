@@ -22,7 +22,7 @@
 	<aside class="docs-sidebar">
 		<div class="sidebar-header">
 			<h3>.faf Docs</h3>
-			<span class="version">v2.2.0</span>
+			<span class="version">v3.1.0</span>
 		</div>
 		
 		<nav class="sidebar-nav">
@@ -61,17 +61,20 @@
 			<div class="quickstart-box">
 				<h2>⚡ Quick Start</h2>
 				<p>Get started with .faf in seconds:</p>
-				
+
 				<div class="code-block">
 					<pre><code># Install globally
-npm install -g claude-faf-mcp
+npm install -g faf-cli
 
-# Create your first .faf
+# Create your first project.faf
 faf init my-project
 
 # Add to existing project
 cd your-project
-faf init .</code></pre>
+faf init .
+
+# Migrate from .faf to project.faf
+faf migrate</code></pre>
 				</div>
 			</div>
 		</section>
@@ -82,13 +85,16 @@ faf init .</code></pre>
 			<h3>CLI Installation</h3>
 			<div class="code-block">
 				<pre><code># NPM
-npm install -g claude-faf-mcp
+npm install -g faf-cli
 
 # Yarn
-yarn global add claude-faf-mcp
+yarn global add faf-cli
 
 # PNPM
-pnpm add -g claude-faf-mcp</code></pre>
+pnpm add -g faf-cli
+
+# Homebrew (macOS/Linux)
+brew install faf-cli</code></pre>
 			</div>
 			
 			<h3>Chrome Extension</h3>
@@ -109,8 +115,8 @@ npm run build</code></pre>
 		
 		<section id="usage" class="doc-section">
 			<h2>💻 Basic Usage</h2>
-			
-			<h3>Creating a .faf file</h3>
+
+			<h3>Creating a project.faf file</h3>
 			<div class="code-block">
 				<pre><code># Interactive mode
 faf init
@@ -121,8 +127,17 @@ faf init my-awesome-project
 # In current directory
 faf init .</code></pre>
 			</div>
-			
-			<h3>Updating .faf</h3>
+
+			<h3>Migrating from .faf to project.faf</h3>
+			<div class="code-block">
+				<pre><code># Migrate single project
+faf migrate
+
+# Bulk migrate entire monorepo
+faf rename</code></pre>
+			</div>
+
+			<h3>Updating project.faf</h3>
 			<div class="code-block">
 				<pre><code># Auto-detect and update
 faf update
@@ -201,12 +216,22 @@ build/
 				<tbody>
 					<tr>
 						<td><code>faf init</code></td>
-						<td>Initialize a new .faf file</td>
+						<td>Initialize a new project.faf file</td>
 						<td><code>--force</code>, <code>--minimal</code></td>
 					</tr>
 					<tr>
+						<td><code>faf migrate</code></td>
+						<td>Migrate .faf to project.faf</td>
+						<td>None</td>
+					</tr>
+					<tr>
+						<td><code>faf rename</code></td>
+						<td>Bulk migrate monorepo (recursive)</td>
+						<td>None</td>
+					</tr>
+					<tr>
 						<td><code>faf update</code></td>
-						<td>Update existing .faf</td>
+						<td>Update existing project.faf</td>
 						<td><code>--force</code>, <code>--depth</code></td>
 					</tr>
 					<tr>
@@ -215,8 +240,8 @@ build/
 						<td><code>--strict</code></td>
 					</tr>
 					<tr>
-						<td><code>faf stats</code></td>
-						<td>Show project statistics</td>
+						<td><code>faf score</code></td>
+						<td>Show AI-readiness score</td>
 						<td><code>--json</code></td>
 					</tr>
 					<tr>
