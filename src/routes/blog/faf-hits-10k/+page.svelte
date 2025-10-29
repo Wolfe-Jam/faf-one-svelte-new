@@ -26,7 +26,7 @@
 		<h1>.FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real</h1>
 		<p class="subtitle">From desktop frustration to Anthropic approval - the Foundational AI context format gains traction</p>
 		<div class="meta">
-			<time datetime="2025-10-28">October 28, 2025</time>
+			<time datetime="2025-10-29">October 29, 2025</time>
 			<span class="separator">•</span>
 			<span class="milestone">10,067 Downloads</span>
 			<span class="separator">•</span>
