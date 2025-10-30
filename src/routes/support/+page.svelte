@@ -4,6 +4,55 @@
 	import ContactModal from '$lib/components/ContactModal.svelte';
 
 	let showContactModal = $state(false);
+	let name = $state('');
+	let email = $state('');
+	let category = $state('');
+	let message = $state('');
+	let sending = $state(false);
+	let success = $state(false);
+	let error = $state('');
+
+	async function handleSubmit(e) {
+		e.preventDefault();
+		if (!email || !message || !category) return;
+
+		sending = true;
+		error = '';
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					email,
+					message,
+					name: name || undefined,
+					category
+				})
+			});
+
+			const result = await response.json();
+
+			if (!response.ok) {
+				throw new Error(result.error || 'Failed to send message');
+			}
+
+			success = true;
+			// Reset form after 3 seconds
+			setTimeout(() => {
+				name = '';
+				email = '';
+				category = '';
+				message = '';
+				success = false;
+			}, 3000);
+
+		} catch (err) {
+			error = err instanceof Error ? err.message : 'Failed to send message';
+		} finally {
+			sending = false;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -114,36 +163,71 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 		<div class="contact-form">
 			<h2>🏁 Join the Software Club</h2>
 			<p class="form-subtitle">No signup required - just share your thoughts</p>
-			<form action="https://formspree.io/f/xyzwolfe" method="POST">
-				<div class="form-group">
-					<label for="name">Name (optional)</label>
-					<input type="text" id="name" name="name" placeholder="Anonymous is fine">
-				</div>
 
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email" required placeholder="For our reply">
+			{#if success}
+				<div class="success-message-inline">
+					<div class="success-icon-inline">✓</div>
+					<h3>Message Sent!</h3>
+					<p>We'll get back to you within 24 hours.</p>
 				</div>
+			{:else}
+				<form onsubmit={handleSubmit}>
+					<div class="form-group">
+						<label for="name">Name (optional)</label>
+						<input
+							type="text"
+							id="name"
+							bind:value={name}
+							placeholder="Anonymous is fine"
+							disabled={sending}
+						>
+					</div>
 
-				<div class="form-group">
-					<label for="category">What's this about?</label>
-					<select id="category" name="category" required>
-						<option value="">Pick one...</option>
-						<option value="bug">🐛 Bug Report</option>
-						<option value="feature">✨ Feature Idea</option>
-						<option value="idea">💡 General Idea</option>
-						<option value="help">❓ Need Help</option>
-						<option value="feedback">💬 Feedback</option>
-					</select>
-				</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input
+							type="email"
+							id="email"
+							bind:value={email}
+							required
+							placeholder="For our reply"
+							disabled={sending}
+						>
+					</div>
 
-				<div class="form-group">
-					<label for="message">Tell us more</label>
-					<textarea id="message" name="message" rows="6" required placeholder="Be honest, we can take it..."></textarea>
-				</div>
+					<div class="form-group">
+						<label for="category">What's this about?</label>
+						<select id="category" bind:value={category} required disabled={sending}>
+							<option value="">Pick one...</option>
+							<option value="bug">🐛 Bug Report</option>
+							<option value="feature">✨ Feature Idea</option>
+							<option value="idea">💡 General Idea</option>
+							<option value="help">❓ Need Help</option>
+							<option value="feedback">💬 Feedback</option>
+						</select>
+					</div>
 
-				<button type="submit" class="btn-submit">Send to Software Club →</button>
-			</form>
+					<div class="form-group">
+						<label for="message">Tell us more</label>
+						<textarea
+							id="message"
+							bind:value={message}
+							rows="6"
+							required
+							placeholder="Be honest, we can take it..."
+							disabled={sending}
+						></textarea>
+					</div>
+
+					{#if error}
+						<div class="error-message-inline">{error}</div>
+					{/if}
+
+					<button type="submit" class="btn-submit" disabled={sending || !email || !message || !category}>
+						{sending ? 'Sending...' : 'Send to Software Club →'}
+					</button>
+				</form>
+			{/if}
 		</div>
 
 		<div class="emergency-banner">
@@ -436,6 +520,49 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 	.contact-button-primary:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+	}
+
+	.success-message-inline {
+		text-align: center;
+		padding: 3rem 2rem;
+		background: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+		border-radius: 12px;
+		border: 2px solid #00d084;
+	}
+
+	.success-icon-inline {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: #00d084;
+		color: white;
+		font-size: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1rem;
+		font-weight: 700;
+	}
+
+	.success-message-inline h3 {
+		margin: 0 0 0.5rem 0;
+		color: var(--faf-black);
+		font-size: 1.5rem;
+	}
+
+	.success-message-inline p {
+		margin: 0;
+		color: var(--faf-gray-dark);
+	}
+
+	.error-message-inline {
+		background: rgba(255, 77, 77, 0.1);
+		border: 1px solid rgba(255, 77, 77, 0.5);
+		color: #cc0000;
+		padding: 0.75rem;
+		border-radius: 8px;
+		margin: 1rem 0;
+		font-size: 0.9rem;
 	}
 
 	@media (max-width: 768px) {
