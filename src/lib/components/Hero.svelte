@@ -73,17 +73,17 @@
 					Only Anthropic-approved<br/>Persistent Project Context MCP Server
 				</div>
 				<div class="features-tagline">
-					<span class="feature-item">⚡️ FAST</span>
+					<span class="feature-item"><span class="icon">⚡</span> FAST</span>
 					<span class="separator">•</span>
-					<span class="feature-item">✅ Safe</span>
+					<span class="feature-item"><span class="icon">✓</span> Safe</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🔒 Secure</span>
+					<span class="feature-item"><span class="icon">⚿</span> Secure</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🔄 Persistent</span>
+					<span class="feature-item"><span class="icon">↻</span> Persistent</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🧪 Self-Testing</span>
+					<span class="feature-item"><span class="icon">✦</span> Self-Testing</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🛡️ Trusted</span>
+					<span class="feature-item"><span class="icon">◆</span> Trusted</span>
 				</div>
 			</div>
 			
@@ -364,6 +364,29 @@
 		text-shadow: 0 0 10px rgba(0, 212, 212, 0.3);
 	}
 
+	.features-tagline {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+
+	.feature-item {
+		font-weight: 600;
+		color: var(--faf-black);
+	}
+
+	.icon {
+		color: var(--faf-orange);
+		font-weight: 700;
+		font-size: 1.1em;
+	}
+
+	.separator {
+		color: var(--faf-gray);
+	}
 
 	.tagline {
 		font-size: 2.5rem;
