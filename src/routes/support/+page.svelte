@@ -32,7 +32,7 @@
 			<div class="support-card">
 				<div class="card-icon">📧</div>
 				<h3>Contact Us</h3>
-				<p>Email: <a href="mailto:team@faf.one">team@faf.one</a></p>
+				<p>Email: <strong>team@faf.one</strong></p>
 				<p>Response time: Within 24 hours</p>
 				<p class="priority-note">🏆 LEGENDS get priority support</p>
 			</div>
