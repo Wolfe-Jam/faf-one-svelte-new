@@ -69,6 +69,9 @@
 				<div class="subtitle">
 					Professional AI-Context Management
 				</div>
+				<div class="mcp-badge-text">
+					Only Anthropic-approved<br/>Persistent Project Context MCP Server
+				</div>
 				<div class="features-tagline">
 					<span class="feature-item">⚡ Lightning Fast</span>
 					<span class="separator">•</span>
@@ -344,10 +347,20 @@
 		color: var(--faf-gray);
 		letter-spacing: 0.05em;
 		margin-top: 4.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
-	
-	
+
+	.mcp-badge-text {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #00D4D4;
+		text-align: center;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+		text-shadow: 0 0 10px rgba(0, 212, 212, 0.3);
+	}
+
+
 	.tagline {
 		font-size: 2.5rem;
 		font-weight: 700;
