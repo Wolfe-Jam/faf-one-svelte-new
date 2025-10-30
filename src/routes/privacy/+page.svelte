@@ -76,7 +76,7 @@
 				<li>Export your information</li>
 				<li>Opt-out of communications</li>
 			</ul>
-			<p>Email <a href="mailto:faf@wolfejam.dev">faf@wolfejam.dev</a> for any data requests.</p>
+			<p>Email <a href="mailto:team@faf.one">team@faf.one</a> for any data requests.</p>
 		</section>
 
 		<section>
@@ -103,7 +103,7 @@
 		<section>
 			<h2>9. Contact Us</h2>
 			<p>Privacy questions or concerns?</p>
-			<p>Email: <a href="mailto:faf@wolfejam.dev">faf@wolfejam.dev</a></p>
+			<p>Email: <a href="mailto:team@faf.one">team@faf.one</a></p>
 			<p>Location: Atlanta, GA, USA</p>
 		</section>
 

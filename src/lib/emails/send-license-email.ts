@@ -189,8 +189,8 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
         const tierEmoji = license.tier === 'legends' ? '👑' : '🏎️💨';
 
         const { data, error } = await resend.emails.send({
-            from: 'FAF TURBO <turbo@faf.one>',
-            replyTo: 'faf@wolfejam.dev',
+            from: 'FAF TURBO <team@faf.one>',
+            replyTo: 'team@faf.one',
             to: license.email,
             subject: `${tierEmoji} Your ${tierName} License Key`,
             html: generateLicenseEmailHTML(license)

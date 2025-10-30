@@ -84,7 +84,7 @@
 
 		<section>
 			<h2>10. Contact</h2>
-			<p>Questions? Email us at <a href="mailto:faf@wolfejam.dev">faf@wolfejam.dev</a></p>
+			<p>Questions? Email us at <a href="mailto:team@faf.one">team@faf.one</a></p>
 		</section>
 
 		<div class="legal-footer">

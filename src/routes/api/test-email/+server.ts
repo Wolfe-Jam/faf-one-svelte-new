@@ -3,7 +3,7 @@
  *
  * Send a test license email to verify:
  * - Resend DNS is verified
- * - turbo@faf.one sender works
+ * - team@faf.one sender works
  * - Email template renders correctly
  */
 
@@ -39,7 +39,7 @@ export const GET: RequestHandler = async ({ url }) => {
     if (result.success) {
         return json({
             success: true,
-            message: `Test email sent to ${testEmail} from turbo@faf.one 🏎️💨`,
+            message: `Test email sent to ${testEmail} from team@faf.one 🏎️💨`,
             licenseKey: testLicense.key,
             email: testEmail
         });

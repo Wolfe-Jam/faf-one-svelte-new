@@ -46,7 +46,7 @@
 				<ul>
 					<li><a href="/terms">Terms of Service</a></li>
 					<li><a href="/privacy">Privacy Policy</a></li>
-					<li><a href="mailto:support@faf.one">Contact</a></li>
+					<li><a href="mailto:team@faf.one">Contact</a></li>
 					<li><a href="/press">Press Kit</a></li>
 				</ul>
 			</div>
