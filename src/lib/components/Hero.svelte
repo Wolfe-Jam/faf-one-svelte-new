@@ -73,13 +73,17 @@
 					Only Anthropic-approved<br/>Persistent Project Context MCP Server
 				</div>
 				<div class="features-tagline">
-					<span class="feature-item">⚡ Lightning Fast</span>
+					<span class="feature-item">⚡️ FAST</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🔄 Eternal-Sync™</span>
+					<span class="feature-item">✅ Safe</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🛡️ Disaster Recovery</span>
+					<span class="feature-item">🔒 Secure</span>
 					<span class="separator">•</span>
-					<span class="feature-item">🔒 Bank-Grade Secure</span>
+					<span class="feature-item">🔄 Persistent</span>
+					<span class="separator">•</span>
+					<span class="feature-item">🧪 Self-Testing</span>
+					<span class="separator">•</span>
+					<span class="feature-item">🛡️ Trusted</span>
 				</div>
 			</div>
 			
