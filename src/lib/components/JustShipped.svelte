@@ -41,10 +41,25 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>10,067 Total Downloads</strong> •
+				<strong>10,100+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- Chrome Extension Featured -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-icon">⚡️</div>
+				<div class="chrome-title">
+					<h3>Chrome Extension v1.0.3</h3>
+					<span class="chrome-badge">Google-Approved</span>
+				</div>
+			</div>
+			<p class="chrome-description">Instant AI-readiness analysis. One-click .txt downloads. Zero setup.</p>
+			<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="chrome-install">
+				⚡️ Install Now — Join the Movement
+			</a>
 		</div>
 
 		<div class="releases-grid">
@@ -58,7 +73,7 @@
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 5,619 downloads (npm)</li>
+					<li>☑️ 5.6k downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -84,7 +99,7 @@
 					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 4,448 downloads (npm)</li>
+					<li>☑️ 4.5k downloads (npm)</li>
 					<li>☑️ 35/35 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 33+ MCP tools</li>
@@ -104,7 +119,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>10,067 Total Downloads</strong> •
+				<strong>10,100+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -149,7 +164,7 @@
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 5,619 downloads (npm)</li>
+					<li>☑️ 5.6k downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -175,7 +190,7 @@
 					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 4,448 downloads (npm)</li>
+					<li>☑️ 4.5k downloads (npm)</li>
 					<li>☑️ 35/35 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 33+ MCP tools</li>
@@ -195,7 +210,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>10,067 Total Downloads</strong> •
+				<strong>10,100+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -346,6 +361,116 @@
 
 	.badge.google {
 		background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 75%, #EA4335 100%);
+	}
+
+	/* Chrome Extension Featured Card (Steel Gray + Cyan) */
+	.chrome-featured {
+		background: linear-gradient(135deg, #2a2d35 0%, #1a1d25 100%);
+		border: 2px solid #00D4D4;
+		border-radius: 12px;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		box-shadow: 0 10px 40px rgba(0, 212, 212, 0.3), 0 0 60px rgba(0, 212, 212, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.chrome-featured:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 15px 50px rgba(0, 212, 212, 0.4), 0 0 80px rgba(0, 212, 212, 0.15);
+	}
+
+	.chrome-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.chrome-icon {
+		font-size: 2.5rem;
+		line-height: 1;
+		animation: pulse-glow 2s ease infinite;
+	}
+
+	@keyframes pulse-glow {
+		0%, 100% {
+			text-shadow: 0 0 10px rgba(0, 212, 212, 0.5);
+		}
+		50% {
+			text-shadow: 0 0 20px rgba(0, 212, 212, 0.8);
+		}
+	}
+
+	.chrome-title {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.chrome-title h3 {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #ffffff;
+	}
+
+	.chrome-badge {
+		background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 75%, #EA4335 100%);
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 999px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		white-space: nowrap;
+	}
+
+	.chrome-description {
+		color: #00D4D4;
+		margin: 0 0 1.5rem 0;
+		font-size: 1.05rem;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	.chrome-install {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background: linear-gradient(135deg, #00D4D4 0%, #00a8a8 100%);
+		color: #1a1d25;
+		text-decoration: none;
+		border-radius: 8px;
+		font-size: 1.125rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.chrome-install::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.3);
+		transform: translate(-50%, -50%);
+		transition: width 0.6s, height 0.6s;
+	}
+
+	.chrome-install:hover::before {
+		width: 300px;
+		height: 300px;
+	}
+
+	.chrome-install:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 5px 20px rgba(0, 212, 212, 0.5), 0 0 40px rgba(0, 212, 212, 0.3);
 	}
 
 	/* Featured Release One-Liner */
@@ -582,6 +707,35 @@
 
 		.btn-install {
 			padding: 0.75rem 1rem;
+		}
+
+		.chrome-featured {
+			padding: 1.5rem;
+		}
+
+		.chrome-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.75rem;
+		}
+
+		.chrome-icon {
+			font-size: 2rem;
+		}
+
+		.chrome-title h3 {
+			font-size: 1.25rem;
+		}
+
+		.chrome-description {
+			font-size: 1rem;
+		}
+
+		.chrome-install {
+			width: 100%;
+			text-align: center;
+			padding: 0.875rem 1.5rem;
+			font-size: 1rem;
 		}
 	}
 </style>
