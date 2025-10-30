@@ -52,11 +52,11 @@
 			<div class="chrome-header">
 				<div class="chrome-icon">⚡️</div>
 				<div class="chrome-title">
-					<h3>Chrome Extension v1.0.3</h3>
+					<h3>Stack⚡️Grabber v1.6.0</h3>
 					<span class="chrome-badge">Google-Approved</span>
 				</div>
 			</div>
-			<p class="chrome-description">Instant AI-readiness analysis. One-click .txt downloads. Zero setup.</p>
+			<p class="chrome-description">The ColorZilla for stacks. Click any repo, get instant stack info. React, n8n, Monaco & more. No cloning, no waiting.</p>
 			<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="chrome-install">
 				⚡️ Install Now — Join the Movement
 			</a>
@@ -141,7 +141,7 @@
 			<div class="featured-content">
 				<span class="featured-emoji">⚡</span>
 				<div class="featured-text">
-					<strong>Chrome Extension v1.0.3</strong> — Instant AI-readiness analysis. One-click .txt downloads.
+					<strong>Stack⚡️Grabber v1.6.0</strong> — The ColorZilla for stacks. Click any repo, get instant stack info. No cloning, no waiting.
 					<span class="badge-inline google">Google-Approved</span>
 				</div>
 			</div>
