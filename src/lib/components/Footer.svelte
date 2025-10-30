@@ -1,6 +1,9 @@
 <script>
 	import FafLogo from '$lib/components/FafLogo.svelte';
+	import ContactModal from '$lib/components/ContactModal.svelte';
+
 	const currentYear = new Date().getFullYear();
+	let showContactModal = $state(false);
 </script>
 
 <footer class="footer" id="footer">
@@ -46,7 +49,7 @@
 				<ul>
 					<li><a href="/terms">Terms of Service</a></li>
 					<li><a href="/privacy">Privacy Policy</a></li>
-					<li><a href="/support">Contact</a></li>
+					<li><button onclick={() => showContactModal = true} class="contact-button">Contact</button></li>
 					<li><a href="/press">Press Kit</a></li>
 				</ul>
 			</div>
@@ -66,6 +69,8 @@
 		</div>
 	</div>
 </footer>
+
+<ContactModal bind:isOpen={showContactModal} />
 
 <style>
 	.footer {
@@ -159,7 +164,26 @@
 		color: var(--faf-orange);
 		transform: translateX(2px);
 	}
-	
+
+	.contact-button {
+		background: none;
+		border: none;
+		color: #999;
+		text-decoration: none;
+		font-size: 0.875rem;
+		transition: color 0.2s ease;
+		display: inline-block;
+		cursor: pointer;
+		padding: 0;
+		font-family: inherit;
+		text-align: left;
+	}
+
+	.contact-button:hover {
+		color: var(--faf-orange);
+		transform: translateX(2px);
+	}
+
 	.footer-bottom {
 		text-align: center;
 		padding-top: 2rem;
