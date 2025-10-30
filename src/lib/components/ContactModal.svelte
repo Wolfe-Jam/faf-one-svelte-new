@@ -79,13 +79,13 @@
 
 			{#if success}
 				<div class="success-message">
-					<div class="success-icon">✓</div>
-					<h3>Message Sent!</h3>
-					<p>We'll get back to you within 24 hours.</p>
+					<div class="success-icon">⚡️</div>
+					<h3>You're In! ✨</h3>
+					<p>Welcome to the FAF movement. We'll respond within 24 hours.</p>
 				</div>
 			{:else}
-				<h2>Contact Us</h2>
-				<p class="modal-subtitle">Quick message to team@faf.one</p>
+				<h2>⚡️ Join the FAF Movement</h2>
+				<p class="modal-subtitle">Be part of the AI-context revolution ✨</p>
 
 				<form onsubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
 					<!-- Quick Fields -->
@@ -164,7 +164,7 @@
 					{/if}
 
 					<button type="submit" class="btn-submit" disabled={sending || !email || !message}>
-						{sending ? 'Sending...' : 'Send Message'}
+						{sending ? '⚡️ Sending...' : '⚡️ Join the Movement'}
 					</button>
 				</form>
 			{/if}
@@ -194,7 +194,8 @@
 	}
 
 	.modal-content {
-		background: var(--faf-white);
+		background: linear-gradient(135deg, #2a2d35 0%, #1a1d25 100%);
+		border: 2px solid #00D4D4;
 		border-radius: 12px;
 		padding: 2rem;
 		max-width: 500px;
@@ -203,7 +204,7 @@
 		overflow-y: auto;
 		position: relative;
 		animation: slideUp 0.3s ease;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 10px 40px rgba(0, 212, 212, 0.3), 0 0 60px rgba(0, 212, 212, 0.1);
 	}
 
 	@keyframes slideUp {
@@ -225,7 +226,7 @@
 		border: none;
 		font-size: 2rem;
 		line-height: 1;
-		color: var(--faf-gray);
+		color: rgba(255, 255, 255, 0.5);
 		cursor: pointer;
 		padding: 0;
 		width: 32px;
@@ -233,23 +234,26 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: color 0.2s ease;
+		transition: all 0.2s ease;
 	}
 
 	.modal-close:hover {
-		color: var(--faf-orange);
+		color: #00D4D4;
+		transform: rotate(90deg);
 	}
 
 	h2 {
 		margin: 0 0 0.5rem 0;
-		color: var(--faf-black);
+		color: #ffffff;
 		font-size: 1.75rem;
+		font-weight: 700;
 	}
 
 	.modal-subtitle {
 		margin: 0 0 1.5rem 0;
-		color: var(--faf-gray);
+		color: #00D4D4;
 		font-size: 0.9rem;
+		font-weight: 600;
 	}
 
 	.form-group {
@@ -260,8 +264,10 @@
 		display: block;
 		margin-bottom: 0.5rem;
 		font-weight: 600;
-		color: var(--faf-black);
+		color: #ffffff;
 		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	input,
@@ -269,18 +275,32 @@
 	select {
 		width: 100%;
 		padding: 0.75rem;
-		border: 1px solid var(--faf-gray-medium);
+		border: 2px solid rgba(0, 212, 212, 0.3);
 		border-radius: 8px;
 		font-size: 1rem;
-		transition: border-color 0.2s ease;
+		transition: all 0.2s ease;
 		font-family: inherit;
+		background: rgba(255, 255, 255, 0.05);
+		color: #ffffff;
 	}
 
 	input:focus,
 	textarea:focus,
 	select:focus {
 		outline: none;
-		border-color: var(--faf-orange);
+		border-color: #00D4D4;
+		background: rgba(0, 212, 212, 0.1);
+		box-shadow: 0 0 20px rgba(0, 212, 212, 0.2);
+	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: rgba(255, 255, 255, 0.4);
+	}
+
+	select option {
+		background: #1a1d25;
+		color: #ffffff;
 	}
 
 	input:disabled,
@@ -298,17 +318,20 @@
 	.expander {
 		background: none;
 		border: none;
-		color: var(--faf-orange);
+		color: #00D4D4;
 		cursor: pointer;
 		padding: 0.5rem 0;
 		font-size: 0.9rem;
 		font-weight: 600;
 		margin: 0.5rem 0 1rem 0;
-		transition: opacity 0.2s ease;
+		transition: all 0.2s ease;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	.expander:hover {
-		opacity: 0.8;
+		color: #ffffff;
+		text-shadow: 0 0 10px rgba(0, 212, 212, 0.5);
 	}
 
 	.expandable-fields {
@@ -330,8 +353,8 @@
 	.btn-submit {
 		width: 100%;
 		padding: 1rem;
-		background: var(--faf-orange);
-		color: var(--faf-white);
+		background: linear-gradient(135deg, #00D4D4 0%, #00a8a8 100%);
+		color: #1a1d25;
 		border: none;
 		border-radius: 8px;
 		font-size: 1.125rem;
@@ -339,23 +362,45 @@
 		cursor: pointer;
 		transition: all 0.3s ease;
 		margin-top: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.btn-submit::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.3);
+		transform: translate(-50%, -50%);
+		transition: width 0.6s, height 0.6s;
+	}
+
+	.btn-submit:hover:not(:disabled)::before {
+		width: 300px;
+		height: 300px;
 	}
 
 	.btn-submit:hover:not(:disabled) {
-		background: #ff5a20;
 		transform: translateY(-2px);
-		box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 5px 20px rgba(0, 212, 212, 0.5), 0 0 40px rgba(0, 212, 212, 0.3);
 	}
 
 	.btn-submit:disabled {
-		opacity: 0.5;
+		opacity: 0.4;
 		cursor: not-allowed;
 		transform: none;
 	}
 
 	.error-message {
-		background: #fee;
-		color: #c33;
+		background: rgba(255, 77, 77, 0.1);
+		border: 1px solid rgba(255, 77, 77, 0.5);
+		color: #ff9999;
 		padding: 0.75rem;
 		border-radius: 8px;
 		margin: 1rem 0;
@@ -368,36 +413,49 @@
 	}
 
 	.success-icon {
-		width: 64px;
-		height: 64px;
+		width: 80px;
+		height: 80px;
 		border-radius: 50%;
-		background: var(--faf-orange);
-		color: white;
-		font-size: 2rem;
+		background: linear-gradient(135deg, #00D4D4 0%, #00a8a8 100%);
+		color: #1a1d25;
+		font-size: 3rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin: 0 auto 1rem;
-		animation: scaleIn 0.4s ease;
+		animation: scaleIn 0.4s ease, pulse 2s ease infinite;
+		box-shadow: 0 0 30px rgba(0, 212, 212, 0.5);
 	}
 
 	@keyframes scaleIn {
 		from {
-			transform: scale(0);
+			transform: scale(0) rotate(-180deg);
 		}
 		to {
-			transform: scale(1);
+			transform: scale(1) rotate(0);
+		}
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			box-shadow: 0 0 30px rgba(0, 212, 212, 0.5);
+		}
+		50% {
+			box-shadow: 0 0 50px rgba(0, 212, 212, 0.8);
 		}
 	}
 
 	.success-message h3 {
 		margin: 0 0 0.5rem 0;
-		color: var(--faf-black);
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 1.5rem;
 	}
 
 	.success-message p {
 		margin: 0;
-		color: var(--faf-gray);
+		color: #00D4D4;
+		font-weight: 600;
 	}
 
 	@media (max-width: 600px) {
