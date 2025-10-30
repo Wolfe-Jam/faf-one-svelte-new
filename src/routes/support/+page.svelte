@@ -1,6 +1,9 @@
 <script>
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import ContactModal from '$lib/components/ContactModal.svelte';
+
+	let showContactModal = $state(false);
 </script>
 
 <svelte:head>
@@ -32,7 +35,9 @@
 			<div class="support-card">
 				<div class="card-icon">📧</div>
 				<h3>Contact Us</h3>
-				<p>Email: <strong>team@faf.one</strong></p>
+				<button onclick={() => showContactModal = true} class="contact-button-primary">
+					⚡️ Contact Team →
+				</button>
 				<p>Response time: Within 24 hours</p>
 				<p class="priority-note">🏆 LEGENDS get priority support</p>
 			</div>
@@ -149,6 +154,8 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 </main>
 
 <Footer />
+
+<ContactModal bind:isOpen={showContactModal} />
 
 <style>
 	.support-page {
@@ -409,6 +416,26 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 
 	.emergency-banner strong {
 		color: var(--faf-orange);
+	}
+
+	.contact-button-primary {
+		width: 100%;
+		padding: 1rem 1.5rem;
+		background: linear-gradient(135deg, var(--faf-orange) 0%, #ff5a20 100%);
+		color: var(--faf-white);
+		border: none;
+		border-radius: 8px;
+		font-size: 1.125rem;
+		font-weight: 700;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin: 1rem 0;
+		text-transform: none;
+	}
+
+	.contact-button-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
 	}
 
 	@media (max-width: 768px) {
