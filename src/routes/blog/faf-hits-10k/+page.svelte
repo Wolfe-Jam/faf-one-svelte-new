@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>.FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real | FAF</title>
-	<meta name="description" content="From desktop frustration to Anthropic approval - .FAF reaches 10,067 downloads (5,619 CLI + 4,448 MCP) as the Foundational AI context format gains ecosystem traction." />
-	<meta property="og:title" content=".FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real" />
-	<meta property="og:description" content="From desktop frustration to Anthropic approval - Official MCP steward reaches 10,067 downloads with Foundational AI context format." />
+	<title>.FAF: 10,500+ downloads: 5,800 CLI: 4,700 MCP - Persistent project context is Real | FAF</title>
+	<meta name="description" content="From desktop frustration to Anthropic approval - .FAF reaches 10,500+ downloads (5,800 CLI + 4,700 MCP) as the Foundational AI context format gains ecosystem traction." />
+	<meta property="og:title" content=".FAF: 10,500+ downloads: 5,800 CLI: 4,700 MCP - Persistent project context is Real" />
+	<meta property="og:description" content="From desktop frustration to Anthropic approval - Official MCP steward reaches 10,500+ downloads with Foundational AI context format." />
 	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -23,12 +23,12 @@
 		<div class="breadcrumb">
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / 10k Milestone
 		</div>
-		<h1>.FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real</h1>
+		<h1>.FAF: 10.5k+ downloads: 5,800 CLI: 4,700 MCP - Persistent project context is Real</h1>
 		<p class="subtitle">From desktop frustration to Anthropic approval - the Foundational AI context format gains traction</p>
 		<div class="meta">
 			<time datetime="2025-10-29">October 29, 2025</time>
 			<span class="separator">•</span>
-			<span class="milestone">10,067 Downloads</span>
+			<span class="milestone">10.5k+ Downloads</span>
 			<span class="separator">•</span>
 			<span class="category">Milestone</span>
 		</div>
@@ -37,7 +37,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>.FAF (Foundational AI-context Format)</strong> has crossed 10,067 downloads on npm (5,619 CLI + 4,448 MCP). It's an actual file format - not a tool, not a product - the first persistent project context standard in the AI development ecosystem.
+				<strong>.FAF (Foundational AI-context Format)</strong> has crossed 10.5k+ downloads on npm (5,800 CLI + 4,700 MCP). It's an actual file format - not a tool, not a product - the first persistent project context standard in the AI development ecosystem.
 			</p>
 
 			<blockquote class="creator-quote">
@@ -89,7 +89,7 @@ description: What this skill does
 					<p>
 						<strong>First and only persistent project context server</strong> in the official Anthropic MCP ecosystem. PR #2759 merged with validation by Anthropic engineering team.
 					</p>
-					<p class="validation-stat">4,448 total MCP downloads</p>
+					<p class="validation-stat">4,700 total MCP downloads</p>
 				</div>
 
 				<div class="validation-card">
@@ -109,7 +109,7 @@ description: What this skill does
 					<p>
 						Available via <code>brew install faf-cli</code> for macOS and Linux users, providing native package management integration.
 					</p>
-					<p class="validation-stat">5,619 total CLI downloads</p>
+					<p class="validation-stat">5,800 total CLI downloads</p>
 				</div>
 
 				<div class="validation-card">
@@ -118,7 +118,7 @@ description: What this skill does
 					<p>
 						Published to npm as <code>faf-cli</code> and <code>claude-faf-mcp</code> - universal JavaScript package manager reaching developers worldwide.
 					</p>
-					<p class="validation-stat validation-stat-highlight">10,067 combined downloads</p>
+					<p class="validation-stat validation-stat-highlight">10.5k+ combined downloads</p>
 				</div>
 			</div>
 		</section>
@@ -329,7 +329,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 				🆓 Open Source MIT
 			</p>
 			<p class="stats">
-				<strong>10,067 downloads. 4 platforms. 1 format. 0 vendor lock-in.</strong>
+				<strong>10.5k+ downloads. 4 platforms. 1 format. 0 vendor lock-in.</strong>
 			</p>
 		</section>
 	</article>
@@ -342,9 +342,9 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 		<div class="share">
 			<p>Share this milestone:</p>
 			<div class="share-buttons">
-				<a href="https://twitter.com/intent/tweet?text=.FAF%3A%2010%2C067%20downloads%3A%205%2C619%20CLI%3A%204%2C448%20MCP%20-%20Persistent%20project%20context%20is%20Real&url=https://faf.one/blog/faf-hits-10k" target="_blank">Twitter</a>
+				<a href="https://twitter.com/intent/tweet?text=.FAF%3A%2010.5k%2B%20downloads%3A%205%2C800%20CLI%3A%204%2C700%20MCP%20-%20Persistent%20project%20context%20is%20Real&url=https://faf.one/blog/faf-hits-10k" target="_blank">Twitter</a>
 				<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://faf.one/blog/faf-hits-10k" target="_blank">LinkedIn</a>
-				<a href="https://news.ycombinator.com/submitlink?u=https://faf.one/blog/faf-hits-10k&t=.FAF%3A%2010%2C067%20downloads%3A%205%2C619%20CLI%3A%204%2C448%20MCP%20-%20Persistent%20project%20context%20is%20Real" target="_blank">Hacker News</a>
+				<a href="https://news.ycombinator.com/submitlink?u=https://faf.one/blog/faf-hits-10k&t=.FAF%3A%2010.5k%2B%20downloads%3A%205%2C800%20CLI%3A%204%2C700%20MCP%20-%20Persistent%20project%20context%20is%20Real" target="_blank">Hacker News</a>
 			</div>
 		</div>
 	</footer>

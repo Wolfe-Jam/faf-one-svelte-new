@@ -86,12 +86,6 @@
 				</div>
 
 				<div class="timeline-event">
-					<div class="timeline-date">October 2024</div>
-					<h3>CLI Launch</h3>
-					<p>faf-cli published to npm. Format discovery engine (TURBO-CAT) processes 153+ framework types.</p>
-				</div>
-
-				<div class="timeline-event">
 					<div class="timeline-date">September 1, 2025</div>
 					<h3>Developer Platform Launch</h3>
 					<p><a href="https://fafdev.tools" target="_blank" rel="noopener">fafdev.tools</a> and faf-engine-mk1 launched. Developer tools and engine testing platform go live. Built with Svelte 5 runes.</p>
@@ -104,15 +98,27 @@
 				</div>
 
 				<div class="timeline-event">
+					<div class="timeline-date">September 16, 2025</div>
+					<h3>MCP Server Launch</h3>
+					<p>claude-faf-mcp v2.0.0 published to npm. First persistent project context server for Claude Desktop.</p>
+				</div>
+
+				<div class="timeline-event">
+					<div class="timeline-date">September 24, 2025</div>
+					<h3>CLI Launch</h3>
+					<p>faf-cli v2.1.0 published to npm. Format discovery engine (TURBO-CAT) processes 153+ framework types.</p>
+				</div>
+
+				<div class="timeline-event">
 					<div class="timeline-date">October 17, 2025</div>
-					<h3>Anthropic Approval</h3>
-					<p>claude-faf-mcp merged into official Anthropic MCP Registry (PR #2759). First persistent project context server.</p>
+					<h3>Anthropic MCP Registry Approval</h3>
+					<p>claude-faf-mcp merged into official Anthropic MCP Registry (PR #2759). Official endorsement achieved.</p>
 				</div>
 
 				<div class="timeline-event">
 					<div class="timeline-date">October 29, 2025</div>
 					<h3>Second Google Approval + 10k Downloads</h3>
-					<p>"Stack⚡️Grabber" v1.6.0 approved and published to Chrome Web Store. Same day: ecosystem reaches 10,067 total downloads (5,619 CLI + 4,448 MCP).</p>
+					<p>"Stack⚡️Grabber" v1.6.0 approved and published to Chrome Web Store. Same day: ecosystem reaches 10k milestone.</p>
 				</div>
 
 				<div class="timeline-event highlighted">
@@ -214,9 +220,9 @@
 
 			<div class="stats-grid">
 				<div class="stat-card">
-					<div class="stat-number">10,067</div>
+					<div class="stat-number">10.5k+</div>
 					<div class="stat-label">Total Downloads</div>
-					<div class="stat-breakdown">5,619 CLI + 4,448 MCP</div>
+					<div class="stat-breakdown">5.8k CLI + 4.7k MCP (598/wk)</div>
 				</div>
 
 				<div class="stat-card">
@@ -226,9 +232,9 @@
 				</div>
 
 				<div class="stat-card">
-					<div class="stat-number">3</div>
+					<div class="stat-number">4</div>
 					<div class="stat-label">Platform Approvals</div>
-					<div class="stat-breakdown">IANA, Anthropic, Google</div>
+					<div class="stat-breakdown">IANA, Anthropic, Google (2x)</div>
 				</div>
 
 				<div class="stat-card">
@@ -277,12 +283,12 @@
 
 				<a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="resource-link">
 					<strong>faf-cli on npm</strong>
-					<p>Command-line interface (5,619 downloads)</p>
+					<p>Command-line interface (5.8k downloads)</p>
 				</a>
 
 				<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="resource-link">
 					<strong>claude-faf-mcp on npm</strong>
-					<p>Official MCP server (4,448 downloads)</p>
+					<p>Official MCP server (4.7k downloads, 598/wk)</p>
 				</a>
 
 				<a href="https://github.com/Wolfe-Jam/faf" target="_blank" rel="noopener" class="resource-link">

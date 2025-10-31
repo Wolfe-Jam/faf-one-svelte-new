@@ -11,10 +11,10 @@
 		},
 		{
 			slug: 'blog/faf-hits-10k',
-			title: '.FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real',
+			title: '.FAF: 10,500+ downloads: 5,800 CLI: 4,700 MCP - Persistent project context is Real',
 			date: 'October 29, 2025',
 			timestamp: '2025-10-29',
-			excerpt: 'From desktop frustration to Anthropic approval - .FAF reaches 10,067 downloads (5,619 CLI + 4,448 MCP) as the Foundational AI context format gains ecosystem traction.',
+			excerpt: 'From desktop frustration to Anthropic approval - .FAF reaches 10,500+ downloads (5,800 CLI + 4,700 MCP) as the Foundational AI context format gains ecosystem traction.',
 			emoji: '🏆',
 			category: 'Milestone'
 		},
