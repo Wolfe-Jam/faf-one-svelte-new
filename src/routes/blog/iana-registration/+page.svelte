@@ -297,8 +297,52 @@
 		<section class="about">
 			<h2>About .faf</h2>
 			<p>
-				.faf (Foundational AI-context Format) is the first persistent project context format for AI development tools. Created on August 8, 2024, .faf provides universal, shareable AI context that works across Claude, Cursor, VS Code, and any AI tool. The format is free, open source (MIT), and now officially registered by IANA.
+				.faf (Foundational AI-context Format) is the first persistent project context format for AI development tools. Created on August 8, 2025, .faf provides universal, shareable AI context that works across Claude, Cursor, VS Code, and any AI tool. The format is free, open source (MIT), and now officially registered by IANA.
 			</p>
+		</section>
+
+		<section class="format-expertise">
+			<h2>30 Years of Format Design Expertise</h2>
+			<p>
+				.faf didn't emerge from nowhere - it's the culmination of three decades of format design experience.
+			</p>
+
+			<div class="expertise-timeline">
+				<div class="expertise-event">
+					<div class="expertise-year">1990s</div>
+					<h3>.iff Format Obsession</h3>
+					<p>Fell for Commodore Amiga's .iff (Interchange File Format). Became obsessed with understanding what makes formats elegant, enduring, and adoptable.</p>
+				</div>
+
+				<div class="expertise-event">
+					<div class="expertise-year">2000s</div>
+					<h3>Carpet Industry 3D Simulation Format</h3>
+					<p>Created complex 3D simulation format for the Carpet Industry. <strong>Still in daily use today</strong> - proving that well-designed formats outlast trends and companies.</p>
+				</div>
+
+				<div class="expertise-event">
+					<div class="expertise-year">2023</div>
+					<h3>AI Discovery</h3>
+					<p>Got interested in AI development. Immediately recognized the context problem through the lens of 20+ years of format expertise.</p>
+				</div>
+
+				<div class="expertise-event">
+					<div class="expertise-year">2024-2025</div>
+					<h3>Active AI Development</h3>
+					<p>Building AI tools and projects. Experiencing context frustration firsthand. Drawing on decades of format knowledge to solve it.</p>
+				</div>
+
+				<div class="expertise-event highlighted">
+					<div class="expertise-year">Summer 2025</div>
+					<h3>August 8, 2025: .faf Created</h3>
+					<p>Applied 30 years of format expertise to AI's context problem. Got it right immediately - not luck, but experience.</p>
+				</div>
+			</div>
+
+			<blockquote class="creator-philosophy">
+				"AI needed a format, it got one: .faf. This wasn't a lucky guess - it was three decades of format design expertise compressed into one solution. From .iff to Carpet Industry simulations to AI context, I've been preparing for this moment for 30 years."
+				<footer>— .faf creator</footer>
+			</blockquote>
 		</section>
 
 		<section class="origin-story">
@@ -791,6 +835,65 @@
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	.expertise-timeline {
+		display: grid;
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.expertise-event {
+		background: #f9f9f9;
+		border-left: 4px solid #666;
+		padding: 1.5rem;
+		border-radius: 0 8px 8px 0;
+	}
+
+	.expertise-event.highlighted {
+		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		border-left: 6px solid var(--faf-orange);
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+	}
+
+	.expertise-year {
+		font-size: 0.9rem;
+		color: #666;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.5rem;
+	}
+
+	.expertise-event.highlighted .expertise-year {
+		color: var(--faf-orange);
+	}
+
+	.expertise-event h3 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1.2rem;
+	}
+
+	.expertise-event p {
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	.creator-philosophy {
+		background: var(--faf-black);
+		color: white;
+		border-left: 6px solid var(--faf-orange);
+		padding: 2rem;
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		font-style: normal;
+		line-height: 1.6;
+	}
+
+	.creator-philosophy footer {
+		margin-top: 1.5rem;
+		font-size: 1rem;
+		color: var(--faf-orange);
 	}
 
 	@media (max-width: 768px) {
