@@ -98,21 +98,21 @@
 				</div>
 
 				<div class="timeline-event">
-					<div class="timeline-date">October 16, 2025</div>
+					<div class="timeline-date">September 11, 2025</div>
+					<h3>First Google Approval</h3>
+					<p>".faf - AI-Context⚡️Fast AF" v1.0.2 approved and published to Chrome Web Store. Google security review passed.</p>
+				</div>
+
+				<div class="timeline-event">
+					<div class="timeline-date">October 17, 2025</div>
 					<h3>Anthropic Approval</h3>
 					<p>claude-faf-mcp merged into official Anthropic MCP Registry (PR #2759). First persistent project context server.</p>
 				</div>
 
 				<div class="timeline-event">
-					<div class="timeline-date">October 23, 2025</div>
-					<h3>Google Approval</h3>
-					<p>FAF Chrome Extension approved and published to Chrome Web Store after security review.</p>
-				</div>
-
-				<div class="timeline-event">
 					<div class="timeline-date">October 29, 2025</div>
-					<h3>10k Downloads</h3>
-					<p>Ecosystem reaches 10,067 total downloads (5,619 CLI + 4,448 MCP). Organic growth validates format need.</p>
+					<h3>Second Google Approval + 10k Downloads</h3>
+					<p>"Stack⚡️Grabber" v1.6.0 approved and published to Chrome Web Store. Same day: ecosystem reaches 10,067 total downloads (5,619 CLI + 4,448 MCP).</p>
 				</div>
 
 				<div class="timeline-event highlighted">
@@ -176,28 +176,35 @@
 		</section>
 
 		<section class="validation">
-			<h2>Triple Validation: Anthropic, Google, IANA</h2>
+			<h2>Quadruple Validation: Google (2x), Anthropic, IANA</h2>
 
 			<div class="validation-boxes">
 				<div class="validation-box">
 					<div class="validation-icon">🏛️</div>
 					<h3>IANA Registration</h3>
 					<p>Official Internet media type alongside PDF, JSON, XML</p>
-					<p class="validation-status">✓ Registered</p>
+					<p class="validation-status">✓ Oct 31, 2025</p>
 				</div>
 
 				<div class="validation-box">
 					<div class="validation-icon">🤖</div>
 					<h3>Anthropic MCP</h3>
 					<p>Merged into official Model Context Protocol registry</p>
-					<p class="validation-status">✓ PR #2759 Merged</p>
+					<p class="validation-status">✓ Oct 17, 2025</p>
 				</div>
 
 				<div class="validation-box">
 					<div class="validation-icon">🏪</div>
-					<h3>Google Chrome</h3>
-					<p>Extension approved after security review</p>
-					<p class="validation-status">✓ Published</p>
+					<h3>Google Chrome (First)</h3>
+					<p>.faf - AI-Context⚡️Fast AF v1.0.2</p>
+					<p class="validation-status">✓ Sep 11, 2025</p>
+				</div>
+
+				<div class="validation-box">
+					<div class="validation-icon">⚡</div>
+					<h3>Google Chrome (Second)</h3>
+					<p>Stack⚡️Grabber v1.6.0</p>
+					<p class="validation-status">✓ Oct 29, 2025</p>
 				</div>
 			</div>
 		</section>
@@ -626,7 +633,7 @@
 
 	.validation-boxes {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 1.5rem;
 		margin: 2rem 0;
 	}
