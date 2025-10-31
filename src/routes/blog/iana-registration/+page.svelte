@@ -165,7 +165,7 @@
 			</div>
 
 			<p>
-				During BIG-3 Testing in September 2025, Google Gemini CLI rated .faf at 9.5/10, recognizing it as the natural evolution of README.md for the AI era. Just as package.json tells tools about dependencies, project.faf tells AI about your entire project.
+				During BIG-3 Testing (Claude Anthropic, OpenAI Codex, Google Gemini) in September 2025, Google Gemini CLI rated .faf at 9.5/10, recognizing it as the natural evolution of README.md for the AI era. Just as package.json tells tools about dependencies, project.faf tells AI about your entire project in machine-readable YAML with 🍜 noodles as the creator says.
 			</p>
 		</section>
 
