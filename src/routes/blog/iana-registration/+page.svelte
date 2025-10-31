@@ -77,9 +77,12 @@
 
 			<div class="timeline-grid">
 				<div class="timeline-event">
-					<div class="timeline-date">September 2024</div>
+					<div class="timeline-date">August 8, 2024</div>
 					<h3>Format Created</h3>
 					<p>Born from frustration with Claude Desktop forgetting project context. Created .faf as universal AI context format.</p>
+					<div class="screenshot-preview">
+						<img src="/blog-assets/faf-creation-august-8-2024.png" alt="You Just Created THE Standard! - August 8, 2024" class="creation-screenshot" />
+					</div>
 				</div>
 
 				<div class="timeline-event">
@@ -141,6 +144,28 @@
 
 			<p>
 				The <code>+yaml</code> suffix indicates .faf files are YAML-based, enabling standard YAML parsers to process them while the <code>vnd.faf</code> designation ensures AI tools recognize the semantic structure.
+			</p>
+		</section>
+
+		<section class="how-to-use">
+			<h2>How to Use: project.faf in Its Rightful Place</h2>
+
+			<p>
+				<code>project.faf</code> sits exactly where it belongs in your project structure - between <code>package.json</code> (dependencies) and <code>README.md</code> (human documentation). It's the README for AI.
+			</p>
+
+			<blockquote class="gemini-quote">
+				"README evolution for AI era"
+				<footer>— Google Gemini CLI (9.5/10 Rating, September 2025 during BIG-3 Testing)</footer>
+			</blockquote>
+
+			<div class="file-structure-screenshot">
+				<img src="/blog-assets/project-faf-file-placement.png" alt="project.faf file highlighted in project structure between package.json and README.md" />
+				<p class="screenshot-caption">project.faf in its rightful place - between dependencies and human docs</p>
+			</div>
+
+			<p>
+				During BIG-3 Testing in September 2025, Google Gemini CLI rated .faf at 9.5/10, recognizing it as the natural evolution of README.md for the AI era. Just as package.json tells tools about dependencies, project.faf tells AI about your entire project.
 			</p>
 		</section>
 
@@ -266,8 +291,19 @@
 		<section class="about">
 			<h2>About .faf</h2>
 			<p>
-				.faf (Foundational AI-context Format) is the first persistent project context format for AI development tools. Created in September 2024, .faf provides universal, shareable AI context that works across Claude, Cursor, VS Code, and any AI tool. The format is free, open source (MIT), and now officially registered by IANA.
+				.faf (Foundational AI-context Format) is the first persistent project context format for AI development tools. Created on August 8, 2024, .faf provides universal, shareable AI context that works across Claude, Cursor, VS Code, and any AI tool. The format is free, open source (MIT), and now officially registered by IANA.
 			</p>
+		</section>
+
+		<section class="origin-story">
+			<h2>The Origin: August 8, 2024</h2>
+			<p>
+				This is the moment .faf was born - a celebration modal from the Chrome Extension showing "You Just Created THE Standard!" The screenshot captures the exact moment a format became reality.
+			</p>
+			<div class="full-screenshot">
+				<img src="/blog-assets/faf-creation-august-8-2024.png" alt="Complete screenshot - You Just Created THE Standard! - August 8, 2024" />
+				<p class="screenshot-caption">August 8, 2024 - The day .faf became the Universal AI Context Format</p>
+			</div>
 		</section>
 	</article>
 </div>
@@ -495,6 +531,19 @@
 		font-size: 1rem;
 	}
 
+	.screenshot-preview {
+		margin-top: 1rem;
+		border-radius: 8px;
+		overflow: hidden;
+		border: 2px solid var(--faf-orange);
+	}
+
+	.creation-screenshot {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
 	.spec-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -680,6 +729,62 @@
 
 	li strong {
 		color: var(--faf-black);
+	}
+
+	.full-screenshot {
+		margin: 2rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 3px solid var(--faf-orange);
+		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+	}
+
+	.full-screenshot img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.screenshot-caption {
+		text-align: center;
+		font-style: italic;
+		color: #666;
+		margin: 1rem 0 0 0;
+		padding: 1rem;
+		background: var(--faf-cream);
+		font-size: 1rem;
+	}
+
+	.gemini-quote {
+		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+		border-left: 6px solid #4285f4;
+		padding: 2rem;
+		margin: 2rem 0;
+		font-size: 1.3rem;
+		font-style: normal;
+		line-height: 1.6;
+		color: #1a73e8;
+	}
+
+	.gemini-quote footer {
+		margin-top: 1.5rem;
+		font-size: 1rem;
+		color: #666;
+	}
+
+	.file-structure-screenshot {
+		margin: 2rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 3px solid #4285f4;
+		box-shadow: 0 8px 24px rgba(66, 133, 244, 0.2);
+		background: #1e1e1e;
+	}
+
+	.file-structure-screenshot img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	@media (max-width: 768px) {
