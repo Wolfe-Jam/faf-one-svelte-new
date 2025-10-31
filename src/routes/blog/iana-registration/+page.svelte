@@ -156,7 +156,7 @@
 
 			<blockquote class="gemini-quote">
 				"README evolution for AI era"
-				<footer>— Google Gemini CLI (9.5/10 Rating, September 2025 during BIG-3 Testing)</footer>
+				<footer>— Google Gemini CLI (9.5/10 Rating)</footer>
 			</blockquote>
 
 			<div class="file-structure-screenshot">
