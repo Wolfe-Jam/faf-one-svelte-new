@@ -92,6 +92,12 @@
 				</div>
 
 				<div class="timeline-event">
+					<div class="timeline-date">September 1, 2025</div>
+					<h3>Developer Platform Launch</h3>
+					<p>fafdev.tools and faf-engine-mk1 launched. Developer tools and engine testing platform go live.</p>
+				</div>
+
+				<div class="timeline-event">
 					<div class="timeline-date">October 16, 2025</div>
 					<h3>Anthropic Approval</h3>
 					<p>claude-faf-mcp merged into official Anthropic MCP Registry (PR #2759). First persistent project context server.</p>
