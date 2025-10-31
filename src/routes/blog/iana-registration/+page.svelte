@@ -306,8 +306,10 @@
 		font-size: 2.5rem;
 		margin-bottom: 1rem;
 		color: var(--faf-black);
-		line-height: 1.2;
+		line-height: 1.3;
 		font-weight: 900;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
 	}
 
 	h1 code {
@@ -317,6 +319,8 @@
 		font-size: 0.9em;
 		color: var(--faf-orange);
 		font-family: var(--font-mono);
+		display: inline-block;
+		line-height: 1.4;
 	}
 
 	.subtitle {
