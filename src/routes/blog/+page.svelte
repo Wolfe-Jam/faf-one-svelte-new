@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/iana-registration',
+			title: '.faf Officially Registered by IANA as application/vnd.faf+yaml',
+			date: 'October 31, 2025',
+			timestamp: '2025-10-31',
+			excerpt: 'IANA (Internet Assigned Numbers Authority) officially registers .faf as application/vnd.faf+yaml - the first AI context format with official media type designation alongside PDF, JSON, and XML.',
+			emoji: '🏛️',
+			category: 'Press Release'
+		},
+		{
 			slug: 'blog/faf-hits-10k',
 			title: '.FAF: 10,067 downloads: 5,619 CLI: 4,448 MCP - Persistent project context is Real',
 			date: 'October 29, 2025',
