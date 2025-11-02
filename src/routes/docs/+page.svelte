@@ -10,8 +10,8 @@
 </script>
 
 <svelte:head>
-	<title>.faf Documentation - The JPEG for AI™</title>
-	<meta name="description" content="Complete documentation for .faf format - setup, usage, and API reference">
+	<title>.faf Documentation - Project DNA ✨ for ANY AI</title>
+	<meta name="description" content="Complete documentation for .faf format - IANA-registered, persistent project context for AI">
 </svelte:head>
 
 <div class="back-nav">
@@ -62,11 +62,31 @@
 	<main class="docs-content">
 		<section id="quickstart" class="doc-section">
 			<h1>📚 .faf Documentation</h1>
-			<p class="lead">The complete guide to using .faf - The JPEG for AI™</p>
-			
+			<p class="lead">Project DNA ✨ for ANY AI</p>
+
+			<div class="iana-badge">
+				<h3>🏆 IANA-Registered Format</h3>
+				<p>.faf is now an Internet-standard format (<code>application/vnd.faf+yaml</code>)</p>
+			</div>
+
+			<div class="positioning-grid">
+				<div class="position-card">
+					<h4>IANA Definition</h4>
+					<p>Official AI Context format</p>
+				</div>
+				<div class="position-card">
+					<h4>Anthropic MCP</h4>
+					<p>Only Persistent Project Context Server</p>
+				</div>
+				<div class="position-card">
+					<h4>Universal Standard</h4>
+					<p>Sits with package.json and README.md in every repo</p>
+				</div>
+			</div>
+
 			<div class="quickstart-box">
 				<h2>⚡ Quick Start</h2>
-				<p>Get started with .faf in seconds:</p>
+				<p>Universal CLI for FAF (Foundational AI-context Format) using project.faf:</p>
 
 				<div class="code-block">
 					<pre><code># Install globally
@@ -330,7 +350,11 @@ build/
 		
 		<section id="mcp" class="doc-section">
 			<h2>🤖 MCP Server</h2>
-			<p>The Model Context Protocol server enables AI models to understand your project structure instantly.</p>
+			<p><strong>Persistent Project Context</strong> - The only MCP server focused on persistent, format-first, holistic project context.</p>
+
+			<div class="mcp-tagline">
+				<p><strong>Push 'project.faf defines, Claude interprets'</strong></p>
+			</div>
 			
 			<h3>Configuration</h3>
 			<div class="code-block">
@@ -626,6 +650,76 @@ const stats = await FAF.stats('./project.faf');`}</code></pre>
 		margin-bottom: 2rem;
 	}
 	
+	.iana-badge {
+		background: linear-gradient(135deg, #fff9e6 0%, white 100%);
+		border: 3px solid #ffd700;
+		border-radius: 12px;
+		padding: 1.5rem;
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.iana-badge h3 {
+		margin: 0 0 0.5rem 0;
+		color: var(--faf-black);
+		font-size: 1.3rem;
+	}
+
+	.iana-badge p {
+		margin: 0;
+		color: #666;
+		font-size: 1rem;
+	}
+
+	.iana-badge code {
+		background: #f0f0f0;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+	}
+
+	.positioning-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin: 2rem 0;
+	}
+
+	.position-card {
+		background: white;
+		border: 2px solid var(--faf-orange);
+		border-radius: 8px;
+		padding: 1.25rem;
+		text-align: center;
+	}
+
+	.position-card h4 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1rem;
+		color: var(--faf-orange);
+	}
+
+	.position-card p {
+		margin: 0;
+		font-size: 0.875rem;
+		color: #666;
+	}
+
+	.mcp-tagline {
+		background: linear-gradient(135deg, #f0f4ff 0%, white 100%);
+		border-left: 4px solid var(--faf-orange);
+		padding: 1rem 1.5rem;
+		margin: 1rem 0;
+		border-radius: 4px;
+	}
+
+	.mcp-tagline p {
+		margin: 0;
+		font-size: 1.1rem;
+		color: var(--faf-black);
+	}
+
 	.quickstart-box {
 		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
 		border: 3px solid var(--faf-orange);
@@ -968,6 +1062,10 @@ const stats = await FAF.stats('./project.faf');`}</code></pre>
 
 		.docs-content {
 			padding: 2rem 1rem;
+		}
+
+		.positioning-grid {
+			grid-template-columns: 1fr;
 		}
 
 		.comparison-grid {
