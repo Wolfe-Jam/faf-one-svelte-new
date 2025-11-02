@@ -67,7 +67,10 @@
 					<FafLogo size="large" color="black" showDefinition={true} />
 				</div>
 				<div class="subtitle">
-					Professional AI-Context Management
+					🏆 IANA-Registered Format
+				</div>
+				<div class="iana-subtext">
+					Create official <code>application/vnd.faf+yaml</code> files from any codebase
 				</div>
 				<div class="mcp-badge-text">
 					Only Anthropic-approved<br/>Persistent Project Context MCP Server
@@ -346,12 +349,29 @@
 	}
 	
 	.subtitle {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		font-family: 'Roboto Condensed', sans-serif;
-		color: var(--faf-gray);
+		color: var(--faf-black);
 		letter-spacing: 0.05em;
 		margin-top: 4.5rem;
-		margin-bottom: 1rem;
+		margin-bottom: 0.75rem;
+		font-weight: 700;
+	}
+
+	.iana-subtext {
+		font-size: 1rem;
+		color: var(--faf-gray);
+		margin-bottom: 1.5rem;
+		font-family: var(--font-mono);
+	}
+
+	.iana-subtext code {
+		background: rgba(0, 0, 0, 0.05);
+		padding: 0.125rem 0.375rem;
+		border-radius: 4px;
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+		color: var(--faf-orange);
 	}
 
 	.mcp-badge-text {
