@@ -84,6 +84,25 @@
 				</div>
 			</div>
 
+			<div class="file-tree-box">
+				<h3>Where project.faf Lives</h3>
+				<p>Right alongside your existing project files:</p>
+				<div class="file-tree">
+					<pre><code>your-project/
+├── node_modules/
+├── src/
+├── tests/
+├── .gitignore
+├── LICENSE
+├── package.json          ← npm knows this
+├── package-lock.json
+├── <strong>project.faf</strong>           ← AI knows this ✨
+├── README.md             ← humans know this
+└── tsconfig.json</code></pre>
+				</div>
+				<p class="file-tree-caption">Three essential files: package.json (dependencies), README.md (humans), project.faf (AI)</p>
+			</div>
+
 			<div class="quickstart-box">
 				<h2>⚡ Quick Start</h2>
 				<p>Universal CLI for FAF (Foundational AI-context Format) using project.faf:</p>
@@ -718,6 +737,58 @@ const stats = await FAF.stats('./project.faf');`}</code></pre>
 		margin: 0;
 		font-size: 1.1rem;
 		color: var(--faf-black);
+	}
+
+	.file-tree-box {
+		background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
+		border: 2px solid #e0e0e0;
+		border-radius: 12px;
+		padding: 2rem;
+		margin: 2rem 0;
+	}
+
+	.file-tree-box h3 {
+		margin: 0 0 1rem 0;
+		color: var(--faf-black);
+		font-size: 1.25rem;
+	}
+
+	.file-tree-box > p {
+		margin: 0 0 1rem 0;
+		color: #666;
+	}
+
+	.file-tree {
+		background: #1e1e1e;
+		border-radius: 8px;
+		padding: 1.5rem;
+		margin: 1rem 0;
+		overflow-x: auto;
+	}
+
+	.file-tree pre {
+		margin: 0;
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+		line-height: 1.6;
+		color: #d4d4d4;
+	}
+
+	.file-tree code {
+		color: #d4d4d4;
+	}
+
+	.file-tree strong {
+		color: var(--faf-orange);
+		font-weight: 700;
+	}
+
+	.file-tree-caption {
+		margin: 1rem 0 0 0;
+		font-size: 0.9rem;
+		color: #666;
+		font-style: italic;
+		text-align: center;
 	}
 
 	.quickstart-box {
