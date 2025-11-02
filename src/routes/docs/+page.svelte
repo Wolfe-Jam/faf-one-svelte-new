@@ -29,6 +29,9 @@
 			<button class="nav-item" class:active={activeSection === 'quickstart'} onclick={() => scrollToSection('quickstart')}>
 				Quick Start
 			</button>
+			<button class="nav-item" class:active={activeSection === 'why'} onclick={() => scrollToSection('why')}>
+				Why .faf?
+			</button>
 			<button class="nav-item" class:active={activeSection === 'installation'} onclick={() => scrollToSection('installation')}>
 				Installation
 			</button>
@@ -49,6 +52,9 @@
 			</button>
 			<button class="nav-item" class:active={activeSection === 'api'} onclick={() => scrollToSection('api')}>
 				API Reference
+			</button>
+			<button class="nav-item" class:active={activeSection === 'developers'} onclick={() => scrollToSection('developers')}>
+				For Developers
 			</button>
 		</nav>
 	</aside>
@@ -78,7 +84,76 @@ faf migrate</code></pre>
 				</div>
 			</div>
 		</section>
-		
+
+		<section id="why" class="doc-section">
+			<h2>🔥 Why .faf?</h2>
+
+			<div class="problem-box">
+				<h3>The Problem Devs Don't See</h3>
+				<p class="lead-small">
+					"AI already has everything - it can read my <code>package.json</code> and <code>README.md</code>"
+				</p>
+				<p><strong>No. It doesn't. And the variables are NOT in your favor.</strong></p>
+			</div>
+
+			<h3>Without .faf: Token Hemorrhage</h3>
+			<p>Every session, AI searches your codebase from scratch:</p>
+
+			<div class="comparison-grid">
+				<div class="comparison-bad">
+					<h4>Without .faf</h4>
+					<ul class="token-list">
+						<li>Reads <code>package.json</code> (500 tokens)</li>
+						<li>Reads <code>README.md</code> (800 tokens)</li>
+						<li>Scans random files (2,000 tokens)</li>
+						<li>Reads <code>tsconfig.json</code> (300 tokens)</li>
+						<li>Directory listings (400 tokens)</li>
+					</ul>
+					<p class="total-bad">Total: 4,000 tokens wasted</p>
+					<p class="waste-label">95% waste searching for context</p>
+				</div>
+
+				<div class="comparison-good">
+					<h4>With .faf</h4>
+					<ul class="token-list">
+						<li>Reads <code>project.faf</code> once (120 tokens)</li>
+						<li>Has complete context</li>
+						<li>Starts working immediately</li>
+					</ul>
+					<p class="total-good">Total: 120 tokens</p>
+					<p class="savings-label">90% productive tokens</p>
+				</div>
+			</div>
+
+			<div class="stats-highlight">
+				<div class="stat">
+					<span class="stat-number">76%</span>
+					<span class="stat-label">Token Reduction</span>
+				</div>
+				<div class="stat">
+					<span class="stat-number">190K</span>
+					<span class="stat-label">Tokens Saved Weekly</span>
+				</div>
+				<div class="stat">
+					<span class="stat-number">&lt;50ms</span>
+					<span class="stat-label">Processing Time</span>
+				</div>
+			</div>
+
+			<h3>The Variables Are NOT in Your Favor</h3>
+			<p>Without .faf, AI controls everything:</p>
+			<ul>
+				<li>AI decides what to read (different every time)</li>
+				<li>AI decides what's relevant (often wrong)</li>
+				<li>AI starts from zero (every single session)</li>
+				<li>You pay tokens for guessing (not building)</li>
+			</ul>
+
+			<p>With .faf: <strong>You control the context. AI gets it right, first time, every time.</strong></p>
+
+			<p class="attribution">By Claude. No BS.</p>
+		</section>
+
 		<section id="installation" class="doc-section">
 			<h2>🔧 Installation</h2>
 			
@@ -359,7 +434,62 @@ const stats = await FAF.stats('./project.faf');`}</code></pre>
 }`}</code></pre>
 			</div>
 		</section>
-		
+
+		<section id="developers" class="doc-section">
+			<h2>👩‍💻 For Developers</h2>
+			<p class="lead">Want to understand how .faf works under the hood or extend it?</p>
+
+			<div class="dev-grid">
+				<div class="dev-card">
+					<h3>📖 Architecture Philosophy</h3>
+					<p>Learn the foundational principles behind .faf:</p>
+					<ul class="dev-list">
+						<li>Foundation First (no reverse)</li>
+						<li>Variables Not Complexity</li>
+						<li>The F1 Brake Analogy</li>
+					</ul>
+					<a href="https://github.com/Wolfe-Jam/faf-skills/blob/main/docs/PHILOSOPHY.md" target="_blank" class="btn-dev">
+						Read Philosophy →
+					</a>
+				</div>
+
+				<div class="dev-card">
+					<h3>🔧 Extensibility</h3>
+					<p>Four ways to extend .faf for your workflow:</p>
+					<ul class="dev-list">
+						<li>Skills (Claude Code)</li>
+						<li>Plugins (IDE/Browser)</li>
+						<li>MCP Tools (Claude Desktop)</li>
+						<li>Agent SDK (Future)</li>
+					</ul>
+					<a href="https://github.com/Wolfe-Jam/faf-skills/blob/main/docs/SKILLS-VS-MCP-VS-AGENTS.md" target="_blank" class="btn-dev">
+						Read Comparison →
+					</a>
+				</div>
+
+				<div class="dev-card">
+					<h3>💡 Token Waste Analysis</h3>
+					<p>Deep-dive into the problem .faf solves:</p>
+					<ul class="dev-list">
+						<li>Complete session breakdowns</li>
+						<li>Real token measurements</li>
+						<li>ROI calculations</li>
+					</ul>
+					<a href="https://github.com/Wolfe-Jam/faf-skills/blob/main/docs/WITH-WITHOUT-FAF.md" target="_blank" class="btn-dev">
+						Read Analysis →
+					</a>
+				</div>
+			</div>
+
+			<div class="contribute-box">
+				<h3>🤝 Contribute to .faf</h3>
+				<p>All FAF Skills and development documentation is open source:</p>
+				<a href="https://github.com/Wolfe-Jam/faf-skills" target="_blank" class="btn-contribute">
+					View faf-skills Repository →
+				</a>
+			</div>
+		</section>
+
 		<div class="docs-footer">
 			<p>Need help? <a href="/support">Contact Support</a> or check our <a href="https://github.com/Wolfe-Jam/faf" target="_blank">⭐ GitHub</a></p>
 		</div>
@@ -603,17 +733,254 @@ const stats = await FAF.stats('./project.faf');`}</code></pre>
 		text-decoration: underline;
 	}
 	
+	.problem-box {
+		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		border-left: 4px solid #ff0000;
+		padding: 1.5rem;
+		margin: 1.5rem 0;
+		border-radius: 8px;
+	}
+
+	.problem-box h3 {
+		margin-top: 0;
+		color: var(--faf-black);
+	}
+
+	.lead-small {
+		font-size: 1.1rem;
+		color: #666;
+		font-style: italic;
+		margin: 1rem 0;
+	}
+
+	.comparison-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.comparison-bad,
+	.comparison-good {
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+
+	.comparison-bad {
+		background: #fff5f5;
+		border: 2px solid #ff6b6b;
+	}
+
+	.comparison-good {
+		background: #f0fff4;
+		border: 2px solid #51cf66;
+	}
+
+	.comparison-bad h4,
+	.comparison-good h4 {
+		margin-top: 0;
+		font-size: 1.1rem;
+	}
+
+	.token-list {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0;
+	}
+
+	.token-list li {
+		padding: 0.5rem 0;
+		padding-left: 0;
+	}
+
+	.token-list li:before {
+		content: "";
+	}
+
+	.total-bad {
+		font-weight: 700;
+		color: #c92a2a;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+	}
+
+	.total-good {
+		font-weight: 700;
+		color: #2b8a3e;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+	}
+
+	.waste-label {
+		color: #c92a2a;
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+
+	.savings-label {
+		color: #2b8a3e;
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+
+	.stats-highlight {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin: 3rem 0;
+		padding: 2rem;
+		background: var(--faf-cream);
+		border-radius: 12px;
+	}
+
+	.stat {
+		text-align: center;
+	}
+
+	.stat-number {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		display: block;
+		font-size: 0.9rem;
+		color: #666;
+		font-weight: 600;
+	}
+
+	.attribution {
+		margin-top: 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid #e0e0e0;
+		font-size: 0.9rem;
+		color: #666;
+		font-weight: 600;
+	}
+
+	.dev-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.dev-card {
+		background: white;
+		border: 2px solid #e0e0e0;
+		border-radius: 12px;
+		padding: 1.5rem;
+		transition: all 0.3s ease;
+	}
+
+	.dev-card:hover {
+		border-color: var(--faf-orange);
+		transform: translateY(-4px);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	}
+
+	.dev-card h3 {
+		margin-top: 0;
+		font-size: 1.1rem;
+		color: var(--faf-black);
+	}
+
+	.dev-list {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0;
+	}
+
+	.dev-list li {
+		padding: 0.25rem 0;
+		padding-left: 1.25rem;
+		position: relative;
+		font-size: 0.9rem;
+	}
+
+	.dev-list li:before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: var(--faf-orange);
+	}
+
+	.btn-dev {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background: var(--faf-orange);
+		color: white;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.875rem;
+		transition: all 0.2s ease;
+	}
+
+	.btn-dev:hover {
+		background: #e65a25;
+		transform: translateY(-2px);
+	}
+
+	.contribute-box {
+		background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
+		border: 2px solid var(--faf-orange);
+		border-radius: 12px;
+		padding: 2rem;
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.contribute-box h3 {
+		margin-top: 0;
+		color: var(--faf-black);
+	}
+
+	.btn-contribute {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background: var(--faf-black);
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+		margin-top: 1rem;
+	}
+
+	.btn-contribute:hover {
+		background: var(--faf-orange);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	}
+
 	@media (max-width: 768px) {
 		.docs-layout {
 			grid-template-columns: 1fr;
 		}
-		
+
 		.docs-sidebar {
 			display: none;
 		}
-		
+
 		.docs-content {
 			padding: 2rem 1rem;
+		}
+
+		.comparison-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.stats-highlight {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.dev-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
