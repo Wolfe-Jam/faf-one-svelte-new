@@ -444,6 +444,11 @@ Claude: [Direct function call, 63ms execution]
 			<p>
 				FAF (Foundational AI-context Format) is an IANA-registered Internet media type for persistent project context in AI development tools. Registered as <code>application/vnd.faf+yaml</code> on October 31, 2025, .faf provides the same foundational role for AI context that package.json provides for dependencies.
 			</p>
+
+			<div class="file-structure-screenshot">
+				<img src="/blog-assets/project-faf-file-placement.png" alt="project.faf file highlighted in project structure between package.json and README.md" />
+				<p class="screenshot-caption">project.faf in its rightful place - between dependencies and human docs</p>
+			</div>
 		</section>
 
 		<section class="author">
@@ -926,6 +931,31 @@ Claude: [Direct function call, 63ms execution]
 
 	li strong {
 		color: var(--faf-black);
+	}
+
+	.file-structure-screenshot {
+		margin: 2rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 3px solid #4285f4;
+		box-shadow: 0 8px 24px rgba(66, 133, 244, 0.2);
+		background: #1e1e1e;
+	}
+
+	.file-structure-screenshot img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.screenshot-caption {
+		text-align: center;
+		font-style: italic;
+		color: #666;
+		margin: 1rem 0 0 0;
+		padding: 1rem;
+		background: var(--faf-cream);
+		font-size: 1rem;
 	}
 
 	@media (max-width: 768px) {
