@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/mcp-v3-standalone',
+			title: 'claude-faf-mcp v3.0.3 - 100% Standalone Achievement',
+			date: 'November 6, 2025',
+			timestamp: '2025-11-06',
+			excerpt: 'Zero CLI dependencies across all 50 MCP tools, delivering 16.2x performance improvement with championship-grade engineering.',
+			emoji: '🏎️',
+			category: 'Press Release'
+		},
+		{
 			slug: 'blog/iana-registration',
 			title: '.faf Officially Registered by IANA as application/vnd.faf+yaml',
 			date: 'October 31, 2025',
