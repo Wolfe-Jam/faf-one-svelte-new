@@ -9,9 +9,9 @@
 </script>
 
 <svelte:head>
-	<title>claude-faf-mcp v3.0.3 - 100% Standalone Achievement | FAF</title>
+	<title>claude-faf-mcp v3.0.4 - 100% Standalone Achievement | FAF</title>
 	<meta name="description" content="claude-faf-mcp achieves 100% standalone operation with 50/50 MCP tools operational, delivering 16.2x performance improvement over CLI-dependent versions." />
-	<meta property="og:title" content="claude-faf-mcp v3.0.3 - 100% Standalone Achievement" />
+	<meta property="og:title" content="claude-faf-mcp v3.0.4 - 100% Standalone Achievement" />
 	<meta property="og:description" content="Zero CLI dependencies across all 50 MCP tools. 16.2x faster. Championship-grade performance." />
 	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
@@ -21,9 +21,9 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / MCP v3.0.3 Standalone
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / MCP v3.0.4 Standalone
 		</div>
-		<h1>claude-faf-mcp v3.0.3 - 100% Standalone Achievement</h1>
+		<h1>claude-faf-mcp v3.0.4 - 100% Standalone Achievement</h1>
 		<p class="subtitle">Zero CLI dependencies across all 50 MCP tools, delivering 16.2x performance improvement</p>
 		<div class="meta">
 			<time datetime="2025-11-06">November 6, 2025</time>
@@ -35,7 +35,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>claude-faf-mcp v3.0.3</strong> completes the Mk3 bundled engine initiative by achieving <strong>100% standalone operation</strong> with zero external CLI dependencies across all 50 MCP tools, while maintaining full backward compatibility.
+				<strong>claude-faf-mcp v3.0.4</strong> completes the Mk3 bundled engine initiative by achieving <strong>100% standalone operation</strong> with zero external CLI dependencies across all 50 MCP tools, while maintaining full backward compatibility.
 			</p>
 
 			<div class="achievement-box">
@@ -52,7 +52,7 @@
 		</section>
 
 		<section class="new-features">
-			<h2>What Changed in v3.0.3</h2>
+			<h2>What Changed in v3.0.4</h2>
 
 			<p>
 				Two new bundled commands complete the 100% standalone achievement:
@@ -252,7 +252,7 @@
 
 			<div class="comparison">
 				<div class="before">
-					<h3>Before v3.0.3 (CLI-Dependent)</h3>
+					<h3>Before v3.0.4 (CLI-Dependent)</h3>
 					<pre><code>User: "Run faf enhance on my project"
 Claude: [Spawns external CLI process, 680ms delay]
         [Requires faf-cli installation]
@@ -260,7 +260,7 @@ Claude: [Spawns external CLI process, 680ms delay]
 				</div>
 
 				<div class="after">
-					<h3>After v3.0.3 (100% Standalone)</h3>
+					<h3>After v3.0.4 (100% Standalone)</h3>
 					<pre><code>User: "Run faf enhance on my project"
 Claude: [Direct function call, 63ms execution]
         [Auto-detects React, TypeScript, version]
@@ -315,7 +315,7 @@ Claude: [Direct function call, 63ms execution]
 				</div>
 
 				<div class="evolution-event highlighted">
-					<div class="version">v3.0.3</div>
+					<div class="version">v3.0.4</div>
 					<p><strong>100% standalone achievement (50/50 standalone) ☑️</strong></p>
 				</div>
 			</div>
@@ -387,7 +387,7 @@ Claude: [Direct function call, 63ms execution]
 			<h2>Backward Compatibility</h2>
 
 			<p>
-				v3.0.3 maintains full backward compatibility:
+				v3.0.4 maintains full backward compatibility:
 			</p>
 
 			<ul>
