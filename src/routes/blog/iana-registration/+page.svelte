@@ -52,6 +52,16 @@
 			</div>
 		</section>
 
+		<div class="uniqueness-callout">
+			<h3>🏆 Unprecedented Achievement</h3>
+			<p>
+				.faf is the <strong>world's first and only</strong> format with both IANA registration AND an official Anthropic MCP server. After comprehensive research across both registries, no other format combines these achievements.
+			</p>
+			<a href="/uniqueness" class="proof-link">
+				<strong>Read the Complete Research Proof →</strong>
+			</a>
+		</div>
+
 		<section class="significance">
 			<h2>What This Means</h2>
 
@@ -907,6 +917,46 @@
 		margin-top: 1.5rem;
 		font-size: 1rem;
 		color: var(--faf-orange);
+	}
+
+	.uniqueness-callout {
+		background: linear-gradient(135deg, #fff5f0 0%, #fffbf0 100%);
+		border: 3px solid var(--faf-orange);
+		border-radius: 12px;
+		padding: 2rem;
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.uniqueness-callout h3 {
+		margin: 0 0 1rem 0;
+		color: var(--faf-black);
+		font-size: 1.5rem;
+	}
+
+	.uniqueness-callout p {
+		margin: 0 0 1.5rem 0;
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
+	.proof-link {
+		display: inline-block;
+		background: var(--faf-orange);
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-size: 1.1rem;
+		font-weight: 700;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+	}
+
+	.proof-link:hover {
+		background: var(--faf-black);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
 	}
 
 	@media (max-width: 768px) {
