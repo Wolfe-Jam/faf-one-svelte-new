@@ -66,7 +66,7 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🩵⚡️ faf-cli v3.0.4</h3>
+					<h3>🩵⚡️ faf-cli v3.1.5</h3>
 					<span class="badge">Championship Edition</span>
 				</div>
 				<p class="release-description">
@@ -156,7 +156,7 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🩵⚡️ faf-cli v3.0.4</h3>
+					<h3>🩵⚡️ faf-cli v3.1.5</h3>
 					<span class="badge">Championship Edition</span>
 				</div>
 				<p class="release-description">
