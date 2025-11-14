@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
 
-	// Updated download stats (Oct 31, 2025)
-	const CLI_DOWNLOADS = 5800;
-	const MCP_DOWNLOADS = 4700;
-	const TOTAL_DOWNLOADS = 10500;
+	// Updated download stats (Nov 14, 2025)
+	const CLI_DOWNLOADS = 6500;
+	const MCP_DOWNLOADS = 6500;
+	const TOTAL_DOWNLOADS = 13000;
 
 	let cliDownloads = $state(0);
 	let mcpDownloads = $state(0);

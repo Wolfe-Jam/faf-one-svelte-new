@@ -41,7 +41,7 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>10,100+ Total Downloads</strong> •
+				<strong>13,000+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -73,7 +73,7 @@
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 5.6k downloads (npm)</li>
+					<li>☑️ 6.5k downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -99,7 +99,7 @@
 					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 4.5k downloads (npm)</li>
+					<li>☑️ 6.5k downloads (npm)</li>
 					<li>☑️ 35/35 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 33+ MCP tools</li>
@@ -119,7 +119,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>10,100+ Total Downloads</strong> •
+				<strong>13,000+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -164,7 +164,7 @@
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 5.6k downloads (npm)</li>
+					<li>☑️ 6.5k downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -190,7 +190,7 @@
 					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 4.5k downloads (npm)</li>
+					<li>☑️ 6.5k downloads (npm)</li>
 					<li>☑️ 35/35 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 33+ MCP tools</li>
@@ -210,7 +210,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>10,100+ Total Downloads</strong> •
+				<strong>13,000+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>

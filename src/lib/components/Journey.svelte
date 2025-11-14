@@ -106,7 +106,7 @@
 			title: "Live in Production",
 			icon: "🏆",
 			content: [
-				"🤖 MCP Server - 4.4k downloads (PR #2759 MERGED)",
+				"🤖 MCP Server - 6.5k downloads (PR #2759 MERGED)",
 				"🌐 Google Chrome EXTENSION LIVE",
 				"Trusted by developers worldwide"
 			],

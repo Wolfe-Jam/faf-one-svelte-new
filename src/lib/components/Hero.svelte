@@ -75,6 +75,15 @@
 				<div class="mcp-badge-text">
 					Only Anthropic-approved<br/>Persistent Project Context MCP Server
 				</div>
+				<div class="mcp-simple-breakdown">
+					<div class="mcp-formula">
+						<span class="formula-part">Model</span>
+						<span class="formula-separator">•</span>
+						<span class="formula-part highlight">Context (.faf)</span>
+						<span class="formula-separator">•</span>
+						<span class="formula-part">Protocol</span>
+					</div>
+				</div>
 				<div class="features-tagline">
 					<span class="feature-item"><span class="icon">⚡</span> FAST</span>
 					<span class="separator">•</span>
@@ -114,7 +123,7 @@
 			<ScrollRevealText threshold={0.5} delay={0}>
 				<div class="text-block authority-statement">
 					<div><strong>🏆 Anthropic-Approved MCP Server</strong> — Published to official MCP registry</div>
-					<div>10k+ Downloads • Anthropic-Approved</div>
+					<div>13k+ Downloads • Anthropic-Approved</div>
 					<div><strong>First and only persistent project context server</strong> in official Anthropic ecosystem</div>
 				</div>
 			</ScrollRevealText>
@@ -377,11 +386,43 @@
 	.mcp-badge-text {
 		font-size: 1.1rem;
 		font-weight: 700;
-		color: #00D4D4;
+		color: var(--faf-orange);
+		text-align: center;
+		margin-bottom: 1rem;
+		line-height: 1.6;
+		text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+	}
+
+	.mcp-simple-breakdown {
 		text-align: center;
 		margin-bottom: 2rem;
-		line-height: 1.6;
-		text-shadow: 0 0 10px rgba(0, 212, 212, 0.3);
+	}
+
+	.mcp-formula {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.75rem 1.5rem;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 999px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.formula-part {
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--faf-gray-dark);
+	}
+
+	.formula-part.highlight {
+		color: var(--faf-orange);
+		font-weight: 700;
+		font-size: 1.05rem;
+	}
+
+	.formula-separator {
+		color: var(--faf-gray);
+		font-weight: 300;
 	}
 
 	.features-tagline {
