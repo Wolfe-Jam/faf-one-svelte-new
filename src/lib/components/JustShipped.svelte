@@ -48,17 +48,17 @@
 		</div>
 
 		<!-- New Blog Article Featured -->
-		<div class="chrome-featured">
+		<div class="chrome-featured article-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">🏗️</div>
+				<div class="chrome-icon">🧩</div>
 				<div class="chrome-title">
 					<h3>The Missing Format</h3>
-					<span class="chrome-badge">New Article</span>
+					<span class="chrome-badge article-badge">New Article</span>
 				</div>
 			</div>
 			<p class="chrome-description">How .faf provides persistent context for Anthropic's agent architecture. Skills, Projects, MCP, and Subagents needed one thing: standardized persistent project context.</p>
-			<a href="/blog/the-missing-format" class="chrome-install">
-				🏗️ Read the Article
+			<a href="/blog/the-missing-format" class="chrome-install article-cta">
+				Read the Article →
 			</a>
 		</div>
 
@@ -89,21 +89,21 @@
 				</div>
 			</div>
 
-			<!-- MCP v2.6.3 -->
+			<!-- MCP v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v2.6.3</h3>
+					<h3>🧡⚡️ claude-faf-mcp v3.0.4</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
+					1st Persistent Project AI Context MCP Server. 100% Standalone, Zero CLI Dependencies.
 				</p>
 				<ul class="release-features">
 					<li>☑️ 6.5k downloads (npm)</li>
-					<li>☑️ 35/35 tests passing</li>
+					<li>☑️ 50/50 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
-					<li>☑️ 33+ MCP tools</li>
-					<li>☑️ Format-Driven Architecture</li>
+					<li>☑️ 52 MCP tools</li>
+					<li>☑️ 16.2x Performance Boost</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
@@ -179,21 +179,21 @@
 				</div>
 			</div>
 
-			<!-- MCP v2.6.3 -->
+			<!-- MCP v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v2.6.3</h3>
+					<h3>🧡⚡️ claude-faf-mcp v3.0.4</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					1st Persistent Project AI Context MCP Server. Official Anthropic MCP Registry.
+					1st Persistent Project AI Context MCP Server. 100% Standalone, Zero CLI Dependencies.
 				</p>
 				<ul class="release-features">
 					<li>☑️ 6.5k downloads (npm)</li>
-					<li>☑️ 35/35 tests passing</li>
+					<li>☑️ 50/50 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
-					<li>☑️ 33+ MCP tools</li>
-					<li>☑️ Format-Driven Architecture</li>
+					<li>☑️ 52 MCP tools</li>
+					<li>☑️ 16.2x Performance Boost</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
@@ -470,6 +470,34 @@
 	.chrome-install:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 5px 20px rgba(0, 212, 212, 0.5), 0 0 40px rgba(0, 212, 212, 0.3);
+	}
+
+	/* Article-specific styling - light, clean aesthetic */
+	.article-featured {
+		background: linear-gradient(135deg, #F9F9F9 0%, #F0F0F0 100%);
+		border-left: 4px solid #00bf63;
+	}
+
+	.article-featured .chrome-title h3 {
+		color: #000;
+	}
+
+	.article-featured .chrome-description {
+		color: #333;
+	}
+
+	.article-badge {
+		background: #00bf63 !important;
+		color: white;
+	}
+
+	.article-cta {
+		background: linear-gradient(135deg, #00bf63 0%, #00a854 100%);
+		color: white;
+	}
+
+	.article-cta:hover {
+		box-shadow: 0 5px 20px rgba(0, 191, 99, 0.4);
 	}
 
 	/* Featured Release One-Liner */
