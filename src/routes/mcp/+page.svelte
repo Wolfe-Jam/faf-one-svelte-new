@@ -75,6 +75,13 @@
 						</div>
 					</div>
 					<p class="breakdown-caption">.faf is the <strong>universal Context</strong> layer for any Model using the MCP Protocol</p>
+
+					<div class="prime-messaging">
+						<p><strong>We are the 'C' in MCP.</strong></p>
+						<p>IANA .FAF Format is AI context foundation.</p>
+						<p>Format foundation is non-negotiable.</p>
+						<p class="facts">Formats = facts.</p>
+					</div>
 				</div>
 			</ScrollRevealText>
 
@@ -532,6 +539,33 @@
 
 	.breakdown-caption strong {
 		color: var(--faf-orange);
+	}
+
+	.prime-messaging {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: linear-gradient(135deg, #F9F9F9 0%, #F0F0F0 100%);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 4px;
+		text-align: center;
+	}
+
+	.prime-messaging p {
+		margin: 0.5rem 0;
+		font-size: 1.1rem;
+		color: var(--faf-black);
+	}
+
+	.prime-messaging p:first-child {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.prime-messaging .facts {
+		margin-top: 1rem;
+		font-style: italic;
+		color: var(--faf-orange);
+		font-weight: 600;
 	}
 
 	/* Packages Section */
