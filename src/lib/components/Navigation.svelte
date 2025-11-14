@@ -82,12 +82,12 @@
 			{/each}
 			
 			<div class="nav-cta">
-				<button class="btn btn-ghost btn-small">
-					Sign In
-				</button>
-				<button class="btn btn-primary btn-small">
+				<a href="/docs" class="btn btn-ghost btn-small">
+					Docs
+				</a>
+				<a href="/docs#quick-start" class="btn btn-primary btn-small">
 					Get Started
-				</button>
+				</a>
 			</div>
 		</div>
 		
