@@ -47,18 +47,18 @@
 			</p>
 		</div>
 
-		<!-- Chrome Extension Featured -->
+		<!-- New Blog Article Featured -->
 		<div class="chrome-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">⚡️</div>
+				<div class="chrome-icon">🏗️</div>
 				<div class="chrome-title">
-					<h3>Stack⚡️Grabber v1.6.0</h3>
-					<span class="chrome-badge">Google-Approved</span>
+					<h3>The Missing Format</h3>
+					<span class="chrome-badge">New Article</span>
 				</div>
 			</div>
-			<p class="chrome-description">The ColorZilla for stacks. Click any repo, get instant stack info. React, n8n, Monaco & more. No cloning, no waiting.</p>
-			<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="chrome-install">
-				⚡️ Install Now — Join the Movement
+			<p class="chrome-description">How .faf provides persistent context for Anthropic's agent architecture. Skills, Projects, MCP, and Subagents needed one thing: standardized persistent project context.</p>
+			<a href="/blog/the-missing-format" class="chrome-install">
+				🏗️ Read the Article
 			</a>
 		</div>
 
@@ -136,20 +136,19 @@
 	<div class="container">
 		<h2 class="section-title">🏁 Just Shipped</h2>
 
-		<!-- NEW: Chrome Extension One-Liner -->
+		<!-- NEW: Blog Article One-Liner -->
 		<div class="featured-release">
 			<div class="featured-content">
-				<span class="featured-emoji">⚡</span>
+				<span class="featured-emoji">🏗️</span>
 				<div class="featured-text">
-					<strong>Stack⚡️Grabber v1.6.0</strong> — The ColorZilla for stacks. Click any repo, get instant stack info. No cloning, no waiting.
-					<span class="badge-inline google">Google-Approved</span>
+					<strong>The Missing Format</strong> — How .faf provides persistent context for Anthropic's agent architecture. The foundation is non-negotiable.
+					<span class="badge-inline new-article">New Article</span>
 				</div>
 			</div>
 			<div class="featured-actions">
-				<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="btn-install">
-					Install Now →
+				<a href="/blog/the-missing-format" class="btn-install">
+					Read Article →
 				</a>
-				<a href="/blog/chrome-extension-launch" class="btn-learn">Learn More</a>
 			</div>
 		</div>
 
@@ -522,6 +521,11 @@
 	.badge-inline.google {
 		background: white;
 		background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 75%, #EA4335 100%);
+		color: white;
+	}
+
+	.badge-inline.new-article {
+		background: #00bf63;
 		color: white;
 	}
 
