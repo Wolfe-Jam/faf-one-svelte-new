@@ -89,10 +89,10 @@
 				</div>
 			</div>
 
-			<!-- MCP v3.0.4 -->
+			<!-- MCP v3.3.1 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v3.0.4</h3>
+					<h3>🧡⚡️ claude-faf-mcp v3.3.1</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
@@ -103,7 +103,7 @@
 					<li>☑️ 50/50 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 52 MCP tools</li>
-					<li>☑️ 16.2x Performance Boost</li>
+					<li>☑️ TypeScript Built-in Types</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
@@ -179,10 +179,10 @@
 				</div>
 			</div>
 
-			<!-- MCP v3.0.4 -->
+			<!-- MCP v3.3.1 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v3.0.4</h3>
+					<h3>🧡⚡️ claude-faf-mcp v3.3.1</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
@@ -193,7 +193,7 @@
 					<li>☑️ 50/50 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 52 MCP tools</li>
-					<li>☑️ 16.2x Performance Boost</li>
+					<li>☑️ TypeScript Built-in Types</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
