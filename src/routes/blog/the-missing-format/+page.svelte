@@ -357,6 +357,10 @@ competitors:
 				Project DNA for any AI. Built on open standards. Already operational.
 			</p>
 
+			<p class="foundation-statement">
+				The foundation is non-negotiable.
+			</p>
+
 			<p class="final-thought">
 				The missing format was never missing. It's been there all along.
 			</p>
@@ -1008,6 +1012,18 @@ competitors:
 		text-align: center;
 		color: #333;
 		margin: 2rem 0;
+	}
+
+	.foundation-statement {
+		font-size: 1.3rem;
+		font-weight: 700;
+		color: #000;
+		text-align: center;
+		margin: 2rem 0;
+		padding: 1.5rem;
+		background: linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%);
+		border-left: 5px solid #00bf63;
+		border-radius: 4px;
 	}
 
 	.conclusion, .final-thought {
