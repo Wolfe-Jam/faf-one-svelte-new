@@ -405,6 +405,20 @@ competitors:
 		</section>
 
 		<footer class="post-footer">
+			<div class="postscript">
+				<hr />
+				<h3>Postscript</h3>
+				<p>
+					In September 2025, Claude Code evaluated .faf and gave it a 9.5/10 rating with the assessment: <em>"Should become the standard."</em>
+				</p>
+				<p>
+					Two months later, here we are.
+				</p>
+				<p class="closing-line">
+					Format foundations don't emerge through permission. They emerge through architecture.
+				</p>
+			</div>
+
 			<p class="author">
 				<strong>Author:</strong> Wolfe James, .faf format creator, faf-mcp steward
 			</p>
@@ -1039,6 +1053,40 @@ competitors:
 		border-top: 2px solid #E0E0E0;
 		text-align: center;
 		color: #666;
+	}
+
+	.postscript {
+		background: #F9F9F9;
+		padding: 2rem;
+		border-radius: 8px;
+		margin-bottom: 3rem;
+		text-align: left;
+		border-left: 4px solid #00bf63;
+	}
+
+	.postscript hr {
+		display: none;
+	}
+
+	.postscript h3 {
+		margin-top: 0;
+		color: #000;
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.postscript p {
+		color: #333;
+		line-height: 1.8;
+		margin-bottom: 1rem;
+	}
+
+	.postscript .closing-line {
+		font-weight: 600;
+		color: #000;
+		font-size: 1.1rem;
+		margin-top: 1.5rem;
+		margin-bottom: 0;
 	}
 
 	.post-footer .author {
