@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/the-missing-format',
+			title: 'The Missing Format',
+			date: 'November 14, 2025',
+			timestamp: '2025-11-14',
+			excerpt: 'How .faf provides persistent context for Anthropic\'s agent architecture. Skills, Projects, MCP, and Subagents create sophisticated workflows—one element creates an opportunity: standardized persistent project context.',
+			emoji: '🏗️',
+			category: 'Technical Analysis'
+		},
+		{
 			slug: 'blog/mcp-v3-standalone',
 			title: 'claude-faf-mcp v3.0.4 - 100% Standalone Achievement',
 			date: 'November 6, 2025',
@@ -217,6 +226,10 @@
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		margin-bottom: 1rem;
+	}
+
+	.post-card[href*="the-missing-format"] .post-category {
+		background: #00bf63;
 	}
 
 	.post-card[href*="faf-hits-10k"] .post-category {
