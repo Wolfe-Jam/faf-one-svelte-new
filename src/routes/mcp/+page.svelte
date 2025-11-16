@@ -350,7 +350,7 @@
 						<a href="https://www.npmjs.com/package/faf-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
 							Install faf-mcp →
 						</a>
-						<a href="https://discord.com/invite/3pjzpKsP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+						<a href="https://discord.com/invite/56fPBUJKfk" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
 							Join Discord Community
 						</a>
 						<a href="https://github.com/Wolfe-Jam/faf-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
