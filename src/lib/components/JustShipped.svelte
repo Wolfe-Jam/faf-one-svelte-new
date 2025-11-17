@@ -41,7 +41,7 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>13,000+ Total Downloads</strong> •
+				<strong>14,200+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -66,14 +66,14 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🩵⚡️ faf-cli v3.1.5</h3>
+					<h3>🩵⚡️ faf-cli v3.1.6</h3>
 					<span class="badge">Championship Edition</span>
 				</div>
 				<p class="release-description">
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 6.5k downloads (npm)</li>
+					<li>☑️ 6.7k downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -92,14 +92,14 @@
 			<!-- MCP v3.3.1 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v3.3.1</h3>
+					<h3>🧡⚡️ claude-faf-mcp v3.3.2</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
 					1st Persistent Project AI Context MCP Server. 100% Standalone, Zero CLI Dependencies.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 6.5k downloads (npm)</li>
+					<li>☑️ 6.8k downloads (npm)</li>
 					<li>☑️ 50/50 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 52 MCP tools</li>
@@ -119,7 +119,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>13,000+ Total Downloads</strong> •
+				<strong>14,200+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -156,14 +156,14 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🩵⚡️ faf-cli v3.1.5</h3>
+					<h3>🩵⚡️ faf-cli v3.1.6</h3>
 					<span class="badge">Championship Edition</span>
 				</div>
 				<p class="release-description">
 					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
 				</p>
 				<ul class="release-features">
-					<li>☑️ 6.5k downloads (npm)</li>
+					<li>☑️ 6.7k downloads (npm)</li>
 					<li>☑️ 173/173 tests passing</li>
 					<li>☑️ 100% TypeScript strict mode</li>
 					<li>☑️ &lt;50ms championship performance</li>
@@ -182,14 +182,14 @@
 			<!-- MCP v3.3.1 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v3.3.1</h3>
+					<h3>🧡⚡️ claude-faf-mcp v3.3.2</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
 					1st Persistent Project AI Context MCP Server. 100% Standalone, Zero CLI Dependencies.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 6.5k downloads (npm)</li>
+					<li>☑️ 6.8k downloads (npm)</li>
 					<li>☑️ 50/50 tests passing</li>
 					<li>☑️ PR #2759 MERGED</li>
 					<li>☑️ 52 MCP tools</li>
@@ -209,7 +209,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>13,000+ Total Downloads</strong> •
+				<strong>14,200+ Total Downloads</strong> •
 				<strong>208/208 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>

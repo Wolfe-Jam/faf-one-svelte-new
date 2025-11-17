@@ -174,15 +174,15 @@
 						<li><code>claude-faf-mcp</code>: 52 tools for FAF operations</li>
 						<li>Official Anthropic MCP steward status</li>
 						<li>Listed in Anthropic MCP repository (<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener">PR #2759</a> merged)</li>
-						<li>6,500+ downloads, 800+/week</li>
+						<li>6,800+ downloads, 800+/week</li>
 					</ul>
 				</div>
 
 				<div class="credential">
 					<h3>Ecosystem Adoption</h3>
 					<ul>
-						<li>13,000+ total downloads across packages</li>
-						<li><code>faf-cli</code> v3.1.5: 41 commands, 6,500+ downloads</li>
+						<li>14,200+ total downloads across packages</li>
+						<li><code>faf-cli</code> v3.1.6: 41 commands, 6,700+ downloads</li>
 						<li>Cross-platform validation: Claude (9.5/10), GPT (9/10), Gemini (9.5/10)</li>
 						<li>TypeScript strict mode, 730+ passing tests</li>
 						<li>Sub-50ms performance targets (Mk3 engine)</li>
@@ -325,7 +325,7 @@ competitors:
 			<div class="ecosystem-metrics">
 				<h3>Ecosystem Metrics</h3>
 				<ul>
-					<li>13,000+ downloads (faf-cli + claude-faf-mcp + faf-mcp)</li>
+					<li>14,200+ downloads (faf-cli + claude-faf-mcp + faf-mcp)</li>
 					<li>730+ passing tests (TypeScript strict mode, zero errors)</li>
 					<li>52 MCP tools (official Anthropic integration)</li>
 					<li>3 AI platforms validated (Claude 9.5/10, GPT 9/10, Gemini 9.5/10)</li>
@@ -342,7 +342,7 @@ competitors:
 			</p>
 
 			<p>
-				Format foundations emerge through use, not permission. IANA registration documents reality, not aspiration. 13,000+ downloads create gravity.
+				Format foundations emerge through use, not permission. IANA registration documents reality, not aspiration. 14,200+ downloads create gravity.
 			</p>
 
 			<p>

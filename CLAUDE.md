@@ -97,6 +97,17 @@ If running in background, kill old process first, then restart with `run_in_back
 
 ## 🏁 GOLDEN RULES - Professional Standards
 
+### 🚨 NPM PUBLISH PROTOCOL - DOES NOT APPLY
+
+**This is a SvelteKit website, NOT an npm package.**
+- No npm publish workflow
+- Changes deploy via git push
+- Professional git commits still required (see below)
+
+**For FAF package publishes** (faf-cli, claude-faf-mcp, faf-mcp):
+- See `/Users/wolfejam/FAF-GOLD/PLANET-FAF/PUBLISH-PROTOCOL.md`
+- Never publish without "GO!" or "GREEN LIGHT" from wolfejam
+
 ### Git Commit Protocol (REQUIRED)
 **Every commit must follow this exact format:**
 ```
