@@ -142,6 +142,11 @@
 					</tbody>
 				</table>
 			</div>
+
+			<div class="screenshot-showcase">
+				<img src="/blog-assets/grok-faf-mcp-landing.png" alt="grok-faf-mcp landing page with Big Orange" class="landing-screenshot" />
+				<p class="screenshot-caption">The actual live landing page at grok-faf-mcp.vercel.app</p>
+			</div>
 		</section>
 
 		<section class="how-to">
@@ -170,6 +175,11 @@
 			<p>No permission asked.</p>
 
 			<p>Just shipped with maximum squeeze.</p>
+
+			<div class="screenshot-showcase">
+				<img src="/blog-assets/elon-liked-grok-mcp.jpeg" alt="Elon Musk liked the grok-faf-mcp announcement" class="notification-screenshot" />
+				<p class="screenshot-caption">The squeeze was acknowledged</p>
+			</div>
 		</section>
 
 		<section class="checkbox">
@@ -521,6 +531,31 @@
 
 	a:hover {
 		text-decoration: underline;
+	}
+
+	.screenshot-showcase {
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.landing-screenshot,
+	.notification-screenshot {
+		max-width: 100%;
+		height: auto;
+		border-radius: 12px;
+		border: 2px solid #FF6B35;
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+	}
+
+	.notification-screenshot {
+		max-width: 500px;
+	}
+
+	.screenshot-caption {
+		margin-top: 1rem;
+		color: #666;
+		font-style: italic;
+		font-size: 0.95rem;
 	}
 
 	@media (max-width: 768px) {

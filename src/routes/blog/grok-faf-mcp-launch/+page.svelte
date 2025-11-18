@@ -259,6 +259,11 @@
 				<li>Dedicated landing page with endpoints</li>
 				<li>URL-first design for instant access</li>
 			</ul>
+
+			<div class="screenshot-showcase">
+				<img src="/blog-assets/grok-faf-mcp-landing.png" alt="grok-faf-mcp landing page" class="landing-screenshot" />
+				<p class="screenshot-caption">Live landing page at grok-faf-mcp.vercel.app</p>
+			</div>
 		</section>
 
 		<section class="ecosystem">
@@ -300,6 +305,19 @@
 			<p>
 				All packages share the same core FAF engine with 154+ framework support and IANA-registered format (<code>application/vnd.faf+yaml</code>).
 			</p>
+		</section>
+
+		<section class="reception">
+			<h2>Community Reception</h2>
+
+			<p>
+				The grok-faf-mcp launch received positive engagement from the community:
+			</p>
+
+			<div class="screenshot-showcase">
+				<img src="/blog-assets/elon-liked-grok-mcp.jpeg" alt="Community engagement on grok-faf-mcp launch" class="notification-screenshot" />
+				<p class="screenshot-caption">Launch announcement engagement</p>
+			</div>
 		</section>
 
 		<section class="get-started">
@@ -624,6 +642,31 @@
 
 	a:hover {
 		text-decoration: underline;
+	}
+
+	.screenshot-showcase {
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.landing-screenshot,
+	.notification-screenshot {
+		max-width: 100%;
+		height: auto;
+		border-radius: 12px;
+		border: 2px solid #FF6B35;
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+	}
+
+	.notification-screenshot {
+		max-width: 500px;
+	}
+
+	.screenshot-caption {
+		margin-top: 1rem;
+		color: #666;
+		font-style: italic;
+		font-size: 0.95rem;
 	}
 
 	@media (max-width: 768px) {
