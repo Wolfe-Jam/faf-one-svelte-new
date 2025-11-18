@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/grok-faf-mcp-launch',
+			title: 'grok-faf-mcp v1.0.0 - First MCP Server for Grok',
+			date: 'November 18, 2025',
+			timestamp: '2025-11-18',
+			excerpt: 'First MCP server built specifically for Grok/xAI with URL-based access. Zero installation required. 17 MCP tools available instantly at grok-faf-mcp.vercel.app.',
+			emoji: '🍊',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/the-missing-format',
 			title: 'The Missing Format',
 			date: 'November 14, 2025',
