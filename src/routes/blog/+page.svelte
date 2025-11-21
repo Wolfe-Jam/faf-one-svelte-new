@@ -1,6 +1,24 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/python-sdk-launch',
+			title: 'The Tale of Two Crowns and a Snake',
+			date: 'November 21, 2025',
+			timestamp: '2025-11-21',
+			excerpt: 'FAF Python SDK launches on PyPI. Single developer. Two crowns. One snake. Then Grok showed up. Tomorrow: Rust.',
+			emoji: '🐍',
+			category: 'Press Release'
+		},
+		{
+			slug: 'blog/xai-native-embedding',
+			title: 'xAI Commits to Native .FAF Integration for Grok',
+			date: 'November 20, 2025',
+			timestamp: '2025-11-20',
+			excerpt: 'xAI publicly commits to native .FAF embedding in Grok for worldwide deployment. The third major adoption after IANA registration and Anthropic MCP merger.',
+			emoji: '🏆',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/grok-faf-mcp-launch',
 			title: 'grok-faf-mcp v1.0.0 - First MCP Server for Grok',
 			date: 'November 18, 2025',
