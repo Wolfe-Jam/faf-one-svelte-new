@@ -47,18 +47,32 @@
 			</p>
 		</div>
 
-		<!-- New Blog Article Featured -->
-		<div class="chrome-featured article-featured">
+		<!-- Rust SDK Announcement - Two Angles -->
+		<div class="chrome-featured rust-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">🧩</div>
+				<div class="chrome-icon">🦀</div>
 				<div class="chrome-title">
-					<h3>The Missing Format</h3>
-					<span class="chrome-badge article-badge">New Article</span>
+					<h3>Rust SDK Ships to crates.io</h3>
+					<span class="chrome-badge rust-badge">Just Shipped</span>
 				</div>
 			</div>
-			<p class="chrome-description">How .faf provides persistent context for Anthropic's agent architecture. Skills, Projects, MCP, and Subagents needed one thing: standardized persistent project context.</p>
-			<a href="/blog/the-missing-format" class="chrome-install article-cta">
-				Read the Article →
+			<p class="chrome-description">First SDK for AI context in Rust. 650 lines. Created 'ai-context' keyword on crates.io. Built for xAI/Grok infrastructure.</p>
+			<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="chrome-install rust-cta">
+				Get Started →
+			</a>
+		</div>
+
+		<div class="chrome-featured wjttc-featured">
+			<div class="chrome-header">
+				<div class="chrome-icon">🏎️</div>
+				<div class="chrome-title">
+					<h3>64 Tests. Zero Failures.</h3>
+					<span class="chrome-badge wjttc-badge">WJTTC Certified</span>
+				</div>
+			</div>
+			<p class="chrome-description">Championship-grade testing. Bi-sync corruption recovery. 9 self-healing tests. 100/100 rapid modification resilience.</p>
+			<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank" rel="noopener" class="chrome-install wjttc-cta">
+				See the Proof →
 			</a>
 		</div>
 
@@ -136,18 +150,21 @@
 	<div class="container">
 		<h2 class="section-title">🏁 Just Shipped</h2>
 
-		<!-- NEW: Blog Article One-Liner -->
-		<div class="featured-release">
+		<!-- Rust SDK One-Liner -->
+		<div class="featured-release rust-release">
 			<div class="featured-content">
-				<span class="featured-emoji">🏗️</span>
+				<span class="featured-emoji">🦀</span>
 				<div class="featured-text">
-					<strong>The Missing Format</strong> — How .faf provides persistent context for Anthropic's agent architecture. The foundation is non-negotiable.
-					<span class="badge-inline new-article">New Article</span>
+					<strong>Rust SDK Ships to crates.io</strong> — First AI context SDK in Rust. 650 lines. 64 tests. Built for xAI/Grok.
+					<span class="badge-inline rust-badge">Just Shipped</span>
 				</div>
 			</div>
 			<div class="featured-actions">
-				<a href="/blog/the-missing-format" class="btn-install">
-					Read Article →
+				<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="btn-install rust-btn">
+					Rust SDK →
+				</a>
+				<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank" rel="noopener" class="btn-install wjttc-btn">
+					Testing →
 				</a>
 			</div>
 		</div>
@@ -555,6 +572,114 @@
 	.badge-inline.new-article {
 		background: #00bf63;
 		color: white;
+	}
+
+	.badge-inline.xai-badge,
+	.xai-badge {
+		background: linear-gradient(135deg, #FF6B35 0%, #FF8C00 100%) !important;
+		color: white;
+	}
+
+	/* xAI Featured Card - Orange theme */
+	.xai-featured {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		border: 2px solid #FF6B35;
+		box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3), 0 0 60px rgba(255, 107, 53, 0.1);
+	}
+
+	.xai-featured:hover {
+		box-shadow: 0 15px 50px rgba(255, 107, 53, 0.4), 0 0 80px rgba(255, 107, 53, 0.15);
+	}
+
+	.xai-featured .chrome-description {
+		color: #FF8C00;
+	}
+
+	.xai-cta {
+		background: linear-gradient(135deg, #FF6B35 0%, #FF8C00 100%);
+		color: white;
+	}
+
+	.xai-cta:hover {
+		box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5), 0 0 40px rgba(255, 107, 53, 0.3);
+	}
+
+	.xai-release {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		border: 2px solid #FF6B35;
+	}
+
+	/* Rust Featured Card - Rust orange theme */
+	.rust-featured {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		border: 2px solid #CE422B;
+		box-shadow: 0 10px 40px rgba(206, 66, 43, 0.3), 0 0 60px rgba(206, 66, 43, 0.1);
+	}
+
+	.rust-featured:hover {
+		box-shadow: 0 15px 50px rgba(206, 66, 43, 0.4), 0 0 80px rgba(206, 66, 43, 0.15);
+	}
+
+	.rust-featured .chrome-description {
+		color: #F46623;
+	}
+
+	.rust-cta {
+		background: linear-gradient(135deg, #CE422B 0%, #F46623 100%);
+		color: white;
+	}
+
+	.rust-cta:hover {
+		box-shadow: 0 5px 20px rgba(206, 66, 43, 0.5), 0 0 40px rgba(206, 66, 43, 0.3);
+	}
+
+	.rust-release {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		border: 2px solid #CE422B;
+	}
+
+	.rust-badge {
+		background: linear-gradient(135deg, #CE422B 0%, #F46623 100%) !important;
+		color: white;
+	}
+
+	.rust-btn {
+		background: linear-gradient(135deg, #CE422B 0%, #F46623 100%) !important;
+		color: white !important;
+	}
+
+	/* WJTTC Featured Card - F1 racing theme */
+	.wjttc-featured {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		border: 2px solid #E10600;
+		box-shadow: 0 10px 40px rgba(225, 6, 0, 0.3), 0 0 60px rgba(225, 6, 0, 0.1);
+	}
+
+	.wjttc-featured:hover {
+		box-shadow: 0 15px 50px rgba(225, 6, 0, 0.4), 0 0 80px rgba(225, 6, 0, 0.15);
+	}
+
+	.wjttc-featured .chrome-description {
+		color: #FF1E00;
+	}
+
+	.wjttc-cta {
+		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%);
+		color: white;
+	}
+
+	.wjttc-cta:hover {
+		box-shadow: 0 5px 20px rgba(225, 6, 0, 0.5), 0 0 40px rgba(225, 6, 0, 0.3);
+	}
+
+	.wjttc-badge {
+		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%) !important;
+		color: white;
+	}
+
+	.wjttc-btn {
+		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%) !important;
+		color: white !important;
 	}
 
 	.featured-actions {
