@@ -72,6 +72,10 @@
 				<div class="iana-subtext">
 					Create official <code>application/vnd.faf+yaml</code> files from any codebase
 				</div>
+				<div class="xai-adoption-text">
+					Grok by xAI adopt .FAF for Native/Embed - <span class="in-progress">In Progress</span><br/>
+					<a href="https://grok-faf-mcp.vercel.app/" target="_blank" rel="noopener">grok-faf-mcp</a> | <a href="https://grok-faf-elite.vercel.app/" target="_blank" rel="noopener">grok-faf-elite</a>
+				</div>
 				<div class="mcp-badge-text">
 					Only Anthropic-approved<br/>Persistent Project Context MCP Server
 				</div>
@@ -381,6 +385,29 @@
 		font-family: var(--font-mono);
 		font-size: 0.9rem;
 		color: var(--faf-orange);
+	}
+
+	.xai-adoption-text {
+		font-size: 1rem;
+		font-weight: 600;
+		color: #000000;
+		text-align: center;
+		margin-bottom: 0.75rem;
+		line-height: 1.5;
+	}
+
+	.xai-adoption-text a {
+		color: #000000;
+		text-decoration: underline;
+	}
+
+	.xai-adoption-text a:hover {
+		color: #FF6B35;
+	}
+
+	.xai-adoption-text .in-progress {
+		color: #FF6B35;
+		font-weight: 700;
 	}
 
 	.mcp-badge-text {
