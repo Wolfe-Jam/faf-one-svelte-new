@@ -57,5 +57,30 @@
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+
+		<!-- Floating Foundation Badge -->
+		<a href="https://foundation.faf.one" class="foundation-badge" title="FAF Foundation" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #00bf63; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 191, 99, 0.4); cursor: pointer; transition: all 0.3s ease; z-index: 1000; text-decoration: none;">
+			<svg viewBox="0 0 100 100" fill="none" style="width: 28px; height: 28px;">
+				<path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</a>
+		<style>
+			.foundation-badge:hover {
+				transform: scale(1.1);
+				box-shadow: 0 6px 20px rgba(0, 191, 99, 0.6);
+			}
+			@media (max-width: 768px) {
+				.foundation-badge {
+					width: 40px !important;
+					height: 40px !important;
+					bottom: 15px !important;
+					right: 15px !important;
+				}
+				.foundation-badge svg {
+					width: 22px !important;
+					height: 22px !important;
+				}
+			}
+		</style>
 	</body>
 </html>
