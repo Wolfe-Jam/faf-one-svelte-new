@@ -62,6 +62,20 @@
 			</a>
 		</div>
 
+		<div class="chrome-featured grok-featured">
+			<div class="chrome-header">
+				<div class="chrome-icon">🍊</div>
+				<div class="chrome-title">
+					<h3>grok-faf-mcp Ships to npm</h3>
+					<span class="chrome-badge grok-badge">Grok Native</span>
+				</div>
+			</div>
+			<p class="chrome-description">First MCP server for Grok. URL-based access. Zero installation. Dedicated to @elonmusk and the #1 model on Earth.</p>
+			<a href="https://npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="chrome-install grok-cta">
+				Get Started →
+			</a>
+		</div>
+
 		<div class="chrome-featured wjttc-featured">
 			<div class="chrome-header">
 				<div class="chrome-icon">🏎️</div>
@@ -680,6 +694,35 @@
 	.wjttc-btn {
 		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%) !important;
 		color: white !important;
+	}
+
+	/* Grok Featured Card - Green theme for xAI */
+	.grok-featured {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		border: 2px solid #4ade80;
+		box-shadow: 0 10px 40px rgba(74, 222, 128, 0.3), 0 0 60px rgba(74, 222, 128, 0.1);
+	}
+
+	.grok-featured:hover {
+		box-shadow: 0 15px 50px rgba(74, 222, 128, 0.4), 0 0 80px rgba(74, 222, 128, 0.15);
+	}
+
+	.grok-featured .chrome-description {
+		color: #4ade80;
+	}
+
+	.grok-cta {
+		background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+		color: #1a1a1a;
+	}
+
+	.grok-cta:hover {
+		box-shadow: 0 5px 20px rgba(74, 222, 128, 0.5), 0 0 40px rgba(74, 222, 128, 0.3);
+	}
+
+	.grok-badge {
+		background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%) !important;
+		color: #1a1a1a;
 	}
 
 	.featured-actions {
