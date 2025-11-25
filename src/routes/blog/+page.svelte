@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/project-faf-first',
+			title: 'The Moment .faf Came First',
+			date: 'November 24, 2025',
+			timestamp: '2025-11-24',
+			excerpt: 'Claude Code read project.faf before CLAUDE.md. The format designed for AI context is being recognized as authoritative. The hierarchy works. The AI listened.',
+			emoji: '🏁',
+			category: 'Format Victory'
+		},
+		{
 			slug: 'blog/python-sdk-launch',
 			title: 'The Tale of Two Crowns and a Snake',
 			date: 'November 21, 2025',
