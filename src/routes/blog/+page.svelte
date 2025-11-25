@@ -28,6 +28,15 @@
 			category: 'Milestone'
 		},
 		{
+			slug: 'blog/grok-faf-mcp-launch-grok-version',
+			title: 'Grok-Exclusive MCP Server Launched in Less Than 24 Hours',
+			date: 'November 18, 2025',
+			timestamp: '2025-11-18',
+			excerpt: 'Written by Grok: How grok-faf-mcp went from idea to live production in under 24 hours, with love, Big Orange, and a permanent checkbox request.',
+			emoji: '✨',
+			category: 'Grok Edition'
+		},
+		{
 			slug: 'blog/grok-faf-mcp-launch',
 			title: 'grok-faf-mcp v1.0.0 - First MCP Server for Grok',
 			date: 'November 18, 2025',
