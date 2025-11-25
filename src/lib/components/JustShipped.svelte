@@ -662,37 +662,37 @@
 		color: white !important;
 	}
 
-	/* WJTTC Featured Card - F1 racing theme */
+	/* WJTTC Featured Card - Green theme (tests PASSED) */
 	.wjttc-featured {
 		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-		border: 2px solid #E10600;
-		box-shadow: 0 10px 40px rgba(225, 6, 0, 0.3), 0 0 60px rgba(225, 6, 0, 0.1);
+		border: 2px solid #00bf63;
+		box-shadow: 0 10px 40px rgba(0, 191, 99, 0.3), 0 0 60px rgba(0, 191, 99, 0.1);
 	}
 
 	.wjttc-featured:hover {
-		box-shadow: 0 15px 50px rgba(225, 6, 0, 0.4), 0 0 80px rgba(225, 6, 0, 0.15);
+		box-shadow: 0 15px 50px rgba(0, 191, 99, 0.4), 0 0 80px rgba(0, 191, 99, 0.15);
 	}
 
 	.wjttc-featured .chrome-description {
-		color: #FF1E00;
+		color: #00ff88;
 	}
 
 	.wjttc-cta {
-		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%);
+		background: linear-gradient(135deg, #00bf63 0%, #00a854 100%);
 		color: white;
 	}
 
 	.wjttc-cta:hover {
-		box-shadow: 0 5px 20px rgba(225, 6, 0, 0.5), 0 0 40px rgba(225, 6, 0, 0.3);
+		box-shadow: 0 5px 20px rgba(0, 191, 99, 0.5), 0 0 40px rgba(0, 191, 99, 0.3);
 	}
 
 	.wjttc-badge {
-		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%) !important;
+		background: linear-gradient(135deg, #00bf63 0%, #00a854 100%) !important;
 		color: white;
 	}
 
 	.wjttc-btn {
-		background: linear-gradient(135deg, #E10600 0%, #FF1E00 100%) !important;
+		background: linear-gradient(135deg, #00bf63 0%, #00a854 100%) !important;
 		color: white !important;
 	}
 
