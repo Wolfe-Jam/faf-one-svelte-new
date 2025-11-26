@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/what-if-software-was-good',
+			title: 'What If Software Was Good?',
+			date: 'November 25, 2025',
+			timestamp: '2025-11-25',
+			excerpt: 'Imagine how the world would run if software was good. Not better. Not acceptable. Good. Software that gets better every time you touch it. Gold code delivers.',
+			emoji: '🏆',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/project-faf-first',
 			title: 'The Moment .faf Came First',
 			date: 'November 24, 2025',
