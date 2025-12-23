@@ -82,19 +82,24 @@
 				<h2>Current Version</h2>
 				<div class="version-grid">
 					<div class="version-item">
-						<h3>Format Specification</h3>
-						<div class="version-number">v1.0.1</div>
-						<p>Stable Release</p>
+						<h3>IANA Registered</h3>
+						<div class="version-number">Official</div>
+						<p>application/vnd.faf+yaml</p>
 					</div>
 					<div class="version-item">
-						<h3>MCP Integration</h3>
-						<div class="version-number">v2.3.0</div>
-						<p>PR #2759 Pending</p>
+						<h3>MCP Server</h3>
+						<div class="version-number">v3.3.2</div>
+						<p>PR #2759 MERGED</p>
 					</div>
 					<div class="version-item">
-						<h3>Chrome Extension</h3>
-						<div class="version-number">v1.2.0</div>
-						<p>Live in Web Store</p>
+						<h3>CLI</h3>
+						<div class="version-number">v3.1.6</div>
+						<p>16.6k+ Downloads</p>
+					</div>
+					<div class="version-item">
+						<h3>bun-sticky</h3>
+						<div class="version-number">NEW</div>
+						<p>Bun + Zig</p>
 					</div>
 				</div>
 			</div>
@@ -236,25 +241,23 @@
 				<h2>Industry Recognition</h2>
 				<div class="recognition-grid">
 					<div class="recognition-item">
-						<!-- <img src="/anthropic-logo.png" alt="Anthropic" class="partner-logo" /> -->
-					<div class="partner-logo-placeholder">🤖</div>
-						<p>MCP w/30+ Tools</p>
-					</div>
-					<div class="recognition-item">
-						<!-- <img src="/google-chrome-logo.png" alt="Google Chrome" class="partner-logo" /> -->
-					<div class="partner-logo-placeholder">🌐</div>
-						<p>Extension Live</p>
-					</div>
-					<div class="recognition-item">
 						<div class="stat">
-							<div class="stat-number">10K+</div>
-							<div class="stat-label">Projects</div>
+							<div class="stat-number">18K+</div>
+							<div class="stat-label">npm Downloads</div>
 						</div>
 					</div>
 					<div class="recognition-item">
+						<div class="partner-logo-placeholder">🏛️</div>
+						<p>IANA Registered</p>
+					</div>
+					<div class="recognition-item">
+						<div class="partner-logo-placeholder">🤖</div>
+						<p>Anthropic MCP MERGED</p>
+					</div>
+					<div class="recognition-item">
 						<div class="stat">
-							<div class="stat-number">9.3/10</div>
-							<div class="stat-label">AI Rating</div>
+							<div class="stat-number">52</div>
+							<div class="stat-label">MCP Tools</div>
 						</div>
 					</div>
 				</div>
