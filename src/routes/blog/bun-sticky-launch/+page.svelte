@@ -18,18 +18,18 @@
 </svelte:head>
 
 <div class="blog-post">
-	<div class="hero-banner">
-		<pre><span class="bun-orange">   ▄▄</span>       <span class="white">▄▀▀▀ ▀█▀ █ ▄▀▀ █▄▀ █ █</span>
-<span class="bun-orange">  ████</span>      <span class="white">▀▀█▄  █  █ █   █▀▄  █</span>
-<span class="bun-orange">██████</span>      <span class="white">▄▄▄▀  █  █ ▀▀▀ █ █  █</span>
-<span class="bun-orange">████████</span>
-<span class="bun-orange">████████</span>    <span class="bun-dark">█▀▄  █ █ █▀▄</span>   <span class="cyan">▀▀█ █ ▄▀▀</span>
-<span class="bun-orange"> ██████</span>     <span class="bun-dark">██▀  █ █ █ █</span>   <span class="cyan">▄ ▀ █ █ ▄ ▄█▄</span>
-<span class="bun-orange">   ████</span>     <span class="bun-dark">█▄▀  ▀▄▀ █ █</span>   <span class="cyan">█▄▄ █ ▀▀█  ▀</span>
-<span class="bun-orange">     ▀▀</span>
+	<div class="hero-banner bw">
+		<pre>   ▄▄       ▄▀▀▀ ▀█▀ █ ▄▀▀ █▄▀ █ █
+  ████      ▀▀█▄  █  █ █   █▀▄  █
+██████      ▄▄▄▀  █  █ ▀▀▀ █ █  █
+████████
+████████    █▀▄  █ █ █▀▄   ▀▀█ █ ▄▀▀
+ ██████     ██▀  █ █ █ █   ▄ ▀ █ █ ▄
+   ████     █▄▀  ▀▄▀ █ █   █▄▄ █ ▀▀█
+     ▀▀
 
-<span class="white">🥐 bun-sticky-faf v1.0.6</span>
-<span class="bun-dark">   Fastest bun under the sum.</span></pre>
+🥐 bun-sticky-faf v1.0.6
+   Fastest bun under the sum.</pre>
 	</div>
 
 	<header class="post-header">
@@ -307,6 +307,10 @@ bun add -g bun-sticky-faf`}</code></pre>
 
 	.hero-banner .cyan {
 		color: #00d4d4;
+	}
+
+	.hero-banner.bw {
+		color: #888;
 	}
 
 	.post-header {
