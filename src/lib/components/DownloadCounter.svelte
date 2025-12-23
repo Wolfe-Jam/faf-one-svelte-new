@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
 
-	// Updated download stats (Nov 14, 2025)
-	const CLI_DOWNLOADS = 6500;
-	const MCP_DOWNLOADS = 6500;
-	const TOTAL_DOWNLOADS = 13000;
+	// Updated download stats (Dec 23, 2025)
+	const CLI_DOWNLOADS = 16600;
+	const MCP_DOWNLOADS = 1500;
+	const TOTAL_DOWNLOADS = 18000;
 
 	let cliDownloads = $state(0);
 	let mcpDownloads = $state(0);
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 
-		<p class="update-note">Latest • Oct 31, 2025</p>
+		<p class="update-note">Latest • Dec 23, 2025</p>
 	{/if}
 </div>
 
