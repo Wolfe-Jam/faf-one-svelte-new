@@ -18,6 +18,20 @@
 </svelte:head>
 
 <div class="blog-post">
+	<div class="hero-banner">
+		<pre><span class="bun-orange">   ▄▄</span>       <span class="white">▄▀▀▀ ▀█▀ █ ▄▀▀ █▄▀ █ █</span>
+<span class="bun-orange">  ████</span>      <span class="white">▀▀█▄  █  █ █   █▀▄  █</span>
+<span class="bun-orange">██████</span>      <span class="white">▄▄▄▀  █  █ ▀▀▀ █ █  █</span>
+<span class="bun-orange">████████</span>
+<span class="bun-orange">████████</span>    <span class="bun-dark">█▀▄  █ █ █▀▄</span>   <span class="cyan">▀▀█ █ ▄▀▀</span>
+<span class="bun-orange"> ██████</span>     <span class="bun-dark">██▀  █ █ █ █</span>   <span class="cyan">▄ ▀ █ █ ▄ ▄█▄</span>
+<span class="bun-orange">   ████</span>     <span class="bun-dark">█▄▀  ▀▄▀ █ █</span>   <span class="cyan">█▄▄ █ ▀▀█  ▀</span>
+<span class="bun-orange">     ▀▀</span>
+
+<span class="white">🥐 bun-sticky-faf v1.0.6</span>
+<span class="bun-dark">   Fastest bun under the sum.</span></pre>
+	</div>
+
 	<header class="post-header">
 		<div class="breadcrumb">
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / bun-sticky Launch
@@ -259,6 +273,40 @@ bun add -g bun-sticky-faf`}</code></pre>
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.7;
 		color: #1a1a1a;
+	}
+
+	.hero-banner {
+		background: #1a1a1a;
+		padding: 2rem;
+		border-radius: 12px;
+		margin: 0 -1rem 2rem -1rem;
+		overflow-x: auto;
+		font-family: 'Monaco', 'Courier New', monospace;
+		font-size: 1rem;
+		line-height: 1.3;
+		text-align: center;
+	}
+
+	.hero-banner pre {
+		margin: 0;
+		display: inline-block;
+		text-align: left;
+	}
+
+	.hero-banner .bun-orange {
+		color: #f8b84e;
+	}
+
+	.hero-banner .bun-dark {
+		color: #e89b3c;
+	}
+
+	.hero-banner .white {
+		color: #ffffff;
+	}
+
+	.hero-banner .cyan {
+		color: #00d4d4;
 	}
 
 	.post-header {
