@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/bun-sticky-launch',
+			title: 'bun-sticky: Zero-Dependency FAF Scoring for Bun',
+			date: 'December 22, 2025',
+			timestamp: '2025-12-22',
+			excerpt: 'Fastest bun under the sum. bun-sticky-faf: Bun-native FAF scoring CLI with zero dependencies, pure Bun APIs, and 333 championship-grade tests.',
+			emoji: '🥐',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/what-if-software-was-good',
 			title: 'What If Software Was Good?',
 			date: 'November 25, 2025',

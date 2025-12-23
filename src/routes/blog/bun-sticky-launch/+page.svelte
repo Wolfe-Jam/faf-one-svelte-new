@@ -10,9 +10,9 @@
 
 <svelte:head>
 	<title>bun-sticky: Zero-Dependency FAF Scoring for Bun | FAF</title>
-	<meta name="description" content="Introducing bun-sticky - the fastest FAF scoring CLI. Zero dependencies. Pure Bun. 328 tests. Built the Anthropic way." />
+	<meta name="description" content="Introducing bun-sticky-faf - the fastest FAF scoring CLI. Zero dependencies. Pure Bun. 333 tests. Built the Anthropic way." />
 	<meta property="og:title" content="bun-sticky: Zero-Dependency FAF Scoring for Bun" />
-	<meta property="og:description" content="The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native. 328 championship-grade tests." />
+	<meta property="og:description" content="The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native. 333 championship-grade tests." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -34,11 +34,11 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>bun-sticky</strong> is now live on npm. A Bun-native FAF scoring CLI with zero dependencies, pure Bun APIs, and 328 championship-grade tests.
+				<strong>bun-sticky-faf</strong> is now live on npm. A Bun-native FAF scoring CLI with zero dependencies, pure Bun APIs, and 333 championship-grade tests.
 			</p>
 
 			<div class="code-block">
-				<pre><code>bunx bun-sticky score</code></pre>
+				<pre><code>bunx bun-sticky-faf score</code></pre>
 			</div>
 		</section>
 
@@ -56,14 +56,14 @@
 			</ul>
 
 			<p>
-				The result: a 24.4 kB package that cold starts in under 50ms and scores your project in under 100ms.
+				The result: a 25.5 kB package that cold starts in under 50ms and scores your project in under 100ms.
 			</p>
 		</section>
 
 		<section class="scoring">
 			<h2>Wolfejam Slot-Based Scoring</h2>
 			<p>
-				bun-sticky uses the same scoring system as faf-cli: 21 slots across 5 categories, with type-aware counting.
+				bun-sticky-faf uses the same scoring system as faf-cli: 21 slots across 5 categories, with type-aware counting.
 			</p>
 
 			<div class="spec-grid">
@@ -153,9 +153,9 @@
 		</section>
 
 		<section class="testing">
-			<h2>328 Championship-Grade Tests</h2>
+			<h2>333 Championship-Grade Tests</h2>
 			<p>
-				bun-sticky has a WJTTC-certified test suite covering:
+				bun-sticky-faf has a WJTTC-certified test suite covering:
 			</p>
 
 			<ul>
@@ -169,7 +169,7 @@
 
 			<div class="code-block">
 				<pre><code>bun test
-# 328 pass, 0 fail</code></pre>
+# 333 tests, 328 pass</code></pre>
 			</div>
 		</section>
 
@@ -177,10 +177,10 @@
 			<h2>Commands</h2>
 
 			<div class="code-block">
-				<pre><code>{`bun-sticky score      # Show FAF score + tier
-bun-sticky init myapp # Create project.faf
-bun-sticky sync       # Sync to CLAUDE.md
-bun-sticky help       # Show commands`}</code></pre>
+				<pre><code>{`faf score      # Show FAF score + tier
+faf init myapp # Create project.faf
+faf sync       # Sync to CLAUDE.md
+faf help       # Show commands`}</code></pre>
 			</div>
 
 			<p>
@@ -193,25 +193,25 @@ bun-sticky help       # Show commands`}</code></pre>
 
 			<div class="code-block">
 				<pre><code>{`# Run directly
-bunx bun-sticky score
+bunx bun-sticky-faf score
 
 # Install globally
-npm install -g bun-sticky
-bun add -g bun-sticky`}</code></pre>
+npm install -g bun-sticky-faf
+bun add -g bun-sticky-faf`}</code></pre>
 			</div>
 		</section>
 
 		<section class="ecosystem">
 			<h2>FAF Ecosystem</h2>
 			<p>
-				bun-sticky joins the FAF family:
+				bun-sticky-faf joins the FAF family:
 			</p>
 
 			<ul>
 				<li><strong>faf-cli</strong> - Node.js CLI (15,000+ downloads)</li>
 				<li><strong>claude-faf-mcp</strong> - Official MCP server</li>
-				<li><strong>bun-sticky</strong> - Bun-native CLI (you are here)</li>
-				<li><strong>xai-faf-zig</strong> - Zig implementation (coming)</li>
+				<li><strong>bun-sticky-faf</strong> - Bun-native CLI (you are here)</li>
+				<li><strong>bun-sticky-zig</strong> - Zig-native CLI (77KB binary)</li>
 			</ul>
 
 			<p>
@@ -225,7 +225,7 @@ bun add -g bun-sticky`}</code></pre>
 				<a href="https://github.com/Wolfe-Jam/bun-sticky" class="link-button github-button" target="_blank">
 					GitHub
 				</a>
-				<a href="https://www.npmjs.com/package/bun-sticky" class="link-button npm-button" target="_blank">
+				<a href="https://www.npmjs.com/package/bun-sticky-faf" class="link-button npm-button" target="_blank">
 					npm
 				</a>
 			</div>
@@ -233,7 +233,7 @@ bun add -g bun-sticky`}</code></pre>
 
 		<section class="conclusion">
 			<p class="tagline">
-				<strong>Zero dependencies. Pure Bun. 328 tests.</strong>
+				<strong>Zero dependencies. Pure Bun. 333 tests.</strong>
 			</p>
 			<p class="brand">
 				🏎️⚡ FAF Format Authority<br />
