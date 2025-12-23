@@ -67,24 +67,37 @@ JSON ████████████░░░░░░░░░░░░░
 | Metric | Value |
 |--------|-------|
 | Days to IANA | **84** |
-| npm Downloads | **18,000+** |
-| MCP Tools | **52** |
-| SDKs | **5** (Node, Python, Rust, Zig, Bun) |
-| Google Approvals | **2** |
-| Anthropic PR | **Merged** |
-| xAI Commitment | **Public** |
+| Scoring Speed | **31µs** |
+| Ops/sec | **55 million** |
+| Ecosystems | **7** |
+| Formats | **220** |
+| Binary Size | **77KB** |
 
 ---
 
-## The SDKs
+## Zig-WASM Speed Stats
 
-| SDK | Runtime | Status |
-|-----|---------|--------|
-| faf-cli | Node.js | 16,600+ downloads |
+| Metric | Value |
+|--------|-------|
+| Scoring time | **31µs** to full 100% Gold |
+| Operations/sec | **55 million** |
+| Cold start | **<1ms** (freestanding WASM) |
+| Binary size | **77KB** |
+| vs TS baseline | **220X faster** |
+
+---
+
+## The 7 Ecosystems
+
+| Ecosystem | Runtime | Status |
+|-----------|---------|--------|
+| faf-cli | TypeScript | 16,600+ downloads |
+| claude-faf-mcp | MCP | 50+ tools |
+| faf.one | Svelte | Web |
 | faf-python-sdk | Python | PyPI |
 | faf-rust-sdk | Rust | Crates.io |
 | bun-sticky-faf | Bun | npm |
-| bun-sticky-zig | Zig | 77KB binary |
+| bun-sticky-zig | Zig | 77KB / 31µs |
 
 ---
 

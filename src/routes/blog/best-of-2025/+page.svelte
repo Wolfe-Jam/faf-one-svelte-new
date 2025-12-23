@@ -130,28 +130,46 @@
 					<div class="number">84</div>
 					<div class="label">Days to IANA</div>
 				</div>
-				<div class="number-card gold">
-					<div class="number">18K+</div>
-					<div class="label">npm Downloads</div>
-				</div>
 				<div class="number-card cyan">
-					<div class="number">52</div>
-					<div class="label">MCP Tools</div>
+					<div class="number">31µs</div>
+					<div class="label">Scoring Speed</div>
+				</div>
+				<div class="number-card gold">
+					<div class="number">55M</div>
+					<div class="label">Ops/sec</div>
 				</div>
 				<div class="number-card">
-					<div class="number">5</div>
-					<div class="label">SDKs</div>
+					<div class="number">7</div>
+					<div class="label">Ecosystems</div>
+				</div>
+				<div class="number-card cyan">
+					<div class="number">220</div>
+					<div class="label">Formats</div>
+				</div>
+				<div class="number-card">
+					<div class="number">77KB</div>
+					<div class="label">Binary Size</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="sdks-section">
-			<h2>The SDKs</h2>
+			<h2>The 7 Ecosystems</h2>
 			<div class="sdk-grid">
 				<div class="sdk-card">
 					<div class="sdk-name">faf-cli</div>
-					<div class="sdk-runtime">Node.js</div>
+					<div class="sdk-runtime">TypeScript</div>
 					<div class="sdk-stat">16,600+ downloads</div>
+				</div>
+				<div class="sdk-card">
+					<div class="sdk-name">claude-faf-mcp</div>
+					<div class="sdk-runtime">MCP</div>
+					<div class="sdk-stat">50+ tools</div>
+				</div>
+				<div class="sdk-card">
+					<div class="sdk-name">faf.one</div>
+					<div class="sdk-runtime">Svelte</div>
+					<div class="sdk-stat">Web</div>
 				</div>
 				<div class="sdk-card">
 					<div class="sdk-name">faf-python-sdk</div>
@@ -171,7 +189,7 @@
 				<div class="sdk-card">
 					<div class="sdk-name">bun-sticky-zig</div>
 					<div class="sdk-runtime">Zig</div>
-					<div class="sdk-stat">77KB binary</div>
+					<div class="sdk-stat">77KB / 31µs</div>
 				</div>
 			</div>
 		</section>
