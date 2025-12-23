@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/bun-sticky-zig-launch',
+			title: 'bun-sticky-zig: Native FAF Scoring in Bun\'s Language',
+			date: 'December 23, 2025',
+			timestamp: '2025-12-23',
+			excerpt: '77KB binary. Zero runtime dependencies. Pure Zig. FAF scoring built in Bun\'s own language with 136 championship-grade tests.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/bun-sticky-launch',
 			title: 'bun-sticky: Zero-Dependency FAF Scoring for Bun',
 			date: 'December 22, 2025',
