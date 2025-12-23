@@ -1,14 +1,16 @@
 <script>
+	// DRAFT - Publish Dec 31 or Jan 1
+	// {
+	// 	slug: 'blog/best-of-2025',
+	// 	title: '.faf — 2025: Year of FAF',
+	// 	date: 'December 31, 2025',
+	// 	timestamp: '2025-12-31',
+	// 	excerpt: 'The 84-Day IANA Sprint. From first code to IANA-registered standard in 84 days. YAML took 22 years. JSON took 5 years. FAF took 84 days.',
+	// 	emoji: '🏛️',
+	// 	category: 'Year in Review'
+	// },
+
 	const posts = [
-		{
-			slug: 'blog/best-of-2025',
-			title: '.faf — 2025: Year of FAF',
-			date: 'December 31, 2025',
-			timestamp: '2025-12-31',
-			excerpt: 'The 84-Day IANA Sprint. From first code to IANA-registered standard in 84 days. YAML took 22 years. JSON took 5 years. FAF took 84 days.',
-			emoji: '🏛️',
-			category: 'Year in Review'
-		},
 		{
 			slug: 'blog/bun-sticky-zig-launch',
 			title: 'bun-sticky-zig: Native FAF Scoring in Bun\'s Language',
