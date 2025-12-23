@@ -47,7 +47,36 @@
 			</p>
 		</div>
 
-		<!-- Rust SDK Announcement - Two Angles -->
+		<!-- Bun Sticky Announcements -->
+		<div class="chrome-featured bun-featured">
+			<div class="chrome-header">
+				<div class="chrome-icon">🥐</div>
+				<div class="chrome-title">
+					<h3>bun-sticky-faf Ships to npm</h3>
+					<span class="chrome-badge bun-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">FAF scoring CLI in pure Bun. Zero dependencies. 328 tests. &lt;50ms cold start.</p>
+			<a href="https://npmjs.com/package/bun-sticky-faf" target="_blank" rel="noopener" class="chrome-install bun-cta">
+				Get Started →
+			</a>
+		</div>
+
+		<div class="chrome-featured zig-featured">
+			<div class="chrome-header">
+				<div class="chrome-icon">⚡</div>
+				<div class="chrome-title">
+					<h3>bun-sticky-zig Ships to GitHub</h3>
+					<span class="chrome-badge zig-badge">77KB Binary</span>
+				</div>
+			</div>
+			<p class="chrome-description">FAF scoring in Bun's own language. 77KB binary. Zero runtime. 136 tests. &lt;1ms cold start.</p>
+			<a href="https://github.com/Wolfe-Jam/bun-sticky-zig" target="_blank" rel="noopener" class="chrome-install zig-cta">
+				Get Started →
+			</a>
+		</div>
+
+		<!-- Rust SDK Announcement -->
 		<div class="chrome-featured rust-featured">
 			<div class="chrome-header">
 				<div class="chrome-icon">🦀</div>
@@ -501,6 +530,44 @@
 	.chrome-install:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 5px 20px rgba(0, 212, 212, 0.5), 0 0 40px rgba(0, 212, 212, 0.3);
+	}
+
+	/* Bun Sticky styles */
+	.bun-featured {
+		border-color: #f8b84e;
+	}
+
+	.bun-badge {
+		background: linear-gradient(135deg, #f8b84e 0%, #e89b3c 100%) !important;
+		color: #1a1a1a;
+	}
+
+	.bun-cta {
+		background: linear-gradient(135deg, #f8b84e 0%, #e89b3c 100%);
+		color: #1a1a1a;
+	}
+
+	.bun-cta:hover {
+		box-shadow: 0 5px 20px rgba(248, 184, 78, 0.5);
+	}
+
+	/* Zig styles */
+	.zig-featured {
+		border-color: #f7a41d;
+	}
+
+	.zig-badge {
+		background: linear-gradient(135deg, #f7a41d 0%, #00d4d4 100%) !important;
+		color: #1a1a1a;
+	}
+
+	.zig-cta {
+		background: linear-gradient(135deg, #f7a41d 0%, #d4940a 100%);
+		color: #1a1a1a;
+	}
+
+	.zig-cta:hover {
+		box-shadow: 0 5px 20px rgba(247, 164, 29, 0.5);
 	}
 
 	/* Article-specific styling - light, clean aesthetic */
