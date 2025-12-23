@@ -209,7 +209,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 				</div>
 				<div class="feature-row">
 					<span class="feature-name">Bi-sync</span>
-					<span class="feature-free">one-way</span>
+					<span class="feature-free">sync</span>
 					<span class="feature-paid">☑️</span>
 				</div>
 				<div class="feature-row">
