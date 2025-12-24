@@ -124,11 +124,11 @@
 	<div class="legend">
 		<h3>The Story</h3>
 		<ul>
-			<li><strong>100% Big Orange:</strong> Zero drift. Eternal context. Cancer-free.</li>
-			<li><strong>90% Gold:</strong> Minor drift. Fights it off. Survives.</li>
-			<li><strong>75% Silver:</strong> Drift spreads. Terminal at session 7.</li>
-			<li><strong>50% Caution:</strong> Aggressive drift. Fatal by session 4.</li>
-			<li><strong>0% Dead:</strong> Born without context. Never alive.</li>
+			<li><strong>100%</strong> Zero drift. Eternal context. Cancer-free. Optimized for AI.</li>
+			<li><strong>90%</strong> Minor drift. Fights it off. Survives. Good info for AI.</li>
+			<li><strong>75%</strong> Drift spreads. Terminal at session 7. Too low for AI.</li>
+			<li><strong>50%</strong> Aggressive drift. Fatal by session 4.</li>
+			<li><strong>0%</strong> Born without context. Never alive.</li>
 		</ul>
 	</div>
 </div>
