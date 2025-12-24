@@ -306,6 +306,17 @@
 					Try CLI
 				</a>
 			</div>
+
+			<!-- Context Drift Persuasion CTA -->
+			<div class="drift-cta">
+				<a href="/survival" class="drift-btn">
+					<span class="drift-icon">💀</span>
+					<span class="drift-text">
+						<span class="drift-title">Context Drift is Fatal</span>
+						<span class="drift-sub">See why projects die without FAF →</span>
+					</span>
+				</a>
+			</div>
 			
 			<!-- Trust Signal -->
 			<div class="trust-signal">
@@ -1125,8 +1136,75 @@
 		font-weight: 600;
 		color: var(--faf-black);
 	}
-	
-	
+
+	/* Context Drift Persuasion CTA */
+	.drift-cta {
+		margin: 2rem 0 3rem;
+		display: flex;
+		justify-content: center;
+		animation: slideInUp 0.7s ease-out 0.55s backwards;
+	}
+
+	.drift-btn {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.25rem 2rem;
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+		border: 2px solid #333;
+		border-radius: 16px;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.drift-btn::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #ff4444 0%, #ff8800 50%, #ff4444 100%);
+	}
+
+	.drift-btn:hover {
+		transform: translateY(-3px);
+		border-color: #ff4444;
+		box-shadow: 0 12px 40px rgba(255, 68, 68, 0.3);
+	}
+
+	.drift-icon {
+		font-size: 2.5rem;
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	.drift-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		text-align: left;
+	}
+
+	.drift-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #ff4444;
+		letter-spacing: 0.02em;
+	}
+
+	.drift-sub {
+		font-size: 0.875rem;
+		color: #888;
+		font-weight: 500;
+	}
+
+	.drift-btn:hover .drift-sub {
+		color: #aaa;
+	}
+
 	@keyframes fadeIn {
 		from { opacity: 0; }
 		to { opacity: 1; }
@@ -1208,6 +1286,24 @@
 		.btn-large {
 			width: 100%;
 			max-width: 300px;
+		}
+
+		.drift-btn {
+			flex-direction: column;
+			text-align: center;
+			padding: 1rem 1.5rem;
+		}
+
+		.drift-text {
+			text-align: center;
+		}
+
+		.drift-icon {
+			font-size: 2rem;
+		}
+
+		.drift-title {
+			font-size: 1.1rem;
 		}
 	}
 </style>

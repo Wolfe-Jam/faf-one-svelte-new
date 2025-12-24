@@ -13,7 +13,8 @@
 		{ label: 'Demo', href: '#demo' },
 		{ label: 'Journey', href: '#journey' },
 		{ label: 'Pricing', href: '#pricing' },
-		{ label: 'n8n.faf', href: '/n8n' }
+		{ label: 'n8n.faf', href: '/n8n' },
+		{ label: 'Context Drift', href: '/survival', isDanger: true }
 	];
 
 	onMount(() => {
@@ -72,11 +73,13 @@
 		
 		<div class="nav-menu" class:open={isMobileMenuOpen}>
 			{#each navItems as item}
-				<a 
-					href={item.href} 
+				<a
+					href={item.href}
 					class="nav-link"
+					class:nav-link-danger={item.isDanger}
 					onclick={(e) => handleNavClick(e, item.href)}
 				>
+					{#if item.isDanger}<span class="danger-icon">💀</span>{/if}
 					{item.label}
 				</a>
 			{/each}
@@ -177,7 +180,27 @@
 	.nav-link:hover::after {
 		width: 100%;
 	}
-	
+
+	.nav-link-danger {
+		color: #ff4444;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.nav-link-danger:hover {
+		color: #ff6666;
+	}
+
+	.nav-link-danger::after {
+		background: #ff4444;
+	}
+
+	.danger-icon {
+		font-size: 0.9rem;
+	}
+
 	.nav-cta {
 		display: flex;
 		align-items: center;
