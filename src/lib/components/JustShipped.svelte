@@ -37,7 +37,7 @@
 
 <section class="just-shipped popup-mode">
 	<div class="container">
-		<h2 class="section-title">🏁 Just Shipped</h2>
+		<h2 class="section-title">Recent Releases</h2>
 
 		<div class="total-stats stats-top">
 			<p>
@@ -50,7 +50,6 @@
 		<!-- Bun Sticky Announcements -->
 		<div class="chrome-featured bun-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">🥐</div>
 				<div class="chrome-title">
 					<h3>bun-sticky-faf Ships to npm</h3>
 					<span class="chrome-badge bun-badge">Just Shipped</span>
@@ -64,7 +63,6 @@
 
 		<div class="chrome-featured zig-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">⚡</div>
 				<div class="chrome-title">
 					<h3>bun-sticky-zig Ships to GitHub</h3>
 					<span class="chrome-badge zig-badge">77KB Binary</span>
@@ -79,7 +77,6 @@
 		<!-- Rust SDK Announcement -->
 		<div class="chrome-featured rust-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">🦀</div>
 				<div class="chrome-title">
 					<h3>Rust SDK Ships to crates.io</h3>
 					<span class="chrome-badge rust-badge">Just Shipped</span>
@@ -93,7 +90,6 @@
 
 		<div class="chrome-featured grok-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">🍊</div>
 				<div class="chrome-title">
 					<h3>grok-faf-mcp Ships to npm</h3>
 					<span class="chrome-badge grok-badge">Grok Native</span>
@@ -107,7 +103,6 @@
 
 		<div class="chrome-featured wjttc-featured">
 			<div class="chrome-header">
-				<div class="chrome-icon">🏎️</div>
 				<div class="chrome-title">
 					<h3>64 Tests. Zero Failures.</h3>
 					<span class="chrome-badge wjttc-badge">WJTTC Certified</span>
@@ -123,18 +118,18 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🩵⚡️ faf-cli v3.1.6</h3>
-					<span class="badge">Championship Edition</span>
+					<h3>faf-cli v3.1.6</h3>
+					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
+					Anthropic-Approved code with Turbo Cat rapid analysis engine
 				</p>
 				<ul class="release-features">
-					<li>☑️ 16.6k downloads (npm)</li>
-					<li>☑️ 173/173 tests passing</li>
-					<li>☑️ 100% TypeScript strict mode</li>
-					<li>☑️ &lt;50ms championship performance</li>
-					<li>☑️ 41 commands including FAF Family</li>
+					<li>16.6k downloads (npm)</li>
+					<li>173/173 tests passing</li>
+					<li>100% TypeScript strict mode</li>
+					<li>&lt;50ms processing time</li>
+					<li>41 commands</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
@@ -149,18 +144,18 @@
 			<!-- MCP v3.3.1 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v3.3.2</h3>
+					<h3>claude-faf-mcp v3.3.2</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					1st Persistent Project AI Context MCP Server. 100% Standalone, Zero CLI Dependencies.
+					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 1.5k downloads (npm)</li>
-					<li>☑️ 50/50 tests passing</li>
-					<li>☑️ PR #2759 MERGED</li>
-					<li>☑️ 52 MCP tools</li>
-					<li>☑️ TypeScript Built-in Types</li>
+					<li>1.5k downloads (npm)</li>
+					<li>50/50 tests passing</li>
+					<li>PR #2759 MERGED</li>
+					<li>52 MCP tools</li>
+					<li>TypeScript built-in types</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
@@ -191,12 +186,11 @@
 {#if showOnPage}
 <section class="just-shipped page-mode">
 	<div class="container">
-		<h2 class="section-title">🏁 Just Shipped</h2>
+		<h2 class="section-title">Recent Releases</h2>
 
 		<!-- Rust SDK One-Liner -->
 		<div class="featured-release rust-release">
 			<div class="featured-content">
-				<span class="featured-emoji">🦀</span>
 				<div class="featured-text">
 					<strong>Rust SDK Ships to crates.io</strong> — First AI context SDK in Rust. 650 lines. 64 tests. Built for xAI/Grok.
 					<span class="badge-inline rust-badge">Just Shipped</span>
@@ -216,18 +210,18 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🩵⚡️ faf-cli v3.1.6</h3>
-					<span class="badge">Championship Edition</span>
+					<h3>faf-cli v3.1.6</h3>
+					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Powered by Anthropic-Approved code featuring Turbo Cat 😽 Rapid Catalytic Converter
+					Anthropic-Approved code with Turbo Cat rapid analysis engine
 				</p>
 				<ul class="release-features">
-					<li>☑️ 16.6k downloads (npm)</li>
-					<li>☑️ 173/173 tests passing</li>
-					<li>☑️ 100% TypeScript strict mode</li>
-					<li>☑️ &lt;50ms championship performance</li>
-					<li>☑️ 41 commands including FAF Family</li>
+					<li>16.6k downloads (npm)</li>
+					<li>173/173 tests passing</li>
+					<li>100% TypeScript strict mode</li>
+					<li>&lt;50ms processing time</li>
+					<li>41 commands</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
@@ -242,18 +236,18 @@
 			<!-- MCP v3.3.1 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>🧡⚡️ claude-faf-mcp v3.3.2</h3>
+					<h3>claude-faf-mcp v3.3.2</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					1st Persistent Project AI Context MCP Server. 100% Standalone, Zero CLI Dependencies.
+					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
 				<ul class="release-features">
-					<li>☑️ 1.5k downloads (npm)</li>
-					<li>☑️ 50/50 tests passing</li>
-					<li>☑️ PR #2759 MERGED</li>
-					<li>☑️ 52 MCP tools</li>
-					<li>☑️ TypeScript Built-in Types</li>
+					<li>1.5k downloads (npm)</li>
+					<li>50/50 tests passing</li>
+					<li>PR #2759 MERGED</li>
+					<li>52 MCP tools</li>
+					<li>TypeScript built-in types</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">

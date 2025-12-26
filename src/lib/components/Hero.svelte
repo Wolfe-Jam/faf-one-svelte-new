@@ -67,7 +67,7 @@
 					<FafLogo size="large" color="black" showDefinition={true} />
 				</div>
 				<div class="subtitle">
-					🏆 IANA-Registered Format
+					IANA-Registered Format
 				</div>
 				<div class="iana-subtext">
 					Create official <code>application/vnd.faf+yaml</code> files from any codebase
@@ -89,23 +89,23 @@
 					</div>
 				</div>
 				<div class="features-tagline">
-					<span class="feature-item"><span class="icon">⚡</span> FAST</span>
+					<span class="feature-item">Fast</span>
 					<span class="separator">•</span>
-					<span class="feature-item"><span class="icon">✓</span> Safe</span>
+					<span class="feature-item">Safe</span>
 					<span class="separator">•</span>
-					<span class="feature-item"><span class="icon">⚿</span> Secure</span>
+					<span class="feature-item">Secure</span>
 					<span class="separator">•</span>
-					<span class="feature-item"><span class="icon">↻</span> Persistent</span>
+					<span class="feature-item">Persistent</span>
 					<span class="separator">•</span>
-					<span class="feature-item"><span class="icon">✦</span> Self-Testing</span>
+					<span class="feature-item">Self-Testing</span>
 					<span class="separator">•</span>
-					<span class="feature-item"><span class="icon">◆</span> Trusted</span>
+					<span class="feature-item">Trusted</span>
 				</div>
 			</div>
 			
 			<!-- Tagline - BOLD -->
 			<div bind:this={subtitleRef} class="tagline">
-				<span class="emoji">🧡</span> <span class="tagline-underline">Project DNA ✨ for ANY AI</span> <span class="emoji">🩵</span>
+				<span class="tagline-underline">Persistent Context Format for AI</span>
 			</div>
 			
 			<!-- BLOCK 1: Claude Quote -->
@@ -126,8 +126,8 @@
 			<!-- BLOCK 2: Authority Statements -->
 			<ScrollRevealText threshold={0.5} delay={0}>
 				<div class="text-block authority-statement">
-					<div><strong>🏆 Anthropic-Approved MCP Server</strong> — Published to official MCP registry</div>
-					<div>18k+ Downloads • Anthropic-Approved</div>
+					<div><strong>Anthropic-Approved MCP Server</strong> — Published to official MCP registry</div>
+					<div>18k+ Downloads | Anthropic-Approved | IANA-Registered</div>
 					<div><strong>First and only persistent project context server</strong> in official Anthropic ecosystem</div>
 				</div>
 			</ScrollRevealText>
@@ -175,19 +175,19 @@
 
 			<!-- Official MCP Registry Badges -->
 			<div class="official-badges">
-				<h3 class="official-badges-title">🏆 Official Anthropic MCP Registry</h3>
+				<h3 class="official-badges-title">Official Anthropic MCP Registry</h3>
 				<div class="badges-row">
 					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" class="official-badge official-merged" target="_blank" rel="noopener">
-						✅ MERGED Oct 17, 2025
+						MERGED Oct 17, 2025
 					</a>
 					<a href="https://github.com/modelcontextprotocol/servers" class="official-badge" target="_blank" rel="noopener">
-						🏁 View in Registry
+						View in Registry
 					</a>
 					<a href="https://npmjs.com/package/claude-faf-mcp" class="official-badge" target="_blank" rel="noopener">
-						📦 NPM Package
+						NPM Package
 					</a>
 					<a href="https://www.npmjs.com/package/faf-cli" class="official-badge cli-badge" target="_blank" rel="noopener">
-						<span class="cli-icon">⚡️</span><span class="cli-text">CLI</span>
+						<span class="cli-text">CLI</span>
 					</a>
 				</div>
 			</div>
@@ -250,20 +250,17 @@
 			
 			<!-- Three Pathways -->
 			<div class="pathways">
-				<h3 class="pathways-title">Choose Your Path to AI Context</h3>
+				<h3 class="pathways-title">Choose Your Path</h3>
 				<div class="pathways-grid">
 					<div class="pathway">
-						<span class="pathway-icon">🌐</span>
 						<span class="pathway-name">WEB</span>
 						<span class="pathway-desc">Chrome Extension</span>
 					</div>
 					<div class="pathway featured">
-						<span class="pathway-icon">🤖</span>
 						<span class="pathway-name">MCP</span>
 						<span class="pathway-desc">Model Context</span>
 					</div>
 					<div class="pathway">
-						<span class="pathway-icon">📺</span>
 						<span class="pathway-name">CLI</span>
 						<span class="pathway-desc">Command Line</span>
 					</div>
@@ -283,9 +280,9 @@
 					</div>
 					{#if codeTyped === codeText}
 						<div class="terminal-output">
-							<div class="output-line">☑️ .faf created (22% → 99% in 3 seconds)</div>
-							<div class="output-line">🏆 AI-Readiness Score: <span class="score-green">99%</span></div>
-							<div class="output-line">⌚ Processing time: <span class="score-cyan">&lt;50ms</span></div>
+							<div class="output-line">✓ .faf created (22% → 99% in 3 seconds)</div>
+							<div class="output-line">AI-Readiness Score: <span class="score-green">99%</span></div>
+							<div class="output-line">Processing time: <span class="score-cyan">&lt;50ms</span></div>
 						</div>
 					{/if}
 				</div>
@@ -294,26 +291,22 @@
 			<!-- CTAs -->
 			<div bind:this={ctaRef} class="cta-wrapper">
 				<a href="https://fafdev.tools" class="btn btn-cyan btn-large">
-					<span class="btn-icon">🧡⚡️</span>
-					WEB - Fafdev.tools
+					Try Web
 				</a>
 				<a href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener noreferrer" class="btn btn-orange btn-large">
-					<span class="btn-icon">🤖</span>
 					MCP Registry
 				</a>
 				<a href="https://fafcli.dev" class="btn btn-dark btn-large">
-					<span class="btn-icon">📺</span>
 					Try CLI
 				</a>
 			</div>
 
-			<!-- Context Drift Persuasion CTA -->
+			<!-- Context Drift CTA -->
 			<div class="drift-cta">
 				<a href="/survival" class="drift-btn">
-					<span class="drift-icon">💀</span>
 					<span class="drift-text">
-						<span class="drift-title">Context Drift is Fatal</span>
-						<span class="drift-sub">See why projects die without FAF →</span>
+						<span class="drift-title">Context Drift Simulation</span>
+						<span class="drift-sub">See how context quality affects project outcomes →</span>
 					</span>
 				</a>
 			</div>
@@ -1167,31 +1160,26 @@
 		left: 0;
 		right: 0;
 		height: 2px;
-		background: linear-gradient(90deg, #ff4444 0%, #ff8800 50%, #ff4444 100%);
+		background: linear-gradient(90deg, var(--faf-orange) 0%, var(--faf-cyan-dark) 100%);
 	}
 
 	.drift-btn:hover {
 		transform: translateY(-3px);
-		border-color: #ff4444;
-		box-shadow: 0 12px 40px rgba(255, 68, 68, 0.3);
-	}
-
-	.drift-icon {
-		font-size: 2.5rem;
-		animation: pulse 2s ease-in-out infinite;
+		border-color: var(--faf-orange);
+		box-shadow: 0 12px 40px rgba(255, 107, 53, 0.2);
 	}
 
 	.drift-text {
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
-		text-align: left;
+		text-align: center;
 	}
 
 	.drift-title {
 		font-size: 1.25rem;
 		font-weight: 700;
-		color: #ff4444;
+		color: var(--faf-orange);
 		letter-spacing: 0.02em;
 	}
 

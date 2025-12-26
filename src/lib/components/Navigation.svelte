@@ -76,10 +76,9 @@
 				<a
 					href={item.href}
 					class="nav-link"
-					class:nav-link-danger={item.isDanger}
+					class:nav-link-highlight={item.isDanger}
 					onclick={(e) => handleNavClick(e, item.href)}
 				>
-					{#if item.isDanger}<span class="danger-icon">💀</span>{/if}
 					{item.label}
 				</a>
 			{/each}
@@ -181,24 +180,17 @@
 		width: 100%;
 	}
 
-	.nav-link-danger {
-		color: #ff4444;
+	.nav-link-highlight {
+		color: var(--faf-orange);
 		font-weight: 600;
-		display: flex;
-		align-items: center;
-		gap: 0.25rem;
 	}
 
-	.nav-link-danger:hover {
-		color: #ff6666;
+	.nav-link-highlight:hover {
+		color: var(--faf-orange);
 	}
 
-	.nav-link-danger::after {
-		background: #ff4444;
-	}
-
-	.danger-icon {
-		font-size: 0.9rem;
+	.nav-link-highlight::after {
+		background: var(--faf-orange);
 	}
 
 	.nav-cta {

@@ -6,11 +6,11 @@
 	let interval;
 
 	const projects = [
-		{ name: '100% Big Orange', score: 100, color: '#FF6B35', emoji: '🍊' },
-		{ name: '90% Gold', score: 90, color: '#FFD700', emoji: '🥇' },
-		{ name: '75% Silver', score: 75, color: '#C0C0C0', emoji: '🥈' },
-		{ name: '50% Red', score: 50, color: '#ff4444', emoji: '🔴' },
-		{ name: '0% Dead', score: 0, color: '#333', emoji: '💀' }
+		{ name: '100% Optimized', score: 100, color: '#FF6B35' },
+		{ name: '90% Mostly Stable', score: 90, color: '#FFD700' },
+		{ name: '75% Suboptimal', score: 75, color: '#C0C0C0' },
+		{ name: '50% Critical', score: 50, color: '#ff4444' },
+		{ name: '0% No Context', score: 0, color: '#333' }
 	];
 
 	// Health over 10 sessions based on score
@@ -29,9 +29,9 @@
 	function getStatus(score, frame) {
 		const health = getHealth(score, frame);
 		if (score === 100) return { text: 'OPTIMIZED', color: '#00cc44' };
-		if (score === 0) return { text: 'NEVER ALIVE', color: '#666' };
-		if (health === 0) return { text: 'FATAL', color: '#ff4444' };
-		if (health < 30) return { text: 'TERMINAL', color: '#ff8800' };
+		if (score === 0) return { text: 'NO CONTEXT', color: '#666' };
+		if (health === 0) return { text: 'FAILED', color: '#ff4444' };
+		if (health < 30) return { text: 'DECLINING', color: '#ff8800' };
 		if (health < 60) return { text: 'DRIFTING', color: '#ffcc00' };
 		if (health < 85) return { text: 'UNSTABLE', color: '#88cc00' };
 		return { text: 'STABLE', color: '#00cc44' };
@@ -66,8 +66,8 @@
 </script>
 
 <div class="survival-container">
-	<h2>Context Drift is Fatal</h2>
-	<p class="subtitle">The C is the Cancer in Code. FAF is the cure.</p>
+	<h2>Context Drift Simulation</h2>
+	<p class="subtitle">Context loss compounds waste over sessions. FAF eliminates it.</p>
 
 	<div class="controls">
 		<button onclick={start} disabled={isRunning}>
@@ -82,7 +82,6 @@
 			{@const status = getStatus(project.score, frame)}
 			<div class="project-card" class:dead={health === 0 && project.score !== 0} class:never-alive={project.score === 0}>
 				<div class="project-header">
-					<span class="emoji">{project.emoji}</span>
 					<span class="name">{project.name}</span>
 				</div>
 
@@ -95,9 +94,9 @@
 
 				<div class="health-value">
 				{#if project.score === 0}
-					<span class="dead-text">DEAD</span>
+					<span class="dead-text">0%</span>
 				{:else if health === 0}
-					<span class="died-text">DIED</span>
+					<span class="died-text">FAILED</span>
 				{:else}
 					{health}%
 				{/if}
@@ -122,14 +121,15 @@
 	</div>
 
 	<div class="legend">
-		<h3>The Story</h3>
+		<h3>What This Shows</h3>
 		<ul>
-			<li><strong>100%</strong> Zero drift. Eternal context. Cancer-free. Optimized for AI.</li>
-			<li><strong>90%</strong> Minor drift. Fights it off. Survives. Good info for AI.</li>
-			<li><strong>75%</strong> Drift spreads. Terminal at session 7. Too low for AI.</li>
-			<li><strong>50%</strong> Aggressive drift. Fatal by session 4.</li>
-			<li><strong>0%</strong> Born without context. Never alive.</li>
+			<li><strong>100%</strong> Optimized - Eternal context. Zero drift. Full AI effectiveness.</li>
+			<li><strong>90%</strong> Mostly Stable - Minor drift, recovers. AI remains effective.</li>
+			<li><strong>75%</strong> Suboptimal - Accumulating waste. Fails by session 7.</li>
+			<li><strong>50%</strong> Critical - Heavy losses. Fails by session 4.</li>
+			<li><strong>0%</strong> No Context - No foundation to build on.</li>
 		</ul>
+		<p class="disclaimer">No deployed model achieves 100% persistent context today. FAF provides the foundation.</p>
 	</div>
 </div>
 
@@ -207,8 +207,7 @@
 	.project-card.dead {
 		opacity: 0.6;
 		background: #1a1a1a;
-		border: 3px solid #ff4444;
-		box-shadow: 0 0 20px rgba(255, 68, 68, 0.4), inset 0 0 20px rgba(255, 68, 68, 0.1);
+		border: 2px solid #ff4444;
 	}
 
 	.project-card.never-alive {
@@ -223,13 +222,9 @@
 		margin-bottom: 1rem;
 	}
 
-	.emoji {
-		font-size: 1.5rem;
-	}
-
 	.name {
 		font-weight: 600;
-		font-size: 0.9rem;
+		font-size: 0.95rem;
 	}
 
 	.health-bar-container {
@@ -256,13 +251,12 @@
 
 	.died-text {
 		color: #ff6666;
-		font-weight: 900;
-		text-shadow: 0 0 15px rgba(255, 100, 100, 1);
+		font-weight: 700;
 	}
 
 	.dead-text {
-		color: #fff;
-		font-weight: 900;
+		color: #666;
+		font-weight: 700;
 	}
 
 	.status {
@@ -323,6 +317,15 @@
 
 	.legend strong {
 		color: white;
+	}
+
+	.disclaimer {
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid #333;
+		color: #888;
+		font-size: 0.85rem;
+		font-style: italic;
 	}
 
 	@media (max-width: 768px) {
