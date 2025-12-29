@@ -8,7 +8,14 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY || '');
+// Lazy-initialize to avoid build-time errors
+let resend: Resend | null = null;
+function getResend(): Resend | null {
+	if (!resend && process.env.RESEND_API_KEY) {
+		resend = new Resend(process.env.RESEND_API_KEY);
+	}
+	return resend;
+}
 
 interface ContactFormData {
 	email: string;
@@ -191,7 +198,14 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		// Send email via Resend
-		const { data: emailData, error } = await resend.emails.send({
+		const client = getResend();
+		if (!client) {
+			return json({
+				success: false,
+				error: 'Email service not configured'
+			}, { status: 500 });
+		}
+		const { data: emailData, error } = await client.emails.send({
 			from: 'FAF Contact <team@faf.one>',
 			replyTo: data.email,
 			to: 'team@faf.one',

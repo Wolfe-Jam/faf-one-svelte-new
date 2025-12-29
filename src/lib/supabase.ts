@@ -4,25 +4,37 @@
  * Serverless database for license storage
  */
 
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.SUPABASE_URL || '';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY || '';
-
-if (!supabaseUrl || !supabaseServiceKey) {
-    console.warn('⚠️ Supabase not configured. Set SUPABASE_URL and SUPABASE_SERVICE_KEY');
-}
+// Lazy-initialize to avoid build-time errors
+let supabaseClient: SupabaseClient | null = null;
 
 /**
- * Supabase client with service role (full access)
+ * Get Supabase client (lazy-initialized)
  * Use this for server-side operations only
  */
-export const supabase = createClient(supabaseUrl, supabaseServiceKey, {
-    auth: {
-        autoRefreshToken: false,
-        persistSession: false
+export function getSupabase(): SupabaseClient | null {
+    if (!supabaseClient) {
+        const supabaseUrl = process.env.SUPABASE_URL;
+        const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
+
+        if (!supabaseUrl || !supabaseServiceKey) {
+            console.warn('⚠️ Supabase not configured. Set SUPABASE_URL and SUPABASE_SERVICE_KEY');
+            return null;
+        }
+
+        supabaseClient = createClient(supabaseUrl, supabaseServiceKey, {
+            auth: {
+                autoRefreshToken: false,
+                persistSession: false
+            }
+        });
     }
-});
+    return supabaseClient;
+}
+
+// Legacy export for compatibility (will be null at build time)
+export const supabase = null as unknown as SupabaseClient;
 
 /**
  * Database types

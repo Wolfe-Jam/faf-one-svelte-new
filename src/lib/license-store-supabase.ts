@@ -4,8 +4,16 @@
  * Replaces JSON file storage with serverless database
  */
 
-import { supabase, type LicenseRow } from './supabase';
+import { getSupabase, type LicenseRow } from './supabase';
 import type { License } from './license-generator';
+
+function requireSupabase() {
+    const client = getSupabase();
+    if (!client) {
+        throw new Error('Supabase not configured');
+    }
+    return client;
+}
 
 /**
  * Convert License to database row
@@ -46,7 +54,7 @@ function rowToLicense(row: LicenseRow): License {
 export async function storeLicense(license: License): Promise<void> {
     const row = licenseToRow(license);
 
-    const { error } = await supabase
+    const { error } = await requireSupabase()
         .from('licenses')
         .insert(row);
 
@@ -62,7 +70,7 @@ export async function storeLicense(license: License): Promise<void> {
  * Find license by key
  */
 export async function findLicenseByKey(key: string): Promise<License | null> {
-    const { data, error } = await supabase
+    const { data, error } = await requireSupabase()
         .from('licenses')
         .select('*')
         .eq('key', key)
@@ -84,7 +92,7 @@ export async function findLicenseByKey(key: string): Promise<License | null> {
  * Find license by email
  */
 export async function findLicenseByEmail(email: string): Promise<License | null> {
-    const { data, error } = await supabase
+    const { data, error } = await requireSupabase()
         .from('licenses')
         .select('*')
         .eq('email', email)
@@ -107,7 +115,7 @@ export async function findLicenseByEmail(email: string): Promise<License | null>
  * Find license by Stripe subscription ID
  */
 export async function findLicenseBySubscription(subscriptionId: string): Promise<License | null> {
-    const { data, error } = await supabase
+    const { data, error } = await requireSupabase()
         .from('licenses')
         .select('*')
         .eq('stripe_subscription_id', subscriptionId)
@@ -139,7 +147,7 @@ export async function updateLicenseStatus(
         updates.expires_at = new Date().toISOString();
     }
 
-    const { error } = await supabase
+    const { error } = await requireSupabase()
         .from('licenses')
         .update(updates)
         .eq('stripe_subscription_id', subscriptionId);
@@ -156,7 +164,7 @@ export async function updateLicenseStatus(
  * Update last validated timestamp
  */
 export async function updateLastValidated(key: string): Promise<void> {
-    const { error } = await supabase
+    const { error } = await requireSupabase()
         .from('licenses')
         .update({ last_validated_at: new Date().toISOString() })
         .eq('key', key);
@@ -170,7 +178,7 @@ export async function updateLastValidated(key: string): Promise<void> {
  * Get active licenses count by tier
  */
 export async function getLicenseStats(): Promise<Record<string, number>> {
-    const { data, error } = await supabase
+    const { data, error } = await requireSupabase()
         .from('licenses')
         .select('tier')
         .eq('status', 'active');
@@ -190,7 +198,7 @@ export async function getLicenseStats(): Promise<Record<string, number>> {
  * Load all licenses (for admin purposes)
  */
 export async function loadLicenses(): Promise<License[]> {
-    const { data, error } = await supabase
+    const { data, error } = await requireSupabase()
         .from('licenses')
         .select('*')
         .order('created_at', { ascending: false });

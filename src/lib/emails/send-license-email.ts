@@ -7,7 +7,14 @@
 import { Resend } from 'resend';
 import type { License } from '../license-generator';
 
-const resend = new Resend(process.env.RESEND_API_KEY || '');
+// Lazy-initialize to avoid build-time errors
+let resend: Resend | null = null;
+function getResend(): Resend | null {
+    if (!resend && process.env.RESEND_API_KEY) {
+        resend = new Resend(process.env.RESEND_API_KEY);
+    }
+    return resend;
+}
 
 /**
  * Generate license email HTML
@@ -188,7 +195,11 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
         const tierName = license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
         const tierEmoji = license.tier === 'legends' ? '👑' : '🏎️💨';
 
-        const { data, error } = await resend.emails.send({
+        const client = getResend();
+        if (!client) {
+            return { success: false, error: 'Email service not configured' };
+        }
+        const { data, error } = await client.emails.send({
             from: 'FAF TURBO <team@faf.one>',
             replyTo: 'team@faf.one',
             to: license.email,

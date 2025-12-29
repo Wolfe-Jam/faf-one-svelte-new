@@ -9,7 +9,7 @@
 
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { supabase } from '$lib/supabase';
+import { getSupabase } from '$lib/supabase';
 
 export const GET: RequestHandler = async () => {
     const checks: Record<string, any> = {};
@@ -23,43 +23,52 @@ export const GET: RequestHandler = async () => {
     };
 
     // Check 2: Supabase connection
-    try {
-        const { data, error } = await supabase
-            .from('licenses')
-            .select('key, email, tier, status')
-            .eq('key', 'FAF-TEST-TEST-TEST-TEST')
-            .single();
-
-        if (error) {
-            checks.supabase = {
-                connected: false,
-                error: error.message,
-                code: error.code
-            };
-        } else {
-            checks.supabase = {
-                connected: true,
-                testLicense: data
-            };
-        }
-    } catch (error) {
+    const supabase = getSupabase();
+    if (!supabase) {
         checks.supabase = {
             connected: false,
-            error: error instanceof Error ? error.message : 'Unknown error'
+            error: 'Supabase not configured'
         };
-    }
+        checks.licenseCount = { error: 'Supabase not configured' };
+    } else {
+        try {
+            const { data, error } = await supabase
+                .from('licenses')
+                .select('key, email, tier, status')
+                .eq('key', 'FAF-TEST-TEST-TEST-TEST')
+                .single();
 
-    // Check 3: License count
-    try {
-        const { count, error } = await supabase
-            .from('licenses')
-            .select('*', { count: 'exact', head: true });
+            if (error) {
+                checks.supabase = {
+                    connected: false,
+                    error: error.message,
+                    code: error.code
+                };
+            } else {
+                checks.supabase = {
+                    connected: true,
+                    testLicense: data
+                };
+            }
+        } catch (error) {
+            checks.supabase = {
+                connected: false,
+                error: error instanceof Error ? error.message : 'Unknown error'
+            };
+        }
 
-        checks.licenseCount = error ? { error: error.message } : { total: count };
-    } catch (error) {
-        checks.licenseCount = {
-            error: error instanceof Error ? error.message : 'Unknown error'
-        };
+        // Check 3: License count
+        try {
+            const { count, error } = await supabase
+                .from('licenses')
+                .select('*', { count: 'exact', head: true });
+
+            checks.licenseCount = error ? { error: error.message } : { total: count };
+        } catch (error) {
+            checks.licenseCount = {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            };
+        }
     }
 
     return json({
