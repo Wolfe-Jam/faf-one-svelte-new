@@ -15,6 +15,7 @@
 	import EmailCapture from '$lib/components/EmailCapture.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import FafLogo from '$lib/components/FafLogo.svelte';
+	import LatestStory from '$lib/components/LatestStory.svelte';
 
 	let isLoaded = $state(false);
 	let showSplash = $state(true);
@@ -92,6 +93,10 @@
 {/if}
 
 <Navigation />
+
+{#if isLoaded}
+<LatestStory />
+{/if}
 
 <main class:loaded={isLoaded} class:hidden={showSplash}>
 	<div id="hero">
