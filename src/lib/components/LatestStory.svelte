@@ -24,7 +24,7 @@
 </script>
 
 <div class="latest-story">
-	<button class="nav-btn prev" onclick={prev} aria-label="Previous story">←</button>
+	<button class="nav-btn prev" onclick={prev} aria-label="Previous story">&lt;</button>
 
 	<a href={posts[currentIndex].slug} class="story-link">
 		<span class="latest-label">
@@ -39,7 +39,7 @@
 		</span>
 	</a>
 
-	<button class="nav-btn next" onclick={next} aria-label="Next story">→</button>
+	<button class="nav-btn next" onclick={next} aria-label="Next story">&gt;</button>
 </div>
 
 <style>
@@ -56,19 +56,20 @@
 	}
 
 	.nav-btn {
-		background: transparent;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: rgba(255, 255, 255, 0.6);
-		width: 28px;
-		height: 28px;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		color: rgba(255, 255, 255, 0.9);
+		width: 30px;
+		height: 30px;
 		border-radius: 4px;
 		cursor: pointer;
-		font-size: 0.9rem;
-		font-weight: 600;
+		font-size: 1.1rem;
+		font-weight: 700;
 		transition: all 0.2s ease;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-family: system-ui, sans-serif;
 	}
 
 	.nav-btn:hover {
