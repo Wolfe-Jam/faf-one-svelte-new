@@ -12,6 +12,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/grok-skeptic-to-evangelist',
+			title: 'I Showed Grok My .faf Format. It Went From Skeptic to Evangelist in One Session.',
+			date: 'December 30, 2025',
+			timestamp: '2025-12-30',
+			excerpt: 'Uploaded a 40-line .faf file to Grok. Built a production GitHub code reviewer in one session. Zero re-explaining. Zero drift. Grok\'s words: "It felt like working with a partner who\'d been on the project for months."',
+			emoji: '🍊',
+			category: 'Case Study'
+		},
+		{
 			slug: 'blog/bun-sticky-zig-launch',
 			title: 'bun-sticky-zig: Native FAF Scoring in Bun\'s Language',
 			date: 'December 23, 2025',
