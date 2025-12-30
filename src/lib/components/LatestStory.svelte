@@ -1,63 +1,122 @@
 <script>
-	const latestPost = {
-		slug: '/blog/grok-skeptic-to-evangelist',
-		title: 'Grok: Skeptic → Evangelist in One Session',
-		emoji: '🍊',
-		isNew: true
-	};
+	let currentIndex = $state(0);
+
+	const posts = [
+		{ slug: '/blog/grok-skeptic-to-evangelist', title: 'Grok: Skeptic → Evangelist in One Session', emoji: '🍊', isNew: true },
+		{ slug: '/blog/bun-sticky-zig-launch', title: 'bun-sticky-zig: Native FAF Scoring in Zig', emoji: '⚡', isNew: false },
+		{ slug: '/blog/what-if-software-was-good', title: 'What If Software Was Good?', emoji: '🏆', isNew: false },
+		{ slug: '/blog/xai-native-embedding', title: 'xAI Commits to Native .FAF for Grok', emoji: '🏆', isNew: false },
+		{ slug: '/blog/grok-faf-mcp-launch', title: 'First MCP Server for Grok', emoji: '🍊', isNew: false },
+		{ slug: '/blog/iana-registration', title: '.faf Officially Registered by IANA', emoji: '🏛️', isNew: false },
+	];
+
+	function prev() {
+		currentIndex = currentIndex === 0 ? posts.length - 1 : currentIndex - 1;
+	}
+
+	function next() {
+		currentIndex = currentIndex === posts.length - 1 ? 0 : currentIndex + 1;
+	}
+
+	$effect(() => {
+		const post = posts[currentIndex];
+	});
 </script>
 
-<a href={latestPost.slug} class="latest-story">
-	<span class="latest-label">
-		{#if latestPost.isNew}
-			<span class="new-badge">NEW</span>
-		{/if}
-		Latest Story
-	</span>
-	<span class="latest-title">
-		<span class="emoji">{latestPost.emoji}</span>
-		{latestPost.title}
-	</span>
-	<span class="arrow">→</span>
-</a>
+<div class="latest-story">
+	<button class="nav-btn prev" onclick={prev} aria-label="Previous story">←</button>
+
+	<a href={posts[currentIndex].slug} class="story-link">
+		<span class="latest-label">
+			{#if posts[currentIndex].isNew}
+				<span class="new-badge">NEW</span>
+			{/if}
+			<span class="counter">{currentIndex + 1}/{posts.length}</span>
+		</span>
+		<span class="latest-title">
+			<span class="emoji">{posts[currentIndex].emoji}</span>
+			{posts[currentIndex].title}
+		</span>
+	</a>
+
+	<button class="nav-btn next" onclick={next} aria-label="Next story">→</button>
+</div>
 
 <style>
 	.latest-story {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 1rem;
-		padding: 0.75rem 1.5rem;
+		gap: 0.5rem;
+		padding: 0.6rem 1rem;
 		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
 		color: white;
-		text-decoration: none;
 		font-size: 0.95rem;
-		transition: all 0.3s ease;
 		border-bottom: 1px solid rgba(255, 107, 53, 0.3);
 	}
 
-	.latest-story:hover {
-		background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
-		border-bottom-color: var(--faf-orange);
+	.nav-btn {
+		background: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: rgba(255, 255, 255, 0.6);
+		width: 28px;
+		height: 28px;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 0.9rem;
+		font-weight: 600;
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nav-btn:hover {
+		background: var(--faf-orange);
+		border-color: var(--faf-orange);
+		color: white;
+	}
+
+	.story-link {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.4rem 1rem;
+		text-decoration: none;
+		color: white;
+		border-radius: 4px;
+		transition: all 0.2s ease;
+		flex: 1;
+		justify-content: center;
+		max-width: 700px;
+	}
+
+	.story-link:hover {
+		background: rgba(255, 107, 53, 0.15);
 	}
 
 	.latest-label {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-		color: rgba(255, 255, 255, 0.6);
+		color: rgba(255, 255, 255, 0.5);
 		font-weight: 500;
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
+	}
+
+	.counter {
+		font-family: var(--font-mono, monospace);
+		font-size: 0.75rem;
 	}
 
 	.new-badge {
 		background: var(--faf-orange);
 		color: white;
-		padding: 0.15rem 0.4rem;
+		padding: 0.1rem 0.35rem;
 		border-radius: 3px;
-		font-size: 0.7rem;
+		font-size: 0.65rem;
 		font-weight: 700;
 		animation: pulse 2s ease-in-out infinite;
 	}
@@ -73,37 +132,36 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		font-size: 0.95rem;
 	}
 
 	.emoji {
-		font-size: 1.1rem;
-	}
-
-	.arrow {
-		color: var(--faf-orange);
-		font-weight: 700;
-		transition: transform 0.2s ease;
-	}
-
-	.latest-story:hover .arrow {
-		transform: translateX(4px);
+		font-size: 1rem;
 	}
 
 	@media (max-width: 768px) {
 		.latest-story {
-			flex-wrap: wrap;
-			gap: 0.5rem;
-			padding: 0.6rem 1rem;
-			font-size: 0.85rem;
+			padding: 0.5rem 0.75rem;
+			gap: 0.25rem;
 		}
 
-		.latest-label {
-			width: 100%;
-			justify-content: center;
+		.story-link {
+			padding: 0.3rem 0.5rem;
+			gap: 0.5rem;
 		}
 
 		.latest-title {
-			font-size: 0.9rem;
+			font-size: 0.8rem;
+		}
+
+		.latest-label {
+			display: none;
+		}
+
+		.nav-btn {
+			width: 24px;
+			height: 24px;
+			font-size: 0.8rem;
 		}
 	}
 </style>
