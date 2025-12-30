@@ -139,7 +139,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 				</tbody>
 			</table>
 
-			<p>Then I asked Grok to review its own code. It found 10 issues. We fixed all 10. One pass.</p>
+			<p>Then I reviewed the code. Found 9 issues. Asked Grok to fix them. It did. Found one more. Fixed that too. 10 total. Zero left.</p>
 
 			<div class="screenshot-showcase">
 				<img src="/blog-assets/file-tree.png" alt="Final project file tree" />
