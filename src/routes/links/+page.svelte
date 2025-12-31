@@ -151,6 +151,11 @@
 						<span class="link-desc">faf-mcp</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
+					<a href="https://smithery.ai/server/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">Smithery</span>
+						<span class="link-desc">claude-faf-mcp</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
 					<a href="https://github.com/punkpeye/awesome-mcp-servers/pull/1612" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">punkpeye/awesome-mcp</span>
 						<span class="link-desc">PR #1612</span>
