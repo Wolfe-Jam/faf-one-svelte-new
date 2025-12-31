@@ -83,8 +83,8 @@
 				<div class="version-grid">
 					<div class="version-item">
 						<h3>IANA Registered</h3>
-						<div class="version-number">Official</div>
-						<p>application/vnd.faf+yaml</p>
+						<div class="version-number">Oct 30, 2025</div>
+						<p><a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">application/vnd.faf+yaml</a></p>
 					</div>
 					<div class="version-item">
 						<h3>MCP Server</h3>
@@ -247,8 +247,10 @@
 						</div>
 					</div>
 					<div class="recognition-item">
-						<div class="partner-logo-placeholder">🏛️</div>
-						<p>IANA Registered</p>
+						<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener" class="recognition-link">
+							<div class="partner-logo-placeholder">🏛️</div>
+							<p>IANA Registered<br/><span class="recognition-date">Oct 30, 2025</span></p>
+						</a>
 					</div>
 					<div class="recognition-item">
 						<div class="partner-logo-placeholder">🤖</div>
@@ -730,6 +732,37 @@
 	.stat-label {
 		font-size: 1.1rem;
 		color: var(--faf-gray);
+	}
+
+	.recognition-link {
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.recognition-link:hover {
+		transform: scale(1.05);
+	}
+
+	.recognition-date {
+		font-size: 0.85rem;
+		color: var(--faf-orange);
+		font-weight: 600;
+	}
+
+	.version-item a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.version-item a:hover {
+		color: var(--faf-cyan);
+		text-decoration: underline;
 	}
 	
 	.founder-info {
