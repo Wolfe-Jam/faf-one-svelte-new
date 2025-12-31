@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<title>About FAF - The Foundational AI-context Format</title>
-	<meta name="description" content="Learn about .faf - the JPEG for AI. Created by industry veterans with 40+ years of format expertise." />
+	<meta name="description" content="Learn about .faf - the Foundational AI-context Format. Created by industry veterans with 40+ years of format expertise." />
 </svelte:head>
 
 <div class="back-nav">
@@ -281,7 +281,7 @@
 						🍜noodles as the inventor calls it.
 					</p>
 					<div class="founder-quote">
-						"AI needed a solid reliable format, a JPEG for AI, so to speak— So, we built it."
+						"AI context needed a file format, it got one— .faf"
 					</div>
 				</div>
 			</div>

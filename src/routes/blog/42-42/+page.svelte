@@ -56,7 +56,7 @@
 				<p>The first .faf file was born. Not from a committee. Not from a spec document. From frustration.</p>
 				<p>After 30 years working with file formats—starting with the Commodore Amiga's .iff in 1994, through two decades of industrial color simulation formats—I recognized what was missing: AI had no context format.</p>
 				<p>Every session, starting over. Every project, re-explaining. Every tool, isolated.</p>
-				<p class="quote">"AI needed a solid reliable format, a JPEG for AI, so to speak— So, I built one."</p>
+				<p class="quote">"AI context needed a file format, it got one— .faf"</p>
 			</div>
 		</section>
 
