@@ -1,16 +1,14 @@
 <script>
-	// DRAFT - Publish Dec 31 or Jan 1
-	// {
-	// 	slug: 'blog/best-of-2025',
-	// 	title: '.faf — 2025: Year of FAF',
-	// 	date: 'December 31, 2025',
-	// 	timestamp: '2025-12-31',
-	// 	excerpt: 'The 84-Day IANA Sprint. From first code to IANA-registered standard in 84 days. YAML took 22 years. JSON took 5 years. FAF took 84 days.',
-	// 	emoji: '🏛️',
-	// 	category: 'Year in Review'
-	// },
-
 	const posts = [
+		{
+			slug: 'blog/42-42',
+			title: '42|42',
+			date: 'December 31, 2025',
+			timestamp: '2025-12-31',
+			excerpt: '30 years in the mind. 84 days to MIME-Standard. YAML took 22 years. JSON took 7. FAF took 84 days. The origin story of an IANA-registered standard.',
+			emoji: '🏆',
+			category: 'Origin Story'
+		},
 		{
 			slug: 'blog/grok-skeptic-to-evangelist',
 			title: 'I Showed Grok My .faf Format. It Went From Skeptic to Evangelist in One Session.',
