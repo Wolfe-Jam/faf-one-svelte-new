@@ -54,7 +54,19 @@
 			<h2>Day 0 — August 7, 2025</h2>
 			<div class="story-content">
 				<p>The first .faf file was born. Not from a committee. Not from a spec document. From frustration.</p>
-				<p>After 30 years working with file formats—starting with the Commodore Amiga's .iff in 1994, through two decades of industrial color simulation formats—I recognized what was missing: AI had no context format.</p>
+				<p>Decades of format work got me here:</p>
+				<ul class="format-journey">
+					<li><strong>.iff</strong> → Fell for Commodore Amiga chunks</li>
+					<li><strong>.prj</strong> → Built it (99 images, one project file)</li>
+					<li><strong>.sim</strong> → Carpet simulation that changed an industry. Acquired by Shaw Industries (Berkshire Hathaway) in 2016.</li>
+					<li><strong>.png</strong> → RGBA love affair: hex, LAB, RGB, HSV/L color work</li>
+				</ul>
+				<p>Then AI:</p>
+				<ul class="format-journey">
+					<li><strong>2023</strong> → Looked at AI in earnest</li>
+					<li><strong>2024</strong> → Started coding again</li>
+					<li><strong>2025</strong> → Had enough of the chaos. Built the fix.</li>
+				</ul>
 				<p>Every session, starting over. Every project, re-explaining. Every tool, isolated.</p>
 				<p class="quote">"AI context needed a file format, it got one— .faf"</p>
 			</div>
@@ -240,9 +252,9 @@
 		<section class="story-section">
 			<h2>The Achievement</h2>
 			<div class="story-content">
-				<p>30 years of loving formats. Watching .iff become .gif become .png become .json. Always a spectator.</p>
-				<p>Until 2025.</p>
-				<p>This year I stopped watching and started building. Not a framework that'll be forgotten. Not a library that'll be deprecated. A <strong>format</strong>. Registered. Permanent. In the same book as the giants.</p>
+				<p>30 years of loving formats. From .iff to .prj to .sim to .png—never just watching. Creating. Shipping. Getting acquired.</p>
+				<p>But never an IANA standard. Until 2025.</p>
+				<p>This year I built what was missing. Not a framework that'll be forgotten. Not a library that'll be deprecated. A <strong>format</strong>. Registered. Permanent. In the same book as the giants.</p>
 				<p>Some developers ship products. Some ship companies.</p>
 				<p class="highlight-text">I shipped a standard.</p>
 				<div class="mime-final">application/vnd.faf+yaml</div>
@@ -615,6 +627,26 @@
 
 	.math-row .format {
 		font-weight: 700;
+	}
+
+	/* Format Journey List */
+	.format-journey {
+		list-style: none;
+		padding: 0;
+		margin: 1.5rem 0;
+		font-size: 1.05rem;
+	}
+
+	.format-journey li {
+		padding: 0.5rem 0;
+		padding-left: 1rem;
+		border-left: 3px solid var(--faf-orange);
+		margin-bottom: 0.5rem;
+	}
+
+	.format-journey li strong {
+		color: var(--faf-orange);
+		font-family: 'Roboto Mono', monospace;
 	}
 
 	/* Meaning List */
