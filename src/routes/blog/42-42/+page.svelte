@@ -252,7 +252,7 @@
 		<section class="story-section">
 			<h2>The Achievement</h2>
 			<div class="story-content">
-				<p>30 years of loving formats. From .iff to .prj to .sim to .png—always thinking. Creating. Shipping. Getting acquired.</p>
+				<p>30 years of loving formats. From .iff to .prj to .sim to .png—always thinking. Creating. Shipping. Getting acquired. Evolving.</p>
 				<p>But never an IANA standard. Until 2025.</p>
 				<p>This year I built what was missing. Not a framework that'll be forgotten. Not a library that'll be deprecated. A <strong>format</strong>. Registered. Permanent. In the same book as the giants.</p>
 				<p>Some developers ship products. Some ship companies.</p>
