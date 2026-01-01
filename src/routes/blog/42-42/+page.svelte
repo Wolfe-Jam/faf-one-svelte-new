@@ -57,7 +57,7 @@
 				<p>Decades of format work got me here:</p>
 				<ul class="format-journey">
 					<li><strong>.iff</strong> → Fell for Commodore Amiga chunks</li>
-					<li><strong>.prj</strong> → Built it (99 images, one project file)</li>
+					<li><strong>.prj</strong> → Built it (1995). 99 images, one project file. Sound familiar?</li>
 					<li><strong>.sim</strong> → Carpet simulation that changed an industry. Acquired by Shaw Industries (Berkshire Hathaway) in 2016.</li>
 					<li><strong>.zbg</strong> → Zero Background AI-generated image format (2023)</li>
 				</ul>
@@ -253,7 +253,8 @@
 			<h2>The Achievement</h2>
 			<div class="story-content">
 				<p>30 years of loving formats. From .iff to .prj to .sim to .zbg—always thinking. Creating. Shipping. Getting acquired. Evolving.</p>
-				<p>But never an IANA standard. Until 2025.</p>
+				<p>1995: <code>project.prj</code> — 99 images, one file.<br/>2025: <code>project.faf</code> — entire project DNA, one file.</p>
+				<p>Same instinct. 30 years apart. The format found me. I just finally gave it an IANA number.</p>
 				<p>This year I built what was missing. Not a framework that'll be forgotten. Not a library that'll be deprecated. A <strong>format</strong>. Registered. Permanent. In the same book as the giants.</p>
 				<p>Some developers ship products. Some ship companies.</p>
 				<p class="highlight-text">I shipped a standard.</p>
