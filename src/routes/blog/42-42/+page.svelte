@@ -59,7 +59,7 @@
 					<li><strong>.iff</strong> → Fell for Commodore Amiga chunks</li>
 					<li><strong>.prj</strong> → Built it (99 images, one project file)</li>
 					<li><strong>.sim</strong> → Carpet simulation that changed an industry. Acquired by Shaw Industries (Berkshire Hathaway) in 2016.</li>
-					<li><strong>.png</strong> → RGBA love affair: hex, LAB, RGB, HSV/L color work</li>
+					<li><strong>.zbg</strong> → Zero Background AI-generated image format (2023)</li>
 				</ul>
 				<p>Then AI:</p>
 				<ul class="format-journey">
@@ -252,7 +252,7 @@
 		<section class="story-section">
 			<h2>The Achievement</h2>
 			<div class="story-content">
-				<p>30 years of loving formats. From .iff to .prj to .sim to .png—always thinking. Creating. Shipping. Getting acquired. Evolving.</p>
+				<p>30 years of loving formats. From .iff to .prj to .sim to .zbg—always thinking. Creating. Shipping. Getting acquired. Evolving.</p>
 				<p>But never an IANA standard. Until 2025.</p>
 				<p>This year I built what was missing. Not a framework that'll be forgotten. Not a library that'll be deprecated. A <strong>format</strong>. Registered. Permanent. In the same book as the giants.</p>
 				<p>Some developers ship products. Some ship companies.</p>
