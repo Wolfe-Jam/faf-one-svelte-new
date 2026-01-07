@@ -266,6 +266,10 @@ Demo complete - no files changed.
 		<section>
 			<h2>The FAF Tier System</h2>
 
+			<div class="gold-code-box">
+				<p>At FAF-Score 100% AI is optimized. No more guessing, peak AI performance is activated 🏆 Gold Code mode enabled</p>
+			</div>
+
 			<table class="tier-table">
 				<thead>
 					<tr>
@@ -313,9 +317,7 @@ Demo complete - no files changed.
 				</tbody>
 			</table>
 
-			<div class="gold-code-box">
-				<p>At FAF-Score 100% AI is optimized. No more guessing, peak AI performance is activated 🏆 Gold Code mode enabled</p>
-			</div>
+			<p class="tier-footer">GOAL 🏆 100% then bi-sync for eternal Context-Mirroring</p>
 		</section>
 
 		<section>
@@ -552,6 +554,14 @@ Demo complete - no files changed.
 		color: #fff;
 		font-weight: 600;
 		font-size: 1.1rem;
+	}
+
+	.tier-footer {
+		text-align: center;
+		font-weight: 600;
+		color: #666;
+		font-style: italic;
+		margin-top: 1rem;
 	}
 
 	.terminal-block {

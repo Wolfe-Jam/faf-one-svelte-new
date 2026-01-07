@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/boris-flow',
+			title: 'BORIS-FLOW: How One Engineer\'s Claude Code Setup Became a Testing Standard',
+			date: 'January 7, 2026',
+			timestamp: '2026-01-07',
+			excerpt: '12 integration tests modeled on Boris Cherny\'s Claude Code workflow. .faf now detects subagents, commands, CLAUDE.md, .mcp.json. Zero guesswork. Championship-grade validation.',
+			emoji: '🏎️',
+			category: 'Engineering'
+		},
+		{
 			slug: 'blog/42-42',
 			title: '42|42',
 			date: 'December 31, 2025',
