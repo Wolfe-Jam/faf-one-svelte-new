@@ -338,7 +338,7 @@ Demo complete - no files changed.
 				<li><strong>609/629</strong> - Full test suite (20 intentionally skipped)</li>
 				<li><strong>100%</strong> - FAF score on faf-cli itself</li>
 				<li><strong>4ms</strong> - Average bi-sync time</li>
-				<li><strong>15,000+</strong> - npm downloads</li>
+				<li><strong>18,000+</strong> - npm downloads</li>
 			</ul>
 		</section>
 
