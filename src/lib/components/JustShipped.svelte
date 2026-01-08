@@ -42,9 +42,23 @@
 		<div class="total-stats stats-top">
 			<p>
 				<strong>18,000+ Total Downloads</strong> •
-				<strong>208/208 Tests Passing</strong> •
+				<strong>609/629 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- Boris-Flow v3.4.4 -->
+		<div class="chrome-featured boris-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>faf-cli v3.4.4 + Boris-Flow</h3>
+					<span class="chrome-badge boris-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">12 integration tests modeled on Boris Cherny's Claude Code setup. Bi-sync demo. Gold Code at 100% = AI Optimized.</p>
+			<a href="/blog/boris-flow" class="chrome-install boris-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- Bun Sticky Announcements -->
@@ -118,15 +132,15 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.1.6</h3>
+					<h3>faf-cli v3.4.4</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Anthropic-Approved code with Turbo Cat rapid analysis engine
+					Boris-Flow tested. Gold Code at 100%. AI Optimized.
 				</p>
 				<ul class="release-features">
-					<li>16.6k downloads (npm)</li>
-					<li>173/173 tests passing</li>
+					<li>18k+ downloads (npm)</li>
+					<li>609/629 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
 					<li>41 commands</li>
@@ -172,7 +186,7 @@
 		<div class="total-stats">
 			<p>
 				<strong>18,000+ Total Downloads</strong> •
-				<strong>208/208 Tests Passing</strong> •
+				<strong>609/629 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -210,15 +224,15 @@
 			<!-- CLI v3.0.4 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.1.6</h3>
+					<h3>faf-cli v3.4.4</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Anthropic-Approved code with Turbo Cat rapid analysis engine
+					Boris-Flow tested. Gold Code at 100%. AI Optimized.
 				</p>
 				<ul class="release-features">
-					<li>16.6k downloads (npm)</li>
-					<li>173/173 tests passing</li>
+					<li>18k+ downloads (npm)</li>
+					<li>609/629 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
 					<li>41 commands</li>
@@ -264,7 +278,7 @@
 		<div class="total-stats">
 			<p>
 				<strong>18,000+ Total Downloads</strong> •
-				<strong>208/208 Tests Passing</strong> •
+				<strong>609/629 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -524,6 +538,34 @@
 	.chrome-install:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 5px 20px rgba(0, 212, 212, 0.5), 0 0 40px rgba(0, 212, 212, 0.3);
+	}
+
+	/* Boris-Flow styles - Gold/Trophy theme */
+	.boris-featured {
+		border-color: gold;
+		box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.1);
+	}
+
+	.boris-featured:hover {
+		box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4), 0 0 80px rgba(255, 215, 0, 0.15);
+	}
+
+	.boris-featured .chrome-description {
+		color: gold;
+	}
+
+	.boris-badge {
+		background: linear-gradient(135deg, gold 0%, #ffd700 100%) !important;
+		color: #1a1a1a;
+	}
+
+	.boris-cta {
+		background: linear-gradient(135deg, gold 0%, #e6c200 100%);
+		color: #1a1a1a;
+	}
+
+	.boris-cta:hover {
+		box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
 	}
 
 	/* Bun Sticky styles */
