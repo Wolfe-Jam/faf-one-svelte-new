@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>BORIS-FLOW: How One Engineer's Claude Code Setup Became a Testing Standard | FAF</title>
-	<meta name="description" content="12 integration tests modeled on Boris Cherny's Claude Code workflow. Zero guesswork. Championship-grade validation for AI context." />
-	<meta property="og:title" content="BORIS-FLOW: Claude Code Testing Standard" />
-	<meta property="og:description" content="12 integration tests that validate your AI context before every publish. Inspired by the creator of Claude Code." />
+	<title>The Day We Added BORIS-FLOW | FAF</title>
+	<meta name="description" content=".faf brought the format. Boris brought the workflow. AI brought Gold Code. 12 integration tests for championship-grade AI context." />
+	<meta property="og:title" content="The Day We Added BORIS-FLOW" />
+	<meta property="og:description" content=".faf brought the format. Boris brought the workflow. AI brought Gold Code." />
 	<meta property="og:image" content="/blog-assets/boris-flow-banner.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -24,8 +24,8 @@
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / BORIS-FLOW
 		</div>
 
-		<h1>BORIS-FLOW: How One Engineer's Claude Code Setup Became a Testing Standard</h1>
-		<p class="subtitle">12 integration tests. Zero guesswork. Championship-grade validation.</p>
+		<h1>The Day We Added BORIS-FLOW</h1>
+		<p class="subtitle">.faf brought the format. Boris brought the workflow. AI brought Gold Code.</p>
 		<div class="meta">
 			<time datetime="2026-01-07">January 7, 2026</time>
 			<span class="separator">•</span>
