@@ -249,6 +249,15 @@ Demo complete - no files changed.
 
 			<p>That's it. Your Claude Code structure is now captured in project.faf.</p>
 
+			<div class="brave-section">
+				<p class="brave-note">For the brave:</p>
+				<div class="terminal-block small">
+					<code>cd your-project</code>
+					<code>npx faf-cli yolo</code>
+				</div>
+				<p class="brave-desc">Downloads faf-cli via npx and runs yolo — init + auto + aggressive extraction in one command. May take a minute on first run.</p>
+			</div>
+
 			<div class="cta-grid">
 				<div class="cta-box">
 					<h3>Get Started</h3>
@@ -562,6 +571,37 @@ Demo complete - no files changed.
 		color: #666;
 		font-style: italic;
 		margin-top: 1rem;
+	}
+
+	.brave-section {
+		margin: 1.5rem 0;
+		padding: 1rem;
+		background: #f8f8f8;
+		border-radius: 8px;
+		border-left: 3px solid #FF6B35;
+	}
+
+	.brave-note {
+		font-size: 0.95rem;
+		color: #FF6B35;
+		font-weight: 600;
+		font-style: italic;
+		margin: 0 0 0.75rem 0;
+	}
+
+	.brave-desc {
+		font-size: 0.9rem;
+		color: #666;
+		margin: 0.75rem 0 0 0;
+	}
+
+	.terminal-block.small {
+		padding: 0.75rem 1rem;
+		margin: 0;
+	}
+
+	.terminal-block.small code {
+		font-size: 0.9rem;
 	}
 
 	.terminal-block {
