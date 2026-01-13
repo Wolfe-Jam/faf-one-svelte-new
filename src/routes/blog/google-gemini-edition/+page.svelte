@@ -262,7 +262,7 @@ faf conductor sync`}</code></pre>
 			<ul>
 				<li><strong>v3.4.7</strong> - Released January 13, 2026</li>
 				<li><strong>574/574</strong> - Tests passing (0 skipped)</li>
-				<li><strong>4 platforms</strong> - Claude, Gemini CLI, Antigravity, Conductor</li>
+				<li><strong>Full interop</strong> - Claude, Gemini CLI, Antigravity, Conductor format</li>
 				<li><strong>2 new commands</strong> - <code>faf gemini</code>, <code>faf conductor</code></li>
 				<li><strong>18,000+</strong> - npm downloads</li>
 			</ul>
