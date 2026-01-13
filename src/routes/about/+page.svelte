@@ -94,7 +94,7 @@
 					<div class="version-item">
 						<h3>CLI</h3>
 						<div class="version-number">v3.1.6</div>
-						<p>16.6k+ Downloads</p>
+						<p>20k+ Downloads</p>
 					</div>
 					<div class="version-item">
 						<h3>bun-sticky</h3>
@@ -242,7 +242,7 @@
 				<div class="recognition-grid">
 					<div class="recognition-item">
 						<div class="stat">
-							<div class="stat-number">18K+</div>
+							<div class="stat-number">20K+</div>
 							<div class="stat-label">npm Downloads</div>
 						</div>
 					</div>

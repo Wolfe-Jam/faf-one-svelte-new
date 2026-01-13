@@ -19,7 +19,7 @@
 		🏁 Just Shipped 🏁
 	</a>
 	<div class="banner-section-center">
-		18k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
+		20k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
 	</div>
 	<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="banner-section">
 		⚡️ MCP #2759 MERGED ⚡️

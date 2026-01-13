@@ -87,7 +87,7 @@
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-cli</span>
 						<span class="link-desc">CLI tool for .faf management</span>
-						<span class="link-stat">18k+ downloads</span>
+						<span class="link-stat">20k+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>

@@ -12,7 +12,7 @@
 	<title>FAF CLI v3.3.0: Claude Code Plugin Support + SSH Bug Fix | faf.one</title>
 	<meta name="description" content="FAF CLI v3.3.0 launches with full Claude Code plugin support, SSH bug workaround, and auto-discovery in the 8,500+ plugin registry." />
 	<meta property="og:title" content="FAF CLI v3.3.0: Claude Code Plugin Support" />
-	<meta property="og:description" content="Full plugin support, SSH bug fix, and discoverable in 8,500+ plugin registry. 18k+ ecosystem downloads." />
+	<meta property="og:description" content="Full plugin support, SSH bug fix, and discoverable in 8,500+ plugin registry. 20k+ ecosystem downloads." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -29,7 +29,7 @@
 			<span class="separator">•</span>
 			<span class="version">faf-cli v3.3.0</span>
 			<span class="separator">•</span>
-			<span class="downloads">18k+ Ecosystem Downloads</span>
+			<span class="downloads">20k+ Ecosystem Downloads</span>
 		</div>
 	</header>
 
@@ -90,7 +90,7 @@
 		</section>
 
 		<section class="ecosystem">
-			<h2>18k+ Ecosystem Downloads</h2>
+			<h2>20k+ Ecosystem Downloads</h2>
 			<p>
 				Combined downloads across the FAF ecosystem:
 			</p>
@@ -104,7 +104,7 @@
 					<span class="stat-label">claude-faf-mcp</span>
 				</div>
 				<div class="stat">
-					<span class="stat-number">18k+</span>
+					<span class="stat-number">20k+</span>
 					<span class="stat-label">Total</span>
 				</div>
 			</div>
@@ -158,7 +158,7 @@ faf plugin-install Wolfe-Jam/faf-cli</code></pre>
 			</p>
 			<p class="brand">
 				FAF CLI v3.3.0<br />
-				18k+ Ecosystem Downloads<br />
+				20k+ Ecosystem Downloads<br />
 				Free Forever
 			</p>
 		</section>

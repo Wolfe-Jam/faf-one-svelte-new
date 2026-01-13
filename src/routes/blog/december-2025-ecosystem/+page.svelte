@@ -130,7 +130,7 @@ bun-sticky score</code></pre>
 				</div>
 			</div>
 			<p class="summary-text">
-				18k+ ecosystem downloads. Anthropic-approved. Building on infrastructure that's now industry standard.
+				20k+ ecosystem downloads. Anthropic-approved. Building on infrastructure that's now industry standard.
 			</p>
 		</section>
 
