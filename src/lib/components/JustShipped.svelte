@@ -41,7 +41,7 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>18,000+ Total Downloads</strong> •
+				<strong>20,000+ Total Downloads</strong> •
 				<strong>574/574 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -153,7 +153,7 @@
 					Google Gemini Edition. Full platform interoperability.
 				</p>
 				<ul class="release-features">
-					<li>18k+ downloads (npm)</li>
+					<li>20k+ downloads (npm)</li>
 					<li>574/574 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
@@ -199,7 +199,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>18,000+ Total Downloads</strong> •
+				<strong>20,000+ Total Downloads</strong> •
 				<strong>574/574 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -245,7 +245,7 @@
 					Google Gemini Edition. Full platform interoperability.
 				</p>
 				<ul class="release-features">
-					<li>18k+ downloads (npm)</li>
+					<li>20k+ downloads (npm)</li>
 					<li>574/574 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
@@ -291,7 +291,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>18,000+ Total Downloads</strong> •
+				<strong>20,000+ Total Downloads</strong> •
 				<strong>574/574 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
