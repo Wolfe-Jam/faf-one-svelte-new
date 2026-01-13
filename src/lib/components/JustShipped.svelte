@@ -37,14 +37,28 @@
 
 <section class="just-shipped popup-mode">
 	<div class="container">
-		<h2 class="section-title">Recent Releases</h2>
+		<h2 class="section-title">Gemini is No-FAF</h2>
 
 		<div class="total-stats stats-top">
 			<p>
 				<strong>18,000+ Total Downloads</strong> •
-				<strong>609/629 Tests Passing</strong> •
+				<strong>574/574 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- Google Gemini Edition v3.4.7 -->
+		<div class="chrome-featured gemini-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>✦ faf-cli v3.4.7 - Google Gemini Edition</h3>
+					<span class="chrome-badge gemini-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Full interoperability with Google Gemini ecosystem. GEMINI.md, Antigravity IDE, Conductor extension. One .faf, every AI.</p>
+			<a href="/blog/google-gemini-edition" class="chrome-install gemini-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- Boris-Flow v3.4.4 -->
@@ -129,21 +143,21 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v3.0.4 -->
+			<!-- CLI v3.4.7 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.4.4</h3>
+					<h3>faf-cli v3.4.7</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Boris-Flow tested. Gold Code at 100%. AI Optimized.
+					Google Gemini Edition. Full platform interoperability.
 				</p>
 				<ul class="release-features">
 					<li>18k+ downloads (npm)</li>
-					<li>609/629 tests passing</li>
+					<li>574/574 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
-					<li>41 commands</li>
+					<li>43 commands</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
@@ -186,7 +200,7 @@
 		<div class="total-stats">
 			<p>
 				<strong>18,000+ Total Downloads</strong> •
-				<strong>609/629 Tests Passing</strong> •
+				<strong>574/574 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -221,21 +235,21 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v3.0.4 -->
+			<!-- CLI v3.4.7 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.4.4</h3>
+					<h3>faf-cli v3.4.7</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Boris-Flow tested. Gold Code at 100%. AI Optimized.
+					Google Gemini Edition. Full platform interoperability.
 				</p>
 				<ul class="release-features">
 					<li>18k+ downloads (npm)</li>
-					<li>609/629 tests passing</li>
+					<li>574/574 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
-					<li>41 commands</li>
+					<li>43 commands</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
@@ -278,7 +292,7 @@
 		<div class="total-stats">
 			<p>
 				<strong>18,000+ Total Downloads</strong> •
-				<strong>609/629 Tests Passing</strong> •
+				<strong>574/574 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -566,6 +580,40 @@
 
 	.boris-cta:hover {
 		box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+	}
+
+	/* Gemini styles - Official Gemini gradient (blue → purple → pink → red) */
+	.gemini-featured {
+		border: 2px solid transparent;
+		background:
+			linear-gradient(135deg, #1a1d25 0%, #2a2d35 100%) padding-box,
+			linear-gradient(135deg, #4285F4 0%, #9B72CB 50%, #D96570 100%) border-box;
+		box-shadow: 0 10px 40px rgba(155, 114, 203, 0.3), 0 0 60px rgba(66, 133, 244, 0.1);
+	}
+
+	.gemini-featured:hover {
+		box-shadow: 0 15px 50px rgba(155, 114, 203, 0.4), 0 0 80px rgba(217, 101, 112, 0.15);
+	}
+
+	.gemini-featured .chrome-description {
+		background: linear-gradient(90deg, #4285F4 0%, #9B72CB 50%, #D96570 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.gemini-badge {
+		background: linear-gradient(135deg, #4285F4 0%, #9B72CB 50%, #D96570 100%) !important;
+		color: white;
+	}
+
+	.gemini-cta {
+		background: linear-gradient(135deg, #4285F4 0%, #9B72CB 50%, #D96570 100%);
+		color: white;
+	}
+
+	.gemini-cta:hover {
+		box-shadow: 0 5px 20px rgba(155, 114, 203, 0.5), 0 0 40px rgba(217, 101, 112, 0.3);
 	}
 
 	/* Bun Sticky styles */

@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/google-gemini-edition',
+			title: 'Google Gemini Edition: One .faf File, Every AI Platform',
+			date: 'January 13, 2026',
+			timestamp: '2026-01-13',
+			excerpt: 'Full interoperability with the Google Gemini ecosystem. Import from GEMINI.md, export to Conductor format, sync with Antigravity IDE. Universal AI context portability.',
+			emoji: '🔷',
+			category: 'Interop'
+		},
+		{
 			slug: 'blog/boris-flow',
 			title: 'BORIS-FLOW: How One Engineer\'s Claude Code Setup Became a Testing Standard',
 			date: 'January 7, 2026',
