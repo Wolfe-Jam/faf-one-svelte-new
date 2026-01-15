@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<p class="growth-note">
-				<strong>*These are people downloading something they don't need to download.</strong> grok-faf-mcp works via URL — no install required. Real usage is higher.
+				<strong>*382 unnecessary downloads.</strong> grok-faf-mcp works via URL — no install required. If this many people downloaded it anyway, imagine how many just use it online.
 			</p>
 			<p class="growth-note">
 				Dedicated to @elonmusk and the #1 model on Earth.
