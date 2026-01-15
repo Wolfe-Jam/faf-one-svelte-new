@@ -344,7 +344,7 @@
 	}
 
 	.platform-card.claude {
-		background: linear-gradient(135deg, #d4a574 0%, #c49660 100%);
+		background: linear-gradient(135deg, #FF6B35 0%, #e55a2b 100%);
 		color: white;
 	}
 
