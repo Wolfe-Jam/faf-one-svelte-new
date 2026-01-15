@@ -88,6 +88,9 @@
 				</div>
 			</div>
 			<p class="growth-note">
+				<strong>These are npm downloads only.</strong> URL users don't need to install — they just use it. The real usage is higher.
+			</p>
+			<p class="growth-note">
 				Dedicated to @elonmusk and the #1 model on Earth.
 			</p>
 		</section>
@@ -413,7 +416,7 @@
 	}
 
 	.code-block code {
-		color: #00bf63;
+		color: #00D4D4;
 		font-family: 'Monaco', 'Menlo', monospace;
 		font-size: 1rem;
 	}
