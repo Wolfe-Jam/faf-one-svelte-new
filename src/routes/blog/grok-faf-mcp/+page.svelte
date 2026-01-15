@@ -32,7 +32,7 @@
 			</p>
 
 			<blockquote class="highlight-quote">
-				"First MCP for Grok. First web-based MCP. Fastest growing FAF package."
+				"First MCP for Grok. First web-based MCP. FAST AF Edition."
 			</blockquote>
 		</section>
 
@@ -63,10 +63,10 @@
 					<p>Every other MCP requires npm install. grok-faf-mcp runs in your browser at <a href="https://grok-faf-mcp.vercel.app" target="_blank">grok-faf-mcp.vercel.app</a>. Zero installation. Just open and use.</p>
 				</div>
 				<div class="first-card">
-					<div class="first-badge">FASTEST</div>
+					<div class="first-badge">DEMAND</div>
 					<div class="first-number">3</div>
-					<h3>Fastest Growing</h3>
-					<p>280 to 380+ downloads in 24 hours. That's <strong>36% growth in a single day</strong>. Hockey-stick adoption curve. The xAI developer community was waiting for this.</p>
+					<h3>Immediate Demand</h3>
+					<p>100+ downloads overnight. The xAI developer community was waiting for this — and they showed up fast.</p>
 				</div>
 			</div>
 		</section>
@@ -75,10 +75,6 @@
 			<h2>The Numbers</h2>
 			<div class="growth-card">
 				<div class="growth-stat">
-					<span class="growth-label">24-Hour Growth</span>
-					<span class="growth-number">+36%</span>
-				</div>
-				<div class="growth-stat">
 					<span class="growth-label">Downloads</span>
 					<span class="growth-number">382</span>
 				</div>
@@ -86,9 +82,13 @@
 					<span class="growth-label">Weekly</span>
 					<span class="growth-number">189</span>
 				</div>
+				<div class="growth-stat">
+					<span class="growth-label">Version</span>
+					<span class="growth-number">1.0.2</span>
+				</div>
 			</div>
 			<p class="growth-note">
-				This is the fastest any FAF package has ever grown. And it's just getting started.
+				Dedicated to @elonmusk and the #1 model on Earth.
 			</p>
 		</section>
 
@@ -160,7 +160,7 @@
 	</article>
 
 	<footer class="post-footer">
-		<p class="footer-tagline">First MCP for Grok. First web-based MCP. Fastest growing.</p>
+		<p class="footer-tagline">First MCP for Grok. First web-based MCP. FAST AF Edition.</p>
 		<p>Published by <strong>wolfejam</strong> · <a href="https://foundation.faf.one">FAF Foundation</a></p>
 	</footer>
 </div>

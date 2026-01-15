@@ -5,7 +5,7 @@
 			title: 'grok-faf-mcp: Three Industry Firsts',
 			date: 'January 15, 2026',
 			timestamp: '2026-01-15',
-			excerpt: 'First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package. FAF proves its "any AI" promise by bridging MCP to a competitor\'s platform.',
+			excerpt: 'First MCP for xAI Grok. First web-based MCP. FAST AF Edition. Dedicated to @elonmusk and the #1 model on Earth.',
 			emoji: '🍊',
 			category: 'First'
 		},
