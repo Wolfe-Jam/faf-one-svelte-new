@@ -1,6 +1,33 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/grok-faf-mcp',
+			title: 'grok-faf-mcp: Three Industry Firsts',
+			date: 'January 15, 2026',
+			timestamp: '2026-01-15',
+			excerpt: 'First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package. FAF proves its "any AI" promise by bridging MCP to a competitor\'s platform.',
+			emoji: '🍊',
+			category: 'First'
+		},
+		{
+			slug: 'blog/zenodo-paper',
+			title: 'FAF Whitepaper Published on CERN/Zenodo',
+			date: 'January 14, 2026',
+			timestamp: '2026-01-14',
+			excerpt: 'Peer-citable academic paper published on CERN\'s Zenodo. DOI: 10.5281/zenodo.18251362. Repository used by NASA, NIH, and major universities.',
+			emoji: '📄',
+			category: 'Research'
+		},
+		{
+			slug: 'blog/faf-hits-20k',
+			title: 'FAF Hits 20,000 Downloads',
+			date: 'January 14, 2026',
+			timestamp: '2026-01-14',
+			excerpt: '20,342 verified npm downloads across faf-cli, claude-faf-mcp, faf-mcp, and grok-faf-mcp. Real adoption, verified numbers.',
+			emoji: '📈',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/google-gemini-edition',
 			title: 'Google Gemini Edition: One .faf File, Every AI Platform',
 			date: 'January 13, 2026',
