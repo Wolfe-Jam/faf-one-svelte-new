@@ -2,10 +2,10 @@
 	const posts = [
 		{
 			slug: 'blog/grok-faf-mcp',
-			title: 'grok-faf-mcp: Three Industry Firsts',
+			title: 'grok-faf-mcp: First MCP for Grok',
 			date: 'January 15, 2026',
 			timestamp: '2026-01-15',
-			excerpt: 'First MCP for xAI Grok. First web-based MCP. FAST AF Edition. Dedicated to @elonmusk and the #1 model on Earth.',
+			excerpt: 'First MCP for xAI Grok. URL-accessible. FAST AF Edition. Dedicated to @elonmusk and the #1 model on Earth.',
 			emoji: '🍊',
 			category: 'First'
 		},

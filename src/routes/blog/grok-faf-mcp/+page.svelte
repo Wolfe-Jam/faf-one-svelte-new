@@ -18,7 +18,7 @@
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / grok-faf-mcp
 		</div>
 		<span class="badge">FIRST</span>
-		<h1>grok-faf-mcp: Three Industry Firsts</h1>
+		<h1>grok-faf-mcp: First MCP for Grok</h1>
 		<p class="subtitle">Now in FAST AF Edition — rebuilt for production</p>
 		<div class="meta">
 			<time datetime="2026-01-14">January 2026</time>
@@ -32,7 +32,7 @@
 			</p>
 
 			<blockquote class="highlight-quote">
-				"First MCP for Grok. First web-based MCP. Now in FAST AF Edition."
+				"First MCP for Grok. URL-accessible. FAST AF Edition."
 			</blockquote>
 		</section>
 
@@ -47,26 +47,26 @@
 		</section>
 
 		<section class="firsts">
-			<h2>Three Industry Firsts</h2>
+			<h2>What Makes It Different</h2>
 
 			<div class="firsts-grid">
 				<div class="first-card">
 					<div class="first-badge">FIRST</div>
 					<div class="first-number">1</div>
 					<h3>First MCP for Grok</h3>
-					<p>Search the entire MCP ecosystem — there's no other server for xAI's Grok. grok-faf-mcp is the first and only. We didn't wait for someone else to build it.</p>
+					<p>grok-faf-mcp was the first MCP server built for xAI's Grok. Others have followed — that's the point. We proved it could be done.</p>
 				</div>
 				<div class="first-card">
-					<div class="first-badge">FIRST</div>
+					<div class="first-badge">HOSTED</div>
 					<div class="first-number">2</div>
-					<h3>First Web-Based MCP</h3>
-					<p>Every other MCP requires npm install. grok-faf-mcp runs in your browser at <a href="https://grok-faf-mcp.vercel.app" target="_blank">grok-faf-mcp.vercel.app</a>. Zero installation. Just open and use.</p>
+					<h3>URL-Accessible</h3>
+					<p>Other Grok MCPs require npm install or pip install. grok-faf-mcp is hosted at <a href="https://grok-faf-mcp.vercel.app" target="_blank">grok-faf-mcp.vercel.app</a>. Point your MCP config to the URL. Done.</p>
 				</div>
 				<div class="first-card">
 					<div class="first-badge">FAST AF</div>
 					<div class="first-number">3</div>
 					<h3>FAST AF Edition</h3>
-					<p>Vercel Edge deployment. Production-ready. Built for speed — no npm install, just open and go.</p>
+					<p>Vercel Edge deployment. Production-ready. No local server to run — it's already running.</p>
 				</div>
 			</div>
 		</section>
@@ -160,7 +160,7 @@
 	</article>
 
 	<footer class="post-footer">
-		<p class="footer-tagline">First MCP for Grok. First web-based MCP. FAST AF Edition.</p>
+		<p class="footer-tagline">First MCP for Grok. URL-accessible. FAST AF Edition.</p>
 		<p>Published by <strong>wolfejam</strong> · <a href="https://foundation.faf.one">FAF Foundation</a></p>
 	</footer>
 </div>
