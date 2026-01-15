@@ -63,10 +63,10 @@
 					<p>Every other MCP requires npm install. grok-faf-mcp runs in your browser at <a href="https://grok-faf-mcp.vercel.app" target="_blank">grok-faf-mcp.vercel.app</a>. Zero installation. Just open and use.</p>
 				</div>
 				<div class="first-card">
-					<div class="first-badge">DEMAND</div>
+					<div class="first-badge">FAST AF</div>
 					<div class="first-number">3</div>
-					<h3>Immediate Demand</h3>
-					<p>100+ downloads overnight. The xAI developer community was waiting for this — and they showed up fast.</p>
+					<h3>FAST AF Edition</h3>
+					<p>Vercel Edge deployment. Sub-50ms response times. The fastest MCP server in the FAF ecosystem — built for Grok's speed.</p>
 				</div>
 			</div>
 		</section>
