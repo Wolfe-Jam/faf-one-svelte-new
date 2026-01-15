@@ -2,6 +2,11 @@
   "outputDirectory": "build",
   "buildCommand": "npm run build",
   "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "mcpaas.live" }],
+      "destination": "/mcpaas"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
