@@ -19,7 +19,7 @@
 		</div>
 		<span class="badge">MILESTONE</span>
 		<h1>FAF Hits 20,000 Downloads</h1>
-		<p class="subtitle">Real adoption, verified numbers</p>
+		<p class="subtitle">From zero to 20K in 4 months</p>
 		<div class="meta">
 			<time datetime="2026-01-14">January 14, 2026</time>
 		</div>
@@ -28,33 +28,37 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				The FAF ecosystem has crossed <strong>20,000 downloads</strong> on npm. Four packages, one format, real adoption.
+				The FAF ecosystem has crossed <strong>20,000 downloads</strong> on npm. Four packages, one format, real adoption. No marketing budget. No VC funding. Just a format that works.
 			</p>
 		</section>
 
 		<section class="downloads">
-			<h2>Verified Numbers</h2>
-			<p>All numbers from <code>api.npmjs.org</code> on January 14, 2026:</p>
+			<h2>The Numbers</h2>
+			<p>All numbers verified via <code>api.npmjs.org</code> on January 14, 2026:</p>
 
 			<div class="stats-grid">
 				<div class="stat-card">
 					<div class="stat-number">9,613</div>
 					<div class="stat-label">faf-cli</div>
+					<div class="stat-desc">The original CLI</div>
 					<a href="https://www.npmjs.com/package/faf-cli" class="stat-link" target="_blank">npm →</a>
 				</div>
 				<div class="stat-card">
 					<div class="stat-number">8,439</div>
 					<div class="stat-label">claude-faf-mcp</div>
+					<div class="stat-desc">Official Anthropic MCP #2759</div>
 					<a href="https://www.npmjs.com/package/claude-faf-mcp" class="stat-link" target="_blank">npm →</a>
 				</div>
 				<div class="stat-card">
 					<div class="stat-number">1,908</div>
 					<div class="stat-label">faf-mcp</div>
+					<div class="stat-desc">Universal MCP server</div>
 					<a href="https://www.npmjs.com/package/faf-mcp" class="stat-link" target="_blank">npm →</a>
 				</div>
-				<div class="stat-card">
+				<div class="stat-card highlight">
 					<div class="stat-number">382</div>
 					<div class="stat-label">grok-faf-mcp</div>
+					<div class="stat-desc">First MCP for Grok</div>
 					<a href="https://www.npmjs.com/package/grok-faf-mcp" class="stat-link" target="_blank">npm →</a>
 				</div>
 			</div>
@@ -66,16 +70,75 @@
 			</div>
 		</section>
 
-		<section class="what-is-faf">
-			<h2>What is FAF?</h2>
-			<p>
-				FAF (Foundational AI-context Format) is an IANA-registered format for persistent AI context. One file, any AI, zero re-explaining.
-			</p>
+		<section class="journey">
+			<h2>The Journey</h2>
+			<div class="timeline">
+				<div class="timeline-item">
+					<div class="timeline-date">Sep 2025</div>
+					<div class="timeline-content">First commit. Claude said "it should become the standard."</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-date">Oct 2025</div>
+					<div class="timeline-content">IANA registration approved. Official media type: <code>application/vnd.faf+yaml</code></div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-date">Oct 2025</div>
+					<div class="timeline-content">10K downloads. Anthropic merges MCP #2759.</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-date">Nov 2025</div>
+					<div class="timeline-content">Chrome Extension approved by Google. Twice.</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-date">Jan 2026</div>
+					<div class="timeline-content">grok-faf-mcp launches. First MCP for Grok. First web-based MCP.</div>
+				</div>
+				<div class="timeline-item highlight">
+					<div class="timeline-date">Jan 14</div>
+					<div class="timeline-content"><strong>20,000 downloads.</strong></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="recognition">
+			<h2>Official Recognition</h2>
+			<div class="recognition-grid">
+				<div class="recognition-item">
+					<div class="recognition-badge">IANA</div>
+					<div class="recognition-text">Registered media type</div>
+				</div>
+				<div class="recognition-item">
+					<div class="recognition-badge">Anthropic</div>
+					<div class="recognition-text">MCP #2759</div>
+				</div>
+				<div class="recognition-item">
+					<div class="recognition-badge">xAI</div>
+					<div class="recognition-text">First MCP for Grok</div>
+				</div>
+				<div class="recognition-item">
+					<div class="recognition-badge">Google</div>
+					<div class="recognition-text">Chrome Web Store (2x)</div>
+				</div>
+				<div class="recognition-item">
+					<div class="recognition-badge">CERN</div>
+					<div class="recognition-text">Zenodo whitepaper</div>
+				</div>
+				<div class="recognition-item">
+					<div class="recognition-badge">Rust</div>
+					<div class="recognition-text">Owns "ai-context" keyword</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="whats-next">
+			<h2>What's Next</h2>
+			<p>20K is a milestone, not a destination. The goal isn't downloads — it's making AI context work everywhere.</p>
 			<ul>
-				<li><strong>IANA registered:</strong> <code>application/vnd.faf+yaml</code></li>
-				<li><strong>Works with:</strong> Claude, Gemini, Grok, Codex, Cursor</li>
-				<li><strong>Open source:</strong> MIT license</li>
+				<li>Gemini MCP in development</li>
+				<li>More language SDKs (Python, Rust already live)</li>
+				<li>IDE integrations expanding</li>
 			</ul>
+			<p class="closing"><strong>One format. Every AI. Zero re-explaining.</strong></p>
 		</section>
 
 		<section class="cta">
@@ -196,6 +259,11 @@
 		border: 2px solid #e5e5e5;
 	}
 
+	.stat-card.highlight {
+		border-color: #FF6B35;
+		background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 107, 53, 0.1) 100%);
+	}
+
 	.stat-number {
 		font-size: 2rem;
 		font-weight: 800;
@@ -204,6 +272,13 @@
 
 	.stat-label {
 		font-size: 0.9rem;
+		color: #333;
+		font-weight: 600;
+		margin-top: 0.25rem;
+	}
+
+	.stat-desc {
+		font-size: 0.8rem;
 		color: #666;
 		margin-top: 0.25rem;
 	}
@@ -241,6 +316,71 @@
 		margin-top: 1rem;
 	}
 
+	.timeline {
+		margin: 2rem 0;
+	}
+
+	.timeline-item {
+		display: flex;
+		gap: 1.5rem;
+		padding: 1rem 0;
+		border-left: 2px solid #e5e5e5;
+		padding-left: 1.5rem;
+		margin-left: 0.5rem;
+	}
+
+	.timeline-item.highlight {
+		border-left-color: #00bf63;
+		background: linear-gradient(90deg, rgba(0, 191, 99, 0.05) 0%, transparent 100%);
+		margin-left: 0;
+		padding-left: 2rem;
+		border-radius: 0 8px 8px 0;
+	}
+
+	.timeline-date {
+		font-weight: 700;
+		color: #00bf63;
+		min-width: 80px;
+		font-size: 0.9rem;
+	}
+
+	.timeline-content {
+		color: #333;
+	}
+
+	.recognition-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 1rem;
+		margin: 2rem 0;
+	}
+
+	.recognition-item {
+		text-align: center;
+		padding: 1rem;
+		background: #f9f9f9;
+		border-radius: 8px;
+	}
+
+	.recognition-badge {
+		font-weight: 700;
+		color: #1a1a1a;
+		font-size: 0.9rem;
+	}
+
+	.recognition-text {
+		font-size: 0.8rem;
+		color: #666;
+		margin-top: 0.25rem;
+	}
+
+	.closing {
+		text-align: center;
+		font-size: 1.25rem;
+		color: #00bf63;
+		margin-top: 2rem;
+	}
+
 	.links {
 		display: flex;
 		gap: 1rem;
@@ -276,6 +416,8 @@
 	@media (max-width: 768px) {
 		h1 { font-size: 1.75rem; }
 		.stats-grid { grid-template-columns: repeat(2, 1fr); }
+		.timeline-item { flex-direction: column; gap: 0.5rem; }
+		.recognition-grid { grid-template-columns: repeat(2, 1fr); }
 		.links { flex-direction: column; }
 		.link-button { width: 100%; text-align: center; }
 	}
