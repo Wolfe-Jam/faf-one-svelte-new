@@ -75,12 +75,12 @@
 			<h2>The Numbers</h2>
 			<div class="growth-card">
 				<div class="growth-stat">
-					<span class="growth-label">npm Downloads</span>
-					<span class="growth-number">382</span>
+					<span class="growth-label">Downloads</span>
+					<span class="growth-number">382*</span>
 				</div>
 				<div class="growth-stat">
-					<span class="growth-label">URL Traffic</span>
-					<span class="growth-number">1+ MB</span>
+					<span class="growth-label">Weekly</span>
+					<span class="growth-number">189</span>
 				</div>
 				<div class="growth-stat">
 					<span class="growth-label">Version</span>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<p class="growth-note">
-				<strong>Two ways to use it, two ways to measure it.</strong> npm downloads + URL traffic from Vercel. Real usage, real numbers.
+				<strong>*These are people downloading something they don't need to download.</strong> grok-faf-mcp works via URL — no install required. Real usage is higher.
 			</p>
 			<p class="growth-note">
 				Dedicated to @elonmusk and the #1 model on Earth.
