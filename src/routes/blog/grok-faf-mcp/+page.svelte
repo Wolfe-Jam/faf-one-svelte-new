@@ -66,7 +66,7 @@
 					<div class="first-badge">FAST AF</div>
 					<div class="first-number">3</div>
 					<h3>FAST AF Edition</h3>
-					<p>Vercel Edge deployment. Sub-50ms response times. The fastest MCP server in the FAF ecosystem — built for Grok's speed.</p>
+					<p>Vercel Edge deployment. Production-ready. Built for speed — no npm install, just open and go.</p>
 				</div>
 			</div>
 		</section>
