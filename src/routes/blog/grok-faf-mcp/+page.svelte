@@ -19,7 +19,7 @@
 		</div>
 		<span class="badge">FIRST</span>
 		<h1>grok-faf-mcp: Three Industry Firsts</h1>
-		<p class="subtitle">FAF breaks new ground with xAI Grok integration</p>
+		<p class="subtitle">Now in FAST AF Edition — rebuilt for production</p>
 		<div class="meta">
 			<time datetime="2026-01-14">January 2026</time>
 		</div>
@@ -28,11 +28,11 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>grok-faf-mcp</strong> launched and immediately achieved what no other project has done — bringing Model Context Protocol to xAI's Grok, and doing it in a way nobody expected.
+				<strong>grok-faf-mcp</strong> proved the concept. Now the <strong>FAST AF Edition</strong> is live — rebuilt for production with Vercel Edge speed.
 			</p>
 
 			<blockquote class="highlight-quote">
-				"First MCP for Grok. First web-based MCP. FAST AF Edition."
+				"First MCP for Grok. First web-based MCP. Now in FAST AF Edition."
 			</blockquote>
 		</section>
 
