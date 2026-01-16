@@ -343,7 +343,6 @@
 			<div class="cta-box">
 				<h3>Documentation</h3>
 				<p><a href="https://github.com/Wolfe-Jam/grok-faf-mcp" target="_blank" rel="noopener" class="cta-link">GitHub Repository →</a></p>
-				<p><a href="https://discord.com/invite/56fPBUJKfk" target="_blank" rel="noopener" class="cta-link">Join Discord Community →</a></p>
 			</div>
 		</section>
 

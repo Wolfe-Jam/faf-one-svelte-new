@@ -98,9 +98,6 @@
 									GitHub Release
 								</a>
 								<a href={release.urls.npm} target="_blank" rel="noopener"> npm Package </a>
-								<a href={release.urls.discord} target="_blank" rel="noopener">
-									Discord Community
-								</a>
 							</div>
 						</div>
 					</article>
