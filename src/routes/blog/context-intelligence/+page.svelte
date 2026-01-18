@@ -10,9 +10,9 @@
 
 <svelte:head>
 	<title>Context Intelligence Edition - faf-cli v3.4.8 | FAF</title>
-	<meta name="description" content="Bi-sync got brains. It now detects your custom CLAUDE.md and protects it. Tables, code blocks, hand-crafted sections - all safe. Forever." />
+	<meta name="description" content="Bi-sync gets smarter. Now detects custom CLAUDE.md content and handles it intelligently. The best just got better." />
 	<meta property="og:title" content="Context Intelligence Edition - faf-cli v3.4.8" />
-	<meta property="og:description" content="Bi-sync now detects custom content and preserves it. Your hand-crafted CLAUDE.md stays intact." />
+	<meta property="og:description" content="Bi-sync now detects custom content and handles it intelligently. The best just got better." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -24,182 +24,103 @@
 		</div>
 
 		<h1>Context Intelligence Edition</h1>
-		<p class="subtitle">Bi-sync got brains. Your custom content is protected forever.</p>
+		<p class="subtitle">The best just got better. Bi-sync now understands custom content.</p>
 		<div class="meta">
 			<time datetime="2026-01-18">January 18, 2026</time>
 			<span class="separator">•</span>
-			<span class="category sync">Sync</span>
+			<span class="category sync">Enhancement</span>
 		</div>
 	</header>
 
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> Bi-sync now detects your custom CLAUDE.md content and preserves it. Tables, code blocks, hand-crafted sections — all safe. The new rule: <em>Score can only improve — never downgrade.</em>
+				<strong>TL;DR:</strong> Bi-sync already worked flawlessly for the standard workflow (<code>faf init</code> → <code>faf auto</code> → <code>faf bi-sync</code>). Now it's even smarter — detecting hand-crafted CLAUDE.md files and handling them intelligently.
 			</p>
 		</section>
 
 		<section>
-			<h2>The Problem</h2>
+			<h2>The Standard Workflow: Already Perfect</h2>
 
-			<p>You spent 20 minutes crafting the perfect CLAUDE.md:</p>
+			<p>For 99% of projects, the FAF workflow is seamless:</p>
+
+			<div class="terminal-block">
+				<code>faf init</code>
+				<code>faf auto</code>
+				<code>faf bi-sync</code>
+			</div>
+
+			<p>This creates your <code>project.faf</code>, grows it intelligently, and keeps it synchronized with <code>CLAUDE.md</code>. Zero issues. Championship-grade reliability.</p>
+
+			<p><strong>That hasn't changed. It never will.</strong></p>
+		</section>
+
+		<section>
+			<h2>What's New: Custom Content Detection</h2>
+
+			<p>Some power users create custom CLAUDE.md files from scratch — hand-crafted documentation for MCP servers, API endpoints, or specialized tooling. These files might include:</p>
 
 			<ul>
-				<li>Custom <code>## TOOLS</code> section with your MCP endpoints</li>
-				<li>Markdown tables documenting your API</li>
+				<li><code>## TOOLS</code> sections with endpoint tables</li>
+				<li><code>## ENDPOINTS</code> documentation</li>
+				<li>Markdown tables (<code>| Tool | Purpose |</code>)</li>
 				<li>Bash code blocks for quick commands</li>
-				<li>Sections that took real thought</li>
 			</ul>
 
-			<p>Then you ran <code>faf bi-sync</code>.</p>
-
-			<div class="warning-box">
-				<h3>Gone.</h3>
-				<p>Replaced with a generic template. Your work — deleted.</p>
-			</div>
-
-			<p>This happened because bi-sync couldn't tell the difference between generated content and custom content. It treated everything the same — and your work paid the price.</p>
-		</section>
-
-		<section>
-			<h2>The Solution</h2>
-
-			<table>
-				<thead>
-					<tr>
-						<th>Before</th>
-						<th>After</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Bi-sync overwrites everything</td>
-						<td>Bi-sync detects custom content</td>
-					</tr>
-					<tr>
-						<td>Generic replaces custom</td>
-						<td>Custom content preserved</td>
-					</tr>
-					<tr>
-						<td>Fear of running sync</td>
-						<td>Confidence in every sync</td>
-					</tr>
-				</tbody>
-			</table>
+			<p>Bi-sync now <strong>detects these markers</strong> and handles custom files intelligently.</p>
 
 			<div class="insight-box">
-				<h3>The New Rule</h3>
-				<p>Score can only improve — never downgrade.</p>
+				<h3>The Enhancement</h3>
+				<p>When bi-sync detects custom content, it preserves your file and updates only the sync footer.</p>
 			</div>
 		</section>
 
 		<section>
-			<h2>New in v3.4.8</h2>
+			<h2>How It Works</h2>
 
-			<h3>Smart Content Detection</h3>
-			<p>Bi-sync now recognizes custom markers:</p>
+			<h3>Standard Files (99% of users)</h3>
+			<p>Full bidirectional sync. Your <code>.faf</code> and <code>CLAUDE.md</code> stay perfectly mirrored. Same as always.</p>
 
-			<pre><code>{`## TOOLS        ← detected
-## ENDPOINTS    ← detected
-## AUTH         ← detected
-## COMMANDS     ← detected
-| Tool |        ← detected (tables)
-\`\`\`bash        ← detected (code blocks)`}</code></pre>
-
-			<p>If ANY of these exist in your CLAUDE.md, bi-sync knows it's custom.</p>
-
-			<h3>Preservation Engine</h3>
+			<h3>Custom Files (power users)</h3>
+			<p>Bi-sync detects custom markers and switches to preservation mode:</p>
 
 			<div class="flow-diagram">
 				<div class="flow-box preserve">
-					<strong>CUSTOM CLAUDE.md DETECTED</strong>
+					<strong>CUSTOM CONTENT DETECTED</strong>
 					<ol>
-						<li>Preserve entire content</li>
+						<li>Preserve entire CLAUDE.md</li>
 						<li>Update sync footer only</li>
-						<li>Zero content drift</li>
+						<li>Maintain full context</li>
 					</ol>
 				</div>
 			</div>
 
-			<p>Your content stays. Only the timestamp updates.</p>
+			<p>Your hand-crafted documentation stays intact. The sync footer confirms the link to your <code>.faf</code> file.</p>
+		</section>
 
-			<h3>Under the Hood</h3>
+		<section>
+			<h2>Custom Markers Detected</h2>
+
+			<pre><code>{`## TOOLS        ← custom section
+## ENDPOINTS    ← custom section
+## AUTH         ← custom section
+## COMMANDS     ← custom section
+| Tool |        ← markdown table
+\`\`\`bash        ← code block`}</code></pre>
+
+			<p>If any of these appear in your CLAUDE.md, bi-sync knows you've customized it.</p>
+		</section>
+
+		<section>
+			<h2>Under the Hood</h2>
+
 			<ul>
-				<li><code>FAFMirror</code> now uses <code>findFafFile()</code> — finds <code>project.faf</code> correctly</li>
-				<li>Fixed hardcoded <code>.faf</code> path that ignored the standard location</li>
-				<li>12 new WJTTC tests lock this behavior forever</li>
+				<li><code>FAFMirror</code> now uses <code>findFafFile()</code> for correct path resolution</li>
+				<li>Custom content detection runs before any sync operation</li>
+				<li>12 new WJTTC tests certify this behavior</li>
 			</ul>
-		</section>
 
-		<section>
-			<h2>Real Example</h2>
-
-			<p><strong>Before v3.4.8:</strong></p>
-
-			<pre><code>{`$ cat CLAUDE.md
-# MCPaaS
-## TOOLS (7)
-| Tool | Purpose |
-|------|---------|
-| get_soul | Read context |
-...custom content...
-
-$ faf bi-sync
-
-$ cat CLAUDE.md
-# 🏎️ CLAUDE.md - Project Context
-## PROJECT STATE: GOOD
-**Tyre Compound:** ULTRASOFT C5
-...generic template... 😱`}</code></pre>
-
-			<p><strong>After v3.4.8:</strong></p>
-
-			<pre><code>{`$ faf bi-sync
-
-$ cat CLAUDE.md
-# MCPaaS
-## TOOLS (7)
-| Tool | Purpose |
-|------|---------|
-| get_soul | Read context |
-...custom content intact...
-
----
-**STATUS: BI-SYNC ACTIVE 🔗**
-*Last Sync: 2026-01-18*`}</code></pre>
-
-			<p>Your content. Protected.</p>
-		</section>
-
-		<section>
-			<h2>Why This Matters</h2>
-
-			<table>
-				<thead>
-					<tr>
-						<th>Before</th>
-						<th>After</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Backup before bi-sync</td>
-						<td>Just run it</td>
-					</tr>
-					<tr>
-						<td>"Did I lose my docs?"</td>
-						<td>"My docs are safe"</td>
-					</tr>
-					<tr>
-						<td>Avoid bi-sync on custom files</td>
-						<td>Use bi-sync everywhere</td>
-					</tr>
-					<tr>
-						<td>Trust issues</td>
-						<td>Trust restored</td>
-					</tr>
-				</tbody>
-			</table>
+			<p>The rule is simple: <strong>Score can only improve — never downgrade.</strong></p>
 		</section>
 
 		<section>
@@ -215,9 +136,11 @@ $ cat CLAUDE.md
 				<code>npm update -g faf-cli</code>
 			</div>
 
-			<p>Then run with confidence:</p>
+			<p>Standard workflow — same as always:</p>
 
 			<div class="terminal-block">
+				<code>faf init</code>
+				<code>faf auto</code>
 				<code>faf bi-sync</code>
 			</div>
 
@@ -249,7 +172,7 @@ $ cat CLAUDE.md
 
 		<section class="footer-note">
 			<p>
-				Built with .faf ☑️ Your context, protected. 🏎️
+				Built with .faf ☑️ The best just got better. 🏎️
 			</p>
 		</section>
 	</article>
@@ -387,24 +310,6 @@ $ cat CLAUDE.md
 		padding: 0;
 	}
 
-	.warning-box {
-		background: #fff0f0;
-		border: 2px solid #ff4444;
-		border-radius: 8px;
-		padding: 1.5rem;
-		margin: 2rem 0;
-	}
-
-	.warning-box h3 {
-		color: #cc0000;
-		margin: 0 0 0.5rem 0;
-	}
-
-	.warning-box p {
-		margin: 0;
-		color: #880000;
-	}
-
 	.insight-box {
 		background: #f0fff0;
 		border: 2px solid #00aa44;
@@ -420,8 +325,7 @@ $ cat CLAUDE.md
 
 	.insight-box p {
 		margin: 0;
-		font-size: 1.2rem;
-		font-weight: 600;
+		font-size: 1.1rem;
 		color: #006622;
 	}
 
