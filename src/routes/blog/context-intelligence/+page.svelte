@@ -24,7 +24,7 @@
 		</div>
 
 		<h1>Context Intelligence Edition</h1>
-		<p class="subtitle">Bi-sync gets smarter. The best just got better.</p>
+		<p class="subtitle">From the only format for Context, an even better Mirror.</p>
 		<div class="meta">
 			<time datetime="2026-01-18">January 18, 2026</time>
 			<span class="separator">•</span>
