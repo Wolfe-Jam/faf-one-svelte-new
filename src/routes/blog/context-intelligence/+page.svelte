@@ -35,7 +35,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> Bi-sync now detects custom CLAUDE.md content — tables, code blocks, hand-crafted sections — and handles them intelligently. New detection engine, new preservation mode, 12 new tests.
+				<strong>TL;DR:</strong> Claude Code keeps evolving — and so does FAF. We took all the new Claude features (yep, they're keeping us busy!) and built an even better mirror to reflect CLAUDE.md for 2026. New detection engine, new preservation mode, 12 new tests.
 			</p>
 		</section>
 
