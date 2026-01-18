@@ -24,7 +24,7 @@
 		</div>
 
 		<h1>Context Intelligence Edition</h1>
-		<p class="subtitle">The best just got better. Bi-sync now understands custom content.</p>
+		<p class="subtitle">Bi-sync gets smarter. The best just got better.</p>
 		<div class="meta">
 			<time datetime="2026-01-18">January 18, 2026</time>
 			<span class="separator">•</span>
@@ -35,54 +35,27 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> Bi-sync already worked flawlessly for the standard workflow (<code>faf init</code> → <code>faf auto</code> → <code>faf bi-sync</code>). Now it's even smarter — detecting hand-crafted CLAUDE.md files and handling them intelligently.
+				<strong>TL;DR:</strong> Bi-sync now detects custom CLAUDE.md content — tables, code blocks, hand-crafted sections — and handles them intelligently. New detection engine, new preservation mode, 12 new tests.
 			</p>
 		</section>
 
 		<section>
-			<h2>The Standard Workflow: Already Perfect</h2>
+			<h2>What's New</h2>
 
-			<p>For 99% of projects, the FAF workflow is seamless:</p>
+			<h3>Smart Content Detection</h3>
+			<p>Bi-sync now recognizes custom markers in CLAUDE.md files:</p>
 
-			<div class="terminal-block">
-				<code>faf init</code>
-				<code>faf auto</code>
-				<code>faf bi-sync</code>
-			</div>
+			<pre><code>{`## TOOLS        ← detected
+## ENDPOINTS    ← detected
+## AUTH         ← detected
+## COMMANDS     ← detected
+| Tool |        ← markdown table
+\`\`\`bash        ← code block`}</code></pre>
 
-			<p>This creates your <code>project.faf</code>, grows it intelligently, and keeps it synchronized with <code>CLAUDE.md</code>. Zero issues. Championship-grade reliability.</p>
+			<p>When these markers appear, bi-sync knows the file has been customized.</p>
 
-			<p><strong>That hasn't changed. It never will.</strong></p>
-		</section>
-
-		<section>
-			<h2>What's New: Custom Content Detection</h2>
-
-			<p>Some power users create custom CLAUDE.md files from scratch — hand-crafted documentation for MCP servers, API endpoints, or specialized tooling. These files might include:</p>
-
-			<ul>
-				<li><code>## TOOLS</code> sections with endpoint tables</li>
-				<li><code>## ENDPOINTS</code> documentation</li>
-				<li>Markdown tables (<code>| Tool | Purpose |</code>)</li>
-				<li>Bash code blocks for quick commands</li>
-			</ul>
-
-			<p>Bi-sync now <strong>detects these markers</strong> and handles custom files intelligently.</p>
-
-			<div class="insight-box">
-				<h3>The Enhancement</h3>
-				<p>When bi-sync detects custom content, it preserves your file and updates only the sync footer.</p>
-			</div>
-		</section>
-
-		<section>
-			<h2>How It Works</h2>
-
-			<h3>Standard Files (99% of users)</h3>
-			<p>Full bidirectional sync. Your <code>.faf</code> and <code>CLAUDE.md</code> stay perfectly mirrored. Same as always.</p>
-
-			<h3>Custom Files (power users)</h3>
-			<p>Bi-sync detects custom markers and switches to preservation mode:</p>
+			<h3>Preservation Mode</h3>
+			<p>For custom files, bi-sync switches to preservation mode:</p>
 
 			<div class="flow-diagram">
 				<div class="flow-box preserve">
@@ -90,37 +63,50 @@
 					<ol>
 						<li>Preserve entire CLAUDE.md</li>
 						<li>Update sync footer only</li>
-						<li>Maintain full context</li>
+						<li>Maintain full context link</li>
 					</ol>
 				</div>
 			</div>
 
 			<p>Your hand-crafted documentation stays intact. The sync footer confirms the link to your <code>.faf</code> file.</p>
+
+			<h3>Improved Path Resolution</h3>
+			<p><code>FAFMirror</code> now uses <code>findFafFile()</code> for smarter path resolution — correctly locating <code>project.faf</code> in all scenarios.</p>
 		</section>
 
 		<section>
-			<h2>Custom Markers Detected</h2>
+			<h2>The Rule</h2>
 
-			<pre><code>{`## TOOLS        ← custom section
-## ENDPOINTS    ← custom section
-## AUTH         ← custom section
-## COMMANDS     ← custom section
-| Tool |        ← markdown table
-\`\`\`bash        ← code block`}</code></pre>
-
-			<p>If any of these appear in your CLAUDE.md, bi-sync knows you've customized it.</p>
+			<div class="insight-box">
+				<h3>Score Can Only Improve</h3>
+				<p>Context quality goes up. Never down.</p>
+			</div>
 		</section>
 
 		<section>
-			<h2>Under the Hood</h2>
+			<h2>Use Cases</h2>
 
-			<ul>
-				<li><code>FAFMirror</code> now uses <code>findFafFile()</code> for correct path resolution</li>
-				<li>Custom content detection runs before any sync operation</li>
-				<li>12 new WJTTC tests certify this behavior</li>
-			</ul>
+			<h3>Standard Workflow</h3>
+			<p>The classic flow works exactly as before:</p>
 
-			<p>The rule is simple: <strong>Score can only improve — never downgrade.</strong></p>
+			<div class="terminal-block">
+				<code>faf init</code>
+				<code>faf auto</code>
+				<code>faf bi-sync</code>
+			</div>
+
+			<p>Full bidirectional sync. Your <code>.faf</code> and <code>CLAUDE.md</code> stay perfectly mirrored.</p>
+
+			<h3>Power User Workflow</h3>
+			<p>For custom MCP servers, API documentation, or specialized tooling:</p>
+
+			<div class="terminal-block">
+				<code>faf init</code>
+				<code># Customize CLAUDE.md with tables, endpoints, etc.</code>
+				<code>faf bi-sync</code>
+			</div>
+
+			<p>Bi-sync detects your customizations and preserves them.</p>
 		</section>
 
 		<section>
@@ -134,14 +120,6 @@
 
 			<div class="terminal-block">
 				<code>npm update -g faf-cli</code>
-			</div>
-
-			<p>Standard workflow — same as always:</p>
-
-			<div class="terminal-block">
-				<code>faf init</code>
-				<code>faf auto</code>
-				<code>faf bi-sync</code>
 			</div>
 
 			<div class="cta-grid">
@@ -316,35 +294,19 @@
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin: 2rem 0;
+		text-align: center;
 	}
 
 	.insight-box h3 {
 		color: #00aa44;
 		margin: 0 0 0.75rem 0;
+		font-size: 1.4rem;
 	}
 
 	.insight-box p {
 		margin: 0;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		color: #006622;
-	}
-
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		margin: 1.5rem 0;
-	}
-
-	th, td {
-		padding: 0.75rem;
-		text-align: left;
-		border-bottom: 1px solid #eee;
-	}
-
-	th {
-		background: #f8f8f8;
-		font-weight: 600;
-		color: #333;
 	}
 
 	.flow-diagram {
