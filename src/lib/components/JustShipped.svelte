@@ -512,7 +512,7 @@
 	}
 
 	.chrome-badge {
-		background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 75%, #EA4335 100%);
+		background: linear-gradient(135deg, #00D4D4 0%, #FF6B35 100%);
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 999px;
