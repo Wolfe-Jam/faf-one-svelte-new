@@ -957,7 +957,7 @@
 	.link-button {
 		display: inline-block;
 		padding: 0.75rem 1.5rem;
-		background: linear-gradient(135deg, var(--faf-orange) 0%, #FF914D 100%);
+		background: linear-gradient(135deg, #00D4D4 0%, #FF6B35 100%);
 		color: white;
 		text-decoration: none;
 		border-radius: 8px;
@@ -968,7 +968,7 @@
 
 	.link-button:hover {
 		transform: scale(1.05);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+		box-shadow: 0 4px 12px rgba(0, 212, 212, 0.4);
 	}
 
 	.link-button.secondary {
