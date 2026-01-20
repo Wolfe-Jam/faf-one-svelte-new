@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/context-intelligence',
+			title: 'Context Intelligence Edition',
+			date: 'January 18, 2026',
+			timestamp: '2026-01-18',
+			excerpt: 'Bi-sync got smart. Now detects custom CLAUDE.md content and preserves it - tables, code blocks, custom sections stay intact.',
+			emoji: '🧠',
+			category: 'Enhancement'
+		},
+		{
 			slug: 'blog/grok-faf-mcp',
 			title: 'grok-faf-mcp: First MCP for Grok',
 			date: 'January 15, 2026',
@@ -62,6 +71,24 @@
 			excerpt: 'Uploaded a 40-line .faf file to Grok. Built a production GitHub code reviewer in one session. Zero re-explaining. Zero drift. Grok\'s words: "It felt like working with a partner who\'d been on the project for months."',
 			emoji: '🍊',
 			category: 'Case Study'
+		},
+		{
+			slug: 'blog/december-2025-ecosystem',
+			title: 'We Bet on the Right Stack',
+			date: 'December 28, 2025',
+			timestamp: '2025-12-28',
+			excerpt: 'Three major announcements in December 2025: Anthropic acquires Bun, MCP joins Linux Foundation, Google launches MCP servers. FAF was already positioned in each one.',
+			emoji: '🎯',
+			category: 'Ecosystem'
+		},
+		{
+			slug: 'blog/v3-3-0-plugin-launch',
+			title: 'FAF CLI v3.3.0: Claude Code Plugin Support',
+			date: 'December 28, 2025',
+			timestamp: '2025-12-28',
+			excerpt: 'Full Claude Code plugin support, SSH bug workaround, and automatic discovery in the 8,500+ plugin registry. 20k+ ecosystem downloads.',
+			emoji: '🔌',
+			category: 'Release'
 		},
 		{
 			slug: 'blog/bun-sticky-zig-launch',
