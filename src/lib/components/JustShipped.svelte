@@ -174,7 +174,7 @@
 					<li>43 commands</li>
 				</ul>
 				<div class="release-links">
-					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
+					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="link-button secondary">
@@ -200,7 +200,7 @@
 					<li>TypeScript built-in types</li>
 				</ul>
 				<div class="release-links">
-					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
+					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-button secondary">
@@ -266,7 +266,7 @@
 					<li>43 commands</li>
 				</ul>
 				<div class="release-links">
-					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button">
+					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="link-button secondary">
@@ -292,7 +292,7 @@
 					<li>TypeScript built-in types</li>
 				</ul>
 				<div class="release-links">
-					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button">
+					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-button secondary">
@@ -969,6 +969,14 @@
 	.link-button:hover {
 		transform: scale(1.05);
 		box-shadow: 0 4px 12px rgba(0, 212, 212, 0.4);
+	}
+
+	.link-button.npm {
+		background: #CB3837;
+	}
+
+	.link-button.npm:hover {
+		box-shadow: 0 4px 12px rgba(203, 56, 55, 0.4);
 	}
 
 	.link-button.secondary {
