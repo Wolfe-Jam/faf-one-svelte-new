@@ -24,6 +24,7 @@
 		</div>
 
 		<h1>Context Intelligence Edition</h1>
+		<p class="version-tag">faf-cli v3.4.8</p>
 		<p class="subtitle">From the only format for Context, an even better Mirror.</p>
 		<div class="meta">
 			<time datetime="2026-01-18">January 18, 2026</time>
@@ -192,6 +193,18 @@
 		margin: 0.5rem 0;
 		color: #000;
 		line-height: 1.3;
+	}
+
+	.version-tag {
+		display: inline-block;
+		background: #FF6B35;
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		margin: 0.5rem 0;
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 	}
 
 	.subtitle {
