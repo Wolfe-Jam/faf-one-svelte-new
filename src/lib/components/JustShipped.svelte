@@ -193,7 +193,7 @@
 					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
 				<ul class="release-features">
-					<li>1.5k downloads (npm)</li>
+					<li>8.5k downloads (npm)</li>
 					<li>50/50 tests passing</li>
 					<li>PR #2759 MERGED</li>
 					<li>52 MCP tools</li>
@@ -285,7 +285,7 @@
 					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
 				<ul class="release-features">
-					<li>1.5k downloads (npm)</li>
+					<li>8.5k downloads (npm)</li>
 					<li>50/50 tests passing</li>
 					<li>PR #2759 MERGED</li>
 					<li>52 MCP tools</li>
