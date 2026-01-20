@@ -37,14 +37,28 @@
 
 <section class="just-shipped popup-mode">
 	<div class="container">
-		<h2 class="section-title">Gemini is No-FAF</h2>
+		<h2 class="section-title">Context Intelligence Edition</h2>
 
 		<div class="total-stats stats-top">
 			<p>
 				<strong>20,000+ Total Downloads</strong> •
-				<strong>574/574 Tests Passing</strong> •
+				<strong>586/586 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- Context Intelligence v3.4.8 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🧠 faf-cli v3.4.8 - Context Intelligence Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Bi-sync got smart. Detects custom CLAUDE.md content and preserves it. Tables, code blocks, custom sections stay intact.</p>
+			<a href="/blog/context-intelligence" class="chrome-install">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- Google Gemini Edition v3.4.7 -->
@@ -143,18 +157,18 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v3.4.7 -->
+			<!-- CLI v3.4.8 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.4.7</h3>
+					<h3>faf-cli v3.4.8</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Google Gemini Edition. Full platform interoperability.
+					Context Intelligence Edition. Smart bi-sync preservation.
 				</p>
 				<ul class="release-features">
 					<li>20k+ downloads (npm)</li>
-					<li>574/574 tests passing</li>
+					<li>586/586 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
 					<li>43 commands</li>
@@ -200,7 +214,7 @@
 		<div class="total-stats">
 			<p>
 				<strong>20,000+ Total Downloads</strong> •
-				<strong>574/574 Tests Passing</strong> •
+				<strong>586/586 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -235,18 +249,18 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v3.4.7 -->
+			<!-- CLI v3.4.8 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.4.7</h3>
+					<h3>faf-cli v3.4.8</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Google Gemini Edition. Full platform interoperability.
+					Context Intelligence Edition. Smart bi-sync preservation.
 				</p>
 				<ul class="release-features">
 					<li>20k+ downloads (npm)</li>
-					<li>574/574 tests passing</li>
+					<li>586/586 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
 					<li>43 commands</li>
@@ -292,7 +306,7 @@
 		<div class="total-stats">
 			<p>
 				<strong>20,000+ Total Downloads</strong> •
-				<strong>574/574 Tests Passing</strong> •
+				<strong>586/586 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
