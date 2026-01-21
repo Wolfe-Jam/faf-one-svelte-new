@@ -1,6 +1,24 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/grok-voice-case-study',
+			title: 'How MCPaaS Gave Grok Eternal Voice Memory',
+			date: 'January 20, 2026',
+			timestamp: '2026-01-20',
+			excerpt: 'Case study: Building FAF-Voice with xAI Grok. Browser-to-AI voice with zero drift, zero re-explain. MCPaaS delivered persistent context across every session.',
+			emoji: '🎙️',
+			category: 'Case Study'
+		},
+		{
+			slug: 'blog/mcpaas-launch',
+			title: 'MCPaaS: The Endpoint for Context',
+			date: 'January 20, 2026',
+			timestamp: '2026-01-20',
+			excerpt: 'Serverless AI context delivery. One endpoint. Any AI. Eternal memory. Built on Cloudflare Workers with a 2.7KB Zig-WASM engine at 300+ global edge locations.',
+			emoji: '🌐',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/context-intelligence',
 			title: 'Context Intelligence Edition',
 			date: 'January 18, 2026',
