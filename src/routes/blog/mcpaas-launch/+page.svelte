@@ -154,13 +154,15 @@
 
 			<div class="tech-table">
 				<table>
-					<tr><td><strong>Runtime</strong></td><td>Cloudflare Workers (V8 isolates)</td></tr>
-					<tr><td><strong>Scoring Engine</strong></td><td>Zig compiled to WebAssembly (2.7KB)</td></tr>
-					<tr><td><strong>Storage</strong></td><td>Cloudflare KV (globally replicated)</td></tr>
-					<tr><td><strong>Authentication</strong></td><td>OAuth 2.0 via Auth0</td></tr>
-					<tr><td><strong>Protocol</strong></td><td>MCP (Model Context Protocol)</td></tr>
-					<tr><td><strong>Format</strong></td><td>FAF (IANA <code>application/vnd.faf+yaml</code>)</td></tr>
-					<tr><td><strong>Edge Locations</strong></td><td>300+ worldwide</td></tr>
+					<tbody>
+						<tr><td><strong>Runtime</strong></td><td>Cloudflare Workers (V8 isolates)</td></tr>
+						<tr><td><strong>Scoring Engine</strong></td><td>Zig compiled to WebAssembly (2.7KB)</td></tr>
+						<tr><td><strong>Storage</strong></td><td>Cloudflare KV (globally replicated)</td></tr>
+						<tr><td><strong>Authentication</strong></td><td>OAuth 2.0 via Auth0</td></tr>
+						<tr><td><strong>Protocol</strong></td><td>MCP (Model Context Protocol)</td></tr>
+						<tr><td><strong>Format</strong></td><td>FAF (IANA <code>application/vnd.faf+yaml</code>)</td></tr>
+						<tr><td><strong>Edge Locations</strong></td><td>300+ worldwide</td></tr>
+					</tbody>
 				</table>
 			</div>
 
