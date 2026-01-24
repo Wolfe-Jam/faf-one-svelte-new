@@ -153,13 +153,13 @@
 				<div class="cascade-item">
 					<div class="stage">Stage 3: Drift</div>
 					<div class="desc">Small wrong assumptions compound silently across sessions.</div>
-					<div class="verdict drift">Invisible damage.</div>
+					<div class="verdict cyan">Invisible damage.</div>
 				</div>
 				<div class="cascade-arrow">→</div>
 				<div class="cascade-item">
 					<div class="stage">Stage 4: Handicapped</div>
 					<div class="desc">Your project has issues. Your AI assistant is now working ineffectively—even against you.</div>
-					<div class="verdict handicap">Crippling.</div>
+					<div class="verdict red">Crippling.</div>
 				</div>
 				<div class="cascade-arrow">→</div>
 				<div class="cascade-item fail">
@@ -716,8 +716,8 @@ human_context:
 	}
 
 	.cascade-item .verdict.time { color: #ff6666; }
-	.cascade-item .verdict.drift { color: #888; }
-	.cascade-item .verdict.handicap { color: #ff6666; }
+	.cascade-item .verdict.cyan { color: #00a5a5; font-weight: 600; font-style: normal; }
+	.cascade-item .verdict.red { color: #ff3333; font-weight: 600; font-style: normal; }
 	.cascade-item .verdict.final { color: #ff3333; font-weight: 700; font-style: normal; }
 
 	.cascade-arrow {
