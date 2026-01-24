@@ -14,7 +14,7 @@
 		{ label: 'Journey', href: '#journey' },
 		{ label: 'Pricing', href: '#pricing' },
 		{ label: 'n8n.faf', href: '/n8n' },
-		{ label: 'Context Drift', href: '/survival', isDanger: true }
+		{ label: 'DAAFT', href: '/daaft', isDanger: true }
 	];
 
 	onMount(() => {
