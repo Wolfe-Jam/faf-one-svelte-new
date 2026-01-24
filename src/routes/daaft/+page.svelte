@@ -163,14 +163,14 @@
 					<div class="cascade-icon">📉</div>
 					<div class="cascade-label">Drift</div>
 					<div class="cascade-detail">Compounds silently</div>
-					<div class="cascade-verdict">Invisible.</div>
+					<div class="cascade-verdict cyan">Invisible.</div>
 				</div>
 				<div class="cascade-arrow">→</div>
 				<div class="cascade-step handicap-step">
 					<div class="cascade-icon">🦽</div>
 					<div class="cascade-label">Handicapped</div>
 					<div class="cascade-detail">AI working ineffectively—even against you</div>
-					<div class="cascade-verdict">Crippling.</div>
+					<div class="cascade-verdict red">Crippling.</div>
 				</div>
 				<div class="cascade-arrow">→</div>
 				<div class="cascade-step failed">
@@ -731,6 +731,18 @@
 
 	.cascade-verdict.ouch {
 		color: #ff6666;
+		font-weight: 600;
+		font-style: normal;
+	}
+
+	.cascade-verdict.cyan {
+		color: #00D4D4;
+		font-weight: 600;
+		font-style: normal;
+	}
+
+	.cascade-verdict.red {
+		color: #ff3333;
 		font-weight: 600;
 		font-style: normal;
 	}
