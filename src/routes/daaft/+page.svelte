@@ -320,6 +320,14 @@
 				<a href="/" class="btn btn-secondary">
 					Learn More
 				</a>
+				<a
+					href="https://twitter.com/intent/tweet?text=91%25%20of%20tokens%20wasted%20on%20rediscovery.%20%245%2C460%2Fyear%20per%20dev.%2070%25%20of%20projects%20fail.%0A%0AThe%20invisible%20problem%20killing%20AI%20productivity.%0A%0ADon%27t%20be%20DAAFT.&url=https://faf.one/daaft&hashtags=AI,Claude,DevTools,BuildInPublic"
+					target="_blank"
+					rel="noopener"
+					class="btn btn-share"
+				>
+					Share on 𝕏
+				</a>
 			</div>
 		</section>
 
@@ -1224,6 +1232,18 @@
 
 	.btn-secondary:hover {
 		background: rgba(0, 229, 229, 0.1);
+	}
+
+	.btn-share {
+		background: #000;
+		border: 2px solid #333;
+		color: white;
+	}
+
+	.btn-share:hover {
+		background: #1a1a1a;
+		border-color: #00D4D4;
+		color: #00D4D4;
 	}
 
 	/* Footer */
