@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/daaft',
+			title: 'The DAAFT Approach to Context',
+			date: 'January 24, 2026',
+			timestamp: '2026-01-24',
+			excerpt: 'Why your AI assistant forgets you every morning. 91% of tokens wasted on rediscovery. The DAAFT cycle: Discover, Assume, Ask, Forget, Time+Tokens LOST.',
+			emoji: '🔄',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/grok-voice-case-study',
 			title: 'How MCPaaS Gave Grok Eternal Voice Memory',
 			date: 'January 20, 2026',

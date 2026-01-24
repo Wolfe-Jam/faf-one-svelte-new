@@ -26,7 +26,30 @@
 
 ## Brand Guidelines
 - **Colors**: FAF orange (#FF6B35), cream, black, white
+- **Cyan sweetspot**: #00D4D4 (when #00ffff is too bright)
 - **Approved emojis**: 🧡 ⚡️ 🏁 🏆 🏎️ 🍊 ⌚ ☑️ (use ☑️ not ✅ wherever possible)
+
+## DAAFT Palette (2026 Look)
+The DAAFT page introduces a fresh salmon-red-cyan palette:
+```
+Warm (Danger/Warning):
+- Salmon:  #FF6B35 → #FF8555 → #FFA075 (gradient)
+- Red:     #ff3333 (danger), #ff6666 (softer)
+- Dark red bg: linear-gradient(135deg, #1a0a0a 0%, #2a1515 100%)
+
+Cool (Solution/Trust):
+- Cyan:    #00D4D4 (primary), #00ffff (hover)
+- Green:   #27c93f (success, terminal)
+
+Grays (Brightened for dark bg):
+- #aaa (was #666) - primary gray text
+- #bbb (was #888) - secondary gray text
+- #999 (was #555) - tertiary gray text
+- #888 (was #444) - arrows, subtle elements
+
+Contrast principle: Warm danger → Cool solution
+```
+Use this palette for warning/solution flows throughout faf.one.
 - **Format**: YAML and 🍜 noodles for AI, converts to markdown/TXT for humans
 - **Brand Name**: Always `.faf` (lowercase) when referring to the format
 - **Tagline**: "Project DNA ✨ for ANY AI - AI Context, On-Demand." with 🧡 (human) and 🩵 (AI) heart emojis
