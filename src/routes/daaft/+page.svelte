@@ -45,7 +45,7 @@
 
 		<!-- Header -->
 		<header class="header">
-			<p class="question">Context-Drift in 2026?</p>
+			<p class="question"><a href="/survival" class="question-link">Context-Drift in 2026?</a></p>
 			<h1 class="title">Don't Be <span class="daaft-text">DAAFT</span>.</h1>
 			<p class="subhead">You think Claude knows your project.<br/>Claude is guessing. Every. Single. Session.</p>
 		</header>
@@ -329,6 +329,17 @@
 		font-size: 1.75rem;
 		color: #bbb;
 		margin-bottom: 0.5rem;
+	}
+
+	.question-link {
+		color: #bbb;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.question-link:hover {
+		color: #00D4D4;
+		text-decoration: underline;
 	}
 
 	.title {
