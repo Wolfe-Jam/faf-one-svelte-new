@@ -2,11 +2,34 @@
 	import { onMount } from 'svelte';
 
 	let mounted = $state(false);
+	let showSplash = $state(true);
+	let splashFading = $state(false);
 	let currentStep = $state(0);
 	let showCost = $state(false);
 	let showDrift = $state(false);
 	let showSolution = $state(false);
 	let showProofModal = $state(false);
+
+	function dismissSplash() {
+		splashFading = true;
+		setTimeout(() => {
+			showSplash = false;
+			startAnimation();
+		}, 500);
+	}
+
+	function startAnimation() {
+		const interval = setInterval(() => {
+			if (currentStep < steps.length - 1) {
+				currentStep++;
+			} else {
+				clearInterval(interval);
+				setTimeout(() => showCost = true, 800);
+				setTimeout(() => showDrift = true, 2000);
+				setTimeout(() => showSolution = true, 3500);
+			}
+		}, 600);
+	}
 
 	const steps = [
 		{ letter: 'D', word: 'iscover', question: 'Claude reads 50 files to figure out your stack', color: '#FF6B35' },
@@ -18,20 +41,10 @@
 
 	onMount(() => {
 		mounted = true;
-
-		// Animate through steps
-		const interval = setInterval(() => {
-			if (currentStep < steps.length - 1) {
-				currentStep++;
-			} else {
-				clearInterval(interval);
-				setTimeout(() => showCost = true, 800);
-				setTimeout(() => showDrift = true, 2000);
-				setTimeout(() => showSolution = true, 3500);
-			}
-		}, 600);
-
-		return () => clearInterval(interval);
+		// Auto-dismiss splash after 3 seconds, or click to dismiss
+		setTimeout(() => {
+			if (showSplash) dismissSplash();
+		}, 3000);
 	});
 </script>
 
@@ -39,6 +52,41 @@
 	<title>Don't Be DAAFT | The True Cost of Context-Drift | FAF</title>
 	<meta name="description" content="Context-Drift in 2026? Don't be DAAFT. See the real cost: $5,460/year per developer in wasted time." />
 </svelte:head>
+
+<!-- Splash Screen -->
+{#if showSplash}
+<div class="splash" class:fading={splashFading} onclick={dismissSplash}>
+	<div class="splash-content">
+		<div class="splash-top">
+			<span class="splash-logo">.faf</span>
+			<span class="splash-verified">Verified by Claude Opus 4.5 ☑️</span>
+		</div>
+		<h1 class="splash-headline">Don't Be <span class="splash-daaft">DAAFT</span>.</h1>
+		<div class="splash-stats">
+			<div class="splash-stat">
+				<span class="splash-num">91%</span>
+				<span class="splash-label">tokens wasted</span>
+			</div>
+			<div class="splash-stat">
+				<span class="splash-num">$5,460</span>
+				<span class="splash-label">/year per dev</span>
+			</div>
+			<div class="splash-stat">
+				<span class="splash-num">70%</span>
+				<span class="splash-label">projects fail</span>
+			</div>
+		</div>
+		<div class="splash-cycle">
+			<span class="sl d">D</span>iscover
+			<span class="sl a1">A</span>ssume
+			<span class="sl a2">A</span>sk
+			<span class="sl f">F</span>orget
+			<span class="sl t">T</span>ime+Tokens LOST
+		</div>
+		<p class="splash-hint">Click anywhere to continue</p>
+	</div>
+</div>
+{/if}
 
 <main class="daaft-page">
 	<div class="container">
@@ -307,6 +355,135 @@
 {/if}
 
 <style>
+	/* Splash Screen */
+	.splash {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		z-index: 9999;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: opacity 0.5s ease;
+	}
+
+	.splash.fading {
+		opacity: 0;
+	}
+
+	.splash-content {
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.splash-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.splash-logo {
+		font-size: 2rem;
+		font-weight: 800;
+		color: #FF6B35;
+	}
+
+	.splash-verified {
+		font-size: 1rem;
+		color: #00D4D4;
+	}
+
+	.splash-headline {
+		font-size: 4rem;
+		font-weight: 800;
+		color: white;
+		margin-bottom: 2rem;
+	}
+
+	.splash-daaft {
+		color: #FF6B35;
+		text-shadow: 0 0 40px rgba(255, 107, 53, 0.5);
+	}
+
+	.splash-stats {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		margin-bottom: 2rem;
+	}
+
+	.splash-stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.splash-num {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: #ff3333;
+	}
+
+	.splash-label {
+		font-size: 1rem;
+		color: #aaa;
+	}
+
+	.splash-cycle {
+		font-size: 1.2rem;
+		color: #888;
+		margin-bottom: 2rem;
+	}
+
+	.sl {
+		font-weight: 800;
+		font-size: 1.4rem;
+	}
+
+	.sl.d { color: #FF6B35; }
+	.sl.a1 { color: #FF8555; }
+	.sl.a2 { color: #FFA075; }
+	.sl.f { color: #fff; }
+	.sl.t { color: #ff3333; }
+
+	.splash-hint {
+		color: #666;
+		font-size: 0.9rem;
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 0.5; }
+		50% { opacity: 1; }
+	}
+
+	@media (max-width: 768px) {
+		.splash-headline {
+			font-size: 2.5rem;
+		}
+		.splash-stats {
+			flex-direction: column;
+			gap: 1rem;
+		}
+		.splash-num {
+			font-size: 2rem;
+		}
+		.splash-cycle {
+			font-size: 1rem;
+		}
+		.sl {
+			font-size: 1.2rem;
+		}
+	}
+
 	.daaft-page {
 		min-height: 100vh;
 		background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
