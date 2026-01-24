@@ -6,10 +6,10 @@
 	let interval;
 
 	const projects = [
-		{ name: '100% Optimized', score: 100, color: '#FF6B35' },
-		{ name: '90% Mostly Stable', score: 90, color: '#FFD700' },
-		{ name: '75% Suboptimal', score: 75, color: '#C0C0C0' },
-		{ name: '50% Critical', score: 50, color: '#ff4444' },
+		{ name: '100% Optimized', score: 100, color: '#00D4D4' },
+		{ name: '90% Mostly Stable', score: 90, color: '#FF6B35' },
+		{ name: '75% Suboptimal', score: 75, color: '#FF8555' },
+		{ name: '50% Critical', score: 50, color: '#ff3333' },
 		{ name: '0% No Context', score: 0, color: '#333' }
 	];
 
@@ -28,13 +28,13 @@
 
 	function getStatus(score, frame) {
 		const health = getHealth(score, frame);
-		if (score === 100) return { text: 'OPTIMIZED', color: '#00cc44' };
+		if (score === 100) return { text: 'OPTIMIZED', color: '#00D4D4' };
 		if (score === 0) return { text: 'NO CONTEXT', color: '#666' };
-		if (health === 0) return { text: 'FAILED', color: '#ff4444' };
-		if (health < 30) return { text: 'DECLINING', color: '#ff8800' };
-		if (health < 60) return { text: 'DRIFTING', color: '#ffcc00' };
-		if (health < 85) return { text: 'UNSTABLE', color: '#88cc00' };
-		return { text: 'STABLE', color: '#00cc44' };
+		if (health === 0) return { text: 'FAILED', color: '#ff3333' };
+		if (health < 30) return { text: 'DECLINING', color: '#ff6666' };
+		if (health < 60) return { text: 'DRIFTING', color: '#FF8555' };
+		if (health < 85) return { text: 'UNSTABLE', color: '#FFA075' };
+		return { text: 'STABLE', color: '#00D4D4' };
 	}
 
 	function start() {
@@ -207,7 +207,7 @@
 	.project-card.dead {
 		opacity: 0.6;
 		background: #1a1a1a;
-		border: 2px solid #ff4444;
+		border: 2px solid #ff3333;
 	}
 
 	.project-card.never-alive {
@@ -285,7 +285,7 @@
 	}
 
 	.beat.dead {
-		background: #ff4444 !important;
+		background: #ff3333 !important;
 	}
 
 	.legend {
