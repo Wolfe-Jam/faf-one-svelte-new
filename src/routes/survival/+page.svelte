@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="back-nav">
-	<a href="/" class="back-button">← Back to Home</a>
+	<a href="/daaft" class="back-button">← Back to DAAFT</a>
 </div>
 
 <div class="page-container">
