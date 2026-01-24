@@ -141,7 +141,7 @@
 	.letter.d { color: #FF6B35; }
 	.letter.a1 { color: #FF8555; }
 	.letter.a2 { color: #FFA075; }
-	.letter.f { color: #888; }
+	.letter.f { color: #fff; }
 	.letter.t { color: #ff3333; }
 
 	.bottom-bar {
