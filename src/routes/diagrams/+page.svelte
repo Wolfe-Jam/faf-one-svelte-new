@@ -23,6 +23,18 @@
 			title: 'FAF Interoperability',
 			description: '.faf ↔ CLAUDE.md ↔ GEMINI.md ↔ conductor/ sync',
 			category: 'FAF Core'
+		},
+		{
+			slug: 'faf-agents-foundation',
+			title: 'FAF Foundation Architecture',
+			description: '.faf as source of truth for Agents.md, CLAUDE.md, GEMINI.md',
+			category: 'FAF Core'
+		},
+		{
+			slug: 'faf-agents-foundation-light',
+			title: 'FAF Foundation (Light/Print)',
+			description: 'Light mode version for print and white backgrounds',
+			category: 'FAF Core'
 		}
 	];
 </script>

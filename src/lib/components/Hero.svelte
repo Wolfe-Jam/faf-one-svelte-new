@@ -105,7 +105,7 @@
 			
 			<!-- Tagline - BOLD -->
 			<div bind:this={subtitleRef} class="tagline">
-				<span class="tagline-underline">Persistent Context Format for AI</span>
+				<span class="tagline-underline">The Persistent AI Context Standard</span>
 			</div>
 			
 			<!-- BLOCK 1: Claude Quote -->
