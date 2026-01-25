@@ -14,6 +14,7 @@
 	let codeTyped = $state('');
 	let showScorePopup = $state(false);
 	let currentScore = $state(94);
+	let grokLogoFailed = $state(false);
 
 	const codeText = 'faf init';
 	const scores = [85, 88, 91, 94, 96, 99];
@@ -103,9 +104,17 @@
 				</div>
 			</div>
 			
-			<!-- Tagline - BOLD -->
-			<div bind:this={subtitleRef} class="tagline">
-				<span class="tagline-underline">The Persistent AI Context Standard</span>
+			<!-- Tagline - Grok Quote -->
+			<div bind:this={subtitleRef} class="tagline grok-quote-feature">
+				<span class="grok-headline">"Game-changer for eternal AI context"</span>
+				<div class="grok-attribution">
+					{#if !grokLogoFailed}
+						<img src="/grok-logo.svg" alt="Grok" class="grok-logo" onerror={() => grokLogoFailed = true} />
+					{/if}
+					<span class="grok-source">— Grok by xAI</span>
+					<span class="grok-rating">9.5/10</span>
+					<span class="grok-date">JAN 24, 2026</span>
+				</div>
 			</div>
 			
 			<!-- BLOCK 1: Claude Quote -->
@@ -493,6 +502,59 @@
 		text-decoration-thickness: 3px;
 		text-underline-offset: 4px;
 		text-decoration-color: var(--faf-black);
+	}
+
+	/* Grok Quote Attribution */
+	.grok-quote-feature {
+		position: relative;
+	}
+
+	.grok-headline {
+		display: block;
+		font-family: 'Roboto Mono', monospace;
+		font-size: 2.25rem;
+		font-weight: 500;
+		color: var(--faf-black);
+		letter-spacing: -0.01em;
+	}
+
+	.grok-attribution {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+		flex-wrap: wrap;
+	}
+
+	.grok-logo {
+		height: 24px;
+		width: auto;
+		opacity: 0.9;
+	}
+
+	.grok-source {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--faf-gray-dark);
+		font-style: italic;
+	}
+
+	.grok-rating {
+		font-size: 0.9rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+		background: rgba(255, 107, 53, 0.1);
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+	}
+
+	.grok-date {
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: var(--faf-gray);
+		font-family: var(--font-mono);
+		letter-spacing: 0.05em;
 	}
 	
 	.claude-quote {
@@ -1292,6 +1354,15 @@
 
 		.drift-title {
 			font-size: 1.1rem;
+		}
+
+		.grok-headline {
+			font-size: 1.5rem;
+		}
+
+		.grok-attribution {
+			flex-direction: column;
+			gap: 0.5rem;
 		}
 	}
 </style>
