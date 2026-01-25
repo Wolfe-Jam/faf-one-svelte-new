@@ -39,6 +39,17 @@
 	<div class="container">
 		<h2 class="section-title">Foundation Layer</h2>
 
+		<!-- Authority Logos -->
+		<div class="popup-logos">
+			<a href="https://github.com/modelcontextprotocol/servers" class="logo-item mcp-logo-item" target="_blank" rel="noopener">
+				<img src="/mcp-logo.png" alt="Model Context Protocol" class="popup-mcp-logo" />
+				<span class="logo-text">Model Context Protocol<br><small>Open-sourced by Anthropic</small></span>
+			</a>
+			<a href="https://chrome.google.com/webstore/detail/faf" class="logo-item chrome-logo-item" target="_blank" rel="noopener">
+				<img src="/chrome-web-store-badge-medium.png" alt="Available in the Chrome Web Store" class="popup-chrome-logo" />
+			</a>
+		</div>
+
 		<div class="total-stats stats-top">
 			<p>
 				<strong>21,000+ Total Downloads</strong> •
@@ -428,8 +439,69 @@
 		font-size: 2.5rem;
 		font-weight: 800;
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
 		color: var(--faf-black);
+	}
+
+	/* Popup Logos */
+	.popup-logos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.logo-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.75rem 1.25rem;
+		border-radius: 12px;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.mcp-logo-item {
+		background: white;
+		border: 2px solid #e0e0e0;
+	}
+
+	.mcp-logo-item:hover {
+		border-color: var(--faf-orange);
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+	}
+
+	.chrome-logo-item {
+		background: transparent;
+	}
+
+	.chrome-logo-item:hover {
+		transform: scale(1.05);
+	}
+
+	.popup-mcp-logo {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+	}
+
+	.popup-chrome-logo {
+		height: 48px;
+		object-fit: contain;
+	}
+
+	.logo-text {
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--faf-black);
+		line-height: 1.3;
+	}
+
+	.logo-text small {
+		font-weight: 400;
+		color: #666;
 	}
 
 	.releases-grid {
