@@ -131,10 +131,11 @@
 			<h2>What's in FAF v4.0</h2>
 
 			<h3>The Core: project.faf</h3>
+			<p class="slot-range">Scales from <span class="min">4 slots</span> (minimal) to <span class="max">21+ slots</span> (full) — some enterprise repos hit 30+</p>
 			<div class="code-block yaml">
 				<pre>project:
-  name: "my-app"
-  goal: "Real-time dashboard for team metrics"
+  name: "acme-dashboard"
+  goal: "Real-time metrics dashboard for engineering teams"
   main_language: typescript
 
 stack:
@@ -142,12 +143,25 @@ stack:
   backend: node
   database: postgres
   hosting: vercel
+  auth: clerk
+  api: rest
+  ci_cd: github_actions
+  monitoring: datadog
 
 human_context:
   who: "Engineering team at Acme Corp"
   what: "Internal tool replacing spreadsheet workflows"
-  why: "Manual reporting takes 10 hours/week"</pre>
+  why: "Manual reporting takes 10 hours/week"
+  where: "US-based, remote team"
+  when: "Q1 2026 launch target"
+  how: "Agile sprints, trunk-based development"
+
+discovery:
+  frameworks_detected: ["react", "typescript", "vite"]
+  package_manager: npm
+  test_framework: vitest</pre>
 			</div>
+			<p class="slot-note">Above: 21-slot example. Your project might need fewer — <code>faf auto</code> detects what's relevant.</p>
 
 			<div class="features-grid">
 				<div class="feature">
@@ -160,17 +174,28 @@ human_context:
 				</div>
 				<div class="feature">
 					<h4>Universal, not tool-specific</h4>
-					<p>Works with Claude, Gemini, ChatGPT, any AI.</p>
+					<p>Works with Claude, Gemini, Grok, ChatGPT, any AI.</p>
 				</div>
 			</div>
 
-			<h3>Bi-Sync</h3>
-			<div class="bisync-visual">
-				<span class="file">project.faf</span>
-				<span class="arrow">←── 8ms ──→</span>
-				<span class="file">CLAUDE.md</span>
+			<h3>Context-Mirroring</h3>
+			<p class="mirror-intro">One <code>.faf</code>, every AI's context file. The <code>faf sync</code> command keeps them aligned.</p>
+			<div class="context-mirror">
+				<div class="mirror-row">
+					<span class="file claude">CLAUDE.md</span>
+					<span class="arrow">↔</span>
+					<span class="file faf">.faf</span>
+					<span class="arrow">↔</span>
+					<span class="file gemini">GEMINI.md</span>
+				</div>
+				<div class="mirror-vertical">
+					<span class="arrow-down">↕</span>
+				</div>
+				<div class="mirror-row">
+					<span class="file conductor">conductor/</span>
+				</div>
 			</div>
-			<p>One source of truth. Both files aligned. Context drift prevented at root cause.</p>
+			<p>One source of truth. All files aligned. Context drift prevented at root cause.</p>
 
 			<h3>Developer Loop Skills</h3>
 			<div class="skills-list">
@@ -227,8 +252,8 @@ human_context:
 
 			<div class="limitations">
 				<div class="limitation not">
-					<h4><span class="x">✕</span> .faf is NOT automatic</h4>
-					<p>You must run <code>faf auto</code> or <code>faf init</code> to create context. AI won't automatically reference .faf without being told.</p>
+					<h4><span class="x">✕</span> .faf must be initiated</h4>
+					<p>You must run <code>faf init</code> to create the file. Once it exists, <a href="/blog/project-faf-first" class="cyan-link">Claude reads it first</a>—but someone has to add it.</p>
 				</div>
 				<div class="limitation not">
 					<h4><span class="x">✕</span> .faf is NOT documentation</h4>
@@ -477,6 +502,31 @@ faf status --oneline
 		color: #00D4D4;
 	}
 
+	.slot-range {
+		text-align: center;
+		font-size: 1.1rem;
+		color: #aaa;
+		margin-bottom: 1.5rem;
+	}
+
+	.slot-range .min {
+		color: #888;
+		font-weight: 600;
+	}
+
+	.slot-range .max {
+		color: #00D4D4;
+		font-weight: 700;
+	}
+
+	.slot-note {
+		text-align: center;
+		font-size: 0.95rem;
+		color: #888;
+		font-style: italic;
+		margin-top: -0.5rem;
+	}
+
 	/* DAAFT section */
 	.section.daaft {
 		background: linear-gradient(135deg, #1a0a0a 0%, #1a1a1a 100%);
@@ -619,29 +669,70 @@ faf status --oneline
 		color: #aaa;
 	}
 
-	/* Bi-sync visual */
-	.bisync-visual {
+	/* Context-Mirroring visual */
+	.mirror-intro {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.context-mirror {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		gap: 1rem;
+		gap: 0.5rem;
 		margin: 2rem 0;
 		padding: 2rem;
-		background: #0a0a0a;
+		background: #f5f5f5;
 		border-radius: 12px;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 	}
 
-	.bisync-visual .file {
-		background: #FF6B35;
-		color: white;
-		padding: 0.5rem 1rem;
-		border-radius: 6px;
-		font-weight: 600;
+	.mirror-row {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 	}
 
-	.bisync-visual .arrow {
+	.context-mirror .file {
+		padding: 0.6rem 1.2rem;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.context-mirror .file.claude {
+		background: #FF6B35;
+		color: white;
+	}
+
+	.context-mirror .file.faf {
+		background: #1a1a1a;
 		color: #00D4D4;
+	}
+
+	.context-mirror .file.gemini {
+		background: linear-gradient(135deg, #4285f4 0%, #a855f7 100%);
+		color: white;
+	}
+
+	.context-mirror .file.conductor {
+		background: #22c55e;
+		color: white;
+	}
+
+	.context-mirror .arrow {
+		color: #888;
+		font-size: 1.2rem;
+	}
+
+	.mirror-vertical {
+		display: flex;
+		justify-content: center;
+	}
+
+	.arrow-down {
+		color: #888;
+		font-size: 1.2rem;
 	}
 
 	/* Skills list */
