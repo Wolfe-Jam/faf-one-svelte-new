@@ -15,7 +15,7 @@
 
 <!-- 3-Section Banner -->
 <div class="official-banner">
-	<a href="/press-release" class="banner-section">
+	<a href="/v4" class="banner-section">
 		🏁 Just Shipped 🏁
 	</a>
 	<div class="banner-section-center">
