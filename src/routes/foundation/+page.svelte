@@ -9,8 +9,8 @@
 </script>
 
 <svelte:head>
-	<title>Foundation 4.0 | FAF</title>
-	<meta name="description" content="FAF Foundation 4.0: The Format That Became a Standard. Persistent AI context for every project." />
+	<title>FAF v4.0 | FAF</title>
+	<meta name="description" content="FAF v4.0: The Format That Became a Standard. Persistent AI context for every project." />
 </svelte:head>
 
 <div class="booklet" class:visible>
@@ -18,7 +18,7 @@
 	<section class="hero">
 		<div class="hero-content">
 			<p class="date">January 2025</p>
-			<h1>FAF Foundation 4.0</h1>
+			<h1>FAF v4.0</h1>
 			<p class="subtitle">The Format That Became a Standard</p>
 			<div class="badges">
 				<span class="badge iana">IANA Registered</span>
@@ -116,7 +116,7 @@
 				</div>
 				<div class="timeline-item">
 					<span class="timeline-date">Jan 24, 2026</span>
-					<span class="timeline-event">Foundation 4.0 released</span>
+					<span class="timeline-event">FAF v4.0 released</span>
 				</div>
 			</div>
 
@@ -128,7 +128,7 @@
 	<!-- What's in 4.0 -->
 	<section class="section alt">
 		<div class="section-content">
-			<h2>What's in Foundation 4.0</h2>
+			<h2>What's in FAF v4.0</h2>
 
 			<h3>The Core: project.faf</h3>
 			<div class="code-block yaml">
@@ -303,7 +303,7 @@ faf status --oneline
 	<!-- Footer -->
 	<section class="section footer">
 		<div class="section-content">
-			<p class="closing">FAF Foundation 4.0</p>
+			<p class="closing">FAF v4.0</p>
 			<p class="closing-sub">The Persistent AI Context Standard</p>
 			<p class="closing-tag">Project DNA for ANY AI</p>
 		</div>
