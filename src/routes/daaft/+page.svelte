@@ -883,6 +883,7 @@
 	.cascade-step.failed {
 		border-color: #ff3333;
 		background: linear-gradient(135deg, #1a0a0a 0%, #2a1515 100%);
+		margin-top: 2rem;
 	}
 
 	.cascade-icon {

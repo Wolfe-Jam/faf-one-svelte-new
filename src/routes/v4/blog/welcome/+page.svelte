@@ -20,7 +20,7 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/foundation">Foundation</a> / <a href="/foundation/blog">Blog</a> / Welcome
+			<a href="/">Home</a> / <a href="/v4">Foundation</a> / <a href="/v4/blog">Blog</a> / Welcome
 		</div>
 		<h1>Welcome to the FAF Foundation</h1>
 		<p class="subtitle">The Foundation for better software. One repo at a time.</p>
@@ -200,7 +200,7 @@
 		<section class="cta">
 			<h2>Get Started</h2>
 			<p>
-				Learn more: <a href="https://foundation.faf.one" class="link-primary">foundation.faf.one</a>
+				Learn more: <a href="https://v4.faf.one" class="link-primary">foundation.faf.one</a>
 			</p>
 			<p>
 				Tools: <a href="https://faf.one" class="link-primary">faf.one</a>

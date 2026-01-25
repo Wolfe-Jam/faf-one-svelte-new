@@ -21,7 +21,7 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/foundation">Foundation</a> / <a href="/foundation/blog">Blog</a> / What If Software Was Good?
+			<a href="/">Home</a> / <a href="/v4">Foundation</a> / <a href="/v4/blog">Blog</a> / What If Software Was Good?
 		</div>
 		<h1>What If Software Was Good?</h1>
 		<p class="subtitle">Imagine how the world would run if software was good</p>

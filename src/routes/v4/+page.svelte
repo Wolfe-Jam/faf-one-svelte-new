@@ -23,7 +23,7 @@
 			<div class="badges">
 				<span class="badge iana">IANA Registered</span>
 				<span class="badge anthropic">Anthropic MCP</span>
-				<span class="badge downloads">20,000+ downloads</span>
+				<span class="badge downloads">21,000+ downloads</span>
 			</div>
 		</div>
 	</section>
@@ -32,7 +32,7 @@
 	<section class="section">
 		<div class="section-content">
 			<h2>The Idea</h2>
-			<p class="lead">In late 2024, we had a simple observation: <strong>AI assistants forget.</strong></p>
+			<p class="lead">In late 2024, we had a simple observation: <strong>AI assistants forget</strong>—even inadvertently change stuff (wrong assumptions)!</p>
 			<p>Every new session, every new file, every new developer—AI starts fresh. Context leaks away. Yesterday's collaborator becomes today's stranger.</p>
 			<p>We thought: what if project context could persist? Not in AI memory (which resets), but in the project itself.</p>
 			<p class="highlight">That idea became <code>.faf</code>—the Foundational AI-context Format.</p>
@@ -257,11 +257,11 @@ discovery:
 				</div>
 				<div class="limitation not">
 					<h4><span class="x">✕</span> .faf is NOT documentation</h4>
-					<p>It's <em>project</em> context, not API documentation. Use tools like context7 for library docs.</p>
+					<p>It's <em>project</em> context, not API documentation. Tools like context7 handle library docs—.faf complements them with your project's DNA.</p>
 				</div>
 				<div class="limitation not">
-					<h4><span class="x">✕</span> Scoring is a guide, not a certification</h4>
-					<p>It's free software (MIT). Quality depends on your project structure. A 95% score might still miss something specific to your workflow.</p>
+					<h4><span class="x">✕</span> Scoring is a guide, not a certification <span class="yet">(yet)</span></h4>
+					<p>It's free open-source software (MIT). Quality depends on your project structure. 100% is recommended—that's AI confirming it has full context. <em class="fun-fact">Fun fact: a human can only score 99%.</em></p>
 				</div>
 			</div>
 
@@ -280,19 +280,13 @@ discovery:
 			<div class="when-grid">
 				<div class="when-box use">
 					<h4>When to use .faf</h4>
-					<ul>
-						<li>Multi-file projects</li>
-						<li>Team collaboration</li>
-						<li>Persistent AI context needed</li>
-						<li>Want AI to know your conventions</li>
-					</ul>
+					<p class="simple-answer">Any project with AI-coding.</p>
 				</div>
 				<div class="when-box skip">
 					<h4>When to skip .faf</h4>
 					<ul>
 						<li>Single-file scripts (overkill)</li>
 						<li>Temporary prototypes</li>
-						<li>Already have perfect docs</li>
 					</ul>
 				</div>
 			</div>
@@ -306,6 +300,7 @@ discovery:
 			<div class="code-block install">
 				<pre># Install
 npm install -g faf-cli
+# or: brew install faf-cli
 
 # Initialize (do this FIRST on any project)
 cd your-project
@@ -579,7 +574,7 @@ faf status --oneline
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
-		margin: 3rem 0;
+		margin: 4.5rem 0 3rem 0;
 	}
 
 	.stat-box {
@@ -883,6 +878,17 @@ faf status --oneline
 		margin-right: 0.5rem;
 	}
 
+	.yet {
+		color: #888;
+		font-weight: 400;
+		font-size: 0.9em;
+	}
+
+	.fun-fact {
+		color: #00D4D4;
+		font-style: italic;
+	}
+
 	.check {
 		color: #00D4D4;
 		font-weight: 700;
@@ -942,6 +948,13 @@ faf status --oneline
 		color: #00D4D4;
 	}
 
+	.simple-answer {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: #00D4D4;
+		margin: 0;
+	}
+
 	.when-box.skip h4 {
 		color: #888;
 	}
@@ -951,7 +964,7 @@ faf status --oneline
 	}
 
 	.when-box ul li {
-		padding: 0.4rem 0;
+		padding: 0.4rem 0 0.4rem 1.5rem;
 		border-bottom: none;
 	}
 

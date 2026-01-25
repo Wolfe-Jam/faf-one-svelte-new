@@ -30,7 +30,7 @@
 <div class="foundation-blog">
 	<header class="blog-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/foundation">Foundation</a> / Blog
+			<a href="/">Home</a> / <a href="/v4">Foundation</a> / Blog
 		</div>
 		<h1>FAF Foundation Blog</h1>
 		<p class="tagline">Educational content and research for better software</p>
