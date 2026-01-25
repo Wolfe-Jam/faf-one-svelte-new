@@ -146,7 +146,7 @@
 		text-align: center;
 		font-size: 2rem;
 		margin-bottom: 0.5rem;
-		color: #FF6B35;
+		color: #fff;
 	}
 
 	.subtitle {
