@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/antigravity-edition',
+			title: 'AntiGravity Edition: One project.faf, Every AI, Zero Drift',
+			date: 'January 25, 2026',
+			timestamp: '2026-01-25',
+			excerpt: 'Part 2 of the Gemini story. FAF v4.0 adds full Gemini CLI and Antigravity IDE support. One source of truth. Three ecosystems. Zero context drift.',
+			emoji: '🚀',
+			category: 'IDE Integration'
+		},
+		{
 			slug: 'blog/v4-launch',
 			title: 'FAF v4.0: The Format That Became a Standard',
 			date: 'January 24, 2026',
