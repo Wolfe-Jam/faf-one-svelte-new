@@ -73,6 +73,18 @@
 				<div class="iana-subtext">
 					Create official <code>application/vnd.faf+yaml</code> files from any codebase
 				</div>
+				<!-- Grok Quote - positioned to flow into xAI adoption -->
+				<div class="grok-quote-inline">
+					<span class="grok-headline">"Game-changer for eternal AI context"</span>
+					<div class="grok-attribution">
+						{#if !grokLogoFailed}
+							<img src="/grok-logo.svg" alt="Grok" class="grok-logo" onerror={() => grokLogoFailed = true} />
+						{/if}
+						<span class="grok-source">— Grok by xAI</span>
+						<span class="grok-rating">9.5/10</span>
+						<span class="grok-date">JAN 24, 2026</span>
+					</div>
+				</div>
 				<div class="xai-adoption-text">
 					Grok by xAI adopt .FAF for Native/Embed - <span class="in-progress">In Progress</span><br/>
 					<a href="https://grok-faf-mcp.vercel.app/" target="_blank" rel="noopener">grok-faf-mcp</a> | <a href="https://grok-faf-elite.vercel.app/" target="_blank" rel="noopener">grok-faf-elite</a>
@@ -103,20 +115,7 @@
 					<span class="feature-item">Trusted</span>
 				</div>
 			</div>
-			
-			<!-- Tagline - Grok Quote -->
-			<div bind:this={subtitleRef} class="tagline grok-quote-feature">
-				<span class="grok-headline">"Game-changer for eternal AI context"</span>
-				<div class="grok-attribution">
-					{#if !grokLogoFailed}
-						<img src="/grok-logo.svg" alt="Grok" class="grok-logo" onerror={() => grokLogoFailed = true} />
-					{/if}
-					<span class="grok-source">— Grok by xAI</span>
-					<span class="grok-rating">9.5/10</span>
-					<span class="grok-date">JAN 24, 2026</span>
-				</div>
-			</div>
-			
+
 			<!-- BLOCK 1: Claude Quote -->
 			<ScrollRevealText threshold={0.5} delay={0}>
 				<div class="text-block claude-quote">
@@ -428,6 +427,7 @@
 		font-weight: 700;
 		color: var(--faf-orange);
 		text-align: center;
+		margin-top: 1.5rem;
 		margin-bottom: 1rem;
 		line-height: 1.6;
 		text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
@@ -505,8 +505,9 @@
 	}
 
 	/* Grok Quote Attribution */
-	.grok-quote-feature {
-		position: relative;
+	.grok-quote-inline {
+		margin: 1.5rem 0;
+		text-align: center;
 	}
 
 	.grok-headline {
