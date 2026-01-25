@@ -65,7 +65,7 @@
 				<div class="cycle-item"><span class="letter a">A</span>ssume — "Probably React? Maybe TypeScript?"</div>
 				<div class="cycle-item"><span class="letter a">A</span>sk — "Which API are you using?"</div>
 				<div class="cycle-item"><span class="letter f">F</span>orget — Next session, repeat from step 1</div>
-				<div class="cycle-item"><span class="letter t">T</span>okens — LOST</div>
+				<div class="cycle-item"><span class="letter t">T</span>okens — LOST <span class="and-time">(and TIME!)</span></div>
 			</div>
 			<p class="dont-be">Don't be <a href="/daaft">DAAFT</a>.</p>
 
@@ -89,25 +89,39 @@
 	<section class="section">
 		<div class="section-content">
 			<h2>The Journey: Format to Standard</h2>
-			<p>When we started, <code>.faf</code> was an experiment. A format. Something we used internally.</p>
-			<p>Then developers started using it. Questions came in. Edge cases emerged. We refined the structure, added scoring, built tooling.</p>
+			<p>It was borne out of pure frustration—one day AI even changed the Auth system! I started looking for the Industry format... the <code>package.json</code> for AI context, if you will—to my utter astonishment there wasn't one? AI needed a format for Context, so I built one.</p>
+			<p><code>.faf</code> was born. F1-inspired software engineering became <a href="/" class="cyan-link">faf.one</a>.</p>
+			<p>We designed the format, then the engine. Developers started using it. Feedback came in. Edge cases emerged. We refined the structure, added scoring, built tooling, launched the CLI on npm. The rest is history.</p>
 
 			<div class="timeline">
 				<div class="timeline-item">
-					<span class="timeline-date">October 2025</span>
-					<span class="timeline-event">IANA registered <code>application/vnd.faf+yaml</code></span>
+					<span class="timeline-date">Aug 7, 2025</span>
+					<span class="timeline-event">First <code>.faf</code> created (Day 0)</span>
 				</div>
 				<div class="timeline-item">
-					<span class="timeline-date">November 2025</span>
-					<span class="timeline-event">Anthropic merged PR #2759 into MCP registry</span>
+					<span class="timeline-date">Sep 18, 2025</span>
+					<span class="timeline-event">Claude: "This should become the standard" (Day 42)</span>
 				</div>
 				<div class="timeline-item">
-					<span class="timeline-date">January 2026</span>
+					<span class="timeline-date">Oct 9, 2025</span>
+					<span class="timeline-event"><code>faf-cli</code> launches on npm (Day 62)</span>
+				</div>
+				<div class="timeline-item">
+					<span class="timeline-date">Oct 16, 2025</span>
+					<span class="timeline-event">Anthropic merges PR #2759 into MCP registry (Day 69)</span>
+				</div>
+				<div class="timeline-item">
+					<span class="timeline-date">Oct 30, 2025</span>
+					<span class="timeline-event">IANA registers <code>application/vnd.faf+yaml</code> (Day 84)</span>
+				</div>
+				<div class="timeline-item">
+					<span class="timeline-date">Jan 24, 2026</span>
 					<span class="timeline-event">Foundation 4.0 released</span>
 				</div>
 			</div>
 
 			<blockquote>.faf — The Persistent AI Context Standard</blockquote>
+			<p class="full-story"><a href="/blog/42-42" class="cyan-link">Read the full story: 42|42 →</a></p>
 		</div>
 	</section>
 
@@ -200,6 +214,61 @@ human_context:
 				<div class="philosophy-item">
 					<h4>Trust, not hope.</h4>
 					<p>With FAF, you're not hoping AI understands. You know it does.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What .faf Is NOT -->
+	<section class="section honest">
+		<div class="section-content">
+			<h2>What .faf Is (And Isn't)</h2>
+			<p class="lead">Setting honest expectations:</p>
+
+			<div class="limitations">
+				<div class="limitation not">
+					<h4><span class="x">✕</span> .faf is NOT automatic</h4>
+					<p>You must run <code>faf auto</code> or <code>faf init</code> to create context. AI won't automatically reference .faf without being told.</p>
+				</div>
+				<div class="limitation not">
+					<h4><span class="x">✕</span> .faf is NOT documentation</h4>
+					<p>It's <em>project</em> context, not API documentation. Use tools like context7 for library docs.</p>
+				</div>
+				<div class="limitation not">
+					<h4><span class="x">✕</span> Scoring is a guide, not a certification</h4>
+					<p>It's free software (MIT). Quality depends on your project structure. A 95% score might still miss something specific to your workflow.</p>
+				</div>
+			</div>
+
+			<div class="limitations is-list">
+				<div class="limitation yes">
+					<h4><span class="check">✓</span> .faf IS:</h4>
+					<ul class="is-items">
+						<li>A format for storing project context</li>
+						<li>A measurable way to track AI-readiness</li>
+						<li>A tool for giving AI project-specific knowledge</li>
+						<li>Free forever, open source</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="when-grid">
+				<div class="when-box use">
+					<h4>When to use .faf</h4>
+					<ul>
+						<li>Multi-file projects</li>
+						<li>Team collaboration</li>
+						<li>Persistent AI context needed</li>
+						<li>Want AI to know your conventions</li>
+					</ul>
+				</div>
+				<div class="when-box skip">
+					<h4>When to skip .faf</h4>
+					<ul>
+						<li>Single-file scripts (overkill)</li>
+						<li>Temporary prototypes</li>
+						<li>Already have perfect docs</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -358,6 +427,17 @@ faf status --oneline
 		font-size: 1.2rem;
 	}
 
+	.cyan-link {
+		color: #00D4D4;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.cyan-link:hover {
+		color: #00ffff;
+		text-decoration: underline;
+	}
+
 	code {
 		background: #2a2a2a;
 		padding: 0.2rem 0.5rem;
@@ -422,6 +502,11 @@ faf status --oneline
 	.letter.a { color: #FF8555; }
 	.letter.f { color: #fff; }
 	.letter.t { color: #ff3333; }
+
+	.and-time {
+		color: #ff3333;
+		font-weight: 600;
+	}
 
 	.dont-be {
 		font-size: 1.5rem;
@@ -688,6 +773,102 @@ faf status --oneline
 		transform: translateY(-2px);
 	}
 
+	/* What .faf Is NOT section */
+	.section.honest {
+		background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+	}
+
+	.limitation.not h4 {
+		color: #ff6666;
+	}
+
+	.limitation.yes h4 {
+		color: #00D4D4;
+	}
+
+	.x {
+		color: #ff3333;
+		font-weight: 700;
+		margin-right: 0.5rem;
+	}
+
+	.check {
+		color: #00D4D4;
+		font-weight: 700;
+		margin-right: 0.5rem;
+	}
+
+	.is-list {
+		margin-top: 2rem;
+	}
+
+	.is-items {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0 0;
+	}
+
+	.is-items li {
+		padding: 0.5rem 0 0.5rem 1.5rem;
+		position: relative;
+		border-bottom: 1px solid #333;
+	}
+
+	.is-items li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: #00D4D4;
+		font-weight: bold;
+	}
+
+	.when-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.when-box {
+		padding: 1.5rem;
+		border-radius: 12px;
+		background: #0a0a0a;
+	}
+
+	.when-box.use {
+		border: 1px solid #00D4D4;
+	}
+
+	.when-box.skip {
+		border: 1px solid #666;
+	}
+
+	.when-box h4 {
+		margin-bottom: 1rem;
+	}
+
+	.when-box.use h4 {
+		color: #00D4D4;
+	}
+
+	.when-box.skip h4 {
+		color: #888;
+	}
+
+	.when-box ul {
+		margin: 0;
+	}
+
+	.when-box ul li {
+		padding: 0.4rem 0;
+		border-bottom: none;
+	}
+
+	.when-box.skip ul li::before {
+		content: "–";
+		color: #666;
+	}
+
 	/* Footer */
 	.section.footer {
 		text-align: center;
@@ -728,6 +909,10 @@ faf status --oneline
 		}
 
 		.stats-comparison {
+			grid-template-columns: 1fr;
+		}
+
+		.when-grid {
 			grid-template-columns: 1fr;
 		}
 
