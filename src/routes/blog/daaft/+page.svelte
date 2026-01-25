@@ -269,7 +269,7 @@ human_context:
 		<section class="foundation-4">
 			<h2>FAF Foundation 4.0</h2>
 			<p>This approach now has a name and a standard.</p>
-			<p><strong>.faf</strong> — the Foundational AI-context Format — is the first IANA-registered format for persistent AI project context. It's been merged into Anthropic's official MCP registry. Over 20,000 projects use it.</p>
+			<p><strong>.faf</strong> — the Foundational AI-context Format — is the first IANA-registered format for persistent AI project context. It's been merged into Anthropic's official MCP registry. Over 21,000 downloads.</p>
 			<p>Foundation 4.0, shipping now, includes:</p>
 			<ul>
 				<li><strong>Bi-sync</strong> between <code>project.faf</code> and <code>CLAUDE.md</code> (under 10ms)</li>

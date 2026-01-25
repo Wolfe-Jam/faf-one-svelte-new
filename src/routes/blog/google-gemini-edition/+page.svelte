@@ -264,7 +264,7 @@ faf conductor sync`}</code></pre>
 				<li><strong>574/574</strong> - Tests passing (0 skipped)</li>
 				<li><strong>Full interop</strong> - Claude, Gemini CLI, Antigravity, Conductor format</li>
 				<li><strong>2 new commands</strong> - <code>faf gemini</code>, <code>faf conductor</code></li>
-				<li><strong>20,000+</strong> - npm downloads</li>
+				<li><strong>21,000+</strong> - npm downloads</li>
 			</ul>
 		</section>
 

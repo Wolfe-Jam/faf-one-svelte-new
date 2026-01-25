@@ -331,7 +331,7 @@ human_context:
 				<li><strong>IANA Registration</strong> — <code>application/vnd.faf+yaml</code> is an official media type</li>
 				<li><strong>USPTO Trademark</strong> — Serial No. 99596802 (filed January 15, 2026)</li>
 				<li><strong>FAF Foundation</strong> — Published at foundation.faf.one</li>
-				<li><strong>20,000+ npm downloads</strong> — faf-cli, claude-faf-mcp, faf-mcp, grok-faf-mcp</li>
+				<li><strong>21,000+ npm downloads</strong> — faf-cli, claude-faf-mcp, faf-mcp, grok-faf-mcp</li>
 			</ul>
 		</section>
 
