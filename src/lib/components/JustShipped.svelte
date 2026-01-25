@@ -37,14 +37,42 @@
 
 <section class="just-shipped popup-mode">
 	<div class="container">
-		<h2 class="section-title">Context Intelligence Edition</h2>
+		<h2 class="section-title">Foundation Layer</h2>
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>20,000+ Total Downloads</strong> •
-				<strong>586/586 Tests Passing</strong> •
+				<strong>21,000+ Total Downloads</strong> •
+				<strong>173/173 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- Foundation Layer v4.0.0 -->
+		<div class="chrome-featured foundation-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🏛️ faf-cli v4.0.0 - Foundation Layer</h3>
+					<span class="chrome-badge foundation-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">The format became a standard. IANA registered, Anthropic approved. Bi-sync &lt;10ms. Universal AI context.</p>
+			<a href="/blog/v4-launch" class="chrome-install foundation-cta">
+				Read the Blog Post →
+			</a>
+		</div>
+
+		<!-- AntiGravity Edition -->
+		<div class="chrome-featured gemini-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🚀 AntiGravity Edition - Gemini Ecosystem</h3>
+					<span class="chrome-badge gemini-badge">Part 2</span>
+				</div>
+			</div>
+			<p class="chrome-description">Full Gemini CLI and Antigravity IDE support. One project.faf, every AI, zero drift.</p>
+			<a href="/blog/antigravity-edition" class="chrome-install gemini-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- Context Intelligence v3.4.8 -->
@@ -52,7 +80,7 @@
 			<div class="chrome-header">
 				<div class="chrome-title">
 					<h3>🧠 faf-cli v3.4.8 - Context Intelligence Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
+					<span class="chrome-badge">Previous</span>
 				</div>
 			</div>
 			<p class="chrome-description">Bi-sync got smart. Detects custom CLAUDE.md content and preserves it. Tables, code blocks, custom sections stay intact.</p>
@@ -566,6 +594,34 @@
 	.chrome-install:hover {
 		transform: translateY(-2px);
 		box-shadow: 0 5px 20px rgba(0, 212, 212, 0.5), 0 0 40px rgba(0, 212, 212, 0.3);
+	}
+
+	/* Foundation Layer styles - FAF Orange theme */
+	.foundation-featured {
+		border-color: #FF6B35;
+		box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3), 0 0 60px rgba(255, 107, 53, 0.1);
+	}
+
+	.foundation-featured:hover {
+		box-shadow: 0 15px 50px rgba(255, 107, 53, 0.4), 0 0 80px rgba(255, 107, 53, 0.15);
+	}
+
+	.foundation-featured .chrome-description {
+		color: #FF6B35;
+	}
+
+	.foundation-badge {
+		background: linear-gradient(135deg, #FF6B35 0%, #FF8555 100%) !important;
+		color: white;
+	}
+
+	.foundation-cta {
+		background: linear-gradient(135deg, #FF6B35 0%, #FF8555 100%);
+		color: white;
+	}
+
+	.foundation-cta:hover {
+		box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5), 0 0 40px rgba(255, 107, 53, 0.3);
 	}
 
 	/* Boris-Flow styles - Gold/Trophy theme */
