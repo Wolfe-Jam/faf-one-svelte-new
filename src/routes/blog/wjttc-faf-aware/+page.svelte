@@ -68,6 +68,14 @@
 			<p>
 				<strong>Fun fact:</strong> Wolfejam's first car was orange—a 1977 Ford Escort Mexico Mk2 in Signal Orange 77 (Paint Code L or HN) with a black vinyl roof. Championship-grade attention to detail, even down to paint codes. 🏎️
 			</p>
+
+			<div class="video-container">
+				<video autoplay loop muted playsinline>
+					<source src="/blog/wjttc-testing-scroll.mov" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<p class="video-caption">WJTTC Testing Center documentation - Championship-grade testing philosophy in action 🏎️</p>
+			</div>
 		</section>
 
 		<section>
@@ -250,14 +258,6 @@ npx wjttc certify --mcp "npx your-server"</code>
 			<p>
 				The testing philosophy scales across languages and platforms. See <a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank">faf-rust-sdk</a> for Rust implementation with corruption recovery suite and 19ms average execution time.
 			</p>
-
-			<div class="video-container">
-				<video autoplay loop muted playsinline>
-					<source src="/blog/wjttc-testing-scroll.mov" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				<p class="video-caption">WJTTC Testing Center documentation for faf-rust-sdk - Championship-grade testing philosophy in action 🏎️</p>
-			</div>
 
 			<p class="highlight">
 				<strong>The philosophy:</strong> "We break it, so others don't even know it was ever broke!"
