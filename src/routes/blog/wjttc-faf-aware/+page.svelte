@@ -286,6 +286,26 @@ npx wjttc certify --mcp "npx your-server"</code>
 			</ul>
 		</section>
 
+		<section>
+			<h2>Coming Next: The Golden Triangle</h2>
+			<p class="highlight">
+				<strong>WJTTC now has the Claim (FAF).</strong><br>
+				Next: The Receipt (TAF).
+			</p>
+			<p>
+				<strong>C</strong>laim → <strong>A</strong>udit → <strong>R</strong>eceipt
+			</p>
+			<p>
+				The CAR Framework. The Golden Triangle. Git-tracked test history. Permanent proof.
+			</p>
+			<p>
+				<strong>"No CAR = No transport."</strong>
+			</p>
+			<p style="text-align: center; font-style: italic; color: #666;">
+				Part II coming soon. 🏎️
+			</p>
+		</section>
+
 		<section class="footer-note">
 			<p>Built with .faf ☑️ The McLaren-Inspired standard for MCP testing 🏎️🍊</p>
 		</section>
