@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/wjttc-faf-aware',
+			title: 'WJTTC Goes FAF-Aware: Testing the Tester',
+			date: 'February 2, 2026',
+			timestamp: '2026-02-02',
+			excerpt: 'The McLaren standard gets smarter. WJTTC now validates project.faf during MCP certification. Tested itself. Earned 100% 🏆. Enterprise capabilities on the FAF Foundation.',
+			emoji: '🍊',
+			category: 'WJTTC Ecosystem'
+		},
+		{
 			slug: 'blog/antigravity-edition',
 			title: 'AntiGravity Edition: One project.faf, Every AI, Zero Drift',
 			date: 'January 25, 2026',

@@ -206,7 +206,7 @@
 					Context Intelligence Edition. Smart bi-sync preservation.
 				</p>
 				<ul class="release-features">
-					<li>20k+ downloads (npm)</li>
+					<li>21k+ downloads (npm)</li>
 					<li>586/586 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
@@ -252,7 +252,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>20,000+ Total Downloads</strong> •
+				<strong>21,000+ Total Downloads</strong> •
 				<strong>586/586 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -298,7 +298,7 @@
 					Context Intelligence Edition. Smart bi-sync preservation.
 				</p>
 				<ul class="release-features">
-					<li>20k+ downloads (npm)</li>
+					<li>21k+ downloads (npm)</li>
 					<li>586/586 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
@@ -344,7 +344,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>20,000+ Total Downloads</strong> •
+				<strong>21,000+ Total Downloads</strong> •
 				<strong>586/586 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
