@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/wjttc-taf-aware',
+			title: 'WJTTC TAF-Aware Edition: Tier 9 Receipt Validation',
+			date: 'February 3, 2026',
+			timestamp: '2026-02-03',
+			excerpt: 'WJTTC v1.2.0 adds Tier 9: TAF Receipt Validation. Three checks validate .taf files. Receipts aren\'t scored - they\'re proof. 52 tests across 9 tiers.',
+			emoji: '🏎️',
+			category: 'WJTTC Ecosystem'
+		},
+		{
 			slug: 'blog/wjttc-faf-aware',
 			title: 'WJTTC Goes FAF-Aware: Testing the Tester',
 			date: 'February 2, 2026',
