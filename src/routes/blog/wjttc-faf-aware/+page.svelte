@@ -258,7 +258,7 @@ npx wjttc certify --mcp "npx your-server"</code>
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ The McLaren standard for MCP testing 🏎️🍊</p>
+			<p>Built with .faf ☑️ The McLaren-Inspired standard for MCP testing 🏎️🍊</p>
 		</section>
 	</article>
 </div>
