@@ -27,6 +27,11 @@
 		</div>
 	</header>
 
+	<div class="hero-image">
+		<img src="/blog/wjttc-orange-cars.png" alt="1977 Ford Escort Mexico Mk2 rally car and McLaren F1 car racing side by side in papaya orange - Heritage meets innovation" />
+		<p class="image-caption">Heritage meets innovation: 1977 Ford Escort Mk2 & McLaren F1 in papaya orange 🏎️🍊</p>
+	</div>
+
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
@@ -289,9 +294,31 @@ npx wjttc certify --mcp "npx your-server"</code>
 	}
 
 	.post-header {
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		border-bottom: 2px solid #eee;
 		padding-bottom: 2rem;
+	}
+
+	.hero-image {
+		margin: 0 -1rem 3rem -1rem;
+		overflow: hidden;
+		border-radius: 8px;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 8px;
+	}
+
+	.image-caption {
+		text-align: center;
+		font-size: 0.9rem;
+		color: #666;
+		font-style: italic;
+		margin-top: 0.5rem;
+		padding: 0 1rem;
 	}
 
 	.breadcrumb {
