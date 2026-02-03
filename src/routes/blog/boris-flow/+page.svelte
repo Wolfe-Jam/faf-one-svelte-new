@@ -29,6 +29,8 @@
 		<div class="meta">
 			<time datetime="2026-01-07">January 7, 2026</time>
 			<span class="separator">•</span>
+			<span class="revision-badge">Updated February 3, 2026</span>
+			<span class="separator">•</span>
 			<span class="category">Engineering</span>
 		</div>
 	</header>
@@ -37,6 +39,16 @@
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> We studied how Boris Cherny (creator of Claude Code) structures his projects - subagents, slash commands, MCP servers, Bun runtime - and built a 12-test integration suite that validates all of it. Now .faf detects and preserves the complete Claude Code ecosystem. Every publish passes Boris-Flow or it doesn't ship.
+			</p>
+		</section>
+
+		<section class="revision-note">
+			<h3>📝 Revision Note (February 3, 2026)</h3>
+			<p>
+				Since launching Boris-Flow in January, we've integrated it into the WJTTC certification workflow and faf-cli documentation. This update adds practical guidance on <strong>when to run Boris-Flow</strong> and how it validates project structure before WJTTC Tier 8 certification. See the new "When to Run Boris-Flow" section below.
+			</p>
+			<p>
+				<strong>What's new:</strong> Workflow recommendations, WJTTC integration, pre-certification best practices.
 			</p>
 		</section>
 
@@ -158,6 +170,64 @@
     - bigquery`}</code></pre>
 
 			<p>Complete metadata. Ready for any AI to understand your Claude Code setup instantly.</p>
+		</section>
+
+		<section>
+			<h2>When to Run Boris-Flow</h2>
+
+			<p>Boris-Flow isn't just for faf-cli maintainers — it's a validation tool for anyone using .faf files. Here are the key scenarios:</p>
+
+			<table class="workflow-table">
+				<thead>
+					<tr>
+						<th>Scenario</th>
+						<th>Why Run Boris-Flow</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Before <code>faf init</code></strong></td>
+						<td>Validates faf-cli installation works correctly on your machine</td>
+					</tr>
+					<tr>
+						<td><strong>After major .faf changes</strong></td>
+						<td>Re-validates project structure remains valid</td>
+					</tr>
+					<tr>
+						<td><strong>Before WJTTC certification</strong></td>
+						<td>Pre-validates .faf file for Tier 8 (FAF Documentation) tests</td>
+					</tr>
+					<tr>
+						<td><strong>Before publishing</strong></td>
+						<td>Ensures no regressions in faf-cli (maintainers only)</td>
+					</tr>
+					<tr>
+						<td><strong>Team onboarding</strong></td>
+						<td>Proves faf-cli works and demonstrates 100% scoring</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="workflow-example">
+				<h3>Pre-Certification Workflow</h3>
+				<p>WJTTC users can now validate their .faf files before running certification:</p>
+				<div class="terminal-block">
+					<code>cd your-project</code>
+					<code>faf init && faf auto</code>
+					<code>faf score</code>
+					<code>git clone https://github.com/Wolfe-Jam/faf-cli</code>
+					<code>cd faf-cli && ./tests/boris-flow.test.sh</code>
+					<code>cd ../your-project</code>
+					<code>npx wjttc certify --mcp "npx your-server"</code>
+				</div>
+				<p>Boris-Flow validates the structure that WJTTC Tier 8 tests. Running it first helps ensure you pass Tier 8.</p>
+			</div>
+
+			<p><strong>Where it's documented:</strong></p>
+			<ul>
+				<li><a href="https://github.com/Wolfe-Jam/wjttc#pre-certification-best-practices">WJTTC README</a> - Pre-certification best practices</li>
+				<li><a href="https://github.com/Wolfe-Jam/faf-cli#boris-flow-integration-tests">faf-cli README</a> - Complete Boris-Flow documentation</li>
+			</ul>
 		</section>
 
 		<section>
@@ -414,6 +484,15 @@ Demo complete - no files changed.
 		font-size: 0.85rem;
 	}
 
+	.revision-badge {
+		background: #00D4D4;
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 4px;
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+
 	.post-content {
 		font-size: 1.1rem;
 	}
@@ -512,6 +591,63 @@ Demo complete - no files changed.
 
 	.insight-box p {
 		margin: 0;
+	}
+
+	.revision-note {
+		background: linear-gradient(135deg, rgba(0, 212, 212, 0.1) 0%, rgba(0, 212, 212, 0.05) 100%);
+		border: 1px solid #00D4D4;
+		border-left: 4px solid #00D4D4;
+		border-radius: 8px;
+		padding: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.revision-note h3 {
+		color: #00D4D4;
+		margin: 0 0 0.75rem 0;
+		font-size: 1.3rem;
+	}
+
+	.revision-note p {
+		margin-bottom: 0.75rem;
+	}
+
+	.revision-note p:last-child {
+		margin-bottom: 0;
+	}
+
+	.workflow-table {
+		margin: 1.5rem 0;
+	}
+
+	.workflow-table td:first-child {
+		font-weight: 600;
+		width: 35%;
+	}
+
+	.workflow-example {
+		background: #f8f8f8;
+		border: 2px solid #00D4D4;
+		border-radius: 8px;
+		padding: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.workflow-example h3 {
+		color: #00D4D4;
+		margin: 0 0 1rem 0;
+		font-size: 1.2rem;
+	}
+
+	.workflow-example p {
+		margin-bottom: 1rem;
+	}
+
+	.workflow-example p:last-child {
+		margin-bottom: 0;
+		font-size: 0.95rem;
+		color: #666;
+		font-style: italic;
 	}
 
 	table {
