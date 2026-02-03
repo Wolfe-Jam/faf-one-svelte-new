@@ -102,6 +102,10 @@ Validation Checks:
 npx wjttc certify --mcp "npx your-server"</code></pre>
 			</div>
 			<p>If your project has a .taf file, Tier 9 will validate it automatically.</p>
+
+			<div class="tip-box">
+				<p><strong>💡 Pre-Certification Tip:</strong> Run <a href="/blog/boris-flow">Boris-Flow</a> before certification to validate your <code>project.faf</code> structure. Boris-Flow's 12 tests ensure your .faf file is ready for Tier 8 validation.</p>
+			</div>
 		</section>
 
 		<section>
@@ -280,6 +284,31 @@ npx wjttc certify --mcp "npx your-server"</code></pre>
 	em {
 		font-style: italic;
 		color: #555;
+	}
+
+	.tip-box {
+		background: linear-gradient(135deg, rgba(0, 212, 212, 0.1) 0%, rgba(0, 212, 212, 0.05) 100%);
+		border: 1px solid #00D4D4;
+		border-left: 4px solid #00D4D4;
+		border-radius: 8px;
+		padding: 1.25rem;
+		margin: 1.5rem 0;
+	}
+
+	.tip-box p {
+		margin: 0;
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	.tip-box a {
+		color: #00D4D4;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.tip-box a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 768px) {
