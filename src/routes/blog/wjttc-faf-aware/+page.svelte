@@ -251,6 +251,14 @@ npx wjttc certify --mcp "npx your-server"</code>
 				The testing philosophy scales across languages and platforms. See <a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank">faf-rust-sdk</a> for Rust implementation with corruption recovery suite and 19ms average execution time.
 			</p>
 
+			<div class="video-container">
+				<video autoplay loop muted playsinline>
+					<source src="/blog/wjttc-testing-scroll.mov" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<p class="video-caption">WJTTC Testing Center documentation for faf-rust-sdk - Championship-grade testing philosophy in action 🏎️</p>
+			</div>
+
 			<p class="highlight">
 				<strong>The philosophy:</strong> "We break it, so others don't even know it was ever broke!"
 			</p>
@@ -313,6 +321,28 @@ npx wjttc certify --mcp "npx your-server"</code>
 	}
 
 	.image-caption {
+		text-align: center;
+		font-size: 0.9rem;
+		color: #666;
+		font-style: italic;
+		margin-top: 0.5rem;
+		padding: 0 1rem;
+	}
+
+	.video-container {
+		margin: 2rem 0;
+		border-radius: 8px;
+		overflow: hidden;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.video-container video {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.video-caption {
 		text-align: center;
 		font-size: 0.9rem;
 		color: #666;
