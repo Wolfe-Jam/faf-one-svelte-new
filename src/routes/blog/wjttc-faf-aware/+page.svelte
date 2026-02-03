@@ -210,6 +210,32 @@ npx wjttc certify --mcp "npx your-server"</code>
 		</section>
 
 		<section>
+			<h2>The WJTTC Ecosystem</h2>
+
+			<h3>WJTTC Certifier (npm)</h3>
+			<p>
+				The core certification tool. 46 tests across 7 weighted tiers for MCP server compliance. Automated scoring, badge generation, and now FAF validation. Install globally or run via npx.
+			</p>
+
+			<h3>WJTTC Skills (Claude Code)</h3>
+			<p>
+				<strong>/wjttc-builder</strong> - Auto-generate championship-grade test suites for any project. Analyzes codebases, identifies critical test tiers (Brake/Engine/Aero), creates comprehensive test plans.
+			</p>
+			<p>
+				<strong>/wjttc-tester</strong> - F1-inspired testing expert. Tests software with championship standards, finds bugs, validates functionality, performs edge case analysis, writes detailed WJTTC reports.
+			</p>
+
+			<h3>WJTTC Testing Centers</h3>
+			<p>
+				The testing philosophy scales across languages and platforms. See <a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank">faf-rust-sdk</a> for Rust implementation with corruption recovery suite and 19ms average execution time.
+			</p>
+
+			<p class="highlight">
+				<strong>The philosophy:</strong> "We break it, so others don't even know it was ever broke!"
+			</p>
+		</section>
+
+		<section>
 			<h2>The Numbers</h2>
 			<ul>
 				<li><strong>v1.1.0</strong> - Released December 2, 2025</li>
