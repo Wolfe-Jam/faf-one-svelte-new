@@ -50,6 +50,22 @@
 		</section>
 
 		<section>
+			<h2>The Orange Story</h2>
+			<p>
+				WJTTC = <strong>Wolfe-Jam Technical+Testing Center</strong> is inspired by McLaren Formula One Racing.
+			</p>
+			<p>
+				Wolfejam, an F1-nut, discovered that McLaren introduced <strong>Papaya Orange</strong> in 1968—the same year he was born. The coincidence became a philosophy.
+			</p>
+			<p>
+				Today, he uses the <strong>Big Orange 🍊</strong> as his Sign of Quality—"The Michelin Star for Repos." In his xAI/Grok work for Elon Musk, he also refers to planet Mars as the Big Orange 🚀🍊.
+			</p>
+			<p>
+				<strong>Fun fact:</strong> Wolfejam's first car was orange—a 1977 Ford Escort Mexico Mk2 in Signal Orange 77 (Paint Code L or HN) with a black vinyl roof. Championship-grade attention to detail, even down to paint codes. 🏎️
+			</p>
+		</section>
+
+		<section>
 			<h2>What Changed</h2>
 			<p>WJTTC v1.1.0 now includes FAF-awareness:</p>
 
