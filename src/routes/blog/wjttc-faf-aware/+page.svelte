@@ -40,7 +40,7 @@
 		</section>
 
 		<section>
-			<h2>WJTTC = The McLaren Technology Centre</h2>
+			<h2>WJTTC = The McLaren Technology Centre for AI</h2>
 			<p>
 				WJTTC is finding its own identity. It's the F1-inspired testing arm of the ecosystem—championship-grade standards, precision engineering, and zero tolerance for failures.
 			</p>
