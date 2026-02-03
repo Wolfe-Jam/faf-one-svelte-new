@@ -27,9 +27,7 @@
 		<h1>The Day We Added BORIS-FLOW</h1>
 		<p class="subtitle">.faf brought the format. Boris brought the workflow. AI brought Gold Code.</p>
 		<div class="meta">
-			<time datetime="2026-01-07">January 7, 2026</time>
-			<span class="separator">•</span>
-			<span class="revision-badge">Updated February 3, 2026</span>
+			<time datetime="2026-02-03">February 3, 2026</time>
 			<span class="separator">•</span>
 			<span class="category">Engineering</span>
 		</div>
@@ -43,7 +41,11 @@
 		</section>
 
 		<section class="revision-note">
-			<h3>📝 Revision Note (February 3, 2026)</h3>
+			<h3>📝 Revision Note</h3>
+			<p>
+				<strong>Originally published:</strong> January 7, 2026<br>
+				<strong>Updated:</strong> February 3, 2026
+			</p>
 			<p>
 				Since launching Boris-Flow in January, we've integrated it into the WJTTC certification workflow and faf-cli documentation. This update adds practical guidance on <strong>when to run Boris-Flow</strong> and how it validates project structure before WJTTC Tier 8 certification. See the new "When to Run Boris-Flow" section below.
 			</p>

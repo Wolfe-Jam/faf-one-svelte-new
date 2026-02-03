@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/boris-flow',
+			title: 'BORIS-FLOW: How One Engineer\'s Claude Code Setup Became a Testing Standard',
+			date: 'February 3, 2026',
+			timestamp: '2026-02-03',
+			excerpt: '12 integration tests modeled on Boris Cherny\'s Claude Code workflow. Updated Feb 3: Now integrated with WJTTC certification workflow and faf-cli docs. When to run, how to validate, pre-certification best practices.',
+			emoji: '🏎️',
+			category: 'Engineering'
+		},
+		{
 			slug: 'blog/wjttc-taf-aware',
 			title: 'WJTTC TAF-Aware Edition: Tier 9 Receipt Validation',
 			date: 'February 3, 2026',
@@ -107,15 +116,6 @@
 			excerpt: 'Full interoperability with the Google Gemini ecosystem. Import from GEMINI.md, export to Conductor format, sync with Antigravity IDE. Universal AI context portability.',
 			emoji: '🔷',
 			category: 'Interop'
-		},
-		{
-			slug: 'blog/boris-flow',
-			title: 'BORIS-FLOW: How One Engineer\'s Claude Code Setup Became a Testing Standard',
-			date: 'January 7, 2026',
-			timestamp: '2026-01-07',
-			excerpt: '12 integration tests modeled on Boris Cherny\'s Claude Code workflow. Updated Feb 3: Now integrated with WJTTC certification workflow and faf-cli docs. When to run, how to validate, pre-certification best practices.',
-			emoji: '🏎️',
-			category: 'Engineering'
 		},
 		{
 			slug: 'blog/42-42',
