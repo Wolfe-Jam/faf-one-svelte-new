@@ -270,18 +270,17 @@ npx wjttc certify --mcp "npx your-server"</code>
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.6;
-		color: #e0e0e0;
 	}
 
 	.post-header {
 		margin-bottom: 3rem;
-		border-bottom: 2px solid #333;
+		border-bottom: 2px solid #eee;
 		padding-bottom: 2rem;
 	}
 
 	.breadcrumb {
 		font-size: 0.9rem;
-		color: #888;
+		color: #666;
 		margin-bottom: 1rem;
 	}
 
@@ -298,12 +297,12 @@ npx wjttc certify --mcp "npx your-server"</code>
 		font-size: 2.5rem;
 		font-weight: 700;
 		margin: 0.5rem 0;
-		color: #fff;
+		color: #000;
 	}
 
 	.subtitle {
 		font-size: 1.3rem;
-		color: #aaa;
+		color: #666;
 		margin: 0.5rem 0 1rem 0;
 	}
 
@@ -312,11 +311,11 @@ npx wjttc certify --mcp "npx your-server"</code>
 		align-items: center;
 		gap: 0.5rem;
 		font-size: 0.9rem;
-		color: #888;
+		color: #666;
 	}
 
 	.separator {
-		color: #555;
+		color: #ccc;
 	}
 
 	.category {
@@ -328,14 +327,14 @@ npx wjttc certify --mcp "npx your-server"</code>
 
 	.category.wjttc {
 		background: #00bf63;
-		color: #000;
+		color: white;
 	}
 
 	.intro {
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		background: #fff5f0;
 		padding: 1.5rem;
 		border-radius: 8px;
-		border-left: 4px solid #FF8C00;
+		border-left: 4px solid #FF6B35;
 		margin-bottom: 2rem;
 	}
 
@@ -350,40 +349,40 @@ npx wjttc certify --mcp "npx your-server"</code>
 
 	h2 {
 		font-size: 1.8rem;
-		color: #fff;
+		color: #000;
 		margin: 2rem 0 1rem 0;
-		border-bottom: 1px solid #333;
+		border-bottom: 1px solid #eee;
 		padding-bottom: 0.5rem;
 	}
 
 	h3 {
 		font-size: 1.3rem;
-		color: #00D4D4;
+		color: #333;
 		margin: 1.5rem 0 0.75rem 0;
 	}
 
 	h4 {
 		font-size: 1.1rem;
-		color: #FF8C00;
+		color: #FF6B35;
 		margin: 1rem 0 0.5rem 0;
 	}
 
 	p {
 		margin: 1rem 0;
-		color: #d0d0d0;
+		color: #333;
 	}
 
 	.highlight {
-		background: #1a1a1a;
-		border-left: 4px solid #FF8C00;
+		background: #fffaf0;
+		border-left: 4px solid #FF6B35;
 		padding: 1rem;
 		margin: 1rem 0;
 		border-radius: 4px;
 	}
 
 	.terminal-block {
-		background: #0d1117;
-		border: 1px solid #30363d;
+		background: #f5f5f5;
+		border: 1px solid #ddd;
 		border-radius: 6px;
 		padding: 1rem;
 		margin: 1rem 0;
@@ -393,18 +392,18 @@ npx wjttc certify --mcp "npx your-server"</code>
 	.terminal-block code {
 		font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
 		font-size: 0.9rem;
-		color: #00D4D4;
+		color: #333;
 		white-space: pre;
 		display: block;
 	}
 
 	code {
-		background: #1a1a1a;
+		background: #f5f5f5;
 		padding: 0.2rem 0.4rem;
 		border-radius: 3px;
 		font-family: 'SF Mono', Monaco, monospace;
 		font-size: 0.9em;
-		color: #FF8C00;
+		color: #c7254e;
 	}
 
 	ul {
@@ -414,7 +413,7 @@ npx wjttc certify --mcp "npx your-server"</code>
 
 	li {
 		margin: 0.5rem 0;
-		color: #d0d0d0;
+		color: #333;
 	}
 
 	.code-comparison {
@@ -431,8 +430,8 @@ npx wjttc certify --mcp "npx your-server"</code>
 	}
 
 	.big-quote {
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a1a1a 100%);
-		border-left: 4px solid #FF8C00;
+		background: #fffaf0;
+		border-left: 4px solid #FF6B35;
 		padding: 1.5rem 2rem;
 		margin: 2rem 0;
 		border-radius: 8px;
@@ -442,21 +441,21 @@ npx wjttc certify --mcp "npx your-server"</code>
 		font-size: 1.4rem;
 		font-weight: 500;
 		font-style: italic;
-		color: #fff;
+		color: #000;
 		margin: 0 0 1rem 0;
 	}
 
 	.big-quote cite {
 		font-size: 1rem;
-		color: #888;
+		color: #666;
 		font-style: normal;
 	}
 
 	blockquote {
-		border-left: 4px solid #333;
+		border-left: 4px solid #ddd;
 		padding-left: 1.5rem;
 		margin: 1.5rem 0;
-		color: #aaa;
+		color: #666;
 		font-style: italic;
 	}
 
@@ -472,12 +471,12 @@ npx wjttc certify --mcp "npx your-server"</code>
 	.footer-note {
 		text-align: center;
 		padding: 2rem 0;
-		border-top: 2px solid #333;
+		border-top: 2px solid #eee;
 		margin-top: 3rem;
 	}
 
 	.footer-note p {
-		color: #888;
+		color: #666;
 		font-style: italic;
 	}
 </style>
