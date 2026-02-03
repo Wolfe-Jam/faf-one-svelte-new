@@ -42,6 +42,11 @@
 			<p>
 				<strong>FAF is WJTTC's default client.</strong> As we grow, we demonstrate enterprise capabilities on the FAF Foundation itself.
 			</p>
+
+			<p class="highlight">
+				<strong>The WJTTC Philosophy:</strong><br>
+				"We break it, so others don't even know it was ever broke!"
+			</p>
 		</section>
 
 		<section>
