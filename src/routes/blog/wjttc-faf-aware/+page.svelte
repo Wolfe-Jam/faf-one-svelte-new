@@ -243,7 +243,7 @@ npx wjttc certify --mcp "npx your-server"</code>
 
 			<h3>WJTTC Certifier (npm)</h3>
 			<p>
-				The core certification tool. 46 tests across 7 weighted tiers for MCP server compliance. Automated scoring, badge generation, and now FAF validation. Install globally or run via npx.
+				The core certification tool. 49 tests across 8 weighted tiers for MCP server compliance. Automated scoring, badge generation, and now FAF validation. Install globally or run via npx.
 			</p>
 
 			<h3>WJTTC Skills (Claude Code)</h3>
