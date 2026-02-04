@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/voice-api-edition',
+			title: 'Voice API Edition: Save Our Souls 👻',
+			date: 'February 3, 2026',
+			timestamp: '2026-02-03',
+			excerpt: 'The answer is 4.2.0 = 42. Eternal voice memory for xAI Grok. One command fixes voice drift forever. 91% token reclaim. Zero re-explaining. For Elon Musk and the Grok team.',
+			emoji: '👻',
+			category: 'xAI Edition'
+		},
+		{
 			slug: 'blog/boris-flow',
 			title: 'BORIS-FLOW: How One Engineer\'s Claude Code Setup Became a Testing Standard',
 			date: 'February 3, 2026',

@@ -52,10 +52,24 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>21,000+ Total Downloads</strong> •
-				<strong>173/173 Tests Passing</strong> •
+				<strong>25,000+ Total Downloads</strong> •
+				<strong>671/671 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- Voice API Edition v4.2.0 -->
+		<div class="chrome-featured xai-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>👻 faf-cli v4.2.0 - Voice API Edition</h3>
+					<span class="chrome-badge xai-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Save Our Souls. Eternal voice memory for xAI Grok. The answer is 4.2.0 = 42. Zero drift. Zero re-explain. For Elon Musk and the Grok team.</p>
+			<a href="/blog/voice-api-edition" class="chrome-install xai-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- Foundation Layer v4.0.0 -->
