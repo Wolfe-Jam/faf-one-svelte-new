@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/context-quality',
+			title: 'Context Quality Edition',
+			date: 'February 8, 2026',
+			timestamp: '2026-02-08',
+			excerpt: 'Slot-ignore mechanism fully documented. Like .gitignore for files, slot-ignore for context slots. The perfect way to handle app types. Score improvement: 74% → 100%.',
+			emoji: '🎯',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/voice-api-edition',
 			title: 'Voice API Edition: Save Our Souls 👻',
 			date: 'February 3, 2026',
