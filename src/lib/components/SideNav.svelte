@@ -76,6 +76,7 @@
 
 	<div class="nav-section">
 		<h4>Resources</h4>
+		<a href="/6ws" onclick={() => isOpen = false}>📋 6Ws Builder</a>
 		<a href="/press" onclick={() => isOpen = false}>📦 Press Kit</a>
 		<a href="/terms" onclick={() => isOpen = false}>📜 Terms</a>
 		<a href="/privacy" onclick={() => isOpen = false}>🔒 Privacy</a>
