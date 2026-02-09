@@ -25,12 +25,12 @@
 
   // Placeholder suggestions for tab-completion
   const placeholders = {
-    who: 'developers, designers, teams...',
-    what: 'creates AI context for assistants like Claude',
-    where: 'Terminal, browser, cloud...',
-    why: 'AI needs context to perform well',
-    when: 'on new projects, daily workflows...',
-    how: 'npm install, pip install, clone repo...'
+    who: 'creators, builders',
+    what: 'app for...',
+    where: 'web, mobile',
+    why: 'gap in market for...',
+    when: 'within a month',
+    how: 'SaaS, downloads'
   };
 
   // Computed outputs
@@ -180,7 +180,7 @@
                 type="text"
                 id="who"
                 bind:value={formData.who}
-                placeholder="developers, designers, teams..."
+                placeholder="creators, builders"
                 onkeydown={(e) => handleTabComplete(e, 'who')}
               />
               <button
@@ -204,7 +204,7 @@
                 type="text"
                 id="what"
                 bind:value={formData.what}
-                placeholder="creates AI context for assistants like Claude"
+                placeholder="app for..."
                 onkeydown={(e) => handleTabComplete(e, 'what')}
               />
               <button
@@ -228,7 +228,7 @@
                 type="text"
                 id="where"
                 bind:value={formData.where}
-                placeholder="Terminal, browser, cloud..."
+                placeholder="web, mobile"
                 onkeydown={(e) => handleTabComplete(e, 'where')}
               />
               <button
@@ -252,7 +252,7 @@
                 type="text"
                 id="why"
                 bind:value={formData.why}
-                placeholder="AI needs context to perform well"
+                placeholder="gap in market for..."
                 onkeydown={(e) => handleTabComplete(e, 'why')}
               />
               <button
@@ -276,7 +276,7 @@
                 type="text"
                 id="when"
                 bind:value={formData.when}
-                placeholder="on new projects, daily workflows..."
+                placeholder="within a month"
                 onkeydown={(e) => handleTabComplete(e, 'when')}
               />
               <button
@@ -300,7 +300,7 @@
                 type="text"
                 id="how"
                 bind:value={formData.how}
-                placeholder="npm install, pip install, clone repo..."
+                placeholder="SaaS, downloads"
                 onkeydown={(e) => handleTabComplete(e, 'how')}
               />
               <button
