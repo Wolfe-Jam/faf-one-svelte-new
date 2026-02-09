@@ -32,7 +32,7 @@
 git init
 
 <span class="comment"># Write README</span>
-cat > README.md << <span class="string">'EOF'</span>
+cat > README.md &lt;&lt; <span class="string">'EOF'</span>
 <span class="comment"># faf-generator-wasm</span>
 
 Rust WASM generator for FAF (Foundational AI-context Format).
