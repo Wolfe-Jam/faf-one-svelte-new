@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/adoption-catalysts',
+			title: 'Adoption Catalysts Edition',
+			date: 'February 9, 2026',
+			timestamp: '2026-02-09',
+			excerpt: 'Two new features make AI-readiness instant: 6Ws Builder integration and automatic README extraction. Zero manual work required.',
+			emoji: '🚀',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/context-quality',
 			title: 'Context Quality Edition',
 			date: 'February 8, 2026',
