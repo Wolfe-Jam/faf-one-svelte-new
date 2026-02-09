@@ -1,7 +1,7 @@
 <script>
 	const posts = [
 		{
-			slug: 'blog/adoption-catalysts',
+			slug: 'blog/readme-evolution',
 			title: '"README evolution for AI era" -- we finally realized what Gemini meant!',
 			date: 'February 9, 2026',
 			timestamp: '2026-02-09',

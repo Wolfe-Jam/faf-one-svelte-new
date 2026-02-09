@@ -20,7 +20,7 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / README evolution for AI era
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / README Evolution
 		</div>
 
 		<h1>"README evolution for AI era" -- we finally realized what Gemini meant!</h1>
