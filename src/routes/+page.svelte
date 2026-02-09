@@ -16,6 +16,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import FafLogo from '$lib/components/FafLogo.svelte';
 	import LatestStory from '$lib/components/LatestStory.svelte';
+	import GitHubSnackbar from '$lib/components/GitHubSnackbar.svelte';
 
 	let isLoaded = $state(false);
 	let showSplash = $state(true);
@@ -93,6 +94,7 @@
 {/if}
 
 <Navigation />
+<GitHubSnackbar />
 
 {#if isLoaded}
 <LatestStory />

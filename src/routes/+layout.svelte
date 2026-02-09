@@ -54,13 +54,7 @@
 	} */
 
 	.official-banner {
-		background: linear-gradient(135deg,
-			#4a4a4a 0%,
-			#2c3e50 20%,
-			#0a0a0a 50%,
-			#2c3e50 80%,
-			#4a4a4a 100%
-		);
+		background: #0a0a0a;
 		color: white;
 		padding: 12px 20px;
 		font-weight: 600;

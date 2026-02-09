@@ -51,7 +51,13 @@
 		justify-content: center;
 		gap: 0.5rem;
 		padding: 0.6rem 1rem;
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		background: linear-gradient(135deg,
+			#4a4a4a 0%,
+			#2c3e50 20%,
+			#0a0a0a 50%,
+			#2c3e50 80%,
+			#4a4a4a 100%
+		);
 		color: white;
 		font-size: 0.95rem;
 		border-bottom: 1px solid rgba(255, 107, 53, 0.3);

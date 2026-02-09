@@ -147,16 +147,16 @@
 
 <svelte:head>
   <title>6Ws Builder - Generate AI-Ready Context | FAF</title>
-  <meta name="description" content="Answer 6 questions to generate README.md and project.faf files for AI assistants like Claude, Gemini, and ChatGPT." />
+  <meta name="description" content="Answer 6 questions to generate AI-ready context. Works with Claude, Gemini, Grok, Cursor, Codex, WARP, any AI assistant." />
 </svelte:head>
 
 <div class="page">
   <!-- Hero Section -->
   <div class="hero">
     <h1>6Ws Builder</h1>
-    <p class="subtitle">Answer 6 questions → Get AI-ready context</p>
+    <p class="subtitle">Answer 6 questions → Copy → Paste to AI</p>
     <p class="description">
-      Generate human_context for Claude, Gemini, ChatGPT. Share it with your AI for instant project understanding.
+      Works with Claude, Gemini, Grok, Cursor, Codex, WARP, any AI assistant.
     </p>
   </div>
 
@@ -315,16 +315,21 @@
         </form>
 
         {#if isComplete}
-          <button class="completion-button" transition:fade onclick={downloadBothFiles}>
+          <button class="completion-button" transition:fade onclick={() => copyToClipboard('faf')}>
             <span class="completion-icon">🎉</span>
             <span class="completion-text">
-              <strong>Download Both Files!</strong>
-              <small>README-6ws.md + project.faf</small>
+              <strong>{copied.faf ? '✓ Copied!' : 'Copy human_context'}</strong>
+              <small>Paste into Claude, Gemini, Grok, Cursor, Codex, WARP, any AI</small>
             </span>
           </button>
+          <div class="secondary-action">
+            <button class="download-link" onclick={downloadBothFiles}>
+              📥 Or download files (README-6ws.md + project.faf)
+            </button>
+          </div>
         {:else}
           <div class="progress-hint">
-            Fill all 6 questions to unlock downloads
+            Fill all 6 questions to get started
           </div>
         {/if}
       </div>
@@ -416,22 +421,22 @@
 
   <!-- Next Steps -->
   <div class="next-steps">
-    <h2>What's Next?</h2>
+    <h2>How to Use This</h2>
     <div class="steps-grid">
-      <div class="step">
-        <div class="step-icon">📄</div>
-        <h3>1. Copy to README</h3>
-        <p>Paste the README section into your project's README.md</p>
+      <div class="step primary-step">
+        <div class="step-icon">🤖</div>
+        <h3>1. Share with AI (Most Common)</h3>
+        <p>Click the big green button, then paste the human_context into any AI chat. Works with Claude, Gemini, Grok, Cursor, Codex, WARP, any AI assistant.</p>
       </div>
       <div class="step">
         <div class="step-icon">📦</div>
-        <h3>2. Add project.faf</h3>
-        <p>Save project.faf to your project root directory</p>
+        <h3>2. Save to project.faf (Optional)</h3>
+        <p>Download project.faf and save to your project root for persistent context across all AI tools.</p>
       </div>
       <div class="step">
-        <div class="step-icon">🤖</div>
-        <h3>3. Share with your AI</h3>
-        <p>Give the human_context section to Claude, Gemini, or ChatGPT. They'll understand your project instantly and give better answers.</p>
+        <div class="step-icon">📄</div>
+        <h3>3. Add to README (Optional)</h3>
+        <p>Download README-6ws.md section and paste into your project documentation.</p>
       </div>
     </div>
   </div>
@@ -655,6 +660,26 @@
     font-weight: 400;
   }
 
+  .secondary-action {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .download-link {
+    background: none;
+    border: none;
+    color: var(--faf-gray);
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .download-link:hover {
+    color: var(--faf-orange);
+  }
+
   .progress-hint {
     color: var(--faf-gray);
     text-align: center;
@@ -812,6 +837,27 @@
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .step.primary-step {
+    border: 3px solid var(--faf-green);
+    background: linear-gradient(135deg, #f0fff4 0%, white 100%);
+    position: relative;
+  }
+
+  .step.primary-step::before {
+    content: '⭐ START HERE';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--faf-green);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
 
   .step-icon {
