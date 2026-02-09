@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>Adoption Catalysts Edition - claude-faf-mcp v4.1.0 | FAF</title>
+	<title>"README evolution for AI era" - claude-faf-mcp v4.1.0 | FAF</title>
 	<meta name="description" content="Two new features make AI-readiness instant: 6Ws Builder integration and automatic README extraction. Zero manual work required." />
-	<meta property="og:title" content="Adoption Catalysts Edition - claude-faf-mcp v4.1.0" />
-	<meta property="og:description" content="6Ws Builder integration and automatic README extraction make AI-readiness instant." />
+	<meta property="og:title" content="README evolution for AI era - claude-faf-mcp v4.1.0" />
+	<meta property="og:description" content="We finally realized what Gemini meant: 6Ws Builder integration and automatic README extraction make AI-readiness instant." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -20,12 +20,12 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Adoption Catalysts Edition
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / README evolution for AI era
 		</div>
 
-		<h1>Adoption Catalysts Edition</h1>
+		<h1>"README evolution for AI era" -- we finally realized what Gemini meant!</h1>
 		<p class="version-tag">claude-faf-mcp v4.1.0</p>
-		<p class="subtitle">Two paths to Gold Code. Zero manual work required.</p>
+		<p class="subtitle">Google Gemini CLI (9.5/10 Rating)</p>
 		<div class="meta">
 			<time datetime="2026-02-09">February 9, 2026</time>
 			<span class="separator">•</span>

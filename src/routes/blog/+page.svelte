@@ -2,7 +2,7 @@
 	const posts = [
 		{
 			slug: 'blog/adoption-catalysts',
-			title: 'Adoption Catalysts Edition',
+			title: '"README evolution for AI era" -- we finally realized what Gemini meant!',
 			date: 'February 9, 2026',
 			timestamp: '2026-02-09',
 			excerpt: 'Two new features make AI-readiness instant: 6Ws Builder integration and automatic README extraction. Zero manual work required.',
