@@ -36,21 +36,37 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> claude-faf-mcp v4.1.0 adds two features designed to re-engage adoption: <code>faf_human_add</code> for web form integration (faf.one/6ws) and <code>faf_readme</code> for automatic README extraction. Both deliver +25-35% AI-readiness score boosts with zero manual work.
+				September 2025: Google Gemini CLI called FAF <strong>"README evolution for AI era."</strong>
+			</p>
+
+			<p>
+				We knew READMEs mattered for AI context. But most are average - missing the structured data AI actually needs. We lived with it.
+			</p>
+
+			<p>
+				<strong>Then we realized:</strong> we don't have to accept mediocre context. We can show people exactly what AI wants.
+			</p>
+
+			<p class="lead">
+				<strong>v4.1.0 does both:</strong> Extract what you have (<code>faf_readme</code>), show what's missing, fill the gaps (<code>faf_human_add</code>). That's the evolution.
 			</p>
 		</section>
 
 		<section>
 			<h2>The Problem</h2>
-			<p>Adoption slowed. Users wanted context but building it felt like work.</p>
+			<p>Most READMEs are written for humans, not AI. They're inconsistent, unstructured, and missing the context AI craves.</p>
 
-			<p><strong>Two friction points:</strong></p>
+			<p><strong>What AI actually wants:</strong></p>
 			<ul>
-				<li><strong>Starting from scratch</strong> - Empty .faf files, manual entry, slow</li>
-				<li><strong>Existing projects</strong> - Already have READMEs, why type it twice?</li>
+				<li><strong>WHO</strong> - Team/maintainer info (missing in 60% of repos)</li>
+				<li><strong>WHAT</strong> - Clear description (often vague)</li>
+				<li><strong>WHY</strong> - Purpose/motivation (rarely documented)</li>
+				<li><strong>WHERE</strong> - Runtime environment (scattered)</li>
+				<li><strong>WHEN</strong> - Timeline/status (outdated)</li>
+				<li><strong>HOW</strong> - App type (implied, not stated)</li>
 			</ul>
 
-			<p>We needed catalysts. Features that make AI-readiness <em>instant</em>.</p>
+			<p>We can extract READMEs, but why settle for average when we can guide people to Gold Code?</p>
 		</section>
 
 		<section>
