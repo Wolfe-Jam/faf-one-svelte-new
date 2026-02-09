@@ -1,6 +1,12 @@
 <script>
 	const diagrams = [
 		{
+			slug: 'readme-evolution-paths',
+			title: 'Two Paths to 100% 🏆',
+			description: 'README Evolution Edition - 6Ws Builder vs Auto Extract paths to championship context',
+			category: 'FAF Core'
+		},
+		{
 			slug: '6ws-flow',
 			title: '6Ws Flow - Universal AI Context',
 			description: 'Answer 6 questions → Better READMEs + AI-ready context → Standard emerges',
