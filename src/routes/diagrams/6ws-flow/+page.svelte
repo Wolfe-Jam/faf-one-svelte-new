@@ -39,32 +39,32 @@
 			</div>
 			<div class="questions-grid">
 				<div class="question-item">
-					<div class="q-number">1</div>
+					<div class="q-number">1W</div>
 					<div class="q-label">WHO</div>
 					<div class="q-example">Who is this for?</div>
 				</div>
 				<div class="question-item">
-					<div class="q-number">2</div>
+					<div class="q-number">2W</div>
 					<div class="q-label">WHAT</div>
 					<div class="q-example">What does it do?</div>
 				</div>
 				<div class="question-item">
-					<div class="q-number">3</div>
+					<div class="q-number">3W</div>
 					<div class="q-label">WHERE</div>
 					<div class="q-example">Where does it run?</div>
 				</div>
 				<div class="question-item">
-					<div class="q-number">4</div>
+					<div class="q-number">4W</div>
 					<div class="q-label">WHY</div>
 					<div class="q-example">Why does it exist?</div>
 				</div>
 				<div class="question-item">
-					<div class="q-number">5</div>
+					<div class="q-number">5W</div>
 					<div class="q-label">WHEN</div>
 					<div class="q-example">When to use it?</div>
 				</div>
 				<div class="question-item">
-					<div class="q-number">6</div>
+					<div class="q-number">6W</div>
 					<div class="q-label">HOW</div>
 					<div class="q-example">How to get started?</div>
 				</div>
@@ -310,17 +310,19 @@
 	}
 
 	.q-number {
-		width: 28px;
+		min-width: 38px;
 		height: 28px;
+		padding: 0 0.5rem;
 		background: #FF6B35;
 		color: white;
-		border-radius: 50%;
+		border-radius: 14px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		margin-bottom: 0.75rem;
+		font-family: 'SF Mono', monospace;
 	}
 
 	.q-label {
