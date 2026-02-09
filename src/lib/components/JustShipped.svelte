@@ -210,21 +210,21 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v3.4.8 -->
+			<!-- CLI v4.2.0 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.4.8</h3>
+					<h3>faf-cli v4.2.0</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Context Intelligence Edition. Smart bi-sync preservation.
+					Voice API Edition. Eternal voice memory for xAI Grok. Zero drift. Zero re-explain.
 				</p>
 				<ul class="release-features">
-					<li>21k+ downloads (npm)</li>
-					<li>586/586 tests passing</li>
+					<li>25k+ downloads (npm)</li>
+					<li>671/671 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
-					<li>43 commands</li>
+					<li>6Ws web builder + CLI integration</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
@@ -236,14 +236,14 @@
 				</div>
 			</div>
 
-			<!-- MCP v3.3.1 -->
+			<!-- MCP v4.0.0 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>claude-faf-mcp v3.3.2</h3>
+					<h3>claude-faf-mcp v4.0.0</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
+					Foundation Layer. IANA registered. Bi-sync &lt;10ms. Universal AI context.
 				</p>
 				<ul class="release-features">
 					<li>8.5k downloads (npm)</li>
@@ -266,8 +266,8 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>21,000+ Total Downloads</strong> •
-				<strong>586/586 Tests Passing</strong> •
+				<strong>25,000+ Total Downloads</strong> •
+				<strong>671/671 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -302,21 +302,21 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v3.4.8 -->
+			<!-- CLI v4.2.0 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v3.4.8</h3>
+					<h3>faf-cli v4.2.0</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Context Intelligence Edition. Smart bi-sync preservation.
+					Voice API Edition. Eternal voice memory for xAI Grok. Zero drift. Zero re-explain.
 				</p>
 				<ul class="release-features">
-					<li>21k+ downloads (npm)</li>
-					<li>586/586 tests passing</li>
+					<li>25k+ downloads (npm)</li>
+					<li>671/671 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>&lt;50ms processing time</li>
-					<li>43 commands</li>
+					<li>6Ws web builder + CLI integration</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
@@ -328,14 +328,14 @@
 				</div>
 			</div>
 
-			<!-- MCP v3.3.1 -->
+			<!-- MCP v4.0.0 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>claude-faf-mcp v3.3.2</h3>
+					<h3>claude-faf-mcp v4.0.0</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
+					Foundation Layer. IANA registered. Bi-sync &lt;10ms. Universal AI context.
 				</p>
 				<ul class="release-features">
 					<li>8.5k downloads (npm)</li>
@@ -358,8 +358,8 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>21,000+ Total Downloads</strong> •
-				<strong>586/586 Tests Passing</strong> •
+				<strong>25,000+ Total Downloads</strong> •
+				<strong>671/671 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
