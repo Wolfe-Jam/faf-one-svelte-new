@@ -229,7 +229,7 @@ Next steps:
 			<ul>
 				<li>Web form or automatic extraction</li>
 				<li>Zero manual copying</li>
-				<li>Instant path to 🥉 Bronze (85%+)</li>
+				<li>Many hit 100% 🏆 on first run</li>
 			</ul>
 
 			<p>Two paths. Same destination. Zero friction.</p>
