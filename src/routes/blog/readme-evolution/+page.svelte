@@ -118,11 +118,12 @@ README: /path/to/README.md
 Confidence: 82%
 Fields found: 5/6
 
-WHO: developers using AI assistants
-WHAT: Creates persistent AI context
-WHERE: Terminal, Browser, CI/CD
-WHY: AI needs context to perform well
-HOW: npm install -g faf-cli
+1W (WHO): creators, developers
+2W (WHAT): app for persistent AI context
+3W (WHERE): web, terminal, CI/CD
+4W (WHY): gap in AI memory across sessions
+5W (WHEN): active development
+6W (HOW): npm install -g faf-cli
 
 Next steps:
 1. Run faf_readme { merge: true } to merge into project.faf
