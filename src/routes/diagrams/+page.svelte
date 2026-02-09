@@ -1,6 +1,18 @@
 <script>
 	const diagrams = [
 		{
+			slug: '6ws-flow',
+			title: '6Ws Flow - Universal AI Context',
+			description: 'Answer 6 questions → Better READMEs + AI-ready context → Standard emerges',
+			category: 'FAF Core'
+		},
+		{
+			slug: 'builder-double-whammy',
+			title: 'builder.faf.one - DOUBLE-WHAMMY',
+			description: 'Rust WASM (211KB, 3ms) + Zig WASM (2.7KB, 14μs) in-browser architecture',
+			category: 'FAF Core'
+		},
+		{
 			slug: 'mcpaas-before-after',
 			title: 'MCPaaS Before/After',
 			description: 'Context persistence comparison - session memory vs eternal memory',
