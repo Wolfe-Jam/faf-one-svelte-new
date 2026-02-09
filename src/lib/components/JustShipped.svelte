@@ -52,7 +52,7 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>25,000+ Total Downloads</strong> •
+				<strong>21,000+ Total Downloads</strong> •
 				<strong>671/671 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -236,14 +236,14 @@
 				</div>
 			</div>
 
-			<!-- MCP v4.0.0 -->
+			<!-- MCP v3.3.2 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>claude-faf-mcp v4.0.0</h3>
+					<h3>claude-faf-mcp v3.3.2</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					Foundation Layer. IANA registered. Bi-sync &lt;10ms. Universal AI context.
+					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
 				<ul class="release-features">
 					<li>8.5k downloads (npm)</li>
@@ -266,7 +266,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>25,000+ Total Downloads</strong> •
+				<strong>21,000+ Total Downloads</strong> •
 				<strong>671/671 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -328,14 +328,14 @@
 				</div>
 			</div>
 
-			<!-- MCP v4.0.0 -->
+			<!-- MCP v3.3.2 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>claude-faf-mcp v4.0.0</h3>
+					<h3>claude-faf-mcp v3.3.2</h3>
 					<span class="badge anthropic">Anthropic-Approved</span>
 				</div>
 				<p class="release-description">
-					Foundation Layer. IANA registered. Bi-sync &lt;10ms. Universal AI context.
+					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
 				<ul class="release-features">
 					<li>8.5k downloads (npm)</li>
@@ -358,7 +358,7 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>25,000+ Total Downloads</strong> •
+				<strong>21,000+ Total Downloads</strong> •
 				<strong>671/671 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
