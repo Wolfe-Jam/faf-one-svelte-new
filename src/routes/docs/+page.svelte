@@ -17,6 +17,28 @@
 		activeSection = id;
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 	}
+
+	// Add copy buttons to code blocks after mount
+	onMount(() => {
+		const codeBlocks = document.querySelectorAll('pre');
+		codeBlocks.forEach((pre) => {
+			// Skip if already has copy button
+			if (pre.querySelector('.copy-btn')) return;
+
+			const button = document.createElement('button');
+			button.className = 'copy-btn';
+			button.textContent = 'Copy';
+			button.onclick = async () => {
+				const code = pre.querySelector('code')?.textContent || '';
+				await navigator.clipboard.writeText(code);
+				button.textContent = 'Copied!';
+				setTimeout(() => {
+					button.textContent = 'Copy';
+				}, 2000);
+			};
+			pre.appendChild(button);
+		});
+	});
 </script>
 
 <svelte:head>
@@ -236,22 +258,52 @@
 		padding: 0.2rem 0.4rem;
 		border-radius: 3px;
 		font-family: 'Courier New', monospace;
-		font-size: 0.9em;
+		font-size: 0.95em;
 		color: #ff8c5a;
 	}
 
 	.docs-content :global(pre) {
 		background: #1a1a1a;
 		padding: 1rem;
+		padding-top: 3rem;
 		border-radius: 6px;
 		overflow-x: auto;
 		border-left: 3px solid #ff6b35;
+		position: relative;
 	}
 
 	.docs-content :global(pre code) {
 		background: none;
 		padding: 0;
 		color: #f5f5dc;
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.docs-content :global(.copy-btn) {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		padding: 0.4rem 0.8rem;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.docs-content :global(.copy-btn:hover) {
+		background: rgba(255, 107, 53, 0.3);
+		border-color: #ff6b35;
+	}
+
+	.docs-content :global(.copy-btn:active) {
+		transform: scale(0.95);
 	}
 
 	.docs-content :global(ul),
