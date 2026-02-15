@@ -8,8 +8,8 @@
 	let vercelCopied = $state(false);
 	let userCopied = $state(false);
 
-	const reactCommand = 'npx faf-cli git https://github.com/facebook/react';
-	const vercelCommand = 'npx faf-cli git https://github.com/vercel/next.js';
+	const reactCommand = 'npx faf-cli@latest git https://github.com/facebook/react';
+	const vercelCommand = 'npx faf-cli@latest git https://github.com/vercel/next.js';
 	const command = vercelCommand; // For terminal animation
 
 	onMount(() => {
@@ -43,7 +43,7 @@
 	}
 
 	async function copyUser() {
-		const fullCommand = `npx faf-cli git https://github.com/${editableRepoName}`;
+		const fullCommand = `npx faf-cli@latest git https://github.com/${editableRepoName}`;
 		await navigator.clipboard.writeText(fullCommand);
 		userCopied = true;
 		setTimeout(() => userCopied = false, 2000);
@@ -74,7 +74,7 @@
 		<p class="instruction-line">facebook/react</p>
 		<div class="copy-box clickable" style="background: #1a1a1a !important;" onclick={copyReact}>
 			<div class="code-display" style="color: #f5f5dc !important;">
-				<span class="cmd-text">npx faf-cli git https://github.com/</span><span class="repo-highlight">facebook/react</span>
+				<span class="cmd-text">npx faf-cli@latest git https://github.com/</span><span class="repo-highlight">facebook/react</span>
 			</div>
 			<button class="copy-btn" onclick={copyReact}>{reactCopied ? 'Copied!' : 'Copy'}</button>
 		</div>
@@ -83,7 +83,7 @@
 		<p class="instruction-line" style="margin-top: 1rem;">vercel/next.js</p>
 		<div class="copy-box clickable" style="margin-top: 0.5rem; background: #1a1a1a !important;" onclick={copyVercel}>
 			<div class="code-display" style="color: #f5f5dc !important;">
-				<span class="cmd-text">npx faf-cli git https://github.com/</span><span class="repo-highlight">vercel/next.js</span>
+				<span class="cmd-text">npx faf-cli@latest git https://github.com/</span><span class="repo-highlight">vercel/next.js</span>
 			</div>
 			<button class="copy-btn" onclick={copyVercel}>{vercelCopied ? 'Copied!' : 'Copy'}</button>
 		</div>
@@ -95,7 +95,7 @@
 		<p class="instruction-line centered">Now try yours--it's easy!</p>
 		<div class="copy-box editable-box clickable" style="margin-top: 0.5rem; background: #1a1a1a !important;" onclick={copyUser}>
 			<div class="editable-display">
-				<span class="cmd-prefix">npx faf-cli git https://github.com/</span><input
+				<span class="cmd-prefix">npx faf-cli@latest git https://github.com/</span><input
 					type="text"
 					class="editable-part"
 					bind:value={editableRepoName}
