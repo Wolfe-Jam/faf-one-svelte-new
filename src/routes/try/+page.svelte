@@ -4,6 +4,9 @@
 	let codeTyped = $state('');
 	let showOutput = $state(false);
 	let editableRepoName = $state('your-repo');
+	let reactCopied = $state(false);
+	let vercelCopied = $state(false);
+	let userCopied = $state(false);
 
 	const reactCommand = 'npx faf-cli git https://github.com/facebook/react';
 	const vercelCommand = 'npx faf-cli git https://github.com/vercel/next.js';
@@ -27,15 +30,23 @@
 		return () => clearInterval(typeInterval);
 	});
 
-	async function copyCommand() {
+	async function copyReact() {
+		await navigator.clipboard.writeText(reactCommand);
+		reactCopied = true;
+		setTimeout(() => reactCopied = false, 2000);
+	}
+
+	async function copyVercel() {
 		await navigator.clipboard.writeText(vercelCommand);
-		const btn = event.target;
-		if (btn) {
-			btn.textContent = 'Copied!';
-			setTimeout(() => {
-				btn.textContent = 'Copy';
-			}, 2000);
-		}
+		vercelCopied = true;
+		setTimeout(() => vercelCopied = false, 2000);
+	}
+
+	async function copyUser() {
+		const fullCommand = `npx faf-cli git https://github.com/${editableRepoName}`;
+		await navigator.clipboard.writeText(fullCommand);
+		userCopied = true;
+		setTimeout(() => userCopied = false, 2000);
 	}
 </script>
 
@@ -61,25 +72,20 @@
 
 		<!-- React Example -->
 		<p class="instruction-line">facebook/react</p>
-		<div class="copy-box" style="background: #1a1a1a !important;">
+		<div class="copy-box clickable" style="background: #1a1a1a !important;" onclick={copyReact}>
 			<div class="code-display" style="color: #f5f5dc !important;">
 				<span class="cmd-text">npx faf-cli git https://github.com/</span><span class="repo-highlight">facebook/react</span>
 			</div>
-			<button class="copy-btn" onclick={async () => {
-				await navigator.clipboard.writeText(reactCommand);
-				const btn = event.target;
-				btn.textContent = 'Copied!';
-				setTimeout(() => btn.textContent = 'Copy', 2000);
-			}}>Copy</button>
+			<button class="copy-btn" onclick={copyReact}>{reactCopied ? 'Copied!' : 'Copy'}</button>
 		</div>
 
 		<!-- Vercel/Next.js Example -->
 		<p class="instruction-line" style="margin-top: 1rem;">vercel/next.js</p>
-		<div class="copy-box" style="margin-top: 0.5rem; background: #1a1a1a !important;">
+		<div class="copy-box clickable" style="margin-top: 0.5rem; background: #1a1a1a !important;" onclick={copyVercel}>
 			<div class="code-display" style="color: #f5f5dc !important;">
 				<span class="cmd-text">npx faf-cli git https://github.com/</span><span class="repo-highlight">vercel/next.js</span>
 			</div>
-			<button class="copy-btn" onclick={copyCommand}>Copy</button>
+			<button class="copy-btn" onclick={copyVercel}>{vercelCopied ? 'Copied!' : 'Copy'}</button>
 		</div>
 
 		<!-- Gap -->
@@ -87,23 +93,17 @@
 
 		<!-- Try Your Own - Editable -->
 		<p class="instruction-line centered">Now try yours--it's easy!</p>
-		<div class="copy-box editable-box" style="margin-top: 0.5rem; background: #1a1a1a !important;">
+		<div class="copy-box editable-box clickable" style="margin-top: 0.5rem; background: #1a1a1a !important;" onclick={copyUser}>
 			<div class="editable-display">
 				<span class="cmd-prefix">npx faf-cli git https://github.com/</span><input
 					type="text"
 					class="editable-part"
 					bind:value={editableRepoName}
-					onclick={(e) => e.target.select()}
+					onclick={(e) => { e.stopPropagation(); e.target.select(); }}
 					placeholder="your-repo"
 				/>
 			</div>
-			<button class="copy-btn" onclick={() => {
-				const fullCommand = `npx faf-cli git https://github.com/${editableRepoName}`;
-				navigator.clipboard.writeText(fullCommand);
-				const btn = event.target;
-				btn.textContent = 'Copied!';
-				setTimeout(() => btn.textContent = 'Copy', 2000);
-			}}>Copy</button>
+			<button class="copy-btn" onclick={copyUser}>{userCopied ? 'Copied!' : 'Copy'}</button>
 		</div>
 
 		<!-- Terminal -->
@@ -378,6 +378,15 @@
 		background: #1a1a1a !important;
 		border: 1px solid #333;
 		border-radius: 8px;
+	}
+
+	.copy-box.clickable {
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+
+	.copy-box.clickable:hover {
+		border-color: #555;
 	}
 
 	.code-display {
