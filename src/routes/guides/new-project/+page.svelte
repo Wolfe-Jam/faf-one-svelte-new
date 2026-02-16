@@ -30,7 +30,7 @@
 			title: 'The Last 10-20%',
 			file: 'faf go',
 			when: 'When score is 80-90% (optional if already 100%)',
-			why: 'Interactive polish for that final leg to 100% 🏆 Trophy.',
+			why: 'Usually fills 1-2 missing 6 Ws (who/what/why). Stack detection is robust - blocker is almost always human context.',
 			highlight: true
 		}
 	];
@@ -72,6 +72,27 @@
 				<div class="philosophy-card">
 					<h3>Code Third</h3>
 					<p>Implementation follows definition. AI has context to help from the start. No documentation debt.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- README Tools -->
+		<section class="readme-tools">
+			<h2 class="section-title">README Generation Tools</h2>
+			<p class="section-intro">Don't have a README yet? We've got you covered with two easy options:</p>
+			<div class="tools-grid">
+				<div class="tool-card">
+					<h3>🌐 Web Tool: The 6 Ws</h3>
+					<p class="tool-description">Fill out a simple form answering who/what/why/where/when/how. Copy the generated README.</p>
+					<a href="https://www.faf.one/6ws" class="tool-link" target="_blank" rel="noopener noreferrer">
+						faf.one/6ws →
+					</a>
+				</div>
+				<div class="tool-card">
+					<h3>⌨️ CLI Tool</h3>
+					<p class="tool-description">Interactive command-line tool that asks the 6 Ws and generates a README for you.</p>
+					<pre class="tool-command"><code>faf readme</code></pre>
+					<p class="tool-note">Asks questions, writes README.md instantly</p>
 				</div>
 			</div>
 		</section>
@@ -179,8 +200,8 @@
 								<div class="result-preview">
 									<p class="result-label">Interactive polish:</p>
 									<ul class="result-list">
-										<li>❓ Asks targeted questions for missing slots</li>
-										<li>🎯 Fills that last 10-20% gap</li>
+										<li>💡 Usually fills 1-2 missing 6 Ws (who/what/why/where/when/how)</li>
+										<li>🎯 Stack detection is robust - blocker is human context</li>
 										<li>🏆 80-90% → 100% Trophy</li>
 										<li>⚡ Skip if faf auto already got you to 100%!</li>
 									</ul>
@@ -306,9 +327,10 @@ faf go
 			<h2 class="section-title">Quick Reference</h2>
 
 			<div class="ref-box caveat">
-				<h3>💡 Important Caveat</h3>
+				<h3>💡 What Blocks 100%?</h3>
 				<p class="answer">With a <strong>good README</strong>, <code>faf auto</code> can often reach 100% without needing <code>faf go</code>. And <code>faf git</code> on well-documented repos can score 100% on its own!</p>
-				<p class="answer">The 3 tools are available when you need them. But you might not need all 3.</p>
+				<p class="answer"><strong>When stuck at 80-90%:</strong> It's <em>very often</em> 1-2 missing 6 Ws (who/what/why/where/when/how). Tech stack detection is robust - the blocker is almost always human context.</p>
+				<p class="answer"><code>faf go</code> asks 1-2 targeted questions like "Who is this for?" or "Why did you build this?" and you're at 100%.</p>
 			</div>
 
 			<div class="ref-box">
@@ -466,6 +488,83 @@ faf go
 	.philosophy-card p {
 		color: #aaa;
 		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* README Tools */
+	.readme-tools {
+		margin-bottom: 4rem;
+	}
+
+	.tools-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.tool-card {
+		background: linear-gradient(135deg, #1a1a1a 0%, #0a2a2a 100%);
+		border: 2px solid #00d4d4;
+		border-radius: 12px;
+		padding: 2rem;
+		transition: all 0.3s;
+	}
+
+	.tool-card:hover {
+		border-color: #00ffff;
+		transform: translateY(-4px);
+		box-shadow: 0 8px 24px rgba(0, 212, 212, 0.2);
+	}
+
+	.tool-card h3 {
+		color: #00d4d4;
+		font-size: 1.25rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.tool-description {
+		color: #aaa;
+		line-height: 1.6;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.tool-link {
+		display: inline-block;
+		color: #ff6b35;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.1rem;
+		padding: 0.75rem 1.5rem;
+		background: rgba(255, 107, 53, 0.1);
+		border: 1px solid rgba(255, 107, 53, 0.3);
+		border-radius: 8px;
+		transition: all 0.2s;
+	}
+
+	.tool-link:hover {
+		background: rgba(255, 107, 53, 0.2);
+		border-color: #ff6b35;
+		transform: translateX(4px);
+	}
+
+	.tool-command {
+		background: #0a0a0a;
+		border: 1px solid #333;
+		border-radius: 6px;
+		padding: 1rem;
+		margin: 0 0 0.75rem 0;
+	}
+
+	.tool-command code {
+		color: #00d4d4;
+		font-family: 'Courier New', monospace;
+		font-size: 1rem;
+	}
+
+	.tool-note {
+		color: #888;
+		font-size: 0.9rem;
+		font-style: italic;
 		margin: 0;
 	}
 
