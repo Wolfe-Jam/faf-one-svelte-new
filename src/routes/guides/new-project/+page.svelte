@@ -11,60 +11,27 @@
 	const steps = [
 		{
 			num: 1,
-			title: 'Define Your Project',
-			file: 'README.md',
-			when: 'Day 1, before any code',
-			why: 'Forces you to articulate purpose. Can\'t fake it - you must know what you\'re building.',
-		},
-		{
-			num: 2,
-			title: 'Add Basic Structure',
-			file: 'package.json / Cargo.toml',
-			when: 'After README, before implementation',
-			why: 'Detects project type, stack, and package manager.',
-		},
-		{
-			num: 3,
-			title: 'Generate project.faf',
-			file: 'project.faf',
-			when: 'After README + structure, before implementation',
-			why: 'AI-readable context extracted from your foundation.',
+			title: 'Initial Extraction',
+			file: 'faf init OR faf git',
+			when: 'First step - choose based on context',
+			why: 'Extract initial context from your project or any GitHub repo.',
 			highlight: true
 		},
 		{
-			num: 4,
-			title: 'Generate CLAUDE.md',
-			file: 'CLAUDE.md',
-			when: 'After project.faf exists (optional)',
-			why: 'Only if working primarily with Claude. project.faf works with ALL AIs.',
-		},
-		{
-			num: 5,
-			title: 'Commit the Foundation',
-			file: 'Git commit',
-			when: 'After .faf (and optionally CLAUDE.md)',
-			why: 'AI context is committed before implementation.',
-		},
-		{
-			num: 6,
-			title: 'Build (Implementation)',
-			file: 'src/, tests/',
-			when: 'After foundation committed',
-			why: 'AI has context to help from line one.',
-		},
-		{
-			num: 7,
-			title: 'Grow Context',
+			num: 2,
+			title: 'Auto-Enhance',
 			file: 'faf auto',
-			when: 'After significant progress',
-			why: 'Auto-enhance from 30% → 80%.',
+			when: 'After initial extraction',
+			why: 'Turbo-Cat discovers 153+ formats. Grows from 30% → 80%.',
+			highlight: true
 		},
 		{
-			num: 8,
-			title: 'Refine',
+			num: 3,
+			title: 'The Last 10-20%',
 			file: 'faf go',
-			when: 'Before v1.0.0',
-			why: 'Interactive polish to 85%+ (Bronze) or 100% (Trophy).',
+			when: 'When score is 80-90% (optional if already 100%)',
+			why: 'Interactive polish for that final leg to 100% 🏆 Trophy.',
+			highlight: true
 		}
 	];
 </script>
@@ -111,7 +78,8 @@
 
 		<!-- The Workflow -->
 		<section class="workflow">
-			<h2 class="section-title">The 8-Step Workflow</h2>
+			<h2 class="section-title">The 3 Magic Tools</h2>
+			<p class="workflow-intro">Simple, powerful, championship-grade workflow.</p>
 
 			<div class="steps-container">
 				{#each steps as step}
@@ -136,138 +104,87 @@
 						</div>
 
 						{#if step.num === 1}
-							<div class="code-example">
-								<pre><code>{`git init
-# Write README with WHO/WHAT/WHY
-cat > README.md << 'EOF'
-# my-project
-
-Build something amazing.
-
-## Mission
-Solve [problem] for [users].
-
-## Tech Stack
-- Node.js
-- TypeScript
-- Express
-
-## Quick Start
-\`\`\`bash
-npm install
-npm run dev
-\`\`\`
-EOF`}</code></pre>
+							<div class="code-example highlight-box">
+								<div class="command-header">
+									<span class="command-label">Decision: Choose your path</span>
+								</div>
+								<div class="decision-tree">
+									<div class="decision-option">
+										<h4>Have a GitHub repo URL?</h4>
+										<div class="command-box">
+											<pre><code>npx faf-cli git https://github.com/facebook/react</code></pre>
+											<button
+												class="copy-btn-inline"
+												onclick={() => copyCommand('npx faf-cli git https://github.com/facebook/react', 'git')}
+											>
+												{copiedCommand === 'git' ? 'Copied!' : 'Copy'}
+											</button>
+										</div>
+										<p class="option-note">⏱️ 2 seconds → 30-50% score. No clone needed!</p>
+									</div>
+									<div class="decision-divider">OR</div>
+									<div class="decision-option">
+										<h4>Working locally?</h4>
+										<div class="command-box">
+											<pre><code>faf init</code></pre>
+											<button
+												class="copy-btn-inline"
+												onclick={() => copyCommand('faf init', 'init')}
+											>
+												{copiedCommand === 'init' ? 'Copied!' : 'Copy'}
+											</button>
+										</div>
+										<p class="option-note">Extracts from your local files (README, package.json, etc.)</p>
+									</div>
+								</div>
 							</div>
 						{/if}
 
 						{#if step.num === 2}
-							<div class="code-example">
-								<pre><code># For Node.js/TypeScript
-npm init -y
-
-# For Rust
-cargo init
-
-# For Python
-poetry init</code></pre>
+							<div class="code-example highlight-box">
+								<div class="command-header">
+									<span class="command-label">Auto-enhance your context:</span>
+									<button
+										class="copy-btn-inline"
+										onclick={() => copyCommand('faf auto', 'auto')}
+									>
+										{copiedCommand === 'auto' ? 'Copied!' : 'Copy'}
+									</button>
+								</div>
+								<pre><code>faf auto</code></pre>
+								<div class="result-preview">
+									<p class="result-label">What happens:</p>
+									<ul class="result-list">
+										<li>✨ Turbo-Cat discovers 153+ format types</li>
+										<li>📊 Auto-fills detected stack slots</li>
+										<li>🚀 Grows score from 30% → 80%</li>
+										<li>⚡ Zero questions asked - fully automated</li>
+									</ul>
+								</div>
 							</div>
 						{/if}
 
 						{#if step.num === 3}
 							<div class="code-example highlight-box">
 								<div class="command-header">
-									<span class="command-label">Run this command:</span>
+									<span class="command-label">The final 10-20% (optional if already 100%):</span>
 									<button
 										class="copy-btn-inline"
-										onclick={() => copyCommand('faf init', 'step3')}
+										onclick={() => copyCommand('faf go', 'go')}
 									>
-										{copiedCommand === 'step3' ? 'Copied!' : 'Copy'}
-									</button>
-								</div>
-								<pre><code>faf init</code></pre>
-								<div class="result-preview">
-									<p class="result-label">Result:</p>
-									<ul class="result-list">
-										<li>✅ Reads README.md (extracts 6 Ws)</li>
-										<li>✅ Reads package.json (detects stack)</li>
-										<li>✅ Generates project.faf (30-50% score)</li>
-										<li>✅ AI-ready before first line of code</li>
-									</ul>
-								</div>
-							</div>
-						{/if}
-
-						{#if step.num === 4}
-							<div class="code-example">
-								<div class="command-header">
-									<span class="command-label">Optional (Claude users only):</span>
-									<button
-										class="copy-btn-inline"
-										onclick={() => copyCommand('faf bi-sync', 'step4')}
-									>
-										{copiedCommand === 'step4' ? 'Copied!' : 'Copy'}
-									</button>
-								</div>
-								<pre><code>faf bi-sync</code></pre>
-								<p class="code-note">Creates CLAUDE.md from project.faf. project.faf alone works with ALL AIs.</p>
-							</div>
-						{/if}
-
-						{#if step.num === 5}
-							<div class="code-example">
-								<pre><code>git add README.md package.json project.faf
-git commit -m "Add project foundation
-
-- README defines purpose
-- package.json defines structure
-- project.faf provides AI context
-
-AI-ready before first line of code."</code></pre>
-							</div>
-						{/if}
-
-						{#if step.num === 6}
-							<div class="code-example">
-								<pre><code># Now write your actual code
-mkdir src
-touch src/index.ts
-
-# AI has context from day 1
-# Attach project.faf to Claude/ChatGPT/Gemini
-# "Help me build the API router"</code></pre>
-							</div>
-						{/if}
-
-						{#if step.num === 7}
-							<div class="code-example">
-								<div class="command-header">
-									<span class="command-label">Auto-enhance your context:</span>
-									<button
-										class="copy-btn-inline"
-										onclick={() => copyCommand('faf auto', 'step7')}
-									>
-										{copiedCommand === 'step7' ? 'Copied!' : 'Copy'}
-									</button>
-								</div>
-								<pre><code>faf auto</code></pre>
-								<p class="code-note">Turbo-Cat discovers 153+ formats, grows score from 30% → 80%.</p>
-							</div>
-						{/if}
-
-						{#if step.num === 8}
-							<div class="code-example">
-								<div class="command-header">
-									<span class="command-label">Polish to perfection:</span>
-									<button
-										class="copy-btn-inline"
-										onclick={() => copyCommand('faf go', 'step8')}
-									>
-										{copiedCommand === 'step8' ? 'Copied!' : 'Copy'}
+										{copiedCommand === 'go' ? 'Copied!' : 'Copy'}
 									</button>
 								</div>
 								<pre><code>faf go</code></pre>
-								<p class="code-note">Interactive interview to fill remaining gaps. Reach 85%+ (Bronze) or 100% (Trophy).</p>
+								<div class="result-preview">
+									<p class="result-label">Interactive polish:</p>
+									<ul class="result-list">
+										<li>❓ Asks targeted questions for missing slots</li>
+										<li>🎯 Fills that last 10-20% gap</li>
+										<li>🏆 80-90% → 100% Trophy</li>
+										<li>⚡ Skip if faf auto already got you to 100%!</li>
+									</ul>
+								</div>
 							</div>
 						{/if}
 					</div>
@@ -275,71 +192,65 @@ touch src/index.ts
 			</div>
 		</section>
 
-		<!-- Timeline -->
+		<!-- Score Progression -->
 		<section class="timeline">
-			<h2 class="section-title">Timing Chart</h2>
+			<h2 class="section-title">Score Progression</h2>
 			<div class="timeline-table">
 				<table>
 					<thead>
 						<tr>
 							<th>Step</th>
-							<th>File</th>
-							<th>When</th>
+							<th>Command</th>
 							<th>Score</th>
+							<th>What Happens</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr class="highlight-row">
 							<td>1</td>
-							<td>README.md</td>
-							<td>Day 1</td>
-							<td>-</td>
+							<td><code>faf init</code> or <code>faf git</code></td>
+							<td><strong>30-50%</strong></td>
+							<td>Initial extraction from README + package files</td>
 						</tr>
-						<tr>
+						<tr class="highlight-row">
 							<td>2</td>
-							<td>package.json</td>
-							<td>Day 1-2</td>
-							<td>-</td>
+							<td><code>faf auto</code></td>
+							<td><strong>80%</strong></td>
+							<td>Turbo-Cat auto-discovers formats and fills slots</td>
 						</tr>
 						<tr class="highlight-row">
 							<td>3</td>
-							<td><strong>project.faf</strong></td>
-							<td><strong>After docs</strong></td>
-							<td><strong>30-50%</strong></td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>CLAUDE.md</td>
-							<td>Optional</td>
-							<td>-</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Git commit</td>
-							<td>Before code</td>
-							<td>-</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td>src/index.ts</td>
-							<td>Implementation</td>
-							<td>-</td>
-						</tr>
-						<tr>
-							<td>7</td>
-							<td>faf auto</td>
-							<td>Mid-dev</td>
-							<td>80%</td>
-						</tr>
-						<tr>
-							<td>8</td>
-							<td>faf go</td>
-							<td>Pre-release</td>
-							<td>100%</td>
+							<td><code>faf go</code></td>
+							<td><strong>100% 🏆</strong></td>
+							<td>Interactive polish to championship grade</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+		</section>
+
+		<!-- AI-Specific Files -->
+		<section class="ai-files">
+			<h2 class="section-title">AI-Specific Context Files</h2>
+			<p class="section-intro">project.faf works with ALL AIs. But each AI also has its own prose version:</p>
+			<div class="ai-files-grid">
+				<div class="ai-file-card">
+					<h3>CLAUDE.md</h3>
+					<p>For Anthropic Claude</p>
+					<code>faf bi-sync</code>
+				</div>
+				<div class="ai-file-card">
+					<h3>GEMINI.md</h3>
+					<p>For Google Gemini</p>
+					<code>faf gemini</code>
+				</div>
+				<div class="ai-file-card">
+					<h3>project.faf</h3>
+					<p>Universal (all AIs)</p>
+					<code>Always generated</code>
+				</div>
+			</div>
+			<p class="ai-files-note">💡 <strong>Tip:</strong> project.faf is the source of truth. AI-specific files are generated from it.</p>
 		</section>
 
 		<!-- Common Mistakes -->
@@ -350,46 +261,42 @@ touch src/index.ts
 				<div class="mistake-card wrong">
 					<div class="mistake-header">
 						<span class="mistake-icon">❌</span>
-						<h3>Wrong: Code First, Docs Later</h3>
+						<h3>Wrong: Skipping the Magic Tools</h3>
 					</div>
-					<pre><code># Write all the code
-git add src/
-git commit -m "Initial implementation"
-
-# Oh yeah, should add docs
-echo "# Project" > README.md
-faf init  # Low score, missed context</code></pre>
-					<p class="mistake-problem"><strong>Problem:</strong> AI has no context during development.</p>
+					<pre><code># Just use faf init
+faf init
+# Stop here, start coding
+# Score: 30% (incomplete)</code></pre>
+					<p class="mistake-problem"><strong>Problem:</strong> Missing 70% of potential context. faf auto and faf go are free wins!</p>
 				</div>
 
 				<div class="mistake-card wrong">
 					<div class="mistake-header">
 						<span class="mistake-icon">❌</span>
-						<h3>Wrong: Empty Repo .faf</h3>
+						<h3>Wrong: Using faf init on GitHub Repos</h3>
 					</div>
-					<pre><code>git init
-faf init  # Nothing to extract from!
-# Score: 5% (basically empty)</code></pre>
-					<p class="mistake-problem"><strong>Problem:</strong> Can't extract 6 Ws from empty repo.</p>
+					<pre><code>git clone https://github.com/facebook/react
+cd react
+faf init  # Slow! Wrong tool!</code></pre>
+					<p class="mistake-problem"><strong>Problem:</strong> Use faf git instead - no clone needed, 2 seconds.</p>
 				</div>
 
 				<div class="mistake-card right">
 					<div class="mistake-header">
 						<span class="mistake-icon">✅</span>
-						<h3>Right: Definition → Documentation → Implementation</h3>
+						<h3>Right: All 3 Magic Tools</h3>
 					</div>
-					<pre><code># 1. Define
-README.md (WHO/WHAT/WHY)
+					<pre><code># 1. Initial extraction
+faf init  # or: faf git <url>
 
-# 2. Document for AI
-faf init → project.faf (30-50%)
+# 2. Auto-enhance
+faf auto
 
-# 3. Build
-src/index.ts (code)
+# 3. Polish
+faf go
 
-# 4. Grow
-faf auto → 80%</code></pre>
-					<p class="mistake-problem"><strong>Result:</strong> AI context available from day 1.</p>
+# Result: 100% 🏆</code></pre>
+					<p class="mistake-problem"><strong>Result:</strong> Championship-grade AI context in 3 commands.</p>
 				</div>
 			</div>
 		</section>
@@ -397,13 +304,25 @@ faf auto → 80%</code></pre>
 		<!-- Quick Reference -->
 		<section class="quick-ref">
 			<h2 class="section-title">Quick Reference</h2>
+
+			<div class="ref-box caveat">
+				<h3>💡 Important Caveat</h3>
+				<p class="answer">With a <strong>good README</strong>, <code>faf auto</code> can often reach 100% without needing <code>faf go</code>. And <code>faf git</code> on well-documented repos can score 100% on its own!</p>
+				<p class="answer">The 3 tools are available when you need them. But you might not need all 3.</p>
+			</div>
+
+			<div class="ref-box">
+				<h3>The Decision Tree</h3>
+				<ul class="decision-list">
+					<li>Have a GitHub URL? → <code>faf git</code> (might be 100% already!)</li>
+					<li>Working locally? → <code>faf init</code> then <code>faf auto</code></li>
+					<li>Want to polish? → <code>faf go</code> (if not already 100%)</li>
+				</ul>
+			</div>
+
 			<div class="ref-box">
 				<h3>One-Liner</h3>
-				<p class="one-liner">"README first, .faf second, code third."</p>
-			</div>
-			<div class="ref-box">
-				<h3>When to Add project.faf</h3>
-				<p class="answer">After your README, before your first code. You need enough context to answer the 6 Ws. Usually this is when you have a README and basic structure (package.json, Cargo.toml, etc.). That gives you 30-50% initial score, then it grows as you build.</p>
+				<p class="one-liner">"faf init → faf auto → faf go = 100% 🏆"</p>
 			</div>
 		</section>
 
@@ -555,10 +474,65 @@ faf auto → 80%</code></pre>
 		margin-bottom: 4rem;
 	}
 
+	.workflow-intro {
+		text-align: center;
+		color: #aaa;
+		font-size: 1.1rem;
+		margin: -1rem 0 2rem 0;
+	}
+
 	.steps-container {
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
+	}
+
+	.decision-tree {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.decision-option h4 {
+		color: #00d4d4;
+		font-size: 1.1rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.decision-divider {
+		text-align: center;
+		color: #ff6b35;
+		font-weight: 700;
+		font-size: 1.25rem;
+		padding: 1rem 0;
+	}
+
+	.command-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		background: #000;
+		border: 1px solid #333;
+		border-radius: 6px;
+		padding: 1rem;
+	}
+
+	.command-box pre {
+		flex: 1;
+		margin: 0;
+	}
+
+	.command-box code {
+		color: #f5f5dc;
+		font-family: 'Courier New', monospace;
+		font-size: 0.9rem;
+	}
+
+	.option-note {
+		color: #888;
+		font-size: 0.9rem;
+		margin: 0.75rem 0 0 0;
+		font-style: italic;
 	}
 
 	.step-card {
@@ -744,10 +718,82 @@ faf auto → 80%</code></pre>
 		font-style: italic;
 	}
 
-	/* Timeline */
+	/* Score Progression */
 	.timeline {
 		margin-bottom: 4rem;
 	}
+
+	/* AI-Specific Files */
+	.ai-files {
+		margin-bottom: 4rem;
+	}
+
+	.section-intro {
+		text-align: center;
+		color: #aaa;
+		font-size: 1.05rem;
+		margin: -1rem 0 2rem 0;
+		line-height: 1.6;
+	}
+
+	.ai-files-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.ai-file-card {
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 12px;
+		padding: 1.5rem;
+		text-align: center;
+		transition: all 0.3s;
+	}
+
+	.ai-file-card:hover {
+		border-color: #00d4d4;
+		transform: translateY(-2px);
+	}
+
+	.ai-file-card h3 {
+		color: #00d4d4;
+		font-size: 1.25rem;
+		margin: 0 0 0.5rem 0;
+		font-family: 'Courier New', monospace;
+	}
+
+	.ai-file-card p {
+		color: #aaa;
+		margin: 0 0 1rem 0;
+		font-size: 0.95rem;
+	}
+
+	.ai-file-card code {
+		color: #ff6b35;
+		background: #0a0a0a;
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		display: inline-block;
+		font-size: 0.85rem;
+	}
+
+	.ai-files-note {
+		text-align: center;
+		color: #aaa;
+		font-size: 1rem;
+		margin: 0;
+		padding: 1.5rem;
+		background: rgba(0, 212, 212, 0.1);
+		border-radius: 8px;
+	}
+
+	.ai-files-note strong {
+		color: #00d4d4;
+	}
+
+	/* Timeline */
 
 	.timeline-table {
 		overflow-x: auto;
@@ -879,10 +925,45 @@ faf auto → 80%</code></pre>
 		margin-bottom: 0;
 	}
 
+	.ref-box.caveat {
+		border: 2px solid #00d4d4;
+		background: linear-gradient(135deg, #1a1a1a 0%, #0a2a2a 100%);
+	}
+
+	.ref-box.caveat h3 {
+		color: #00d4d4;
+	}
+
 	.ref-box h3 {
 		color: #ff6b35;
 		font-size: 1.25rem;
 		margin: 0 0 1rem 0;
+	}
+
+	.decision-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.decision-list li {
+		color: #aaa;
+		padding: 0.75rem 0;
+		border-bottom: 1px solid #333;
+		font-size: 1.05rem;
+		line-height: 1.6;
+	}
+
+	.decision-list li:last-child {
+		border-bottom: none;
+	}
+
+	.decision-list code {
+		color: #00d4d4;
+		background: #0a0a0a;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		font-family: 'Courier New', monospace;
 	}
 
 	.one-liner {
