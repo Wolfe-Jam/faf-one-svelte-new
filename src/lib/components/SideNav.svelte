@@ -51,10 +51,11 @@
 	<div class="nav-section">
 		<h4>Main</h4>
 		<a href="/" onclick={() => isOpen = false}>🏠 Home</a>
+		<a href="/try" onclick={() => isOpen = false}>⚡ Try It</a>
+		<a href="/6ws" onclick={() => isOpen = false}>📋 6Ws Builder</a>
 		<a href="/about" onclick={() => isOpen = false}>📖 About</a>
-		<a href="/#pricing" onclick={() => isOpen = false}>💰 Pricing</a>
-		<a href="/blog" onclick={() => isOpen = false}>📝 Blog & Press</a>
 		<a href="/docs" onclick={() => isOpen = false}>📚 Documentation</a>
+		<a href="/blog" onclick={() => isOpen = false}>📝 Blog & Press</a>
 	</div>
 
 	<div class="nav-section">
@@ -67,16 +68,17 @@
 
 	<div class="nav-section">
 		<h4>Community</h4>
+		<a href="https://github.com/Wolfe-Jam/faf" target="_blank">⭐ GitHub Repo</a>
 		<a href="https://github.com/Wolfe-Jam/faf/discussions" target="_blank">💬 GitHub Discussions</a>
 		<a href="/support" onclick={() => isOpen = false}>🤖 Software Club</a>
 		<a href="/founders" onclick={() => isOpen = false}>🏆 Join Movement</a>
-		<a href="/calculator" onclick={() => isOpen = false}>🧮 ROI Calculator</a>
-		<a href="/risk-assessment" onclick={() => isOpen = false}>🎯 Risk Assessment</a>
 	</div>
 
 	<div class="nav-section">
 		<h4>Resources</h4>
-		<a href="/6ws" onclick={() => isOpen = false}>📋 6Ws Builder</a>
+		<a href="/#pricing" onclick={() => isOpen = false}>💰 Pricing</a>
+		<a href="/calculator" onclick={() => isOpen = false}>🧮 ROI Calculator</a>
+		<a href="/risk-assessment" onclick={() => isOpen = false}>🎯 Risk Assessment</a>
 		<a href="/press" onclick={() => isOpen = false}>📦 Press Kit</a>
 		<a href="/terms" onclick={() => isOpen = false}>📜 Terms</a>
 		<a href="/privacy" onclick={() => isOpen = false}>🔒 Privacy</a>
