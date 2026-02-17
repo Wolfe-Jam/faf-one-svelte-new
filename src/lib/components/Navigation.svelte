@@ -13,6 +13,7 @@
 		{ label: 'Demo', href: '#demo' },
 		{ label: 'Journey', href: '#journey' },
 		{ label: 'Pricing', href: '#pricing' },
+		{ label: 'WJTTC', href: '/wjttc' },
 		{ label: 'n8n.faf', href: '/n8n' },
 		{ label: 'DAAFT', href: '/daaft', isDanger: true }
 	];
