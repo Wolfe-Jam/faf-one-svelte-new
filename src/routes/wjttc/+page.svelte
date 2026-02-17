@@ -61,27 +61,50 @@
 		</div>
 	</section>
 
-	<!-- Problem/Solution -->
-	<section class="problem-solution">
-		<div class="problem">
-			<h2>❌ The Testing Dilemma</h2>
-			<p>Most teams face a painful trade-off:</p>
-			<ul>
-				<li><strong>Run all tests on every commit</strong> → 3-5 minute wait → developers bypass tests</li>
-				<li><strong>Run few tests on commits</strong> → fast feedback → bugs slip through</li>
-				<li><strong>No middle ground</strong> → frustration → technical debt</li>
-			</ul>
+	<!-- Big Orange -->
+	<section class="big-orange">
+		<div class="orange-hero">
+			<img src="/blog/wjttc-orange-cars.png" alt="McLaren F1 and Ford Escort Mk2 in papaya orange" />
 		</div>
+		<div class="orange-story">
+			<h2>🍊 The Big Orange Philosophy</h2>
+			<p class="lead">
+				WJTTC is inspired by McLaren Formula One Racing and their iconic <strong>Papaya Orange</strong>
+				introduced in 1968—the same year the founder was born.
+			</p>
+			<p>
+				The Big Orange 🍊 is our badge of excellence—the "Michelin Star for Repos."
+				It's not calculated. It's earned through championship-grade engineering.
+			</p>
 
-		<div class="solution">
-			<h2>✅ The F1-Inspired Solution</h2>
-			<p>WJTTC introduces tiered testing inspired by Formula 1 engineering:</p>
-			<ul>
-				<li><strong>Brake Tests</strong> - Critical safety (fast, pre-commit ~20s)</li>
-				<li><strong>Engine Tests</strong> - Performance validation (build, ~2-5min)</li>
-				<li><strong>Aero Tests</strong> - Full optimization (pre-release, ~5-10min)</li>
-			</ul>
-			<p class="highlight">Fast feedback loops. Comprehensive validation. Zero compromises.</p>
+			<div class="orange-badge-system">
+				<h3>Badge System</h3>
+				<div class="badges">
+					<div class="badge-item">
+						<div class="badge-icon">🏆</div>
+						<div class="badge-name">Trophy</div>
+						<div class="badge-score">100%</div>
+					</div>
+					<div class="badge-item special">
+						<div class="badge-icon">🍊</div>
+						<div class="badge-name">Big Orange</div>
+						<div class="badge-score">Awarded</div>
+					</div>
+				</div>
+				<p class="badge-note">
+					<strong>100% 🏆🍊 = Best-in-Class</strong><br>
+					Must score 100% + demonstrate championship-grade engineering
+				</p>
+			</div>
+
+			<div class="orange-holders">
+				<h3>Current Big Orange Holders</h3>
+				<ul>
+					<li>claude-faf-mcp - 100% 🏆🍊</li>
+					<li>faf-mcp - 100% 🏆🍊</li>
+					<li>grok-faf-mcp - 100% 🏆🍊</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
@@ -114,6 +137,91 @@
 				Your browser does not support the video tag.
 			</video>
 			<p class="video-caption">WJTTC Testing Philosophy - Championship standards in action 🏎️</p>
+		</div>
+	</section>
+
+	<!-- Problem/Solution -->
+	<section class="problem-solution">
+		<div class="problem">
+			<h2>❌ The Testing Dilemma</h2>
+			<p>Most teams face a painful trade-off:</p>
+			<ul>
+				<li><strong>Run all tests on every commit</strong> → 3-5 minute wait → developers bypass tests</li>
+				<li><strong>Run few tests on commits</strong> → fast feedback → bugs slip through</li>
+				<li><strong>No middle ground</strong> → frustration → technical debt</li>
+			</ul>
+		</div>
+
+		<div class="solution">
+			<h2>✅ The F1-Inspired Solution</h2>
+			<p>WJTTC introduces tiered testing inspired by Formula 1 engineering:</p>
+			<ul>
+				<li><strong>Brake Tests</strong> - Critical safety (fast, pre-commit ~20s)</li>
+				<li><strong>Engine Tests</strong> - Performance validation (build, ~2-5min)</li>
+				<li><strong>Aero Tests</strong> - Full optimization (pre-release, ~5-10min)</li>
+			</ul>
+			<p class="highlight">Fast feedback loops. Comprehensive validation. Zero compromises.</p>
+		</div>
+	</section>
+
+	<!-- 4-Layer Architecture -->
+	<section class="architecture">
+		<h2>The 4-Layer Enforcement System</h2>
+
+		<div class="layers">
+			<div class="layer-group-wrapper">
+				<div class="layer-group">
+					<div class="layer">
+						<div class="layer-badge">
+							<div class="layer-number">1</div>
+							<div class="layer-label">Layer</div>
+						</div>
+						<h3>TypeScript Strict</h3>
+						<p>Type safety checks.<br>Zero errors allowed.</p>
+						<div class="layer-time rapid">~5s</div>
+					</div>
+					<div class="layer brake-layer">
+						<div class="layer-badge">
+							<div class="layer-number">2</div>
+							<div class="layer-label">Layer</div>
+						</div>
+						<h3>Brake Tests</h3>
+						<p>Critical paths only.<br>Pre-commit.</p>
+						<div class="layer-time rapid">~20s</div>
+					</div>
+				</div>
+				<div class="group-label">⚡ Rapid Testing (&lt; 30s)</div>
+			</div>
+
+			<div class="layer-group-wrapper">
+				<div class="layer-group">
+					<div class="layer">
+						<div class="layer-badge">
+							<div class="layer-number">3</div>
+							<div class="layer-label">Layer</div>
+						</div>
+						<h3>Full Test Suite</h3>
+						<p>Comprehensive.<br>Build process.</p>
+						<div class="layer-time">3-5 min</div>
+					</div>
+					<div class="layer verify-layer">
+						<div class="layer-badge">
+							<div class="layer-number">4</div>
+							<div class="layer-label">Layer</div>
+						</div>
+						<h3>Verification</h3>
+						<p>Complete validation.<br>Pre-publish.</p>
+						<div class="layer-time">3-5 min</div>
+					</div>
+				</div>
+				<div class="group-label">🔍 Comprehensive (3-5 min)</div>
+			</div>
+		</div>
+
+		<div class="race-quote">
+			<p class="quote">"If your car can go 220 MPH, your brakes better fucking work!"</p>
+			<p class="attribution">--wolfejam</p>
+			<p class="context">[pure race track, pure energy]</p>
 		</div>
 	</section>
 
@@ -184,114 +292,6 @@
 					<div class="launch-badge">Launching Q3 2026</div>
 					<button class="btn btn-secondary" onclick={scrollToSignup}>Get Notified</button>
 				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- 4-Layer Architecture -->
-	<section class="architecture">
-		<h2>The 4-Layer Enforcement System</h2>
-
-		<div class="layers">
-			<div class="layer-group-wrapper">
-				<div class="layer-group">
-					<div class="layer">
-						<div class="layer-badge">
-							<div class="layer-number">1</div>
-							<div class="layer-label">Layer</div>
-						</div>
-						<h3>TypeScript Strict</h3>
-						<p>Type safety checks.<br>Zero errors allowed.</p>
-						<div class="layer-time rapid">~5s</div>
-					</div>
-					<div class="layer brake-layer">
-						<div class="layer-badge">
-							<div class="layer-number">2</div>
-							<div class="layer-label">Layer</div>
-						</div>
-						<h3>Brake Tests</h3>
-						<p>Critical paths only.<br>Pre-commit.</p>
-						<div class="layer-time rapid">~20s</div>
-					</div>
-				</div>
-				<div class="group-label">⚡ Rapid Testing (&lt; 30s)</div>
-			</div>
-
-			<div class="layer-group-wrapper">
-				<div class="layer-group">
-					<div class="layer">
-						<div class="layer-badge">
-							<div class="layer-number">3</div>
-							<div class="layer-label">Layer</div>
-						</div>
-						<h3>Full Test Suite</h3>
-						<p>Comprehensive.<br>Build process.</p>
-						<div class="layer-time">3-5 min</div>
-					</div>
-					<div class="layer verify-layer">
-						<div class="layer-badge">
-							<div class="layer-number">4</div>
-							<div class="layer-label">Layer</div>
-						</div>
-						<h3>Verification</h3>
-						<p>Complete validation.<br>Pre-publish.</p>
-						<div class="layer-time">3-5 min</div>
-					</div>
-				</div>
-				<div class="group-label">🔍 Comprehensive (3-5 min)</div>
-			</div>
-		</div>
-
-		<div class="race-quote">
-			<p class="quote">"If your car can go 220 MPH, your brakes better fucking work!"</p>
-			<p class="attribution">--wolfejam</p>
-			<p class="context">[pure race track, pure energy]</p>
-		</div>
-	</section>
-
-	<!-- Big Orange -->
-	<section class="big-orange">
-		<div class="orange-hero">
-			<img src="/blog/wjttc-orange-cars.png" alt="McLaren F1 and Ford Escort Mk2 in papaya orange" />
-		</div>
-		<div class="orange-story">
-			<h2>🍊 The Big Orange Philosophy</h2>
-			<p class="lead">
-				WJTTC is inspired by McLaren Formula One Racing and their iconic <strong>Papaya Orange</strong>
-				introduced in 1968—the same year the founder was born.
-			</p>
-			<p>
-				The Big Orange 🍊 is our badge of excellence—the "Michelin Star for Repos."
-				It's not calculated. It's earned through championship-grade engineering.
-			</p>
-
-			<div class="orange-badge-system">
-				<h3>Badge System</h3>
-				<div class="badges">
-					<div class="badge-item">
-						<div class="badge-icon">🏆</div>
-						<div class="badge-name">Trophy</div>
-						<div class="badge-score">100%</div>
-					</div>
-					<div class="badge-item special">
-						<div class="badge-icon">🍊</div>
-						<div class="badge-name">Big Orange</div>
-						<div class="badge-score">Awarded</div>
-					</div>
-				</div>
-				<p class="badge-note">
-					<strong>100% 🏆🍊 = Best-in-Class</strong><br>
-					Must score 100% + demonstrate championship-grade engineering
-				</p>
-			</div>
-
-			<div class="orange-holders">
-				<h3>Current Big Orange Holders</h3>
-				<ul>
-					<li>claude-faf-mcp - 100% 🏆🍊</li>
-					<li>faf-mcp - 100% 🏆🍊</li>
-					<li>grok-faf-mcp - 100% 🏆🍊</li>
-				</ul>
 			</div>
 		</div>
 	</section>
