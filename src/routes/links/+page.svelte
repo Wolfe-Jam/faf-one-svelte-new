@@ -164,22 +164,22 @@
 					<a href="https://github.com/punkpeye/awesome-mcp-servers/pull/1612" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">punkpeye/awesome-mcp</span>
 						<span class="link-desc">PR #1612</span>
-						<span class="link-stat status-pending">⏳ PENDING</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://github.com/appcypher/awesome-mcp-servers/pull/208" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">appcypher/awesome-mcp</span>
-						<span class="link-desc">PR #208</span>
-						<span class="link-stat status-pending">⏳ PENDING</span>
+						<span class="link-desc">PR #208 - Needs Review</span>
+						<span class="link-stat status-pending">⏳ OPEN</span>
 					</a>
 					<a href="https://github.com/rohitg00/awesome-devops-mcp-servers/pull/20" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rohitg00/awesome-devops</span>
 						<span class="link-desc">PR #20</span>
-						<span class="link-stat status-pending">⏳ PENDING</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://glama.ai/mcp/servers" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">Glama</span>
 						<span class="link-desc">Auto-syncs from punkpeye</span>
-						<span class="link-stat status-pending">⏳ PENDING</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 				</div>
 			</div>
@@ -215,6 +215,11 @@
 			<div class="card highlight-card">
 				<h2>🍊 WJTTC - MCP Testing Certification</h2>
 				<div class="links-grid">
+					<a href="/wjttc" class="link-item featured">
+						<span class="link-name">WJTTC Product</span>
+						<span class="link-desc">Championship-grade testing framework</span>
+						<span class="link-stat">🏎️</span>
+					</a>
 					<a href="https://npmjs.com/package/wjttc" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">wjttc</span>
 						<span class="link-desc">npm package</span>
@@ -273,12 +278,12 @@
 					<a href="https://github.com/anthropics/skills/pull/190" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">anthropics/skills</span>
 						<span class="link-desc">4 skills: faf-expert, n8n-builder, n8n-debugger, wjttc-tester</span>
-						<span class="link-stat status-pending">⏳ PR #190</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://github.com/travisvn/awesome-claude-skills/pull/35" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">travisvn/awesome-claude-skills</span>
 						<span class="link-desc">4 skills</span>
-						<span class="link-stat status-pending">⏳ PR #35</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 				</div>
 			</div>

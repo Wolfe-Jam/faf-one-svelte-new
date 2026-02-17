@@ -204,9 +204,14 @@
 				</div>
 			</div>
 			<p class="chrome-description">Championship-grade testing. Bi-sync corruption recovery. 9 self-healing tests. 100/100 rapid modification resilience.</p>
-			<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank" rel="noopener" class="chrome-install wjttc-cta">
-				See the Proof →
-			</a>
+			<div class="wjttc-actions">
+				<a href="/wjttc" class="chrome-install wjttc-cta">
+					Learn More →
+				</a>
+				<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank" rel="noopener" class="wjttc-secondary">
+					See the Proof →
+				</a>
+			</div>
 		</div>
 
 		<div class="releases-grid">
@@ -1001,6 +1006,28 @@
 	.wjttc-btn {
 		background: linear-gradient(135deg, #00bf63 0%, #00a854 100%) !important;
 		color: white !important;
+	}
+
+	.wjttc-actions {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.wjttc-secondary {
+		padding: 0.75rem 1.5rem;
+		border: 2px solid #00bf63;
+		border-radius: 8px;
+		color: #00bf63;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		background: transparent;
+	}
+
+	.wjttc-secondary:hover {
+		background: rgba(0, 191, 99, 0.1);
+		box-shadow: 0 3px 15px rgba(0, 191, 99, 0.2);
 	}
 
 	/* Grok Featured Card - Green theme for xAI */

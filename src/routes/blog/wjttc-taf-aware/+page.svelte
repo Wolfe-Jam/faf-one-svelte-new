@@ -121,7 +121,7 @@ npx wjttc certify --mcp "npx your-server"</code></pre>
 
 		<section>
 			<h2>What's Next</h2>
-			<p>The CAR Framework blog post (Part II) coming mid-February. Full deep dive into Claim/Audit/Receipt triangle.</p>
+			<p>The WJTTC product page is now live at <a href="/wjttc">/wjttc</a> - explore the 4-Layer Enforcement System and see how championship-grade testing achieves 15x faster commits. Professional Edition launches Q2 2026.</p>
 		</section>
 
 		<section class="footer-note">
@@ -137,7 +137,9 @@ npx wjttc certify --mcp "npx your-server"</code></pre>
 		padding: 2rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.6;
-		color: #333;
+		color: #1a1a1a;
+		background: #FEFCF8;
+		min-height: 100vh;
 	}
 
 	.post-header {
