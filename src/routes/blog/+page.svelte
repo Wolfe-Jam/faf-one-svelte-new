@@ -1,6 +1,24 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/enhanced-git-support',
+			title: 'Enhanced Git Support Edition',
+			date: 'February 18, 2026',
+			timestamp: '2026-02-18',
+			excerpt: 'Complete rewrite of faf git output. Accurate language detection across 17 languages. Compact, PR-ready .faf files (~35 lines vs 130). The version that scored a Hundred Famous Repos.',
+			emoji: '🎯',
+			category: 'Release'
+		},
+		{
+			slug: 'blog/wjttc-self-hosting',
+			title: 'Championship Testing for Everyone',
+			date: 'February 17, 2026',
+			timestamp: '2026-02-17',
+			excerpt: 'WJTTC v1.3.0 adds wjttc init—one command sets up championship-grade testing infrastructure in any project. Service to the army of free devs.',
+			emoji: '🏎️',
+			category: 'WJTTC Ecosystem'
+		},
+		{
 			slug: 'blog/readme-evolution',
 			title: '"README evolution for AI era" -- we finally realized what Gemini meant!',
 			date: 'February 9, 2026',
