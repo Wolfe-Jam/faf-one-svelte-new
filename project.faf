@@ -1,0 +1,25 @@
+# project.faf — Machine-readable project context for AI tools
+# Spec: https://faf.dev/spec | MIME: application/vnd.faf+yaml
+
+faf_version: 2.5.0
+project:
+  name: faf-one-svelte-new
+  description: The official website for .faf - Project DNA for ANY AI
+  language: Svelte
+  type: website
+  license: MIT
+metadata:
+  repository: https://github.com/Wolfe-Jam/faf-one-svelte-new
+  topics: [ai, ai-context, anthropic, faf, faf-one, mcp, svelte, sveltekit, website]
+stack:
+  runtime: Node.js
+  framework: SvelteKit
+  ui: Svelte
+  bundler: Vite
+context:
+  what: Official faf.one website built with SvelteKit
+  who: wolfejam.dev
+  how: "npm install && npm run dev"
+generated_by:
+  tool: faf-cli
+  version: 4.4.4
