@@ -25,10 +25,11 @@
 			<p class="last-updated">Last Updated: 2026-02-22</p>
 
 			<nav class="quick-nav">
-				<a href="#iana" class="nav-pill">IANA</a>
+				<a href="#iana" class="nav-pill">Standards</a>
 				<a href="#github" class="nav-pill">GitHub</a>
 				<a href="#mcp" class="nav-pill">MCP</a>
 				<a href="#packages" class="nav-pill">Packages</a>
+				<a href="#grokipedia" class="nav-pill">Grokipedia</a>
 				<a href="#radio" class="nav-pill">Radio</a>
 				<a href="#wjttc" class="nav-pill">WJTTC</a>
 				<a href="#websites" class="nav-pill">Websites</a>
@@ -40,12 +41,21 @@
 	<section class="links-section" id="iana">
 		<div class="container">
 			<div class="card highlight-card">
-				<h2>🏛️ Official Standards</h2>
+				<h2>🏛️ Official Standards & Research</h2>
 				<div class="links-grid">
 					<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IANA Registration</span>
 						<span class="link-desc">application/vnd.faf+yaml</span>
 						<span class="link-stat">Oct 30, 2025</span>
+					</a>
+					<a href="https://mailarchive.ietf.org/arch/msg/media-types/4m9epGYthb2NukVyWCFEYLEiLD0/" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">IETF Mail Archive</span>
+						<span class="link-desc">Media type registration thread</span>
+					</a>
+					<a href="https://doi.org/10.5281/zenodo.18251362" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">CERN/Zenodo Paper</span>
+						<span class="link-desc">Format-Driven AI Context Architecture</span>
+						<span class="link-stat">DOI: 10.5281/zenodo.18251362</span>
 					</a>
 				</div>
 			</div>
@@ -311,6 +321,27 @@
 					<a href="https://github.com/travisvn/awesome-claude-skills/pull/35" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">travisvn/awesome-claude-skills</span>
 						<span class="link-desc">4 skills</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Grokipedia (Encyclopedia) -->
+	<section class="links-section" id="grokipedia">
+		<div class="container">
+			<div class="card highlight-card">
+				<h2>📖 Grokipedia</h2>
+				<div class="links-grid">
+					<a href="https://grokipedia.com/page/faf-file-format" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">FAF File Format</span>
+						<span class="link-desc">Dedicated encyclopedia article</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://grokipedia.com/page/ai-context" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">AI Context</span>
+						<span class="link-desc">FAF featured in Standardized AI Context Formats</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 				</div>
