@@ -4,6 +4,19 @@
 User-agent: *
 Allow: /
 
+# AI Search Crawlers — explicitly welcome
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap location
 Sitemap: https://faf.one/sitemap.xml
 
