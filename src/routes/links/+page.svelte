@@ -496,6 +496,29 @@
 		</div>
 	</section>
 
+	<!-- Author -->
+	<section class="links-section" id="author">
+		<div class="container">
+			<div class="card">
+				<h2>👤 Author</h2>
+				<div class="links-grid">
+					<a href="https://wolfejam.dev" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">wolfejam.dev</span>
+						<span class="link-desc">Developer portfolio</span>
+					</a>
+					<a href="https://wolfejames.com" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">wolfejames.com</span>
+						<span class="link-desc">Personal site</span>
+					</a>
+					<a href="https://orcid.org/0009-0007-0801-3841" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">ORCID</span>
+						<span class="link-desc">0009-0007-0801-3841</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- BOTTOM: 8-Eternal-Cs (Dedication) -->
 	<section class="links-section" id="dedication">
 		<div class="container">
