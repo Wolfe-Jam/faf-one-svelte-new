@@ -29,6 +29,7 @@
 				<a href="#github" class="nav-pill">GitHub</a>
 				<a href="#mcp" class="nav-pill">MCP</a>
 				<a href="#packages" class="nav-pill">Packages</a>
+				<a href="#radio" class="nav-pill">Radio</a>
 				<a href="#wjttc" class="nav-pill">WJTTC</a>
 				<a href="#websites" class="nav-pill">Websites</a>
 			</nav>
@@ -69,9 +70,21 @@
 						<span class="link-name">faf-mcp</span>
 						<span class="link-desc">Universal MCP server</span>
 					</a>
+					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">gemini-faf-mcp</span>
+						<span class="link-desc">Google Gemini MCP server</span>
+					</a>
 					<a href="https://github.com/Wolfe-Jam/FAF" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">FAF</span>
 						<span class="link-desc">Format specification</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-taf-git" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-taf-git</span>
+						<span class="link-desc">Git-native receipt printer (TAF)</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/FAF-Voice" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">FAF-Voice</span>
+						<span class="link-desc">Multi-voice AI crews (xAI Grok)</span>
 					</a>
 				</div>
 			</div>
@@ -93,6 +106,11 @@
 						<span class="link-name">claude-faf-mcp</span>
 						<span class="link-desc">MCP server for Claude</span>
 						<span class="link-stat">8,200+ downloads</span>
+					</a>
+					<a href="https://npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">grok-faf-mcp</span>
+						<span class="link-desc">MCP server for Grok</span>
+						<span class="link-stat">500+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
@@ -300,6 +318,37 @@
 		</div>
 	</section>
 
+	<!-- Radio SDKs -->
+	<section class="links-section" id="radio">
+		<div class="container">
+			<div class="card highlight-card">
+				<h2>📻 Radio SDKs (FM Protocol)</h2>
+				<div class="links-grid">
+					<a href="https://github.com/Wolfe-Jam/faf-radio-bun" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-radio-bun</span>
+						<span class="link-desc">Bun/TypeScript radio client</span>
+						<span class="link-stat">19/19 tests</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-radio-rust</span>
+						<span class="link-desc">Rust radio client</span>
+						<span class="link-stat">16/16 tests</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-radio-zig" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-radio-zig</span>
+						<span class="link-desc">Zig WASM radio client</span>
+						<span class="link-stat">2.7KB</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/mcpaas-beacon" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcpaas-beacon</span>
+						<span class="link-desc">Beacon server (Durable Objects)</span>
+						<span class="link-stat">103/103 tests</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- SDK: Python -->
 	<section class="links-section">
 		<div class="container">
@@ -309,6 +358,11 @@
 					<a href="https://pypi.org/project/faf-python-sdk/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>
 						<span class="link-desc">Python SDK (PyPI)</span>
+						<span class="link-stat">v1.0.2</span>
+					</a>
+					<a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">gemini-faf-mcp</span>
+						<span class="link-desc">Gemini MCP server (PyPI)</span>
 						<span class="link-stat">v1.0.2</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-python-sdk" target="_blank" rel="noopener" class="link-item">
