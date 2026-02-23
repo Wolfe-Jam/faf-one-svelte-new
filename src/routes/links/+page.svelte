@@ -52,6 +52,16 @@
 						<span class="link-name">IETF Mail Archive</span>
 						<span class="link-desc">Media type registration thread</span>
 					</a>
+					<a href="https://datatracker.ietf.org/doc/draft-wolfe-faf-format/" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">IETF Internet-Draft</span>
+						<span class="link-desc">draft-wolfe-faf-format-00 (application/faf+yaml)</span>
+						<span class="link-stat status-live">☑️ ACTIVE</span>
+					</a>
+					<a href="https://www.iana.org/form/media-types" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">IANA FAFb Submission</span>
+						<span class="link-desc">application/vnd.fafb (binary format)</span>
+						<span class="link-stat status-pending">⏳ SUBMITTED</span>
+					</a>
 					<a href="https://doi.org/10.5281/zenodo.18251362" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">CERN/Zenodo Paper</span>
 						<span class="link-desc">Format-Driven AI Context Architecture</span>
