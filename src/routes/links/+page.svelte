@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2025-12-31</p>
+			<p class="last-updated">Last Updated: 2026-02-22</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">IANA</a>
@@ -195,6 +195,16 @@
 					<a href="https://faf.one" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf.one</span>
 						<span class="link-desc">Official FAF website</span>
+					</a>
+					<a href="https://radiofaf.com" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">radiofaf.com</span>
+						<span class="link-desc">Don't follow. Tune in.</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://mcpaas.live" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcpaas.live</span>
+						<span class="link-desc">MCP as a Service — Cloudflare Edge</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://fafdev.tools" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">fafdev.tools</span>
