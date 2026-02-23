@@ -484,7 +484,7 @@
 				<div class="links-grid">
 					<a href="https://chrome.google.com/webstore/detail/faf" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">Chrome Extension</span>
-						<span class="link-desc">FAF for Chrome Web Store</span>
+						<span class="link-desc">Google-approved — Chrome Web Store</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-chrome-extension" target="_blank" rel="noopener" class="link-item">
