@@ -244,6 +244,11 @@
 						<span class="link-desc">MCP as a Service — Cloudflare Edge</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
+					<a href="https://faf-voice.vercel.app" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">FAF Voice</span>
+						<span class="link-desc">Multi-AI voice crews (Grok + Claude + Gemini)</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
 					<a href="https://fafdev.tools" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">fafdev.tools</span>
 						<span class="link-desc">FAF file generator</span>
