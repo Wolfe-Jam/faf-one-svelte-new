@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/beyond-the-bloat',
+			title: 'Beyond the Bloat',
+			date: 'February 24, 2026',
+			timestamp: '2026-02-24',
+			excerpt: 'ArXiv proves prose context files hurt AI performance (-3%, +20% cost). FAF provides the structured fix. Two complementary papers, one roadmap. FAF defines. AI interprets.',
+			emoji: '📄',
+			category: 'Research'
+		},
+		{
 			slug: 'blog/agents-md-edition',
 			title: 'The AGENTS.md Edition',
 			date: 'February 24, 2026',
