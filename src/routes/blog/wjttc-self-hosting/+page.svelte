@@ -86,7 +86,7 @@ Your project now has championship-grade testing infrastructure.</code>
 			<h3>1. Test Directory Structure</h3>
 			<div class="terminal-block">
 				<code>tests/
-├── brake/          # Fast, critical tests (<30s)
+├── brake/          # Fast, critical tests (&lt;30s)
 ├── engine/         # Core functionality
 └── aero/           # Performance benchmarks</code>
 			</div>
@@ -103,7 +103,7 @@ echo "🚀 WJTTC Pre-Commit Certification"
 # Step 1: TypeScript strict mode check
 npm run typecheck || exit 1
 
-# Step 2: Brake tests (<30s execution)
+# Step 2: Brake tests (&lt;30s execution)
 npm run test:brake || exit 1
 
 echo "✅ Pre-commit checks passed"</code>
@@ -127,7 +127,7 @@ echo "✅ Pre-commit checks passed"</code>
 			<div class="terminal-block">
 				<code>{`// TIER 1: BRAKE Tests
 // Fast, critical tests that MUST pass before commit
-// Target: <30s total execution time
+// Target: &lt;30s total execution time
 
 describe('BRAKE: Critical Path', () => {
   it('should validate core functionality', () => {
