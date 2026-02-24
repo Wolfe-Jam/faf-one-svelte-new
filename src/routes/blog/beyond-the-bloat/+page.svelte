@@ -10,7 +10,9 @@
 	<meta property="og:title" content="Beyond the Bloat: How FAF Transforms AI Context from Liability to Superpower" />
 	<meta property="og:description" content="ArXiv exposes the AGENTS.md bloat problem. FAF solves it with structured Project DNA. Two papers, one roadmap." />
 	<meta property="og:type" content="article" />
+	<meta property="og:image" content="https://www.faf.one/blog-assets/beyond-the-bloat-hero.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://www.faf.one/blog-assets/beyond-the-bloat-hero.jpg" />
 </svelte:head>
 
 <div class="blog-post">
@@ -31,6 +33,10 @@
 		</div>
 		<div class="byline">By English James | <a href="https://twitter.com/wolfe_jam">@wolfe_jam</a> | <a href="https://wolfejam.dev">wolfejam.dev</a></div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog-assets/beyond-the-bloat-hero.jpg" alt="Chaos of dev tools and frameworks on the left, clean .faf on the right — noise to clarity" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -473,6 +479,21 @@
 
 	.byline a:hover {
 		text-decoration: underline;
+	}
+
+	/* ======================================== */
+	/* Hero Image */
+	/* ======================================== */
+	.hero-image {
+		margin: 0 -1rem 2.5rem -1rem;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	/* ======================================== */
