@@ -1,6 +1,24 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/agents-md-edition',
+			title: 'The AGENTS.md Edition',
+			date: 'February 24, 2026',
+			timestamp: '2026-02-24',
+			excerpt: 'One project.faf, every format. Full AGENTS.md and .cursorrules interop. Define once, sync everywhere with faf bi-sync --all. 87 new championship tests. 3 cross-platform bugs caught before you ever would.',
+			emoji: '🔗',
+			category: 'Interop'
+		},
+		{
+			slug: 'blog/why-agents-md-needs-foundation',
+			title: 'Why AGENTS.md Needs a Foundation Layer',
+			date: 'February 23, 2026',
+			timestamp: '2026-02-23',
+			excerpt: '.faf defines. .md instructs. AI interprets. Three layers, three jobs, no overlap. The debate isn\'t which prose format wins — it\'s what defines the project underneath.',
+			emoji: '🏗️',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/enhanced-git-support',
 			title: 'Enhanced Git Support Edition',
 			date: 'February 18, 2026',

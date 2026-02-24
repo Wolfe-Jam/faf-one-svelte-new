@@ -52,10 +52,24 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>21,000+ Total Downloads</strong> •
-				<strong>671/671 Tests Passing</strong> •
+				<strong>23,000+ Total Downloads</strong> •
+				<strong>1,051/1,051 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- AGENTS.md Edition v4.5.0 -->
+		<div class="chrome-featured foundation-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🔗 faf-cli v4.5.0 - The AGENTS.md Edition</h3>
+					<span class="chrome-badge foundation-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">One project.faf, every format. Full AGENTS.md + .cursorrules interop. Define once, sync everywhere with faf bi-sync --all.</p>
+			<a href="/blog/agents-md-edition" class="chrome-install foundation-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- Voice API Edition v4.2.0 -->
@@ -215,21 +229,21 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v4.2.0 -->
+			<!-- CLI v4.5.0 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v4.2.0</h3>
+					<h3>faf-cli v4.5.0</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Voice API Edition. Eternal voice memory for xAI Grok. Zero drift. Zero re-explain.
+					The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
 				</p>
 				<ul class="release-features">
-					<li>25k+ downloads (npm)</li>
-					<li>671/671 tests passing</li>
+					<li>23k+ downloads (ecosystem)</li>
+					<li>1,051/1,051 tests passing</li>
 					<li>100% TypeScript strict mode</li>
-					<li>&lt;50ms processing time</li>
-					<li>6Ws web builder + CLI integration</li>
+					<li>4 format outputs from 1 source</li>
+					<li>faf bi-sync --all</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
@@ -271,8 +285,8 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>21,000+ Total Downloads</strong> •
-				<strong>671/671 Tests Passing</strong> •
+				<strong>23,000+ Total Downloads</strong> •
+				<strong>1,051/1,051 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
@@ -307,21 +321,21 @@
 		</div>
 
 		<div class="releases-grid">
-			<!-- CLI v4.2.0 -->
+			<!-- CLI v4.5.0 -->
 			<div class="release-card">
 				<div class="release-header">
-					<h3>faf-cli v4.2.0</h3>
+					<h3>faf-cli v4.5.0</h3>
 					<span class="badge">Latest</span>
 				</div>
 				<p class="release-description">
-					Voice API Edition. Eternal voice memory for xAI Grok. Zero drift. Zero re-explain.
+					The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
 				</p>
 				<ul class="release-features">
-					<li>25k+ downloads (npm)</li>
-					<li>671/671 tests passing</li>
+					<li>23k+ downloads (ecosystem)</li>
+					<li>1,051/1,051 tests passing</li>
 					<li>100% TypeScript strict mode</li>
-					<li>&lt;50ms processing time</li>
-					<li>6Ws web builder + CLI integration</li>
+					<li>4 format outputs from 1 source</li>
+					<li>faf bi-sync --all</li>
 				</ul>
 				<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
@@ -363,8 +377,8 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>21,000+ Total Downloads</strong> •
-				<strong>671/671 Tests Passing</strong> •
+				<strong>23,000+ Total Downloads</strong> •
+				<strong>1,051/1,051 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
 		</div>
