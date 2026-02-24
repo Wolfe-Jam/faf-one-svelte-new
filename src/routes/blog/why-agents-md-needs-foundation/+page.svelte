@@ -143,7 +143,7 @@ context:
 
 			<ul>
 				<li><strong>IANA-registered</strong> MIME type: <code>application/vnd.faf+yaml</code></li>
-				<li><strong>23K+ npm downloads</strong> across the <a href="https://www.npmjs.com/package/faf-cli">faf-cli</a>/MCP ecosystem</li>
+				<li><strong>27K+ npm downloads</strong> across the <a href="https://www.npmjs.com/package/faf-cli">faf-cli</a>/MCP ecosystem</li>
 				<li><strong>MCP servers</strong> for Claude, Gemini, and Grok — all three major AI platforms</li>
 				<li><strong>Merged</strong> into the Anthropic MCP registry as a Persistent Project Context Server</li>
 			</ul>

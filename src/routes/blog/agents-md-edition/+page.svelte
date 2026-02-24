@@ -332,7 +332,7 @@
 				<li><strong>1,051/1,051</strong> - Tests passing (+87 new)</li>
 				<li><strong>100%</strong> - Trophy score</li>
 				<li><strong>WJTTC GOLD</strong> - Certified</li>
-				<li><strong>23,000+</strong> - npm downloads (ecosystem)</li>
+				<li><strong>27,000+</strong> - npm downloads (ecosystem)</li>
 				<li><strong>4 formats</strong> - CLAUDE.md + AGENTS.md + .cursorrules + GEMINI.md</li>
 				<li><strong>1 command</strong> - <code>faf bi-sync --all</code></li>
 			</ul>
