@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	let mounted = false;
+	let copiedId = $state('');
 	onMount(() => { mounted = true; });
+
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 </script>
 
 <svelte:head>
@@ -38,11 +45,17 @@
 			<h2>What Changed</h2>
 			<p>WJTTC is now both a <strong>certification tool</strong> AND a <strong>testing infrastructure provider</strong>.</p>
 
-			<div class="terminal-block">
-				<code>npm install -g wjttc@1.3.0
-wjttc init
+			<div class="copy-box" onclick={() => copyText('npm install -g wjttc@1.3.0', 'install1')}>
+				<code class="copy-code">npm install -g wjttc@1.3.0</code>
+				<button class="copy-btn">{copiedId === 'install1' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" style="margin-top: 0.5rem;" onclick={() => copyText('wjttc init', 'init')}>
+				<code class="copy-code">wjttc init</code>
+				<button class="copy-btn">{copiedId === 'init' ? 'Copied!' : 'Copy'}</button>
+			</div>
 
-🚀 WJTTC Initialization Complete!
+			<div class="terminal-output">
+				<code>🚀 WJTTC Initialization Complete!
 
 ✅ Test directories created (brake/engine/aero)
 ✅ Pre-commit hook installed (Rocket Science Grade)
@@ -177,32 +190,21 @@ describe('BRAKE: Critical Path', () => {
 			<h2>Try It Now</h2>
 
 			<h3>New Project</h3>
-			<div class="terminal-block">
-				<code>npm install -g wjttc@1.3.0
-cd your-project
-wjttc init</code>
+			<div class="copy-box" onclick={() => copyText('npm install -g wjttc@1.3.0 && cd your-project && wjttc init', 'new')}>
+				<div class="copy-code-multi">npm install -g wjttc@1.3.0<br/>cd your-project<br/>wjttc init</div>
+				<button class="copy-btn">{copiedId === 'new' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<h3>Existing Project</h3>
-			<div class="terminal-block">
-				<code># Preserves existing tests
-wjttc init
-
-# Creates:
-# - tests/brake (if not exists)
-# - .githooks/pre-commit
-# - Adds scripts to package.json
-# - Generates example tests</code>
+			<div class="copy-box" onclick={() => copyText('wjttc init', 'existing')}>
+				<code class="copy-code">wjttc init <span class="code-comment"># Preserves existing tests</span></code>
+				<button class="copy-btn">{copiedId === 'existing' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<h3>Then Certify</h3>
-			<div class="terminal-block">
-				<code>npx wjttc certify --mcp "npx your-server"
-
-# Get your score (0-100%)
-# See tier badge (🏆/🥇/🥈/🥉/🟢/🟡/🔴)
-# Validate FAF file (if present)
-# Check TAF Receipt (if present)</code>
+			<div class="copy-box" onclick={() => copyText('npx wjttc certify --mcp "npx your-server"', 'certify')}>
+				<code class="copy-code">npx wjttc certify --mcp "npx your-server"</code>
+				<button class="copy-btn">{copiedId === 'certify' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -518,5 +520,89 @@ wjttc init
 	.footer-note p {
 		color: #666;
 		font-style: italic;
+	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+
+	.copy-box:hover {
+		border-color: #555;
+	}
+
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+
+	.code-comment {
+		color: #666;
+		font-weight: 400;
+	}
+
+	.terminal-output {
+		background: #1a1a1a;
+		padding: 1.25rem;
+		border-radius: 8px;
+		margin: 0.5rem 0 1.5rem;
+		border: 1px solid #222;
+	}
+
+	.terminal-output code {
+		display: block;
+		color: #888;
+		background: none;
+		padding: 0;
+		font-size: 0.85rem;
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
+
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+
+	.copy-btn:hover {
+		background: rgba(255, 107, 53, 0.3);
+		border-color: #ff6b35;
+	}
+
+	.copy-btn:active {
+		transform: scale(0.95);
 	}
 </style>
