@@ -5,9 +5,10 @@
 			title: '30,000 Downloads',
 			date: 'February 27, 2026',
 			timestamp: '2026-02-27',
-			excerpt: '9 npm packages. 3 registries. Zero marketing budget. From 20k to 30k in 6 weeks. The FAF ecosystem crosses 30,000 downloads.',
+			excerpt: '9 npm packages. 3 registries. Zero marketing budget. From 20k to 30k in 2026. The FAF ecosystem crosses 30,000 downloads.',
 			emoji: '📈',
-			category: 'Milestone'
+			category: 'Milestone',
+			theme: 'dark'
 		},
 		{
 			slug: 'blog/mcp-interop-edition',
@@ -250,7 +251,8 @@
 			timestamp: '2025-12-23',
 			excerpt: '77KB binary. Zero runtime dependencies. Pure Zig. FAF scoring built in Bun\'s own language with 136 championship-grade tests.',
 			emoji: '⚡',
-			category: 'Release'
+			category: 'Release',
+			theme: 'dark'
 		},
 		{
 			slug: 'blog/bun-sticky-launch',
@@ -424,7 +426,7 @@
 
 		<div class="posts-grid">
 			{#each posts as post}
-				<a href="/{post.slug}" class="post-card">
+				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'}>
 					<div class="post-emoji">{post.emoji}</div>
 					<div class="post-category">{post.category}</div>
 					<h2>{post.title}</h2>
@@ -523,6 +525,29 @@
 	.post-card:hover {
 		transform: translateY(-4px);
 		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+		border-color: var(--faf-orange);
+	}
+
+	.dark-card {
+		background: #0a0a0a;
+		border-color: #333;
+		color: #e5e5e5;
+	}
+
+	.dark-card h2 {
+		color: #fff;
+	}
+
+	.dark-card .post-excerpt {
+		color: #999;
+	}
+
+	.dark-card .post-date {
+		color: #777;
+	}
+
+	.dark-card:hover {
+		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
 		border-color: var(--faf-orange);
 	}
 
