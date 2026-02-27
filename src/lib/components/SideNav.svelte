@@ -68,7 +68,7 @@
 
 	<div class="nav-section">
 		<h4>Community</h4>
-		<a href="https://github.com/Wolfe-Jam/faf" target="_blank">⭐ GitHub Repo</a>
+		<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank">⭐ GitHub Repo</a>
 		<a href="https://github.com/Wolfe-Jam/faf/discussions" target="_blank">💬 GitHub Discussions</a>
 		<a href="/support" onclick={() => isOpen = false}>🤖 Software Club</a>
 		<a href="/founders" onclick={() => isOpen = false}>🏆 Join Movement</a>

@@ -15,6 +15,13 @@
 	let showScorePopup = $state(false);
 	let currentScore = $state(94);
 	let grokLogoFailed = $state(false);
+	let activeRepo = $state('facebook/react');
+
+	const repoExamples = [
+		{ short: 'facebook/react', full: 'https://github.com/facebook/react' },
+		{ short: 'vercel/next.js', full: 'https://github.com/vercel/next.js' },
+		{ short: 'anthropics/claude-code', full: 'https://github.com/anthropics/claude-code' },
+	];
 
 	const codeText = 'faf init';
 	const scores = [85, 88, 91, 94, 96, 99];
@@ -73,6 +80,31 @@
 				<div class="iana-subtext">
 					Create official <code>application/vnd.faf+yaml</code> files from any codebase
 				</div>
+
+				<!-- Try It Now — immediate value -->
+				<div class="try-it-hero">
+					<div class="try-it-label">Try it now — zero install, any public repo:</div>
+					<div class="try-it-command">
+						<code>npx faf-cli@latest git https://github.com/{activeRepo}</code>
+						<button class="try-it-copy" onclick={() => {
+							navigator.clipboard.writeText(`npx faf-cli@latest git https://github.com/${activeRepo}`);
+							const btn = document.querySelector('.try-it-copy');
+							btn.textContent = 'Copied!';
+							setTimeout(() => btn.textContent = 'Copy', 1500);
+						}}>Copy</button>
+					</div>
+					<div class="try-it-repos">
+						{#each repoExamples as repo}
+							<button
+								class="repo-pill"
+								class:active={activeRepo === repo.short}
+								onclick={() => activeRepo = repo.short}
+							>{repo.short}</button>
+						{/each}
+						<a href="/try" class="repo-pill repo-more">your-repo →</a>
+					</div>
+				</div>
+
 				<!-- Grok Quote - positioned to flow into xAI adoption -->
 				<div class="grok-quote-inline">
 					<span class="grok-headline">"Game-changer for eternal AI context"</span>
@@ -397,6 +429,101 @@
 		font-family: var(--font-mono);
 		font-size: 0.9rem;
 		color: var(--faf-orange);
+	}
+
+	/* Try It Now Hero */
+	.try-it-hero {
+		margin: 2rem auto;
+		max-width: 700px;
+		background: #1a1a1a;
+		border-radius: 12px;
+		padding: 1.5rem 2rem;
+		border: 2px solid #333;
+		transition: border-color 0.3s ease;
+	}
+
+	.try-it-hero:hover {
+		border-color: var(--faf-orange);
+	}
+
+	.try-it-label {
+		font-size: 0.9rem;
+		color: #999;
+		margin-bottom: 0.75rem;
+		font-weight: 600;
+	}
+
+	.try-it-command {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: #0a0a0a;
+		border-radius: 8px;
+		padding: 0.75rem 1rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.try-it-command code {
+		flex: 1;
+		font-family: var(--font-mono);
+		font-size: 0.85rem;
+		color: #00D4D4;
+		background: none;
+		padding: 0;
+		white-space: nowrap;
+		overflow-x: auto;
+	}
+
+	.try-it-copy {
+		background: var(--faf-orange);
+		color: white;
+		border: none;
+		padding: 0.4rem 0.75rem;
+		border-radius: 6px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background 0.2s ease;
+		white-space: nowrap;
+	}
+
+	.try-it-copy:hover {
+		background: var(--faf-orange-dark);
+	}
+
+	.try-it-repos {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.repo-pill {
+		background: none;
+		border: 1px solid #444;
+		color: #888;
+		padding: 0.25rem 0.6rem;
+		border-radius: 999px;
+		font-size: 0.75rem;
+		font-family: var(--font-mono);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		text-decoration: none;
+	}
+
+	.repo-pill:hover {
+		border-color: var(--faf-orange);
+		color: #ccc;
+	}
+
+	.repo-pill.active {
+		border-color: var(--faf-orange);
+		color: var(--faf-orange);
+		background: rgba(255, 107, 53, 0.1);
+	}
+
+	.repo-more {
+		color: var(--faf-orange);
+		border-color: var(--faf-orange);
 	}
 
 	.xai-adoption-text {
