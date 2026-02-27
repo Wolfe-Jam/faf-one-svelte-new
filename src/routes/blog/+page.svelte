@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/mcp-interop-edition',
+			title: 'MCP Interop Edition',
+			date: 'February 27, 2026',
+			timestamp: '2026-02-27',
+			excerpt: 'claude-faf-mcp v4.5.0: 61 MCP tools. Define once in project.faf, generate CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md. 5 new tools, 7 bundled parsers, 351 tests. Zero CLI dependency.',
+			emoji: '🔗',
+			category: 'MCP Release'
+		},
+		{
 			slug: 'blog/beyond-the-bloat',
 			title: 'Beyond the Bloat',
 			date: 'February 24, 2026',
