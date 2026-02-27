@@ -104,6 +104,26 @@
 		</div>
 	</section>
 
+	<!-- Try It Now -->
+	<section class="try-section">
+		<div class="container">
+			<div class="try-card">
+				<p class="try-label">Try it now — zero install, any public repo</p>
+				<div class="try-box">
+					<code class="try-cmd">$ npx faf-cli@latest git https://github.com/facebook/react</code>
+					<button
+						class="copy-btn"
+						class:copied={copiedIndex === 99}
+						onclick={() => copyInstall('npx faf-cli@latest git https://github.com/facebook/react', 99)}
+					>
+						{copiedIndex === 99 ? 'Copied' : 'Copy'}
+					</button>
+				</div>
+				<p class="try-note">Instant Project DNA for React — works with any GitHub URL. <a href="/try" class="try-link">See more examples</a></p>
+			</div>
+		</div>
+	</section>
+
 	<!-- Quick-nav pills -->
 	<nav class="quick-nav">
 		<a href="#npm" class="nav-pill">npm (9)</a>
@@ -415,6 +435,68 @@
 
 	.badge-count {
 		font-size: 0.85rem;
+	}
+
+	/* ── Try It Now ──────────────────────────────────── */
+
+	.try-section {
+		padding: 0 0 0.5rem;
+	}
+
+	.try-card {
+		background: linear-gradient(135deg, #1a1208 0%, #111 100%);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		border-radius: 12px;
+		padding: 1.25rem 1.5rem;
+		text-align: center;
+		box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+	}
+
+	.try-label {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 0.95rem;
+		font-weight: 600;
+		margin-bottom: 0.75rem;
+	}
+
+	.try-box {
+		display: flex;
+		align-items: center;
+		background: #0a0a0a;
+		border: 1px solid #1a1a1a;
+		border-radius: 6px;
+		padding: 0.75rem 1rem;
+		gap: 0.75rem;
+		max-width: 640px;
+		margin: 0 auto;
+	}
+
+	.try-cmd {
+		flex: 1;
+		font-family: var(--font-mono);
+		font-size: 0.85rem;
+		color: #00D4D4;
+		background: none;
+		padding: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.try-note {
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 0.8rem;
+		margin-top: 0.5rem;
+	}
+
+	.try-note :global(.try-link) {
+		color: #FF6B35;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.try-note :global(.try-link:hover) {
+		text-decoration: underline;
 	}
 
 	/* ── Quick-nav ───────────────────────────────────── */
