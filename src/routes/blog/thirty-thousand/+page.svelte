@@ -6,9 +6,9 @@
 
 <svelte:head>
 	<title>30,000 Downloads | FAF</title>
-	<meta name="description" content="FAF ecosystem crosses 30,000 downloads. 9 npm packages, 2 PyPI, 1 crate. 3 registries. Zero marketing budget. From 20k to 30k in 6 weeks." />
+	<meta name="description" content="FAF ecosystem crosses 30,000 downloads. 9 npm packages, 2 PyPI, 1 crate. 3 registries. Zero marketing budget. From 20k to 30k in 2026." />
 	<meta property="og:title" content="30,000 Downloads — FAF Ecosystem" />
-	<meta property="og:description" content="9 npm packages. 3 registries. Zero marketing budget. From 20k to 30k in 6 weeks." />
+	<meta property="og:description" content="9 npm packages. 3 registries. Zero marketing budget. From 20k to 30k in 2026." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -29,10 +29,14 @@
 	</header>
 
 	<article class="post-content">
+		<section class="hero-image">
+			<img src="/blog-assets/30k-downloads.png" alt="30,000+ Downloads — AI-Context Champion 2025/26 Season" />
+		</section>
+
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> The FAF ecosystem crossed 30,000 npm downloads today.
-				From 20k to 30k in 6 weeks. No ads, no paid promotion. Just the work.
+				From 20k to 30k in 2026. No ads, no paid promotion. Just the work.
 			</p>
 		</section>
 
@@ -57,7 +61,7 @@
 				</div>
 			</div>
 
-			<p style="text-align: center; color: #666; margin-top: 1rem; font-size: 0.9rem;">
+			<p style="text-align: center; color: #999; margin-top: 1rem; font-size: 0.9rem;">
 				Grand total: <strong>33,569</strong> across 3 registries. We report <strong>30k+</strong> (npm only).
 			</p>
 		</section>
@@ -150,9 +154,7 @@
 
 		<section>
 			<h2>The Full Ecosystem</h2>
-			<p>29 npm packages registered under <code>wolfejam.dev</code>.
-			9 active products counted. 13 namespace placeholders held.
-			2 PyPI packages. 1 Rust crate.</p>
+			<p>9 npm packages. 2 PyPI packages. 1 Rust crate. 3 registries.</p>
 			<p>IANA-registered. Anthropic MCP #2759.
 			Chrome Extension approved. Academic paper on Zenodo with DOI.</p>
 			<p>No VC. No marketing team. No growth hacks. Just ship good software and the numbers follow.</p>
@@ -165,13 +167,17 @@
 </div>
 
 <style>
+	:global(body) {
+		background: #0a0a0a !important;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
-		color: #333;
+		color: #e5e5e5;
 	}
 
 	.post-header {
@@ -183,7 +189,7 @@
 	.breadcrumb {
 		font-size: 0.9rem;
 		margin-bottom: 1rem;
-		color: #666;
+		color: #999;
 	}
 
 	.breadcrumb a {
@@ -198,13 +204,13 @@
 	h1 {
 		font-size: 2.2rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: #fff;
 		line-height: 1.3;
 	}
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: #666;
+		color: #aaa;
 		margin: 0.5rem 0 1rem 0;
 	}
 
@@ -213,11 +219,11 @@
 		align-items: center;
 		gap: 0.5rem;
 		font-size: 0.9rem;
-		color: #666;
+		color: #999;
 	}
 
 	.separator {
-		color: #ccc;
+		color: #555;
 	}
 
 	.category {
@@ -242,16 +248,17 @@
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: #1a1a1a;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
+		color: #e5e5e5;
 	}
 
 	h2 {
 		font-size: 1.8rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
-		border-bottom: 1px solid #eee;
+		color: #fff;
+		border-bottom: 1px solid #333;
 		padding-bottom: 0.5rem;
 	}
 
@@ -269,7 +276,8 @@
 
 	code {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
-		background: #f0f0f0;
+		background: #2a2a2a;
+		color: #00D4D4;
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.9em;
@@ -319,7 +327,7 @@
 
 	.package-table {
 		margin: 1.5rem 0;
-		border: 1px solid #eee;
+		border: 1px solid #333;
 		border-radius: 8px;
 		overflow: hidden;
 	}
@@ -328,8 +336,9 @@
 		display: grid;
 		grid-template-columns: 1fr 100px 1fr;
 		padding: 0.75rem 1rem;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #333;
 		font-size: 0.95rem;
+		color: #ccc;
 	}
 
 	.pkg-row:last-child {
@@ -338,7 +347,7 @@
 
 	.pkg-header {
 		background: #1a1a1a;
-		color: #ccc;
+		color: #999;
 		font-weight: 600;
 		font-size: 0.85rem;
 		text-transform: uppercase;
@@ -349,14 +358,28 @@
 		text-align: right;
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.9rem;
+		color: #FF6B35;
+	}
+
+	.hero-image {
+		margin: 0 0 2rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 12px;
 	}
 
 	.footer-note {
 		margin-top: 4rem;
 		padding-top: 2rem;
-		border-top: 1px solid #eee;
+		border-top: 1px solid #333;
 		font-size: 0.95rem;
-		color: #666;
+		color: #999;
 		text-align: center;
 	}
 
