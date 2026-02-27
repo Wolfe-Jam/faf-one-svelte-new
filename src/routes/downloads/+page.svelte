@@ -126,9 +126,9 @@
 
 	<!-- Quick-nav pills -->
 	<nav class="quick-nav">
-		<a href="#npm" class="nav-pill">npm (9)</a>
-		<a href="#pypi" class="nav-pill">Python (2)</a>
-		<a href="#crates" class="nav-pill">Rust (1)</a>
+		<a href="#npm" class="nav-pill">npm ({npmPackages.length})</a>
+		<a href="#pypi" class="nav-pill">Python ({pypiPackages.length})</a>
+		<a href="#crates" class="nav-pill">Rust ({cratesPackages.length})</a>
 		<a href="#notify" class="nav-pill notify-pill">Get Notified</a>
 	</nav>
 
