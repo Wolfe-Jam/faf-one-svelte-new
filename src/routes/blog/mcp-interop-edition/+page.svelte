@@ -42,10 +42,45 @@
 			<h3>AI Format Interop</h3>
 			<p>One <code>project.faf</code>. Every AI instruction format. Generated inside Claude Desktop or Claude Code &mdash; no terminal required.</p>
 
-			<pre><code>{`project.faf  -->  CLAUDE.md     (Anthropic)
-             -->  AGENTS.md     (OpenAI / Linux Foundation)
-             -->  .cursorrules  (Cursor IDE)
-             -->  GEMINI.md     (Google Gemini CLI)`}</code></pre>
+			<!-- Hub-and-Spoke Interop Diagram -->
+			<div class="interop-diagram">
+				<div class="hub">
+					<div class="hub-icon">&#9881;</div>
+					<div class="hub-label">project.faf</div>
+					<div class="hub-sub">Single source of truth</div>
+				</div>
+				<div class="spokes">
+					<div class="spoke">
+						<div class="spoke-arrow">&rarr;</div>
+						<div class="spoke-target claude-target">
+							<div class="spoke-file">CLAUDE.md</div>
+							<div class="spoke-platform">Anthropic</div>
+						</div>
+					</div>
+					<div class="spoke">
+						<div class="spoke-arrow">&rarr;</div>
+						<div class="spoke-target agents-target">
+							<div class="spoke-file">AGENTS.md</div>
+							<div class="spoke-platform">OpenAI / Linux Foundation</div>
+						</div>
+					</div>
+					<div class="spoke">
+						<div class="spoke-arrow">&rarr;</div>
+						<div class="spoke-target cursor-target">
+							<div class="spoke-file">.cursorrules</div>
+							<div class="spoke-platform">Cursor IDE</div>
+						</div>
+					</div>
+					<div class="spoke">
+						<div class="spoke-arrow">&rarr;</div>
+						<div class="spoke-target gemini-target">
+							<div class="spoke-file">GEMINI.md</div>
+							<div class="spoke-platform">Google Gemini CLI</div>
+						</div>
+					</div>
+				</div>
+				<div class="diagram-caption">faf_bi_sync {`{ all: true }`} &mdash; one call, every format</div>
+			</div>
 
 			<h3>5 New MCP Tools</h3>
 
@@ -378,6 +413,100 @@
 		text-align: center;
 	}
 
+	/* Hub-and-Spoke Interop Diagram */
+	.interop-diagram {
+		background: #0a0a0a;
+		border-radius: 12px;
+		padding: 2rem;
+		margin: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.hub {
+		background: #1a1a1a;
+		border: 2px solid #FF6B35;
+		border-radius: 12px;
+		padding: 1.25rem 2rem;
+		text-align: center;
+		min-width: 200px;
+	}
+
+	.hub-icon {
+		font-size: 1.5rem;
+		color: #FF6B35;
+		margin-bottom: 0.25rem;
+	}
+
+	.hub-label {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: #FF6B35;
+	}
+
+	.hub-sub {
+		font-size: 0.75rem;
+		color: #888;
+		margin-top: 0.25rem;
+	}
+
+	.spokes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.spoke {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.spoke-arrow {
+		color: #555;
+		font-size: 1.2rem;
+		flex-shrink: 0;
+	}
+
+	.spoke-target {
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		padding: 0.75rem 1rem;
+		flex: 1;
+		border-left: 3px solid;
+	}
+
+	.claude-target { border-left-color: #f59e0b; }
+	.agents-target { border-left-color: #4ade80; }
+	.cursor-target { border-left-color: #059669; }
+	.gemini-target { border-left-color: #3b82f6; }
+
+	.spoke-file {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: #f5f5f5;
+	}
+
+	.spoke-platform {
+		font-size: 0.7rem;
+		color: #888;
+		margin-top: 0.15rem;
+	}
+
+	.diagram-caption {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.8rem;
+		color: #00D4D4;
+		text-align: center;
+	}
+
 	a {
 		color: #FF6B35;
 	}
@@ -397,6 +526,10 @@
 
 		.blog-post {
 			padding: 1rem;
+		}
+
+		.spokes {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
