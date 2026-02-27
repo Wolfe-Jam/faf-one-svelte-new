@@ -2,10 +2,17 @@
 	import { onMount } from 'svelte';
 
 	let mounted = false;
+	let copiedId = $state('');
 
 	onMount(() => {
 		mounted = true;
 	});
+
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 </script>
 
 <svelte:head>
@@ -51,9 +58,9 @@
 				<strong>bun-sticky-zig</strong> is now live on GitHub. A Zig-native FAF scoring CLI with zero runtime dependencies, 77KB binary, and 136 championship-grade tests.
 			</p>
 
-			<div class="code-block">
-				<pre><code>curl -fsSL https://raw.githubusercontent.com/Wolfe-Jam/bun-sticky-zig/main/install.sh | bash
-faf score</code></pre>
+			<div class="copy-box" onclick={() => copyText('curl -fsSL https://raw.githubusercontent.com/Wolfe-Jam/bun-sticky-zig/main/install.sh | bash', 'intro')}>
+				<code class="copy-code">curl -fsSL https://raw.githubusercontent.com/Wolfe-Jam/bun-sticky-zig/main/install.sh | bash</code>
+				<button class="copy-btn">{copiedId === 'intro' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -91,27 +98,37 @@ faf score</code></pre>
 			<h2>Installation</h2>
 			<p>One-liner install (like Bun itself):</p>
 
-			<div class="code-block">
-				<pre><code>curl -fsSL https://raw.githubusercontent.com/Wolfe-Jam/bun-sticky-zig/main/install.sh | bash</code></pre>
+			<div class="copy-box" onclick={() => copyText('curl -fsSL https://raw.githubusercontent.com/Wolfe-Jam/bun-sticky-zig/main/install.sh | bash', 'install')}>
+				<code class="copy-code">curl -fsSL https://raw.githubusercontent.com/Wolfe-Jam/bun-sticky-zig/main/install.sh | bash</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Or build from source:</p>
 
-			<div class="code-block">
-				<pre><code>{`git clone https://github.com/Wolfe-Jam/bun-sticky-zig
-cd bun-sticky-zig
-zig build -Doptimize=ReleaseFast`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('git clone https://github.com/Wolfe-Jam/bun-sticky-zig\ncd bun-sticky-zig\nzig build -Doptimize=ReleaseFast', 'source')}>
+				<div class="copy-code-multi">git clone https://github.com/Wolfe-Jam/bun-sticky-zig<br/>cd bun-sticky-zig<br/>zig build -Doptimize=ReleaseFast</div>
+				<button class="copy-btn">{copiedId === 'source' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
 		<section class="commands">
 			<h2>Commands</h2>
 
-			<div class="code-block">
-				<pre><code>{`faf score      # Show FAF score + tier
-faf init myapp # Create project.faf
-faf sync       # Sync to CLAUDE.md
-faf help       # Show commands`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('faf score', 'score')}>
+				<code class="copy-code">faf score <span class="code-comment"># Show FAF score + tier</span></code>
+				<button class="copy-btn">{copiedId === 'score' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" style="margin-top: 0.5rem;" onclick={() => copyText('faf init myapp', 'init')}>
+				<code class="copy-code">faf init myapp <span class="code-comment"># Create project.faf</span></code>
+				<button class="copy-btn">{copiedId === 'init' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" style="margin-top: 0.5rem;" onclick={() => copyText('faf sync', 'sync')}>
+				<code class="copy-code">faf sync <span class="code-comment"># Sync to CLAUDE.md</span></code>
+				<button class="copy-btn">{copiedId === 'sync' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" style="margin-top: 0.5rem;" onclick={() => copyText('faf help', 'help')}>
+				<code class="copy-code">faf help <span class="code-comment"># Show commands</span></code>
+				<button class="copy-btn">{copiedId === 'help' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -148,17 +165,17 @@ faf help       # Show commands`}</code></pre>
 				<strong>Type-aware:</strong> CLI projects use 9 slots. Fullstack uses all 21.
 			</p>
 
-			<div class="code-block">
-				<pre><code>Score = (Filled Slots / Applicable Slots) × 100</code></pre>
+			<div class="copy-box display-only">
+				<code class="copy-code">Score = (Filled Slots / Applicable Slots) × 100</code>
 			</div>
 		</section>
 
 		<section class="testing">
 			<h2>136 Championship-Grade Tests</h2>
 
-			<div class="code-block">
-				<pre><code>zig build test --summary all
-# 136/136 tests passed</code></pre>
+			<div class="copy-box" onclick={() => copyText('zig build test --summary all', 'test')}>
+				<code class="copy-code">zig build test --summary all <span class="code-comment"># 136/136 tests passed</span></code>
+				<button class="copy-btn">{copiedId === 'test' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -504,26 +521,79 @@ bun-sticky v1.0.0 [ZIG]</pre>
 		}
 	}
 
-	.code-block {
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
 		background: #1a1a1a;
-		color: var(--faf-cyan-dark);
-		padding: 1.5rem 2rem;
+		border: 1px solid #333;
 		border-radius: 8px;
-		margin: 1rem -1rem;
-		overflow-x: auto;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
 	}
 
-	.code-block pre {
-		margin: 0;
+	.copy-box:hover {
+		border-color: #555;
+	}
+
+	.copy-box.display-only {
+		cursor: default;
+	}
+
+	.copy-box.display-only:hover {
+		border-color: #333;
+	}
+
+	.copy-code {
+		flex: 1;
 		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
 		font-size: 0.9rem;
-		line-height: 1.5;
+		font-weight: 600;
+		word-break: break-all;
+		border-radius: 0;
 	}
 
-	.code-block code {
-		background: none;
-		padding: 0;
-		color: inherit;
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+
+	.code-comment {
+		color: #666;
+		font-weight: 400;
+	}
+
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+
+	.copy-btn:hover {
+		background: rgba(255, 107, 53, 0.3);
+		border-color: #ff6b35;
+	}
+
+	.copy-btn:active {
+		transform: scale(0.95);
 	}
 
 	ul {
