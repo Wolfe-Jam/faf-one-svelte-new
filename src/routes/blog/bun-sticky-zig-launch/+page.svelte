@@ -268,24 +268,28 @@ bun-sticky v1.0.0 [ZIG]</pre>
 </div>
 
 <style>
+	:global(body) {
+		background: #0a0a0a !important;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: #e5e5e5;
 	}
 
 	.post-header {
 		margin-bottom: 3rem;
-		border-bottom: 1px solid #e5e5e5;
+		border-bottom: 1px solid #333;
 		padding-bottom: 2rem;
 	}
 
 	.breadcrumb {
 		font-size: 0.875rem;
-		color: #666;
+		color: #999;
 		margin-bottom: 1rem;
 	}
 
@@ -308,7 +312,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 
 	.subtitle {
 		font-size: 1.5rem;
-		color: #666;
+		color: #999;
 		margin: 0.5rem 0;
 		font-weight: 400;
 	}
@@ -318,7 +322,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 		gap: 0.5rem;
 		align-items: center;
 		font-size: 0.875rem;
-		color: #666;
+		color: #999;
 		margin-top: 1rem;
 	}
 
@@ -341,7 +345,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 
 	.lead {
 		font-size: 1.25rem;
-		color: #333;
+		color: #ccc;
 		margin: 1rem 0;
 	}
 
@@ -353,7 +357,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 		font-size: 2rem;
 		font-weight: 700;
 		margin: 2rem 0 1rem;
-		color: #1a1a1a;
+		color: #fff;
 	}
 
 	h3 {
@@ -364,7 +368,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 	}
 
 	code {
-		background: #f5f5f5;
+		background: #2a2a2a;
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-family: 'Monaco', 'Courier New', monospace;
@@ -459,7 +463,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 	}
 
 	.feature-compare {
-		background: #f9f9f9;
+		background: #1a1a1a;
 		border-radius: 8px;
 		padding: 1rem;
 		margin: 1.5rem 0;
@@ -470,7 +474,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 		grid-template-columns: 1fr auto auto;
 		gap: 2rem;
 		padding: 0.5rem 0;
-		border-bottom: 1px solid #e5e5e5;
+		border-bottom: 1px solid #333;
 	}
 
 	.feature-row:last-child {
@@ -549,10 +553,10 @@ bun-sticky v1.0.0 [ZIG]</pre>
 	}
 
 	.spec-card {
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: #1a1a1a;
 		padding: 1rem;
 		border-radius: 8px;
-		border: 1px solid #e5e5e5;
+		border: 1px solid #333;
 		text-align: center;
 	}
 
@@ -564,7 +568,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 
 	.spec-card .fields {
 		font-size: 0.9rem;
-		color: #666;
+		color: #999;
 		margin: 0;
 	}
 
@@ -599,19 +603,20 @@ bun-sticky v1.0.0 [ZIG]</pre>
 		margin-top: 3rem;
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: #1a1a1a;
 		border-radius: 12px;
+		border: 1px solid #333;
 	}
 
 	.tagline {
 		font-size: 1.5rem;
-		color: #1a1a1a;
+		color: #e5e5e5;
 		margin: 1rem 0;
 	}
 
 	.brand {
 		font-size: 1.125rem;
-		color: #666;
+		color: #999;
 		margin: 1.5rem 0;
 		line-height: 1.8;
 	}
@@ -619,7 +624,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 	.post-footer {
 		margin-top: 4rem;
 		padding-top: 2rem;
-		border-top: 1px solid #e5e5e5;
+		border-top: 1px solid #333;
 	}
 
 	.author {
@@ -631,7 +636,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 	}
 
 	.tagline-footer {
-		color: #666;
+		color: #999;
 		font-size: 0.875rem;
 	}
 
