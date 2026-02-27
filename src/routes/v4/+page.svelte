@@ -23,7 +23,7 @@
 			<div class="badges">
 				<span class="badge iana">IANA Registered</span>
 				<span class="badge anthropic">Anthropic MCP</span>
-				<span class="badge downloads">21,000+ downloads</span>
+				<span class="badge downloads">28,000+ downloads</span>
 			</div>
 		</div>
 	</section>
