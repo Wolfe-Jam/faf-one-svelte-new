@@ -76,6 +76,7 @@
 
 	<div class="nav-section">
 		<h4>Resources</h4>
+		<a href="/downloads" onclick={() => isOpen = false}>📦 Downloads</a>
 		<a href="/#pricing" onclick={() => isOpen = false}>💰 Pricing</a>
 		<a href="/calculator" onclick={() => isOpen = false}>🧮 ROI Calculator</a>
 		<a href="/risk-assessment" onclick={() => isOpen = false}>🎯 Risk Assessment</a>

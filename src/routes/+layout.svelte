@@ -21,9 +21,9 @@
 		</svg>
 		⭐ Star
 	</a>
-	<div class="banner-section-center">
-		30k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
-	</div>
+	<a href="/downloads" class="banner-section-center">
+		33k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
+	</a>
 	<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="banner-section">
 		⚡️ MCP #2759 MERGED ⚡️
 	</a>
@@ -109,6 +109,8 @@
 	.banner-section-center {
 		font-size: 1em;
 		font-weight: 700;
+		color: white;
+		text-decoration: none;
 	}
 
 	.anthropic-approved {

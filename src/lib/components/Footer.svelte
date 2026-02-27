@@ -16,7 +16,7 @@
 				</div>
 				<p class="footer-mission">NO BS. No FAFfing About.</p>
 				<div class="footer-stats">
-					<div class="stat">☑️ 30k+ Ecosystem Downloads</div>
+					<div class="stat"><a href="/downloads" class="stat-link">☑️ 33k+ Ecosystem Downloads</a></div>
 					<div class="stat">☑️ 9 Packages, 3 Registries</div>
 					<div class="stat">☑️ Chrome Extension LIVE</div>
 				</div>
@@ -128,6 +128,16 @@
 		color: #999;
 		font-size: 0.875rem;
 		font-family: var(--font-mono);
+	}
+
+	.stat :global(.stat-link) {
+		color: #999;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.stat :global(.stat-link:hover) {
+		color: var(--faf-orange);
 	}
 	
 	.footer-column h4 {
