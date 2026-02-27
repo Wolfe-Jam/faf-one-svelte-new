@@ -16,8 +16,8 @@
 				</div>
 				<p class="footer-mission">NO BS. No FAFfing About.</p>
 				<div class="footer-stats">
-					<div class="stat">☑️ CLI: 18k+ Downloads</div>
-					<div class="stat">☑️ MCP: 2k+ Downloads</div>
+					<div class="stat">☑️ 30k+ Ecosystem Downloads</div>
+					<div class="stat">☑️ 9 Packages, 3 Registries</div>
 					<div class="stat">☑️ Chrome Extension LIVE</div>
 				</div>
 			</div>
