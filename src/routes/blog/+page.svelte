@@ -528,29 +528,6 @@
 		border-color: var(--faf-orange);
 	}
 
-	.dark-card {
-		background: #0a0a0a;
-		border-color: #333;
-		color: #e5e5e5;
-	}
-
-	.dark-card h2 {
-		color: #fff;
-	}
-
-	.dark-card .post-excerpt {
-		color: #999;
-	}
-
-	.dark-card .post-date {
-		color: #777;
-	}
-
-	.dark-card:hover {
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
-		border-color: var(--faf-orange);
-	}
-
 	.post-emoji {
 		font-size: 3rem;
 		margin-bottom: 1rem;
@@ -623,6 +600,29 @@
 		padding: 2rem;
 		color: #888;
 		font-style: italic;
+	}
+
+	.dark-card {
+		background: #0a0a0a;
+		border-color: #333;
+		color: #e5e5e5;
+	}
+
+	.dark-card h2 {
+		color: #fff;
+	}
+
+	.dark-card .post-excerpt {
+		color: #999;
+	}
+
+	.dark-card .post-date {
+		color: #777;
+	}
+
+	.dark-card:hover {
+		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
+		border-color: var(--faf-orange);
 	}
 
 	@media (max-width: 768px) {
