@@ -115,11 +115,6 @@
 					<span>223</span>
 					<span>WASM scorer</span>
 				</div>
-				<div class="pkg-row">
-					<span><strong>bun-sticky-faf</strong></span>
-					<span>218</span>
-					<span>Bun scoring (FAF)</span>
-				</div>
 			</div>
 
 			<p>Plus <strong>faf-python-sdk</strong> (1,936) and <strong>gemini-faf-mcp</strong> (1,137) on PyPI.
@@ -334,7 +329,8 @@
 
 	.pkg-row {
 		display: grid;
-		grid-template-columns: 1fr 100px 1fr;
+		grid-template-columns: 1fr 120px 1fr;
+		gap: 0 1rem;
 		padding: 0.75rem 1rem;
 		border-bottom: 1px solid #333;
 		font-size: 0.95rem;
