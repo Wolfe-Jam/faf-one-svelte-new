@@ -2,6 +2,12 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	let showProofModal = false;
+	let copiedId = $state('');
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 	onMount(() => { mounted = true; });
 </script>
 
@@ -103,7 +109,7 @@
 			<div class="calculation">
 				<p>The math: 1,750 - 150 = 1,600 tokens saved per session.</p>
 				<p class="big-number">That's <strong>91%</strong> of your tokens wasted on rediscovery.</p>
-				<button class="proof-link" on:click={() => showProofModal = true}>Verified by Claude Opus 4.5 ↗</button>
+				<button class="proof-link" onclick={() => showProofModal = true}>Verified by Claude Opus 4.5 ↗</button>
 			</div>
 			<p>91% waste. Every session. Every day. Every project.</p>
 			<p>But tokens are just the symptom. The real cost is what comes next.</p>
@@ -278,9 +284,13 @@ human_context:
 				<li><strong>Scoring system</strong> (0-100% AI readiness)</li>
 			</ul>
 			<p>One command to break the cycle:</p>
-			<div class="terminal">
-				<code>npm install -g faf-cli</code>
-				<code>faf auto</code>
+			<div class="copy-box" onclick={() => copyText('npm install -g faf-cli', 'install')}>
+				<code class="copy-code">npm install -g faf-cli</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf auto', 'auto')}>
+				<code class="copy-code">faf auto</code>
+				<button class="copy-btn">{copiedId === 'auto' ? 'Copied!' : 'Copy'}</button>
 			</div>
 			<p>Your project gets a foundation. Your AI gets context. The DAAFT cycle ends.</p>
 		</section>
@@ -313,9 +323,11 @@ human_context:
 
 <!-- Proof Modal -->
 {#if showProofModal}
-	<div class="modal-overlay" on:click={() => showProofModal = false}>
-		<div class="modal-content" on:click|stopPropagation>
-			<button class="modal-close" on:click={() => showProofModal = false}>×</button>
+	<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
+	<div class="modal-overlay" onclick={() => showProofModal = false}>
+		<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
+		<div class="modal-content" onclick={(e) => e.stopPropagation()}>
+			<button class="modal-close" onclick={() => showProofModal = false}>×</button>
 			<h3 class="modal-title">91% Token Savings — Verified by Claude</h3>
 			<img
 				src="/images/91-percent-proof.png"
@@ -1052,6 +1064,55 @@ human_context:
 		font-size: 0.8rem;
 		margin-top: 1rem;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	/* Mobile */
 	@media (max-width: 768px) {

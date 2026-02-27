@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	let mounted = false;
+	let copiedId = $state('');
+
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
+
 	onMount(() => { mounted = true; });
 </script>
 
@@ -85,12 +93,9 @@
 				That's what <code>faf init --xai</code> does.
 			</p>
 
-			<div class="terminal-block">
-				<code># Initialize your project
-cd your-project
-faf init --xai
-
-# That's it. Voice is eternal.</code>
+			<div class="copy-box" onclick={() => copyText('cd your-project\nfaf init --xai', 'init-xai')}>
+				<div class="copy-code-multi">cd your-project<br/>faf init --xai</div>
+				<button class="copy-btn">{copiedId === 'init-xai' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<h3>What Gets Added to project.faf</h3>
@@ -269,30 +274,23 @@ xai_collections:
 
 		<section>
 			<h2>Try It Now</h2>
-			<div class="terminal-block">
-				<code># Install faf-cli
-npm install -g faf-cli@4.2.0
-
-# Initialize with xAI voice
-cd your-project
-faf init --xai
-
-# Upload to xAI Collections
-# (Follow xAI Collections docs)
-
-# Talk to Grok
-# Your voice is eternal</code>
+			<div class="copy-box" onclick={() => copyText('npm install -g faf-cli@4.2.0', 'install-cli')}>
+				<code class="copy-code">npm install -g faf-cli@4.2.0</code>
+				<button class="copy-btn">{copiedId === 'install-cli' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('cd your-project\nfaf init --xai', 'tryit-init')}>
+				<div class="copy-code-multi">cd your-project<br/>faf init --xai</div>
+				<button class="copy-btn">{copiedId === 'tryit-init' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<h3>Verify Installation</h3>
-			<div class="terminal-block">
-				<code>faf --version
-# 4.2.0
-
-cat project.faf | grep "grok:"
-# grok:
-#   voice: Leo
-#   ...</code>
+			<div class="copy-box" onclick={() => copyText('faf --version', 'verify-version')}>
+				<code class="copy-code">faf --version</code>
+				<button class="copy-btn">{copiedId === 'verify-version' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('cat project.faf | grep "grok:"', 'verify-grep')}>
+				<code class="copy-code">cat project.faf | grep "grok:"</code>
+				<button class="copy-btn">{copiedId === 'verify-grep' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -598,4 +596,53 @@ cat project.faf | grep "grok:"
 		border-top: 2px solid #eee;
 		margin-top: 3rem;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 </style>

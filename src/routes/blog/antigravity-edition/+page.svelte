@@ -2,6 +2,13 @@
 	import { onMount } from 'svelte';
 
 	let mounted = $state(false);
+	let copiedId = $state('');
+
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 
 	onMount(() => {
 		mounted = true;
@@ -147,26 +154,18 @@
 			<h3>Local Project Context</h3>
 			<p>Same project-level sync as Claude:</p>
 
-			<pre><code>{`# Export FAF to Gemini format
-faf gemini export       # Creates GEMINI.md from project.faf
-
-# Import from existing Gemini context
-faf gemini import       # Reads GEMINI.md, updates project.faf
-
-# Bi-directional sync
-faf gemini sync         # Keep both aligned`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('faf gemini export\nfaf gemini import\nfaf gemini sync', 'gemini-local')}>
+				<div class="copy-code-multi">faf gemini export <span class="code-comment"># Creates GEMINI.md from project.faf</span><br/>faf gemini import <span class="code-comment"># Reads GEMINI.md, updates project.faf</span><br/>faf gemini sync <span class="code-comment"># Keep both aligned</span></div>
+				<button class="copy-btn">{copiedId === 'gemini-local' ? 'Copied!' : 'Copy'}</button>
+			</div>
 
 			<h3>Global Antigravity Config</h3>
 			<p>The <code>--global</code> flag connects to Antigravity's global context:</p>
 
-			<pre><code>{`# Export FAF to global Gemini config
-faf gemini export --global   # Creates ~/.gemini/GEMINI.md
-
-# Import global config
-faf gemini import --global   # Reads global config
-
-# Sync with global
-faf gemini sync --global     # Bidirectional sync`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('faf gemini export --global\nfaf gemini import --global\nfaf gemini sync --global', 'gemini-global')}>
+				<div class="copy-code-multi">faf gemini export --global <span class="code-comment"># Creates ~/.gemini/GEMINI.md</span><br/>faf gemini import --global <span class="code-comment"># Reads global config</span><br/>faf gemini sync --global <span class="code-comment"># Bidirectional sync</span></div>
+				<button class="copy-btn">{copiedId === 'gemini-global' ? 'Copied!' : 'Copy'}</button>
+			</div>
 
 			<p>Your <code>~/.gemini/GEMINI.md</code> now stays in sync with your .faf ecosystem.</p>
 		</section>
@@ -313,13 +312,10 @@ faf gemini sync --global     # Bidirectional sync`}</code></pre>
 
 			<div class="workflow-box">
 				<h3>The Unified Workflow</h3>
-				<pre><code>{`# Your workflow
-faf auto               # Create project.faf once
-faf bi-sync            # Sync to CLAUDE.md
-faf gemini             # Sync to GEMINI.md
-faf conductor          # Sync to conductor/
-
-# Done. All tools have context. No drift.`}</code></pre>
+				<div class="copy-box" onclick={() => copyText('faf auto\nfaf bi-sync\nfaf gemini\nfaf conductor', 'workflow')}>
+					<div class="copy-code-multi">faf auto <span class="code-comment"># Create project.faf once</span><br/>faf bi-sync <span class="code-comment"># Sync to CLAUDE.md</span><br/>faf gemini <span class="code-comment"># Sync to GEMINI.md</span><br/>faf conductor <span class="code-comment"># Sync to conductor/</span></div>
+					<button class="copy-btn">{copiedId === 'workflow' ? 'Copied!' : 'Copy'}</button>
+				</div>
 			</div>
 		</section>
 
@@ -327,29 +323,24 @@ faf conductor          # Sync to conductor/
 		<section>
 			<h2>Get Started</h2>
 
-			<div class="terminal-block">
-				<code>npm install -g faf-cli@4.0.0</code>
+			<div class="copy-box" onclick={() => copyText('npm install -g faf-cli@4.0.0', 'install')}>
+				<code class="copy-code">npm install -g faf-cli@4.0.0</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Or with Homebrew:</p>
 
-			<div class="terminal-block">
-				<code>brew upgrade faf-cli</code>
+			<div class="copy-box" onclick={() => copyText('brew upgrade faf-cli', 'brew')}>
+				<code class="copy-code">brew upgrade faf-cli</code>
+				<button class="copy-btn">{copiedId === 'brew' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Then set up your context:</p>
 
-			<pre><code>{`# Create project.faf if you don't have one
-faf auto
-
-# Export to Gemini
-faf gemini export
-
-# Set up global Antigravity context
-faf gemini export --global
-
-# Verify
-cat ~/.gemini/GEMINI.md`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('faf auto\nfaf gemini export\nfaf gemini export --global\ncat ~/.gemini/GEMINI.md', 'setup')}>
+				<div class="copy-code-multi">faf auto <span class="code-comment"># Create project.faf if you don't have one</span><br/>faf gemini export <span class="code-comment"># Export to Gemini</span><br/>faf gemini export --global <span class="code-comment"># Set up global Antigravity context</span><br/>cat ~/.gemini/GEMINI.md <span class="code-comment"># Verify</span></div>
+				<button class="copy-btn">{copiedId === 'setup' ? 'Copied!' : 'Copy'}</button>
+			</div>
 
 			<div class="cta-grid">
 				<div class="cta-box">
@@ -953,6 +944,55 @@ cat ~/.gemini/GEMINI.md`}</code></pre>
 		margin: 0;
 		line-height: 1.6;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	/* Responsive */
 	@media (max-width: 768px) {

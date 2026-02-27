@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	let copiedId = $state('');
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 </script>
 
 <svelte:head>
@@ -69,22 +76,31 @@
 				<div class="option-card">
 					<h3>⚡ Option 1: URL-Based (Instant)</h3>
 					<p>Point your MCP client to:</p>
-					<pre><code>https://grok-faf-mcp.vercel.app/sse</code></pre>
+					<div class="copy-box" onclick={() => copyText('https://grok-faf-mcp.vercel.app/sse', 'sse-url')}>
+						<code class="copy-code">https://grok-faf-mcp.vercel.app/sse</code>
+						<button class="copy-btn">{copiedId === 'sse-url' ? 'Copied!' : 'Copy'}</button>
+					</div>
 					<p>All 17 tools available instantly. No installation.</p>
 				</div>
 
 				<div class="option-card">
 					<h3>📦 Option 2: Local Install</h3>
-					<pre><code>npm install -g grok-faf-mcp</code></pre>
+					<div class="copy-box" onclick={() => copyText('npm install -g grok-faf-mcp', 'npm-install')}>
+						<code class="copy-code">npm install -g grok-faf-mcp</code>
+						<button class="copy-btn">{copiedId === 'npm-install' ? 'Copied!' : 'Copy'}</button>
+					</div>
 					<p>Add to your MCP config:</p>
-					<pre><code>{`{
+					<div class="copy-box" onclick={() => copyText('{\n  "mcpServers": {\n    "grok-faf": {\n      "command": "npx",\n      "args": ["-y", "grok-faf-mcp"]\n    }\n  }\n}', 'mcp-config')}>
+						<div class="copy-code-multi">{`{
   "mcpServers": {
     "grok-faf": {
       "command": "npx",
       "args": ["-y", "grok-faf-mcp"]
     }
   }
-}`}</code></pre>
+}`}</div>
+						<button class="copy-btn">{copiedId === 'mcp-config' ? 'Copied!' : 'Copy'}</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -330,13 +346,19 @@
 			<div class="cta-box">
 				<h3>URL-Based Access</h3>
 				<p>Point your MCP client to:</p>
-				<pre><code>https://grok-faf-mcp.vercel.app/sse</code></pre>
+				<div class="copy-box" onclick={() => copyText('https://grok-faf-mcp.vercel.app/sse', 'cta-sse-url')}>
+					<code class="copy-code">https://grok-faf-mcp.vercel.app/sse</code>
+					<button class="copy-btn">{copiedId === 'cta-sse-url' ? 'Copied!' : 'Copy'}</button>
+				</div>
 				<p><a href="https://grok-faf-mcp.vercel.app" target="_blank" rel="noopener" class="cta-link">View Live Server →</a></p>
 			</div>
 
 			<div class="cta-box">
 				<h3>Install Locally</h3>
-				<pre><code>npm install -g grok-faf-mcp</code></pre>
+				<div class="copy-box" onclick={() => copyText('npm install -g grok-faf-mcp', 'cta-npm-install')}>
+					<code class="copy-code">npm install -g grok-faf-mcp</code>
+					<button class="copy-btn">{copiedId === 'cta-npm-install' ? 'Copied!' : 'Copy'}</button>
+				</div>
 				<p><a href="https://www.npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="cta-link">View on npm →</a></p>
 			</div>
 
@@ -667,6 +689,55 @@
 		font-style: italic;
 		font-size: 0.95rem;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {
 		h1 {

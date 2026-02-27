@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	let copiedId = $state('');
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 </script>
 
 <svelte:head>
@@ -105,30 +112,42 @@
 			<h3>faf gemini</h3>
 			<p>Bidirectional sync with GEMINI.md for Gemini CLI and Antigravity IDE:</p>
 
-			<pre><code>{`# Import existing GEMINI.md to .faf
-faf gemini import
-
-# Export .faf to GEMINI.md
-faf gemini export
-
-# Sync bidirectionally
-faf gemini sync
-
-# Work with Antigravity's global config
-faf gemini import --global
-faf gemini export --global`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('faf gemini import', 'gemini-import')}>
+				<code class="copy-code">faf gemini import</code>
+				<button class="copy-btn">{copiedId === 'gemini-import' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf gemini export', 'gemini-export')}>
+				<code class="copy-code">faf gemini export</code>
+				<button class="copy-btn">{copiedId === 'gemini-export' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf gemini sync', 'gemini-sync')}>
+				<code class="copy-code">faf gemini sync</code>
+				<button class="copy-btn">{copiedId === 'gemini-sync' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf gemini import --global', 'gemini-import-global')}>
+				<code class="copy-code">faf gemini import --global</code>
+				<button class="copy-btn">{copiedId === 'gemini-import-global' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf gemini export --global', 'gemini-export-global')}>
+				<code class="copy-code">faf gemini export --global</code>
+				<button class="copy-btn">{copiedId === 'gemini-export-global' ? 'Copied!' : 'Copy'}</button>
+			</div>
 
 			<h3>faf conductor</h3>
 			<p>Import/export Google's Conductor extension format:</p>
 
-			<pre><code>{`# Import conductor/ directory to .faf
-faf conductor import
-
-# Export .faf to conductor/ format
-faf conductor export
-
-# Bidirectional sync
-faf conductor sync`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('faf conductor import', 'conductor-import')}>
+				<code class="copy-code">faf conductor import</code>
+				<button class="copy-btn">{copiedId === 'conductor-import' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf conductor export', 'conductor-export')}>
+				<code class="copy-code">faf conductor export</code>
+				<button class="copy-btn">{copiedId === 'conductor-export' ? 'Copied!' : 'Copy'}</button>
+			</div>
+			<div class="copy-box" onclick={() => copyText('faf conductor sync', 'conductor-sync')}>
+				<code class="copy-code">faf conductor sync</code>
+				<button class="copy-btn">{copiedId === 'conductor-sync' ? 'Copied!' : 'Copy'}</button>
+			</div>
 
 			<p>Conductor format includes <code>product.md</code>, <code>tech-stack.md</code>, <code>workflow.md</code>, and <code>product-guidelines.md</code>.</p>
 		</section>
@@ -225,21 +244,23 @@ faf conductor sync`}</code></pre>
 		<section>
 			<h2>Try It</h2>
 
-			<div class="terminal-block">
-				<code>npm install -g faf-cli@3.4.7</code>
+			<div class="copy-box" onclick={() => copyText('npm install -g faf-cli@3.4.7', 'install')}>
+				<code class="copy-code">npm install -g faf-cli@3.4.7</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Or with Homebrew:</p>
 
-			<div class="terminal-block">
-				<code>brew upgrade faf-cli</code>
+			<div class="copy-box" onclick={() => copyText('brew upgrade faf-cli', 'brew')}>
+				<code class="copy-code">brew upgrade faf-cli</code>
+				<button class="copy-btn">{copiedId === 'brew' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Then in your project:</p>
 
-			<div class="terminal-block">
-				<code>faf gemini import</code>
-				<code>faf conductor export</code>
+			<div class="copy-box" onclick={() => copyText('faf gemini import\nfaf conductor export', 'try-commands')}>
+				<div class="copy-code-multi">faf gemini import<br/>faf conductor export</div>
+				<button class="copy-btn">{copiedId === 'try-commands' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<div class="cta-grid">
@@ -583,6 +604,55 @@ faf conductor sync`}</code></pre>
 	a:hover {
 		text-decoration: none;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {
 		h1 {

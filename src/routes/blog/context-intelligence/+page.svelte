@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	let copiedId = $state('');
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 </script>
 
 <svelte:head>
@@ -90,10 +97,9 @@
 			<h3>Standard Workflow</h3>
 			<p>The classic flow works exactly as before:</p>
 
-			<div class="terminal-block">
-				<code>faf init</code>
-				<code>faf auto</code>
-				<code>faf bi-sync</code>
+			<div class="copy-box" onclick={() => copyText('faf init && faf auto && faf bi-sync', 'workflow')}>
+				<div class="copy-code-multi">faf init<br/>faf auto<br/>faf bi-sync</div>
+				<button class="copy-btn">{copiedId === 'workflow' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Full bidirectional sync. Your <code>.faf</code> and <code>CLAUDE.md</code> stay perfectly mirrored.</p>
@@ -101,10 +107,9 @@
 			<h3>Power User Workflow</h3>
 			<p>For custom MCP servers, API documentation, or specialized tooling:</p>
 
-			<div class="terminal-block">
-				<code>faf init</code>
-				<code># Customize CLAUDE.md with tables, endpoints, etc.</code>
-				<code>faf bi-sync</code>
+			<div class="copy-box" onclick={() => copyText('faf init\n# Customize CLAUDE.md with tables, endpoints, etc.\nfaf bi-sync', 'power-workflow')}>
+				<div class="copy-code-multi">faf init<br/><span class="code-comment"># Customize CLAUDE.md with tables, endpoints, etc.</span><br/>faf bi-sync</div>
+				<button class="copy-btn">{copiedId === 'power-workflow' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Bi-sync detects your customizations and preserves them.</p>
@@ -113,14 +118,16 @@
 		<section>
 			<h2>Try It</h2>
 
-			<div class="terminal-block">
-				<code>npm install -g faf-cli@3.4.8</code>
+			<div class="copy-box" onclick={() => copyText('npm install -g faf-cli@3.4.8', 'install')}>
+				<code class="copy-code">npm install -g faf-cli@3.4.8</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Or update:</p>
 
-			<div class="terminal-block">
-				<code>npm update -g faf-cli</code>
+			<div class="copy-box" onclick={() => copyText('npm update -g faf-cli', 'update')}>
+				<code class="copy-code">npm update -g faf-cli</code>
+				<button class="copy-btn">{copiedId === 'update' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<div class="cta-grid">
@@ -431,6 +438,55 @@
 	a:hover {
 		text-decoration: none;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {
 		h1 {

@@ -2,6 +2,13 @@
 	import { onMount } from 'svelte';
 
 	let mounted = false;
+	let copiedId = $state('');
+
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 
 	onMount(() => {
 		mounted = true;
@@ -268,19 +275,9 @@ re-explain their stack, goals, or architecture. Just help.
 
 			<h3>Quick Start</h3>
 
-			<div class="code-block">
-				<pre><code>{`# Clone the repo
-git clone https://github.com/Wolfe-Jam/FAF-Voice
-
-# Install dependencies
-npm install
-
-# Set environment variables
-export XAI_API_KEY=your_key
-export MCPAAS_TOKEN=your_token
-
-# Run locally
-npm run dev`}</code></pre>
+			<div class="copy-box" onclick={() => copyText('git clone https://github.com/Wolfe-Jam/FAF-Voice\nnpm install\nexport XAI_API_KEY=your_key\nexport MCPAAS_TOKEN=your_token\nnpm run dev', 'quickstart')}>
+				<div class="copy-code-multi">git clone https://github.com/Wolfe-Jam/FAF-Voice<br/>npm install<br/>export XAI_API_KEY=your_key<br/>export MCPAAS_TOKEN=your_token<br/>npm run dev</div>
+				<button class="copy-btn">{copiedId === 'quickstart' ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -714,6 +711,55 @@ npm run dev`}</code></pre>
 	a:hover {
 		text-decoration: none;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {
 		h1 {

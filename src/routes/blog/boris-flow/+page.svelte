@@ -2,6 +2,13 @@
 	import { onMount } from 'svelte';
 
 	let mounted = false;
+	let copiedId = $state('');
+
+	async function copyText(text: string, id: string) {
+		await navigator.clipboard.writeText(text);
+		copiedId = id;
+		setTimeout(() => copiedId = '', 2000);
+	}
 
 	onMount(() => {
 		mounted = true;
@@ -213,14 +220,9 @@
 			<div class="workflow-example">
 				<h3>Pre-Certification Workflow</h3>
 				<p>WJTTC users can now validate their .faf files before running certification:</p>
-				<div class="terminal-block">
-					<code>cd your-project</code>
-					<code>faf init && faf auto</code>
-					<code>faf score</code>
-					<code>git clone https://github.com/Wolfe-Jam/faf-cli</code>
-					<code>cd faf-cli && ./tests/boris-flow.test.sh</code>
-					<code>cd ../your-project</code>
-					<code>npx wjttc certify --mcp "npx your-server"</code>
+				<div class="copy-box" onclick={() => copyText('cd your-project\nfaf init && faf auto\nfaf score\ngit clone https://github.com/Wolfe-Jam/faf-cli\ncd faf-cli && ./tests/boris-flow.test.sh\ncd ../your-project\nnpx wjttc certify --mcp "npx your-server"', 'precert')}>
+					<div class="copy-code-multi">cd your-project<br/>faf init && faf auto<br/>faf score<br/>git clone https://github.com/Wolfe-Jam/faf-cli<br/>cd faf-cli && ./tests/boris-flow.test.sh<br/>cd ../your-project<br/>npx wjttc certify --mcp "npx your-server"</div>
+					<button class="copy-btn">{copiedId === 'precert' ? 'Copied!' : 'Copy'}</button>
 				</div>
 				<p>Boris-Flow validates the structure that WJTTC Tier 8 tests. Running it first helps ensure you pass Tier 8.</p>
 			</div>
@@ -314,18 +316,18 @@ Demo complete - no files changed.
 		<section>
 			<h2>Try It</h2>
 
-			<div class="terminal-block">
-				<code>brew install faf-cli</code>
-				<code>faf init && faf auto</code>
+			<div class="copy-box" onclick={() => copyText('brew install faf-cli\nfaf init && faf auto', 'tryit')}>
+				<div class="copy-code-multi">brew install faf-cli<br/>faf init && faf auto</div>
+				<button class="copy-btn">{copiedId === 'tryit' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>That's it. Your Claude Code structure is now captured in project.faf.</p>
 
 			<div class="brave-section">
 				<p class="brave-note">For the brave:</p>
-				<div class="terminal-block small">
-					<code>cd your-project</code>
-					<code>npx faf-cli yolo</code>
+				<div class="copy-box" onclick={() => copyText('cd your-project\nnpx faf-cli yolo', 'yolo')}>
+					<div class="copy-code-multi">cd your-project<br/>npx faf-cli yolo</div>
+					<button class="copy-btn">{copiedId === 'yolo' ? 'Copied!' : 'Copy'}</button>
 				</div>
 				<p class="brave-desc">Downloads faf-cli via npx and runs yolo — init + auto + aggressive extraction in one command. May take a minute on first run.</p>
 			</div>
@@ -814,6 +816,55 @@ Demo complete - no files changed.
 	a:hover {
 		text-decoration: none;
 	}
+
+	.copy-box {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.5rem;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		margin: 1rem 0;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+	.copy-box:hover { border-color: #555; }
+	.copy-code {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		background: transparent;
+		padding: 0;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 0;
+	}
+	.copy-code-multi {
+		flex: 1;
+		font-family: 'Monaco', 'Courier New', monospace;
+		color: #00d4d4;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.6;
+	}
+	.code-comment { color: #666; font-weight: 400; }
+	.copy-btn {
+		padding: 0.5rem 1rem;
+		background: rgba(255, 107, 53, 0.2);
+		border: 1px solid rgba(255, 107, 53, 0.4);
+		color: #ff6b35;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		white-space: nowrap;
+	}
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {
 		h1 {
