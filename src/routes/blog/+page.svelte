@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/thirty-thousand',
+			title: '30,000 Downloads',
+			date: 'February 27, 2026',
+			timestamp: '2026-02-27',
+			excerpt: '9 npm packages. 3 registries. Zero marketing budget. From 20k to 30k in 6 weeks. The FAF ecosystem crosses 30,000 downloads.',
+			emoji: '📈',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/mcp-interop-edition',
 			title: 'MCP Interop Edition',
 			date: 'February 27, 2026',
