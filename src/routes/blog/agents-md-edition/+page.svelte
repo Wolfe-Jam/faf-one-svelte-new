@@ -36,6 +36,10 @@
 			</p>
 		</section>
 
+		<section class="hero-image">
+			<img src="/blog-assets/md-chaos-into-yaml.jpg" alt="Markdown chaos on the left transforming into structured YAML on the right" />
+		</section>
+
 		<!-- ============================================ -->
 		<!-- DIAGRAM 1: The Hub — .faf at Center -->
 		<!-- ============================================ -->
@@ -488,6 +492,22 @@
 	pre code {
 		background: none;
 		padding: 0;
+	}
+
+	/* ======================================== */
+	/* Hero Image */
+	/* ======================================== */
+	.hero-image {
+		margin: 2rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 12px;
 	}
 
 	/* ======================================== */
