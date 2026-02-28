@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/recovered-in-translation',
+			title: 'Recovered in Translation',
+			date: 'February 27, 2026',
+			timestamp: '2026-02-27',
+			excerpt: 'ETH Zurich\'s second paper confirms it: semantic drift and context loss corrupt everything they touch. Benchmarks. AI context. Two diagnoses, one prescription. FAF defines. AI interprets.',
+			emoji: '📄',
+			category: 'Research'
+		},
+		{
 			slug: 'blog/thirty-thousand',
 			title: '30,000 Downloads',
 			date: 'February 27, 2026',

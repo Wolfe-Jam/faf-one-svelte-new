@@ -101,6 +101,16 @@ export const npmPackages: Package[] = [
 		registry: 'npm',
 		icon: '⚡'
 	},
+	{
+		name: 'bun-sticky-faf',
+		description: 'Fastest Bun FAF CLI',
+		downloads: 218,
+		install: 'bun add bun-sticky-faf',
+		registryUrl: 'https://npmjs.com/package/bun-sticky-faf',
+		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky-faf',
+		registry: 'npm',
+		icon: '🥟'
+	},
 ];
 
 // ── PyPI packages (2) ─────────────────────────────────────────────
