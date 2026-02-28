@@ -3,8 +3,8 @@
 		{
 			slug: 'blog/recovered-in-translation',
 			title: 'Recovered in Translation',
-			date: 'February 27, 2026',
-			timestamp: '2026-02-27',
+			date: 'February 28, 2026',
+			timestamp: '2026-02-28',
 			excerpt: 'ETH Zurich\'s second paper confirms it: semantic drift and context loss corrupt everything they touch. Benchmarks. AI context. Two diagnoses, one prescription. FAF defines. AI interprets.',
 			emoji: '📄',
 			category: 'Research'

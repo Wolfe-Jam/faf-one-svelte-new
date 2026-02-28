@@ -24,7 +24,7 @@
 		<p class="subtitle">Same Lab, Same Disease, Same Cure</p>
 		<p class="tagline">FAF defines. AI interprets.</p>
 		<div class="meta">
-			<time datetime="2026-02-27">February 27, 2026</time>
+			<time datetime="2026-02-28">February 28, 2026</time>
 			<span class="separator">&bull;</span>
 			<span class="category research">Research</span>
 			<span class="separator">&bull;</span>
