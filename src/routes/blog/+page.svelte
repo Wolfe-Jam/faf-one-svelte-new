@@ -540,28 +540,28 @@
 		border-left-width: 4px;
 	}
 
-	/* Category left-border colours */
-	.post-card[data-category="Research"] { border-left-color: #27c93f; }
-	.post-card[data-category="Release"] { border-left-color: var(--faf-orange); }
-	.post-card[data-category="MCP Release"] { border-left-color: #4A90E2; }
-	.post-card[data-category="Milestone"] { border-left-color: #FFD700; }
-	.post-card[data-category="Interop"] { border-left-color: #00D4D4; }
-	.post-card[data-category="Foundation"] { border-left-color: #27c93f; }
-	.post-card[data-category="WJTTC Ecosystem"] { border-left-color: #E74C3C; }
-	.post-card[data-category="Launch"] { border-left-color: var(--faf-orange); }
-	.post-card[data-category="Engineering"] { border-left-color: #00D4D4; }
-	.post-card[data-category="IDE Integration"] { border-left-color: #4A90E2; }
-	.post-card[data-category="Case Study"] { border-left-color: #27c93f; }
-	.post-card[data-category="Story"] { border-left-color: var(--faf-orange); }
-	.post-card[data-category="Origin Story"] { border-left-color: var(--faf-orange); }
-	.post-card[data-category="Press Release"] { border-left-color: #333; }
-	.post-card[data-category="xAI Edition"] { border-left-color: #E74C3C; }
-	.post-card[data-category="Grok Edition"] { border-left-color: #E74C3C; }
-	.post-card[data-category="Technical Analysis"] { border-left-color: #00D4D4; }
-	.post-card[data-category="Format Victory"] { border-left-color: #FFD700; }
-	.post-card[data-category="Ecosystem"] { border-left-color: #27c93f; }
-	.post-card[data-category="First"] { border-left-color: #FFD700; }
-	.post-card[data-category="Enhancement"] { border-left-color: #4A90E2; }
+	/* Category border colours */
+	.post-card[data-category="Research"] { border-color: #27c93f; border-left-width: 4px; }
+	.post-card[data-category="Release"] { border-color: var(--faf-orange); border-left-width: 4px; }
+	.post-card[data-category="MCP Release"] { border-color: #4A90E2; border-left-width: 4px; }
+	.post-card[data-category="Milestone"] { border-color: #FFD700; border-left-width: 4px; }
+	.post-card[data-category="Interop"] { border-color: #00D4D4; border-left-width: 4px; }
+	.post-card[data-category="Foundation"] { border-color: #27c93f; border-left-width: 4px; }
+	.post-card[data-category="WJTTC Ecosystem"] { border-color: #E74C3C; border-left-width: 4px; }
+	.post-card[data-category="Launch"] { border-color: var(--faf-orange); border-left-width: 4px; }
+	.post-card[data-category="Engineering"] { border-color: #00D4D4; border-left-width: 4px; }
+	.post-card[data-category="IDE Integration"] { border-color: #4A90E2; border-left-width: 4px; }
+	.post-card[data-category="Case Study"] { border-color: #27c93f; border-left-width: 4px; }
+	.post-card[data-category="Story"] { border-color: var(--faf-orange); border-left-width: 4px; }
+	.post-card[data-category="Origin Story"] { border-color: var(--faf-orange); border-left-width: 4px; }
+	.post-card[data-category="Press Release"] { border-color: #333; border-left-width: 4px; }
+	.post-card[data-category="xAI Edition"] { border-color: #E74C3C; border-left-width: 4px; }
+	.post-card[data-category="Grok Edition"] { border-color: #E74C3C; border-left-width: 4px; }
+	.post-card[data-category="Technical Analysis"] { border-color: #00D4D4; border-left-width: 4px; }
+	.post-card[data-category="Format Victory"] { border-color: #FFD700; border-left-width: 4px; }
+	.post-card[data-category="Ecosystem"] { border-color: #27c93f; border-left-width: 4px; }
+	.post-card[data-category="First"] { border-color: #FFD700; border-left-width: 4px; }
+	.post-card[data-category="Enhancement"] { border-color: #4A90E2; border-left-width: 4px; }
 
 	.post-emoji {
 		font-size: 3rem;
