@@ -7,7 +7,8 @@
 			timestamp: '2026-02-28',
 			excerpt: 'ETH Zurich\'s second paper confirms it: semantic drift and context loss corrupt everything they touch. Benchmarks. AI context. Two diagnoses, one prescription. FAF defines. AI interprets.',
 			emoji: '📄',
-			category: 'Research'
+			category: 'Research',
+			theme: 'academic'
 		},
 		{
 			slug: 'blog/thirty-thousand',
@@ -435,7 +436,7 @@
 
 		<div class="posts-grid">
 			{#each posts as post}
-				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'}>
+				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'} class:academic-card={post.theme === 'academic'}>
 					<div class="post-emoji">{post.emoji}</div>
 					<div class="post-category">{post.category}</div>
 					<h2>{post.title}</h2>
@@ -632,6 +633,21 @@
 	.dark-card:hover {
 		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
 		border-color: var(--faf-orange);
+	}
+
+	.academic-card {
+		background: #fdfdf8;
+		border-color: #27c93f;
+		border-left: 4px solid #27c93f;
+	}
+
+	.academic-card .post-category {
+		background: #27c93f;
+	}
+
+	.academic-card:hover {
+		box-shadow: 0 8px 24px rgba(39, 201, 63, 0.15);
+		border-color: #27c93f;
 	}
 
 	@media (max-width: 768px) {
