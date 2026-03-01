@@ -1,5 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { onMount } from 'svelte';
+  import { page } from '$app/state';
 
   // Form state (Svelte 5 runes)
   let formData = $state({
@@ -9,6 +11,14 @@
     why: '',
     when: '',
     how: ''
+  });
+
+  // Pre-fill from /ideas (3Ws) URL params
+  onMount(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('who')) formData.who = params.get('who');
+    if (params.get('what')) formData.what = params.get('what');
+    if (params.get('why')) formData.why = params.get('why');
   });
 
   let activeTab = $state('preview'); // 'readme' | 'faf' | 'preview'
