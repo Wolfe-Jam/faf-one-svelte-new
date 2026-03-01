@@ -71,10 +71,11 @@
   let copied = $state(false);
   let exampleIndex = $state(0);
   let submitted = $state(false);
+  let userHasTyped = $state(false);
 
   // Demo animation state
   let demoActive = $state(false);
-  let demoStep = $state(0); // 0=idle, 1=typing who, 2=typing what, 3=typing why, 4=done
+  let demoStep = $state(0); // 0=idle, 1=typing who, 2=typing what, 3=typing why, 4=done, 5=go
   let demoTimer = $state(null);
   let idleTimer = $state(null);
 
@@ -149,12 +150,16 @@
       typeText(ex.what, 'what', 0, () => {
         demoStep = 3;
         typeText(ex.why, 'why', 0, () => {
-          demoStep = 4;
-          // Hold, then cycle to next example
+          demoStep = 4; // SUBMIT appears (orange)
           demoTimer = setTimeout(() => {
-            exampleIndex = (exampleIndex + 1) % examples.length;
-            runDemo();
-          }, 3000);
+            if (!demoActive) return;
+            demoStep = 5; // GO! (green)
+            demoTimer = setTimeout(() => {
+              if (!demoActive) return;
+              exampleIndex = (exampleIndex + 1) % examples.length;
+              runDemo();
+            }, 1500);
+          }, 1000);
         });
       });
     });
@@ -176,13 +181,18 @@
   }
 
   function handleInput() {
-    resetIdleTimer();
+    userHasTyped = true;
+    if (idleTimer) {
+      clearTimeout(idleTimer);
+      idleTimer = null;
+    }
   }
 
   function resetIdleTimer() {
+    if (userHasTyped) return;
     if (idleTimer) clearTimeout(idleTimer);
     idleTimer = setTimeout(() => {
-      if (!demoActive) {
+      if (!demoActive && !userHasTyped) {
         runDemo();
       }
     }, 10000);
@@ -194,6 +204,7 @@
     what = '';
     why = '';
     submitted = false;
+    userHasTyped = false;
     resetIdleTimer();
     setTimeout(() => document.getElementById('who')?.focus(), 10);
   }
@@ -205,6 +216,19 @@
   function handleSubmit() {
     if (demoActive) stopDemo();
     submitted = true;
+  }
+
+  function handleKeydown(e, field) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      if (field === 'who' && who) {
+        document.getElementById('what')?.focus();
+      } else if (field === 'what' && what) {
+        document.getElementById('why')?.focus();
+      } else if (field === 'why' && why && allDone) {
+        handleSubmit();
+      }
+    }
   }
 
   onMount(() => {
@@ -227,6 +251,7 @@
     what = '';
     why = '';
     submitted = false;
+    userHasTyped = false;
     runDemo();
   }
 </script>
@@ -264,8 +289,10 @@
             bind:value={who}
             placeholder="e.g. {currentExample.who}"
             rows="2"
+            tabindex="1"
             onfocus={handleFocus}
             oninput={handleInput}
+            onkeydown={(e) => handleKeydown(e, 'who')}
             class:demo-typing={demoActive && demoStep === 1}
           ></textarea>
         </div>
@@ -282,9 +309,10 @@
             bind:value={what}
             placeholder="e.g. {currentExample.what}"
             rows="2"
-            disabled={!demoActive && step < 2}
+            tabindex="2"
             onfocus={handleFocus}
             oninput={handleInput}
+            onkeydown={(e) => handleKeydown(e, 'what')}
             class:demo-typing={demoActive && demoStep === 2}
           ></textarea>
         </div>
@@ -301,9 +329,10 @@
             bind:value={why}
             placeholder="e.g. {currentExample.why}"
             rows="2"
-            disabled={!demoActive && step < 3}
+            tabindex="3"
             onfocus={handleFocus}
             oninput={handleInput}
+            onkeydown={(e) => handleKeydown(e, 'why')}
             class:demo-typing={demoActive && demoStep === 3}
           ></textarea>
         </div>
@@ -315,11 +344,11 @@
       <p class="start-prompt">Click any box to start writing your idea</p>
     {/if}
 
-    <!-- Submit Button (only when user writes their own idea, not during demo) -->
-    {#if allDone && !demoActive}
+    <!-- Submit Button -->
+    {#if (demoActive && demoStep >= 4) || (!demoActive && allDone)}
       <div class="submit-row">
-        <button class="submit-btn" class:go={submitted} onclick={handleSubmit}>
-          {submitted ? 'GO!' : 'SUBMIT'}
+        <button class="submit-btn" class:go={submitted || demoStep === 5} onclick={handleSubmit}>
+          {(submitted || demoStep === 5) ? 'GO!' : 'SUBMIT'}
         </button>
       </div>
     {/if}
@@ -355,19 +384,15 @@
 
 <style>
   .page {
-    height: 100vh;
+    min-height: 100vh;
     background: #fafafa;
-    padding: 1.25rem 1rem 1rem;
-    overflow: hidden;
+    padding: 1.25rem 1rem 1.5rem;
     box-sizing: border-box;
   }
 
   .container {
     max-width: 600px;
     margin: 0 auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
   }
 
   /* Hero */
@@ -436,7 +461,6 @@
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
-    flex: 1;
   }
 
   .question {
@@ -447,7 +471,6 @@
     border: 2px solid #e8e8e8;
     border-radius: 10px;
     transition: all 0.3s;
-    flex: 1;
   }
 
   .question.active {
@@ -536,17 +559,11 @@
     resize: none;
     box-sizing: border-box;
     line-height: 1.4;
-    flex: 1;
   }
 
   .q-content textarea:focus {
     outline: none;
     border-color: #FF6B35;
-  }
-
-  .q-content textarea:disabled {
-    background: #f5f5f5;
-    cursor: not-allowed;
   }
 
   /* Demo typing indicator */
