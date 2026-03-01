@@ -372,10 +372,7 @@
         <p>3 of 6Ws complete. That's enough to start building.</p>
         <div class="destinations">
           <a href="/6ws?who={encodeURIComponent(who)}&what={encodeURIComponent(what)}&why={encodeURIComponent(why)}" class="dest dest-primary">Continue to 6Ws</a>
-          <a href="https://lovable.dev" target="_blank" rel="noopener" class="dest">Paste into Lovable</a>
-          <a href="https://base44.com" target="_blank" rel="noopener" class="dest">Paste into Base44</a>
         </div>
-        <p class="or-text">or send to your developer</p>
       </div>
     {/if}
 
