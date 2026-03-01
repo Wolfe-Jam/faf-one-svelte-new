@@ -69,6 +69,7 @@
   let what = $state('');
   let why = $state('');
   let copied = $state(false);
+  let copiedField = $state('');
   let exampleIndex = $state(0);
   let submitted = $state(false);
   let userHasTyped = $state(false);
@@ -239,6 +240,13 @@
     };
   });
 
+  async function copyField(field, value) {
+    if (!value) return;
+    await navigator.clipboard.writeText(value);
+    copiedField = field;
+    setTimeout(() => copiedField = '', 1500);
+  }
+
   async function copyBrief() {
     if (!brief) return;
     await navigator.clipboard.writeText(brief);
@@ -282,7 +290,10 @@
       <div class="question" class:active={demoActive ? demoStep === 1 : step === 1} class:done={demoActive ? demoStep > 1 : !!who}>
         <div class="q-number">{(demoActive ? demoStep > 1 : !!who) ? '✓' : '1'}</div>
         <div class="q-content">
-          <label for="who"><span class="w-tag" title="The 1st W in the 6W FAF system">1W</span> Who is it for?</label>
+          <div class="q-label-row">
+            <label for="who"><span class="w-tag" title="The 1st W in the 6W FAF system">1W</span> Who is it for?</label>
+            {#if who && !demoActive}<button class="copy-field" onclick={() => copyField('who', who)}>{copiedField === 'who' ? '✓' : '📋'}</button>{/if}
+          </div>
           <p class="q-hint">The people who will use this app. Not you — them.</p>
           <textarea
             id="who"
@@ -302,7 +313,10 @@
       <div class="question" class:active={demoActive ? demoStep === 2 : step === 2} class:done={demoActive ? demoStep > 2 : !!what} class:locked={demoActive ? demoStep < 2 : step < 2}>
         <div class="q-number">{(demoActive ? demoStep > 2 : !!what) ? '✓' : '2'}</div>
         <div class="q-content">
-          <label for="what"><span class="w-tag" title="The 2nd W in the 6W FAF system">2W</span> What does it do for them?</label>
+          <div class="q-label-row">
+            <label for="what"><span class="w-tag" title="The 2nd W in the 6W FAF system">2W</span> What does it do for them?</label>
+            {#if what && !demoActive}<button class="copy-field" onclick={() => copyField('what', what)}>{copiedField === 'what' ? '✓' : '📋'}</button>{/if}
+          </div>
           <p class="q-hint">The value they get. Not features — the outcome.</p>
           <textarea
             id="what"
@@ -322,7 +336,10 @@
       <div class="question" class:active={demoActive ? demoStep === 3 : step === 3} class:done={demoActive ? demoStep > 3 : !!why} class:locked={demoActive ? demoStep < 3 : step < 3}>
         <div class="q-number">{(demoActive ? demoStep > 3 : !!why) ? '✓' : '3'}</div>
         <div class="q-content">
-          <label for="why"><span class="w-tag" title="The 3rd W in the 6W FAF system">3W</span> Why should we build it?</label>
+          <div class="q-label-row">
+            <label for="why"><span class="w-tag" title="The 3rd W in the 6W FAF system">3W</span> Why should we build it?</label>
+            {#if why && !demoActive}<button class="copy-field" onclick={() => copyField('why', why)}>{copiedField === 'why' ? '✓' : '📋'}</button>{/if}
+          </div>
           <p class="q-hint">What's broken today? Why does this need to exist?</p>
           <textarea
             id="why"
@@ -532,12 +549,33 @@
     background: #27c93f;
   }
 
+  .q-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .q-content label {
     display: block;
     font-size: 1.05rem;
     font-weight: 700;
     color: #111;
     margin-bottom: 0.15rem;
+  }
+
+  .copy-field {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+
+  .copy-field:hover {
+    opacity: 1;
   }
 
   .q-hint {
