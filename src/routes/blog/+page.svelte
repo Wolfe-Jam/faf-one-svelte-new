@@ -436,7 +436,7 @@
 
 		<div class="posts-grid">
 			{#each posts as post}
-				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'} class:academic-card={post.theme === 'academic'}>
+				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'} class:academic-card={post.theme === 'academic'} data-category={post.category}>
 					<div class="post-emoji">{post.emoji}</div>
 					<div class="post-category">{post.category}</div>
 					<h2>{post.title}</h2>
@@ -525,7 +525,8 @@
 		background: #f9f9f9;
 		padding: 2.5rem;
 		border-radius: 12px;
-		border: 2px solid var(--faf-cream);
+		border: 1px solid #e0e0e0;
+		border-left: 4px solid var(--faf-orange);
 		text-decoration: none;
 		color: inherit;
 		transition: all 0.3s ease;
@@ -536,7 +537,31 @@
 		transform: translateY(-4px);
 		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
 		border-color: var(--faf-orange);
+		border-left-width: 4px;
 	}
+
+	/* Category left-border colours */
+	.post-card[data-category="Research"] { border-left-color: #27c93f; }
+	.post-card[data-category="Release"] { border-left-color: var(--faf-orange); }
+	.post-card[data-category="MCP Release"] { border-left-color: #4A90E2; }
+	.post-card[data-category="Milestone"] { border-left-color: #FFD700; }
+	.post-card[data-category="Interop"] { border-left-color: #00D4D4; }
+	.post-card[data-category="Foundation"] { border-left-color: #27c93f; }
+	.post-card[data-category="WJTTC Ecosystem"] { border-left-color: #E74C3C; }
+	.post-card[data-category="Launch"] { border-left-color: var(--faf-orange); }
+	.post-card[data-category="Engineering"] { border-left-color: #00D4D4; }
+	.post-card[data-category="IDE Integration"] { border-left-color: #4A90E2; }
+	.post-card[data-category="Case Study"] { border-left-color: #27c93f; }
+	.post-card[data-category="Story"] { border-left-color: var(--faf-orange); }
+	.post-card[data-category="Origin Story"] { border-left-color: var(--faf-orange); }
+	.post-card[data-category="Press Release"] { border-left-color: #333; }
+	.post-card[data-category="xAI Edition"] { border-left-color: #E74C3C; }
+	.post-card[data-category="Grok Edition"] { border-left-color: #E74C3C; }
+	.post-card[data-category="Technical Analysis"] { border-left-color: #00D4D4; }
+	.post-card[data-category="Format Victory"] { border-left-color: #FFD700; }
+	.post-card[data-category="Ecosystem"] { border-left-color: #27c93f; }
+	.post-card[data-category="First"] { border-left-color: #FFD700; }
+	.post-card[data-category="Enhancement"] { border-left-color: #4A90E2; }
 
 	.post-emoji {
 		font-size: 3rem;
