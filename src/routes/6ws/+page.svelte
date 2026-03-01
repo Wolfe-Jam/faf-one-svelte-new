@@ -56,9 +56,9 @@
 
 **2W (WHAT):** ${data.what || '_________'}
 
-**3W (WHERE):** ${data.where || '_________'}
+**3W (WHY):** ${data.why || '_________'}
 
-**4W (WHY):** ${data.why || '_________'}
+**4W (WHERE):** ${data.where || '_________'}
 
 **5W (WHEN):** ${data.when || '_________'}
 
@@ -218,32 +218,8 @@
           </div>
 
           <div class="question-group">
-            <label for="where">
-              <span class="q-number">3W</span>
-              <span class="q-label">WHERE</span>
-              <span class="q-prompt">Where does it run?</span>
-            </label>
-            <div class="input-with-copy">
-              <input
-                type="text"
-                id="where"
-                bind:value={formData.where}
-                placeholder="web, mobile"
-                onkeydown={(e) => handleTabComplete(e, 'where')}
-              />
-              <button
-                class="copy-field-btn"
-                onclick={() => copyField('where')}
-                title="Copy this answer"
-              >
-                {copied.where ? '✓' : '📋'}
-              </button>
-            </div>
-          </div>
-
-          <div class="question-group">
             <label for="why">
-              <span class="q-number">4W</span>
+              <span class="q-number">3W</span>
               <span class="q-label">WHY</span>
               <span class="q-prompt">Why does it exist?</span>
             </label>
@@ -261,6 +237,30 @@
                 title="Copy this answer"
               >
                 {copied.why ? '✓' : '📋'}
+              </button>
+            </div>
+          </div>
+
+          <div class="question-group">
+            <label for="where">
+              <span class="q-number">4W</span>
+              <span class="q-label">WHERE</span>
+              <span class="q-prompt">Where does it run?</span>
+            </label>
+            <div class="input-with-copy">
+              <input
+                type="text"
+                id="where"
+                bind:value={formData.where}
+                placeholder="web, mobile"
+                onkeydown={(e) => handleTabComplete(e, 'where')}
+              />
+              <button
+                class="copy-field-btn"
+                onclick={() => copyField('where')}
+                title="Copy this answer"
+              >
+                {copied.where ? '✓' : '📋'}
               </button>
             </div>
           </div>
