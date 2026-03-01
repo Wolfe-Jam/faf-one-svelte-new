@@ -83,8 +83,8 @@
     return `human_context:
   who: "${data.who || 'TODO'}"
   what: "${data.what || 'TODO'}"
-  where: "${data.where || 'TODO'}"
   why: "${data.why || 'TODO'}"
+  where: "${data.where || 'TODO'}"
   when: "${data.when || 'TODO'}"
   how: "${data.how || 'TODO'}"
   context_score: ${complete ? 100 : 0}
@@ -96,8 +96,8 @@
     return `<span class="yaml-key">human_context</span><span class="yaml-punct">:</span>
   <span class="yaml-key">who</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.who || 'TODO'}"</span>
   <span class="yaml-key">what</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.what || 'TODO'}"</span>
-  <span class="yaml-key">where</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.where || 'TODO'}"</span>
   <span class="yaml-key">why</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.why || 'TODO'}"</span>
+  <span class="yaml-key">where</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.where || 'TODO'}"</span>
   <span class="yaml-key">when</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.when || 'TODO'}"</span>
   <span class="yaml-key">how</span><span class="yaml-punct">:</span> <span class="yaml-string">"${data.how || 'TODO'}"</span>
   <span class="yaml-key">context_score</span><span class="yaml-punct">:</span> <span class="yaml-number">${complete ? 100 : 0}</span>
