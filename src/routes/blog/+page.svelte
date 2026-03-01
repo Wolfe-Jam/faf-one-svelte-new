@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/the-3ws',
+			title: 'The 3Ws',
+			date: 'March 1, 2026',
+			timestamp: '2026-03-01',
+			excerpt: 'The App Builders Edition. WHO, WHAT, WHY — 3 questions that teach anyone to describe an app idea. 10 real examples. One funnel from idea to project.faf.',
+			emoji: '3️⃣',
+			category: 'Product'
+		},
+		{
 			slug: 'blog/recovered-in-translation',
 			title: 'Recovered in Translation',
 			date: 'February 28, 2026',

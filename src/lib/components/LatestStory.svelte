@@ -2,7 +2,8 @@
 	let currentIndex = $state(0);
 
 	const posts = [
-		{ slug: '/blog/google-gemini-edition', title: 'Google Gemini Edition: One .faf File, Every AI Platform', emoji: '🔷', isNew: true },
+		{ slug: '/blog/the-3ws', title: 'The 3Ws: The App Builders Edition', emoji: '3️⃣', isNew: true },
+		{ slug: '/blog/google-gemini-edition', title: 'Google Gemini Edition: One .faf File, Every AI Platform', emoji: '🔷', isNew: false },
 		{ slug: '/blog/42-42', title: '42|42: 30 Years in the Mind. 84 Days to MIME-Standard.', emoji: '🏆', isNew: false },
 		{ slug: '/blog/grok-skeptic-to-evangelist', title: 'Grok: Skeptic → Evangelist in One Session', emoji: '🍊', isNew: false },
 		{ slug: '/blog/bun-sticky-zig-launch', title: 'bun-sticky-zig: Native FAF Scoring in Zig', emoji: '⚡', isNew: false },
