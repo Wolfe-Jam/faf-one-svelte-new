@@ -128,7 +128,8 @@ export const POST: RequestHandler = async ({ request }) => {
         return json({ received: true });
 
     } catch (error) {
-        console.error('❌ Webhook error:', error);
-        return json({ error: 'Webhook handler failed' }, { status: 500 });
+        const message = error instanceof Error ? error.message : String(error);
+        console.error('❌ Webhook error:', message);
+        return json({ error: 'Webhook handler failed', detail: message }, { status: 500 });
     }
 };
