@@ -273,7 +273,7 @@
 			<ul>
 				<li><strong>v5.0.0</strong> &mdash; Released March 1, 2026</li>
 				<li><strong>1,100/1,100</strong> &mdash; Tests passing (49 suites)</li>
-				<li><strong>83%</strong> &mdash; FAF Score (Bronze)</li>
+				<li><strong>100%</strong> &mdash; FAF Score (Trophy) &#127942;</li>
 				<li><strong>33,000+</strong> &mdash; Total downloads (11 packages, 3 registries)</li>
 			</ul>
 		</section>

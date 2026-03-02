@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	* { margin: 0; padding: 0; box-sizing: border-box; }
+	body {
+		background: #0a0a0a;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		padding: 40px;
+	}
+	.card {
+		background: #1a1a1a;
+		border: 2px solid #333;
+		border-radius: 16px;
+		padding: 48px;
+		max-width: 740px;
+		width: 100%;
+	}
+	.header {
+		text-align: center;
+		margin-bottom: 36px;
+	}
+	.header h1 {
+		color: #f5f5dc;
+		font-size: 1.8rem;
+		font-weight: 800;
+		margin-bottom: 6px;
+		letter-spacing: -0.02em;
+	}
+	.header h2 {
+		color: #666;
+		font-size: 1rem;
+		font-weight: 400;
+		margin-bottom: 4px;
+	}
+	.header p {
+		color: #555;
+		font-size: 0.85rem;
+	}
+
+	/* Timeline */
+	.timeline {
+		position: relative;
+		padding-left: 80px;
+	}
+	.timeline::before {
+		content: '';
+		position: absolute;
+		left: 36px;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: linear-gradient(to bottom, #333 0%, #333 75%, #4682B4 85%, #5A9AC8 100%);
+	}
+
+	.entry {
+		position: relative;
+		padding: 12px 0;
+		display: grid;
+		grid-template-columns: 1fr 1.6fr;
+		gap: 16px;
+		align-items: center;
+	}
+
+	.entry::before {
+		content: '';
+		position: absolute;
+		left: -52px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #444;
+		border: 2px solid #555;
+	}
+
+	.year-label {
+		position: absolute;
+		left: -80px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #666;
+		font-size: 0.8rem;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
+		width: 36px;
+		text-align: right;
+	}
+
+	.format-name {
+		color: #f5f5dc;
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
+
+	.mime-type {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		color: #777;
+		font-size: 0.82rem;
+	}
+
+	/* Separator for decade gaps */
+	.gap {
+		padding: 6px 0;
+		position: relative;
+	}
+	.gap::before {
+		content: '';
+		position: absolute;
+		left: -52px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: #333;
+	}
+	.gap-dots {
+		color: #333;
+		font-size: 0.8rem;
+		letter-spacing: 0.2em;
+	}
+
+	/* FAF highlight */
+	.entry.faf-row {
+		padding: 16px 0;
+	}
+	.entry.faf-row::before {
+		background: #4682B4;
+		border-color: #5A9AC8;
+		width: 12px;
+		height: 12px;
+		box-shadow: 0 0 8px rgba(70, 130, 180, 0.5);
+	}
+	.entry.faf-row .year-label {
+		color: #4682B4;
+		font-weight: 700;
+	}
+	.entry.faf-row .format-name {
+		color: #4682B4;
+		font-weight: 800;
+		font-size: 1.2rem;
+	}
+	.entry.faf-row .mime-type {
+		color: #5A9AC8;
+	}
+
+	.entry.fafb-row::before {
+		background: #4682B4;
+		border-color: #5A9AC8;
+		width: 12px;
+		height: 12px;
+		box-shadow: 0 0 8px rgba(70, 130, 180, 0.3);
+	}
+	.entry.fafb-row .year-label {
+		color: #4682B4;
+	}
+	.entry.fafb-row .format-name {
+		color: #4682B4;
+		font-weight: 800;
+	}
+	.entry.fafb-row .mime-type {
+		color: #5A9AC8;
+	}
+	.submitted {
+		color: #555;
+		font-size: 0.75rem;
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	.footer {
+		text-align: center;
+		margin-top: 32px;
+		padding-top: 20px;
+		border-top: 1px solid #222;
+	}
+	.footer p {
+		color: #555;
+		font-size: 0.85rem;
+	}
+	.footer strong {
+		color: #4682B4;
+	}
+</style>
+</head>
+<body>
+<div class="card">
+	<div class="header">
+		<h1>A History of Formats</h1>
+		<h2>IANA Media Types Registry</h2>
+		<p>iana.org/assignments/media-types</p>
+	</div>
+
+	<div class="timeline">
+		<div class="entry">
+			<span class="year-label">1993</span>
+			<span class="format-name">PDF</span>
+			<span class="mime-type">application/pdf</span>
+		</div>
+		<div class="entry">
+			<span class="year-label">1993</span>
+			<span class="format-name">ZIP</span>
+			<span class="mime-type">application/zip</span>
+		</div>
+
+		<div class="gap"><span class="gap-dots"></span></div>
+
+		<div class="entry">
+			<span class="year-label">1998</span>
+			<span class="format-name">XML</span>
+			<span class="mime-type">application/xml</span>
+		</div>
+
+		<div class="gap"><span class="gap-dots"></span></div>
+
+		<div class="entry">
+			<span class="year-label">2006</span>
+			<span class="format-name">JSON</span>
+			<span class="mime-type">application/json</span>
+		</div>
+		<div class="entry">
+			<span class="year-label">2006</span>
+			<span class="format-name">JavaScript</span>
+			<span class="mime-type">application/javascript</span>
+		</div>
+
+		<div class="gap"><span class="gap-dots"></span></div>
+
+		<div class="entry">
+			<span class="year-label">2017</span>
+			<span class="format-name">WASM</span>
+			<span class="mime-type">application/wasm</span>
+		</div>
+
+		<div class="gap"><span class="gap-dots"></span></div>
+
+		<div class="entry">
+			<span class="year-label">2024</span>
+			<span class="format-name">YAML</span>
+			<span class="mime-type">application/yaml</span>
+		</div>
+		<div class="entry faf-row">
+			<span class="year-label">2025</span>
+			<span class="format-name">FAF</span>
+			<span class="mime-type">application/vnd.faf+yaml</span>
+		</div>
+		<div class="entry fafb-row">
+			<span class="year-label">2026</span>
+			<span class="format-name">FAFb <span class="submitted">(submitted)</span></span>
+			<span class="mime-type">application/vnd.fafb</span>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>The only IANA-registered AI context format. <strong>faf.one</strong></p>
+	</div>
+</div>
+</body>
+</html>

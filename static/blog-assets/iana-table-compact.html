@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	* { margin: 0; padding: 0; box-sizing: border-box; }
+	body {
+		background: #0a0a0a;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		padding: 40px;
+	}
+	.card {
+		background: #1a1a1a;
+		border: 2px solid #333;
+		border-radius: 16px;
+		padding: 40px;
+		max-width: 680px;
+		width: 100%;
+	}
+	.header {
+		text-align: center;
+		margin-bottom: 32px;
+	}
+	.header h1 {
+		color: #f5f5dc;
+		font-size: 1.6rem;
+		font-weight: 800;
+		margin-bottom: 8px;
+		letter-spacing: -0.02em;
+	}
+	.header p {
+		color: #888;
+		font-size: 0.95rem;
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	th {
+		text-align: left;
+		color: #666;
+		font-size: 0.8rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		padding: 0 12px 12px;
+		border-bottom: 1px solid #333;
+	}
+	td {
+		padding: 14px 12px;
+		border-bottom: 1px solid #222;
+		font-size: 0.95rem;
+	}
+	tr:last-child td {
+		border-bottom: none;
+	}
+	.format-name {
+		color: #f5f5dc;
+		font-weight: 700;
+	}
+	.mime-type {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		color: #aaa;
+		font-size: 0.85rem;
+	}
+	.year {
+		color: #888;
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+	}
+	tr.faf-row td {
+		background: rgba(70, 130, 180, 0.1);
+	}
+	tr.faf-row .format-name {
+		color: #4682B4;
+		font-weight: 800;
+	}
+	tr.faf-row .mime-type {
+		color: #5A9AC8;
+	}
+	tr.faf-row .year {
+		color: #4682B4;
+		font-weight: 700;
+	}
+	tr.fafb-row td {
+		background: rgba(70, 130, 180, 0.06);
+	}
+	tr.fafb-row .format-name {
+		color: #4682B4;
+		font-weight: 800;
+	}
+	tr.fafb-row .mime-type {
+		color: #5A9AC8;
+	}
+	tr.fafb-row .year {
+		color: #4682B4;
+	}
+	.submitted {
+		color: #555;
+		font-size: 0.75rem;
+		font-weight: 400;
+		font-style: italic;
+	}
+	.footer {
+		text-align: center;
+		margin-top: 24px;
+		padding-top: 16px;
+		border-top: 1px solid #222;
+	}
+	.footer p {
+		color: #555;
+		font-size: 0.8rem;
+	}
+	.footer strong {
+		color: #4682B4;
+	}
+</style>
+</head>
+<body>
+<div class="card">
+	<div class="header">
+		<h1>IANA Media Types Registry</h1>
+		<p>iana.org/assignments/media-types</p>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Format</th>
+				<th>IANA Media Type</th>
+				<th style="text-align:right">Registered</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="format-name">PDF</td>
+				<td class="mime-type">application/pdf</td>
+				<td class="year">1993</td>
+			</tr>
+			<tr>
+				<td class="format-name">ZIP</td>
+				<td class="mime-type">application/zip</td>
+				<td class="year">1993</td>
+			</tr>
+			<tr>
+				<td class="format-name">XML</td>
+				<td class="mime-type">application/xml</td>
+				<td class="year">1998</td>
+			</tr>
+			<tr>
+				<td class="format-name">JSON</td>
+				<td class="mime-type">application/json</td>
+				<td class="year">2006</td>
+			</tr>
+			<tr>
+				<td class="format-name">JavaScript</td>
+				<td class="mime-type">application/javascript</td>
+				<td class="year">2006</td>
+			</tr>
+			<tr>
+				<td class="format-name">WASM</td>
+				<td class="mime-type">application/wasm</td>
+				<td class="year">2017</td>
+			</tr>
+			<tr>
+				<td class="format-name">YAML</td>
+				<td class="mime-type">application/yaml</td>
+				<td class="year">2024</td>
+			</tr>
+			<tr class="faf-row">
+				<td class="format-name">FAF</td>
+				<td class="mime-type">application/vnd.faf+yaml</td>
+				<td class="year">2025</td>
+			</tr>
+			<tr class="fafb-row">
+				<td class="format-name">FAFb <span class="submitted">(submitted)</span></td>
+				<td class="mime-type">application/vnd.fafb</td>
+				<td class="year">2026</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="footer">
+		<p>The only IANA-registered AI context format. <strong>faf.one</strong></p>
+	</div>
+</div>
+</body>
+</html>
