@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/pro-launch',
+			title: 'Loyal Builders Show Steel',
+			date: 'March 2, 2026',
+			timestamp: '2026-03-02',
+			excerpt: 'FAF Pro is live. Persistent session memory (ROM + RAM) across every AI session. Steel blue means business. Early-adopter pricing from a dime a day.',
+			emoji: '⚡',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/ram-edition',
 			title: 'The RAM Edition',
 			date: 'March 1, 2026',
