@@ -22,7 +22,7 @@ function licenseToRow(license: License): Omit<LicenseRow, 'id' | 'created_at' | 
     return {
         key: license.key,
         email: license.email,
-        tier: license.tier as 'turbo' | 'legends',
+        tier: license.tier as 'turbo' | 'legends' | 'pro',
         status: license.status,
         stripe_customer_id: license.stripeCustomerId || null,
         stripe_subscription_id: license.stripeSubscriptionId || null,

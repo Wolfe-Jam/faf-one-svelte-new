@@ -20,8 +20,9 @@ function getResend(): Resend | null {
  * Generate license email HTML
  */
 function generateLicenseEmailHTML(license: License): string {
-    const tierName = license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
-    const tierEmoji = license.tier === 'legends' ? '👑' : '🏎️💨';
+    const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
+    const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
+    const isPro = license.tier === 'pro';
 
     return `
 <!DOCTYPE html>
@@ -108,30 +109,57 @@ function generateLicenseEmailHTML(license: License): string {
 <body>
     <div class="header">
         <h1>${tierEmoji} Welcome to ${tierName}!</h1>
-        <p>Your universal automation intelligence is ready</p>
+        <p>${isPro ? 'tri-sync is ready — define once, sync everywhere' : 'Your universal automation intelligence is ready'}</p>
     </div>
 
     <div class="content">
         <p>Hi there! 👋</p>
 
-        <p>Thanks for subscribing to <strong>${tierName}</strong>! You now have access to:</p>
+        <p>Thanks for subscribing to <strong>${tierName}</strong>!${isPro ? ' You now have access to tri-sync:' : ' You now have access to:'}</p>
 
         <ul>
+            ${isPro ? `
+            <li>☑️ tri-sync: .faf → CLAUDE.md + AGENTS.md + .cursorrules + GEMINI.md</li>
+            <li>☑️ Automatic file watching and sync</li>
+            <li>☑️ Early-adopter pricing locked in forever</li>
+            ` : `
             <li>✅ Universal Intelligence Pattern</li>
             <li>✅ n8n workflow analysis</li>
             <li>✅ OpenAI Assistant parsing</li>
             <li>✅ Make.com scenario intelligence</li>
             <li>✅ Google Opal mini-app analysis</li>
+            `}
         </ul>
 
         <div class="license-box">
             <h2>🔑 Your License Key</h2>
             <div class="license-key">${license.key}</div>
-            <p style="color: #666; font-size: 14px;">Keep this safe - you'll need it to activate .FAF TURBO</p>
+            <p style="color: #666; font-size: 14px;">Keep this safe - you'll need it to activate ${tierName}</p>
         </div>
 
         <h3>Quick Start (2 minutes)</h3>
 
+        ${isPro ? `
+        <p><strong>Step 1: Update faf-cli</strong></p>
+        <div class="code-block">
+<span class="code-comment"># Make sure you have the latest version</span>
+npm install -g faf-cli@latest
+        </div>
+
+        <p><strong>Step 2: Activate Your License</strong></p>
+        <div class="code-block">
+<span class="code-comment"># Activate with your license key</span>
+faf pro activate ${license.key}
+        </div>
+
+        <p><strong>Step 3: Run tri-sync</strong></p>
+        <div class="code-block">
+<span class="code-comment"># Generate and sync all AI context files</span>
+faf tri-sync
+        </div>
+
+        <p>That's it! Your .faf file now syncs to CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md automatically. 🏆</p>
+        ` : `
         <p><strong>Step 1: Install .FAF TURBO</strong></p>
         <div class="code-block">
 <span class="code-comment"># Install the CLI tool</span>
@@ -157,6 +185,7 @@ faf-turbo analyze my-scenario.json
         </div>
 
         <p>That's it! TURBO will generate championship-grade .faf files with 85-100% AI readiness scores. 🏆</p>
+        `}
 
         <a href="https://faf.one/docs" class="button">View Documentation</a>
 
@@ -175,7 +204,7 @@ faf-turbo analyze my-scenario.json
 
     <div class="footer">
         <p>You're receiving this because you subscribed to ${tierName}</p>
-        <p><a href="https://faf.one">faf.one</a> | <a href="https://faf.one/pricing">Manage Subscription</a></p>
+        <p><a href="https://faf.one">faf.one</a> | <a href="${isPro ? 'https://faf.one/pro' : 'https://faf.one/pricing'}">Manage Subscription</a></p>
     </div>
 </body>
 </html>
@@ -192,15 +221,15 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
     }
 
     try {
-        const tierName = license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
-        const tierEmoji = license.tier === 'legends' ? '👑' : '🏎️💨';
+        const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
+        const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
 
         const client = getResend();
         if (!client) {
             return { success: false, error: 'Email service not configured' };
         }
         const { data, error } = await client.emails.send({
-            from: 'FAF TURBO <team@faf.one>',
+            from: 'FAF <team@faf.one>',
             replyTo: 'team@faf.one',
             to: license.email,
             subject: `${tierEmoji} Your ${tierName} License Key`,
@@ -228,7 +257,8 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
  * Plain text version (fallback)
  */
 function generateLicenseEmailText(license: License): string {
-    const tierName = license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
+    const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
+    const isPro = license.tier === 'pro';
 
     return `
 Welcome to ${tierName}!
@@ -237,14 +267,21 @@ Your License Key: ${license.key}
 
 Quick Start:
 
-1. Install:
+${isPro ? `1. Update:
+   npm install -g faf-cli@latest
+
+2. Activate:
+   faf pro activate ${license.key}
+
+3. Sync:
+   faf tri-sync` : `1. Install:
    npm install -g faf-turbo
 
 2. Activate:
    faf-turbo activate ${license.key}
 
 3. Analyze:
-   faf-turbo analyze my-workflow.json
+   faf-turbo analyze my-workflow.json`}
 
 Documentation: https://faf.one/docs
 Support: Reply to this email

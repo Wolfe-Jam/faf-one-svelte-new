@@ -8,7 +8,7 @@ import { randomBytes, createHash } from 'crypto';
 export interface License {
     key: string;
     email: string;
-    tier: 'turbo' | 'teams' | 'enterprise';
+    tier: 'turbo' | 'teams' | 'enterprise' | 'pro';
     stripeCustomerId: string;
     stripeSubscriptionId: string;
     status: 'active' | 'canceled' | 'past_due';

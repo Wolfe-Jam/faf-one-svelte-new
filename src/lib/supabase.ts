@@ -43,7 +43,7 @@ export interface LicenseRow {
     id: string;
     key: string;
     email: string;
-    tier: 'turbo' | 'legends';
+    tier: 'turbo' | 'legends' | 'pro';
     status: 'active' | 'past_due' | 'canceled';
     stripe_customer_id: string | null;
     stripe_subscription_id: string | null;
