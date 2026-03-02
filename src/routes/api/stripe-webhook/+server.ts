@@ -64,8 +64,15 @@ export const POST: RequestHandler = async ({ request }) => {
                     break;
                 }
 
-                // Determine tier from metadata or price
-                const tier = session.metadata?.tier || 'turbo';
+                // Determine tier from metadata, payment link, or default
+                // Pro tier payment links (tri-sync CLI, Annual, Global)
+                const PRO_PAYMENT_LINKS = [
+                    'plink_1T6QXrRt8WbJblnRUqA0GBxW',  // tri-sync CLI $3/mo
+                    'plink_1T6QhFRt8WbJblnRzClZhAVU',   // tri-sync Annual $19/yr
+                    'plink_1T6Qu3Rt8WbJblnRYmCdqYVg',   // tri-sync Global $29/yr
+                ];
+                const isProPaymentLink = session.payment_link && PRO_PAYMENT_LINKS.includes(session.payment_link);
+                const tier = session.metadata?.tier || (isProPaymentLink ? 'pro' : 'turbo');
 
                 // Generate license
                 const license = createLicense(
