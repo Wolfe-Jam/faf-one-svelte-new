@@ -73,6 +73,17 @@
 			</div>
 
 			<p>tri-sync keeps your .faf in sync with CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md — so every AI tool gets the same persistent memory.</p>
+
+			<div class="cli-quote">
+				<p>You're using tri-sync right now.</p>
+				<p>It adds RAM to FAF — another sync, this time to Claude's session memory.</p>
+				<pre><code>bi-sync  = ROM (.faf) ↔ CLAUDE.md
+tri-sync = ROM ↔ CLAUDE.md ↔ RAM (Claude's session memory)</code></pre>
+				<p>bi-sync is also running right now. The stack, the config, the languages — project.faf, exactly the same. Free for all devs, forever. That's FAF — persistent project memory.</p>
+				<p>tri-sync is a Pro feature. You're trying it free for 14 days.</p>
+			</div>
+
+			<p class="cli-quote-note">— What you see when tri-sync starts for the first time</p>
 		</section>
 
 		<section>
@@ -426,6 +437,50 @@
 		color: #666;
 		font-size: 0.95rem;
 		margin: 0;
+	}
+
+	/* CLI quote */
+	.cli-quote {
+		background: #1a1a1a;
+		border-left: 4px solid #4682B4;
+		border-radius: 8px;
+		padding: 1.5rem 2rem;
+		margin: 2rem 0 0.5rem 0;
+		color: #e5e5e5;
+		font-size: 1rem;
+		line-height: 1.7;
+	}
+
+	.cli-quote p {
+		color: #e5e5e5;
+		margin-bottom: 0.75rem;
+	}
+
+	.cli-quote p:last-child {
+		margin-bottom: 0;
+		color: #aaa;
+		font-style: italic;
+	}
+
+	.cli-quote pre {
+		background: #0a0a0a;
+		margin: 1rem 0;
+		padding: 1rem;
+		border-radius: 4px;
+	}
+
+	.cli-quote code {
+		background: none;
+		color: #00d4d4;
+		font-size: 0.9rem;
+	}
+
+	.cli-quote-note {
+		font-size: 0.85rem;
+		color: #999;
+		font-style: italic;
+		margin-top: 0;
+		margin-bottom: 2rem;
 	}
 
 	/* Copy boxes */
