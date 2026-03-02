@@ -52,10 +52,24 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>30,000+ Total Downloads</strong> •
-				<strong>1,051/1,051 Tests Passing</strong> •
+				<strong>33,000+ Total Downloads</strong> •
+				<strong>1,100/1,100 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- RAM Edition v5.0.0 -->
+		<div class="chrome-featured foundation-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🧠 faf-cli v5.0.0 - The RAM Edition</h3>
+					<span class="chrome-badge foundation-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Bi-sync is core. Tri-sync adds more. It adds RAM — auto-syncing with Claude's MEMORY.md. Pro Gate with 14-day free trial. For builders, serious coders, and app-makers.</p>
+			<a href="/blog/ram-edition" class="chrome-install foundation-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- AGENTS.md Edition v4.5.0 -->

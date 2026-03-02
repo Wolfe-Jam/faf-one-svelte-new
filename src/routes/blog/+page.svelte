@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/ram-edition',
+			title: 'The RAM Edition',
+			date: 'March 1, 2026',
+			timestamp: '2026-03-01',
+			excerpt: 'Bi-sync is core. Tri-sync adds more. What does it add? It adds RAM — auto-syncing with Claude\'s MEMORY.md. Pro Gate, 6Ws reorder, 1,100 tests. For builders, serious coders, and app-makers.',
+			emoji: '🧠',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/the-3ws',
 			title: 'The 3Ws',
 			date: 'March 1, 2026',
