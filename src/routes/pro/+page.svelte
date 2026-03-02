@@ -25,9 +25,9 @@
 		<section class="hero">
 			<div class="badge">faf-cli v5 Pro</div>
 			<h1 class="title">tri-sync</h1>
-			<p class="subtitle">Define once. Sync everywhere.</p>
+			<p class="subtitle">Define once. Remember forever.</p>
 			<p class="subtitle-detail">
-				CLAUDE.md + AGENTS.md + .cursorrules — generated and kept in sync from your <code>.faf</code> file.
+				Persistent project context (ROM) and session memory (RAM) that survives across every AI session.
 			</p>
 		</section>
 
@@ -43,13 +43,13 @@
 				<div class="concept-arrow">→</div>
 				<div class="concept-card">
 					<div class="concept-icon">⚡</div>
-					<h3>RAM: AI context files</h3>
-					<p>CLAUDE.md, AGENTS.md, .cursorrules, GEMINI.md — generated and kept in sync automatically. Change one, all update.</p>
+					<h3>RAM: Session memory</h3>
+					<p>CLAUDE.md becomes persistent memory — your AI remembers project context, decisions, and conventions across every session. No re-explaining.</p>
 				</div>
 			</div>
 			<p class="explanation-note">
 				bi-sync (free) keeps <code>.faf</code> ↔ <code>CLAUDE.md</code> in sync.<br/>
-				<strong>tri-sync</strong> adds AGENTS.md, .cursorrules, and GEMINI.md — the full stack.
+				<strong>tri-sync</strong> adds AGENTS.md, .cursorrules, and GEMINI.md — so every AI tool gets the same persistent memory.
 			</p>
 		</section>
 
