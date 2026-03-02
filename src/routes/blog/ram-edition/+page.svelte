@@ -43,10 +43,114 @@
 			</p>
 		</section>
 
-		<section>
-			<h2>What's New</h2>
+		<!-- ============================================================ -->
+		<!-- WHAT IS .faf?                                                -->
+		<!-- ============================================================ -->
 
-			<h3>tri-sync &mdash; ROM meets RAM</h3>
+		<section>
+			<h2>What is .faf?</h2>
+
+			<p>Think of <code>package.json</code>. Every developer knows it. It tells Node what your project needs. Now imagine a file that tells <em>AI</em> what your project is.</p>
+
+			<p>That's <code>project.faf</code>. The <strong>README for AI</strong>. The <strong>package.json for AI context</strong>.</p>
+
+			<div class="screenshot-box">
+				<img src="/project-faf-screenshot.png" alt="project.faf sitting alongside package.json in a project directory" class="screenshot" />
+				<p class="screenshot-caption">project.faf sits at the root, right next to package.json. One file. Always there.</p>
+			</div>
+
+			<p>It lives at the root of your project. It's YAML. It's structured. And every AI tool &mdash; Claude, Gemini, Grok, Cursor &mdash; can read it instantly. No more explaining your project from scratch every session.</p>
+		</section>
+
+		<!-- ============================================================ -->
+		<!-- THE 3Ws — EVERYONE CAN HAVE AN APP                          -->
+		<!-- ============================================================ -->
+
+		<section>
+			<h2>The 3Ws &mdash; Everyone Can Have an App</h2>
+
+			<p>You don't need to be a developer to describe an app idea. You just need 3 answers.</p>
+
+			<div class="w-cards">
+				<div class="w-card w1">
+					<div class="w-number">1W</div>
+					<div class="w-label">WHO</div>
+					<div class="w-desc">Who is it for?</div>
+				</div>
+				<div class="w-card w2">
+					<div class="w-number">2W</div>
+					<div class="w-label">WHAT</div>
+					<div class="w-desc">What does it do?</div>
+				</div>
+				<div class="w-card w3">
+					<div class="w-number">3W</div>
+					<div class="w-label">WHY</div>
+					<div class="w-desc">Why build it?</div>
+				</div>
+			</div>
+
+			<p>That's it. Three questions anyone can answer. A teacher, a chef, a parent with an idea for an app &mdash; they don't need to know TypeScript or React. They just need WHO, WHAT, WHY.</p>
+
+			<p>We built a page for this: <a href="/ideas"><strong>faf.one/ideas</strong></a>. Type 3 answers, get a project.faf. Hand it to any AI and start building.</p>
+
+			<div class="insight-box">
+				<h3>The first 3 = the idea</h3>
+				<p>Anyone can answer WHO, WHAT, WHY. That's the whole point.</p>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<!-- THE 6Ws — THE FULL PICTURE                                  -->
+		<!-- ============================================================ -->
+
+		<section>
+			<h2>The 6Ws &mdash; The Full Picture</h2>
+
+			<p>The 3Ws describe the idea. The next 3 describe the implementation. Together they're the <a href="/6ws"><strong>6Ws</strong></a> &mdash; the complete DNA of any project.</p>
+
+			<div class="w-cards">
+				<div class="w-card w4">
+					<div class="w-number">4W</div>
+					<div class="w-label">WHERE</div>
+					<div class="w-desc">Where does it live? (npm, Vercel, AWS)</div>
+				</div>
+				<div class="w-card w5">
+					<div class="w-number">5W</div>
+					<div class="w-label">WHEN</div>
+					<div class="w-desc">When? (Phase, timeline, status)</div>
+				</div>
+				<div class="w-card w6">
+					<div class="w-number">6W</div>
+					<div class="w-label">HOW</div>
+					<div class="w-desc">How is it built? (Stack, tools, testing)</div>
+				</div>
+			</div>
+
+			<p>In v5.0.0 we reordered the 6Ws. WHY moved from 4W to 3W. The split is now clean:</p>
+
+			<div class="split-box">
+				<div class="split-half idea-half">
+					<strong>1W&ndash;3W = The Idea</strong>
+					<p>WHO, WHAT, WHY</p>
+					<span class="split-note">Anyone can answer these</span>
+				</div>
+				<div class="split-half impl-half">
+					<strong>4W&ndash;6W = The Implementation</strong>
+					<p>WHERE, WHEN, HOW</p>
+					<span class="split-note">Developer fills these in</span>
+				</div>
+			</div>
+
+			<p>All 6 answers live in one file: <code>project.faf</code>. The README for AI. The package.json for AI context.</p>
+		</section>
+
+		<!-- ============================================================ -->
+		<!-- TRI-SYNC — ROM MEETS RAM                                    -->
+		<!-- ============================================================ -->
+
+		<section>
+			<h2>tri-sync &mdash; ROM meets RAM</h2>
+
 			<p><code>.faf</code> has always been ROM. Persistent project context that survives anything. bi-sync mirrors it to CLAUDE.md. That's free, and always will be.</p>
 			<p>tri-sync adds the third leg: RAM. It auto-syncs your project context to Claude's MEMORY.md &mdash; the file Claude Code auto-loads into every session. Your AI remembers across sessions.</p>
 
@@ -71,8 +175,15 @@
 				<code class="copy-code">faf bi-sync --ram</code>
 				<button class="copy-btn">{copiedId === 'bisyncram' ? 'Copied!' : 'Copy'}</button>
 			</div>
+		</section>
 
-			<h3>Pro Gate &mdash; Zero Friction</h3>
+		<!-- ============================================================ -->
+		<!-- PRO GATE                                                     -->
+		<!-- ============================================================ -->
+
+		<section>
+			<h2>Pro Gate &mdash; Zero Friction</h2>
+
 			<p>tri-sync is a Pro feature. 14-day free trial, no signup, no credit card. Run a Pro command and you're in.</p>
 			<p>After the trial? bi-sync keeps working. You just lose the RAM leg. No crash, no guilt trip, no dark patterns.</p>
 
@@ -82,10 +193,11 @@
 			</div>
 
 			<p class="pricing-note">Early-bird: $3/mo &middot; $19/yr (normally $10/mo &mdash; 70% off)</p>
-
-			<h3>6Ws Reordered</h3>
-			<p>WHO, WHAT, WHY, WHERE, WHEN, HOW. WHY promoted to 3W. First 3 = the idea (anyone can answer). Last 3 = the implementation (developer fills in).</p>
 		</section>
+
+		<!-- ============================================================ -->
+		<!-- THE TRIANGLE                                                 -->
+		<!-- ============================================================ -->
 
 		<section>
 			<h2>The Triangle</h2>
@@ -120,6 +232,10 @@
 			</div>
 		</section>
 
+		<!-- ============================================================ -->
+		<!-- TRY IT                                                       -->
+		<!-- ============================================================ -->
+
 		<section>
 			<h2>Try It</h2>
 
@@ -146,6 +262,10 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- ============================================================ -->
+		<!-- THE NUMBERS                                                  -->
+		<!-- ============================================================ -->
 
 		<section>
 			<h2>The Numbers</h2>
@@ -294,6 +414,148 @@
 		font-size: 0.9em;
 	}
 
+	/* Screenshot */
+	.screenshot-box {
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.screenshot {
+		max-width: 100%;
+		border-radius: 12px;
+		border: 2px solid #ddd;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+	}
+
+	.screenshot-caption {
+		font-size: 0.9rem;
+		color: #888;
+		margin-top: 0.75rem;
+		font-style: italic;
+	}
+
+	/* W Cards */
+	.w-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
+		margin: 2rem 0;
+	}
+
+	.w-card {
+		padding: 1.25rem;
+		border-radius: 10px;
+		text-align: center;
+		border: 2px solid #eee;
+		background: #fafafa;
+	}
+
+	.w-number {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: #999;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.25rem;
+	}
+
+	.w-label {
+		font-size: 1.4rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+	}
+
+	.w-desc {
+		font-size: 0.9rem;
+		color: #666;
+	}
+
+	.w1 { border-color: #FF6B35; }
+	.w1 .w-label { color: #FF6B35; }
+	.w2 { border-color: #00D4D4; }
+	.w2 .w-label { color: #00D4D4; }
+	.w3 { border-color: #27c93f; }
+	.w3 .w-label { color: #27c93f; }
+	.w4 { border-color: #888; }
+	.w4 .w-label { color: #555; }
+	.w5 { border-color: #888; }
+	.w5 .w-label { color: #555; }
+	.w6 { border-color: #888; }
+	.w6 .w-label { color: #555; }
+
+	/* Insight box */
+	.insight-box {
+		background: #f0fff0;
+		border: 2px solid #27c93f;
+		border-radius: 8px;
+		padding: 1.5rem;
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	.insight-box h3 {
+		color: #27c93f;
+		margin: 0 0 0.5rem 0;
+		font-size: 1.3rem;
+	}
+
+	.insight-box p {
+		margin: 0;
+		font-size: 1.1rem;
+		color: #006622;
+	}
+
+	/* Split box */
+	.split-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0;
+		margin: 2rem 0;
+		border-radius: 10px;
+		overflow: hidden;
+		border: 2px solid #ddd;
+	}
+
+	.split-half {
+		padding: 1.5rem;
+		text-align: center;
+	}
+
+	.split-half strong {
+		display: block;
+		font-size: 1rem;
+		margin-bottom: 0.25rem;
+	}
+
+	.split-half p {
+		margin: 0 0 0.5rem 0;
+		font-size: 1.2rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	}
+
+	.split-note {
+		font-size: 0.85rem;
+		color: #888;
+		font-style: italic;
+	}
+
+	.idea-half {
+		background: #fff5f0;
+		border-right: 2px solid #ddd;
+	}
+
+	.idea-half strong { color: #FF6B35; }
+	.idea-half p { color: #FF6B35; }
+
+	.impl-half {
+		background: #f8f8f8;
+	}
+
+	.impl-half strong { color: #555; }
+	.impl-half p { color: #555; }
+
+	/* Flow diagram */
 	.flow-diagram {
 		background: #f8f8f8;
 		border-radius: 12px;
@@ -331,6 +593,7 @@
 		font-style: italic;
 	}
 
+	/* Sync table */
 	.sync-table {
 		margin: 1.5rem 0;
 		overflow-x: auto;
@@ -369,6 +632,7 @@
 		background: #fff5f0;
 	}
 
+	/* CTA grid */
 	.cta-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -422,6 +686,7 @@
 		text-decoration: none;
 	}
 
+	/* Copy boxes */
 	.copy-box {
 		display: flex;
 		align-items: center;
@@ -465,6 +730,19 @@
 	@media (max-width: 768px) {
 		h1 {
 			font-size: 1.75rem;
+		}
+
+		.w-cards {
+			grid-template-columns: 1fr;
+		}
+
+		.split-box {
+			grid-template-columns: 1fr;
+		}
+
+		.idea-half {
+			border-right: none;
+			border-bottom: 2px solid #ddd;
 		}
 
 		.cta-grid {
