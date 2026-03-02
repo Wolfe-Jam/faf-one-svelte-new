@@ -56,7 +56,7 @@
 		<!-- Pricing Cards -->
 		<section class="pricing">
 			<h2 class="section-title">Early-Adopter Pricing</h2>
-			<p class="pricing-note">Lock in these rates forever. They won't last.</p>
+			<p class="pricing-note">Persistent project context (ROM) and session memory (RAM) — unlimited projects.<br/>The only IANA-registered solution. Lock in these rates forever.</p>
 
 			<div class="pricing-grid">
 				<!-- Monthly -->
@@ -69,11 +69,12 @@
 							<span class="price-period">/mo</span>
 						</div>
 						<div class="discount">70% off</div>
+						<p class="price-tagline">A dime a day.</p>
 					</div>
 					<ul class="features">
 						<li>tri-sync: .faf → CLAUDE.md + AGENTS.md + .cursorrules</li>
 						<li>GEMINI.md generation</li>
-						<li>Automatic file watching</li>
+						<li>Unlimited projects</li>
 						<li>Cancel anytime</li>
 					</ul>
 					<button class="cta-btn" onclick={() => selectPlan('monthly')}>
@@ -92,11 +93,12 @@
 							<span class="price-period">/yr</span>
 						</div>
 						<div class="discount">84% off</div>
+						<p class="price-tagline">A nickel a day.</p>
 					</div>
 					<ul class="features">
 						<li>Everything in Monthly</li>
+						<li>Unlimited projects</li>
 						<li>Lock in the lowest rate</li>
-						<li>Less than $1.60/mo</li>
 						<li>Annual billing</li>
 					</ul>
 					<button class="cta-btn cta-primary" onclick={() => selectPlan('annual')}>
@@ -475,6 +477,14 @@
 	.price-period {
 		color: #aaa;
 		font-size: 1rem;
+	}
+
+	.price-tagline {
+		color: #00d4d4;
+		font-size: 1.1rem;
+		font-weight: 600;
+		font-style: italic;
+		margin: 0.5rem 0 0 0;
 	}
 
 	.discount {
