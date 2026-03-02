@@ -24,6 +24,10 @@ function generateLicenseEmailHTML(license: License): string {
     const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
     const isPro = license.tier === 'pro';
 
+    // Steel blue for Pro, orange for TURBO/LEGENDS
+    const accentColor = isPro ? '#4682B4' : '#FF6B35';
+    const accentLight = isPro ? '#5A9AC8' : '#FF8C42';
+
     return `
 <!DOCTYPE html>
 <html>
@@ -39,7 +43,7 @@ function generateLicenseEmailHTML(license: License): string {
             padding: 20px;
         }
         .header {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            background: linear-gradient(135deg, ${accentColor} 0%, ${accentLight} 100%);
             color: white;
             padding: 30px;
             border-radius: 8px 8px 0 0;
@@ -52,7 +56,7 @@ function generateLicenseEmailHTML(license: License): string {
         }
         .license-box {
             background: white;
-            border: 2px solid #FF6B35;
+            border: 2px solid ${accentColor};
             border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
@@ -62,7 +66,7 @@ function generateLicenseEmailHTML(license: License): string {
             font-family: 'Courier New', monospace;
             font-size: 18px;
             font-weight: bold;
-            color: #FF6B35;
+            color: ${accentColor};
             letter-spacing: 1px;
             margin: 10px 0;
         }
@@ -81,7 +85,7 @@ function generateLicenseEmailHTML(license: License): string {
         }
         .button {
             display: inline-block;
-            background: #FF6B35;
+            background: ${accentColor};
             color: white;
             padding: 12px 30px;
             text-decoration: none;
@@ -98,7 +102,7 @@ function generateLicenseEmailHTML(license: License): string {
             border-top: 1px solid #ddd;
         }
         a {
-            color: #FF6B35;
+            color: ${accentColor};
             text-decoration: none;
         }
         a:hover {

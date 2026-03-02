@@ -221,7 +221,7 @@
 	}
 
 	.back-link {
-		color: #ff6b35;
+		color: #4682B4;
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 0.95rem;
@@ -247,9 +247,9 @@
 
 	.badge {
 		display: inline-block;
-		background: rgba(255, 107, 53, 0.15);
-		border: 1px solid rgba(255, 107, 53, 0.4);
-		color: #ff6b35;
+		background: rgba(70, 130, 180, 0.15);
+		border: 1px solid rgba(70, 130, 180, 0.4);
+		color: #4682B4;
 		padding: 0.35rem 1rem;
 		border-radius: 20px;
 		font-size: 0.85rem;
@@ -323,7 +323,7 @@
 	}
 
 	.concept-card h3 {
-		color: #ff6b35;
+		color: #4682B4;
 		font-size: 1.15rem;
 		margin: 0 0 0.75rem 0;
 	}
@@ -406,12 +406,12 @@
 	}
 
 	.pricing-card.global {
-		border-color: #ff6b35;
+		border-color: #4682B4;
 	}
 
 	.pricing-card.global:hover {
-		border-color: #ff8555;
-		box-shadow: 0 0 30px rgba(255, 107, 53, 0.2);
+		border-color: #5A9AC8;
+		box-shadow: 0 0 30px rgba(70, 130, 180, 0.2);
 	}
 
 	.recommended-badge {
@@ -434,7 +434,7 @@
 		top: -12px;
 		left: 50%;
 		transform: translateX(-50%);
-		background: #ff6b35;
+		background: #4682B4;
 		color: #fff;
 		padding: 0.25rem 1rem;
 		border-radius: 12px;
@@ -556,14 +556,14 @@
 	}
 
 	.cta-btn.cta-global {
-		background: rgba(255, 107, 53, 0.15);
-		border-color: #ff6b35;
-		color: #ff6b35;
+		background: rgba(70, 130, 180, 0.15);
+		border-color: #4682B4;
+		color: #4682B4;
 	}
 
 	.cta-btn.cta-global:hover {
-		background: rgba(255, 107, 53, 0.25);
-		border-color: #ff8555;
+		background: rgba(70, 130, 180, 0.25);
+		border-color: #5A9AC8;
 	}
 
 	/* How it works */
@@ -590,14 +590,14 @@
 	.step-number {
 		width: 40px;
 		height: 40px;
-		background: rgba(255, 107, 53, 0.15);
-		border: 2px solid #ff6b35;
+		background: rgba(70, 130, 180, 0.15);
+		border: 2px solid #4682B4;
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-weight: 700;
-		color: #ff6b35;
+		color: #4682B4;
 		font-size: 1.1rem;
 		flex-shrink: 0;
 	}
@@ -645,7 +645,7 @@
 	}
 
 	.faq-item h4 {
-		color: #ff6b35;
+		color: #4682B4;
 		margin: 0 0 0.5rem 0;
 		font-size: 1.05rem;
 	}
@@ -674,7 +674,7 @@
 	.divider {
 		width: 100px;
 		height: 2px;
-		background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+		background: linear-gradient(90deg, transparent, #4682B4, transparent);
 		margin: 0 auto 2rem;
 	}
 
@@ -684,7 +684,7 @@
 	}
 
 	.blog-anchor {
-		color: #ff6b35;
+		color: #4682B4;
 		text-decoration: none;
 		font-weight: 600;
 	}
