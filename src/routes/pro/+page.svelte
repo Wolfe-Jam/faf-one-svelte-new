@@ -154,7 +154,7 @@
 					<div class="step-content">
 						<h4>Sync</h4>
 						<div class="code-box">faf tri-sync</div>
-						<p>All four AI context files generated and kept in sync from your .faf.</p>
+						<p>ROM (project DNA) + RAM (session memory via CLAUDE.md) — persistent context that survives across every session. That's the real unlock.</p>
 					</div>
 				</div>
 			</div>
