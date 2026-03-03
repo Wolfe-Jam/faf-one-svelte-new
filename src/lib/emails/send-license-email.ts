@@ -117,18 +117,19 @@ function generateLicenseEmailHTML(license: License): string {
 <body>
     <div class="header">
         <h1>${tierEmoji} Welcome to ${tierName}!</h1>
-        <p>${isPro ? 'tri-sync is ready — define once, sync everywhere' : 'Your universal automation intelligence is ready'}</p>
+        <p>${isPro ? 'Define once. Remember forever.' : 'Your universal automation intelligence is ready'}</p>
     </div>
 
     <div class="content">
         <p>Hi there! 👋</p>
 
-        <p>Thanks for subscribing to <strong>${tierName}</strong>!${isPro ? ' You now have access to tri-sync:' : ' You now have access to:'}</p>
+        <p>Thanks for subscribing to <strong>${tierName}</strong>!${isPro ? ' Here\'s what you just unlocked:' : ' You now have access to:'}</p>
 
         <ul>
             ${isPro ? `
-            <li>☑️ tri-sync: .faf → CLAUDE.md + AGENTS.md + .cursorrules + GEMINI.md</li>
-            <li>☑️ Automatic file watching and sync</li>
+            <li>⚡ <strong>Session memory (RAM)</strong> — your AI remembers project context, decisions, and conventions across every session</li>
+            <li>☑️ Persistent context synced to CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md</li>
+            <li>☑️ No more re-explaining. Your project DNA travels with you.</li>
             <li>☑️ Early-adopter pricing locked in forever</li>
             ` : `
             <li>✅ Universal Intelligence Pattern</li>
@@ -162,11 +163,11 @@ faf pro activate ${license.key}
 
         <p><strong>Step 3: Run tri-sync</strong></p>
         <div class="code-block">
-<span class="code-comment"># Generate and sync all AI context files</span>
+<span class="code-comment"># Your AI now remembers everything</span>
 faf tri-sync
         </div>
 
-        <p>That's it! Your .faf file now syncs to CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md automatically. 🏆</p>
+        <p>That's it! Your project context is now persistent — ROM (.faf) + RAM (session memory) across every AI session. No more re-explaining. 🏆</p>
         ` : `
         <p><strong>Step 1: Install .FAF TURBO</strong></p>
         <div class="code-block">
