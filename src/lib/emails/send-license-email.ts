@@ -172,13 +172,13 @@ function generateLicenseEmailHTML(license: License): string {
         <p>That's it! TURBO will generate championship-grade .faf files with 85-100% AI readiness scores. 🏆</p>
         `}
 
-        <a href="https://faf.one/docs" class="button">View Documentation</a>
+        <a href="${isPro ? 'https://faf.one/pro' : 'https://faf.one/docs'}" class="button">${isPro ? 'FAF Pro' : 'View Documentation'}</a>
 
         <h3>Need Help?</h3>
         <p>We're here for you:</p>
         <ul>
-            <li>📖 <a href="https://faf.one/docs">Documentation</a></li>
-            <li>💬 <a href="https://github.com/Wolfe-Jam/faf/discussions">Community Discussions</a></li>
+            <li>📖 <a href="https://github.com/Wolfe-Jam/faf-cli#readme">Documentation</a></li>
+            <li>💬 <a href="https://github.com/Wolfe-Jam/faf-cli/discussions">Community Discussions</a></li>
             <li>📧 Reply to this email for support</li>
         </ul>
 
