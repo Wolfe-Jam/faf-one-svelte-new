@@ -123,7 +123,7 @@ function generateLicenseEmailHTML(license: License): string {
     <div class="content">
         <p>Hi there! 👋</p>
 
-        <p>Thanks for subscribing to <strong>${tierName}</strong>!${isPro ? ' Here\'s what you just unlocked:' : ' You now have access to:'}</p>
+        <p>Thanks for subscribing to <strong>${tierName}</strong>!${isPro ? ' You just unlocked:' : ' You now have access to:'}</p>
 
         <ul>
             ${isPro ? `
