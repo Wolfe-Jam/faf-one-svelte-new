@@ -79,7 +79,7 @@ export const POST: RequestHandler = async ({ request }) => {
                 console.error(`⚠️ Email failed: ${emailResult.error}`);
             }
 
-            return json({ received: true, key, tier, email });
+            return json({ received: true, key, tier, email, emailSent: emailResult.success, emailError: emailResult.error || null });
         }
 
         // All other events — acknowledge
