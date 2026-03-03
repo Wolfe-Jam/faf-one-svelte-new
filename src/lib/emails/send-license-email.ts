@@ -27,6 +27,10 @@ function generateLicenseEmailHTML(license: License): string {
     // Steel blue for Pro, orange for TURBO/LEGENDS
     const accentColor = isPro ? '#4682B4' : '#FF6B35';
     const accentLight = isPro ? '#5A9AC8' : '#FF8C42';
+    // Pro header: dark-to-steel-blue fade (matches faf.one banner)
+    const headerGradient = isPro
+        ? 'linear-gradient(135deg, #0a0a0a 0%, #1a2a3a 40%, #4682B4 100%)'
+        : `linear-gradient(135deg, ${accentColor} 0%, ${accentLight} 100%)`;
 
     return `
 <!DOCTYPE html>
@@ -43,7 +47,7 @@ function generateLicenseEmailHTML(license: License): string {
             padding: 20px;
         }
         .header {
-            background: linear-gradient(135deg, ${accentColor} 0%, ${accentLight} 100%);
+            background: ${headerGradient};
             color: white;
             padding: 30px;
             border-radius: 8px 8px 0 0;
