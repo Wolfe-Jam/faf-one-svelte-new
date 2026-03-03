@@ -177,7 +177,7 @@ function generateLicenseEmailHTML(license: License): string {
         <h3>Need Help?</h3>
         <p>We're here for you:</p>
         <ul>
-            <li>📖 <a href="https://github.com/Wolfe-Jam/faf-cli#readme">Documentation</a></li>
+            <li>📖 <a href="${isPro ? 'https://github.com/Wolfe-Jam/faf-cli/blob/main/docs/PRO.md' : 'https://github.com/Wolfe-Jam/faf-cli#readme'}">Documentation</a></li>
             <li>💬 <a href="https://github.com/Wolfe-Jam/faf-cli/discussions">Community Discussions</a></li>
             <li>📧 Reply to this email for support</li>
         </ul>
