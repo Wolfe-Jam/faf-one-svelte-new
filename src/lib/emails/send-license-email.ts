@@ -74,18 +74,18 @@ function generateLicenseEmailHTML(license: License): string {
             letter-spacing: 1px;
             margin: 10px 0;
         }
-        .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 20px;
-            border-radius: 8px;
+        .cmd-box {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-left: 3px solid ${accentColor};
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 8px 0 20px 0;
             font-family: 'Courier New', monospace;
-            font-size: 14px;
-            margin: 20px 0;
-            overflow-x: auto;
-        }
-        .code-comment {
-            color: #6272a4;
+            font-size: 15px;
+            font-weight: bold;
+            color: #00D4D4;
+            letter-spacing: 0.3px;
         }
         .button {
             display: inline-block;
@@ -149,49 +149,25 @@ function generateLicenseEmailHTML(license: License): string {
         <h3>Quick Start (2 minutes)</h3>
 
         ${isPro ? `
-        <p><strong>Step 1: Update faf-cli</strong></p>
-        <div class="code-block">
-<span class="code-comment"># Make sure you have the latest version</span>
-npm install -g faf-cli@latest
-        </div>
+        <p><strong>Step 1:</strong> Update faf-cli</p>
+        <div class="cmd-box">npm install -g faf-cli@latest</div>
 
-        <p><strong>Step 2: Activate Your License</strong></p>
-        <div class="code-block">
-<span class="code-comment"># Activate with your license key</span>
-faf pro activate ${license.key}
-        </div>
+        <p><strong>Step 2:</strong> Activate your license</p>
+        <div class="cmd-box">faf pro activate ${license.key}</div>
 
-        <p><strong>Step 3: Run tri-sync</strong></p>
-        <div class="code-block">
-<span class="code-comment"># Your AI now remembers everything</span>
-faf tri-sync
-        </div>
+        <p><strong>Step 3:</strong> Run tri-sync</p>
+        <div class="cmd-box">faf tri-sync</div>
 
         <p>That's it! Your project context is now persistent — ROM (.faf) + RAM (session memory) across every AI session. No more re-explaining. 🏆</p>
         ` : `
-        <p><strong>Step 1: Install .FAF TURBO</strong></p>
-        <div class="code-block">
-<span class="code-comment"># Install the CLI tool</span>
-npm install -g faf-turbo
-        </div>
+        <p><strong>Step 1:</strong> Install .FAF TURBO</p>
+        <div class="cmd-box">npm install -g faf-turbo</div>
 
-        <p><strong>Step 2: Activate Your License</strong></p>
-        <div class="code-block">
-<span class="code-comment"># Activate with your license key</span>
-faf-turbo activate ${license.key}
-        </div>
+        <p><strong>Step 2:</strong> Activate your license</p>
+        <div class="cmd-box">faf-turbo activate ${license.key}</div>
 
-        <p><strong>Step 3: Analyze Your First Workflow</strong></p>
-        <div class="code-block">
-<span class="code-comment"># Analyze an n8n workflow</span>
-faf-turbo analyze my-workflow.json
-
-<span class="code-comment"># Or OpenAI Assistant schema</span>
-faf-turbo analyze my-assistant.json
-
-<span class="code-comment"># Or Make.com blueprint</span>
-faf-turbo analyze my-scenario.json
-        </div>
+        <p><strong>Step 3:</strong> Analyze your first workflow</p>
+        <div class="cmd-box">faf-turbo analyze my-workflow.json</div>
 
         <p>That's it! TURBO will generate championship-grade .faf files with 85-100% AI readiness scores. 🏆</p>
         `}
