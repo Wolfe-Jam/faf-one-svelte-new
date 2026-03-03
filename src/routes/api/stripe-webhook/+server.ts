@@ -45,9 +45,15 @@ export const POST: RequestHandler = async ({ request }) => {
                 return json({ error: 'No email' }, { status: 400 });
             }
 
-            // Determine tier from payment link
+            // Only process known Pro payment links
             const isProPaymentLink = session.payment_link && PRO_PAYMENT_LINKS.includes(session.payment_link);
-            const tier = session.metadata?.tier || (isProPaymentLink ? 'pro' : 'turbo');
+
+            if (!isProPaymentLink && !session.metadata?.tier) {
+                console.log(`⏭️ Skipping unknown payment link: ${session.payment_link || 'none'}`);
+                return json({ received: true, skipped: true });
+            }
+
+            const tier = session.metadata?.tier || 'pro';
 
             // Generate license key
             const key = generateLicenseKey();
