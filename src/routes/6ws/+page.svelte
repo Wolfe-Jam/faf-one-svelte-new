@@ -170,6 +170,11 @@
     </p>
   </div>
 
+  <!-- 3Ws Callout -->
+  <div class="callout-3ws">
+    🆕 New to this? Start with just 3 questions → <a href="/ideas">faf.one/ideas</a>
+  </div>
+
   <!-- Main Content Grid -->
   <div class="content-wrapper">
     <div class="content-grid">
@@ -457,6 +462,30 @@
   .page {
     background: var(--faf-cream);
     min-height: 100vh;
+  }
+
+  /* 3Ws Callout */
+  .callout-3ws {
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #fff8f0 0%, #fff 100%);
+    border: 1px solid var(--faf-orange);
+    border-left: 4px solid var(--faf-orange);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--faf-dark);
+    text-align: center;
+  }
+
+  .callout-3ws a {
+    color: var(--faf-orange);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .callout-3ws a:hover {
+    text-decoration: underline;
   }
 
   /* Hero */

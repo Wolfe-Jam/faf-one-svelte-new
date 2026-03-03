@@ -51,8 +51,11 @@
 	<div class="nav-section">
 		<h4>Main</h4>
 		<a href="/" onclick={() => isOpen = false}>🏠 Home</a>
-		<a href="/try" onclick={() => isOpen = false}>⚡ Try It</a>
+		<a href="/ideas" onclick={() => isOpen = false} class="nav-new">🆕 3Ws App Builder <span class="new-badge">New</span></a>
 		<a href="/6ws" onclick={() => isOpen = false}>📋 6Ws Builder</a>
+		<a href="/try" onclick={() => isOpen = false}>⚡ Try It</a>
+		<a href="/pro" onclick={() => isOpen = false}>⚡ Pro</a>
+		<a href="/migrate" onclick={() => isOpen = false}>🔄 Migrate</a>
 		<a href="/about" onclick={() => isOpen = false}>📖 About</a>
 		<a href="/docs" onclick={() => isOpen = false}>📚 Documentation</a>
 		<a href="/blog" onclick={() => isOpen = false}>📝 Blog & Press</a>
@@ -69,7 +72,7 @@
 	<div class="nav-section">
 		<h4>Community</h4>
 		<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank">⭐ GitHub Repo</a>
-		<a href="https://github.com/Wolfe-Jam/faf/discussions" target="_blank">💬 GitHub Discussions</a>
+		<a href="https://github.com/Wolfe-Jam/faf-cli/discussions" target="_blank">💬 GitHub Discussions</a>
 		<a href="/support" onclick={() => isOpen = false}>🤖 Software Club</a>
 		<a href="/founders" onclick={() => isOpen = false}>🏆 Join Movement</a>
 	</div>
@@ -178,6 +181,19 @@
 		background: rgba(255, 107, 53, 0.1);
 		color: var(--faf-orange);
 		transform: translateX(5px);
+	}
+
+	.new-badge {
+		background: var(--faf-orange);
+		color: white;
+		font-size: 0.65rem;
+		padding: 0.15rem 0.4rem;
+		border-radius: 4px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-left: 0.25rem;
+		vertical-align: middle;
 	}
 
 	.overlay {
