@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/desktop-edition',
+			title: 'The Desktop Edition',
+			date: 'March 4, 2026',
+			timestamp: '2026-03-04',
+			excerpt: 'claude-faf-mcp v5.0.0: Tool annotations on all 32 MCP tools, privacy policy, Desktop Extensions manifest. Submitted to Anthropic for one-click install. No terminal required.',
+			emoji: '🖥️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/big-orange-edition',
 			title: 'The Big Orange Edition',
 			date: 'March 4, 2026',
