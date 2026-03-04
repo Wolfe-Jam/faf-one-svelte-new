@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/mcpaas-crates-io',
+			title: 'MCPaaS Hits crates.io',
+			date: 'March 4, 2026',
+			timestamp: '2026-03-04',
+			excerpt: 'mcpaas is on crates.io — a Rust SDK for persistent AI context. Broadcast once, every AI receives. 46 tests, 3-tier WJTTC championship-grade coverage. Zero drift.',
+			emoji: '📡',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/nelly-edition',
 			title: 'The Nelly Edition',
 			date: 'March 4, 2026',
