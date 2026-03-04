@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAF Circuit Board — The RAM Edition</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #070a07;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+  }
+
+  .pcb {
+    width: 800px;
+    height: 520px;
+    background: #0a120a;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 2px #1a2a1a,
+      0 0 0 4px #0d1a0d,
+      0 0 80px rgba(0, 212, 212, 0.06),
+      0 0 120px rgba(39, 201, 63, 0.04);
+  }
+
+  /* PCB texture - subtle grid */
+  .pcb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(39, 201, 63, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(39, 201, 63, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+  }
+
+  /* Mounting holes */
+  .mount-hole {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #060906;
+    border: 2px solid #1a2a1a;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.8);
+  }
+  .mount-tl { top: 12px; left: 12px; }
+  .mount-tr { top: 12px; right: 12px; }
+  .mount-bl { bottom: 12px; left: 12px; }
+  .mount-br { bottom: 12px; right: 12px; }
+
+  /* PCB label */
+  .pcb-label {
+    position: absolute;
+    top: 16px;
+    left: 40px;
+    font-size: 9px;
+    color: rgba(39, 201, 63, 0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .pcb-rev {
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    font-size: 9px;
+    color: rgba(39, 201, 63, 0.55);
+    letter-spacing: 1px;
+  }
+
+  /* Copper traces */
+  .trace {
+    position: absolute;
+    background: linear-gradient(180deg, #8B6914, #C4922A, #8B6914);
+    box-shadow: 0 0 6px rgba(196, 146, 42, 0.15);
+  }
+
+  /* Vertical main bus */
+  .trace-main-bus {
+    width: 3px;
+    height: 320px;
+    top: 100px;
+    left: 399px;
+    background: linear-gradient(180deg,
+      #FF6B35 0%,
+      #C4922A 25%,
+      #00D4D4 50%,
+      #C4922A 75%,
+      #27c93f 100%
+    );
+    box-shadow: 0 0 12px rgba(196, 146, 42, 0.2);
+  }
+
+  /* ROM traces (left) */
+  .trace-rom-l {
+    width: 80px;
+    height: 2px;
+    top: 140px;
+    left: 168px;
+    background: linear-gradient(90deg, transparent, #C4922A);
+  }
+  .trace-rom-r {
+    width: 80px;
+    height: 2px;
+    top: 140px;
+    right: 168px;
+    background: linear-gradient(270deg, transparent, #C4922A);
+  }
+  .trace-rom-l2 {
+    width: 80px;
+    height: 2px;
+    top: 160px;
+    left: 168px;
+    background: linear-gradient(90deg, transparent, #C4922A);
+  }
+  .trace-rom-r2 {
+    width: 80px;
+    height: 2px;
+    top: 160px;
+    right: 168px;
+    background: linear-gradient(270deg, transparent, #C4922A);
+  }
+
+  /* Bridge traces */
+  .trace-bridge-l {
+    width: 100px;
+    height: 2px;
+    top: 260px;
+    left: 148px;
+    background: linear-gradient(90deg, transparent, #C4922A);
+  }
+  .trace-bridge-r {
+    width: 100px;
+    height: 2px;
+    top: 260px;
+    right: 148px;
+    background: linear-gradient(270deg, transparent, #C4922A);
+  }
+
+  /* RAM traces */
+  .trace-ram-l {
+    width: 80px;
+    height: 2px;
+    top: 380px;
+    left: 168px;
+    background: linear-gradient(90deg, transparent, #C4922A);
+  }
+  .trace-ram-r {
+    width: 80px;
+    height: 2px;
+    top: 380px;
+    right: 168px;
+    background: linear-gradient(270deg, transparent, #C4922A);
+  }
+  .trace-ram-l2 {
+    width: 80px;
+    height: 2px;
+    top: 400px;
+    left: 168px;
+    background: linear-gradient(90deg, transparent, #C4922A);
+  }
+  .trace-ram-r2 {
+    width: 80px;
+    height: 2px;
+    top: 400px;
+    right: 168px;
+    background: linear-gradient(270deg, transparent, #C4922A);
+  }
+
+  /* Chip base */
+  .chip {
+    position: absolute;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* Chip pins */
+  .chip::before,
+  .chip::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    height: 70%;
+    width: 6px;
+    z-index: -1;
+  }
+  .chip::before { left: -4px; }
+  .chip::after { right: -4px; }
+
+  /* ROM Chip */
+  .chip-rom {
+    width: 260px;
+    height: 80px;
+    top: 110px;
+    left: 270px;
+    background: linear-gradient(180deg, #1a1008 0%, #140c04 100%);
+    border: 1.5px solid rgba(255, 107, 53, 0.6);
+    box-shadow:
+      0 0 24px rgba(255, 107, 53, 0.15),
+      inset 0 0 20px rgba(255, 107, 53, 0.08);
+  }
+  .chip-rom::before, .chip-rom::after {
+    background: repeating-linear-gradient(180deg,
+      transparent 0px, transparent 6px,
+      #8B6914 6px, #8B6914 10px,
+      transparent 10px, transparent 16px
+    );
+  }
+
+  .chip-name {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .chip-file {
+    font-size: 11px;
+    margin-top: 4px;
+    opacity: 1;
+  }
+  .chip-desc {
+    font-size: 9px;
+    margin-top: 6px;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
+  }
+
+  .chip-rom .chip-name { color: #FF6B35; font-size: 16px; }
+  .chip-rom .chip-file { color: #FF8555; }
+  .chip-rom .chip-desc { color: #FF6B35; }
+
+  /* Notch on ROM chip */
+  .chip-notch {
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 16px;
+    border-radius: 0 8px 8px 0;
+    background: #0a120a;
+    border: 1.5px solid rgba(255, 107, 53, 0.3);
+    border-left: none;
+  }
+
+  /* Bridge / CPU Chip */
+  .chip-bridge {
+    width: 200px;
+    height: 100px;
+    top: 210px;
+    left: 300px;
+    background: linear-gradient(180deg, #081414 0%, #041010 100%);
+    border: 1.5px solid rgba(0, 212, 212, 0.6);
+    border-radius: 4px;
+    box-shadow:
+      0 0 30px rgba(0, 212, 212, 0.15),
+      inset 0 0 20px rgba(0, 212, 212, 0.08);
+  }
+  .chip-bridge::before, .chip-bridge::after {
+    background: repeating-linear-gradient(180deg,
+      transparent 0px, transparent 6px,
+      #8B6914 6px, #8B6914 10px,
+      transparent 10px, transparent 16px
+    );
+  }
+
+  .chip-bridge .chip-name { color: #00D4D4; font-size: 14px; }
+  .chip-bridge .chip-file { color: #00D4D4; }
+  .chip-bridge .chip-desc { color: #00D4D4; }
+
+  /* Die mark on bridge */
+  .die-mark {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0, 212, 212, 0.15);
+    border: 1px solid rgba(0, 212, 212, 0.2);
+  }
+
+  /* RAM Chip — DIMM style */
+  .chip-ram {
+    width: 260px;
+    height: 80px;
+    top: 350px;
+    left: 270px;
+    background: linear-gradient(180deg, #081408 0%, #040c04 100%);
+    border: 1.5px solid rgba(39, 201, 63, 0.6);
+    box-shadow:
+      0 0 24px rgba(39, 201, 63, 0.15),
+      inset 0 0 20px rgba(39, 201, 63, 0.08);
+  }
+  .chip-ram::before, .chip-ram::after {
+    background: repeating-linear-gradient(180deg,
+      transparent 0px, transparent 6px,
+      #8B6914 6px, #8B6914 10px,
+      transparent 10px, transparent 16px
+    );
+  }
+
+  .chip-ram .chip-name { color: #27c93f; font-size: 16px; }
+  .chip-ram .chip-file { color: #4ade80; }
+  .chip-ram .chip-desc { color: #27c93f; }
+
+  /* Sync labels on bus */
+  .bus-label {
+    position: absolute;
+    left: 420px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+
+  .label-bisync {
+    top: 195px;
+    color: rgba(0, 212, 212, 0.85);
+  }
+
+  .label-trisync {
+    top: 330px;
+    color: rgba(39, 201, 63, 0.85);
+  }
+
+  /* Sync direction arrows */
+  .bus-arrows {
+    position: absolute;
+    left: 392px;
+    font-size: 12px;
+    z-index: 3;
+  }
+
+  .arrows-bisync {
+    top: 192px;
+    color: rgba(220, 170, 60, 0.85);
+  }
+
+  .arrows-trisync {
+    top: 327px;
+    color: rgba(220, 170, 60, 0.85);
+  }
+
+  /* Status badges */
+  .status-badge {
+    position: absolute;
+    right: 40px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+
+  .badge-free {
+    top: 195px;
+    background: rgba(0, 212, 212, 0.12);
+    color: #00D4D4;
+    border: 1px solid rgba(0, 212, 212, 0.35);
+  }
+
+  .badge-pro {
+    top: 330px;
+    background: rgba(39, 201, 63, 0.12);
+    color: #27c93f;
+    border: 1px solid rgba(39, 201, 63, 0.35);
+  }
+
+  /* Address labels */
+  .addr-label {
+    position: absolute;
+    left: 40px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    z-index: 3;
+    opacity: 0.65;
+  }
+
+  .addr-rom { top: 144px; color: #FF6B35; }
+  .addr-bridge { top: 254px; color: #00D4D4; }
+  .addr-ram { top: 384px; color: #27c93f; }
+
+  /* Bottom silk screen */
+  .silk-bottom {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    font-size: 9px;
+    color: rgba(39, 201, 63, 0.55);
+    letter-spacing: 1px;
+  }
+
+  .silk-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .silk-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* LED indicators */
+  .led {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .led-power {
+    top: 18px;
+    right: 100px;
+    background: #27c93f;
+    box-shadow: 0 0 8px rgba(39, 201, 63, 0.6);
+  }
+
+  .led-sync {
+    top: 18px;
+    right: 120px;
+    background: #00D4D4;
+    box-shadow: 0 0 8px rgba(0, 212, 212, 0.6);
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* Data flow particles */
+  .particle-track {
+    position: absolute;
+    width: 3px;
+    left: 399px;
+    overflow: hidden;
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  .particle-track-up {
+    top: 100px;
+    height: 320px;
+  }
+
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    border-radius: 2px;
+    animation: flowDown 3s linear infinite;
+  }
+
+  .particle-1 {
+    background: rgba(255, 107, 53, 0.6);
+    animation-delay: 0s;
+    box-shadow: 0 0 6px rgba(255, 107, 53, 0.4);
+  }
+
+  .particle-2 {
+    background: rgba(0, 212, 212, 0.6);
+    animation-delay: 1s;
+    box-shadow: 0 0 6px rgba(0, 212, 212, 0.4);
+  }
+
+  .particle-3 {
+    background: rgba(39, 201, 63, 0.6);
+    animation-delay: 2s;
+    box-shadow: 0 0 6px rgba(39, 201, 63, 0.4);
+  }
+
+  @keyframes flowDown {
+    0% { top: -12px; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 308px; opacity: 0; }
+  }
+
+  /* Title silkscreen */
+  .title-silk {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 3;
+  }
+</style>
+</head>
+<body>
+
+<div class="pcb">
+  <!-- Mounting holes -->
+  <div class="mount-hole mount-tl"></div>
+  <div class="mount-hole mount-tr"></div>
+  <div class="mount-hole mount-bl"></div>
+  <div class="mount-hole mount-br"></div>
+
+  <!-- PCB silkscreen labels -->
+  <div class="pcb-label">FAF-PCB-5.0</div>
+  <div class="pcb-rev">REV 5.0.1</div>
+
+  <!-- LEDs -->
+  <div class="led led-sync"></div>
+  <div class="led led-power"></div>
+
+  <!-- Address labels -->
+  <div class="addr-label addr-rom">0x0000</div>
+  <div class="addr-label addr-bridge">0x4000</div>
+  <div class="addr-label addr-ram">0x8000</div>
+
+  <!-- Copper traces -->
+  <div class="trace trace-main-bus"></div>
+  <div class="trace trace-rom-l"></div>
+  <div class="trace trace-rom-r"></div>
+  <div class="trace trace-rom-l2"></div>
+  <div class="trace trace-rom-r2"></div>
+  <div class="trace trace-bridge-l"></div>
+  <div class="trace trace-bridge-r"></div>
+  <div class="trace trace-ram-l"></div>
+  <div class="trace trace-ram-r"></div>
+  <div class="trace trace-ram-l2"></div>
+  <div class="trace trace-ram-r2"></div>
+
+  <!-- Data flow particles -->
+  <div class="particle-track particle-track-up">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+  </div>
+
+  <!-- ROM Chip -->
+  <div class="chip chip-rom">
+    <div class="chip-notch"></div>
+    <span class="chip-name">ROM</span>
+    <span class="chip-file">project.faf</span>
+    <span class="chip-desc">Persistent · Portable · Yours</span>
+  </div>
+
+  <!-- Bus labels -->
+  <div class="bus-label label-bisync">bi-sync</div>
+  <div class="bus-arrows arrows-bisync">↕</div>
+  <div class="status-badge badge-free">Free</div>
+
+  <!-- Bridge Chip (CPU) -->
+  <div class="chip chip-bridge">
+    <div class="die-mark"></div>
+    <span class="chip-name">BUS</span>
+    <span class="chip-file">CLAUDE.md</span>
+    <span class="chip-desc">C-Mirror Sync Engine</span>
+  </div>
+
+  <!-- Tri-sync labels -->
+  <div class="bus-label label-trisync">tri-sync</div>
+  <div class="bus-arrows arrows-trisync">↕</div>
+  <div class="status-badge badge-pro">Pro</div>
+
+  <!-- RAM Chip -->
+  <div class="chip chip-ram">
+    <span class="chip-name">RAM</span>
+    <span class="chip-file">MEMORY.md</span>
+    <span class="chip-desc">Session Memory · AI Remembers</span>
+  </div>
+
+  <!-- Title -->
+  <div class="title-silk">The RAM Edition</div>
+
+  <!-- Bottom silk screen -->
+  <div class="silk-bottom">
+    <div class="silk-item">
+      <div class="silk-dot" style="background: #FF6B35;"></div>
+      ROM
+    </div>
+    <div class="silk-item">
+      <div class="silk-dot" style="background: #00D4D4;"></div>
+      BUS
+    </div>
+    <div class="silk-item">
+      <div class="silk-dot" style="background: #27c93f;"></div>
+      RAM
+    </div>
+    <div class="silk-item" style="margin-left: 16px; color: rgba(255,255,255,0.45);">
+      faf.one
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

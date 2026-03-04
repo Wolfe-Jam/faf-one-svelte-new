@@ -1,8 +1,8 @@
 <script>
 	const posts = [
 		{
-			slug: 'blog/desktop-edition',
-			title: 'The Desktop + Nelly Edition',
+			slug: 'blog/nelly-edition',
+			title: 'The Nelly Edition',
 			date: 'March 4, 2026',
 			timestamp: '2026-03-04',
 			excerpt: 'claude-faf-mcp v5.0 + v5.1: 33 annotated MCP tools. Tool #33 faf_tri_sync — Nelly makes your AI remember across sessions. Answer 3 questions (the 3Ws) and your AI stops guessing.',

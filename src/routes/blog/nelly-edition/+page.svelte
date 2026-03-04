@@ -16,9 +16,9 @@
 </script>
 
 <svelte:head>
-	<title>The Desktop Edition - claude-faf-mcp v5.0 + v5.1 | FAF</title>
+	<title>The Nelly Edition - claude-faf-mcp v5.0 + v5.1 | FAF</title>
 	<meta name="description" content="33 MCP tools. Tool annotations. Nelly tri-sync (Pro). 3Ws for non-developers. One-click Desktop Extensions install." />
-	<meta property="og:title" content="The Desktop Edition - claude-faf-mcp v5.0 + v5.1" />
+	<meta property="og:title" content="The Nelly Edition - claude-faf-mcp v5.0 + v5.1" />
 	<meta property="og:description" content="33 MCP tools. Nelly tri-sync for persistent AI memory. 3Ws — answer 3 questions and your AI stops guessing." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -27,10 +27,10 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Desktop Edition
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Nelly Edition
 		</div>
 
-		<h1>The Desktop Edition</h1>
+		<h1>The Nelly Edition</h1>
 		<p class="version-tag">claude-faf-mcp v5.0 + v5.1</p>
 		<p class="subtitle">One-click install. Nelly never forgets. No terminal required.</p>
 		<div class="meta">
