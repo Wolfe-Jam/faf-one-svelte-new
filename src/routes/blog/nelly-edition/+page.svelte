@@ -94,6 +94,8 @@
 		<section>
 			<h2>v5.1 &mdash; Nelly Edition &#x1F418;&#x1F9E1;</h2>
 
+			<img src="/blog-assets/nelly.jpg" alt="Nelly Never Forgets" width="300" style="float: right; margin: 0 0 1rem 1.5rem; border-radius: 12px;" />
+
 			<p>Same day, one more tool. Meet Nelly.</p>
 
 			<h3>The 3Ws &mdash; Start Here</h3>
