@@ -16,10 +16,10 @@
 </script>
 
 <svelte:head>
-	<title>The Desktop Edition - claude-faf-mcp v5.0.0 | FAF</title>
-	<meta name="description" content="32 annotated MCP tools. Privacy policy. One-click install for non-developers. FAF submitted to Claude Desktop Extensions." />
-	<meta property="og:title" content="The Desktop Edition - claude-faf-mcp v5.0.0" />
-	<meta property="og:description" content="FAF submitted to Claude Desktop Extensions. Tool annotations on all 32 tools. One-click install for anyone." />
+	<title>The Desktop Edition - claude-faf-mcp v5.0 + v5.1 | FAF</title>
+	<meta name="description" content="33 MCP tools. Tool annotations. Nelly tri-sync (Pro). 3Ws for non-developers. One-click Desktop Extensions install." />
+	<meta property="og:title" content="The Desktop Edition - claude-faf-mcp v5.0 + v5.1" />
+	<meta property="og:description" content="33 MCP tools. Nelly tri-sync for persistent AI memory. 3Ws — answer 3 questions and your AI stops guessing." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -31,8 +31,8 @@
 		</div>
 
 		<h1>The Desktop Edition</h1>
-		<p class="version-tag">claude-faf-mcp v5.0.0</p>
-		<p class="subtitle">One-click install. No terminal required.</p>
+		<p class="version-tag">claude-faf-mcp v5.0 + v5.1</p>
+		<p class="subtitle">One-click install. Nelly never forgets. No terminal required.</p>
 		<div class="meta">
 			<time datetime="2026-03-04">March 4, 2026</time>
 			<span class="separator">&bull;</span>
@@ -43,7 +43,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> claude-faf-mcp v5.0.0 adds tool annotations to all 32 MCP tools, a privacy policy, and a Desktop Extensions manifest. Submitted to Anthropic for one-click install in Claude Desktop. No terminal, no config files &mdash; just install and go.
+				<strong>TL;DR:</strong> v5.0 added tool annotations to all 32 MCP tools, privacy policy, and Desktop Extensions manifest. v5.1 adds tool #33 &mdash; <code>faf_tri_sync</code> &mdash; Nelly&#x1F418; makes your AI remember across sessions. Answer 3 questions (the 3Ws) and your AI stops guessing.
 			</p>
 		</section>
 
@@ -60,7 +60,7 @@
 		<section>
 			<h2>What's New</h2>
 
-			<h3>Tool Annotations (All 32 Tools)</h3>
+			<h3>Tool Annotations (All 32 Tools &rarr; 33 in v5.1)</h3>
 			<p>Every tool now declares what it does &mdash; read-only, write, or destructive &mdash; so Claude Desktop can show users what's happening before it happens.</p>
 
 			<pre><code>{`// Read-only: 16 tools
@@ -78,7 +78,7 @@
 			<p>FAF processes everything locally. No data leaves your machine. No analytics, no telemetry, no tracking, no accounts. Now it's written down in <a href="https://github.com/Wolfe-Jam/claude-faf-mcp/blob/main/PRIVACY.md">PRIVACY.md</a> &mdash; the #2 rejection reason, handled.</p>
 
 			<h3>Desktop Extensions Manifest</h3>
-			<p>Clean <code>manifest.json</code> (v0.3) with all 32 tools listed, privacy policy linked, 512px icon. Validated with <code>mcpb validate</code>, packed at 63KB.</p>
+			<p>Clean <code>manifest.json</code> (v0.3) with all 33 tools listed, privacy policy linked, 512px icon. Validated with <code>mcpb validate</code>, packed at 63KB.</p>
 
 			<h3>Non-Developer Section</h3>
 			<p>New README section for people who've never opened a terminal:</p>
@@ -92,10 +92,49 @@
 		</section>
 
 		<section>
+			<h2>v5.1 &mdash; Nelly Edition &#x1F418;&#x1F9E1;</h2>
+
+			<p>Same day, one more tool. Meet Nelly.</p>
+
+			<h3>The 3Ws &mdash; Start Here</h3>
+			<p>Answer 3 questions. That's all your AI needs.</p>
+
+			<div class="ws-grid">
+				<div class="w-card">
+					<span class="w-label">&#x1F465; WHO</span>
+					<p>Who is it for? Not you &mdash; them.</p>
+				</div>
+				<div class="w-card">
+					<span class="w-label">&#x1F4E6; WHAT</span>
+					<p>What do they get? Not features &mdash; the outcome.</p>
+				</div>
+				<div class="w-card">
+					<span class="w-label">&#x1F3AF; WHY</span>
+					<p>What's broken today? Why must this exist?</p>
+				</div>
+			</div>
+
+			<p>Tell Claude your 3Ws and FAF turns them into project DNA that never drifts. <a href="https://faf.one/ideas">Build yours &rarr;</a></p>
+
+			<h3>Tool #33: faf_tri_sync (Pro)</h3>
+			<p>bi-sync keeps <code>.faf</code> and <code>CLAUDE.md</code> aligned &mdash; free forever. tri-sync adds RAM: your AI remembers across sessions via <code>MEMORY.md</code>.</p>
+
+			<pre><code>{`  bi-sync  = ROM (.faf) ↔ CLAUDE.md           ← free forever
+  tri-sync = ROM ↔ CLAUDE.md ↔ RAM (MEMORY.md) ← Pro`}</code></pre>
+
+			<p>14-day free trial, no signup. Then a dime a day ($3/mo) or a nickel a day ($19/yr). $29/yr Global covers both CLI + MCP.</p>
+
+			<p><a href="https://faf.one/pro">Friends of FAF &rarr;</a></p>
+
+			<h3>&#x1F418; Feed Nelly &mdash; She Never Forgets</h3>
+			<p>Nelly is the tri-sync mascot. She remembers what your AI forgets between sessions. Feed her a dime a day and she'll never let your context drift.</p>
+		</section>
+
+		<section>
 			<h2>Try It</h2>
 
-			<div class="copy-box" onclick={() => copyText('npx claude-faf-mcp@5.0.0', 'install')}>
-				<code class="copy-code">npx claude-faf-mcp@5.0.0</code>
+			<div class="copy-box" onclick={() => copyText('npx claude-faf-mcp@5.1.0', 'install')}>
+				<code class="copy-code">npx claude-faf-mcp@5.1.0</code>
 				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
@@ -110,7 +149,7 @@
 				<div class="cta-box">
 					<h3>GitHub</h3>
 					<p>Source and release notes.</p>
-					<a href="https://github.com/Wolfe-Jam/claude-faf-mcp/releases/tag/v5.0.0" class="cta-link">v5.0.0 Release</a>
+					<a href="https://github.com/Wolfe-Jam/claude-faf-mcp/releases/tag/v5.1.0" class="cta-link">v5.1.0 Release</a>
 				</div>
 				<div class="cta-box">
 					<h3>npm</h3>
@@ -124,9 +163,9 @@
 			<h2>The Numbers</h2>
 
 			<ul>
-				<li><strong>v5.0.0</strong> &mdash; Released March 4, 2026</li>
+				<li><strong>v5.0 + v5.1</strong> &mdash; Released March 4, 2026</li>
 				<li><strong>351/351</strong> &mdash; Tests passing</li>
-				<li><strong>32/32</strong> &mdash; Tools annotated</li>
+				<li><strong>33/33</strong> &mdash; Tools annotated</li>
 				<li><strong>100%</strong> &mdash; Trophy score</li>
 				<li><strong>33,000+</strong> &mdash; npm downloads (ecosystem)</li>
 			</ul>
@@ -395,12 +434,41 @@
 	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
 
+	.ws-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin: 1.5rem 0;
+	}
+	.w-card {
+		background: #fff5f0;
+		border: 2px solid #FF6B35;
+		border-radius: 8px;
+		padding: 1rem;
+		text-align: center;
+	}
+	.w-label {
+		display: block;
+		font-weight: 700;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		color: #FF6B35;
+	}
+	.w-card p {
+		margin: 0;
+		font-size: 0.95rem;
+		color: #555;
+	}
+
 	@media (max-width: 768px) {
 		h1 {
 			font-size: 1.75rem;
 		}
 
 		.cta-grid {
+			grid-template-columns: 1fr;
+		}
+		.ws-grid {
 			grid-template-columns: 1fr;
 		}
 
