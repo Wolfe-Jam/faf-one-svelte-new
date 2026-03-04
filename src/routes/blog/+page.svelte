@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/big-orange-edition',
+			title: 'The Big Orange Edition',
+			date: 'March 4, 2026',
+			timestamp: '2026-03-04',
+			excerpt: 'grok-faf-mcp v1.1.1: 21 MCP tools (was showing 17), fresh landing page, MCP SDK 1.27, 65% smaller tarball. The first MCP server for Grok gets its first real refresh.',
+			emoji: '🍊',
+			category: 'Grok'
+		},
+		{
 			slug: 'blog/pro-launch',
 			title: 'Loyal Builders Show Steel',
 			date: 'March 2, 2026',
