@@ -129,8 +129,8 @@ function generateLicenseEmailHTML(license: License): string {
 
         <ul>
             ${isFriend ? `
-            <li>⚡ <strong>CLI tri-sync</strong> — persistent context across Claude, Cursor, and Gemini</li>
-            <li>☑️ <strong>Rust compiler Pro</strong> — Glass Hood, SVG scorecards, FAFb compilation, multi-target sync</li>
+            <li>⚡ <strong>tri-sync</strong> — persistent project context (ROM → BUS → RAM) across every AI session</li>
+            <li>☑️ <strong>Rust compiler Pro</strong> — Glass Hood, SVG scorecards, FAFb compilation</li>
             <li>☑️ <strong>MCP server Pro</strong> — full tool access</li>
             <li>☑️ <strong>One key, all CLIs</strong> — same license works everywhere</li>
             <li>☑️ Early-adopter pricing locked in forever</li>
