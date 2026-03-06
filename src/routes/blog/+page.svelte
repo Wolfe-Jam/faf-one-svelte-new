@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/axum-edition',
+			title: 'The Axum Edition',
+			date: 'March 7, 2026',
+			timestamp: '2026-03-07',
+			excerpt: 'One line to inject FAF project context into any Axum server. Feature-gated, parse once, inject everywhere. ~240 lines because the foundation is solid.',
+			emoji: '🦀',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/cargo-add-faf',
 			title: 'cargo add faf',
 			date: 'March 6, 2026',
