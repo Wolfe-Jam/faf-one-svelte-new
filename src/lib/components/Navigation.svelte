@@ -88,7 +88,7 @@
 				<a href="/docs" class="btn btn-ghost btn-small">
 					Docs
 				</a>
-				<a href="/docs#quick-start" class="btn btn-primary btn-small">
+				<a href="/ideas" class="btn btn-primary btn-small">
 					Get Started
 				</a>
 			</div>
