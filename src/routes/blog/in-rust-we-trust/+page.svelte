@@ -82,6 +82,8 @@
 				</button>
 			</div>
 
+			<p>Need even more?</p>
+
 			<div class="install-block">
 				<code>cargo add faf --features radio</code>
 				<button onclick={() => copyText('cargo add faf --features radio', 'radio')} class="copy-btn">
