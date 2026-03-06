@@ -63,10 +63,34 @@
 
 		<!-- ============ CLI SECTION ============ -->
 		<section id="cli" class="product-section">
-			<div class="badge cli-badge">faf-cli v5 Pro</div>
+			<div class="badge cli-badge">faf-cli v5</div>
 
-			<h2 class="section-title">Persistent memory for every session</h2>
-			<div class="tri-sync-hero">
+			<!-- bi-sync: free -->
+			<div class="free-block">
+				<h2 class="section-title">bi-sync &mdash; free forever</h2>
+				<p class="free-statement">
+					faf-cli is free. Full version. Always maintained. Always core.<br/>
+					<code>faf init</code>, <code>faf go</code>, <code>faf score</code>, <code>faf git</code>, bi-sync &mdash; all of it. No trial. No expiry. No catch.
+				</p>
+				<div class="sync-flow">
+					<div class="sync-node">
+						<span class="sync-label">ROM</span>
+						<span class="sync-desc">.faf</span>
+					</div>
+					<div class="sync-arrow">&harr;</div>
+					<div class="sync-node">
+						<span class="sync-label">BUS</span>
+						<span class="sync-desc">CLAUDE.md</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- tri-sync: pro -->
+			<div class="pro-block">
+				<h2 class="section-title">tri-sync &mdash; Pro</h2>
+				<p class="pro-statement">
+					Advanced memory syncing for serious builders. tri-sync adds RAM &mdash; persistent session memory that survives across every AI session. No re-explaining. Ever.
+				</p>
 				<div class="sync-flow">
 					<div class="sync-node">
 						<span class="sync-label">ROM</span>
@@ -83,12 +107,9 @@
 						<span class="sync-desc">MEMORY.md</span>
 					</div>
 				</div>
-				<p class="tri-sync-explain">
-					<strong>bi-sync</strong> (free forever) keeps <code>.faf</code> &harr; <code>CLAUDE.md</code> in sync.<br/>
-					<strong>tri-sync</strong> adds RAM &mdash; your AI remembers context, decisions, and conventions across every session. No re-explaining. Ever.
-				</p>
 			</div>
 
+			<!-- interops -->
 			<div class="interops-section">
 				<h3 class="interops-title">interops &mdash; no drift</h3>
 				<p class="interops-desc">
@@ -462,9 +483,39 @@
 		margin-bottom: 2rem;
 	}
 
-	/* tri-sync hero (CLI tab) */
-	.tri-sync-hero {
+	/* Free + Pro blocks */
+	.free-block {
 		margin-bottom: 2.5rem;
+	}
+
+	.free-statement {
+		text-align: center;
+		color: #aaa;
+		font-size: 1rem;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+	}
+
+	.free-statement code {
+		background: #1a1a1a;
+		color: #00d4d4;
+		padding: 0.1rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+	}
+
+	.pro-block {
+		margin-bottom: 2.5rem;
+		padding-top: 2rem;
+		border-top: 1px solid #333;
+	}
+
+	.pro-statement {
+		text-align: center;
+		color: #aaa;
+		font-size: 1rem;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
 	}
 
 	.sync-flow {
@@ -513,25 +564,6 @@
 		font-size: 1.5rem;
 		color: #00d4d4;
 		font-weight: 700;
-	}
-
-	.tri-sync-explain {
-		text-align: center;
-		color: #aaa;
-		font-size: 1rem;
-		line-height: 1.7;
-	}
-
-	.tri-sync-explain code {
-		background: #1a1a1a;
-		color: #00d4d4;
-		padding: 0.1rem 0.4rem;
-		border-radius: 4px;
-		font-size: 0.9rem;
-	}
-
-	.tri-sync-explain strong {
-		color: #f5f5dc;
 	}
 
 	/* Interops */
