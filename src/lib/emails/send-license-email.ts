@@ -23,6 +23,8 @@ function generateLicenseEmailHTML(license: License): string {
     const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
     const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
     const isPro = license.tier === 'pro';
+    const isFriend = license.licenseNumber != null;
+    const friendLabel = isFriend ? `Friend of FAF #${String(license.licenseNumber).padStart(4, '0')}` : '';
 
     // Steel blue for Pro, orange for TURBO/LEGENDS
     const accentColor = isPro ? '#4682B4' : '#FF6B35';
@@ -141,6 +143,14 @@ function generateLicenseEmailHTML(license: License): string {
         </ul>
 
         <div class="license-box">
+            ${isFriend ? `
+            <div style="font-size: 24px; font-weight: bold; color: #4682B4; margin-bottom: 4px;">
+                🧡 ${friendLabel}
+            </div>
+            <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">
+                ${license.licenseNumber} of 100 — All Areas License
+            </div>
+            ` : ''}
             <h2>🔑 Your License Key</h2>
             <div class="license-key">${license.key}</div>
             <p style="color: #666; font-size: 14px;">Keep this safe - you'll need it to activate ${tierName}</p>
@@ -209,6 +219,12 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
         const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
         const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
 
+        // Friends of FAF get a special subject line
+        const isFriend = license.licenseNumber != null;
+        const subject = isFriend
+            ? `🧡 Friend of FAF #${String(license.licenseNumber).padStart(4, '0')} — Your All Areas License`
+            : `${tierEmoji} Your ${tierName} License Key`;
+
         const client = getResend();
         if (!client) {
             return { success: false, error: 'Email service not configured' };
@@ -217,7 +233,7 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
             from: 'FAF <team@faf.one>',
             replyTo: 'team@faf.one',
             to: license.email,
-            subject: `${tierEmoji} Your ${tierName} License Key`,
+            subject,
             html: generateLicenseEmailHTML(license)
         });
 

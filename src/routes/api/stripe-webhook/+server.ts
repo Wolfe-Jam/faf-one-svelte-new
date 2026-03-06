@@ -9,13 +9,17 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { generateLicenseKey } from '$lib/license-generator';
 import { sendLicenseEmail } from '$lib/emails/send-license-email';
+import { storeLicense, getNextLicenseNumber } from '$lib/license-store';
 
 // Pro tier payment links (tri-sync CLI, Annual, Global)
 const PRO_PAYMENT_LINKS = [
     'plink_1T6QXrRt8WbJblnRUqA0GBxW',  // tri-sync CLI $3/mo
     'plink_1T6QhFRt8WbJblnRzClZhAVU',   // tri-sync Annual $19/yr
-    'plink_1T6Qu3Rt8WbJblnRYmCdqYVg',   // tri-sync Global $29/yr
+    'plink_1T6Qu3Rt8WbJblnRYmCdqYVg',   // tri-sync Global $29/yr — Friends of FAF
 ];
+
+// $29/yr All Areas — Friends of FAF (numbered #0001-#0100)
+const GLOBAL_PAYMENT_LINK = 'plink_1T6Qu3Rt8WbJblnRYmCdqYVg';
 
 export const POST: RequestHandler = async ({ request }) => {
     try {
@@ -60,7 +64,22 @@ export const POST: RequestHandler = async ({ request }) => {
 
             console.log(`🔑 Generated ${tier} license: ${key} for ${email}`);
 
-            // Email it
+            // Assign Friends of FAF number for $29/yr All Areas
+            let licenseNumber: number | undefined;
+            if (session.payment_link === GLOBAL_PAYMENT_LINK) {
+                try {
+                    const nextNum = await getNextLicenseNumber();
+                    if (nextNum === null) {
+                        console.log('⚠️ Friends of FAF cap reached (100)');
+                    } else {
+                        licenseNumber = nextNum;
+                        console.log(`🧡 Friend of FAF #${String(licenseNumber).padStart(4, '0')}`);
+                    }
+                } catch (numError) {
+                    console.error('⚠️ Failed to get license number:', numError);
+                }
+            }
+
             const license = {
                 key,
                 email,
@@ -68,9 +87,11 @@ export const POST: RequestHandler = async ({ request }) => {
                 stripeCustomerId: session.customer || '',
                 stripeSubscriptionId: subscriptionId || '',
                 status: 'active' as const,
-                createdAt: new Date().toISOString()
+                createdAt: new Date().toISOString(),
+                licenseNumber
             };
 
+            // Email it
             const emailResult = await sendLicenseEmail(license);
 
             if (emailResult.success) {
@@ -79,7 +100,15 @@ export const POST: RequestHandler = async ({ request }) => {
                 console.error(`⚠️ Email failed: ${emailResult.error}`);
             }
 
-            return json({ received: true, key, tier, email, emailSent: emailResult.success, emailError: emailResult.error || null });
+            // Persist to Supabase
+            try {
+                await storeLicense(license);
+            } catch (storeError) {
+                console.error('⚠️ License store failed:', storeError);
+                // Don't fail the webhook — email was sent, key is valid
+            }
+
+            return json({ received: true, key, tier, email, licenseNumber, emailSent: emailResult.success, emailError: emailResult.error || null });
         }
 
         // All other events — acknowledge

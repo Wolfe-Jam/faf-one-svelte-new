@@ -1,4 +1,17 @@
 <script lang="ts">
+	const FRIENDS_TOTAL = 100;
+	let friendsClaimed = $state(0);
+
+	async function loadFriendsCount() {
+		try {
+			const res = await fetch('/api/friends-count');
+			const data = await res.json();
+			friendsClaimed = data.claimed;
+		} catch { /* silent */ }
+	}
+
+	$effect(() => { loadFriendsCount(); });
+
 	function selectPlan(plan: string) {
 		if (plan === 'monthly') {
 			window.open('https://buy.stripe.com/9B6eVfakl5V48j12IEbV60j', '_blank');
@@ -115,9 +128,9 @@
 					</button>
 				</div>
 
-				<!-- Global Bundle -->
+				<!-- Global Bundle — Friends of FAF -->
 				<div class="pricing-card global">
-					<div class="global-badge">Early Preview</div>
+					<div class="global-badge">Friends of FAF</div>
 					<div class="card-header">
 						<h3>FAF Pro &mdash; All Areas</h3>
 						<div class="price">
@@ -135,6 +148,12 @@
 						<li>Multi-version license &mdash; one key, all CLIs</li>
 						<li>Early-adopters get rewarded &mdash; rate locked forever</li>
 					</ul>
+					<div class="friends-counter">
+						<span class="friends-text"><span class="friends-claimed">{friendsClaimed}</span> of {FRIENDS_TOTAL} claimed</span>
+						<div class="friends-bar">
+							<div class="friends-fill" style="width: {(friendsClaimed / FRIENDS_TOTAL) * 100}%"></div>
+						</div>
+					</div>
 					<button class="cta-btn cta-global" onclick={() => selectPlan('global')}>
 						Get Full Access &mdash; $29/yr
 					</button>
@@ -710,6 +729,37 @@
 
 	.rust-link:hover {
 		text-decoration: underline;
+	}
+
+	/* Friends counter */
+	.friends-counter {
+		margin-bottom: 1.25rem;
+		text-align: center;
+	}
+
+	.friends-text {
+		font-size: 0.85rem;
+		color: #999;
+	}
+
+	.friends-claimed {
+		color: #4682B4;
+		font-weight: 700;
+	}
+
+	.friends-bar {
+		height: 4px;
+		background: #1e1a16;
+		border-radius: 2px;
+		margin-top: 0.5rem;
+		overflow: hidden;
+	}
+
+	.friends-fill {
+		height: 100%;
+		background: #4682B4;
+		border-radius: 2px;
+		transition: width 0.6s ease;
 	}
 
 	/* Mobile */

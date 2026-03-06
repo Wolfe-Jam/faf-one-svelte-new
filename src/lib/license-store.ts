@@ -27,6 +27,7 @@ function licenseToRow(license: License): Omit<LicenseRow, 'id' | 'created_at' | 
         stripe_customer_id: license.stripeCustomerId || null,
         stripe_subscription_id: license.stripeSubscriptionId || null,
         expires_at: license.expiresAt || null,
+        license_number: license.licenseNumber ?? null,
         metadata: license.metadata || {}
     };
 }
@@ -44,6 +45,7 @@ function rowToLicense(row: LicenseRow): License {
         stripeSubscriptionId: row.stripe_subscription_id || undefined,
         createdAt: row.created_at,
         expiresAt: row.expires_at || undefined,
+        licenseNumber: row.license_number ?? undefined,
         metadata: row.metadata
     };
 }
@@ -209,4 +211,36 @@ export async function loadLicenses(): Promise<License[]> {
     }
 
     return data.map(rowToLicense);
+}
+
+/**
+ * Get next available Friends of FAF license number (1-100)
+ * Returns null if cap reached
+ */
+export async function getNextLicenseNumber(): Promise<number | null> {
+    const { data, error } = await requireSupabase()
+        .from('licenses')
+        .select('license_number')
+        .not('license_number', 'is', null)
+        .order('license_number', { ascending: false })
+        .limit(1);
+
+    if (error) throw new Error(`Failed to get license count: ${error.message}`);
+
+    const current = data?.[0]?.license_number || 0;
+    if (current >= 100) return null;
+    return current + 1;
+}
+
+/**
+ * Get count of Friends of FAF licenses (numbered licenses)
+ */
+export async function getFriendsCount(): Promise<number> {
+    const { count, error } = await requireSupabase()
+        .from('licenses')
+        .select('*', { count: 'exact', head: true })
+        .not('license_number', 'is', null);
+
+    if (error) return 0;
+    return count || 0;
 }

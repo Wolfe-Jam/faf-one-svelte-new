@@ -1,38 +1,28 @@
 <script>
-	import { onMount } from 'svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
-	let spotsRemaining = $state(73); // 100 - 27 early adopters
-	let countdown = $state('');
-	
-	onMount(() => {
-		// Update countdown
-		const interval = setInterval(() => {
-			const launch = new Date('2025-01-01T00:00:00Z');
-			const now = new Date();
-			const diff = launch - now;
-			
-			if (diff > 0) {
-				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				countdown = `${days}d ${hours}h until public launch`;
-			} else {
-				countdown = 'Founders pricing ending soon!';
-			}
-		}, 1000);
-		
-		return () => clearInterval(interval);
-	});
-	
-	function joinFounders() {
-		window.location.href = '/#pricing';
+	const FRIENDS_TOTAL = 100;
+	let friendsClaimed = $state(0);
+	let spotsRemaining = $derived(FRIENDS_TOTAL - friendsClaimed);
+
+	async function loadFriendsCount() {
+		try {
+			const res = await fetch('/api/friends-count');
+			const data = await res.json();
+			friendsClaimed = data.claimed;
+		} catch { /* silent */ }
+	}
+
+	$effect(() => { loadFriendsCount(); });
+
+	function getFullAccess() {
+		window.open('https://buy.stripe.com/dRm14pakl83c56P5UQbV60m', '_blank');
 	}
 </script>
 
 <svelte:head>
 	<title>Join the Movement - Get Dot.FAFfed</title>
 	<meta name="description" content="Are you dot.faffed? Join the movement. Context-first, championship thinking, AI|Human balance. Race to win with AI.">
-	<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </svelte:head>
 
 <div class="back-nav">
@@ -109,7 +99,7 @@
 			<div class="benefit-card">
 				<div class="benefit-icon">🏆</div>
 				<h3>Recognition</h3>
-				<p>Founder badge ($9) or LEGEND status ($100) - earned, not bought</p>
+				<p>Friend of FAF status ($29/yr) — numbered, limited to 100, earned not bought</p>
 			</div>
 		</div>
 	</div>
@@ -208,42 +198,31 @@
 			<div class="urgency-badge">
 				GENUINE WIN/WIN - VERY LIMITED - WHEN IT'S GONE IT'S GONE
 			</div>
-			
-			<h2>Choose Your Path</h2>
+
+			<h2>Become a Friend of FAF</h2>
 			<p class="cta-subtitle">
-				Only {spotsRemaining} spots remaining • {countdown}
+				Only {spotsRemaining} of {FRIENDS_TOTAL} spots remaining
 			</p>
 
 			<div class="pricing-comparison">
-				<div class="price-box">
-					<div class="price-label">FOUNDER</div>
-					<div class="price-value">$9/month</div>
-					<div class="price-save">LIMITED WIN/WIN 🧡</div>
-				</div>
 				<div class="price-box featured">
-					<div class="price-label">LEGENDS ONLY</div>
-					<div class="price-value">$100/year 🏆</div>
-					<div class="price-save">Includes badge + priority</div>
+					<div class="price-label">ALL AREAS ACCESS</div>
+					<div class="price-value">$29/year</div>
+					<div class="price-save">Every CLI. Every tool. One key. 🧡</div>
 				</div>
 			</div>
 
-			<div class="stripe-buttons-row">
-				<div class="stripe-button-wrapper">
-					<div class="button-label">FOUNDER</div>
-					{@html `<stripe-buy-button
-						buy-button-id="buy_btn_1SAisLRt8WbJblnRQzarT8jS"
-						publishable-key="pk_live_51RsYPuRt8WbJblnRhd7gwvTqkNie5A5GhGotKYbdYj6R18PtKzDpObayQdpUQ7sjSMt4b0381Je2yyphYot6ELYR00D50NnmJt"
-					></stripe-buy-button>`}
+			<div class="friends-counter">
+				<div class="friends-bar">
+					<div class="friends-fill" style="width: {(friendsClaimed / FRIENDS_TOTAL) * 100}%"></div>
 				</div>
-				<div class="stripe-button-wrapper">
-					<div class="button-label">LEGENDS 🏆</div>
-					{@html `<stripe-buy-button
-						buy-button-id="buy_btn_1SAMYLRt8WbJblnRL4SoZiDY"
-						publishable-key="pk_live_51RsYPuRt8WbJblnRhd7gwvTqkNie5A5GhGotKYbdYj6R18PtKzDpObayQdpUQ7sjSMt4b0381Je2yyphYot6ELYR00D50NnmJt"
-					></stripe-buy-button>`}
-				</div>
+				<span class="friends-text"><span class="friends-claimed">{friendsClaimed}</span> of {FRIENDS_TOTAL} claimed</span>
 			</div>
-			
+
+			<button class="cta-button" onclick={() => getFullAccess()}>
+				Get Full Access — $29/yr
+			</button>
+
 			<p class="guarantee">
 				☑️ 30-day money-back guarantee • ☑️ Cancel anytime • ☑️ Instant access
 			</p>
@@ -723,28 +702,58 @@
 		font-weight: 600;
 	}
 	
-	.stripe-buttons-row {
-		margin: 2rem auto;
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		max-width: 600px;
-	}
-
-	.stripe-button-wrapper {
-		flex: 1;
-	}
-
-	.button-label {
+	.friends-counter {
+		max-width: 400px;
+		margin: 1.5rem auto;
 		text-align: center;
-		font-weight: 900;
-		font-size: 0.875rem;
-		margin-bottom: 0.5rem;
-		color: var(--faf-black);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
 	}
-	
+
+	.friends-text {
+		font-size: 0.85rem;
+		color: #888;
+	}
+
+	.friends-claimed {
+		color: #4682B4;
+		font-weight: 700;
+	}
+
+	.friends-bar {
+		height: 6px;
+		background: #e0e0e0;
+		border-radius: 3px;
+		margin-bottom: 0.5rem;
+		overflow: hidden;
+	}
+
+	.friends-fill {
+		height: 100%;
+		background: #4682B4;
+		border-radius: 3px;
+		transition: width 0.6s ease;
+	}
+
+	.cta-button {
+		display: block;
+		max-width: 400px;
+		margin: 1.5rem auto 0;
+		padding: 1rem 2rem;
+		background: #4682B4;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 1.1rem;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.cta-button:hover {
+		background: #5A9AC8;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 16px rgba(70, 130, 180, 0.3);
+	}
+
 	.guarantee {
 		font-size: 0.875rem;
 		color: #666;

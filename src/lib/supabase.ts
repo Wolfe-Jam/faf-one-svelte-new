@@ -50,5 +50,6 @@ export interface LicenseRow {
     created_at: string;
     expires_at: string | null;
     last_validated_at: string | null;
+    license_number: number | null;
     metadata: Record<string, any>;
 }

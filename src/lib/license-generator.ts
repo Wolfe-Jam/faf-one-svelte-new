@@ -14,6 +14,7 @@ export interface License {
     status: 'active' | 'canceled' | 'past_due';
     createdAt: string;
     expiresAt?: string; // null for active subscriptions
+    licenseNumber?: number; // Friends of FAF sequential number (1-100)
 }
 
 /**
