@@ -16,10 +16,10 @@ let supabaseClient: SupabaseClient | null = null;
 export function getSupabase(): SupabaseClient | null {
     if (!supabaseClient) {
         const supabaseUrl = process.env.SUPABASE_URL2;
-        const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
+        const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY2;
 
         if (!supabaseUrl || !supabaseServiceKey) {
-            console.warn('⚠️ Supabase not configured. Set SUPABASE_URL2 and SUPABASE_SERVICE_KEY');
+            console.warn('⚠️ Supabase not configured. Set SUPABASE_URL2 and SUPABASE_SERVICE_KEY2');
             return null;
         }
 
