@@ -10,7 +10,7 @@
 			category: 'Release'
 		},
 		{
-			slug: 'blog/cargo-add-faf',
+			slug: 'blog/in-rust-we-trust',
 			title: 'In Rust We Trust — FAF Goes All-In',
 			date: 'March 7, 2026',
 			timestamp: '2026-03-07',
