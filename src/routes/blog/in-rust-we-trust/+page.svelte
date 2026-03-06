@@ -463,7 +463,7 @@
 
 	pre {
 		background: #1a1a1a;
-		color: #00D4D4;
+		color: #d7875f;
 		padding: 1.25rem;
 		border-radius: 8px;
 		overflow-x: auto;
@@ -498,7 +498,7 @@
 	.install-block code {
 		flex: 1;
 		background: none;
-		color: #00D4D4;
+		color: #d7875f;
 		padding: 0;
 		font-size: 1rem;
 	}
