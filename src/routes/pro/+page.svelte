@@ -282,38 +282,27 @@
 
 			<div class="faq-item">
 				<h4>What stays free?</h4>
-				<p>
-					<code>faf init</code>, <code>faf go</code>, <code>faf git</code>, <code>faf score</code>,
-					<code>faf status</code>, bi-sync (.faf &harr; CLAUDE.md), and all core CLI features. Free forever.
-				</p>
+				<p>Full FAF-CLI &mdash; The Original &mdash; with bi-sync. 51 versions strong, loved and maintained. Free forever.</p>
 			</div>
 
 			<div class="faq-item">
-				<h4>Same key for both CLIs?</h4>
-				<p>
-					Yes. One key, one <code>~/.faf/license.json</code>. Activate in either CLI — both read the same file. If you already have Pro, you're already unlocked everywhere.
-				</p>
+				<h4>One key for everything?</h4>
+				<p>Yes. One key unlocks both CLIs. Activate once, works everywhere.</p>
 			</div>
 
 			<div class="faq-item">
-				<h4>What happens after the trial?</h4>
-				<p>
-					Free features keep working. Pro features lock. Your existing files stay — they just won't auto-update until you subscribe.
-				</p>
+				<h4>What if I don't subscribe?</h4>
+				<p>The free CLI keeps working. Pro features lock, but your files stay. Nothing breaks.</p>
 			</div>
 
 			<div class="faq-item">
-				<h4>Will the price go up?</h4>
-				<p>
-					Yes. Early-adopter pricing locks in your rate forever. When we raise prices for new subscribers, yours stays the same.
-				</p>
+				<h4>Will my price go up?</h4>
+				<p>No. Early-adopters get lifetime locked-in pricing. When we raise prices for new subscribers, yours stays the same.</p>
 			</div>
 
 			<div class="faq-item">
 				<h4>Can I cancel?</h4>
-				<p>
-					Anytime. Monthly cancels at end of billing cycle. Annual cancels at end of year. No questions asked.
-				</p>
+				<p>Anytime. No questions asked.</p>
 			</div>
 		</section>
 
