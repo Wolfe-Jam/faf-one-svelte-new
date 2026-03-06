@@ -839,8 +839,8 @@
 
 	.discount {
 		display: inline-block;
-		background: rgba(39, 201, 63, 0.15);
-		color: #27c93f;
+		background: rgba(255, 107, 53, 0.15);
+		color: #FF6B35;
 		padding: 0.2rem 0.6rem;
 		border-radius: 4px;
 		font-size: 0.8rem;
