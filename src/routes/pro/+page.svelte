@@ -44,14 +44,14 @@
 		<!-- Tab Bar -->
 		<div class="tab-bar">
 			<button
-				class="tab"
+				class="tab tab-cli"
 				class:active={activeTab === 'cli'}
 				onclick={() => activeTab = 'cli'}
 			>
 				FAF-CLI &mdash; The Original
 			</button>
 			<button
-				class="tab"
+				class="tab tab-rust"
 				class:active={activeTab === 'rust'}
 				onclick={() => activeTab = 'rust'}
 			>
@@ -378,26 +378,44 @@
 		background: none;
 		border: none;
 		border-bottom: 3px solid transparent;
-		color: #888;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
-		transition: all 0.3s;
+		transition: all 0.3s ease;
 		margin-bottom: -2px;
+		transform-origin: center bottom;
 	}
 
-	.tab:hover {
-		color: #ccc;
+	.tab-cli {
+		color: rgba(70, 130, 180, 0.6);
+		border-bottom-color: rgba(70, 130, 180, 0.3);
 	}
 
-	.tab.active {
-		color: #4682B4;
-		border-bottom-color: #4682B4;
+	.tab-rust {
+		color: rgba(232, 149, 106, 0.6);
+		border-bottom-color: rgba(232, 149, 106, 0.3);
 	}
 
-	.rust-active .tab.active {
-		color: #E8956A;
-		border-bottom-color: #E8956A;
+	.tab-cli:hover {
+		color: rgba(70, 130, 180, 0.85);
+	}
+
+	.tab-rust:hover {
+		color: rgba(232, 149, 106, 0.85);
+	}
+
+	.tab-cli.active {
+		color: #5A9AC8;
+		border-bottom-color: #5A9AC8;
+		transform: scale(1.03);
+		text-shadow: 0 0 12px rgba(70, 130, 180, 0.4);
+	}
+
+	.tab-rust.active {
+		color: #F5A87A;
+		border-bottom-color: #F5A87A;
+		transform: scale(1.03);
+		text-shadow: 0 0 12px rgba(232, 149, 106, 0.4);
 	}
 
 	/* Tab content */
