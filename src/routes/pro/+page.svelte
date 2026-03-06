@@ -120,9 +120,12 @@
 
 		<!-- ============ RUST SECTION ============ -->
 		<section id="rust" class="product-section rust-section">
-			<div class="badge rust-badge">rust-faf-cli Pro</div>
+			<div class="badge rust-badge">rust-faf-cli</div>
 
-			<h2 class="section-title">What Pro unlocks</h2>
+			<h2 class="section-title">The Binary Beast</h2>
+			<p class="rust-intro">
+				A new Rust-native compiler, built for xAI and now available to everyone. 288x faster than YAML parsing. Included with Pro Global &mdash; All Areas ($29/yr).
+			</p>
 			<div class="free-pro-grid">
 				<div class="tier-card free-card">
 					<h3>Free</h3>
@@ -449,6 +452,14 @@
 	.rust-section {
 		padding-top: 2rem;
 		border-top: 1px solid #2a2420;
+	}
+
+	.rust-intro {
+		text-align: center;
+		color: #aaa;
+		font-size: 1.05rem;
+		line-height: 1.7;
+		margin-bottom: 2rem;
 	}
 
 	/* Badge */
