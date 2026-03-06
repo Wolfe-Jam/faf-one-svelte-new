@@ -1,6 +1,7 @@
 <script lang="ts">
 	const FRIENDS_TOTAL = 100;
 	let friendsClaimed = $state(0);
+	let activeTab = $state('cli');
 
 	async function loadFriendsCount() {
 		try {
@@ -24,28 +25,45 @@
 </script>
 
 <svelte:head>
-	<title>FAF Pro - tri-sync for faf-cli | FAF</title>
-	<meta name="description" content="Unlock tri-sync: persistent project context across Claude, Cursor, and Gemini. Early-adopter pricing from $3/mo." />
+	<title>FAF Pro - Full access. Every tool. | FAF</title>
+	<meta name="description" content="FAF Pro: tri-sync for faf-cli, Glass Hood diagnostics for Rust compiler. Persistent project context across every AI. From $3/mo." />
 </svelte:head>
 
-<div class="pro-page">
+<div class="pro-page" class:rust-active={activeTab === 'rust'}>
 	<div class="back-nav">
-		<a href="/" class="back-link">← Back to Home</a>
+		<a href="/" class="back-link">&larr; faf.one</a>
 	</div>
 
 	<main class="content">
 		<!-- Hero -->
 		<section class="hero">
-			<div class="badge">faf-cli v5 Pro</div>
-			<h1 class="title">tri-sync</h1>
-			<p class="subtitle">Define once. Remember forever.</p>
-			<p class="subtitle-detail">
-				Persistent project context (ROM) and session memory (RAM) that survives across every AI session.
-			</p>
+			<h1 class="title">FAF Pro</h1>
+			<p class="subtitle">Full access. Every tool.</p>
 		</section>
 
-		<!-- What is tri-sync -->
-		<section class="explanation">
+		<!-- Tab Bar -->
+		<div class="tab-bar">
+			<button
+				class="tab"
+				class:active={activeTab === 'cli'}
+				onclick={() => activeTab = 'cli'}
+			>
+				FAF-CLI &mdash; The Original
+			</button>
+			<button
+				class="tab"
+				class:active={activeTab === 'rust'}
+				onclick={() => activeTab = 'rust'}
+			>
+				Rust CLI &mdash; The Binary Beast
+			</button>
+		</div>
+
+		<!-- ============ CLI TAB ============ -->
+		{#if activeTab === 'cli'}
+		<section class="tab-content">
+			<div class="badge cli-badge">faf-cli v5 Pro</div>
+
 			<h2 class="section-title">What tri-sync does</h2>
 			<div class="rom-ram">
 				<div class="concept-card">
@@ -53,7 +71,7 @@
 					<h3>ROM: Your .faf file</h3>
 					<p>The single source of truth. Your project DNA — stack, conventions, architecture — defined once in structured YAML.</p>
 				</div>
-				<div class="concept-arrow">→</div>
+				<div class="concept-arrow">&rarr;</div>
 				<div class="concept-card">
 					<div class="concept-icon">⚡</div>
 					<h3>RAM: Session memory</h3>
@@ -61,15 +79,58 @@
 				</div>
 			</div>
 			<p class="explanation-note">
-				bi-sync (free) keeps <code>.faf</code> ↔ <code>CLAUDE.md</code> in sync.<br/>
+				bi-sync (free) keeps <code>.faf</code> &harr; <code>CLAUDE.md</code> in sync.<br/>
 				<strong>tri-sync</strong> adds AGENTS.md, .cursorrules, and GEMINI.md — so every AI tool gets the same persistent memory.
 			</p>
 		</section>
+		{/if}
 
-		<!-- Pricing Cards -->
+		<!-- ============ RUST TAB ============ -->
+		{#if activeTab === 'rust'}
+		<section class="tab-content">
+			<div class="badge rust-badge">rust-faf-cli Pro</div>
+
+			<h2 class="section-title">What Pro unlocks</h2>
+			<div class="free-pro-grid">
+				<div class="tier-card free-card">
+					<h3>Free</h3>
+					<p class="tier-tagline">Always. No trial. No expiry.</p>
+					<ul class="tier-list">
+						<li><code>faf init</code> &mdash; create project.faf</li>
+						<li><code>faf status</code> &mdash; score + tier + suggestion</li>
+						<li><code>faf completions</code> &mdash; shell completions</li>
+					</ul>
+				</div>
+				<div class="tier-card pro-card">
+					<h3>Pro</h3>
+					<p class="tier-tagline">14-day free trial. Then unlock.</p>
+					<ul class="tier-list">
+						<li><code>faf status --verbose</code> &mdash; Glass Hood deep-dive</li>
+						<li><code>faf status --card</code> &mdash; SVG scorecard</li>
+						<li><code>faf status --json</code> &mdash; machine-readable</li>
+						<li><code>faf sync</code> &mdash; multi-target (GROK/CLAUDE/GEMINI)</li>
+						<li><code>faf gold</code> &mdash; gap analysis to 100%</li>
+						<li><code>faf compile</code> &mdash; .faf &rarr; .fafb binary</li>
+						<li><code>faf bench</code> &mdash; race benchmark</li>
+						<li><code>faf embed</code> &mdash; context headers</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Install -->
+			<div class="install-inline">
+				<div class="code-box install-box">brew install Wolfe-Jam/faf/rust-faf-cli</div>
+				<p class="install-alt">
+					Or grab a binary from <a href="https://github.com/Wolfe-Jam/rust-faf-cli/releases" class="rust-link">GitHub Releases</a>
+				</p>
+			</div>
+		</section>
+		{/if}
+
+		<!-- ============ SHARED: Pricing ============ -->
 		<section class="pricing">
 			<h2 class="section-title">Early-Adopter Pricing</h2>
-			<p class="pricing-note">Persistent project context (ROM) and session memory (RAM) — unlimited projects.<br/>The only IANA-registered solution. Lock in these rates forever.</p>
+			<p class="pricing-note">Unlimited projects. Lock in these rates forever.</p>
 
 			<div class="pricing-grid">
 				<!-- Monthly -->
@@ -85,13 +146,13 @@
 						<p class="price-tagline">A dime a day.</p>
 					</div>
 					<ul class="features">
-						<li>tri-sync: .faf → CLAUDE.md + AGENTS.md + .cursorrules</li>
-						<li>GEMINI.md generation</li>
+						<li>tri-sync: .faf &rarr; CLAUDE.md + AGENTS.md + .cursorrules</li>
+						<li>All Rust Pro compiler features</li>
 						<li>Unlimited projects</li>
 						<li>Cancel anytime</li>
 					</ul>
 					<button class="cta-btn" onclick={() => selectPlan('monthly')}>
-						Get tri-sync — $3/mo
+						Get Pro &mdash; $3/mo
 					</button>
 				</div>
 
@@ -115,7 +176,7 @@
 						<li>Annual billing</li>
 					</ul>
 					<button class="cta-btn cta-primary" onclick={() => selectPlan('annual')}>
-						Get tri-sync — $19/yr
+						Get Pro &mdash; $19/yr
 					</button>
 				</div>
 
@@ -146,13 +207,13 @@
 						</div>
 					</div>
 					<button class="cta-btn cta-global" onclick={() => selectPlan('global')}>
-						Get Full Access — $29/yr
+						Get Full Access &mdash; $29/yr
 					</button>
 				</div>
 			</div>
 		</section>
 
-		<!-- How it works -->
+		<!-- ============ SHARED: How it works ============ -->
 		<section class="how-it-works">
 			<h2 class="section-title">How it works</h2>
 			<div class="steps">
@@ -168,20 +229,26 @@
 					<div class="step-content">
 						<h4>Activate</h4>
 						<div class="code-box">faf pro activate FAF-XXXX-XXXX-XXXX-XXXX</div>
+						<p>Same key works in both CLIs. One key, one <code>~/.faf/license.json</code>.</p>
 					</div>
 				</div>
 				<div class="step">
 					<div class="step-number">3</div>
 					<div class="step-content">
-						<h4>Sync</h4>
+						<h4>Use</h4>
+						{#if activeTab === 'cli'}
 						<div class="code-box">faf tri-sync</div>
-						<p>ROM (project DNA) + RAM (session memory via CLAUDE.md) — persistent context that survives across every session. That's the real unlock.</p>
+						<p>ROM (project DNA) + RAM (session memory via CLAUDE.md) — persistent context that survives across every session.</p>
+						{:else}
+						<div class="code-box">faf status --verbose</div>
+						<p>Glass Hood shows exactly how your score is calculated — weights, categories, projections. Nothing hidden.</p>
+						{/if}
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- FAQ -->
+		<!-- ============ SHARED: FAQ ============ -->
 		<section class="faq">
 			<h2 class="section-title">FAQ</h2>
 
@@ -189,14 +256,21 @@
 				<h4>What stays free?</h4>
 				<p>
 					<code>faf init</code>, <code>faf go</code>, <code>faf git</code>, <code>faf score</code>,
-					bi-sync (.faf ↔ CLAUDE.md), and all core CLI features. Free forever.
+					<code>faf status</code>, bi-sync (.faf &harr; CLAUDE.md), and all core CLI features. Free forever.
+				</p>
+			</div>
+
+			<div class="faq-item">
+				<h4>Same key for both CLIs?</h4>
+				<p>
+					Yes. One key, one <code>~/.faf/license.json</code>. Activate in either CLI — both read the same file. If you already have Pro, you're already unlocked everywhere.
 				</p>
 			</div>
 
 			<div class="faq-item">
 				<h4>What happens after the trial?</h4>
 				<p>
-					bi-sync keeps working. tri-sync locks. Your existing generated files stay — they just won't auto-update until you subscribe.
+					Free features keep working. Pro features lock. Your existing files stay — they just won't auto-update until you subscribe.
 				</p>
 			</div>
 
@@ -234,6 +308,11 @@
 		min-height: 100vh;
 		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
 		color: #f5f5dc;
+		transition: background 0.4s ease;
+	}
+
+	.pro-page.rust-active {
+		background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0a 50%, #0a0a0a 100%);
 	}
 
 	.back-nav {
@@ -249,6 +328,10 @@
 		transition: opacity 0.2s;
 	}
 
+	.rust-active .back-link {
+		color: #E8956A;
+	}
+
 	.back-link:hover {
 		opacity: 0.8;
 	}
@@ -262,58 +345,91 @@
 	/* Hero */
 	.hero {
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		padding-top: 1rem;
-	}
-
-	.badge {
-		display: inline-block;
-		background: rgba(70, 130, 180, 0.15);
-		border: 1px solid rgba(70, 130, 180, 0.4);
-		color: #4682B4;
-		padding: 0.35rem 1rem;
-		border-radius: 20px;
-		font-size: 0.85rem;
-		font-weight: 600;
-		margin-bottom: 1.25rem;
-		letter-spacing: 0.05em;
 	}
 
 	.title {
 		font-size: clamp(3rem, 8vw, 5rem);
 		font-weight: 900;
 		color: #f5f5dc;
-		margin: 0 0 0.75rem 0;
+		margin: 0 0 0.5rem 0;
 		letter-spacing: -0.03em;
 	}
 
 	.subtitle {
-		font-size: 1.5rem;
-		color: #00d4d4;
-		font-weight: 600;
-		margin: 0 0 0.5rem 0;
-	}
-
-	.subtitle-detail {
-		font-size: 1.1rem;
+		font-size: 1.35rem;
 		color: #aaa;
+		font-weight: 500;
 		margin: 0;
-		line-height: 1.6;
 	}
 
-	.subtitle-detail code {
-		background: #1a1a1a;
-		color: #00d4d4;
-		padding: 0.15rem 0.5rem;
-		border-radius: 4px;
-		font-size: 0.95rem;
+	/* Tab Bar */
+	.tab-bar {
+		display: flex;
+		gap: 0;
+		margin-bottom: 2.5rem;
+		border-bottom: 2px solid #333;
 	}
 
-	/* Explanation / ROM-RAM */
-	.explanation {
+	.tab {
+		flex: 1;
+		padding: 1rem 1.5rem;
+		background: none;
+		border: none;
+		border-bottom: 3px solid transparent;
+		color: #888;
+		font-size: 1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s;
+		margin-bottom: -2px;
+	}
+
+	.tab:hover {
+		color: #ccc;
+	}
+
+	.tab.active {
+		color: #4682B4;
+		border-bottom-color: #4682B4;
+	}
+
+	.rust-active .tab.active {
+		color: #E8956A;
+		border-bottom-color: #E8956A;
+	}
+
+	/* Tab content */
+	.tab-content {
+		text-align: center;
 		margin-bottom: 3rem;
 	}
 
+	/* Badge */
+	.badge {
+		display: inline-block;
+		padding: 0.35rem 1rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		letter-spacing: 0.05em;
+	}
+
+	.cli-badge {
+		background: rgba(70, 130, 180, 0.15);
+		border: 1px solid rgba(70, 130, 180, 0.4);
+		color: #4682B4;
+	}
+
+	.rust-badge {
+		background: rgba(232, 149, 106, 0.12);
+		border: 1px solid rgba(232, 149, 106, 0.4);
+		color: #E8956A;
+	}
+
+	/* Section titles */
 	.section-title {
 		font-size: 2rem;
 		font-weight: 700;
@@ -322,6 +438,7 @@
 		margin-bottom: 2rem;
 	}
 
+	/* ROM-RAM cards (CLI tab) */
 	.rom-ram {
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
@@ -379,6 +496,95 @@
 
 	.explanation-note strong {
 		color: #f5f5dc;
+	}
+
+	/* Free vs Pro grid (Rust tab) */
+	.free-pro-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		text-align: left;
+		margin-bottom: 2rem;
+	}
+
+	.tier-card {
+		background: #141210;
+		border: 1px solid #2a2420;
+		border-radius: 12px;
+		padding: 1.5rem;
+	}
+
+	.tier-card h3 {
+		color: #e5e0d8;
+		font-size: 1.25rem;
+		margin: 0 0 0.25rem 0;
+	}
+
+	.tier-tagline {
+		color: #777;
+		font-size: 0.85rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.tier-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.tier-list li {
+		padding: 0.4rem 0;
+		color: #aaa;
+		font-size: 0.9rem;
+		border-bottom: 1px solid #1e1a16;
+	}
+
+	.tier-list li:last-child {
+		border-bottom: none;
+	}
+
+	.tier-list code {
+		background: #0a0908;
+		color: #E8956A;
+		padding: 0.1rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.85rem;
+	}
+
+	.free-card {
+		border-color: #2a2420;
+	}
+
+	.pro-card {
+		border-color: #E8956A;
+		box-shadow: 0 0 20px rgba(232, 149, 106, 0.08);
+	}
+
+	/* Install inline (Rust tab) */
+	.install-inline {
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.install-box {
+		max-width: 500px;
+		margin: 0 auto 1rem;
+		text-align: center;
+	}
+
+	.install-alt {
+		color: #777;
+		font-size: 0.95rem;
+	}
+
+	.rust-link {
+		color: #E8956A;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.rust-link:hover {
+		text-decoration: underline;
 	}
 
 	/* Pricing */
@@ -536,10 +742,12 @@
 	}
 
 	.features li:before {
-		content: '☑️';
+		content: '\2713';
 		position: absolute;
 		left: 0;
-		font-size: 0.75rem;
+		color: #00d4d4;
+		font-weight: 700;
+		font-size: 0.85rem;
 	}
 
 	.features li:last-child {
@@ -623,6 +831,12 @@
 		flex-shrink: 0;
 	}
 
+	.rust-active .step-number {
+		background: rgba(232, 149, 106, 0.1);
+		border-color: #E8956A;
+		color: #E8956A;
+	}
+
 	.step-content {
 		flex: 1;
 	}
@@ -639,6 +853,14 @@
 		font-size: 0.95rem;
 	}
 
+	.step-content code {
+		background: #1a1a1a;
+		color: #00d4d4;
+		padding: 0.1rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.85rem;
+	}
+
 	.code-box {
 		background: #0a0a0a;
 		border: 1px solid #333;
@@ -648,6 +870,10 @@
 		color: #00d4d4;
 		font-size: 0.9rem;
 		font-weight: 600;
+	}
+
+	.rust-active .code-box {
+		color: #E8956A;
 	}
 
 	/* FAQ */
@@ -669,6 +895,10 @@
 		color: #4682B4;
 		margin: 0 0 0.5rem 0;
 		font-size: 1.05rem;
+	}
+
+	.rust-active .faq-item h4 {
+		color: #E8956A;
 	}
 
 	.faq-item p {
@@ -699,6 +929,10 @@
 		margin: 0 auto 2rem;
 	}
 
+	.rust-active .divider {
+		background: linear-gradient(90deg, transparent, #E8956A, transparent);
+	}
+
 	.blog-text {
 		color: #aaa;
 		font-size: 1rem;
@@ -708,6 +942,10 @@
 		color: #4682B4;
 		text-decoration: none;
 		font-weight: 600;
+	}
+
+	.rust-active .blog-anchor {
+		color: #E8956A;
 	}
 
 	.blog-anchor:hover {
@@ -756,7 +994,17 @@
 		}
 
 		.subtitle {
-			font-size: 1.25rem;
+			font-size: 1.15rem;
+		}
+
+		.tab-bar {
+			flex-direction: column;
+			gap: 0;
+		}
+
+		.tab {
+			padding: 0.85rem 1rem;
+			font-size: 0.9rem;
 		}
 
 		.rom-ram {
@@ -767,6 +1015,10 @@
 		.concept-arrow {
 			transform: rotate(90deg);
 			text-align: center;
+		}
+
+		.free-pro-grid {
+			grid-template-columns: 1fr;
 		}
 
 		.pricing-grid {

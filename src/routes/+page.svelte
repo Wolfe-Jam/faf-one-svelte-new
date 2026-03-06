@@ -128,9 +128,6 @@
 	<div id="onboarding">
 		<Onboarding />
 	</div>
-	<div id="pricing">
-		<Pricing />
-	</div>
 	<EmailCapture />
 
 	<div class="final-cta">
