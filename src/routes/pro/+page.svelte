@@ -64,24 +64,38 @@
 		<section class="tab-content">
 			<div class="badge cli-badge">faf-cli v5 Pro</div>
 
-			<h2 class="section-title">What tri-sync does</h2>
-			<div class="rom-ram">
-				<div class="concept-card">
-					<div class="concept-icon">💾</div>
-					<h3>ROM: Your .faf file</h3>
-					<p>The single source of truth. Your project DNA — stack, conventions, architecture — defined once in structured YAML.</p>
+			<!-- The headline: tri-sync -->
+			<h2 class="section-title">Persistent memory for every session</h2>
+			<div class="tri-sync-hero">
+				<div class="sync-flow">
+					<div class="sync-node">
+						<span class="sync-label">ROM</span>
+						<span class="sync-desc">.faf</span>
+					</div>
+					<div class="sync-arrow">&rarr;</div>
+					<div class="sync-node">
+						<span class="sync-label">BUS</span>
+						<span class="sync-desc">CLAUDE.md</span>
+					</div>
+					<div class="sync-arrow">&rarr;</div>
+					<div class="sync-node sync-node-pro">
+						<span class="sync-label">RAM</span>
+						<span class="sync-desc">MEMORY.md</span>
+					</div>
 				</div>
-				<div class="concept-arrow">&rarr;</div>
-				<div class="concept-card">
-					<div class="concept-icon">⚡</div>
-					<h3>RAM: Session memory</h3>
-					<p>CLAUDE.md becomes persistent memory — your AI remembers project context, decisions, and conventions across every session. No re-explaining.</p>
-				</div>
+				<p class="tri-sync-explain">
+					<strong>bi-sync</strong> (free forever) keeps <code>.faf</code> &harr; <code>CLAUDE.md</code> in sync.<br/>
+					<strong>tri-sync</strong> adds RAM &mdash; your AI remembers context, decisions, and conventions across every session. No re-explaining. Ever.
+				</p>
 			</div>
-			<p class="explanation-note">
-				bi-sync (free) keeps <code>.faf</code> &harr; <code>CLAUDE.md</code> in sync.<br/>
-				<strong>tri-sync</strong> adds AGENTS.md, .cursorrules, and GEMINI.md — so every AI tool gets the same persistent memory.
-			</p>
+
+			<!-- Interops -->
+			<div class="interops-section">
+				<h3 class="interops-title">interops &mdash; no drift</h3>
+				<p class="interops-desc">
+					One <code>.faf</code> source generates <code>AGENTS.md</code>, <code>.cursorrules</code>, and <code>GEMINI.md</code>. Every AI tool reads the same truth. No copy-paste. No drift.
+				</p>
+			</div>
 		</section>
 		{/if}
 
@@ -456,55 +470,67 @@
 		margin-bottom: 2rem;
 	}
 
-	/* ROM-RAM cards (CLI tab) */
-	.rom-ram {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		gap: 1.5rem;
+	/* tri-sync hero (CLI tab) */
+	.tri-sync-hero {
+		margin-bottom: 2.5rem;
+	}
+
+	.sync-flow {
+		display: flex;
 		align-items: center;
+		justify-content: center;
+		gap: 1rem;
 		margin-bottom: 1.5rem;
 	}
 
-	.concept-card {
+	.sync-node {
 		background: #1a1a1a;
-		border: 1px solid #333;
+		border: 2px solid #333;
 		border-radius: 12px;
-		padding: 1.5rem;
+		padding: 1.25rem 1.5rem;
 		text-align: center;
+		min-width: 110px;
 	}
 
-	.concept-icon {
-		font-size: 2.5rem;
-		margin-bottom: 0.75rem;
+	.sync-node-pro {
+		border-color: #4682B4;
+		box-shadow: 0 0 16px rgba(70, 130, 180, 0.15);
 	}
 
-	.concept-card h3 {
+	.sync-label {
+		display: block;
+		font-size: 1.4rem;
+		font-weight: 900;
+		color: #f5f5dc;
+		letter-spacing: 0.05em;
+	}
+
+	.sync-node-pro .sync-label {
 		color: #4682B4;
-		font-size: 1.15rem;
-		margin: 0 0 0.75rem 0;
 	}
 
-	.concept-card p {
-		color: #aaa;
-		margin: 0;
-		font-size: 0.95rem;
-		line-height: 1.5;
+	.sync-desc {
+		display: block;
+		font-size: 0.8rem;
+		color: #888;
+		margin-top: 0.25rem;
+		font-family: 'Courier New', monospace;
 	}
 
-	.concept-arrow {
-		font-size: 2rem;
+	.sync-arrow {
+		font-size: 1.5rem;
 		color: #00d4d4;
 		font-weight: 700;
 	}
 
-	.explanation-note {
+	.tri-sync-explain {
 		text-align: center;
 		color: #aaa;
 		font-size: 1rem;
 		line-height: 1.7;
 	}
 
-	.explanation-note code {
+	.tri-sync-explain code {
 		background: #1a1a1a;
 		color: #00d4d4;
 		padding: 0.1rem 0.4rem;
@@ -512,8 +538,38 @@
 		font-size: 0.9rem;
 	}
 
-	.explanation-note strong {
+	.tri-sync-explain strong {
 		color: #f5f5dc;
+	}
+
+	/* Interops */
+	.interops-section {
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 12px;
+		padding: 1.5rem 2rem;
+		text-align: center;
+	}
+
+	.interops-title {
+		color: #4682B4;
+		font-size: 1.15rem;
+		margin: 0 0 0.75rem 0;
+	}
+
+	.interops-desc {
+		color: #aaa;
+		margin: 0;
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	.interops-desc code {
+		background: #0a0a0a;
+		color: #00d4d4;
+		padding: 0.1rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.85rem;
 	}
 
 	/* Free vs Pro grid (Rust tab) */
@@ -1025,14 +1081,18 @@
 			font-size: 0.9rem;
 		}
 
-		.rom-ram {
-			grid-template-columns: 1fr;
-			gap: 1rem;
+		.sync-flow {
+			flex-direction: column;
+			gap: 0.75rem;
 		}
 
-		.concept-arrow {
+		.sync-arrow {
 			transform: rotate(90deg);
-			text-align: center;
+		}
+
+		.sync-node {
+			min-width: unset;
+			width: 100%;
 		}
 
 		.free-pro-grid {
