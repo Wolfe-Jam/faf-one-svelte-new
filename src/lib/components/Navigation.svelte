@@ -85,7 +85,7 @@
 			{/each}
 			
 			<div class="nav-cta">
-				<a href="/docs" class="btn btn-ghost btn-small">
+				<a href="/docs" class="btn btn-outline btn-small" title="MCP + Docs">
 					Docs
 				</a>
 				<a href="/ideas" class="btn btn-primary btn-small">
@@ -203,6 +203,21 @@
 		border-left: 1px solid var(--faf-gray-medium);
 	}
 	
+	.btn-outline {
+		border: 1.5px solid var(--faf-black);
+		color: var(--faf-black);
+		background: transparent;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.btn-outline:hover {
+		background: var(--faf-black);
+		color: var(--faf-white, #fff);
+	}
+
 	.btn-small {
 		padding: 0.5rem 1rem;
 		font-size: 0.875rem;
