@@ -426,6 +426,11 @@
 			<div class="card">
 				<h2>🦀 Rust</h2>
 				<div class="links-grid">
+					<a href="https://crates.io/crates/faf" target="_blank" rel="noopener" class="link-item featured">
+						<span class="link-name">faf</span>
+						<span class="link-desc">Meta-crate — cargo add faf</span>
+						<span class="link-stat">v0.1.0</span>
+					</a>
 					<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-rust-sdk</span>
 						<span class="link-desc">Parse, validate, compile .faf files</span>

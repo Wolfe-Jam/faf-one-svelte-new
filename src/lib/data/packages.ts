@@ -1,7 +1,7 @@
 /**
  * FAF Ecosystem Packages — Single Source of Truth
  *
- * 14 packages, 3 registries. Edit this ONE file when numbers change.
+ * 15 packages, 3 registries. Edit this ONE file when numbers change.
  * Verified: 2026-03-06
  */
 
@@ -138,9 +138,19 @@ export const pypiPackages: Package[] = [
 	}
 ];
 
-// ── crates.io packages (3) ────────────────────────────────────────
+// ── crates.io packages (4) ────────────────────────────────────────
 
 export const cratesPackages: Package[] = [
+	{
+		name: 'faf',
+		description: 'Meta-crate — one install, full ecosystem',
+		downloads: 0,
+		install: 'cargo add faf',
+		registryUrl: 'https://crates.io/crates/faf',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf',
+		registry: 'crates',
+		icon: '🏎️'
+	},
 	{
 		name: 'faf-rust-sdk',
 		description: 'Rust SDK for .faf files',
