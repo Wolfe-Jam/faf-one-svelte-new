@@ -11,10 +11,10 @@
 		},
 		{
 			slug: 'blog/cargo-add-faf',
-			title: 'cargo add faf',
-			date: 'March 6, 2026',
-			timestamp: '2026-03-06',
-			excerpt: 'FAF goes Rust. One meta-crate, full ecosystem. Parse .faf files, stream context via Radio Protocol, run MCP servers. 232 tests across 5 crates. cargo add faf is the starting line.',
+			title: 'In Rust We Trust — FAF Goes All-In',
+			date: 'March 7, 2026',
+			timestamp: '2026-03-07',
+			excerpt: '5 crates, 240 tests, Axum middleware, FAFb binary, Radio Protocol. FAF goes all-in on Rust. One install: cargo add faf.',
 			emoji: '🦀',
 			category: 'Launch'
 		},

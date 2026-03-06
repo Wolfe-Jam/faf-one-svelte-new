@@ -16,27 +16,40 @@
 </script>
 
 <svelte:head>
-	<title>cargo add faf — The Rust Ecosystem | FAF</title>
-	<meta name="description" content="FAF goes Rust. One crate, full ecosystem. Parse .faf files, stream context via Radio Protocol, run MCP servers. 232 tests across 5 crates." />
-	<meta property="og:title" content="cargo add faf — The Rust Ecosystem" />
-	<meta property="og:description" content="FAF goes Rust. One crate, full ecosystem. 232 tests, 5 crates, IANA-registered." />
+	<title>In Rust We Trust — FAF Goes All-In | FAF</title>
+	<meta name="description" content="FAF goes all-in on Rust. 5 crates, 240 tests, Axum middleware, FAFb binary, Radio Protocol. One install: cargo add faf." />
+	<meta property="og:title" content="In Rust We Trust — FAF Goes All-In" />
+	<meta property="og:description" content="5 crates, 240 tests, Axum middleware, FAFb binary. One install: cargo add faf." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
+<div class="hero-banner">
+	<div class="hero-content">
+		<span class="hero-crab">🦀</span>
+		<h1 class="hero-title">In Rust We Trust</h1>
+		<p class="hero-subtitle">FAF Goes All-In</p>
+		<div class="hero-stats">
+			<span class="stat">5 crates</span>
+			<span class="stat-dot"></span>
+			<span class="stat">240 tests</span>
+			<span class="stat-dot"></span>
+			<span class="stat">0 failures</span>
+		</div>
+	</div>
+</div>
+
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / cargo add faf
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / In Rust We Trust
 		</div>
-		<h1>cargo add faf</h1>
-		<p class="subtitle">One crate. Full ecosystem.</p>
 		<div class="meta">
-			<time datetime="2026-03-06">March 6, 2026</time>
+			<time datetime="2026-03-07">March 7, 2026</time>
 			<span class="separator">&bull;</span>
 			<span class="category launch">Launch</span>
 			<span class="separator">&bull;</span>
-			<span class="reading-time">3 min read</span>
+			<span class="reading-time">4 min read</span>
 		</div>
 	</header>
 
@@ -44,7 +57,7 @@
 		<section class="intro">
 			<p class="lead">
 				FAF has a Rust ecosystem now. Five crates on crates.io, one meta-crate to rule them all.
-				Parse .faf files, stream context via Radio Protocol, run MCP servers — all in Rust.
+				Parse .faf files, stream context via Radio Protocol, inject into Axum servers, run MCP servers — all in Rust.
 			</p>
 		</section>
 
@@ -60,7 +73,14 @@
 
 			<p>That gives you the full SDK — parse, validate, score, and compile <code>.faf</code> files.</p>
 
-			<p>Need the Radio Protocol too?</p>
+			<p>Need more?</p>
+
+			<div class="install-block">
+				<code>cargo add faf --features axum</code>
+				<button onclick={() => copyText('cargo add faf --features axum', 'axum')} class="copy-btn">
+					{copiedId === 'axum' ? 'Copied' : 'Copy'}
+				</button>
+			</div>
 
 			<div class="install-block">
 				<code>cargo add faf --features radio</code>
@@ -68,6 +88,8 @@
 					{copiedId === 'radio' ? 'Copied' : 'Copy'}
 				</button>
 			</div>
+
+			<p>Feature flags. Pay for what you use. Zero deps when off.</p>
 		</section>
 
 		<section>
@@ -81,8 +103,8 @@
 				</a>
 				<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="crate-card">
 					<span class="crate-name">faf-rust-sdk</span>
-					<span class="crate-desc">Parse, validate, score, compile .faf files</span>
-					<span class="crate-stat">137 tests</span>
+					<span class="crate-desc">Parse, validate, score, compile + Axum middleware</span>
+					<span class="crate-stat">145 tests</span>
 				</a>
 				<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="crate-card">
 					<span class="crate-name">faf-radio-rust</span>
@@ -96,7 +118,22 @@
 				</a>
 			</div>
 
-			<p class="total-tests">232 tests across the ecosystem. All passing.</p>
+			<p class="total-tests">240 tests across the ecosystem. All passing. &#9745;</p>
+		</section>
+
+		<section>
+			<h2>&#9889; Just Shipped: Axum Middleware</h2>
+
+			<p>One line to inject FAF project context into any Axum server:</p>
+
+			<pre><code>{`.layer(FafLayer::new())`}</code></pre>
+
+			<p>
+				Feature-gated behind <code>axum</code>. Your <code>.faf</code> is parsed once at startup,
+				shared via Arc. Per-request cost: one atomic increment. ~240 lines of strategically-placed code.
+			</p>
+
+			<p><a href="/blog/axum-edition">Read the full Axum Edition post &rarr;</a></p>
 		</section>
 
 		<section>
@@ -104,29 +141,37 @@
 
 			<div class="use-case-grid">
 				<div class="use-case">
-					<h4>Parse project DNA</h4>
+					<h4>🔍 Parse project DNA</h4>
 					<p>Read any <code>.faf</code> file. Score it. Validate it. The same IANA-registered format used by 33,000+ projects.</p>
 				</div>
 				<div class="use-case">
-					<h4>Stream context to every AI</h4>
+					<h4>📡 Stream context to every AI</h4>
 					<p>Radio Protocol — broadcast your project context once, Claude + Grok + Gemini all receive it. Real-time WebSocket.</p>
 				</div>
 				<div class="use-case">
-					<h4>Run an MCP server</h4>
+					<h4>🔌 Run an MCP server</h4>
 					<p>Serve .faf context over Model Context Protocol. Same spec, Rust performance.</p>
 				</div>
 				<div class="use-case">
-					<h4>Compile to FAFb binary</h4>
+					<h4>📦 Compile to FAFb binary</h4>
 					<p>32-byte header, CRC32 integrity, 11 section types. The binary format for edge deployment.</p>
+				</div>
+				<div class="use-case">
+					<h4>🦀 Axum middleware</h4>
+					<p>Inject <code>.faf</code> context into every HTTP request. Tower Layer, Axum extractor, builder pattern.</p>
+				</div>
+				<div class="use-case">
+					<h4>🍺 Homebrew CLI</h4>
+					<p>Pre-built binary, 569 tests. FAF Pro licensing. Compiles .faf to .fafb. <code>brew install</code> and go.</p>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<h2>Also: A Binary CLI</h2>
+			<h2>The Binary CLI</h2>
 
 			<p>
-				If you want the CLI rather than the library, there's a pre-built binary via Homebrew:
+				If you want the CLI rather than the library:
 			</p>
 
 			<div class="install-block">
@@ -139,23 +184,6 @@
 			<p>
 				569 tests. FAF Pro licensing. Compiles .faf to .fafb binary.
 				Same key as the TypeScript CLI — one subscription unlocks everything.
-			</p>
-		</section>
-
-		<section>
-			<h2>Why It Matters</h2>
-			<p>
-				Every AI tool you use forgets you between sessions. Claude, Grok, Gemini — they all start from zero.
-				You re-explain your stack, your architecture, your conventions. Every. Single. Time.
-			</p>
-			<p>
-				FAF fixes that with a single file: <code>project.faf</code>. IANA-registered, 33,000+ downloads across the ecosystem,
-				Anthropic MCP #2759. Your project DNA, readable by any AI.
-			</p>
-			<p>
-				But the format is only half the story. The infrastructure — parsing at the edge, streaming context
-				via Radio Protocol, serving over MCP — that needs to be fast. Really fast.
-				That's why Rust.
 			</p>
 		</section>
 
@@ -175,19 +203,45 @@
 				That's <code>faf-radio-rust</code> streaming over WebSocket. That's the edge.
 			</p>
 			<p>
-				<code>cargo add faf</code> is the starting line.
+				<strong><code>cargo add faf</code></strong> is the starting line.
 			</p>
 		</section>
 
 		<section>
-			<h2>What Do You Want Next?</h2>
+			<h2>The Compiler Pipeline</h2>
+
+			<pre class="pipeline"><code>{`                     .faf (YAML)
+                          │
+          ┌───────────────┼───────────────┐
+          │               │               │
+          ▼               ▼               ▼
+     ┌─────────┐    ┌─────────┐    ┌─────────┐
+     │  Rust   │    │   Zig   │    │   TS    │
+     │  SDK    │    │  WASM   │    │  CLI    │
+     └────┬────┘    └────┬────┘    └────┬────┘
+          │              │              │
+   ┌──────┴──────┐       │              │
+   │             │       │              │
+   ▼             ▼       ▼              ▼
+┌───────┐  ┌────────┐ ┌───────┐  ┌─────────┐
+│ .fafb │  │  WASM  │ │ WASM  │  │ Node /  │
+│Binary │  │ 211KB  │ │ 2.7KB │  │ Browser │
+└───────┘  └────────┘ └───────┘  └─────────┘`}</code></pre>
+
+			<p>Three compilers. Four outputs. One format. IANA-registered.</p>
+		</section>
+
+		<section>
+			<h2>What's Next</h2>
 			<p>
-				The Rust ecosystem is fresh. We're building what Rust developers actually need.
+				Axum is shipped. The Rust ecosystem is growing. Here's what's on the radar:
 			</p>
-			<p>
-				Tower middleware? Axum extractors? <code>no_std</code> embedded support?
-				A <code>faf!</code> proc macro? Tell us.
-			</p>
+			<ul>
+				<li><code>no_std</code> embedded support — FAF on microcontrollers</li>
+				<li>Actix-web / Tonic (gRPC) middleware</li>
+				<li><code>faf!</code> proc macro — compile-time .faf validation</li>
+				<li>More feature flags, same one-liner install</li>
+			</ul>
 			<div class="cta-box">
 				<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/discussions" target="_blank" rel="noopener" class="cta-link">
 					Open a discussion on GitHub
@@ -203,22 +257,91 @@
 			<h2>Links</h2>
 			<ul class="link-list">
 				<li><a href="https://crates.io/crates/faf">crates.io/crates/faf</a> — Meta-crate</li>
-				<li><a href="https://crates.io/crates/faf-rust-sdk">crates.io/crates/faf-rust-sdk</a> — SDK</li>
+				<li><a href="https://crates.io/crates/faf-rust-sdk">crates.io/crates/faf-rust-sdk</a> — SDK + Axum</li>
 				<li><a href="https://crates.io/crates/faf-radio-rust">crates.io/crates/faf-radio-rust</a> — Radio Protocol</li>
 				<li><a href="https://crates.io/crates/rust-faf-mcp">crates.io/crates/rust-faf-mcp</a> — MCP server</li>
-				<li><a href="https://faf.one/pro">faf.one/pro</a> — FAF Pro (includes Rust CLI)</li>
+				<li><a href="https://faf.one/rust">faf.one/rust</a> — Rust CLI (Pro)</li>
 				<li><a href="https://faf.one/downloads">faf.one/downloads</a> — All packages, all registries</li>
+				<li><a href="/blog/axum-edition">The Axum Edition</a> — Middleware deep-dive</li>
 			</ul>
 		</section>
 
 		<section class="footer-note">
-			<p class="closing-quote">RUST they said. FAF we replied. They are Grok. We delivered.</p>
+			<p class="closing-quote">🦀 In Rust We Trust ⚡</p>
 			<p class="closing-tagline">FAF defines. AI interprets.</p>
 		</section>
 	</article>
 </div>
 
 <style>
+	/* Hero Banner */
+	.hero-banner {
+		background: linear-gradient(135deg, #1a0f0a 0%, #2a1510 30%, #3d1e14 60%, #4a2518 100%);
+		padding: 4rem 1.5rem;
+		text-align: center;
+		margin-bottom: 0;
+		border-bottom: 4px solid #d7875f;
+	}
+
+	.hero-content {
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	.hero-crab {
+		font-size: 4rem;
+		display: block;
+		margin-bottom: 1rem;
+		animation: float 3s ease-in-out infinite;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-10px); }
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 900;
+		color: #d7875f;
+		margin: 0;
+		letter-spacing: 0.03em;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		text-shadow: 0 2px 20px rgba(215, 135, 95, 0.3);
+	}
+
+	.hero-subtitle {
+		font-size: 1.4rem;
+		color: #b87333;
+		margin: 0.5rem 0 1.5rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	.hero-stats {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.stat {
+		color: #e8c5a8;
+		font-family: monospace;
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	.stat-dot {
+		width: 6px;
+		height: 6px;
+		background: #d7875f;
+		border-radius: 50%;
+	}
+
+	/* Blog Post */
 	.blog-post {
 		max-width: 720px;
 		margin: 0 auto;
@@ -232,30 +355,16 @@
 	.breadcrumb {
 		font-size: 0.85rem;
 		color: #666;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 	}
 
 	.breadcrumb a {
-		color: #FF6B35;
+		color: #d7875f;
 		text-decoration: none;
 	}
 
 	.breadcrumb a:hover {
 		text-decoration: underline;
-	}
-
-	h1 {
-		font-size: 2.5rem;
-		font-weight: 800;
-		margin-bottom: 0.5rem;
-		color: #111;
-		font-family: monospace;
-	}
-
-	.subtitle {
-		font-size: 1.3rem;
-		color: #555;
-		margin-bottom: 1rem;
 	}
 
 	.meta {
@@ -278,8 +387,8 @@
 	}
 
 	.category.launch {
-		background: rgba(255, 107, 53, 0.1);
-		color: #FF6B35;
+		background: rgba(215, 135, 95, 0.15);
+		color: #d7875f;
 	}
 
 	.reading-time {
@@ -308,7 +417,7 @@
 	}
 
 	.post-content a {
-		color: #FF6B35;
+		color: #d7875f;
 		text-decoration: none;
 	}
 
@@ -330,10 +439,33 @@
 
 	.lead {
 		font-size: 1.15rem;
-		background: #fafafa;
+		background: #faf6f2;
 		padding: 1.25rem;
-		border-left: 4px solid #FF6B35;
+		border-left: 4px solid #d7875f;
 		border-radius: 0 8px 8px 0;
+	}
+
+	pre {
+		background: #1a1a1a;
+		color: #00D4D4;
+		padding: 1.25rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		font-size: 0.85rem;
+		margin: 1.5rem 0;
+		font-family: monospace;
+	}
+
+	pre code {
+		background: none;
+		padding: 0;
+		font-size: inherit;
+	}
+
+	pre.pipeline {
+		color: #d7875f;
+		font-size: 0.75rem;
+		line-height: 1.4;
 	}
 
 	/* Install blocks */
@@ -356,7 +488,7 @@
 	}
 
 	.copy-btn {
-		background: #FF6B35;
+		background: #d7875f;
 		color: white;
 		border: none;
 		padding: 0.4rem 0.8rem;
@@ -368,7 +500,7 @@
 	}
 
 	.copy-btn:hover {
-		background: #ff8555;
+		background: #e09970;
 	}
 
 	/* Crate grid */
@@ -398,12 +530,12 @@
 	}
 
 	.crate-card.meta {
-		border-left-color: #FF6B35;
-		background: #fff8f4;
+		border-left-color: #d7875f;
+		background: #faf6f2;
 	}
 
 	.crate-card.meta:hover {
-		background: #fff0e8;
+		background: #f5ece4;
 	}
 
 	.crate-name {
@@ -427,7 +559,7 @@
 
 	.crate-badge {
 		font-size: 0.75rem;
-		background: #FF6B35;
+		background: #d7875f;
 		color: white;
 		padding: 0.2rem 0.5rem;
 		border-radius: 3px;
@@ -455,6 +587,11 @@
 		background: #fafafa;
 		border: 1px solid #eee;
 		border-radius: 8px;
+		transition: border-color 0.2s;
+	}
+
+	.use-case:hover {
+		border-color: #d7875f;
 	}
 
 	.use-case h4 {
@@ -491,14 +628,14 @@
 		justify-content: center;
 		gap: 1rem;
 		padding: 1.5rem;
-		background: #fafafa;
-		border: 1px solid #eee;
+		background: #faf6f2;
+		border: 1px solid #e8d5c4;
 		border-radius: 8px;
 		margin-top: 1rem;
 	}
 
 	.cta-link {
-		background: #FF6B35;
+		background: #d7875f;
 		color: white !important;
 		padding: 0.6rem 1.2rem;
 		border-radius: 6px;
@@ -509,7 +646,7 @@
 	}
 
 	.cta-link:hover {
-		background: #ff8555;
+		background: #e09970;
 	}
 
 	.cta-or {
@@ -525,11 +662,11 @@
 	}
 
 	.closing-quote {
-		font-size: 1.2rem;
-		font-weight: 700;
-		color: #b87333;
+		font-size: 1.4rem;
+		font-weight: 800;
+		color: #d7875f;
 		margin-bottom: 0.5rem;
-		letter-spacing: 0.02em;
+		letter-spacing: 0.03em;
 	}
 
 	.closing-tagline {
@@ -539,8 +676,16 @@
 	}
 
 	@media (max-width: 640px) {
-		h1 {
+		.hero-title {
 			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.hero-crab {
+			font-size: 3rem;
 		}
 
 		.crate-card {
@@ -555,6 +700,15 @@
 
 		.use-case-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.hero-stats {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+
+		.stat-dot {
+			display: none;
 		}
 	}
 </style>
