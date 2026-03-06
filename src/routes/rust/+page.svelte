@@ -234,11 +234,11 @@
 
 	.back-nav {
 		padding: 1rem 2rem;
-		border-bottom: 1px solid rgba(215, 135, 95, 0.2);
+		border-bottom: 1px solid rgba(232, 149, 106, 0.2);
 	}
 
 	.back-link {
-		color: #d7875f;
+		color: #E8956A;
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 0.95rem;
@@ -264,9 +264,9 @@
 
 	.badge {
 		display: inline-block;
-		background: rgba(215, 135, 95, 0.12);
-		border: 1px solid rgba(215, 135, 95, 0.4);
-		color: #d7875f;
+		background: rgba(232, 149, 106, 0.12);
+		border: 1px solid rgba(232, 149, 106, 0.4);
+		color: #E8956A;
 		padding: 0.35rem 1rem;
 		border-radius: 20px;
 		font-size: 0.85rem;
@@ -285,7 +285,7 @@
 
 	.subtitle {
 		font-size: 1.5rem;
-		color: #d7875f;
+		color: #E8956A;
 		font-weight: 600;
 		margin: 0 0 0.5rem 0;
 	}
@@ -354,7 +354,7 @@
 
 	.tier-list code {
 		background: #0a0908;
-		color: #d7875f;
+		color: #E8956A;
 		padding: 0.1rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.85rem;
@@ -365,8 +365,8 @@
 	}
 
 	.pro-card {
-		border-color: #d7875f;
-		box-shadow: 0 0 20px rgba(215, 135, 95, 0.08);
+		border-color: #E8956A;
+		box-shadow: 0 0 20px rgba(232, 149, 106, 0.08);
 	}
 
 	/* Pricing */
@@ -405,22 +405,22 @@
 	}
 
 	.pricing-card.recommended {
-		border-color: #d7875f;
-		box-shadow: 0 0 20px rgba(215, 135, 95, 0.12);
+		border-color: #E8956A;
+		box-shadow: 0 0 20px rgba(232, 149, 106, 0.12);
 	}
 
 	.pricing-card.recommended:hover {
-		border-color: #e8a070;
-		box-shadow: 0 0 30px rgba(215, 135, 95, 0.2);
+		border-color: #F5A87A;
+		box-shadow: 0 0 30px rgba(232, 149, 106, 0.2);
 	}
 
 	.pricing-card.global {
-		border-color: #b87333;
+		border-color: #4682B4;
 	}
 
 	.pricing-card.global:hover {
-		border-color: #d4944a;
-		box-shadow: 0 0 30px rgba(184, 115, 51, 0.15);
+		border-color: #5A9AC8;
+		box-shadow: 0 0 30px rgba(70, 130, 180, 0.15);
 	}
 
 	.recommended-badge {
@@ -428,7 +428,7 @@
 		top: -12px;
 		left: 50%;
 		transform: translateX(-50%);
-		background: #d7875f;
+		background: #E8956A;
 		color: #0a0a0a;
 		padding: 0.25rem 1rem;
 		border-radius: 12px;
@@ -443,7 +443,7 @@
 		top: -12px;
 		left: 50%;
 		transform: translateX(-50%);
-		background: #b87333;
+		background: #4682B4;
 		color: #fff;
 		padding: 0.25rem 1rem;
 		border-radius: 12px;
@@ -489,7 +489,7 @@
 	}
 
 	.price-tagline {
-		color: #d7875f;
+		color: #E8956A;
 		font-size: 1.1rem;
 		font-weight: 600;
 		font-style: italic;
@@ -527,7 +527,7 @@
 		content: '\2713';
 		position: absolute;
 		left: 0;
-		color: #d7875f;
+		color: #E8956A;
 		font-weight: 700;
 		font-size: 0.85rem;
 	}
@@ -556,25 +556,25 @@
 	}
 
 	.cta-btn.cta-primary {
-		background: rgba(215, 135, 95, 0.12);
-		border-color: #d7875f;
-		color: #d7875f;
+		background: rgba(232, 149, 106, 0.12);
+		border-color: #E8956A;
+		color: #E8956A;
 	}
 
 	.cta-btn.cta-primary:hover {
-		background: rgba(215, 135, 95, 0.2);
-		border-color: #e8a070;
+		background: rgba(232, 149, 106, 0.2);
+		border-color: #F5A87A;
 	}
 
 	.cta-btn.cta-global {
-		background: rgba(184, 115, 51, 0.12);
-		border-color: #b87333;
-		color: #b87333;
+		background: rgba(70, 130, 180, 0.12);
+		border-color: #4682B4;
+		color: #4682B4;
 	}
 
 	.cta-btn.cta-global:hover {
-		background: rgba(184, 115, 51, 0.2);
-		border-color: #d4944a;
+		background: rgba(70, 130, 180, 0.2);
+		border-color: #5A9AC8;
 	}
 
 	/* How it works */
@@ -601,14 +601,14 @@
 	.step-number {
 		width: 40px;
 		height: 40px;
-		background: rgba(215, 135, 95, 0.1);
-		border: 2px solid #d7875f;
+		background: rgba(232, 149, 106, 0.1);
+		border: 2px solid #E8956A;
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-weight: 700;
-		color: #d7875f;
+		color: #E8956A;
 		font-size: 1.1rem;
 		flex-shrink: 0;
 	}
@@ -635,7 +635,7 @@
 		border-radius: 6px;
 		padding: 0.75rem 1rem;
 		font-family: 'Courier New', monospace;
-		color: #d7875f;
+		color: #E8956A;
 		font-size: 0.9rem;
 		font-weight: 600;
 	}
@@ -656,7 +656,7 @@
 	}
 
 	.faq-item h4 {
-		color: #d7875f;
+		color: #E8956A;
 		margin: 0 0 0.5rem 0;
 		font-size: 1.05rem;
 	}
@@ -670,7 +670,7 @@
 
 	.faq-item code {
 		background: #141210;
-		color: #d7875f;
+		color: #E8956A;
 		padding: 0.1rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.85rem;
@@ -685,7 +685,7 @@
 	.divider {
 		width: 100px;
 		height: 2px;
-		background: linear-gradient(90deg, transparent, #d7875f, transparent);
+		background: linear-gradient(90deg, transparent, #E8956A, transparent);
 		margin: 0 auto 2rem;
 	}
 
@@ -701,7 +701,7 @@
 	}
 
 	.rust-link {
-		color: #d7875f;
+		color: #E8956A;
 		text-decoration: none;
 		font-weight: 600;
 	}
