@@ -1,8 +1,8 @@
 /**
  * FAF Ecosystem Packages — Single Source of Truth
  *
- * 12 packages, 3 registries. Edit this ONE file when numbers change.
- * Verified: 2026-02-27
+ * 14 packages, 3 registries. Edit this ONE file when numbers change.
+ * Verified: 2026-03-06
  */
 
 export type Registry = 'npm' | 'pypi' | 'crates';
@@ -138,18 +138,38 @@ export const pypiPackages: Package[] = [
 	}
 ];
 
-// ── crates.io packages (1) ────────────────────────────────────────
+// ── crates.io packages (3) ────────────────────────────────────────
 
 export const cratesPackages: Package[] = [
 	{
 		name: 'faf-rust-sdk',
-		description: 'Rust SDK for .faf (crates.io)',
-		downloads: 61,
+		description: 'Rust SDK for .faf files',
+		downloads: 108,
 		install: 'cargo add faf-rust-sdk',
 		registryUrl: 'https://crates.io/crates/faf-rust-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
 		registry: 'crates',
 		icon: '🦀'
+	},
+	{
+		name: 'faf-radio-rust',
+		description: 'Radio Protocol client for MCPaaS',
+		downloads: 22,
+		install: 'cargo add faf-radio-rust',
+		registryUrl: 'https://crates.io/crates/faf-radio-rust',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf-radio-rust',
+		registry: 'crates',
+		icon: '📻'
+	},
+	{
+		name: 'rust-faf-mcp',
+		description: 'Rust MCP server for .faf',
+		downloads: 10,
+		install: 'cargo add rust-faf-mcp',
+		registryUrl: 'https://crates.io/crates/rust-faf-mcp',
+		githubUrl: 'https://github.com/Wolfe-Jam/rust-faf-mcp',
+		registry: 'crates',
+		icon: '🔌'
 	}
 ];
 

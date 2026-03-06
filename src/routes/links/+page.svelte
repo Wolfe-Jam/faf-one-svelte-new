@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-02-22</p>
+			<p class="last-updated">Last Updated: 2026-03-06</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
@@ -375,10 +375,10 @@
 						<span class="link-desc">Bun/TypeScript radio client</span>
 						<span class="link-stat">19/19 tests</span>
 					</a>
-					<a href="https://github.com/Wolfe-Jam/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
+					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-rust</span>
-						<span class="link-desc">Rust radio client</span>
-						<span class="link-stat">16/16 tests</span>
+						<span class="link-desc">Rust radio client (crates.io)</span>
+						<span class="link-stat">46/46 tests</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-radio-zig" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-zig</span>
@@ -428,11 +428,23 @@
 				<div class="links-grid">
 					<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-rust-sdk</span>
-						<span class="link-desc">Rust SDK (crates.io)</span>
+						<span class="link-desc">Parse, validate, compile .faf files</span>
+						<span class="link-stat">v1.2.0 · 108 downloads</span>
 					</a>
-					<a href="https://github.com/Wolfe-Jam/xai-faf-rust" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">xai-faf-rust</span>
-						<span class="link-desc">xAI Rust implementation</span>
+					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-radio-rust</span>
+						<span class="link-desc">Radio Protocol client for MCPaaS</span>
+						<span class="link-stat">v0.1.0</span>
+					</a>
+					<a href="https://crates.io/crates/rust-faf-mcp" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rust-faf-mcp</span>
+						<span class="link-desc">Rust MCP server for .faf</span>
+						<span class="link-stat">v0.1.0 · 10 downloads</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/rust-faf-cli" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rust-faf-cli</span>
+						<span class="link-desc">Pre-built binaries (Homebrew)</span>
+						<span class="link-stat">v1.2.0</span>
 					</a>
 				</div>
 			</div>
