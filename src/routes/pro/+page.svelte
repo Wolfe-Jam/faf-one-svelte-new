@@ -108,24 +108,26 @@
 
 				<!-- Global Bundle -->
 				<div class="pricing-card global">
-					<div class="global-badge">Early-Adopter Special</div>
+					<div class="global-badge">Early Preview</div>
 					<div class="card-header">
-						<h3>tri-sync Global</h3>
+						<h3>FAF Pro &mdash; All Areas</h3>
 						<div class="price">
 							<span class="price-strike">$240</span>
 							<span class="price-current">$29</span>
 							<span class="price-period">/yr</span>
 						</div>
 						<div class="discount">88% off</div>
+						<p class="price-tagline">Full access. Every tool.</p>
 					</div>
 					<ul class="features">
-						<li>CLI tri-sync (everything above)</li>
-						<li>MCP server tri-sync (when available)</li>
-						<li>Thank-you bundle for early supporters</li>
-						<li>The more you commit, the more you save</li>
+						<li>CLI tri-sync &mdash; everything above</li>
+						<li>Rust compiler Pro (included)</li>
+						<li>MCP server Pro (when available)</li>
+						<li>Multi-version license &mdash; one key, all CLIs</li>
+						<li>Early-adopters get rewarded &mdash; rate locked forever</li>
 					</ul>
 					<button class="cta-btn cta-global" onclick={() => selectPlan('global')}>
-						Get Global — $29/yr
+						Get Full Access — $29/yr
 					</button>
 				</div>
 			</div>
