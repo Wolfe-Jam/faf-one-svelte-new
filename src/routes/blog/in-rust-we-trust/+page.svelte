@@ -192,7 +192,7 @@
 		<section>
 			<h2>Why Rust</h2>
 			<p>
-				FAF started in TypeScript. 51 versions, 14,000+ downloads. Free forever.
+				FAF CLI started in TypeScript. 97 versions, 16,000+ downloads. Free forever.
 			</p>
 			<p>
 				But the industry is moving. xAI built Grok's inference stack on Rust.
