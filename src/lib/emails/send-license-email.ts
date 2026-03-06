@@ -128,7 +128,13 @@ function generateLicenseEmailHTML(license: License): string {
         <p>Thanks for subscribing to <strong>${tierName}</strong>!${isPro ? ' You just unlocked:' : ' You now have access to:'}</p>
 
         <ul>
-            ${isPro ? `
+            ${isFriend ? `
+            <li>⚡ <strong>CLI tri-sync</strong> — persistent context across Claude, Cursor, and Gemini</li>
+            <li>☑️ <strong>Rust compiler Pro</strong> — Glass Hood, SVG scorecards, FAFb compilation, multi-target sync</li>
+            <li>☑️ <strong>MCP server Pro</strong> — full tool access</li>
+            <li>☑️ <strong>One key, all CLIs</strong> — same license works everywhere</li>
+            <li>☑️ Early-adopter pricing locked in forever</li>
+            ` : isPro ? `
             <li>⚡ <strong>Session memory (RAM)</strong> — your AI remembers project context, decisions, and conventions across every session</li>
             <li>☑️ Persistent context synced to CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md</li>
             <li>☑️ No more re-explaining. Your project DNA travels with you.</li>
@@ -169,6 +175,12 @@ function generateLicenseEmailHTML(license: License): string {
         <div class="cmd-box">faf tri-sync</div>
 
         <p>That's it! Your project context is now persistent — ROM (.faf) + RAM (session memory) across every AI session. No more re-explaining. 🏆</p>
+        ${isFriend ? `
+        <p style="color: #666; font-size: 0.95em; margin-top: 1.5em; padding: 12px 16px; background: #f5f5f5; border-radius: 6px;">
+            <strong>Rust compiler too:</strong> This key also unlocks rust-faf-cli Pro. Same key, same command:<br/>
+            <code style="background: #0a0a0a; color: #E8956A; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">faf pro activate ${license.key}</code>
+        </p>
+        ` : ''}
         ` : `
         <p><strong>Step 1:</strong> Install .FAF TURBO</p>
         <div class="cmd-box">npm install -g faf-turbo</div>
