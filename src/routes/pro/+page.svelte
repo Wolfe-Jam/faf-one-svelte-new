@@ -29,7 +29,7 @@
 	<meta name="description" content="FAF Pro: tri-sync for faf-cli, Glass Hood diagnostics for Rust compiler. Persistent project context across every AI. From $3/mo." />
 </svelte:head>
 
-<div class="pro-page" class:rust-active={activeTab === 'rust'}>
+<div class="pro-page">
 	<div class="back-nav">
 		<a href="/" class="back-link">&larr; faf.one</a>
 	</div>
@@ -43,28 +43,28 @@
 
 		<!-- Tab Bar -->
 		<div class="tab-bar">
-			<button
+			<a
+				href="#cli"
 				class="tab tab-cli"
 				class:active={activeTab === 'cli'}
 				onclick={() => activeTab = 'cli'}
 			>
 				FAF-CLI &mdash; The Original
-			</button>
-			<button
+			</a>
+			<a
+				href="#rust"
 				class="tab tab-rust"
 				class:active={activeTab === 'rust'}
 				onclick={() => activeTab = 'rust'}
 			>
 				Rust CLI &mdash; The Binary Beast
-			</button>
+			</a>
 		</div>
 
-		<!-- ============ CLI TAB ============ -->
-		{#if activeTab === 'cli'}
-		<section class="tab-content">
+		<!-- ============ CLI SECTION ============ -->
+		<section id="cli" class="product-section">
 			<div class="badge cli-badge">faf-cli v5 Pro</div>
 
-			<!-- The headline: tri-sync -->
 			<h2 class="section-title">Persistent memory for every session</h2>
 			<div class="tri-sync-hero">
 				<div class="sync-flow">
@@ -89,7 +89,6 @@
 				</p>
 			</div>
 
-			<!-- Interops -->
 			<div class="interops-section">
 				<h3 class="interops-title">interops &mdash; no drift</h3>
 				<p class="interops-desc">
@@ -97,11 +96,9 @@
 				</p>
 			</div>
 		</section>
-		{/if}
 
-		<!-- ============ RUST TAB ============ -->
-		{#if activeTab === 'rust'}
-		<section class="tab-content">
+		<!-- ============ RUST SECTION ============ -->
+		<section id="rust" class="product-section rust-section">
 			<div class="badge rust-badge">rust-faf-cli Pro</div>
 
 			<h2 class="section-title">What Pro unlocks</h2>
@@ -131,15 +128,13 @@
 				</div>
 			</div>
 
-			<!-- Install -->
 			<div class="install-inline">
-				<div class="code-box install-box">brew install Wolfe-Jam/faf/rust-faf-cli</div>
+				<div class="code-box rust-code-box">brew install Wolfe-Jam/faf/rust-faf-cli</div>
 				<p class="install-alt">
 					Or grab a binary from <a href="https://github.com/Wolfe-Jam/rust-faf-cli/releases" class="rust-link">GitHub Releases</a>
 				</p>
 			</div>
 		</section>
-		{/if}
 
 		<!-- ============ SHARED: Pricing ============ -->
 		<section class="pricing">
@@ -250,13 +245,8 @@
 					<div class="step-number">3</div>
 					<div class="step-content">
 						<h4>Use</h4>
-						{#if activeTab === 'cli'}
 						<div class="code-box">faf tri-sync</div>
-						<p>ROM (project DNA) + RAM (session memory via CLAUDE.md) — persistent context that survives across every session.</p>
-						{:else}
-						<div class="code-box">faf status --verbose</div>
-						<p>Glass Hood shows exactly how your score is calculated — weights, categories, projections. Nothing hidden.</p>
-						{/if}
+						<p>Persistent context that survives across every session. Works in both CLIs.</p>
 					</div>
 				</div>
 			</div>
@@ -325,10 +315,6 @@
 		transition: background 0.4s ease;
 	}
 
-	.pro-page.rust-active {
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0a 50%, #0a0a0a 100%);
-	}
-
 	.back-nav {
 		padding: 1rem 2rem;
 		border-bottom: 1px solid #333;
@@ -340,10 +326,6 @@
 		font-weight: 500;
 		font-size: 0.95rem;
 		transition: opacity 0.2s;
-	}
-
-	.rust-active .back-link {
-		color: #E8956A;
 	}
 
 	.back-link:hover {
@@ -432,10 +414,20 @@
 		text-shadow: 0 0 12px rgba(232, 149, 106, 0.4);
 	}
 
-	/* Tab content */
-	.tab-content {
+	.tab {
+		text-decoration: none;
+	}
+
+	/* Product sections */
+	.product-section {
 		text-align: center;
 		margin-bottom: 3rem;
+		scroll-margin-top: 80px;
+	}
+
+	.rust-section {
+		padding-top: 2rem;
+		border-top: 1px solid #2a2420;
 	}
 
 	/* Badge */
@@ -649,6 +641,20 @@
 	.install-alt {
 		color: #777;
 		font-size: 0.95rem;
+	}
+
+	.rust-code-box {
+		background: #0a0a0a;
+		border: 1px solid #2a2420;
+		border-radius: 6px;
+		padding: 0.75rem 1rem;
+		font-family: 'Courier New', monospace;
+		color: #E8956A;
+		font-size: 0.9rem;
+		font-weight: 600;
+		max-width: 500px;
+		margin: 0 auto 1rem;
+		text-align: center;
 	}
 
 	.rust-link {
@@ -905,12 +911,6 @@
 		flex-shrink: 0;
 	}
 
-	.rust-active .step-number {
-		background: rgba(232, 149, 106, 0.1);
-		border-color: #E8956A;
-		color: #E8956A;
-	}
-
 	.step-content {
 		flex: 1;
 	}
@@ -946,10 +946,6 @@
 		font-weight: 600;
 	}
 
-	.rust-active .code-box {
-		color: #E8956A;
-	}
-
 	/* FAQ */
 	.faq {
 		margin-bottom: 3rem;
@@ -969,10 +965,6 @@
 		color: #4682B4;
 		margin: 0 0 0.5rem 0;
 		font-size: 1.05rem;
-	}
-
-	.rust-active .faq-item h4 {
-		color: #E8956A;
 	}
 
 	.faq-item p {
@@ -1003,10 +995,6 @@
 		margin: 0 auto 2rem;
 	}
 
-	.rust-active .divider {
-		background: linear-gradient(90deg, transparent, #E8956A, transparent);
-	}
-
 	.blog-text {
 		color: #aaa;
 		font-size: 1rem;
@@ -1016,10 +1004,6 @@
 		color: #4682B4;
 		text-decoration: none;
 		font-weight: 600;
-	}
-
-	.rust-active .blog-anchor {
-		color: #E8956A;
 	}
 
 	.blog-anchor:hover {
