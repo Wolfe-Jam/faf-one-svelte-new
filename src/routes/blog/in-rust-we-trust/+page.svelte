@@ -26,9 +26,9 @@
 
 <div class="hero-banner">
 	<div class="hero-content">
-		<span class="hero-crab">🦀</span>
+		<div class="hero-icons"><span class="hero-crab">🦀</span><img src="/images/dotfaf.png" alt="DotFaf" class="hero-dotfaf" /></div>
 		<h1 class="hero-title">In Rust We Trust</h1>
-		<p class="hero-subtitle">FAF Goes All-In</p>
+		<p class="hero-subtitle">.FAF Goes All-In</p>
 		<div class="hero-stats">
 			<span class="stat">5 crates</span>
 			<span class="stat-dot"></span>
@@ -288,11 +288,25 @@
 		margin: 0 auto;
 	}
 
-	.hero-crab {
-		font-size: 4rem;
-		display: block;
+	.hero-icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
 		margin-bottom: 1rem;
+	}
+
+	.hero-crab {
+		font-size: 3.5rem;
 		animation: float 3s ease-in-out infinite;
+	}
+
+	.hero-dotfaf {
+		width: 80px;
+		height: 80px;
+		animation: float 3s ease-in-out infinite;
+		animation-delay: 0.5s;
+		filter: drop-shadow(0 4px 15px rgba(255, 107, 53, 0.4));
 	}
 
 	@keyframes float {
