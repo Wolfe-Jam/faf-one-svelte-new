@@ -282,7 +282,7 @@
 		padding: 4rem 1.5rem;
 		text-align: center;
 		margin-bottom: 0;
-		border-bottom: 4px solid #d7875f;
+		border-bottom: 4px solid #d84520;
 	}
 
 	.hero-content {
@@ -319,7 +319,7 @@
 	.hero-title {
 		font-size: 3rem;
 		font-weight: 900;
-		color: #d7875f;
+		color: #d84520;
 		margin: 0;
 		letter-spacing: 0.03em;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -353,7 +353,7 @@
 	.stat-dot {
 		width: 6px;
 		height: 6px;
-		background: #d7875f;
+		background: #d84520;
 		border-radius: 50%;
 	}
 
@@ -375,7 +375,7 @@
 	}
 
 	.breadcrumb a {
-		color: #d7875f;
+		color: #d84520;
 		text-decoration: none;
 	}
 
@@ -404,7 +404,7 @@
 
 	.category.launch {
 		background: rgba(215, 135, 95, 0.15);
-		color: #d7875f;
+		color: #d84520;
 	}
 
 	.reading-time {
@@ -433,7 +433,7 @@
 	}
 
 	.post-content a {
-		color: #d7875f;
+		color: #d84520;
 		text-decoration: none;
 	}
 
@@ -457,13 +457,13 @@
 		font-size: 1.15rem;
 		background: #faf6f2;
 		padding: 1.25rem;
-		border-left: 4px solid #d7875f;
+		border-left: 4px solid #d84520;
 		border-radius: 0 8px 8px 0;
 	}
 
 	pre {
 		background: #1a1a1a;
-		color: #d7875f;
+		color: #d84520;
 		padding: 1.25rem;
 		border-radius: 8px;
 		overflow-x: auto;
@@ -479,7 +479,7 @@
 	}
 
 	pre.pipeline {
-		color: #d7875f;
+		color: #d84520;
 		font-size: 0.75rem;
 		line-height: 1.4;
 	}
@@ -498,13 +498,13 @@
 	.install-block code {
 		flex: 1;
 		background: none;
-		color: #d7875f;
+		color: #d84520;
 		padding: 0;
 		font-size: 1rem;
 	}
 
 	.copy-btn {
-		background: #d7875f;
+		background: #d84520;
 		color: white;
 		border: none;
 		padding: 0.4rem 0.8rem;
@@ -541,12 +541,12 @@
 
 	.crate-card:hover {
 		background: #f5f0ec;
-		border-left-color: #d7875f;
+		border-left-color: #d84520;
 		transform: translateX(4px);
 	}
 
 	.crate-card.meta {
-		border-left-color: #d7875f;
+		border-left-color: #d84520;
 		background: #faf6f2;
 	}
 
@@ -575,7 +575,7 @@
 
 	.crate-badge {
 		font-size: 0.75rem;
-		background: #d7875f;
+		background: #d84520;
 		color: white;
 		padding: 0.2rem 0.5rem;
 		border-radius: 3px;
@@ -607,7 +607,7 @@
 	}
 
 	.use-case:hover {
-		border-color: #d7875f;
+		border-color: #d84520;
 	}
 
 	.use-case h4 {
@@ -651,7 +651,7 @@
 	}
 
 	.cta-link {
-		background: #d7875f;
+		background: #d84520;
 		color: white !important;
 		padding: 0.6rem 1.2rem;
 		border-radius: 6px;
@@ -680,7 +680,7 @@
 	.closing-quote {
 		font-size: 1.4rem;
 		font-weight: 800;
-		color: #d7875f;
+		color: #d84520;
 		margin-bottom: 0.5rem;
 		letter-spacing: 0.03em;
 	}
