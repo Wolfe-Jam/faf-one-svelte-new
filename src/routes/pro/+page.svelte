@@ -122,7 +122,7 @@
 					<ul class="features">
 						<li>CLI tri-sync &mdash; everything above</li>
 						<li>Rust compiler Pro (included)</li>
-						<li>MCP server Pro (when available)</li>
+						<li>MCP server Pro included</li>
 						<li>Multi-version license &mdash; one key, all CLIs</li>
 						<li>Early-adopters get rewarded &mdash; rate locked forever</li>
 					</ul>

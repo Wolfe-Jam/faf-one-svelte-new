@@ -131,7 +131,7 @@
 					<ul class="features">
 						<li>Rust compiler &mdash; every Pro command</li>
 						<li>TypeScript CLI &mdash; tri-sync included</li>
-						<li>MCP server Pro (when available)</li>
+						<li>MCP server Pro included</li>
 						<li>Multi-version license &mdash; one key, all CLIs</li>
 						<li>Early-adopters get rewarded &mdash; rate locked forever</li>
 					</ul>
