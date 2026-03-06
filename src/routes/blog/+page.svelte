@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/cargo-add-faf',
+			title: 'cargo add faf',
+			date: 'March 6, 2026',
+			timestamp: '2026-03-06',
+			excerpt: 'FAF goes Rust. One meta-crate, full ecosystem. Parse .faf files, stream context via Radio Protocol, run MCP servers. 232 tests across 5 crates. cargo add faf is the starting line.',
+			emoji: '🦀',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/mcpaas-crates-io',
 			title: 'MCPaaS Hits crates.io',
 			date: 'March 4, 2026',
