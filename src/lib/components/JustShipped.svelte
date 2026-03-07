@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- Interop MCP v2.0.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🔄 faf-mcp v2.0.0 - The Interop MCP for Context</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Define once. Sync everywhere. The dedicated MCP server for Cursor, Windsurf, Cline, and VS Code. 5 interop tools, 7 bundled parsers, 61 tools, 309 tests.</p>
+			<a href="/blog/interop-mcp" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- RAM Edition v5.0.0 -->
 		<div class="chrome-featured foundation-featured">
 			<div class="chrome-header">

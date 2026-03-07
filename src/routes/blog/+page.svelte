@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/interop-mcp',
+			title: 'The Interop MCP for Context',
+			date: 'March 7, 2026',
+			timestamp: '2026-03-07',
+			excerpt: 'faf-mcp v2.0.0: Define once in .faf, sync to .cursorrules, AGENTS.md, GEMINI.md, and CLAUDE.md. 5 new interop tools, 7 bundled parsers, 61 tools, 309 tests. The dedicated MCP for Cursor, Windsurf, Cline, and VS Code.',
+			emoji: '🔄',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/gemini-hardened',
 			title: 'The Hardened Edition',
 			date: 'March 7, 2026',
