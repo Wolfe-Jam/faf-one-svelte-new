@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<title>MCP - Model Context Protocol + .faf | Universal AI Context</title>
-	<meta name="description" content="Official MCP documentation for .faf format. Universal AI context for Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms. 36K+ downloads." />
+	<meta name="description" content="Official MCP documentation for .faf format. Universal AI context for Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms. IANA-registered format." />
 </svelte:head>
 
 <div class="back-nav">
@@ -22,7 +22,7 @@
 				<FafLogo size="small" color="black" />
 			</div>
 			<h1 class="page-title">Model Context Protocol + .faf</h1>
-			<p class="subtitle">Universal AI Context • IANA-Registered Format • 36K+ Downloads</p>
+			<p class="subtitle">Universal AI Context • IANA-Registered Format • Anthropic-Approved</p>
 			<p class="hero-desc">The official MCP documentation for .faf - persistent project context across Claude Desktop, Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms.</p>
 		</div>
 	</section>
@@ -121,7 +121,7 @@
 							<li>☑️ 51 MCP tools (Claude-optimized)</li>
 							<li>☑️ Claude Desktop integration</li>
 							<li>☑️ Anthropic-approved</li>
-							<li>☑️ 36K+ npm downloads</li>
+							<li>☑️ IANA-registered format</li>
 						</ul>
 						<div class="package-install">
 							<code>npm install -g claude-faf-mcp</code>

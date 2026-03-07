@@ -52,7 +52,6 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>36,000+ Total Downloads</strong> •
 				<strong>1,100/1,100 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
@@ -253,7 +252,7 @@
 					The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
 				</p>
 				<ul class="release-features">
-					<li>36k+ downloads (ecosystem)</li>
+					<li>IANA-registered format</li>
 					<li>1,051/1,051 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>4 format outputs from 1 source</li>
@@ -299,7 +298,6 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>36,000+ Total Downloads</strong> •
 				<strong>1,051/1,051 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
@@ -345,7 +343,7 @@
 					The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
 				</p>
 				<ul class="release-features">
-					<li>36k+ downloads (ecosystem)</li>
+					<li>IANA-registered format</li>
 					<li>1,051/1,051 tests passing</li>
 					<li>100% TypeScript strict mode</li>
 					<li>4 format outputs from 1 source</li>
@@ -391,7 +389,6 @@
 
 		<div class="total-stats">
 			<p>
-				<strong>36,000+ Total Downloads</strong> •
 				<strong>1,051/1,051 Tests Passing</strong> •
 				<strong>MIT License, FREE Forever</strong>
 			</p>
