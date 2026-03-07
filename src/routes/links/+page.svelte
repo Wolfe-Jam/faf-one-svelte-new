@@ -156,7 +156,7 @@
 				<div class="links-grid">
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">homebrew-faf</span>
-						<span class="link-desc">Homebrew tap — 7 formulas, auto-updating</span>
+						<span class="link-desc">Homebrew tap — 8 formulas, auto-updating</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-cli.rb" target="_blank" rel="noopener" class="link-item">
@@ -193,6 +193,11 @@
 						<span class="link-name">faf-taf-git</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-taf-git</span>
 						<span class="link-stat">v2.0.4</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/rust-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rust-faf-mcp</span>
+						<span class="link-desc">brew install wolfe-jam/faf/rust-faf-mcp</span>
+						<span class="link-stat">v0.1.0</span>
 					</a>
 				</div>
 			</div>
