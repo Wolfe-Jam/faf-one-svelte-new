@@ -22,13 +22,14 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-03-06</p>
+			<p class="last-updated">Last Updated: 2026-03-07</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
 				<a href="#github" class="nav-pill">GitHub</a>
 				<a href="#mcp" class="nav-pill">MCP</a>
 				<a href="#packages" class="nav-pill">Packages</a>
+				<a href="#homebrew" class="nav-pill">Homebrew</a>
 				<a href="#grokipedia" class="nav-pill">Grokipedia</a>
 				<a href="#radio" class="nav-pill">Radio</a>
 				<a href="#wjttc" class="nav-pill">WJTTC</a>
@@ -140,6 +141,58 @@
 					<a href="https://npmjs.com/package/faf-wasm" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-wasm</span>
 						<span class="link-desc">WASM SDK for browser scoring</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- POPULAR: Homebrew -->
+	<section class="links-section" id="homebrew">
+		<div class="container">
+			<div class="card">
+				<h2>🍺 Homebrew</h2>
+				<p class="section-note">brew tap wolfe-jam/faf</p>
+				<div class="links-grid">
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">homebrew-faf</span>
+						<span class="link-desc">Homebrew tap — 7 formulas, auto-updating</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-cli.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-cli</span>
+						<span class="link-desc">brew install wolfe-jam/faf/faf-cli</span>
+						<span class="link-stat">v4.5.0</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/claude-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">claude-faf-mcp</span>
+						<span class="link-desc">brew install wolfe-jam/faf/claude-faf-mcp</span>
+						<span class="link-stat">v5.1.0</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-mcp</span>
+						<span class="link-desc">brew install wolfe-jam/faf/faf-mcp</span>
+						<span class="link-stat">v1.3.1</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/grok-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">grok-faf-mcp</span>
+						<span class="link-desc">brew install wolfe-jam/faf/grok-faf-mcp</span>
+						<span class="link-stat">v1.1.1</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/rust-faf-cli.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rust-faf-cli</span>
+						<span class="link-desc">brew install wolfe-jam/faf/rust-faf-cli</span>
+						<span class="link-stat">v1.2.0</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/wjttc.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">wjttc</span>
+						<span class="link-desc">brew install wolfe-jam/faf/wjttc</span>
+						<span class="link-stat">v1.3.0</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-taf-git.rb" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-taf-git</span>
+						<span class="link-desc">brew install wolfe-jam/faf/faf-taf-git</span>
+						<span class="link-stat">v2.0.4</span>
 					</a>
 				</div>
 			</div>
@@ -409,7 +462,7 @@
 					<a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
 						<span class="link-desc">Gemini MCP server (PyPI)</span>
-						<span class="link-stat">v1.0.2</span>
+						<span class="link-stat">v1.1.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-python-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>
