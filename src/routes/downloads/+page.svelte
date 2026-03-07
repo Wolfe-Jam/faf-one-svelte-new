@@ -72,7 +72,7 @@
 
 <svelte:head>
 	<title>Downloads - FAF Ecosystem | 12 Packages, 3 Registries</title>
-	<meta name="description" content="33k+ downloads across npm, PyPI, and crates.io. Install FAF CLI, MCP servers, SDKs, and more." />
+	<meta name="description" content="36k+ downloads across npm, PyPI, and crates.io. Install FAF CLI, MCP servers, SDKs, and more." />
 </svelte:head>
 
 <div class="back-nav">

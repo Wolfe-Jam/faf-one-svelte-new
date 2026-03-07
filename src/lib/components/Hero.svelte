@@ -167,7 +167,7 @@
 			<ScrollRevealText threshold={0.5} delay={0}>
 				<div class="text-block authority-statement">
 					<div><strong>Anthropic-Approved MCP Server</strong> — Published to official MCP registry</div>
-					<div>30k+ Downloads | Anthropic-Approved | IANA-Registered</div>
+					<div>36k+ Downloads | Anthropic-Approved | IANA-Registered</div>
 					<div><strong>First and only persistent project context server</strong> in official Anthropic ecosystem</div>
 				</div>
 			</ScrollRevealText>

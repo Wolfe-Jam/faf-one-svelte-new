@@ -22,7 +22,7 @@
 		⭐ Star
 	</a>
 	<a href="/downloads" class="banner-section-center">
-		33k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
+		36k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
 	</a>
 	<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="banner-section">
 		⚡️ MCP #2759 MERGED ⚡️
