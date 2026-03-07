@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/gemini-hardened',
+			title: 'The Hardened Edition',
+			date: 'March 7, 2026',
+			timestamp: '2026-03-07',
+			excerpt: 'gemini-faf-mcp v1.1.0 — input validation, YAML round-trip safety, 57/57 tests. 3k+ PyPI downloads earned a quality pass.',
+			emoji: '🔒',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/axum-edition',
 			title: 'The Axum Edition',
 			date: 'March 7, 2026',
