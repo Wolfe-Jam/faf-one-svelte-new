@@ -71,7 +71,7 @@
 </script>
 
 <svelte:head>
-	<title>Downloads - FAF Ecosystem | 12 Packages, 3 Registries</title>
+	<title>Downloads - FAF Ecosystem | 16 Packages, 3 Registries</title>
 	<meta name="description" content="36k+ downloads across npm, PyPI, and crates.io. Install FAF CLI, MCP servers, SDKs, and more." />
 </svelte:head>
 
