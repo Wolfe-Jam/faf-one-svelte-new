@@ -186,6 +186,10 @@ async fn main() {
 </div>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
@@ -193,6 +197,7 @@ async fn main() {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
 		color: #333;
+		background: #FEFCF8;
 	}
 
 	.post-header {
