@@ -5,7 +5,7 @@
 			title: 'The MCP Server Edition',
 			date: 'March 8, 2026',
 			timestamp: '2026-03-08',
-			excerpt: 'gemini-faf-mcp v2.0.0: Native FastMCP server with 10 tools for Gemini CLI. Read, validate, score, and export .faf project context. 168 tests. Python 3.10+.',
+			excerpt: 'gemini-faf-mcp v2.0.1: Native FastMCP server with 10 tools for Gemini CLI. Read, validate, score, and export .faf project context. 168 tests. Python 3.10+.',
 			emoji: '🔷',
 			category: 'Release'
 		},

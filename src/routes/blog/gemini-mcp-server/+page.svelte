@@ -16,9 +16,9 @@
 </script>
 
 <svelte:head>
-	<title>The MCP Server Edition - gemini-faf-mcp v2.0.0 | FAF</title>
-	<meta name="description" content="gemini-faf-mcp v2.0.0: Native FastMCP server with 10 tools. Read, validate, score, and generate .faf project DNA from Gemini CLI." />
-	<meta property="og:title" content="The MCP Server Edition - gemini-faf-mcp v2.0.0" />
+	<title>The MCP Server Edition - gemini-faf-mcp v2.0.1 | FAF</title>
+	<meta name="description" content="gemini-faf-mcp v2.0.1: Native FastMCP server with 10 tools. Read, validate, score, and generate .faf project DNA from Gemini CLI." />
+	<meta property="og:title" content="The MCP Server Edition - gemini-faf-mcp v2.0.1" />
 	<meta property="og:description" content="Native FastMCP server with 10 tools for Gemini CLI. IANA-registered .faf project context." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -31,7 +31,7 @@
 		</div>
 
 		<h1>The MCP Server Edition</h1>
-		<p class="version-tag">gemini-faf-mcp v2.0.0</p>
+		<p class="version-tag">gemini-faf-mcp v2.0.1</p>
 		<p class="subtitle">A real MCP server for Gemini CLI. 10 tools. Native Python.</p>
 		<div class="meta">
 			<time datetime="2026-03-08">March 8, 2026</time>
@@ -48,9 +48,9 @@
 		</section>
 
 		<section>
-			<h2>Why v2.0.0</h2>
-			<p>gemini-faf-mcp had 1,500+ PyPI downloads but no MCP server. It shipped a Cloud Run REST API and a Python SDK — useful, but the name promised MCP and didn't deliver.</p>
-			<p>v2.0.0 fixes that. A native FastMCP server sits at <code>server.py</code> in the repo root. The Gemini Extensions Gallery manifest points to it. The REST API and SDK stay for backward compatibility.</p>
+			<h2>Why v2.0.1</h2>
+			<p>gemini-faf-mcp had 1,535+ PyPI downloads but no MCP server. It shipped a Cloud Run REST API and a Python SDK — useful, but the name promised MCP and didn't deliver.</p>
+			<p>v2.0.1 fixes that. A native FastMCP server sits at <code>server.py</code> in the repo root. The Gemini Extensions Gallery manifest points to it. The REST API and SDK stay for backward compatibility.</p>
 		</section>
 
 		<section>
@@ -115,7 +115,7 @@
 		<section>
 			<h2>Architecture</h2>
 
-			<pre><code>{`gemini-faf-mcp v2.0.0
+			<pre><code>{`gemini-faf-mcp v2.0.1
 ├── server.py              → FastMCP MCP server (10 tools)
 ├── main.py                → Cloud Run REST API (GET/POST/PUT)
 └── src/gemini_faf_mcp/    → Python SDK (FAFClient, parser)`}</code></pre>
@@ -154,7 +154,7 @@
 				<div class="cta-box">
 					<h3>GitHub</h3>
 					<p>Source, tests, and release notes.</p>
-					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp/releases/tag/v2.0.0" class="cta-link">v2.0.0 Release</a>
+					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp/releases/tag/v2.0.1" class="cta-link">v2.0.1 Release</a>
 				</div>
 			</div>
 		</section>
@@ -182,10 +182,10 @@ python -m pytest tests/ -v`}</code></pre>
 			<h2>The Numbers</h2>
 
 			<ul>
-				<li><strong>v2.0.0</strong> — Released March 8, 2026</li>
+				<li><strong>v2.0.1</strong> — Released March 8, 2026</li>
 				<li><strong>168/168</strong> — Tests passing</li>
 				<li><strong>10</strong> — MCP tools</li>
-				<li><strong>1,500+</strong> — PyPI downloads</li>
+				<li><strong>1,535+</strong> — PyPI downloads</li>
 				<li><strong>Python 3.10+</strong> — Broadened from 3.12</li>
 			</ul>
 		</section>
