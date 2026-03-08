@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/rmcp-edition',
+			title: 'The rmcp Edition',
+			date: 'March 7, 2026',
+			timestamp: '2026-03-07',
+			excerpt: 'rust-faf-mcp v0.2.0: Migrates to rmcp SDK — main.rs drops from 253 lines to 20. Three new tools: compress, discover, tokens. 91 tests across 5 files. One binary, zero config.',
+			emoji: '🦀',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/interop-mcp',
 			title: 'The Interop MCP for Context',
 			date: 'March 7, 2026',
