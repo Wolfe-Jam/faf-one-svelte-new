@@ -177,6 +177,10 @@ gemini.tune(vec!["91.0".to_string()]).await?;
 </div>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	.blog-post {
 		max-width: 720px;
 		margin: 0 auto;

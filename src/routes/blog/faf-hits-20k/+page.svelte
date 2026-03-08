@@ -157,6 +157,10 @@
 </div>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;

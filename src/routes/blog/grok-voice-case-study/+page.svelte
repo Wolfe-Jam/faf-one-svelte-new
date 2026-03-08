@@ -310,6 +310,10 @@ re-explain their stack, goals, or architecture. Just help.
 </div>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;

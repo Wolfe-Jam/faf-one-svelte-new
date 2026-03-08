@@ -276,6 +276,10 @@
 </div>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	/* Hero Banner */
 	.hero-banner {
 		background: linear-gradient(135deg, #1a0f0a 0%, #2a1510 30%, #3d1e14 60%, #4a2518 100%);

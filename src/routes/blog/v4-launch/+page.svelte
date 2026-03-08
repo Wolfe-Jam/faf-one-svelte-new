@@ -279,6 +279,10 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 </div>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
