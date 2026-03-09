@@ -16,10 +16,10 @@
 </script>
 
 <svelte:head>
-	<title>The MCP Server Edition - gemini-faf-mcp v2.0.1 | FAF</title>
-	<meta name="description" content="gemini-faf-mcp v2.0.1: Native FastMCP server with 10 tools. Read, validate, score, and generate .faf project DNA from Gemini CLI." />
-	<meta property="og:title" content="The MCP Server Edition - gemini-faf-mcp v2.0.1" />
-	<meta property="og:description" content="Native FastMCP server with 10 tools for Gemini CLI. IANA-registered .faf project context." />
+	<title>The MCP Server Edition - gemini-faf-mcp v2.1.1 | FAF</title>
+	<meta name="description" content="gemini-faf-mcp v2.1.1: Native FastMCP server with 12 tools including faf_auto stack detection. Read, validate, score, and auto-detect .faf project DNA from Gemini CLI." />
+	<meta property="og:title" content="The MCP Server Edition - gemini-faf-mcp v2.1.1" />
+	<meta property="og:description" content="Native FastMCP server with 12 tools for Gemini CLI. Auto-detect your stack. IANA-registered .faf project context." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -31,8 +31,8 @@
 		</div>
 
 		<h1>The MCP Server Edition</h1>
-		<p class="version-tag">gemini-faf-mcp v2.0.1</p>
-		<p class="subtitle">A real MCP server for Gemini CLI. 10 tools. Native Python.</p>
+		<p class="version-tag">gemini-faf-mcp v2.1.1</p>
+		<p class="subtitle">A real MCP server for Gemini CLI. 12 tools. Auto-detect your stack. Native Python.</p>
 		<div class="meta">
 			<time datetime="2026-03-08">March 8, 2026</time>
 			<span class="separator">-</span>
@@ -43,14 +43,43 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> gemini-faf-mcp now contains an actual MCP server. 10 tools powered by <a href="https://pypi.org/project/faf-python-sdk/">faf-python-sdk</a>, built on <a href="https://github.com/jlowin/fastmcp">FastMCP</a>. Install from the Gemini Extensions Gallery or PyPI. Read, validate, score, and export .faf project context directly from Gemini CLI.
+				<strong>TL;DR:</strong> gemini-faf-mcp v2.1.1 ships 12 MCP tools powered by <a href="https://pypi.org/project/faf-python-sdk/">faf-python-sdk</a>, built on <a href="https://github.com/jlowin/fastmcp">FastMCP</a>. The headline: <code>faf_auto</code> scans your project, detects your stack from manifest files, and generates a .faf — zero to project DNA in one tool call. Install from the Gemini Extensions Gallery or PyPI.
 			</p>
 		</section>
 
 		<section>
-			<h2>Why v2.0.1</h2>
-			<p>gemini-faf-mcp had 1,535+ PyPI downloads but no MCP server. It shipped a Cloud Run REST API and a Python SDK — useful, but the name promised MCP and didn't deliver.</p>
-			<p>v2.0.1 fixes that. A native FastMCP server sits at <code>server.py</code> in the repo root. The Gemini Extensions Gallery manifest points to it. The REST API and SDK stay for backward compatibility.</p>
+			<h2>faf_auto: Zero to Project DNA</h2>
+			<p>The new <code>faf_auto</code> tool scans your project directory, reads manifest files, and detects your stack automatically. No manual input. No guessing.</p>
+
+			<div class="detection-grid">
+				<div class="detection-box">
+					<h3>Detects From</h3>
+					<ul>
+						<li><code>pyproject.toml</code> — Python, build system, deps</li>
+						<li><code>package.json</code> — JavaScript/TypeScript, framework</li>
+						<li><code>Cargo.toml</code> — Rust, cargo</li>
+						<li><code>go.mod</code> — Go, go modules</li>
+						<li><code>requirements.txt</code> — Python fallback</li>
+						<li><code>Gemfile</code> — Ruby, bundler</li>
+						<li><code>composer.json</code> — PHP, composer</li>
+					</ul>
+				</div>
+				<div class="detection-box">
+					<h3>Outputs</h3>
+					<ul>
+						<li>Language, framework, build tool</li>
+						<li>Package manager, database, API type</li>
+						<li>Score and tier</li>
+						<li>New .faf or updated existing</li>
+					</ul>
+				</div>
+			</div>
+
+			<p>In Gemini CLI, just say:</p>
+
+			<pre><code>{`> Auto-detect my project and create a .faf file`}</code></pre>
+
+			<p>Gemini calls <code>faf_auto</code>. Your project gets a scored, validated .faf. Done.</p>
 		</section>
 
 		<section>
@@ -65,6 +94,14 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr class="highlight">
+							<td><code>faf_auto</code></td>
+							<td>Auto-detect stack and generate/update .faf</td>
+						</tr>
+						<tr>
+							<td><code>faf_init</code></td>
+							<td>Create a starter .faf file</td>
+						</tr>
 						<tr>
 							<td><code>faf_read</code></td>
 							<td>Parse a .faf file into structured data</td>
@@ -80,10 +117,6 @@
 						<tr>
 							<td><code>faf_discover</code></td>
 							<td>Find .faf files in the project tree</td>
-						</tr>
-						<tr>
-							<td><code>faf_init</code></td>
-							<td>Create a starter .faf file</td>
 						</tr>
 						<tr>
 							<td><code>faf_stringify</code></td>
@@ -102,6 +135,10 @@
 							<td>Export AGENTS.md</td>
 						</tr>
 						<tr>
+							<td><code>faf_model</code></td>
+							<td>100% Trophy-scored example .faf for 15 project types</td>
+						</tr>
+						<tr>
 							<td><code>faf_about</code></td>
 							<td>FAF format info, IANA registration</td>
 						</tr>
@@ -109,18 +146,35 @@
 				</table>
 			</div>
 
-			<p>Every tool delegates to <code>faf-python-sdk</code> for parsing, validation, and discovery. The server is ~330 lines.</p>
+			<p>Every tool delegates to <code>faf-python-sdk</code> for parsing, validation, and discovery. The server is pure Python — no shelling out, no Node dependencies.</p>
+		</section>
+
+		<section>
+			<h2>Using with Gemini CLI</h2>
+			<p>No commands to memorize. Just talk to it:</p>
+
+			<pre><code>{`> Auto-detect my project and create a .faf file
+> Read my project DNA
+> What's the FAF score for this project?
+> Export a GEMINI.md
+> Show me a 100% example for a web app
+> Create an AGENTS.md for this project`}</code></pre>
+
+			<p>Gemini picks the right tool. You get the result.</p>
 		</section>
 
 		<section>
 			<h2>Architecture</h2>
 
-			<pre><code>{`gemini-faf-mcp v2.0.1
-├── server.py              → FastMCP MCP server (10 tools)
+			<pre><code>{`gemini-faf-mcp v2.1.1
+├── server.py              → FastMCP MCP server (12 tools)
+├── models.py              → 15 Trophy-scored .faf examples
 ├── main.py                → Cloud Run REST API (GET/POST/PUT)
 └── src/gemini_faf_mcp/    → Python SDK (FAFClient, parser)`}</code></pre>
 
 			<p>The MCP server handles local .faf operations. The Cloud Run API handles live badges, multi-agent context brokering, and voice-to-FAF mutations. Both ship in the same package.</p>
+
+			<p>Built on <a href="https://github.com/jlowin/fastmcp">FastMCP</a>. Powered by <a href="https://pypi.org/project/faf-python-sdk/">faf-python-sdk</a>.</p>
 		</section>
 
 		<section>
@@ -138,13 +192,6 @@
 				<button class="copy-btn">{copiedId === 'pip' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
-			<p>Then in Gemini CLI:</p>
-
-			<pre><code>{`> Read my project DNA
-> What's the FAF score for this project?
-> Create a starter .faf file
-> Export a GEMINI.md`}</code></pre>
-
 			<div class="cta-grid">
 				<div class="cta-box">
 					<h3>PyPI</h3>
@@ -154,39 +201,33 @@
 				<div class="cta-box">
 					<h3>GitHub</h3>
 					<p>Source, tests, and release notes.</p>
-					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp/releases/tag/v2.0.1" class="cta-link">v2.0.1 Release</a>
+					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp/releases/tag/v2.1.1" class="cta-link">v2.1.1 Release</a>
 				</div>
 			</div>
 		</section>
 
 		<section>
 			<h2>Testing</h2>
-			<p>168 tests across two suites:</p>
+			<p>183 tests across two suites:</p>
 			<ul>
-				<li><strong>111 MCP server tests</strong> — WJTTC 9-tier championship suite (Brake, Engine, Aero, Scoring, Exports, Safety, Contract, Roundtrip, Gallery)</li>
-				<li><strong>57 Cloud Function tests</strong> — existing suite (7 tiers + integration)</li>
+				<li><strong>126 MCP server tests</strong> — WJTTC 9-tier championship suite (Brake, Engine, Aero, Scoring, Exports, Safety, Contract, Roundtrip, Gallery)</li>
+				<li><strong>57 Cloud Function tests</strong> — 7 tiers + integration</li>
 			</ul>
 
 			<pre><code>{`pip install -e ".[dev]"
 python -m pytest tests/ -v`}</code></pre>
-
-			<p>MCP Inspector for manual verification:</p>
-
-			<div class="copy-box" onclick={() => copyText('npx @modelcontextprotocol/inspector --command python3 server.py', 'inspector')}>
-				<code class="copy-code">npx @modelcontextprotocol/inspector --command python3 server.py</code>
-				<button class="copy-btn">{copiedId === 'inspector' ? 'Copied!' : 'Copy'}</button>
-			</div>
 		</section>
 
 		<section>
 			<h2>The Numbers</h2>
 
 			<ul>
-				<li><strong>v2.0.1</strong> — Released March 8, 2026</li>
-				<li><strong>168/168</strong> — Tests passing</li>
-				<li><strong>10</strong> — MCP tools</li>
-				<li><strong>1,535+</strong> — PyPI downloads</li>
-				<li><strong>Python 3.10+</strong> — Broadened from 3.12</li>
+				<li><strong>v2.1.1</strong> — Released March 8, 2026</li>
+				<li><strong>183/183</strong> — Tests passing</li>
+				<li><strong>12</strong> — MCP tools</li>
+				<li><strong>7</strong> — Manifest file types detected</li>
+				<li><strong>15</strong> — Trophy-scored example .faf models</li>
+				<li><strong>Python 3.10+</strong> — Works anywhere pip does</li>
 			</ul>
 		</section>
 
@@ -347,8 +388,8 @@ python -m pytest tests/ -v`}</code></pre>
 
 	h3 {
 		font-size: 1.3rem;
-		margin: 2rem 0 1rem 0;
-		color: #333;
+		margin: 0 0 1rem 0;
+		color: #FF6B35;
 	}
 
 	p {
@@ -389,6 +430,29 @@ python -m pytest tests/ -v`}</code></pre>
 	.tools-table {
 		margin: 1.5rem 0;
 		overflow-x: auto;
+	}
+
+	.detection-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.detection-box {
+		background: #f8f8f8;
+		border: 1px solid #eee;
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+
+	.detection-box ul {
+		margin: 0.5rem 0 0 1.25rem;
+	}
+
+	.detection-box li {
+		margin-bottom: 0.35rem;
+		font-size: 0.95rem;
 	}
 
 	.cta-grid {
@@ -531,7 +595,7 @@ python -m pytest tests/ -v`}</code></pre>
 			font-size: 1.75rem;
 		}
 
-		.cta-grid {
+		.cta-grid, .detection-grid {
 			grid-template-columns: 1fr;
 		}
 
