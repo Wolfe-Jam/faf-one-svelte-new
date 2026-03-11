@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let isVisible = $state(false);
+	let isVisible = $state(true);
 
 	onMount(() => {
 		isVisible = true;
