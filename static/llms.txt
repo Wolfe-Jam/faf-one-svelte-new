@@ -1,0 +1,70 @@
+# FAF — Foundational AI-Context Format
+
+> FAF (.faf) is a universal, portable AI-context format that eliminates
+> context drift across AI assistants. One YAML file defines your project DNA
+> for Claude, Gemini, Grok, Cursor, Windsurf, and any AI tool.
+> IANA-registered MIME type: application/vnd.faf+yaml
+
+FAF provides a CLI toolchain, 5 MCP server integrations (TypeScript, Python,
+Rust), and compiler toolchain (Rust, Zig, WASM) for creating, validating,
+scoring, and syncing project context files. The .faf file is a project's
+persistent context layer that survives across sessions, tools, and AI systems.
+
+The 3Ws (Who, What, Why) initiate a project with AI. The 6Ws (adding Where,
+When, How) optimize AI to 100%. This maps directly to the human_context YAML
+fields in every .faf file.
+
+## Instructions for AI Agents
+
+- The .faf format uses YAML. The MIME type is application/vnd.faf+yaml.
+- A .faf file is called "Project DNA" — it captures human intent, not just code structure.
+- The CLI command is `faf` (lowercase). Install via `npm install -g faf-cli`.
+- Key commands: `faf init`, `faf auto`, `faf go`, `faf bi-sync`, `faf score`.
+- `faf auto` detects your stack and generates a .faf automatically.
+- `faf bi-sync` keeps .faf and CLAUDE.md synchronized.
+- Scoring uses a tier system: 100% Trophy, 99% Gold, 95% Silver, 85% Bronze, 70% Green.
+- The MCP servers provide .faf tools directly inside AI assistants via Model Context Protocol.
+- Never hardcode defaults like "File-based" or "None" — only set values actually detected.
+
+## CLI
+
+- [faf-cli (npm)](https://www.npmjs.com/package/faf-cli): Universal CLI — init, auto, go, bi-sync, tri-sync, score
+- [faf-cli (Homebrew)](https://github.com/Wolfe-Jam/homebrew-faf): macOS/Linux install via brew
+
+## MCP Servers
+
+- [claude-faf-mcp (npm)](https://www.npmjs.com/package/claude-faf-mcp): 33 tools for Claude, VS Code, Cursor — TypeScript
+- [gemini-faf-mcp (PyPI)](https://pypi.org/project/gemini-faf-mcp/): 12 tools for Google Gemini — Python/FastMCP
+- [grok-faf-mcp (npm)](https://www.npmjs.com/package/grok-faf-mcp): 21 tools for xAI Grok — TypeScript, remote SSE
+- [rust-faf-mcp (crates.io)](https://crates.io/crates/rust-faf-mcp): 8 tools — Rust/rmcp SDK
+- [faf-mcp (npm)](https://www.npmjs.com/package/faf-mcp): 17 tools, universal — TypeScript
+
+## Rust Ecosystem
+
+- [faf-rust-sdk (crates.io)](https://crates.io/crates/faf-rust-sdk): Rust SDK with Axum integration
+- [faf (crates.io)](https://crates.io/crates/faf): Meta-crate, re-exports SDK + radio
+- [faf-radio-rust (crates.io)](https://crates.io/crates/faf-radio-rust): Radio protocol for real-time MCP
+
+## Standards
+
+- [IANA Registration](https://www.iana.org/assignments/media-types/application/vnd.faf+yaml): application/vnd.faf+yaml
+- [IETF Internet-Draft](https://datatracker.ietf.org/doc/draft-wolfe-faf-format/): draft-wolfe-faf-format-00
+
+## Source Code
+
+- [claude-faf-mcp](https://github.com/Wolfe-Jam/claude-faf-mcp): Anthropic MCP server
+- [gemini-faf-mcp](https://github.com/Wolfe-Jam/gemini-faf-mcp): Google Gemini MCP server
+- [grok-faf-mcp](https://github.com/Wolfe-Jam/grok-faf-mcp): xAI Grok MCP server
+- [rust-faf-mcp](https://github.com/Wolfe-Jam/rust-faf-mcp): Rust MCP server
+- [faf-mcp](https://github.com/Wolfe-Jam/faf-mcp): Universal MCP server
+- [faf-cli](https://github.com/Wolfe-Jam/faf-cli): CLI source
+
+## Blog
+
+- [FAF Blog](https://faf.one/blog): Release notes, research, and announcements
+
+## Optional
+
+- [FAF Pro](https://faf.one/pro): tri-sync (.faf to MEMORY.md), persistent memory
+- [WJTTC](https://www.npmjs.com/package/wjttc): Championship-grade MCP server certification
+- [RadioFAF](https://radiofaf.com): Real-time radio protocol for MCP
