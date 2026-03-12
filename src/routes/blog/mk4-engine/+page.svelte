@@ -268,7 +268,7 @@ Enterprise (+12 slots = 33 total)
 	}
 
 	.category.launch {
-		background: #CE422B;
+		background: #27c93f;
 		color: white;
 	}
 
@@ -357,16 +357,16 @@ Enterprise (+12 slots = 33 total)
 	}
 
 	.insight-box.danger {
-		background: #fff0f0;
-		border-color: #cc3333;
+		background: #f0fff0;
+		border-color: #27c93f;
 	}
 
 	.insight-box.danger h3 {
-		color: #cc3333;
+		color: #27c93f;
 	}
 
 	.insight-box.danger p {
-		color: #992222;
+		color: #1a8a2e;
 	}
 
 	/* Frontier 4 Grid */
