@@ -403,8 +403,8 @@ Enterprise (+12 slots = 33 total)
 	}
 
 	.frontier-card.claude {
-		border: 2px solid #D97757;
-		color: #D97757;
+		border: 2px solid #FF6B35;
+		color: #FF6B35;
 	}
 
 	.frontier-card.gemini {
@@ -418,8 +418,8 @@ Enterprise (+12 slots = 33 total)
 	}
 
 	.frontier-card.grok {
-		border: 2px solid #FF6B35;
-		color: #FF6B35;
+		border: 2px solid #ffffff;
+		color: #ffffff;
 	}
 
 	.frontier-link {
