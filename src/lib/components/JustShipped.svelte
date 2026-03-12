@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- Mk4 Championship Engine -->
+		<div class="chrome-featured rust-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🧬 Mk4 Championship Engine — Unified Scoring</h3>
+					<span class="chrome-badge rust-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">One Rust engine, 33 slots, 596 tests. Claude, Gemini, OpenAI, and Grok finally score the same file the same way. Context-Impairment: cured.</p>
+			<a href="/blog/mk4-engine" class="chrome-install rust-cta">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- Interop MCP v2.0.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">

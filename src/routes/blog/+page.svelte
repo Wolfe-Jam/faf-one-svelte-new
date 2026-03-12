@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/mk4-engine',
+			title: 'The Mk4 Championship Engine',
+			date: 'March 12, 2026',
+			timestamp: '2026-03-12',
+			excerpt: 'One Rust scoring engine for all four frontiers. 33-slot Enterprise DNA, placeholder rejection, slotignored math. Claude, Gemini, OpenAI, and Grok score the same file the same way. 596/596 tests.',
+			emoji: '🧬',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/gemini-mcp-server',
 			title: 'The MCP Server Edition',
 			date: 'March 8, 2026',
