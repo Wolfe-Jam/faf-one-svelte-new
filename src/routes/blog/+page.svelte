@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/bun-sticky-bunx-edition',
+			title: 'Bunx Edition',
+			date: 'March 13, 2026',
+			timestamp: '2026-03-13',
+			excerpt: 'bun-sticky v1.1.0 — Bun-native FAF scorer. 1,100+ organic downloads, zero marketing. Two packages, two languages: TypeScript + Zig. Bun runs TS. Bun is built on Zig. We built both.',
+			emoji: '🥐',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/best-context-under-the-bun',
 			title: 'Best Context Under the Bun',
 			date: 'March 13, 2026',
