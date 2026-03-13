@@ -184,7 +184,7 @@ Enterprise (+12 slots = 33 total)
 
 		<section class="footer-note">
 			<p>
-				Built with .faf ☑️ One file to define them all. 🏎️
+				AI needed a Standard for Context. It just got one.
 			</p>
 		</section>
 	</article>
