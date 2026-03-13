@@ -177,6 +177,36 @@ Enterprise (+12 slots = 33 total)
 		</section>
 
 		<section>
+			<h2>Why Rust?</h2>
+
+			<p>Because scoring engines don't get to be slow, wrong, or platform-dependent.</p>
+
+			<ul>
+				<li><strong>WASM</strong> &mdash; One compile target for browser, edge, and CLI. Same binary, every runtime.</li>
+				<li><strong>xAI momentum</strong> &mdash; Grok's infrastructure runs Rust. So does Cloudflare. So does the industry.</li>
+				<li><strong>Zero ambiguity</strong> &mdash; No garbage collector. No runtime surprises. The score is the score.</li>
+				<li><strong>In Rust We Trust</strong> &mdash; When the engine defines parity across four AI platforms, it needs to be correct by construction. Not by hope.</li>
+			</ul>
+
+			<p>TypeScript built the ecosystem. Rust <em>is</em> the engine.</p>
+		</section>
+
+		<section>
+			<h2>FAF &mdash; Format for AI Context</h2>
+
+			<p>FAF is the specification layer for AI-readable repositories. It doesn't replace your docs. It defines what your docs can't.</p>
+
+			<pre><code>{`src/            → implementation
+package.json    → runtime metadata
+README.md       → human documentation
+project.faf     → AI context`}</code></pre>
+
+			<p class="layer-rule"><strong>MD prose explains. FAF defines. AI consumes.</strong></p>
+
+			<p>CLAUDE.md, GEMINI.md, AGENTS.md, GROK.md &mdash; they're all sync targets. FAF is the source. One file writes them all.</p>
+		</section>
+
+		<section>
 			<h2>What Changes</h2>
 
 			<p>Before Mk4, each runtime had its own scoring logic. Small divergences crept in. A project could score 95% in one tool and 92% in another.</p>
@@ -489,6 +519,13 @@ Enterprise (+12 slots = 33 total)
 		background: none;
 		font-size: 1.2rem;
 		font-weight: 600;
+	}
+
+	.layer-rule {
+		text-align: center;
+		font-size: 1.15rem;
+		color: #000;
+		margin: 2rem 0;
 	}
 
 	/* Copy boxes */
