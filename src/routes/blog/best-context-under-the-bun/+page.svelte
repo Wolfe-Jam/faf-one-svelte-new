@@ -19,6 +19,8 @@
 	<meta property="og:description" content="bunx faf-cli auto — 0% to 100% AI context in 0.5s. Zero code changes." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/best-context-under-the-bun-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/best-context-under-the-bun-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -36,6 +38,10 @@
 			<span class="version-tag">v5.0.6</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/best-context-under-the-bun-hero.png" alt="Now you can have a bun with your brew — croissant and DotFaf coffee mug" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -166,6 +172,18 @@ brew install faf-cli && faf auto   # Homebrew`}</code></pre>
 
 	:global(html) {
 		background: #FEFCF8 !important;
+	}
+
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.blog-post {
