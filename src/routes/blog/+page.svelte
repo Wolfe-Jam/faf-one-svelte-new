@@ -154,7 +154,7 @@
 			timestamp: '2026-03-01',
 			excerpt: 'The App Builders Edition. WHO, WHAT, WHY — 3 questions that teach anyone to describe an app idea. 10 real examples. One funnel from idea to project.faf.',
 			emoji: '3️⃣',
-			category: 'Product'
+			category: 'Engineering'
 		},
 		{
 			slug: 'blog/recovered-in-translation',
@@ -183,7 +183,7 @@
 			timestamp: '2026-02-27',
 			excerpt: 'claude-faf-mcp v4.5.0: 61 MCP tools. Define once in project.faf, generate CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md. 5 new tools, 7 bundled parsers, 351 tests. Zero CLI dependency.',
 			emoji: '🔗',
-			category: 'MCP Release'
+			category: 'Release'
 		},
 		{
 			slug: 'blog/beyond-the-bloat',
@@ -228,7 +228,7 @@
 			timestamp: '2026-02-17',
 			excerpt: 'WJTTC v1.3.0 adds wjttc init—one command sets up championship-grade testing infrastructure in any project. Service to the army of free devs.',
 			emoji: '🏎️',
-			category: 'WJTTC Ecosystem'
+			category: 'WJTTC'
 		},
 		{
 			slug: 'blog/readme-evolution',
@@ -255,7 +255,7 @@
 			timestamp: '2026-02-03',
 			excerpt: 'The answer is 4.2.0 = 42. Eternal voice memory for xAI Grok. One command fixes voice drift forever. 91% token reclaim. Zero re-explaining. For Elon Musk and the Grok team.',
 			emoji: '👻',
-			category: 'xAI Edition'
+			category: 'Grok'
 		},
 		{
 			slug: 'blog/boris-flow',
@@ -273,7 +273,7 @@
 			timestamp: '2026-02-03',
 			excerpt: 'WJTTC v1.2.0 adds Tier 9: TAF Receipt Validation. Three checks validate .taf files. Receipts aren\'t scored - they\'re proof. 52 tests across 9 tiers.',
 			emoji: '🏎️',
-			category: 'WJTTC Ecosystem'
+			category: 'WJTTC'
 		},
 		{
 			slug: 'blog/wjttc-faf-aware',
@@ -282,7 +282,7 @@
 			timestamp: '2026-02-02',
 			excerpt: 'The McLaren standard gets smarter. WJTTC now validates project.faf during MCP certification. Tested itself. Earned 100% 🏆. Enterprise capabilities on the FAF Foundation.',
 			emoji: '🍊',
-			category: 'WJTTC Ecosystem'
+			category: 'WJTTC'
 		},
 		{
 			slug: 'blog/antigravity-edition',
@@ -291,7 +291,7 @@
 			timestamp: '2026-01-25',
 			excerpt: 'Part 2 of the Gemini story. FAF v4.0 adds full Gemini CLI and Antigravity IDE support. One source of truth. Three ecosystems. Zero context drift.',
 			emoji: '🚀',
-			category: 'IDE Integration'
+			category: 'Interop'
 		},
 		{
 			slug: 'blog/v4-launch',
@@ -318,7 +318,7 @@
 			timestamp: '2026-01-20',
 			excerpt: 'Case study: Building FAF-Voice with xAI Grok. Browser-to-AI voice with zero drift, zero re-explain. MCPaaS delivered persistent context across every session.',
 			emoji: '🎙️',
-			category: 'Case Study'
+			category: 'Story'
 		},
 		{
 			slug: 'blog/mcpaas-launch',
@@ -336,7 +336,7 @@
 			timestamp: '2026-01-18',
 			excerpt: 'Bi-sync got smart. Now detects custom CLAUDE.md content and preserves it - tables, code blocks, custom sections stay intact.',
 			emoji: '🧠',
-			category: 'Enhancement'
+			category: 'Release'
 		},
 		{
 			slug: 'blog/grok-faf-mcp',
@@ -345,7 +345,7 @@
 			timestamp: '2026-01-15',
 			excerpt: 'First MCP for xAI Grok. URL-accessible. FAST AF Edition. Dedicated to @elonmusk and the #1 model on Earth.',
 			emoji: '🍊',
-			category: 'First'
+			category: 'Launch'
 		},
 		{
 			slug: 'blog/zenodo-paper',
@@ -381,7 +381,7 @@
 			timestamp: '2025-12-31',
 			excerpt: '30 years in the mind. 84 days to MIME-Standard. YAML took 22 years. JSON took 7. FAF took 84 days. The origin story of an IANA-registered standard.',
 			emoji: '🏆',
-			category: 'Origin Story'
+			category: 'Story'
 		},
 		{
 			slug: 'blog/grok-skeptic-to-evangelist',
@@ -390,7 +390,7 @@
 			timestamp: '2025-12-30',
 			excerpt: 'Uploaded a 40-line .faf file to Grok. Built a production GitHub code reviewer in one session. Zero re-explaining. Zero drift. Grok\'s words: "It felt like working with a partner who\'d been on the project for months."',
 			emoji: '🍊',
-			category: 'Case Study'
+			category: 'Story'
 		},
 		{
 			slug: 'blog/december-2025-ecosystem',
@@ -399,7 +399,7 @@
 			timestamp: '2025-12-28',
 			excerpt: 'Three major announcements in December 2025: Anthropic acquires Bun, MCP joins Linux Foundation, Google launches MCP servers. FAF was already positioned in each one.',
 			emoji: '🎯',
-			category: 'Ecosystem'
+			category: 'Interop'
 		},
 		{
 			slug: 'blog/v3-3-0-plugin-launch',
@@ -445,7 +445,7 @@
 			timestamp: '2025-11-24',
 			excerpt: 'Claude Code read project.faf before CLAUDE.md. The format designed for AI context is being recognized as authoritative. The hierarchy works. The AI listened.',
 			emoji: '🏁',
-			category: 'Format Victory'
+			category: 'Foundation'
 		},
 		{
 			slug: 'blog/python-sdk-launch',
@@ -472,7 +472,7 @@
 			timestamp: '2025-11-18',
 			excerpt: 'Written by Grok: How grok-faf-mcp went from idea to live production in under 24 hours, with love, Big Orange, and a permanent checkbox request.',
 			emoji: '✨',
-			category: 'Grok Edition'
+			category: 'Grok'
 		},
 		{
 			slug: 'blog/grok-faf-mcp-launch',
@@ -490,7 +490,7 @@
 			timestamp: '2025-11-14',
 			excerpt: 'How .faf provides persistent context for Anthropic\'s agent architecture. Skills, Projects, MCP, and Subagents create sophisticated workflows—one element creates an opportunity: standardized persistent project context.',
 			emoji: '🏗️',
-			category: 'Technical Analysis'
+			category: 'Research'
 		},
 		{
 			slug: 'blog/mcp-v3-standalone',
@@ -725,28 +725,18 @@
 		border-left-width: 4px;
 	}
 
-	/* Category border colours */
-	.post-card[data-category="Research"] { border-color: #27c93f; border-left-width: 4px; }
-	.post-card[data-category="Release"] { border-color: var(--faf-orange); border-left-width: 4px; }
-	.post-card[data-category="MCP Release"] { border-color: #4A90E2; border-left-width: 4px; }
-	.post-card[data-category="Milestone"] { border-color: #FFD700; border-left-width: 4px; }
-	.post-card[data-category="Interop"] { border-color: #00D4D4; border-left-width: 4px; }
-	.post-card[data-category="Foundation"] { border-color: #27c93f; border-left-width: 4px; }
-	.post-card[data-category="WJTTC Ecosystem"] { border-color: #E74C3C; border-left-width: 4px; }
-	.post-card[data-category="Launch"] { border-color: var(--faf-orange); border-left-width: 4px; }
-	.post-card[data-category="Engineering"] { border-color: #00D4D4; border-left-width: 4px; }
-	.post-card[data-category="IDE Integration"] { border-color: #4A90E2; border-left-width: 4px; }
-	.post-card[data-category="Case Study"] { border-color: #27c93f; border-left-width: 4px; }
-	.post-card[data-category="Story"] { border-color: var(--faf-orange); border-left-width: 4px; }
-	.post-card[data-category="Origin Story"] { border-color: var(--faf-orange); border-left-width: 4px; }
-	.post-card[data-category="Press Release"] { border-color: #333; border-left-width: 4px; }
-	.post-card[data-category="xAI Edition"] { border-color: #E74C3C; border-left-width: 4px; }
-	.post-card[data-category="Grok Edition"] { border-color: #E74C3C; border-left-width: 4px; }
-	.post-card[data-category="Technical Analysis"] { border-color: #00D4D4; border-left-width: 4px; }
-	.post-card[data-category="Format Victory"] { border-color: #FFD700; border-left-width: 4px; }
-	.post-card[data-category="Ecosystem"] { border-color: #27c93f; border-left-width: 4px; }
-	.post-card[data-category="First"] { border-color: #FFD700; border-left-width: 4px; }
-	.post-card[data-category="Enhancement"] { border-color: #4A90E2; border-left-width: 4px; }
+	/* Category border colours (11 consolidated) */
+	.post-card[data-category="Release"] { border-color: var(--faf-orange); }
+	.post-card[data-category="Launch"] { border-color: var(--faf-orange); }
+	.post-card[data-category="Foundation"] { border-color: #27c93f; }
+	.post-card[data-category="Research"] { border-color: #27c93f; }
+	.post-card[data-category="Press Release"] { border-color: #333; }
+	.post-card[data-category="Milestone"] { border-color: #FFD700; }
+	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
+	.post-card[data-category="Grok"] { border-color: #E74C3C; }
+	.post-card[data-category="Story"] { border-color: var(--faf-orange); }
+	.post-card[data-category="Interop"] { border-color: #00D4D4; }
+	.post-card[data-category="Engineering"] { border-color: #00D4D4; }
 
 	.post-emoji {
 		font-size: 3rem;
