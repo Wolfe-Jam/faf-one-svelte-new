@@ -191,7 +191,12 @@ Enterprise (+12 slots = 33 total)
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: #FEFCF8 !important;
+		color: #333 !important;
+	}
+
+	:global(html) {
+		background: #FEFCF8 !important;
 	}
 
 	.blog-post {
