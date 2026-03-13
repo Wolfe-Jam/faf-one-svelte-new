@@ -187,7 +187,7 @@ Enterprise (+12 slots = 33 total)
 				AI needed a Standard for Context. It just got one.
 			</p>
 			<p>
-				Built with .faf ☑️ One file to define them all. 🏎️
+				Built with .faf ☑️ One file to define them all. ✍️
 			</p>
 		</section>
 	</article>
