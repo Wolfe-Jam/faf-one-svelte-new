@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/faf-auto-edition',
+			title: 'The faf auto Edition',
+			date: 'March 12, 2026',
+			timestamp: '2026-03-12',
+			excerpt: 'One command. Zero to 100%. faf auto now pulls your project name, goal, and version from manifest files automatically. No questions, no prompts, no manual entry. 1,108/1,108 tests.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/claude-md-not-a-foundation',
 			title: 'Your CLAUDE.md Is Not a Foundation',
 			date: 'March 12, 2026',
