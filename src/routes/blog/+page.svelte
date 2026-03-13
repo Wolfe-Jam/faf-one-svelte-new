@@ -578,7 +578,7 @@
 	const categoryOrder = ['Release', 'Launch', 'Foundation', 'Research', 'Milestone', 'Interop', 'Story', 'Grok', 'WJTTC', 'Engineering', 'Press Release'];
 
 	const categoryColor = {
-		'Release': 'var(--faf-orange)',
+		'Release': '#00B8B8',
 		'Launch': 'var(--faf-orange)',
 		'Foundation': '#27c93f',
 		'Research': '#4A90E2',
@@ -748,7 +748,7 @@
 	}
 
 	/* Category border colours (11 consolidated) */
-	.post-card[data-category="Release"] { border-color: var(--faf-orange); }
+	.post-card[data-category="Release"] { border-color: #00B8B8; }
 	.post-card[data-category="Launch"] { border-color: var(--faf-orange); }
 	.post-card[data-category="Foundation"] { border-color: #27c93f; }
 	.post-card[data-category="Research"] { border-color: #4A90E2; }
