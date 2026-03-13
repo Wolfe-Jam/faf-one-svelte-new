@@ -647,7 +647,7 @@
 					<span class="list-date">{post.timestamp}</span>
 					<span class="list-emoji">{post.emoji}</span>
 					<span class="list-title">{post.title}</span>
-					<span class="list-category" style="color: {categoryColor[post.category]}">{post.category}</span>
+					<span class="list-category" style="background: {categoryColor[post.category]}">{post.category}</span>
 				</a>
 			{/each}
 		</div>
@@ -929,12 +929,16 @@
 	}
 
 	.list-category {
-		font-size: 0.75rem;
-		color: #999;
+		font-size: 0.65rem;
+		color: #fff;
 		flex-shrink: 0;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		font-weight: 500;
+		font-weight: 600;
+		padding: 0.2rem 0.5rem;
+		border-radius: 4px;
+		min-width: 4.5rem;
+		text-align: center;
 	}
 
 	.dark-row {
