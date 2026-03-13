@@ -47,9 +47,14 @@
 		<section>
 			<h2>The One Command</h2>
 
-			<div class="copy-box" onclick={() => copyCommand('npx faf-cli auto', 0)}>
-				<code class="copy-code">npx faf-cli auto</code>
+			<div class="copy-box" onclick={() => copyCommand('bunx faf-cli auto', 0)}>
+				<code class="copy-code">bunx faf-cli auto</code>
 				<button class="copy-btn">{copiedIndex === 0 ? 'Copied!' : 'Copy'}</button>
+			</div>
+
+			<div class="copy-box alt" onclick={() => copyCommand('npx faf-cli auto', 1)}>
+				<code class="copy-code">npx faf-cli auto</code>
+				<button class="copy-btn">{copiedIndex === 1 ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>That's it. No install required. Run it in any project directory and watch:</p>
@@ -101,16 +106,16 @@
 		<section>
 			<h2>The Full Pipeline</h2>
 
-			<div class="copy-box" onclick={() => copyCommand('faf auto', 1)}>
+			<div class="copy-box" onclick={() => copyCommand('faf auto', 2)}>
 				<code class="copy-code">faf auto</code>
-				<button class="copy-btn">{copiedIndex === 1 ? 'Copied!' : 'Copy'}</button>
+				<button class="copy-btn">{copiedIndex === 2 ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>For existing projects — already have a <code>project.faf</code>? <code>faf auto</code> enhances it. Detects what's missing, fills it in, re-scores. Idempotent — run it as many times as you want.</p>
 
-			<div class="copy-box" onclick={() => copyCommand('faf bi-sync', 2)}>
+			<div class="copy-box" onclick={() => copyCommand('faf bi-sync', 3)}>
 				<code class="copy-code">faf bi-sync</code>
-				<button class="copy-btn">{copiedIndex === 2 ? 'Copied!' : 'Copy'}</button>
+				<button class="copy-btn">{copiedIndex === 3 ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>Keep CLAUDE.md synchronized. 8ms. Deterministic. No string surgery.</p>
@@ -119,18 +124,23 @@
 		<section>
 			<h2>Try It</h2>
 
-			<div class="copy-box" onclick={() => copyCommand('npx faf-cli auto', 3)}>
-				<code class="copy-code">npx faf-cli auto</code>
-				<button class="copy-btn">{copiedIndex === 3 ? 'Copied!' : 'Copy'}</button>
+			<div class="copy-box" onclick={() => copyCommand('bunx faf-cli auto', 4)}>
+				<code class="copy-code">bunx faf-cli auto</code>
+				<button class="copy-btn">{copiedIndex === 4 ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>No install. No clone. One command. Your project gets a <code>project.faf</code>, a synced <code>CLAUDE.md</code>, and a score. Done.</p>
 
 			<p>For daily use:</p>
 
-			<div class="copy-box" onclick={() => copyCommand('npm install -g faf-cli', 4)}>
+			<div class="copy-box" onclick={() => copyCommand('bun install -g faf-cli', 5)}>
+				<code class="copy-code">bun install -g faf-cli</code>
+				<button class="copy-btn">{copiedIndex === 5 ? 'Copied!' : 'Copy'}</button>
+			</div>
+
+			<div class="copy-box alt" onclick={() => copyCommand('npm install -g faf-cli', 6)}>
 				<code class="copy-code">npm install -g faf-cli</code>
-				<button class="copy-btn">{copiedIndex === 4 ? 'Copied!' : 'Copy'}</button>
+				<button class="copy-btn">{copiedIndex === 6 ? 'Copied!' : 'Copy'}</button>
 			</div>
 		</section>
 
@@ -344,6 +354,16 @@
 
 	.copy-box:hover {
 		border-color: #555;
+	}
+
+	.copy-box.alt {
+		background: #222;
+		border-color: #2a2a2a;
+		margin-top: -0.25rem;
+	}
+
+	.copy-box.alt .copy-code {
+		color: #888;
 	}
 
 	.copy-code {

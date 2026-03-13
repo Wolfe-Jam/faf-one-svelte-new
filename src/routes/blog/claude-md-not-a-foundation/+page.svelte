@@ -155,9 +155,14 @@ project.faf  → Structure for ANY AI (foundation)`}</code></pre>
 			<p>You don't have to throw away your CLAUDE.md. Keep it. It's good at what it does.</p>
 			<p>Just give it a foundation.</p>
 
-			<div class="copy-box" onclick={() => copyCommand('npx faf-cli auto', 1)}>
-				<code class="copy-code">npx faf-cli auto</code>
+			<div class="copy-box" onclick={() => copyCommand('bunx faf-cli auto', 1)}>
+				<code class="copy-code">bunx faf-cli auto</code>
 				<button class="copy-btn">{copiedIndex === 1 ? 'Copied!' : 'Copy'}</button>
+			</div>
+
+			<div class="copy-box alt" onclick={() => copyCommand('npx faf-cli auto', 2)}>
+				<code class="copy-code">npx faf-cli auto</code>
+				<button class="copy-btn">{copiedIndex === 2 ? 'Copied!' : 'Copy'}</button>
 			</div>
 
 			<p>One command. Reads your project. Creates <code>project.faf</code>. Scores it. Syncs CLAUDE.md. Done.</p>
@@ -379,6 +384,16 @@ project.faf  → Structure for ANY AI (foundation)`}</code></pre>
 
 	.copy-box:hover {
 		border-color: #555;
+	}
+
+	.copy-box.alt {
+		background: #222;
+		border-color: #2a2a2a;
+		margin-top: -0.25rem;
+	}
+
+	.copy-box.alt .copy-code {
+		color: #888;
 	}
 
 	.copy-code {
