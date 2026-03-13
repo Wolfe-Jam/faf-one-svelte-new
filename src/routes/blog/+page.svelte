@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/claude-md-not-a-foundation',
+			title: 'Your CLAUDE.md Is Not a Foundation',
+			date: 'March 12, 2026',
+			timestamp: '2026-03-12',
+			excerpt: 'It\'s an instruction manual. And that\'s fine — but it\'s not enough. You can\'t score prose. You can\'t sync it in 10ms. You can\'t validate its structure. MD explains. FAF defines. AI consumes.',
+			emoji: '🏗️',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/mk4-engine',
 			title: 'The Mk4 Championship Engine',
 			date: 'March 12, 2026',
