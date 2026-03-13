@@ -52,7 +52,7 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>1,100/1,100 Tests Passing</strong> •
+				<strong>1,143/1,143 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
 		</div>

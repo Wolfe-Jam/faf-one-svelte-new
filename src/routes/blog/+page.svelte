@@ -1,6 +1,15 @@
 <script>
 	const posts = [
 		{
+			slug: 'blog/best-context-under-the-bun',
+			title: 'Best Context Under the Bun',
+			date: 'March 13, 2026',
+			timestamp: '2026-03-13',
+			excerpt: 'bunx faf-cli auto — 0% to 100% AI context in 0.5s. Same toolchain Claude Code ships on. Zero code changes. 35 Bun compatibility tests. 1,143/1,143 tests passing.',
+			emoji: '🥐',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/faf-auto-edition',
 			title: 'The faf auto Edition',
 			date: 'March 12, 2026',
