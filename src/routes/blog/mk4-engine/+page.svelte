@@ -54,10 +54,12 @@
 
 			<p>When your AI misses your conventions, unstated goals, or architectural blind spots, it doesn't stop &mdash; it <strong>hallucinates with high confidence</strong>.</p>
 
-			<div class="insight-box danger">
-				<h3>$5,460/year per developer</h3>
-				<p>The cost of re-explaining your project every session.</p>
-			</div>
+			<a href="/daaft" class="insight-link">
+				<div class="insight-box danger">
+					<h3>$5,460/year per developer</h3>
+					<p>The cost of re-explaining your project every session.</p>
+				</div>
+			</a>
 
 			<p>We call this <strong>Context-Impairment</strong>. And today, the FAF-1 team is shipping the cure.</p>
 		</section>
@@ -500,6 +502,20 @@ Enterprise (+12 slots = 33 total)
 
 	a:hover {
 		text-decoration: none;
+	}
+
+	.insight-link {
+		text-decoration: none;
+	}
+
+	.insight-link:hover .insight-box {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.insight-link .insight-box {
+		transition: all 0.2s;
+		cursor: pointer;
 	}
 
 	@media (max-width: 768px) {
