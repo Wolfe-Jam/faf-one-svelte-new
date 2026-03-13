@@ -580,15 +580,15 @@
 	const categoryColor = {
 		'Release': '#00B8B8',
 		'Launch': 'var(--faf-orange)',
-		'Foundation': '#27c93f',
+		'Foundation': '#1D8348',
 		'Research': '#4A90E2',
-		'Press Release': '#333',
-		'Milestone': '#FFD700',
+		'Press Release': '#666',
+		'Milestone': '#B8860B',
 		'WJTTC': '#E74C3C',
 		'Grok': '#111',
-		'Story': 'var(--faf-orange)',
-		'Interop': '#9B59B6',
-		'Engineering': '#1a2744'
+		'Story': '#8B5A2B',
+		'Interop': '#7D3C98',
+		'Engineering': '#4A5568'
 	};
 
 	let sortedPosts = $derived(
@@ -750,15 +750,15 @@
 	/* Category border colours (11 consolidated) */
 	.post-card[data-category="Release"] { border-color: #00B8B8; }
 	.post-card[data-category="Launch"] { border-color: var(--faf-orange); }
-	.post-card[data-category="Foundation"] { border-color: #27c93f; }
+	.post-card[data-category="Foundation"] { border-color: #1D8348; }
 	.post-card[data-category="Research"] { border-color: #4A90E2; }
-	.post-card[data-category="Press Release"] { border-color: #333; }
-	.post-card[data-category="Milestone"] { border-color: #FFD700; }
+	.post-card[data-category="Press Release"] { border-color: #666; }
+	.post-card[data-category="Milestone"] { border-color: #B8860B; }
 	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
 	.post-card[data-category="Grok"] { border-color: #111; }
-	.post-card[data-category="Story"] { border-color: var(--faf-orange); }
-	.post-card[data-category="Interop"] { border-color: #9B59B6; }
-	.post-card[data-category="Engineering"] { border-color: #1a2744; }
+	.post-card[data-category="Story"] { border-color: #8B5A2B; }
+	.post-card[data-category="Interop"] { border-color: #7D3C98; }
+	.post-card[data-category="Engineering"] { border-color: #4A5568; }
 
 	.post-emoji {
 		font-size: 3rem;
