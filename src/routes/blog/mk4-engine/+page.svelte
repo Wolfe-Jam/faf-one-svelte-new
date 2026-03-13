@@ -345,7 +345,7 @@ project.faf     → AI context`}</code></pre>
 	}
 
 	.category.launch {
-		background: #27c93f;
+		background: #00D4D4;
 		color: white;
 	}
 
@@ -399,7 +399,7 @@ project.faf     → AI context`}</code></pre>
 
 	pre {
 		background: #1a1a1a;
-		color: #00ff88;
+		color: #00D4D4;
 		padding: 1.25rem;
 		border-radius: 8px;
 		overflow-x: auto;
@@ -413,8 +413,8 @@ project.faf     → AI context`}</code></pre>
 	}
 
 	.insight-box {
-		background: #f0fff0;
-		border: 2px solid #00aa44;
+		background: #f0fffe;
+		border: 2px solid #00D4D4;
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -422,7 +422,7 @@ project.faf     → AI context`}</code></pre>
 	}
 
 	.insight-box h3 {
-		color: #00aa44;
+		color: #00B8B8;
 		margin: 0 0 0.75rem 0;
 		font-size: 1.4rem;
 	}
@@ -430,20 +430,20 @@ project.faf     → AI context`}</code></pre>
 	.insight-box p {
 		margin: 0;
 		font-size: 1.2rem;
-		color: #006622;
+		color: #008B8B;
 	}
 
 	.insight-box.danger {
-		background: #f0fff0;
-		border-color: #27c93f;
+		background: #f0fffe;
+		border-color: #00D4D4;
 	}
 
 	.insight-box.danger h3 {
-		color: #27c93f;
+		color: #00D4D4;
 	}
 
 	.insight-box.danger p {
-		color: #1a8a2e;
+		color: #008B8B;
 	}
 
 	/* Frontier 4 Grid */
