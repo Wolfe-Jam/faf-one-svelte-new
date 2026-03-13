@@ -581,7 +581,7 @@
 		'Release': 'var(--faf-orange)',
 		'Launch': 'var(--faf-orange)',
 		'Foundation': '#27c93f',
-		'Research': '#27c93f',
+		'Research': '#4A90E2',
 		'Press Release': '#333',
 		'Milestone': '#FFD700',
 		'WJTTC': '#E74C3C',
@@ -751,7 +751,7 @@
 	.post-card[data-category="Release"] { border-color: var(--faf-orange); }
 	.post-card[data-category="Launch"] { border-color: var(--faf-orange); }
 	.post-card[data-category="Foundation"] { border-color: #27c93f; }
-	.post-card[data-category="Research"] { border-color: #27c93f; }
+	.post-card[data-category="Research"] { border-color: #4A90E2; }
 	.post-card[data-category="Press Release"] { border-color: #333; }
 	.post-card[data-category="Milestone"] { border-color: #FFD700; }
 	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
@@ -838,9 +838,6 @@
 	.toggle-group {
 		display: flex;
 		gap: 0.25rem;
-		background: #f0f0f0;
-		border-radius: 8px;
-		padding: 0.25rem;
 	}
 
 	.toggle-btn {
@@ -848,17 +845,18 @@
 		border: none;
 		background: transparent;
 		border-radius: 6px;
-		font-size: 0.875rem;
+		font-size: 0.8rem;
 		font-weight: 600;
-		color: #666;
+		color: #999;
 		cursor: pointer;
 		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
 	}
 
 	.toggle-btn.active {
-		background: white;
-		color: #000;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		background: #333;
+		color: #fff;
 	}
 
 	.post-count {
