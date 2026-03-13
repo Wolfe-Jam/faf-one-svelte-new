@@ -1,4 +1,7 @@
 <script>
+	let view = $state('list');
+	let sortBy = $state('newest');
+
 	const posts = [
 		{
 			slug: 'blog/bun-sticky-bunx-edition',
@@ -571,6 +574,10 @@
 			category: 'Press Release'
 		}
 	];
+
+	let sortedPosts = $derived(
+		sortBy === 'oldest' ? [...posts].reverse() : posts
+	);
 </script>
 
 <svelte:head>
@@ -587,8 +594,21 @@
 		<h1><span class="blog-text">Blog</span> <span class="ampersand">&</span> <span class="press-text">Press</span></h1>
 		<div class="subtitle">Stories, press releases, and updates from the FAF team</div>
 
+		<div class="toolbar">
+			<div class="toggle-group">
+				<button class="toggle-btn" class:active={sortBy === 'newest'} onclick={() => sortBy = 'newest'}>Newest</button>
+				<button class="toggle-btn" class:active={sortBy === 'oldest'} onclick={() => sortBy = 'oldest'}>Oldest</button>
+			</div>
+			<div class="toggle-group">
+				<button class="toggle-btn" class:active={view === 'list'} onclick={() => view = 'list'}>List</button>
+				<button class="toggle-btn" class:active={view === 'cards'} onclick={() => view = 'cards'}>Cards</button>
+			</div>
+			<span class="post-count">{posts.length} posts</span>
+		</div>
+
+		{#if view === 'cards'}
 		<div class="posts-grid">
-			{#each posts as post}
+			{#each sortedPosts as post}
 				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'} class:academic-card={post.theme === 'academic'} data-category={post.category}>
 					<div class="post-emoji">{post.emoji}</div>
 					<div class="post-category">{post.category}</div>
@@ -598,6 +618,18 @@
 				</a>
 			{/each}
 		</div>
+		{:else}
+		<div class="posts-list">
+			{#each sortedPosts as post}
+				<a href="/{post.slug}" class="list-row" class:dark-row={post.theme === 'dark'} data-category={post.category}>
+					<span class="list-date">{post.timestamp}</span>
+					<span class="list-emoji">{post.emoji}</span>
+					<span class="list-title">{post.title}</span>
+					<span class="list-category">{post.category}</span>
+				</a>
+			{/each}
+		</div>
+		{/if}
 
 		<div class="archive-note">
 			<p>More stories coming soon...</p>
@@ -783,6 +815,131 @@
 		font-style: italic;
 	}
 
+	/* Toolbar */
+	.toolbar {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 2rem;
+	}
+
+	.toggle-group {
+		display: flex;
+		gap: 0.25rem;
+		background: #f0f0f0;
+		border-radius: 8px;
+		padding: 0.25rem;
+	}
+
+	.toggle-btn {
+		padding: 0.4rem 1rem;
+		border: none;
+		background: transparent;
+		border-radius: 6px;
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: #666;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.toggle-btn.active {
+		background: white;
+		color: #000;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+
+	.post-count {
+		font-size: 0.8rem;
+		color: #999;
+		margin-left: auto;
+	}
+
+	/* List view */
+	.posts-list {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 3rem;
+	}
+
+	.list-row {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.75rem 1rem;
+		text-decoration: none;
+		color: inherit;
+		border-bottom: 1px solid #f0f0f0;
+		transition: background 0.15s;
+	}
+
+	.list-row:first-child {
+		border-top: 1px solid #f0f0f0;
+	}
+
+	.list-row:hover {
+		background: #fafafa;
+	}
+
+	.list-date {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.8rem;
+		color: #999;
+		flex-shrink: 0;
+		width: 6.5rem;
+	}
+
+	.list-emoji {
+		font-size: 1.2rem;
+		flex-shrink: 0;
+		width: 1.5rem;
+		text-align: center;
+	}
+
+	.list-title {
+		flex: 1;
+		font-weight: 600;
+		color: #111;
+		font-size: 0.95rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.list-row:hover .list-title {
+		color: var(--faf-orange);
+	}
+
+	.list-category {
+		font-size: 0.75rem;
+		color: #999;
+		flex-shrink: 0;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 500;
+	}
+
+	.dark-row {
+		background: #0a0a0a;
+		border-color: #222;
+	}
+
+	.dark-row .list-title {
+		color: #e5e5e5;
+	}
+
+	.dark-row .list-date {
+		color: #666;
+	}
+
+	.dark-row:hover {
+		background: #111;
+	}
+
+	.dark-row:hover .list-title {
+		color: var(--faf-orange);
+	}
+
 	.archive-note {
 		text-align: center;
 		padding: 2rem;
@@ -843,6 +1000,19 @@
 
 		.container {
 			padding: 0 1rem;
+		}
+
+		.list-category {
+			display: none;
+		}
+
+		.list-title {
+			white-space: normal;
+		}
+
+		.list-date {
+			width: 5.5rem;
+			font-size: 0.75rem;
 		}
 	}
 </style>
