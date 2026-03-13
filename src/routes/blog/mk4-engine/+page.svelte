@@ -308,7 +308,7 @@ project.faf     → AI context`}</code></pre>
 
 	.version-tag {
 		display: inline-block;
-		background: #FF6B35;
+		background: #1a2744;
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
