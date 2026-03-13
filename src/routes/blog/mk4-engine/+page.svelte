@@ -22,6 +22,8 @@
 	<meta property="og:description" content="One Rust engine, 33 slots, 596 tests. Claude, Gemini, OpenAI, and Grok finally speak the same language." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/mk4-engine-hero.jpg" />
+	<meta name="twitter:image" content="https://faf.one/blog/mk4-engine-hero.jpg" />
 </svelte:head>
 
 <div class="blog-post">
@@ -40,6 +42,11 @@
 			<span class="category launch">Launch</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/mk4-engine-hero.jpg" alt="The chaos of Context funneling into a single point of light — .faf" />
+		<p class="hero-caption">In September 2025 we produced this vision. Today we delivered on it.</p>
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -238,6 +245,27 @@ Enterprise (+12 slots = 33 total)
 		margin: 0.5rem 0;
 		color: #000;
 		line-height: 1.3;
+	}
+
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.hero-caption {
+		text-align: center;
+		font-size: 0.95rem;
+		font-style: italic;
+		color: #666;
+		margin: 0.75rem 0 0 0;
+		padding: 0 1rem;
 	}
 
 	.rusty-subtitle {
