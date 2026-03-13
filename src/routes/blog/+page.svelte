@@ -587,8 +587,8 @@
 		'WJTTC': '#E74C3C',
 		'Grok': '#111',
 		'Story': 'var(--faf-orange)',
-		'Interop': '#00D4D4',
-		'Engineering': '#00D4D4'
+		'Interop': '#9B59B6',
+		'Engineering': '#1a2744'
 	};
 
 	let sortedPosts = $derived(
@@ -757,8 +757,8 @@
 	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
 	.post-card[data-category="Grok"] { border-color: #111; }
 	.post-card[data-category="Story"] { border-color: var(--faf-orange); }
-	.post-card[data-category="Interop"] { border-color: #00D4D4; }
-	.post-card[data-category="Engineering"] { border-color: #00D4D4; }
+	.post-card[data-category="Interop"] { border-color: #9B59B6; }
+	.post-card[data-category="Engineering"] { border-color: #1a2744; }
 
 	.post-emoji {
 		font-size: 3rem;
