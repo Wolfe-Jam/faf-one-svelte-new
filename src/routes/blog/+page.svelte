@@ -724,13 +724,13 @@
 
 	.posts-grid {
 		display: grid;
-		gap: 2rem;
+		gap: 1rem;
 		margin-bottom: 3rem;
 	}
 
 	.post-card {
 		background: #f9f9f9;
-		padding: 2.5rem;
+		padding: 1.25rem 1.5rem;
 		border-radius: 12px;
 		border: 1px solid #e0e0e0;
 		border-left: 4px solid var(--faf-orange);
@@ -761,20 +761,20 @@
 	.post-card[data-category="Engineering"] { border-color: #4A5568; }
 
 	.post-emoji {
-		font-size: 3rem;
-		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.post-category {
 		display: inline-block;
 		color: white;
-		padding: 0.25rem 0.75rem;
-		border-radius: 20px;
-		font-size: 0.875rem;
+		padding: 0.15rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.7rem;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.post-card[href*="the-missing-format"] .post-category {
@@ -808,17 +808,17 @@
 	}
 
 	.post-card h2 {
-		font-size: 1.75rem;
-		margin: 0 0 1rem;
+		font-size: 1.25rem;
+		margin: 0 0 0.5rem;
 		color: var(--faf-black);
 		font-weight: 700;
 	}
 
 	.post-excerpt {
 		color: #666;
-		line-height: 1.6;
-		margin: 0 0 1.5rem;
-		font-size: 1.0625rem;
+		line-height: 1.5;
+		margin: 0 0 0.75rem;
+		font-size: 0.9rem;
 	}
 
 	.post-date {
