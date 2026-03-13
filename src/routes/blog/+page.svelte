@@ -643,7 +643,7 @@
 		<div class="posts-list">
 			{#each sortedPosts as post}
 				<a href="/{post.slug}" class="list-row" class:dark-row={post.theme === 'dark'} data-category={post.category}>
-					<span class="list-dot" style="background: {categoryColor[post.category]}"></span>
+					<span class="list-dot"></span>
 					<span class="list-date">{post.timestamp}</span>
 					<span class="list-emoji">{post.emoji}</span>
 					<span class="list-title">{post.title}</span>
@@ -898,6 +898,7 @@
 		height: 8px;
 		border-radius: 50%;
 		flex-shrink: 0;
+		background: #333;
 	}
 
 	.list-date {
