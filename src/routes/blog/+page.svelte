@@ -585,7 +585,7 @@
 		'Press Release': '#333',
 		'Milestone': '#FFD700',
 		'WJTTC': '#E74C3C',
-		'Grok': '#E74C3C',
+		'Grok': '#111',
 		'Story': 'var(--faf-orange)',
 		'Interop': '#00D4D4',
 		'Engineering': '#00D4D4'
@@ -755,7 +755,7 @@
 	.post-card[data-category="Press Release"] { border-color: #333; }
 	.post-card[data-category="Milestone"] { border-color: #FFD700; }
 	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
-	.post-card[data-category="Grok"] { border-color: #E74C3C; }
+	.post-card[data-category="Grok"] { border-color: #111; }
 	.post-card[data-category="Story"] { border-color: var(--faf-orange); }
 	.post-card[data-category="Interop"] { border-color: #00D4D4; }
 	.post-card[data-category="Engineering"] { border-color: #00D4D4; }
