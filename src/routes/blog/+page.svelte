@@ -583,7 +583,7 @@
 		'Foundation': '#1D8348',
 		'Research': '#4A90E2',
 		'Press Release': '#666',
-		'Milestone': '#B8860B',
+		'Milestone': '#FFD700',
 		'WJTTC': '#E74C3C',
 		'Grok': '#111',
 		'Story': '#8B5A2B',
@@ -647,7 +647,7 @@
 					<span class="list-date">{post.timestamp}</span>
 					<span class="list-emoji">{post.emoji}</span>
 					<span class="list-title">{post.title}</span>
-					<span class="list-category" style="background: {categoryColor[post.category]}">{post.category}</span>
+					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: #111' : ''}">{post.category}</span>
 				</a>
 			{/each}
 		</div>
@@ -753,7 +753,7 @@
 	.post-card[data-category="Foundation"] { border-color: #1D8348; }
 	.post-card[data-category="Research"] { border-color: #4A90E2; }
 	.post-card[data-category="Press Release"] { border-color: #666; }
-	.post-card[data-category="Milestone"] { border-color: #B8860B; }
+	.post-card[data-category="Milestone"] { border-color: #FFD700; }
 	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
 	.post-card[data-category="Grok"] { border-color: #111; }
 	.post-card[data-category="Story"] { border-color: #8B5A2B; }
