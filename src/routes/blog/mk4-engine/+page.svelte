@@ -172,7 +172,7 @@ Enterprise (+12 slots = 33 total)
 				<li><strong>21 slots</strong> &mdash; Base tier (free forever)</li>
 				<li><strong>4 platforms</strong> &mdash; Claude, Gemini, OpenAI, Grok</li>
 				<li><strong>1 engine</strong> &mdash; Rust, compiled once, runs everywhere</li>
-				<li><strong>91%</strong> &mdash; Token reclaim. Measured. Not claimed.</li>
+				<li><strong>91%</strong> &mdash; Token reclaim out the gate. Measured. Not claimed. Relentless pursuit to 100% <code>faf auto</code>.</li>
 			</ul>
 		</section>
 
