@@ -31,6 +31,7 @@
 		</div>
 
 		<h1>The Mk4 Championship Engine</h1>
+		<p class="rusty-subtitle">the Rusty engine</p>
 		<p class="version-tag">Unified Scoring IP</p>
 		<p class="subtitle">One engine. Four frontiers. Zero context drift.</p>
 		<div class="meta">
@@ -234,6 +235,14 @@ Enterprise (+12 slots = 33 total)
 		margin: 0.5rem 0;
 		color: #000;
 		line-height: 1.3;
+	}
+
+	.rusty-subtitle {
+		font-size: 1.4rem;
+		color: #000;
+		font-weight: 600;
+		font-style: italic;
+		margin: 0.25rem 0 0.75rem 0;
 	}
 
 	.version-tag {
