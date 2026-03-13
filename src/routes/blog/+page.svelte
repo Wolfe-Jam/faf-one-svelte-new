@@ -575,8 +575,28 @@
 		}
 	];
 
+	const categoryOrder = ['Release', 'Launch', 'Foundation', 'Research', 'Milestone', 'Interop', 'Story', 'Grok', 'WJTTC', 'Engineering', 'Press Release'];
+
+	const categoryColor = {
+		'Release': 'var(--faf-orange)',
+		'Launch': 'var(--faf-orange)',
+		'Foundation': '#27c93f',
+		'Research': '#27c93f',
+		'Press Release': '#333',
+		'Milestone': '#FFD700',
+		'WJTTC': '#E74C3C',
+		'Grok': '#E74C3C',
+		'Story': 'var(--faf-orange)',
+		'Interop': '#00D4D4',
+		'Engineering': '#00D4D4'
+	};
+
 	let sortedPosts = $derived(
-		sortBy === 'oldest' ? [...posts].reverse() : posts
+		sortBy === 'oldest'
+			? [...posts].reverse()
+			: sortBy === 'category'
+				? [...posts].sort((a, b) => categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category))
+				: posts
 	);
 </script>
 
@@ -598,6 +618,7 @@
 			<div class="toggle-group">
 				<button class="toggle-btn" class:active={sortBy === 'newest'} onclick={() => sortBy = 'newest'}>Newest</button>
 				<button class="toggle-btn" class:active={sortBy === 'oldest'} onclick={() => sortBy = 'oldest'}>Oldest</button>
+				<button class="toggle-btn" class:active={sortBy === 'category'} onclick={() => sortBy = 'category'}>Category</button>
 			</div>
 			<div class="toggle-group">
 				<button class="toggle-btn" class:active={view === 'list'} onclick={() => view = 'list'}>List</button>
@@ -622,10 +643,11 @@
 		<div class="posts-list">
 			{#each sortedPosts as post}
 				<a href="/{post.slug}" class="list-row" class:dark-row={post.theme === 'dark'} data-category={post.category}>
+					<span class="list-dot" style="background: {categoryColor[post.category]}"></span>
 					<span class="list-date">{post.timestamp}</span>
 					<span class="list-emoji">{post.emoji}</span>
 					<span class="list-title">{post.title}</span>
-					<span class="list-category">{post.category}</span>
+					<span class="list-category" style="color: {categoryColor[post.category]}">{post.category}</span>
 				</a>
 			{/each}
 		</div>
@@ -869,6 +891,13 @@
 
 	.list-row:hover {
 		background: #fafafa;
+	}
+
+	.list-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		flex-shrink: 0;
 	}
 
 	.list-date {
