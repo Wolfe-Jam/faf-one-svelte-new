@@ -169,6 +169,17 @@
 			<p>Rust defines. Bun delivers. WASM runs everywhere.</p>
 		</section>
 
+		<section class="share-section">
+			<h2>Share</h2>
+			<div class="share-buttons">
+				<a href="https://twitter.com/intent/tweet?text=faf-cli%20now%20ships%20as%20standalone%20binaries.%20Zero%20runtime%20dependencies.%20Same%20pattern%20as%20Claude%20Code.&url=https://faf.one/blog/bun-compiled-binaries" target="_blank" rel="noopener" class="share-btn share-x">Post on X</a>
+				<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://faf.one/blog/bun-compiled-binaries" target="_blank" rel="noopener" class="share-btn share-linkedin">Share on LinkedIn</a>
+				<button class="share-btn share-copy" onclick={() => copyText('https://faf.one/blog/bun-compiled-binaries', 'share-link')}>
+					{copiedId === 'share-link' ? 'Copied!' : 'Copy Link'}
+				</button>
+			</div>
+		</section>
+
 		<section class="footer-note">
 			<p>Built with .faf ☑️ One download. It works. 🏎️</p>
 		</section>
@@ -496,6 +507,60 @@
 	}
 	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
+
+	.share-section {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid #eee;
+	}
+
+	.share-section h2 {
+		font-size: 1.4rem;
+		margin: 0 0 1rem 0;
+		border: none;
+		padding: 0;
+	}
+
+	.share-buttons {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		cursor: pointer;
+		transition: opacity 0.2s;
+		border: none;
+		font-family: inherit;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+	}
+
+	.share-x {
+		background: #000;
+		color: #fff;
+	}
+
+	.share-linkedin {
+		background: #0A66C2;
+		color: #fff;
+	}
+
+	.share-copy {
+		background: #f0f0f0;
+		color: #333;
+		border: 1px solid #ddd;
+	}
 
 	.footer-note {
 		margin-top: 4rem;
