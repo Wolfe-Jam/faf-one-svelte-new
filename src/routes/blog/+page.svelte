@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/bun-compiled-binaries',
+			title: 'Compiled Binaries Edition',
+			date: 'March 14, 2026',
+			timestamp: '2026-03-14',
+			excerpt: 'faf-cli now ships as standalone binaries. macOS, Linux, Windows. Zero runtime dependencies. One download, it works. Same pattern as Claude Code. 1,143/1,143 tests.',
+			emoji: '📦',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/bun-sticky-bunx-edition',
 			title: 'Bunx Edition',
 			date: 'March 13, 2026',
