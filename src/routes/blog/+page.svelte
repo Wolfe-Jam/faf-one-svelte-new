@@ -10,7 +10,7 @@
 			timestamp: '2026-03-19',
 			excerpt: 'The definitive binary format for AI context. String table, chunk classification, enterprise scale. IFF architecture meets the AI era. faf-rust-sdk v2.0.0 — 313 tests across both SDKs.',
 			emoji: '🦀',
-			category: 'Launch'
+			category: 'Milestone'
 		},
 		{
 			slug: 'blog/bun-compiled-binaries',

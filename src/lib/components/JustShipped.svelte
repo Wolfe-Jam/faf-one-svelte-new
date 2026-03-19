@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- FAFb The Definitive Edition v2.0.0 -->
+		<div class="chrome-featured rust-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🦀 faf-rust-sdk v2.0.0 - FAFb The Definitive Edition</h3>
+					<span class="chrome-badge rust-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">The definitive binary format for AI context. String table, chunk classification (DNA/Context/Pointer), enterprise scale. 313 tests across Rust + WASM SDKs.</p>
+			<a href="/blog/fafb-definitive-edition" class="chrome-install rust-cta">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- Mk4 Championship Engine -->
 		<div class="chrome-featured rust-featured">
 			<div class="chrome-header">

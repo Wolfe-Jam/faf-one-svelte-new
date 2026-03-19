@@ -22,6 +22,8 @@
 	<meta property="og:description" content="The definitive binary format for AI context. IFF architecture meets the AI era." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/fafb-definitive-edition-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/fafb-definitive-edition-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -36,9 +38,13 @@
 		<div class="meta">
 			<time datetime="2026-03-19">March 19, 2026</time>
 			<span class="separator">•</span>
-			<span class="category launch">Launch</span>
+			<span class="category milestone">Milestone</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/fafb-definitive-edition-hero.png" alt="FAFb architecture diagram — compile flow from .faf YAML to FAFb binary with string table, DNA/Context/Pointer classification" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -259,8 +265,9 @@ const json = decompile_fafb(bytes);`}</code></pre>
 		font-size: 0.85rem;
 	}
 
-	.category.launch {
-		background: #FF6B35;
+	.category.milestone {
+		background: #FFD700;
+		color: #000;
 	}
 
 	.post-content {
@@ -418,6 +425,17 @@ const json = decompile_fafb(bytes);`}</code></pre>
 	}
 	.copy-btn:hover { background: rgba(206, 66, 43, 0.3); border-color: #CE422B; }
 	.copy-btn:active { transform: scale(0.95); }
+
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
 
 	@media (max-width: 768px) {
 		h1 {
