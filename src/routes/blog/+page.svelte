@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/compiler-is-the-spec',
+			title: 'The Compiler is the Spec',
+			date: 'March 19, 2026',
+			timestamp: '2026-03-19',
+			excerpt: '322KB of WASM. No server. No API calls. The same Rust compiler runs in your browser, at the edge, in Node, in Bun. One source of truth. faf-wasm-sdk v2.0.0.',
+			emoji: '🔧',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/fafb-definitive-edition',
 			title: 'FAFb The Definitive Edition',
 			date: 'March 19, 2026',
