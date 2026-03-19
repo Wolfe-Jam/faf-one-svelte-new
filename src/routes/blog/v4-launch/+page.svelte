@@ -275,6 +275,9 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 			<p>To everyone who filed issues, suggested features, pointed out bugs, and used FAF in production before it was "ready"—thank you. Standards emerge from use. This one emerged from yours.</p>
 			<p class="tagline"><strong>.faf — The Persistent AI Context Standard</strong></p>
 		</section>
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/v4-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
 	</article>
 </div>
 
@@ -881,5 +884,29 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 		.cta-btn {
 			text-align: center;
 		}
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 </style>

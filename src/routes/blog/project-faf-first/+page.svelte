@@ -202,18 +202,15 @@ Metadata:     10%`}</code></pre>
 			<p>Published by <strong>wolfejam</strong></p>
 			<p class="tagline-footer">Format Authority for AI Context 🏎️⚡</p>
 		</div>
-		<div class="share">
-			<p>Share this milestone:</p>
-			<div class="share-buttons">
-				<a href="https://twitter.com/intent/tweet?text=The%20Moment%20.faf%20Came%20First%20-%20Claude%20read%20project.faf%20before%20CLAUDE.md&url=https://faf.one/blog/project-faf-first" target="_blank">Twitter</a>
-				<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://faf.one/blog/project-faf-first" target="_blank">LinkedIn</a>
-				<a href="https://news.ycombinator.com/submitlink?u=https://faf.one/blog/project-faf-first&t=The%20Moment%20.faf%20Came%20First" target="_blank">Hacker News</a>
-			</div>
-		</div>
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/project-faf-first" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
 	</footer>
 </div>
 
 <style>
+	:global(body) { background: #FEFCF8; }
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
@@ -442,36 +439,28 @@ Metadata:     10%`}</code></pre>
 		font-size: 0.875rem;
 	}
 
-	.share {
+	.share-section {
+		margin-top: 3rem;
 		text-align: center;
 	}
 
-	.share p {
-		margin: 0.5rem 0;
-		color: #666;
-	}
-
-	.share-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-top: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.share-buttons a {
-		padding: 0.5rem 1rem;
-		background: #f5f5f5;
-		color: #333;
-		text-decoration: none;
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
 		border-radius: 6px;
-		font-size: 0.875rem;
-		transition: background 0.2s;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
 	}
 
-	.share-buttons a:hover {
-		background: var(--faf-cyan-dark);
-		color: white;
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 
 	@media (max-width: 768px) {

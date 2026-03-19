@@ -219,6 +219,10 @@ project.faf     → AI context`}</code></pre>
 			</div>
 		</section>
 
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/mk4-engine" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
+
 		<section class="footer-note">
 			<p>
 				AI needed a Standard for Context. It just got one.
@@ -568,6 +572,30 @@ project.faf     → AI context`}</code></pre>
 	}
 	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
+	}
 
 	.footer-note {
 		margin-top: 4rem;

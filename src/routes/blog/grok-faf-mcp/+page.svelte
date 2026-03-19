@@ -160,6 +160,9 @@
 				<a href="https://foundation.faf.one" class="link-button foundation-button" target="_blank">Foundation</a>
 			</div>
 		</section>
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/grok-faf-mcp" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
 	</article>
 
 	<footer class="post-footer">
@@ -480,5 +483,29 @@
 		.platform-grid { grid-template-columns: 1fr; }
 		.links { flex-direction: column; }
 		.link-button { width: 100%; text-align: center; }
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 </style>

@@ -56,6 +56,11 @@ Use this palette for warning/solution flows throughout faf.one.
 - **Tagline Style**: White, bold, underlined for maximum impact
 - **Tagline Alignment**: Can be left-aligned or right-aligned, but NEVER centered
 
+## Blog Post Rules — MANDATORY
+1. **Every blog post MUST include `:global(body) { background: #FEFCF8; }` in its `<style>` block** (light theme) or `:global(body) { background: #0a0a0a; }` (dark theme). Without this, SvelteKit client-side navigation from a dark post to a light post leaves the wrong background color, making text unreadable. This is a known SvelteKit/Vite bug. No exceptions.
+2. Every blog post MUST have OG meta tags (`og:title`, `og:description`, `twitter:card`) in `<svelte:head>` for proper X card previews.
+3. Every blog post MUST have an X share button (web intent format).
+
 ## Development Rules - TRUST IS EVERYTHING
 1. NEVER add fake statistics or claims
 2. NEVER inflate numbers or achievements  

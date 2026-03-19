@@ -265,6 +265,9 @@
 				🆓 Open Source MIT
 			</p>
 		</section>
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/bun-sticky-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
 	</article>
 
 	<footer class="post-footer">
@@ -276,6 +279,8 @@
 </div>
 
 <style>
+	:global(body) { background: #FEFCF8; }
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
@@ -670,5 +675,29 @@
 			width: 100%;
 			text-align: center;
 		}
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 </style>

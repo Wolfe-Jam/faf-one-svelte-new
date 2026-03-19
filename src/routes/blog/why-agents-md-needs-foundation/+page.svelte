@@ -165,6 +165,10 @@ context:
 			</div>
 		</section>
 
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/why-agents-md-needs-foundation" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
+
 		<section class="footer-note">
 			<p>The <code>.faf</code> format is open, IANA-registered, and free.<br/>
 			<a href="https://www.npmjs.com/package/faf-cli">faf-cli on npm</a></p>
@@ -385,6 +389,30 @@ context:
 	.insight-box code {
 		background: #d4f5d4;
 		font-size: 1.1em;
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 
 	.footer-note {

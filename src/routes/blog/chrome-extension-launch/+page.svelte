@@ -227,10 +227,15 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 				<a href="https://faf.one">FAF Ecosystem</a>
 			</p>
 		</section>
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/chrome-extension-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
 	</article>
 </div>
 
 <style>
+	:global(body) { background: #FEFCF8; }
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
@@ -472,5 +477,29 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 		padding: 1rem;
 		background: #f9f9f9;
 		border-left: 3px solid #FF6B35;
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 </style>

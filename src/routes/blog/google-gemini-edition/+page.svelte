@@ -289,6 +289,10 @@
 			</ul>
 		</section>
 
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/google-gemini-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
+
 		<section class="footer-note">
 			<p>
 				Built with .faf ☑️ Universal AI context for everyone. 🏎️
@@ -590,6 +594,30 @@
 
 	.cta-link:hover {
 		text-decoration: underline;
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 
 	.footer-note {

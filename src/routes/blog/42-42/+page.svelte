@@ -269,10 +269,15 @@
 			<div class="final-number">42|42</div>
 			<div class="signature">— Wolfejam, December 31, 2025</div>
 		</footer>
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/42-42" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
 	</div>
 </article>
 
 <style>
+	:global(body) { background: #FEFCF8; }
+
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
@@ -766,5 +771,29 @@
 		.sdk-grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 </style>
