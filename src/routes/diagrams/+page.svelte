@@ -1,6 +1,12 @@
 <script>
 	const diagrams = [
 		{
+			slug: 'fafb-definitive',
+			title: 'FAFb — The Definitive Edition',
+			description: 'Compile flow: .faf YAML → FAFb binary with string table, DNA/Context/Pointer classification',
+			category: 'FAF Core'
+		},
+		{
 			slug: 'readme-evolution-paths',
 			title: 'Two Paths to 100% 🏆',
 			description: 'README Evolution Edition - 6Ws Builder vs Auto Extract paths to championship context',
