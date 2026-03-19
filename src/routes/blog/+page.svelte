@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/fafb-definitive-edition',
+			title: 'FAFb The Definitive Edition',
+			date: 'March 19, 2026',
+			timestamp: '2026-03-19',
+			excerpt: 'The definitive binary format for AI context. String table, chunk classification, enterprise scale. IFF architecture meets the AI era. faf-rust-sdk v2.0.0 — 313 tests across both SDKs.',
+			emoji: '🦀',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/bun-compiled-binaries',
 			title: 'Compiled Binaries Edition',
 			date: 'March 14, 2026',
