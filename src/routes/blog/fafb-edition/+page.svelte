@@ -5,9 +5,9 @@
 </script>
 
 <svelte:head>
-	<title>The FAFb Edition - faf-cli v5.1.0 | FAF</title>
+	<title>The FAFb Edition - faf-cli v5.2.0 | FAF</title>
 	<meta name="description" content="faf compile turns your .faf into a sealed binary. Mk4 slot renames, tri-sync topic files, 684→164 line README. Built for solo devs and Fortune 500s alike." />
-	<meta property="og:title" content="The FAFb Edition - faf-cli v5.1.0" />
+	<meta property="og:title" content="The FAFb Edition - faf-cli v5.2.0" />
 	<meta property="og:description" content="faf compile turns your .faf into a sealed binary. Mk4 canonical names. Tri-sync topic files. Enterprise-ready." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -22,10 +22,10 @@
 		</div>
 
 		<h1>The FAFb Edition</h1>
-		<p class="version-tag">faf-cli v5.1.0</p>
+		<p class="version-tag">faf-cli v5.2.0</p>
 		<p class="subtitle">From solo dev to Fortune 500. One CLI. One format.</p>
 		<div class="meta">
-			<time datetime="2026-03-19">March 19, 2026</time>
+			<time datetime="2026-03-20">March 20, 2026</time>
 			<span class="separator">•</span>
 			<span class="category release">Release</span>
 		</div>
@@ -108,7 +108,7 @@
 		<section>
 			<h2>Try It</h2>
 			<div class="terminal-block">
-				<code>npm install -g faf-cli@5.1.0</code>
+				<code>npm install -g faf-cli@5.2.0</code>
 			</div>
 			<div class="terminal-block">
 				<code>bunx faf-cli compile</code>
@@ -118,16 +118,16 @@
 		<section>
 			<h2>The Numbers</h2>
 			<ul>
-				<li><strong>v5.1.0</strong> — Released March 19, 2026</li>
+				<li><strong>v5.2.0</strong> — Released March 19, 2026</li>
 				<li><strong>1,184/1,184</strong> — Tests passing (52 suites)</li>
 				<li><strong>100%</strong> — Trophy score</li>
 				<li><strong>36,000+</strong> — Downloads across 3 registries</li>
-				<li><strong>169&#181;s</strong> — Average scoring engine on a 2017 iMac</li>
+				<li><strong>169&#181;s</strong> — Average scoring engine on a 2019 iMac</li>
 			</ul>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?text=faf-cli%20v5.1.0%20%E2%80%94%20The%20FAFb%20Edition.%20faf%20compile%20turns%20.faf%20into%20sealed%20binary.%20Mk4%20slot%20renames.%20Tri-sync%20topic%20files.%201%2C184%20tests.&url=https://faf.one/blog/fafb-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href="https://twitter.com/intent/tweet?text=faf-cli%20v5.2.0%20%E2%80%94%20The%20FAFb%20Edition.%20faf%20compile%20turns%20.faf%20into%20sealed%20binary.%20Mk4%20slot%20renames.%20Tri-sync%20topic%20files.%201%2C184%20tests.&url=https://faf.one/blog/fafb-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">
