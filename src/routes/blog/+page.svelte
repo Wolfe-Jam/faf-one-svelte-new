@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/fafb-edition',
+			title: 'The FAFb Edition',
+			date: 'March 19, 2026',
+			timestamp: '2026-03-19',
+			excerpt: 'faf compile turns your .faf into a sealed binary. Mk4 slot renames, tri-sync topic files, 684→164 line README. Solo dev to Fortune 500.',
+			emoji: '📦',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/compiler-is-the-spec',
 			title: 'The Compiler is the Spec',
 			date: 'March 19, 2026',
