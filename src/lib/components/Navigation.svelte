@@ -15,6 +15,7 @@
 		{ label: 'Pro', href: '/pro' },
 		{ label: 'WJTTC', href: '/wjttc' },
 		{ label: 'n8n.faf', href: '/n8n' },
+		{ label: 'Apps', href: '/apps' },
 		{ label: 'DAAFT', href: '/daaft', isDanger: true }
 	];
 
