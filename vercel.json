@@ -1,6 +1,11 @@
 {
   "outputDirectory": "build",
   "buildCommand": "npm run build",
+  "redirects": [
+    { "source": "/docs/commands", "destination": "/docs", "permanent": true },
+    { "source": "/sponsors", "destination": "/founders", "permanent": true },
+    { "source": "/drift", "destination": "/ecosystem", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/",

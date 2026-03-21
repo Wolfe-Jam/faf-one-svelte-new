@@ -437,6 +437,10 @@
 				<span class="stat-value">36k+ across 3 package registries</span>
 			</div>
 		</div>
+
+		<div class="ecosystem-link">
+			<a href="/ecosystem">🏎️ View the full Ecosystem — install guides, live stats & get started →</a>
+		</div>
 	</div>
 </article>
 
@@ -862,6 +866,32 @@
 
 	.stat-value {
 		color: #666;
+	}
+
+	.ecosystem-link {
+		text-align: center;
+		margin-top: 2rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid #eee;
+	}
+
+	.ecosystem-link a {
+		display: inline-block;
+		color: #FF6B35;
+		font-weight: 600;
+		font-size: 1.05rem;
+		text-decoration: none;
+		padding: 0.75rem 1.5rem;
+		border: 2px solid #FF6B35;
+		border-radius: 8px;
+		transition: all 0.2s ease;
+	}
+
+	.ecosystem-link a:hover {
+		background: #FF6B35;
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
 	}
 
 	/* ── RESPONSIVE ── */
