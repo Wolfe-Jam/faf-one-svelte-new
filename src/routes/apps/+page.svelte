@@ -191,7 +191,7 @@
 			builtWith: 'SvelteKit',
 			what: 'Blog + hub',
 			why: 'FAF home base — blog, downloads, docs, ecosystem',
-			killer: '36k+ downloads tracked across 3 registries',
+			killer: '43k+ downloads tracked across 3 registries',
 			group: 'Infrastructure',
 			registry: 'Vercel',
 			url: 'https://faf.one',
@@ -434,7 +434,7 @@
 			</div>
 			<div class="stat-row">
 				<span class="stat-label">Downloads</span>
-				<span class="stat-value">36k+ across 3 package registries</span>
+				<span class="stat-value">43k+ across 3 package registries</span>
 			</div>
 		</div>
 

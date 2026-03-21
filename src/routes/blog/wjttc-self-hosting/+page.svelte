@@ -49,7 +49,7 @@
 				<li><strong>52</strong> — Certification tests across 9 tiers</li>
 				<li><strong>100% 🏆</strong> — WJTTC's own FAF score (earned, not given)</li>
 				<li><strong>3 servers</strong> — Big Orange 🍊 certified</li>
-				<li><strong>36k+</strong> — FAF ecosystem downloads</li>
+				<li><strong>43k+</strong> — FAF ecosystem downloads</li>
 				<li><strong>$0</strong> — Cost to certify, self-host, and adopt</li>
 			</ul>
 		</section>

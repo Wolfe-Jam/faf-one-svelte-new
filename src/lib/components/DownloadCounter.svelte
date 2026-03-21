@@ -7,7 +7,7 @@
 		<div class="npm-badge total-badge">
 			<span class="badge-icon">📦</span>
 			<div class="badge-content">
-				<span class="badge-number">36k+</span>
+				<span class="badge-number">43k+</span>
 				<span class="badge-label">Ecosystem Downloads</span>
 			</div>
 		</div>

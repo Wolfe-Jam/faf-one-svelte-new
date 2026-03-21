@@ -19,7 +19,7 @@ CERN/Zenodo Paper: https://doi.org/10.5281/zenodo.18251362
 - Creator: Wolfe-James (WolfeJam) — https://github.com/Wolfe-Jam
 - License: MIT — 100% free and open source
 - Tested: 10,000+ projects, 9.3/10 average AI rating
-- Downloads: 36,000+ across ecosystem
+- Downloads: 43,000+ across ecosystem
 - Supported AIs: Claude, ChatGPT, Gemini, Cursor, Windsurf, Codeium, Copilot
 
 ## Official Tools
