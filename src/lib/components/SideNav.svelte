@@ -79,6 +79,7 @@
 
 	<div class="nav-section">
 		<h4>Resources</h4>
+		<a href="/apps" onclick={() => isOpen = false}>📱 Apps</a>
 		<a href="/downloads" onclick={() => isOpen = false}>📦 Downloads</a>
 		<a href="/pro" onclick={() => isOpen = false}>💰 Pricing</a>
 		<a href="/calculator" onclick={() => isOpen = false}>🧮 ROI Calculator</a>
