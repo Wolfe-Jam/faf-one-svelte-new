@@ -337,7 +337,7 @@ jobs:
 	}
 
 	.breadcrumb a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 
@@ -662,7 +662,7 @@ jobs:
 	}
 
 	a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 
@@ -744,7 +744,7 @@ jobs:
 
 	.terminal-output code {
 		display: block;
-		color: #888;
+		color: #e0e0e0;
 		background: none;
 		padding: 0;
 		font-size: 0.85rem;

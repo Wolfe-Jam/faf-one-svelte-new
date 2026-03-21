@@ -4,7 +4,8 @@
 	--faf-orange: #ff6b35;       /* Human Trust/Manual 🧡 */
 	--faf-orange-dark: #FF5722;  /* Darker orange for hover states */
 	--faf-cyan: #00ffff;         /* AI-Happy/Tech 🩵 */
-	--faf-cyan-dark: #00d4d4;    /* Darker cyan for text readability */
+	--faf-cyan-dark: #00d4d4;    /* Darker cyan for dark backgrounds */
+	--faf-cyan-text: #009999;    /* Readable cyan on light/white backgrounds */
 	--faf-green: #00bf63;        /* FAF Success/Safety 💚 */
 	
 	/* Foundation Colors */
