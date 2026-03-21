@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/wjttc-self-hosting',
+			title: 'Championship-Grade Testing You Can Self-Host',
+			date: 'March 21, 2026',
+			timestamp: '2026-03-21',
+			excerpt: 'WJTTC v1.4.0 — how I test every FAF app, and how you can too. Self-host locally or in CI/CD. Trophy 🏆 at 100%. Big Orange 🍊 curated by AI — no human gatekeeper.',
+			emoji: '🏎️',
+			category: 'WJTTC'
+		},
+		{
 			slug: 'blog/kernel-router',
 			title: 'The Kernel Router',
 			date: 'March 20, 2026',
@@ -274,15 +283,6 @@
 			excerpt: 'Complete rewrite of faf git output. Accurate language detection across 17 languages. Compact, PR-ready .faf files (~35 lines vs 130). The version that scored a Hundred Famous Repos.',
 			emoji: '🎯',
 			category: 'Release'
-		},
-		{
-			slug: 'blog/wjttc-self-hosting',
-			title: 'Championship Testing for Everyone',
-			date: 'February 17, 2026',
-			timestamp: '2026-02-17',
-			excerpt: 'WJTTC v1.3.0 adds wjttc init—one command sets up championship-grade testing infrastructure in any project. Service to the army of free devs.',
-			emoji: '🏎️',
-			category: 'WJTTC'
 		},
 		{
 			slug: 'blog/readme-evolution',
