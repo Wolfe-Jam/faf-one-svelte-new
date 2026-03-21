@@ -1,10 +1,8 @@
 <script>
 	import '../app.css';
 	import SideNav from '$lib/components/SideNav.svelte';
-	// import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
-	// import { isDarkMode, toggleTheme } from '$lib/theme-store';
 
-	let { children } = $props();
+	let { children, data } = $props();
 
 	// function handleThemeToggle() {
 	// 	toggleTheme();
@@ -22,7 +20,7 @@
 		⭐ Star
 	</a>
 	<a href="/downloads" class="banner-section-center">
-		43k+ Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
+		{data.downloadCount} Downloads • <span class="anthropic-approved">Anthropic-Approved</span>
 	</a>
 	<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="banner-section">
 		⚡️ MCP #2759 MERGED ⚡️

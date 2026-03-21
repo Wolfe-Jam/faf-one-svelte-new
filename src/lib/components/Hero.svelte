@@ -3,8 +3,6 @@
 	import FafLogo from '$lib/components/FafLogo.svelte';
 	import ScrollRevealText from '$lib/components/ScrollRevealText.svelte';
 	import TypewriterText from '$lib/components/TypewriterText.svelte';
-	import DownloadCounter from '$lib/components/DownloadCounter.svelte';
-	
 	// Removed scrollY prop - not needed
 	
 	let titleRef = $state(null);
@@ -232,10 +230,6 @@
 				</div>
 			</div>
 			
-			<!-- Live NPM Stats with Animated Counter -->
-			<div class="live-npm-stats">
-				<DownloadCounter />
-			</div>
 
 			<!-- Verified Testing Stats -->
 			<div class="testing-stats">

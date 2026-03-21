@@ -16,7 +16,6 @@
 				</div>
 				<p class="footer-mission">NO BS. No FAFfing About.</p>
 				<div class="footer-stats">
-					<div class="stat"><a href="/downloads" class="stat-link">☑️ 43k+ Ecosystem Downloads</a></div>
 					<div class="stat">☑️ 16 Packages, 3 Registries</div>
 					<div class="stat">☑️ Chrome Extension LIVE</div>
 				</div>
