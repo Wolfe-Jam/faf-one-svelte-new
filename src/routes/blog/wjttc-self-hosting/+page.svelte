@@ -192,6 +192,14 @@ jobs:
 
 		<section>
 			<h2>🍊 Big Orange: The Badge You Can't Game</h2>
+
+			<div class="hero-image">
+				<img src="/images/big-orange-origin.png" alt="Orange Ford Escort alongside a McLaren F1 car — both in papaya orange" />
+				<p class="image-caption">The origin story: McLaren switched to Papaya Orange in 1968 — the year wolfejam was born. His first car? An orange Ford Escort, 1977 model. The Big 🍊 is earned around here.</p>
+			</div>
+
+			<p class="dev-note"><strong>Dev note:</strong> wolfejam is obsessed with F1. The original slogan was <em>"if your car will go 220 miles per hour, your brakes better work flawlessly"</em> — we toned it down for general release.</p>
+
 			<p><strong>Big Orange 🍊 is not a score.</strong> You can't calculate your way to it. There's no human gatekeeper handing them out. No lobbying, no subjectivity, no gaming the system.</p>
 
 			<p>Big Orange is <strong>curated by AI</strong>. The evaluation looks at:</p>
@@ -770,6 +778,37 @@ jobs:
 
 	.copy-btn:active {
 		transform: scale(0.95);
+	}
+
+	.hero-image {
+		margin: 1.5rem 0;
+		border-radius: 10px;
+		overflow: hidden;
+		border: 2px solid #e0e0e0;
+	}
+
+	.hero-image img {
+		width: 100%;
+		display: block;
+	}
+
+	.image-caption {
+		padding: 1rem 1.25rem;
+		background: #fafafa;
+		font-size: 0.9rem;
+		color: #666;
+		margin: 0;
+		line-height: 1.5;
+		border-top: 1px solid #e0e0e0;
+	}
+
+	.dev-note {
+		background: #f0f7f0;
+		border-left: 4px solid #00bf63;
+		padding: 0.75rem 1rem;
+		border-radius: 4px;
+		font-size: 0.95rem;
+		margin: 1rem 0 1.5rem 0;
 	}
 
 	@media (max-width: 768px) {
