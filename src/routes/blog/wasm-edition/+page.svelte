@@ -1,25 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
 	let mounted = false;
-
-	onMount(() => {
-		mounted = true;
-	});
-
-	let copiedId = $state('');
-	async function copyText(text: string, id: string) {
-		await navigator.clipboard.writeText(text);
-		copiedId = id;
-		setTimeout(() => copiedId = '', 2000);
-	}
+	onMount(() => { mounted = true; });
 </script>
 
 <svelte:head>
-	<title>The Compiler is the Spec — faf-wasm-sdk v2.0.0 | FAF</title>
-	<meta name="description" content="322KB of WASM. No server. No API calls. The same Rust compiler runs in your browser, at the edge, in Node, in Bun. One source of truth." />
-	<meta property="og:title" content="The Compiler is the Spec — faf-wasm-sdk v2.0.0" />
-	<meta property="og:description" content="322KB of WASM. No server. No API calls. The same Rust compiler runs everywhere." />
+	<title>The WASM Edition - bun-sticky v2.0.0 | FAF</title>
+	<meta name="description" content="One interface, any kernel. bun-sticky v2.0.0 embeds the Mk4 WASM engine. TS and WASM produce identical scores. 405 tests across 2 packages." />
+	<meta property="og:title" content="The WASM Edition - bun-sticky v2.0.0" />
+	<meta property="og:description" content="One interface, any kernel. TS and WASM produce identical scores. 284μs per score." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -27,91 +16,112 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Compiler is the Spec
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / The WASM Edition
 		</div>
 
-		<h1>The Compiler is the Spec</h1>
-		<p class="version-tag">faf-wasm-sdk v2.0.0</p>
-		<p class="subtitle">322KB. Everywhere.</p>
+		<h1>The WASM Edition</h1>
+		<p class="version-tag">bun-sticky v2.0.0 + faf-wasm-core v1.0.0</p>
+		<p class="subtitle">One interface. Any kernel. Same score.</p>
 		<div class="meta">
-			<time datetime="2026-03-19">March 19, 2026</time>
+			<time datetime="2026-03-20">March 20, 2026</time>
 			<span class="separator">•</span>
-			<span class="category foundation">Foundation</span>
+			<span class="category release">Release</span>
 		</div>
 	</header>
 
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> One Rust codebase. 322KB of WASM. No server. No API calls. No dependencies. The same code that runs on the CLI runs in your browser tab, in a Cloudflare Worker, in Node, in Bun. One source of truth. No reimplementation. No drift.
+				<strong>TL;DR:</strong> bun-sticky now embeds the Mk4 WASM engine — the same Rust compiler that powers faf-cli, mcpaas.live, and builder.faf.one. One kernel interface. Rust today, Zig Cascade tomorrow. All engines produce identical scores. 284 microseconds per score.
 			</p>
 		</section>
 
 		<section>
 			<h2>The Problem</h2>
 
-			<p>You write a spec. Then you implement it in JavaScript. Then someone implements it in Python. Then Go. Each implementation diverges. Edge cases get interpreted differently. Bugs get fixed in one language but not another. The spec says one thing, three implementations do three slightly different things.</p>
+			<p>Four scoring engines. Same algorithm. Four implementations. Score divergence. A CLI tool scores 100% locally but 43% through WASM because the engines disagree on what counts.</p>
 
-			<p>We refused to do that.</p>
+			<p>The root cause: type-aware scoring lived in TypeScript. The WASM engine scored flat — all 21 slots, always. A CLI project could never hit 100% through WASM because frontend slots dragged it down.</p>
 		</section>
 
 		<section>
-			<h2>The Solution</h2>
+			<h2>The Fix</h2>
 
-			<p>The FAF compiler is written once, in Rust. It compiles to WASM. That 322KB binary runs identically in every environment — browser, edge, server, CLI. The WASM binary doesn't interpret the spec. It IS the spec.</p>
+			<h3>Data-Driven Slotignore</h3>
+			<p>
+				The .faf file carries the truth. If your project doesn't use frontend slots, they're marked <code>slotignored</code> in the file itself — not inferred at score time by TypeScript.
+			</p>
 
-			<p>Same YAML in. Same binary out. Same score. Every runtime. Every time.</p>
+			<pre><code>{`# CLI project — non-applicable slots marked in the file
+stack:
+  frontend: slotignored
+  css_framework: slotignored
+  ui_library: slotignored
+  state_management: slotignored
+  runtime: Bun
+  build: bun build`}</code></pre>
+
+			<p>Every engine reads the same file. Every engine skips the same slots. Every engine gets the same score.</p>
 
 			<div class="insight-box">
-				<h3>SQLite embedded the database.</h3>
-				<p>We embedded the compiler.</p>
+				<h3>The WASM doesn't care about types.</h3>
+				<p>It counts. Populated, empty, slotignored. Fast.</p>
 			</div>
+
+			<h3>faf-wasm-core — The Kernel Router</h3>
+			<p>
+				<a href="https://github.com/Wolfe-Jam/faf-wasm-core">faf-wasm-core</a> is not a rewrite. It's a router. It wraps <code>faf-wasm-sdk</code> (the published, blogged, "compiler is the spec" WASM) behind a <code>FafKernel</code> interface. When Zig Cascade ships, it slots in — same interface, no consumer changes.
+			</p>
+
+			<pre><code>{`import { init } from "faf-wasm-core";
+
+const kernel = await init("rust");  // or "zig" when Cascade ships
+const result = kernel.score(yaml);  // Same interface. Any engine.
+
+// result.score = 100
+// result.populated = 11
+// result.ignored = 10
+// result.active = 11`}</code></pre>
 		</section>
 
 		<section>
-			<h2>Where It Runs</h2>
+			<h2>bun-sticky v2.0.0</h2>
 
-			<h3>Browser</h3>
-			<div class="copy-box" onclick={() => copyText('npm install faf-wasm-sdk', 'install')}>
-				<code class="copy-code">npm install faf-wasm-sdk</code>
-				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
+			<p>Three new commands. Same zero dependencies.</p>
+
+			<div class="terminal-block">
+				<code>bunx bun-sticky wasm-score</code>
 			</div>
+			<p>Score via the Mk4 WASM kernel. Shows populated/active slots, powered-by line.</p>
 
-			<pre><code>{`import init, { compile_fafb, score_faf } from 'faf-wasm-sdk';
+			<div class="terminal-block">
+				<code>bunx bun-sticky bench</code>
+			</div>
+			<p>Benchmark: 100 scores, average time per score. 284 microseconds on a 2017 iMac.</p>
 
-await init();
-const bytes = compile_fafb(yamlContent);   // Uint8Array
-const score = score_faf(yamlContent);      // JSON string`}</code></pre>
+			<div class="terminal-block">
+				<code>bunx bun-sticky badge</code>
+			</div>
+			<p>Get your mcpaas.live badge markdown. Drop it in your README.</p>
 
-			<h3>Edge (Cloudflare Workers, Vercel Edge, Deno Deploy)</h3>
-			<pre><code>{`export default {
-  async fetch(request) {
-    await init();
-    const score = score_faf(yamlContent);
-    return Response.json(JSON.parse(score));
-  }
-};`}</code></pre>
-
-			<h3>Node / Bun</h3>
-			<p>Same import. Same output. No special build.</p>
-
-			<h3>CLI</h3>
-			<p>Via <a href="https://crates.io/crates/faf-rust-sdk">faf-rust-sdk</a> — native Rust, same engine, same results.</p>
+			<h3>init writes slotignored</h3>
+			<p>
+				<code>bunx bun-sticky init my-cli</code> now writes proper <code>slotignored</code> values for non-applicable slots based on project type. CLI projects get frontend/backend slots marked. Fullstack gets all 21 active. The file carries the scoring truth from birth.
+			</p>
 		</section>
 
 		<section>
-			<h2>8 Exports. 0 Classes.</h2>
+			<h2>Parity Proof</h2>
 
-			<p>Pure functions. JSON in, JSON out.</p>
+			<pre><code>{`=== TS ===
+  🏆 100%  Trophy
+  Filled: 11/11 slots
 
-			<pre><code>{`sdk_version()          // "2.0.0"
-score_faf(yaml)        // Score against 21 base slots
-score_faf_enterprise(yaml)  // Score against 33 enterprise slots
-validate_faf(yaml)     // true if valid YAML mapping
-compile_fafb(yaml)     // YAML → FAFb binary (Uint8Array)
-decompile_fafb(bytes)  // FAFb binary → JSON
-score_fafb(bytes)      // Score from compiled binary
-fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
+=== WASM ===
+  🏆 100%  Trophy
+  Filled: 11/11 slots`}</code></pre>
+
+			<p>Same file. Same count. Same score. Same tier. Two engines, one truth.</p>
 		</section>
 
 		<section>
@@ -151,19 +161,19 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 				</tbody>
 			</table>
 
-			<p><strong>sdk</strong> is the compiler. <strong>core</strong> wraps it behind an interface. <strong>bun-sticky</strong> embeds core. <strong>builder.faf.one</strong> runs both Rust and Zig in the browser.</p>
+			<p><strong>sdk</strong> is the compiler. <strong>core</strong> wraps it behind an interface. <strong>bun-sticky</strong> embeds core. <strong>builder.faf.one</strong> runs both Rust and Zig WASM in the browser.</p>
 		</section>
 
 		<section>
 			<h2>The Numbers</h2>
 
 			<ul>
-				<li><strong>322KB</strong> — compressed WASM binary</li>
-				<li><strong>138/138</strong> — tests passing (unit + stress + integration)</li>
-				<li><strong>Sub-2ms</strong> — compile + score performance</li>
-				<li><strong>8 exports</strong> — pure functions, no classes</li>
-				<li><strong>CRC32 sealed</strong> — deterministic, tamper-evident</li>
-				<li><strong>MIT</strong> — free, open, forever</li>
+				<li><strong>faf-wasm-core v1.0.0</strong> — 36 tests passing</li>
+				<li><strong>bun-sticky v2.0.0</strong> — 369 tests passing</li>
+				<li><strong>405 total</strong> — across 2 packages, 0 failures</li>
+				<li><strong>284μs</strong> — average WASM score (Mk4, Rust)</li>
+				<li><strong>322KB</strong> — embedded WASM binary</li>
+				<li><strong>0 dependencies</strong> — still zero</li>
 			</ul>
 		</section>
 
@@ -172,37 +182,24 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 
 			<div class="cta-grid">
 				<div class="cta-box">
-					<h3>npm</h3>
-					<p>Install it now.</p>
-					<a href="https://www.npmjs.com/package/faf-wasm-sdk" class="cta-link">faf-wasm-sdk</a>
+					<h3>bun-sticky</h3>
+					<p>v2.0.0 WASM Edition</p>
+					<a href="https://github.com/Wolfe-Jam/bun-sticky-faf/releases/tag/v2.0.0" class="cta-link">GitHub Release</a>
 				</div>
 				<div class="cta-box">
-					<h3>crates.io</h3>
-					<p>The Rust SDK underneath.</p>
-					<a href="https://crates.io/crates/faf-rust-sdk" class="cta-link">faf-rust-sdk</a>
-				</div>
-			</div>
-
-			<div class="cta-grid">
-				<div class="cta-box">
-					<h3>IANA</h3>
-					<p>Registered media type.</p>
-					<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" class="cta-link">application/vnd.faf+yaml</a>
-				</div>
-				<div class="cta-box">
-					<h3>Zenodo</h3>
-					<p>Academic paper.</p>
-					<a href="https://doi.org/10.5281/zenodo.18251362" class="cta-link">DOI 10.5281/zenodo.18251362</a>
+					<h3>faf-wasm-core</h3>
+					<p>v1.0.0 Kernel Router</p>
+					<a href="https://github.com/Wolfe-Jam/faf-wasm-core/releases/tag/v1.0.0" class="cta-link">GitHub Release</a>
 				</div>
 			</div>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/compiler-is-the-spec" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href="https://twitter.com/intent/tweet?text=bun-sticky%20v2.0.0%20%E2%80%94%20The%20WASM%20Edition.%20Mk4%20kernel%20embedded.%20All%20engines%20produce%20identical%20scores.%20284%C2%B5s%20per%20score.%20405%20tests.&url=https://faf.one/blog/wasm-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ The compiler is the spec. 322KB. Everywhere. 🏎️</p>
+			<p>Built with .faf ☑️ One interface. Any kernel. Same score. 🏎️</p>
 		</section>
 	</article>
 </div>
@@ -287,8 +284,9 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		font-size: 0.85rem;
 	}
 
-	.category.foundation {
-		background: #1D8348;
+	.category.release {
+		background: #00B8B8;
+		color: white;
 	}
 
 	.post-content {
@@ -375,6 +373,26 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		color: #006622;
 	}
 
+	.terminal-block {
+		background: #1a1a1a;
+		padding: 1.25rem;
+		border-radius: 8px;
+		margin: 1.5rem 0;
+	}
+
+	.terminal-block code {
+		display: block;
+		color: #00ff88;
+		background: none;
+		padding: 0.25rem 0;
+		font-size: 1rem;
+	}
+
+	.terminal-block code::before {
+		content: '$ ';
+		color: #888;
+	}
+
 	.cta-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -418,46 +436,6 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 	a:hover {
 		text-decoration: none;
 	}
-
-	.copy-box {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		padding: 1rem 1.5rem;
-		background: #1a1a1a;
-		border: 1px solid #333;
-		border-radius: 8px;
-		margin: 1rem 0;
-		cursor: pointer;
-		transition: border-color 0.2s;
-	}
-	.copy-box:hover { border-color: #555; }
-	.copy-code {
-		flex: 1;
-		font-family: 'Monaco', 'Courier New', monospace;
-		color: #00d4d4;
-		background: transparent;
-		padding: 0;
-		font-size: 0.95rem;
-		font-weight: 600;
-		border-radius: 0;
-	}
-	.copy-btn {
-		padding: 0.5rem 1rem;
-		background: rgba(255, 107, 53, 0.2);
-		border: 1px solid rgba(255, 107, 53, 0.4);
-		color: #FF6B35;
-		border-radius: 6px;
-		font-weight: 600;
-		font-size: 0.8rem;
-		cursor: pointer;
-		transition: all 0.2s;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		white-space: nowrap;
-	}
-	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #FF6B35; }
-	.copy-btn:active { transform: scale(0.95); }
 
 	.share-section {
 		margin-top: 3rem;

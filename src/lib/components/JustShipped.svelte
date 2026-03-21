@@ -52,9 +52,23 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>1,143/1,143 Tests Passing</strong> •
+				<strong>1,184/1,184 Tests Passing</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- bun-sticky v2.0.0 WASM Edition -->
+		<div class="chrome-featured bun-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🥐 bun-sticky v2.0.0 - WASM Edition</h3>
+					<span class="chrome-badge bun-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Mk4 WASM kernel embedded. Data-driven slotignore. All engines produce identical scores. 284us per score. 405 tests.</p>
+			<a href="/blog/wasm-edition" class="chrome-install bun-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- FAFb The Definitive Edition v2.0.0 -->

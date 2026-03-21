@@ -1,11 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
 	let mounted = false;
-
-	onMount(() => {
-		mounted = true;
-	});
+	onMount(() => { mounted = true; });
 
 	let copiedId = $state('');
 	async function copyText(text: string, id: string) {
@@ -16,10 +12,10 @@
 </script>
 
 <svelte:head>
-	<title>The Compiler is the Spec — faf-wasm-sdk v2.0.0 | FAF</title>
-	<meta name="description" content="322KB of WASM. No server. No API calls. The same Rust compiler runs in your browser, at the edge, in Node, in Bun. One source of truth." />
-	<meta property="og:title" content="The Compiler is the Spec — faf-wasm-sdk v2.0.0" />
-	<meta property="og:description" content="322KB of WASM. No server. No API calls. The same Rust compiler runs everywhere." />
+	<title>The Kernel Router - faf-wasm-core v1.0.0 | FAF</title>
+	<meta name="description" content="One interface, any WASM kernel, same score. faf-wasm-core ships as the shared engine for every FAF tool." />
+	<meta property="og:title" content="The Kernel Router - faf-wasm-core v1.0.0" />
+	<meta property="og:description" content="One interface, any WASM kernel, same score. The shared engine for every FAF tool." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -27,91 +23,112 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Compiler is the Spec
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Kernel Router
 		</div>
 
-		<h1>The Compiler is the Spec</h1>
-		<p class="version-tag">faf-wasm-sdk v2.0.0</p>
-		<p class="subtitle">322KB. Everywhere.</p>
+		<h1>The Kernel Router</h1>
+		<p class="version-tag">faf-wasm-core v1.0.0</p>
+		<p class="subtitle">One interface. Any kernel. Same score.</p>
 		<div class="meta">
-			<time datetime="2026-03-19">March 19, 2026</time>
+			<time datetime="2026-03-20">March 20, 2026</time>
 			<span class="separator">•</span>
-			<span class="category foundation">Foundation</span>
+			<span class="category launch">Launch</span>
 		</div>
 	</header>
 
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> One Rust codebase. 322KB of WASM. No server. No API calls. No dependencies. The same code that runs on the CLI runs in your browser tab, in a Cloudflare Worker, in Node, in Bun. One source of truth. No reimplementation. No drift.
+				<strong>TL;DR:</strong> faf-wasm-core is the shared WASM engine that every FAF tool embeds. One <code>FafKernel</code> interface. Rust Mk4 today, Zig Cascade tomorrow. No consumer code changes. 322KB, 284&#956;s per score, zero dependencies.
 			</p>
 		</section>
 
 		<section>
-			<h2>The Problem</h2>
+			<h2>Why This Exists</h2>
 
-			<p>You write a spec. Then you implement it in JavaScript. Then someone implements it in Python. Then Go. Each implementation diverges. Edge cases get interpreted differently. Bugs get fixed in one language but not another. The spec says one thing, three implementations do three slightly different things.</p>
+			<p>FAF has a Rust WASM compiler (<a href="https://github.com/Wolfe-Jam/faf-wasm-sdk">faf-wasm-sdk</a>). It works. But every consumer — bun-sticky, builder.faf.one, and eventually faf-cli — was wiring up the WASM differently. Loading the binary, calling the bindings, parsing the JSON results. Same boilerplate, every time.</p>
 
-			<p>We refused to do that.</p>
-		</section>
-
-		<section>
-			<h2>The Solution</h2>
-
-			<p>The FAF compiler is written once, in Rust. It compiles to WASM. That 322KB binary runs identically in every environment — browser, edge, server, CLI. The WASM binary doesn't interpret the spec. It IS the spec.</p>
-
-			<p>Same YAML in. Same binary out. Same score. Every runtime. Every time.</p>
+			<p>Worse: when Zig Cascade arrives (2.7KB, sub-microsecond scoring), every consumer would need to add a second loading path. Two kernels, two APIs, divergence.</p>
 
 			<div class="insight-box">
-				<h3>SQLite embedded the database.</h3>
-				<p>We embedded the compiler.</p>
+				<h3>The Fix</h3>
+				<p>One interface. Route to any kernel behind it.</p>
 			</div>
 		</section>
 
 		<section>
-			<h2>Where It Runs</h2>
+			<h2>The Interface</h2>
 
-			<h3>Browser</h3>
-			<div class="copy-box" onclick={() => copyText('npm install faf-wasm-sdk', 'install')}>
-				<code class="copy-code">npm install faf-wasm-sdk</code>
-				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
-			</div>
+			<p>Every kernel implements <code>FafKernel</code>:</p>
 
-			<pre><code>{`import init, { compile_fafb, score_faf } from 'faf-wasm-sdk';
+			<pre><code>{`import { init } from "faf-wasm-core";
 
-await init();
-const bytes = compile_fafb(yamlContent);   // Uint8Array
-const score = score_faf(yamlContent);      // JSON string`}</code></pre>
+const kernel = await init("rust");  // or "zig" when Cascade ships
+const result = kernel.score(yaml);
 
-			<h3>Edge (Cloudflare Workers, Vercel Edge, Deno Deploy)</h3>
-			<pre><code>{`export default {
-  async fetch(request) {
-    await init();
-    const score = score_faf(yamlContent);
-    return Response.json(JSON.parse(score));
-  }
-};`}</code></pre>
+// result.score = 100
+// result.populated = 11
+// result.ignored = 10
+// result.active = 11`}</code></pre>
 
-			<h3>Node / Bun</h3>
-			<p>Same import. Same output. No special build.</p>
+			<p>That's it. The consumer doesn't know or care which WASM binary is running underneath. The interface is the contract.</p>
 
-			<h3>CLI</h3>
-			<p>Via <a href="https://crates.io/crates/faf-rust-sdk">faf-rust-sdk</a> — native Rust, same engine, same results.</p>
+			<h3>Full Kernel Contract</h3>
+
+			<pre><code>{`interface FafKernel {
+  score(yaml: string): ScoreResult;
+  scoreEnterprise(yaml: string): ScoreResult;
+  validate(yaml: string): boolean;
+  compile(yaml: string): Uint8Array;
+  decompile(bytes: Uint8Array): FafbInfo;
+  scoreBinary(bytes: Uint8Array): ScoreBinaryResult;
+  binaryInfo(bytes: Uint8Array): FafbInfo;
+  version(): string;
+  readonly engine: "rust" | "zig";
+  readonly engineVersion: string;
+}`}</code></pre>
 		</section>
 
 		<section>
-			<h2>8 Exports. 0 Classes.</h2>
+			<h2>Capabilities</h2>
 
-			<p>Pure functions. JSON in, JSON out.</p>
+			<p>Not every kernel supports every method. Rust Mk4 has the full suite. Zig Cascade (when it ships) will start with scoring only. The rest throws <code>KernelCapabilityError</code>.</p>
 
-			<pre><code>{`sdk_version()          // "2.0.0"
-score_faf(yaml)        // Score against 21 base slots
-score_faf_enterprise(yaml)  // Score against 33 enterprise slots
-validate_faf(yaml)     // true if valid YAML mapping
-compile_fafb(yaml)     // YAML → FAFb binary (Uint8Array)
-decompile_fafb(bytes)  // FAFb binary → JSON
-score_fafb(bytes)      // Score from compiled binary
-fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
+			<table class="wasm-table">
+				<thead>
+					<tr>
+						<th>Method</th>
+						<th>Rust</th>
+						<th>Zig (future)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>score</td><td>Yes</td><td>Yes</td></tr>
+					<tr><td>scoreEnterprise</td><td>Yes</td><td>No</td></tr>
+					<tr><td>validate</td><td>Yes</td><td>Yes</td></tr>
+					<tr><td>compile</td><td>Yes</td><td>No</td></tr>
+					<tr><td>decompile</td><td>Yes</td><td>No</td></tr>
+					<tr><td>scoreBinary</td><td>Yes</td><td>No</td></tr>
+					<tr><td>binaryInfo</td><td>Yes</td><td>No</td></tr>
+				</tbody>
+			</table>
+
+			<p>Query capabilities at runtime with <code>capabilities()</code>. No surprises.</p>
+		</section>
+
+		<section>
+			<h2>Who Embeds This</h2>
+
+			<p>faf-wasm-core is infrastructure. It's not a CLI. It's not a service. It's the engine that other tools embed:</p>
+
+			<ul>
+				<li><strong><a href="https://npmjs.com/package/bun-sticky">bun-sticky</a></strong> — Bun CLI, embeds core directly (v2.0.0, shipped same day)</li>
+				<li><strong><a href="https://builder.faf.one">builder.faf.one</a></strong> — Browser scorer, runs WASM client-side</li>
+				<li><strong>faf-cli</strong> — Universal CLI (next consumer, replacing inline scoring)</li>
+				<li><strong>mcpaas.live</strong> — Badge service (future, server-side WASM)</li>
+			</ul>
+
+			<p>One kernel. Every tool gets the same score. No divergence.</p>
 		</section>
 
 		<section>
@@ -130,7 +147,7 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 				<tbody>
 					<tr>
 						<td><a href="https://github.com/Wolfe-Jam/faf-wasm-sdk">faf-wasm-sdk</a></td>
-						<td>Rust→WASM compiler (the engine)</td>
+						<td>Rust&#8594;WASM compiler (the engine)</td>
 						<td>322KB</td>
 					</tr>
 					<tr>
@@ -155,54 +172,46 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		</section>
 
 		<section>
-			<h2>The Numbers</h2>
+			<h2>Try It</h2>
 
-			<ul>
-				<li><strong>322KB</strong> — compressed WASM binary</li>
-				<li><strong>138/138</strong> — tests passing (unit + stress + integration)</li>
-				<li><strong>Sub-2ms</strong> — compile + score performance</li>
-				<li><strong>8 exports</strong> — pure functions, no classes</li>
-				<li><strong>CRC32 sealed</strong> — deterministic, tamper-evident</li>
-				<li><strong>MIT</strong> — free, open, forever</li>
-			</ul>
+			<div class="copy-box" onclick={() => copyText('npm install faf-wasm-core', 'install')}>
+				<code class="copy-code">npm install faf-wasm-core</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
+			</div>
+
+			<div class="cta-grid">
+				<div class="cta-box">
+					<h3>GitHub</h3>
+					<p>Source and interface contract.</p>
+					<a href="https://github.com/Wolfe-Jam/faf-wasm-core" class="cta-link">faf-wasm-core</a>
+				</div>
+				<div class="cta-box">
+					<h3>npm</h3>
+					<p>Install the kernel.</p>
+					<a href="https://www.npmjs.com/package/faf-wasm-core" class="cta-link">faf-wasm-core</a>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h2>The Links</h2>
+			<h2>The Numbers</h2>
 
-			<div class="cta-grid">
-				<div class="cta-box">
-					<h3>npm</h3>
-					<p>Install it now.</p>
-					<a href="https://www.npmjs.com/package/faf-wasm-sdk" class="cta-link">faf-wasm-sdk</a>
-				</div>
-				<div class="cta-box">
-					<h3>crates.io</h3>
-					<p>The Rust SDK underneath.</p>
-					<a href="https://crates.io/crates/faf-rust-sdk" class="cta-link">faf-rust-sdk</a>
-				</div>
-			</div>
-
-			<div class="cta-grid">
-				<div class="cta-box">
-					<h3>IANA</h3>
-					<p>Registered media type.</p>
-					<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" class="cta-link">application/vnd.faf+yaml</a>
-				</div>
-				<div class="cta-box">
-					<h3>Zenodo</h3>
-					<p>Academic paper.</p>
-					<a href="https://doi.org/10.5281/zenodo.18251362" class="cta-link">DOI 10.5281/zenodo.18251362</a>
-				</div>
-			</div>
+			<ul>
+				<li><strong>v1.0.0</strong> — Released March 20, 2026</li>
+				<li><strong>36/36</strong> — Tests passing</li>
+				<li><strong>284&#956;s</strong> — Per score (Mk4, Rust)</li>
+				<li><strong>322KB</strong> — Embedded WASM binary</li>
+				<li><strong>0 dependencies</strong> — Zero</li>
+				<li><strong>100%</strong> — Trophy score</li>
+			</ul>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/compiler-is-the-spec" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href="https://twitter.com/intent/tweet?text=faf-wasm-core%20v1.0.0%20%E2%80%94%20The%20Kernel%20Router.%20One%20interface%2C%20any%20WASM%20kernel%2C%20same%20score.%20322KB%2C%20284%C2%B5s%2C%20zero%20deps.&url=https://faf.one/blog/kernel-router" target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ The compiler is the spec. 322KB. Everywhere. 🏎️</p>
+			<p>Built with .faf ☑ One interface. Any kernel. Same score. 🏎</p>
 		</section>
 	</article>
 </div>
@@ -287,8 +296,9 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		font-size: 0.85rem;
 	}
 
-	.category.foundation {
-		background: #1D8348;
+	.category.launch {
+		background: #FF6B35;
+		color: white;
 	}
 
 	.post-content {
@@ -375,6 +385,54 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		color: #006622;
 	}
 
+	.wasm-table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1.5rem 0;
+		font-size: 0.95rem;
+	}
+
+	.wasm-table th {
+		background: #1a1a1a;
+		color: #00ff88;
+		padding: 0.75rem 1rem;
+		text-align: left;
+		font-weight: 600;
+	}
+
+	.wasm-table td {
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid #eee;
+	}
+
+	.wasm-table tr:hover td {
+		background: #fff5f0;
+	}
+
+	.wasm-table a {
+		font-weight: 600;
+	}
+
+	.terminal-block {
+		background: #1a1a1a;
+		padding: 1.25rem;
+		border-radius: 8px;
+		margin: 1.5rem 0;
+	}
+
+	.terminal-block code {
+		display: block;
+		color: #00ff88;
+		background: none;
+		padding: 0.25rem 0;
+		font-size: 1rem;
+	}
+
+	.terminal-block code::before {
+		content: '$ ';
+		color: #888;
+	}
+
 	.cta-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -446,7 +504,7 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		padding: 0.5rem 1rem;
 		background: rgba(255, 107, 53, 0.2);
 		border: 1px solid rgba(255, 107, 53, 0.4);
-		color: #FF6B35;
+		color: #ff6b35;
 		border-radius: 6px;
 		font-weight: 600;
 		font-size: 0.8rem;
@@ -456,7 +514,7 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		letter-spacing: 0.05em;
 		white-space: nowrap;
 	}
-	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #FF6B35; }
+	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
 
 	.share-section {
@@ -490,34 +548,6 @@ fafb_info(bytes)       // Metadata only (no content)`}</code></pre>
 		font-size: 0.95rem;
 		color: #666;
 		text-align: center;
-	}
-
-	.wasm-table {
-		width: 100%;
-		border-collapse: collapse;
-		margin: 1.5rem 0;
-		font-size: 0.95rem;
-	}
-
-	.wasm-table th {
-		background: #1a1a1a;
-		color: #00ff88;
-		padding: 0.75rem 1rem;
-		text-align: left;
-		font-weight: 600;
-	}
-
-	.wasm-table td {
-		padding: 0.75rem 1rem;
-		border-bottom: 1px solid #eee;
-	}
-
-	.wasm-table tr:hover td {
-		background: #fff5f0;
-	}
-
-	.wasm-table a {
-		font-weight: 600;
 	}
 
 	@media (max-width: 768px) {

@@ -4,6 +4,24 @@
 
 	const posts = [
 		{
+			slug: 'blog/kernel-router',
+			title: 'The Kernel Router',
+			date: 'March 20, 2026',
+			timestamp: '2026-03-20',
+			excerpt: 'faf-wasm-core v1.0.0 — one FafKernel interface, any WASM engine behind it. The shared kernel that bun-sticky, builder.faf.one, and faf-cli all embed. 322KB, 284μs, zero deps.',
+			emoji: '🔌',
+			category: 'Launch'
+		},
+		{
+			slug: 'blog/wasm-edition',
+			title: 'The WASM Edition',
+			date: 'March 20, 2026',
+			timestamp: '2026-03-20',
+			excerpt: 'One interface, any kernel. bun-sticky v2.0.0 embeds the Mk4 WASM engine. Data-driven slotignore. 405 tests across 2 packages, 284μs per score.',
+			emoji: '🥐',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/fafb-edition',
 			title: 'The FAFb Edition',
 			date: 'March 19, 2026',

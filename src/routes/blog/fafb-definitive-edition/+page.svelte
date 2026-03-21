@@ -138,6 +138,46 @@ const json = decompile_fafb(bytes);`}</code></pre>
 		</section>
 
 		<section>
+			<h2>WASM Roundup</h2>
+
+			<p>The FAF WASM stack, top to bottom:</p>
+
+			<table class="wasm-table">
+				<thead>
+					<tr>
+						<th>Package</th>
+						<th>What</th>
+						<th>Size</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="https://github.com/Wolfe-Jam/faf-wasm-sdk">faf-wasm-sdk</a></td>
+						<td>Rust→WASM compiler (the engine)</td>
+						<td>322KB</td>
+					</tr>
+					<tr>
+						<td><a href="https://npmjs.com/package/faf-wasm-core">faf-wasm-core</a></td>
+						<td>Kernel router (wraps sdk, FafKernel interface)</td>
+						<td>155KB npm</td>
+					</tr>
+					<tr>
+						<td><a href="https://npmjs.com/package/bun-sticky">bun-sticky</a></td>
+						<td>Bun CLI (embeds core)</td>
+						<td>185KB npm</td>
+					</tr>
+					<tr>
+						<td><a href="https://github.com/Wolfe-Jam/xai-faf-zig">xai-faf-zig</a></td>
+						<td>Zig ghost (scorer only, Cascade future)</td>
+						<td>2.7KB</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><strong>sdk</strong> is the compiler. <strong>core</strong> wraps it behind an interface. <strong>bun-sticky</strong> embeds core. <strong>builder.faf.one</strong> runs both Rust and Zig in the browser.</p>
+		</section>
+
+		<section>
 			<h2>The Numbers</h2>
 
 			<ul>
@@ -463,6 +503,34 @@ const json = decompile_fafb(bytes);`}</code></pre>
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	.wasm-table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1.5rem 0;
+		font-size: 0.95rem;
+	}
+
+	.wasm-table th {
+		background: #1a1a1a;
+		color: #00ff88;
+		padding: 0.75rem 1rem;
+		text-align: left;
+		font-weight: 600;
+	}
+
+	.wasm-table td {
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid #eee;
+	}
+
+	.wasm-table tr:hover td {
+		background: #fff5f0;
+	}
+
+	.wasm-table a {
+		font-weight: 600;
 	}
 
 	@media (max-width: 768px) {
