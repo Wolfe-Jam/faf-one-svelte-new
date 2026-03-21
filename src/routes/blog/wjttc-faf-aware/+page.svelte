@@ -167,6 +167,8 @@ FAF Documentation:
 
 			<p class="highlight"><strong>Format: 100% 🏆🍊 = Best-in-Class</strong></p>
 
+			<p><strong>Update:</strong> Big Orange certification has since moved to <strong>AI-curated evaluation</strong> — no human gatekeeper, non-subjective, scales to any project. <a href="/blog/wjttc-self-hosting">Read the full story →</a></p>
+
 			<h3>Current Big Orange Holders</h3>
 			<ul>
 				<li><strong>claude-faf-mcp</strong> - 100% 🏆🍊</li>
