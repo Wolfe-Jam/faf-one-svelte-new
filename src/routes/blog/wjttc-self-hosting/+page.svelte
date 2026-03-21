@@ -42,12 +42,16 @@
 		</section>
 
 		<section>
-			<h2>The Problem WJTTC Solves</h2>
-			<p>MCP servers are becoming infrastructure. People rely on them. But there's no standard way to know if one actually works — not just "runs without crashing," but works <em>correctly</em> across protocol compliance, error handling, tool validation, and edge cases.</p>
-
-			<p>I built WJTTC because I needed it myself. The FAF ecosystem has 9+ tools across TypeScript, Rust, Python, and Zig. Every one of them needs to be tested to the same standard. Not "good enough." Championship grade.</p>
-
-			<p>The name comes from F1 racing: <strong>when brakes must work flawlessly, so must our software</strong>.</p>
+			<h2>The Numbers</h2>
+			<ul>
+				<li><strong>v1.4.0</strong> — Latest release</li>
+				<li><strong>105</strong> — Internal tests passing</li>
+				<li><strong>52</strong> — Certification tests across 9 tiers</li>
+				<li><strong>100% 🏆</strong> — WJTTC's own FAF score (earned, not given)</li>
+				<li><strong>3 servers</strong> — Big Orange 🍊 certified</li>
+				<li><strong>36k+</strong> — FAF ecosystem downloads</li>
+				<li><strong>$0</strong> — Cost to certify, self-host, and adopt</li>
+			</ul>
 		</section>
 
 		<section>
@@ -91,6 +95,15 @@
 			</div>
 
 			<p>That's it. One command. 52 tests. A real score.</p>
+		</section>
+
+		<section>
+			<h2>The Problem WJTTC Solves</h2>
+			<p>MCP servers are becoming infrastructure. People rely on them. But there's no standard way to know if one actually works — not just "runs without crashing," but works <em>correctly</em> across protocol compliance, error handling, tool validation, and edge cases.</p>
+
+			<p>I built WJTTC because I needed it myself. The FAF ecosystem has 9+ tools across TypeScript, Rust, Python, and Zig. Every one of them needs to be tested to the same standard. Not "good enough." Championship grade.</p>
+
+			<p>The name comes from F1 racing: <strong>when brakes must work flawlessly, so must our software</strong>.</p>
 		</section>
 
 		<section>
@@ -178,27 +191,7 @@ jobs:
 		</section>
 
 		<section>
-			<h2>🏆 Trophy at 100%</h2>
-			<p>Score 100% on WJTTC certification and you earn the <strong>🏆 Trophy</strong>. That's the top of the scoring system — 52 tests, all passing, no skips, no workarounds.</p>
-
-			<p>The tier system below it works the same as FAF scoring:</p>
-
-			<div class="score-table">
-				<div class="score-row trophy"><span>100%</span><span>🏆 Trophy</span></div>
-				<div class="score-row"><span>99%</span><span>🥇 Gold</span></div>
-				<div class="score-row"><span>95%</span><span>🥈 Silver</span></div>
-				<div class="score-row"><span>85%</span><span>🥉 Bronze</span></div>
-				<div class="score-row"><span>70%</span><span>🟢 Green</span></div>
-				<div class="score-row"><span>55%</span><span>🟡 Yellow</span></div>
-			</div>
-
-			<p>Every FAF MCP server ships at 🏆. That's the standard. Not aspirational — actual.</p>
-		</section>
-
-		<section>
-			<h2>🍊 Big Orange: Beyond the Trophy</h2>
-			<p>Then there's Big Orange.</p>
-
+			<h2>🍊 Big Orange: The Badge You Can't Game</h2>
 			<p><strong>Big Orange 🍊 is not a score.</strong> You can't calculate your way to it. There's no human gatekeeper handing them out. No lobbying, no subjectivity, no gaming the system.</p>
 
 			<p>Big Orange is <strong>curated by AI</strong>. The evaluation looks at:</p>
@@ -218,6 +211,22 @@ jobs:
 				claude-faf-mcp · faf-mcp · grok-faf-mcp<br><br>
 				Three servers that didn't just pass every test once — they maintained championship standards across consecutive builds, documentation, and engineering practice. Hard to get. That's the point.
 			</p>
+		</section>
+
+		<section>
+			<h2>🏆 Trophy at 100%</h2>
+			<p>Big Orange sits above the scoring system. Below it, the ladder starts with the <strong>🏆 Trophy</strong> — score 100% on WJTTC certification. 52 tests, all passing, no skips, no workarounds.</p>
+
+			<div class="score-table">
+				<div class="score-row trophy"><span>100%</span><span>🏆 Trophy</span></div>
+				<div class="score-row"><span>99%</span><span>🥇 Gold</span></div>
+				<div class="score-row"><span>95%</span><span>🥈 Silver</span></div>
+				<div class="score-row"><span>85%</span><span>🥉 Bronze</span></div>
+				<div class="score-row"><span>70%</span><span>🟢 Green</span></div>
+				<div class="score-row"><span>55%</span><span>🟡 Yellow</span></div>
+			</div>
+
+			<p>Every FAF MCP server ships at 🏆. That's the standard. Not aspirational — actual. And above it, for those who sustain that standard — Big Orange 🍊.</p>
 		</section>
 
 		<section>
@@ -263,19 +272,6 @@ jobs:
 			</ul>
 
 			<p>Both are merged into the <a href="https://github.com/anthropics/skills/pull/190" target="_blank" rel="noopener">official Anthropic skills registry</a> (PR #190).</p>
-		</section>
-
-		<section>
-			<h2>The Numbers</h2>
-			<ul>
-				<li><strong>v1.4.0</strong> — Latest release</li>
-				<li><strong>105</strong> — Internal tests passing</li>
-				<li><strong>52</strong> — Certification tests across 9 tiers</li>
-				<li><strong>100% 🏆</strong> — WJTTC's own FAF score (earned, not given)</li>
-				<li><strong>3 servers</strong> — Big Orange 🍊 certified</li>
-				<li><strong>36k+</strong> — FAF ecosystem downloads</li>
-				<li><strong>$0</strong> — Cost to certify, self-host, and adopt</li>
-			</ul>
 		</section>
 
 		<section>
