@@ -12,10 +12,10 @@
 </script>
 
 <svelte:head>
-	<title>WJTTC v1.3.0 - Championship Testing for Everyone | FAF</title>
-	<meta name="description" content="WJTTC adds wjttc init command - Self-hosting infrastructure brings championship-grade testing to any project. Service to the army of free devs." />
-	<meta property="og:title" content="WJTTC v1.3.0 - Championship Testing for Everyone" />
-	<meta property="og:description" content="Free devs get championship-grade testing infrastructure. One command sets up Rocket Science Grade standards." />
+	<title>WJTTC: Championship-Grade Testing You Can Self-Host | FAF</title>
+	<meta name="description" content="WJTTC v1.4.0 — self-host championship-grade MCP testing in any project. Earn the 🏆 Trophy at 100%. Big Orange 🍊 is AI-curated, no human gatekeeper. Free forever." />
+	<meta property="og:title" content="WJTTC: Championship-Grade Testing You Can Self-Host" />
+	<meta property="og:description" content="Self-host championship-grade MCP testing. Trophy 🏆 at 100%. Big Orange 🍊 curated by AI — no human gatekeeper. Free forever." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -25,10 +25,10 @@
 		<div class="breadcrumb">
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / WJTTC Self-Hosting
 		</div>
-		<h1>🏎️ Championship Testing for Everyone</h1>
-		<p class="subtitle">WJTTC v1.3.0: Self-Hosting Infrastructure</p>
+		<h1>🏎️ Championship-Grade Testing You Can Self-Host</h1>
+		<p class="subtitle">WJTTC v1.4.0 — How I Test Every FAF App, and How You Can Too</p>
 		<div class="meta">
-			<time datetime="2026-02-17">February 17, 2026</time>
+			<time datetime="2026-03-21">March 21, 2026</time>
 			<span class="separator">•</span>
 			<span class="category wjttc">WJTTC Ecosystem</span>
 		</div>
@@ -37,17 +37,69 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> WJTTC v1.3.0 adds <code>wjttc init</code>—one command that sets up championship-grade testing infrastructure in any project. Free MCP certification + free testing setup = service to the army of free devs.
+				Every FAF app — claude-faf-mcp, faf-cli, faf-mcp, grok-faf-mcp — passes through the same testing system before it ships. That system is WJTTC. It's free, it's open source, and you can self-host it in your own project right now.
 			</p>
 		</section>
 
 		<section>
-			<h2>What Changed</h2>
-			<p>WJTTC is now both a <strong>certification tool</strong> AND a <strong>testing infrastructure provider</strong>.</p>
+			<h2>The Problem WJTTC Solves</h2>
+			<p>MCP servers are becoming infrastructure. People rely on them. But there's no standard way to know if one actually works — not just "runs without crashing," but works <em>correctly</em> across protocol compliance, error handling, tool validation, and edge cases.</p>
 
-			<div class="copy-box" onclick={() => copyText('npm install -g wjttc@1.3.0', 'install1')}>
-				<code class="copy-code">npm install -g wjttc@1.3.0</code>
-				<button class="copy-btn">{copiedId === 'install1' ? 'Copied!' : 'Copy'}</button>
+			<p>I built WJTTC because I needed it myself. The FAF ecosystem has 9+ tools across TypeScript, Rust, Python, and Zig. Every one of them needs to be tested to the same standard. Not "good enough." Championship grade.</p>
+
+			<p>The name comes from F1 racing: <strong>when brakes must work flawlessly, so must our software</strong>.</p>
+		</section>
+
+		<section>
+			<h2>How I Use It</h2>
+			<p>In my Claude Code workflow, WJTTC is wired into the development cycle. Here's the actual flow:</p>
+
+			<div class="flow-steps">
+				<div class="flow-step">
+					<span class="step-num">1</span>
+					<div>
+						<strong>Build the MCP server</strong>
+						<p>Write tools, handlers, protocol compliance — the usual.</p>
+					</div>
+				</div>
+				<div class="flow-step">
+					<span class="step-num">2</span>
+					<div>
+						<strong>Run WJTTC certification</strong>
+						<p>52 tests across 9 tiers. Protocol, tools, errors, performance, FAF awareness — everything.</p>
+					</div>
+				</div>
+				<div class="flow-step">
+					<span class="step-num">3</span>
+					<div>
+						<strong>Fix what fails, run again</strong>
+						<p>WJTTC tells you exactly what's wrong. Fix it. Certify again. Repeat until 100%.</p>
+					</div>
+				</div>
+				<div class="flow-step">
+					<span class="step-num">4</span>
+					<div>
+						<strong>Ship with confidence</strong>
+						<p>100% = 🏆 Trophy. The server is certified. It works.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="copy-box" onclick={() => copyText('npx wjttc certify --mcp "npx your-server"', 'certify')}>
+				<code class="copy-code">npx wjttc certify --mcp "npx your-server"</code>
+				<button class="copy-btn">{copiedId === 'certify' ? 'Copied!' : 'Copy'}</button>
+			</div>
+
+			<p>That's it. One command. 52 tests. A real score.</p>
+		</section>
+
+		<section>
+			<h2>Self-Hosting: Your Project, Your Tests</h2>
+			<p>WJTTC isn't just a certifier you run once. You can self-host the entire testing infrastructure in your own project.</p>
+
+			<div class="copy-box" onclick={() => copyText('npm install -g wjttc@1.4.0', 'install')}>
+				<code class="copy-code">npm install -g wjttc@1.4.0</code>
+				<button class="copy-btn">{copiedId === 'install' ? 'Copied!' : 'Copy'}</button>
 			</div>
 			<div class="copy-box" style="margin-top: 0.5rem;" onclick={() => copyText('wjttc init', 'init')}>
 				<code class="copy-code">wjttc init</code>
@@ -57,240 +109,200 @@
 			<div class="terminal-output">
 				<code>🚀 WJTTC Initialization Complete!
 
-✅ Test directories created (brake/engine/aero)
-✅ Pre-commit hook installed (Rocket Science Grade)
-✅ package.json scripts added
-✅ Example brake test generated
-✅ WJTTC-TESTING.md created
+☑️ Test directories created (brake/engine/aero)
+☑️ Pre-commit hook installed (Rocket Science Grade)
+☑️ package.json scripts added
+☑️ Example brake test generated
+☑️ WJTTC-TESTING.md created
 
 Your project now has championship-grade testing infrastructure.</code>
 			</div>
 
-			<p>One command. Five setup steps. Championship standards installed.</p>
+			<p>One command installs the full F1 testing philosophy into your project:</p>
+
+			<div class="tier-grid">
+				<div class="tier">
+					<h4>🛑 Brake Tests</h4>
+					<p>Fast, critical. Must pass before every commit. Under 30 seconds.</p>
+				</div>
+				<div class="tier">
+					<h4>⚙️ Engine Tests</h4>
+					<p>Core functionality. The heart of your application.</p>
+				</div>
+				<div class="tier">
+					<h4>🏎️ Aero Tests</h4>
+					<p>Performance benchmarks. Speed under pressure.</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
-			<h2>The Philosophy: Service to Free Devs</h2>
-			<p><strong>"Give away the razor, sell the blades."</strong></p>
+			<h2>In CI/CD: Automate the Standard</h2>
+			<p>Self-hosting means your CI pipeline enforces the same standards locally and in the cloud. WJTTC ships with a GitHub Action:</p>
 
-			<p>WJTTC already provides free MCP certification—52 tests across 9 tiers, scoring from 0-100%, published to npm with zero ads or announcements.</p>
+			<div class="terminal-block">
+				<code>{`# .github/workflows/wjttc.yml
+name: WJTTC Certification
+on: [push, pull_request]
 
-			<p>Now WJTTC gives away the testing infrastructure too:</p>
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npx wjttc certify --mcp "npx ./dist/index.js"`}</code>
+			</div>
+
+			<p>Every push. Every PR. Championship standards enforced automatically. No human has to remember to run the tests — the pipeline does it.</p>
+		</section>
+
+		<section>
+			<h2>The 9 Tiers</h2>
+			<p>WJTTC doesn't just check "does it run." It validates across 9 tiers, from basic protocol compliance to FAF integration:</p>
+
+			<div class="tiers-table">
+				<div class="tier-row"><span class="tier-num">1</span><span class="tier-name">Protocol</span><span class="tier-desc">MCP protocol compliance</span></div>
+				<div class="tier-row"><span class="tier-num">2</span><span class="tier-name">Discovery</span><span class="tier-desc">Tool listing and capability reporting</span></div>
+				<div class="tier-row"><span class="tier-num">3</span><span class="tier-name">Execution</span><span class="tier-desc">Tool calls return correct results</span></div>
+				<div class="tier-row"><span class="tier-num">4</span><span class="tier-name">Errors</span><span class="tier-desc">Graceful error handling</span></div>
+				<div class="tier-row"><span class="tier-num">5</span><span class="tier-name">Edge Cases</span><span class="tier-desc">Malformed input, boundary conditions</span></div>
+				<div class="tier-row"><span class="tier-num">6</span><span class="tier-name">Performance</span><span class="tier-desc">Response time and throughput</span></div>
+				<div class="tier-row"><span class="tier-num">7</span><span class="tier-name">Security</span><span class="tier-desc">Input validation, injection resistance</span></div>
+				<div class="tier-row"><span class="tier-num">8</span><span class="tier-name">FAF</span><span class="tier-desc">project.faf validation and scoring</span></div>
+				<div class="tier-row"><span class="tier-num">9</span><span class="tier-name">Receipt</span><span class="tier-desc">TAF receipt validation</span></div>
+			</div>
+
+			<p>49 scored tests + 3 validation checks = 52 total. Progressive adoption: run 7 tiers, 8, or all 9 — all valid certification levels.</p>
+		</section>
+
+		<section>
+			<h2>🏆 Trophy at 100%</h2>
+			<p>Score 100% on WJTTC certification and you earn the <strong>🏆 Trophy</strong>. That's the top of the scoring system — 52 tests, all passing, no skips, no workarounds.</p>
+
+			<p>The tier system below it works the same as FAF scoring:</p>
+
+			<div class="score-table">
+				<div class="score-row trophy"><span>100%</span><span>🏆 Trophy</span></div>
+				<div class="score-row"><span>99%</span><span>🥇 Gold</span></div>
+				<div class="score-row"><span>95%</span><span>🥈 Silver</span></div>
+				<div class="score-row"><span>85%</span><span>🥉 Bronze</span></div>
+				<div class="score-row"><span>70%</span><span>🟢 Green</span></div>
+				<div class="score-row"><span>55%</span><span>🟡 Yellow</span></div>
+			</div>
+
+			<p>Every FAF MCP server ships at 🏆. That's the standard. Not aspirational — actual.</p>
+		</section>
+
+		<section>
+			<h2>🍊 Big Orange: Beyond the Trophy</h2>
+			<p>Then there's Big Orange.</p>
+
+			<p><strong>Big Orange 🍊 is not a score.</strong> You can't calculate your way to it. There's no human gatekeeper handing them out. No lobbying, no subjectivity, no gaming the system.</p>
+
+			<p>Big Orange is <strong>curated by AI</strong>. The evaluation looks at:</p>
 
 			<ul>
-				<li>✅ Test directory structure (Brake/Engine/Aero)</li>
-				<li>✅ Pre-commit hooks with Rocket Science Grade branding</li>
-				<li>✅ package.json scripts (test:brake, test:wjttc)</li>
-				<li>✅ Example tests with helpful comments</li>
-				<li>✅ Full testing documentation</li>
+				<li>☑️ <strong>Consecutive 100% builds</strong> — not just one pass, sustained excellence</li>
+				<li>☑️ <strong>Documentation quality</strong> — clear, accurate, maintained</li>
+				<li>☑️ <strong>README standards</strong> — install, usage, examples, no fluff</li>
+				<li>☑️ <strong>Active bi-sync</strong> — .faf and CLAUDE.md staying in alignment</li>
+				<li>☑️ <strong>Best practice comparison</strong> — measured against the best of your app type</li>
 			</ul>
 
+			<p>No human decides. AI evaluates the evidence. The badge is either earned or it isn't.</p>
+
 			<p class="highlight">
-				<strong>Free Community Edition:</strong> Test your MCP server + Set up your testing<br>
-				<strong>Paid Team/Enterprise:</strong> Advanced features for organizations<br>
-				<br>
-				Same model as FAF. Professional. Trusted.
+				<strong>Current Big Orange 🍊 holders:</strong><br>
+				claude-faf-mcp · faf-mcp · grok-faf-mcp<br><br>
+				Three servers that didn't just pass every test once — they maintained championship standards across consecutive builds, documentation, and engineering practice. Hard to get. That's the point.
 			</p>
 		</section>
 
 		<section>
-			<h2>What Gets Installed</h2>
+			<h2>Adopting WJTTC: Three Paths</h2>
 
-			<h3>1. Test Directory Structure</h3>
-			<div class="terminal-block">
-				<code>tests/
-├── brake/          # Fast, critical tests (&lt;30s)
-├── engine/         # Core functionality
-└── aero/           # Performance benchmarks</code>
+			<div class="paths-grid">
+				<div class="path-card">
+					<h3>☑️ Certify Only</h3>
+					<p>Run the certifier against your MCP server. Get a score. See what passes and what doesn't.</p>
+					<div class="copy-box" onclick={() => copyText('npx wjttc certify --mcp "npx your-server"', 'path1')}>
+						<code class="copy-code">npx wjttc certify --mcp "npx your-server"</code>
+						<button class="copy-btn">{copiedId === 'path1' ? 'Copied!' : 'Copy'}</button>
+					</div>
+				</div>
+				<div class="path-card">
+					<h3>☑️ Self-Host Locally</h3>
+					<p>Install the full testing infrastructure in your project. Pre-commit hooks, test structure, documentation.</p>
+					<div class="copy-box" onclick={() => copyText('wjttc init', 'path2')}>
+						<code class="copy-code">wjttc init</code>
+						<button class="copy-btn">{copiedId === 'path2' ? 'Copied!' : 'Copy'}</button>
+					</div>
+				</div>
+				<div class="path-card">
+					<h3>☑️ CI/CD Pipeline</h3>
+					<p>Automate certification in GitHub Actions. Every push, every PR — championship standards enforced.</p>
+					<div class="copy-box" onclick={() => copyText('npx wjttc certify --mcp "npx ./dist/index.js"', 'path3')}>
+						<code class="copy-code">npx wjttc certify --mcp "npx ./dist/index.js"</code>
+						<button class="copy-btn">{copiedId === 'path3' ? 'Copied!' : 'Copy'}</button>
+					</div>
+				</div>
 			</div>
 
-			<h3>2. Pre-Commit Hook</h3>
-			<p>Extracted from <code>faf-enterprise</code> with Rocket Science Grade branding:</p>
-			<div class="terminal-block">
-				<code>#!/bin/bash
-# WJTTC Pre-Commit Hook
-# Rocket Science-Grade Testing Enforcement
-
-echo "🚀 WJTTC Pre-Commit Certification"
-
-# Step 1: TypeScript strict mode check
-npm run typecheck || exit 1
-
-# Step 2: Brake tests (&lt;30s execution)
-npm run test:brake || exit 1
-
-echo "✅ Pre-commit checks passed"</code>
-			</div>
-
-			<h3>3. package.json Scripts</h3>
-			<div class="terminal-block">
-				<code>{`{
-  "scripts": {
-    "typecheck": "tsc --noEmit",
-    "test:brake": "jest tests/brake --maxWorkers=4 --no-coverage",
-    "test:engine": "jest tests/engine --maxWorkers=4",
-    "test:aero": "jest tests/aero",
-    "test:wjttc": "jest && echo [WJTTC CERTIFICATION BANNER]"
-  }
-}`}</code>
-			</div>
-
-			<h3>4. Example Brake Test</h3>
-			<p>Generated with helpful comments explaining the WJTTC philosophy:</p>
-			<div class="terminal-block">
-				<code>{`// TIER 1: BRAKE Tests
-// Fast, critical tests that MUST pass before commit
-// Target: &lt;30s total execution time
-
-describe('BRAKE: Critical Path', () => {
-  it('should validate core functionality', () => {
-    // Your critical test here
-    expect(true).toBe(true);
-  });
-});`}</code>
-			</div>
-
-			<h3>5. Documentation</h3>
-			<p>Full <code>WJTTC-TESTING.md</code> explaining the 3-tier system, pre-commit workflow, and certification process.</p>
+			<p>All three are free. All three are real. Use one, use all three — the standard is the same.</p>
 		</section>
 
 		<section>
-			<h2>The Rocket Science Grade Standard</h2>
-			<p>This infrastructure was extracted from <code>faf-enterprise</code>—a monorepo running 833 tests with 4-layer enforcement:</p>
+			<h2>Claude Code Skills</h2>
+			<p>If you're in Claude Code, WJTTC has two skills built in:</p>
 
-			<div class="code-layers">
-				<div class="layer">
-					<h4>Layer 1: TypeScript Strict Mode</h4>
-					<p>Zero runtime errors. Strict null checks. No implicit any.</p>
-				</div>
-
-				<div class="layer">
-					<h4>Layer 2: Brake Tests (&lt;30s)</h4>
-					<p>Fast, critical tests run on every commit. Pre-commit hook enforced.</p>
-				</div>
-
-				<div class="layer">
-					<h4>Layer 3: Full Test Suite</h4>
-					<p>Engine + Aero tiers. Comprehensive validation before merge.</p>
-				</div>
-
-				<div class="layer">
-					<h4>Layer 4: Verification</h4>
-					<p>Production build check. Final gate before release.</p>
-				</div>
-			</div>
-
-			<p class="highlight">
-				<strong>faf-enterprise status:</strong> 788/833 tests passing ✅<br>
-				(44 skipped - Enterprise license-gated monorepo tests)
-			</p>
-		</section>
-
-		<section>
-			<h2>Try It Now</h2>
-
-			<h3>New Project</h3>
-			<div class="copy-box" onclick={() => copyText('npm install -g wjttc@1.3.0 && cd your-project && wjttc init', 'new')}>
-				<div class="copy-code-multi">npm install -g wjttc@1.3.0<br/>cd your-project<br/>wjttc init</div>
-				<button class="copy-btn">{copiedId === 'new' ? 'Copied!' : 'Copy'}</button>
-			</div>
-
-			<h3>Existing Project</h3>
-			<div class="copy-box" onclick={() => copyText('wjttc init', 'existing')}>
-				<code class="copy-code">wjttc init <span class="code-comment"># Preserves existing tests</span></code>
-				<button class="copy-btn">{copiedId === 'existing' ? 'Copied!' : 'Copy'}</button>
-			</div>
-
-			<h3>Then Certify</h3>
-			<div class="copy-box" onclick={() => copyText('npx wjttc certify --mcp "npx your-server"', 'certify')}>
-				<code class="copy-code">npx wjttc certify --mcp "npx your-server"</code>
-				<button class="copy-btn">{copiedId === 'certify' ? 'Copied!' : 'Copy'}</button>
-			</div>
-		</section>
-
-		<section>
-			<h2>The Full Ecosystem</h2>
-
-			<h3>Three Ways to Use WJTTC</h3>
-			<ol>
-				<li><strong>Certification Only:</strong> Test your MCP server, get a score (free)</li>
-				<li><strong>Infrastructure Setup:</strong> <code>wjttc init</code> in your project (free)</li>
-				<li><strong>Team/Enterprise:</strong> Advanced features, support, custom certification (paid)</li>
-			</ol>
-
-			<h3>WJTTC Tools</h3>
 			<ul>
-				<li><strong>wjttc</strong> (npm) - Certifier + infrastructure provider</li>
-				<li><strong>/wjttc-builder</strong> (Claude Code skill) - Auto-generate test suites</li>
-				<li><strong>/wjttc-tester</strong> (Claude Code skill) - F1-inspired testing expert</li>
+				<li><strong>/wjttc-builder</strong> — Auto-generates championship-grade test suites for any project. Analyzes your codebase, identifies the critical tiers, creates the test plan and files.</li>
+				<li><strong>/wjttc-tester</strong> — F1-inspired testing expert. Tests your software and writes detailed WJTTC reports with findings and recommendations.</li>
 			</ul>
 
-			<h3>Integration with FAF Ecosystem</h3>
-			<ul>
-				<li>Works with or without <code>project.faf</code> files</li>
-				<li>Validates FAF scores (Tier 8)</li>
-				<li>Checks TAF Receipts (Tier 9)</li>
-				<li>Progressive adoption: 7, 8, or 9 tiers—all valid</li>
-			</ul>
-		</section>
-
-		<section>
-			<h2>The Army of Free Devs</h2>
-			<blockquote class="big-quote">
-				<p>"We are a service to the army of free devs!"</p>
-				<cite>— wolfejam</cite>
-			</blockquote>
-
-			<p>WJTTC has 100+ free downloads with zero ads or announcements. The tool works. The certification is real. The standards are championship-grade.</p>
-
-			<p>Now the infrastructure is free too.</p>
-
-			<p><strong>Why?</strong> Because testing should be accessible. Championship standards shouldn't require enterprise budgets. Free devs deserve F1-grade tools.</p>
-
-			<p class="highlight">
-				<strong>The business model:</strong><br>
-				Free Community = Testing certification + Infrastructure setup<br>
-				Paid Team/Enterprise = Professional support + Advanced features<br>
-				<br>
-				Same as FAF. Professional. Boring. Trusted.
-			</p>
+			<p>Both are merged into the <a href="https://github.com/anthropics/skills/pull/190" target="_blank" rel="noopener">official Anthropic skills registry</a> (PR #190).</p>
 		</section>
 
 		<section>
 			<h2>The Numbers</h2>
 			<ul>
-				<li><strong>v1.3.0</strong> - Released February 17, 2026</li>
-				<li><strong>103/103</strong> - Tests passing</li>
-				<li><strong>100% 🏆</strong> - WJTTC's FAF score (earned)</li>
-				<li><strong>52 tests</strong> - Across 9 tiers (49 scored + 3 validation checks)</li>
-				<li><strong>3 servers</strong> - Big Orange certified (100% 🏆🍊)</li>
-				<li><strong>100+</strong> - Free downloads (zero ads)</li>
+				<li><strong>v1.4.0</strong> — Latest release</li>
+				<li><strong>105</strong> — Internal tests passing</li>
+				<li><strong>52</strong> — Certification tests across 9 tiers</li>
+				<li><strong>100% 🏆</strong> — WJTTC's own FAF score (earned, not given)</li>
+				<li><strong>3 servers</strong> — Big Orange 🍊 certified</li>
+				<li><strong>36k+</strong> — FAF ecosystem downloads</li>
+				<li><strong>$0</strong> — Cost to certify, self-host, and adopt</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>What's New in v1.3.0</h2>
-			<ul>
-				<li>✅ <code>wjttc init</code> command - Self-hosting infrastructure setup</li>
-				<li>✅ Pre-commit hook template - Extracted from faf-enterprise</li>
-				<li>✅ Testing infrastructure templates - Enable universal adoption</li>
-				<li>✅ Example tests with helpful comments</li>
-				<li>✅ Full documentation generation</li>
-			</ul>
+			<h2>The Philosophy</h2>
+			<blockquote class="big-quote">
+				<p>"We are a service to the army of free devs!"</p>
+				<cite>— wolfejam</cite>
+			</blockquote>
+
+			<p>WJTTC exists because testing should be accessible. Championship standards shouldn't require enterprise budgets. If you're building MCP servers — or any software where reliability matters — you deserve the same tools that built the FAF ecosystem.</p>
+
+			<p>Free to certify. Free to self-host. Free to put in your CI pipeline. The Trophy 🏆 is yours to earn. Big Orange 🍊 is harder — but the path is open to everyone.</p>
 		</section>
 
 		<section>
 			<h2>Links</h2>
 			<ul>
-				<li><a href="https://www.npmjs.com/package/wjttc" target="_blank">npm: wjttc</a></li>
-				<li><a href="https://github.com/Wolfe-Jam/wjttc" target="_blank">GitHub: Wolfe-Jam/wjttc</a></li>
-				<li><a href="https://github.com/Wolfe-Jam/wjttc/releases/tag/v1.3.0" target="_blank">Release Notes</a></li>
-				<li><a href="https://github.com/Wolfe-Jam/wjttc/blob/main/SPECIFICATION.md" target="_blank">Specification</a></li>
+				<li><a href="https://www.npmjs.com/package/wjttc" target="_blank" rel="noopener">npm: wjttc</a></li>
+				<li><a href="https://github.com/Wolfe-Jam/wjttc" target="_blank" rel="noopener">GitHub: Wolfe-Jam/wjttc</a></li>
+				<li><a href="https://github.com/Wolfe-Jam/wjttc/releases/tag/v1.4.0" target="_blank" rel="noopener">Release Notes</a></li>
+				<li><a href="https://github.com/Wolfe-Jam/wjttc/blob/main/SPECIFICATION.md" target="_blank" rel="noopener">Specification</a></li>
+				<li><a href="/ecosystem" rel="noopener">FAF Ecosystem</a></li>
 			</ul>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/wjttc-self-hosting" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href="https://twitter.com/intent/tweet?text=Championship-grade%20MCP%20testing%20you%20can%20self-host.%20Trophy%20%F0%9F%8F%86%20at%20100%25.%20Big%20Orange%20%F0%9F%8D%8A%20curated%20by%20AI.%20Free%20forever.&url=https://faf.one/blog/wjttc-self-hosting" target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">
@@ -412,14 +424,185 @@ describe('BRAKE: Critical Path', () => {
 		color: #333;
 	}
 
+	em {
+		font-style: italic;
+	}
+
 	.highlight {
 		background: #fffaf0;
 		border-left: 4px solid #FF6B35;
-		padding: 1rem;
-		margin: 1rem 0;
+		padding: 1rem 1.25rem;
+		margin: 1.5rem 0;
 		border-radius: 4px;
 	}
 
+	/* Flow steps */
+	.flow-steps {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin: 1.5rem 0;
+	}
+
+	.flow-step {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.step-num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 2rem;
+		height: 2rem;
+		background: #FF6B35;
+		color: white;
+		border-radius: 50%;
+		font-weight: 700;
+		font-size: 0.9rem;
+		margin-top: 0.1rem;
+	}
+
+	.flow-step div p {
+		margin: 0.25rem 0 0 0;
+		font-size: 0.95rem;
+		color: #666;
+	}
+
+	/* Tier grid */
+	.tier-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin: 1.5rem 0;
+	}
+
+	.tier {
+		background: #f9f9f9;
+		border-left: 4px solid #00bf63;
+		padding: 1rem;
+		border-radius: 4px;
+	}
+
+	.tier h4 {
+		margin: 0 0 0.5rem 0;
+		color: #00bf63;
+	}
+
+	.tier p {
+		margin: 0;
+		font-size: 0.9rem;
+		color: #666;
+	}
+
+	/* Tiers table */
+	.tiers-table {
+		margin: 1.5rem 0;
+		border: 1px solid #e0e0e0;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.tier-row {
+		display: grid;
+		grid-template-columns: 3rem 7rem 1fr;
+		padding: 0.6rem 1rem;
+		border-bottom: 1px solid #f0f0f0;
+		font-size: 0.95rem;
+		align-items: center;
+	}
+
+	.tier-row:last-child {
+		border-bottom: none;
+	}
+
+	.tier-row:nth-child(odd) {
+		background: #fafafa;
+	}
+
+	.tier-num {
+		font-weight: 700;
+		color: #FF6B35;
+	}
+
+	.tier-name {
+		font-weight: 600;
+		color: #333;
+	}
+
+	.tier-desc {
+		color: #666;
+	}
+
+	/* Score table */
+	.score-table {
+		display: inline-flex;
+		flex-direction: column;
+		gap: 0;
+		margin: 1rem 0;
+		border: 1px solid #e0e0e0;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.score-row {
+		display: flex;
+		gap: 1.5rem;
+		padding: 0.5rem 1.5rem;
+		font-size: 0.95rem;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.score-row:last-child {
+		border-bottom: none;
+	}
+
+	.score-row span:first-child {
+		font-weight: 700;
+		color: #333;
+		min-width: 3rem;
+	}
+
+	.score-row.trophy {
+		background: #fffaf0;
+	}
+
+	/* Paths grid */
+	.paths-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.path-card {
+		border: 2px solid #e0e0e0;
+		border-radius: 10px;
+		padding: 1.5rem;
+		transition: border-color 0.2s;
+	}
+
+	.path-card:hover {
+		border-color: #FF6B35;
+	}
+
+	.path-card h3 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1.15rem;
+	}
+
+	.path-card p {
+		font-size: 0.9rem;
+		color: #666;
+		margin: 0 0 1rem 0;
+	}
+
+	.path-card .copy-box {
+		margin: 0;
+	}
+
+	/* Terminal blocks */
 	.terminal-block {
 		background: #f5f5f5;
 		border: 1px solid #ddd;
@@ -456,29 +639,6 @@ describe('BRAKE: Critical Path', () => {
 		color: #333;
 	}
 
-	.code-layers {
-		display: grid;
-		gap: 1rem;
-		margin: 2rem 0;
-	}
-
-	.layer {
-		background: #f9f9f9;
-		border-left: 4px solid #00bf63;
-		padding: 1rem;
-		border-radius: 4px;
-	}
-
-	.layer h4 {
-		margin: 0 0 0.5rem 0;
-		color: #00bf63;
-	}
-
-	.layer p {
-		margin: 0;
-		font-size: 0.95rem;
-	}
-
 	.big-quote {
 		background: #fffaf0;
 		border-left: 4px solid #FF6B35;
@@ -499,14 +659,6 @@ describe('BRAKE: Critical Path', () => {
 		font-size: 1rem;
 		color: #666;
 		font-style: normal;
-	}
-
-	blockquote {
-		border-left: 4px solid #ddd;
-		padding-left: 1.5rem;
-		margin: 1.5rem 0;
-		color: #666;
-		font-style: italic;
 	}
 
 	a {
@@ -582,20 +734,6 @@ describe('BRAKE: Critical Path', () => {
 		border-radius: 0;
 	}
 
-	.copy-code-multi {
-		flex: 1;
-		font-family: 'Monaco', 'Courier New', monospace;
-		color: #00d4d4;
-		font-size: 0.9rem;
-		font-weight: 600;
-		line-height: 1.6;
-	}
-
-	.code-comment {
-		color: #666;
-		font-weight: 400;
-	}
-
 	.terminal-output {
 		background: #1a1a1a;
 		padding: 1.25rem;
@@ -636,5 +774,13 @@ describe('BRAKE: Critical Path', () => {
 
 	.copy-btn:active {
 		transform: scale(0.95);
+	}
+
+	@media (max-width: 768px) {
+		h1 { font-size: 2rem; }
+		.subtitle { font-size: 1.1rem; }
+		.tier-grid { grid-template-columns: 1fr; }
+		.paths-grid { grid-template-columns: 1fr; }
+		.tier-row { grid-template-columns: 2.5rem 5rem 1fr; font-size: 0.85rem; }
 	}
 </style>
