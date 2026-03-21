@@ -27,6 +27,9 @@
 <svelte:head>
 	<title>42|42 — 30 Years in the Mind. 84 Days to MIME-Standard.</title>
 	<meta name="description" content="YAML took 22 years. JSON took 7. FAF took 84 days. The origin story of an IANA-registered standard." />
+	<meta property="og:title" content="42|42 — 30 Years in the Mind. 84 Days to MIME-Standard." />
+	<meta property="og:description" content="YAML took 22 years. JSON took 7. FAF took 84 days. The origin story of an IANA-registered standard." />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="back-nav">
@@ -270,7 +273,7 @@
 			<div class="signature">— Wolfejam, December 31, 2025</div>
 		</footer>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/42-42" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href="https://twitter.com/intent/tweet?text=42%7C42%20%E2%80%94%20YAML%20took%2022%20years.%20JSON%20took%207.%20FAF%20took%2084%20days.&url=https://faf.one/blog/42-42" target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</div>
 </article>

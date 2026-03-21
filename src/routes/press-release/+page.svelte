@@ -1,6 +1,10 @@
 <svelte:head>
 	<title>.faf - The JPEG for AI is YAML & 🍜noodles</title>
 	<meta name="description" content="Foundational AI-context Format - Universal, shareable AI context for any AI, human or team">
+	<meta property="og:title" content=".faf - The JPEG for AI is YAML & noodles" />
+	<meta property="og:description" content="Foundational AI-context Format - Universal, shareable AI context for any AI, human or team. 91% token reclaim. IANA registered." />
+	<meta property="og:type" content="article" />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="back-nav">
@@ -124,6 +128,10 @@ human_context:
 
 		<hr class="divider">
 
+		<div class="share-section">
+			<a href="https://twitter.com/intent/tweet?text=.faf%20-%20The%20JPEG%20for%20AI%20is%20YAML.%20Universal%20AI%20context%20format.%20IANA%20registered.&url=https://faf.one/press-release" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</div>
+
 		<p class="tagline"><em>".faf is here. No more faffing about."</em></p>
 
 		<h3>Contact</h3>
@@ -137,6 +145,10 @@ human_context:
 </article>
 
 <style>
+	:global(body) {
+		background: #FEFCF8;
+	}
+
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
@@ -424,6 +436,30 @@ human_context:
 		border-radius: 4px;
 		font-family: var(--font-mono);
 		font-size: 0.95rem;
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 
 	@media (max-width: 768px) {

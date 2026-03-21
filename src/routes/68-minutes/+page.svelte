@@ -85,11 +85,19 @@
 
 		<hr class="divider">
 
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?text=68%20Minutes%3A%20B%26W%20to%20Technicolor%20%E2%80%94%20we%20transformed%20our%20CLI%20in%2068%20minutes%20%E2%9A%A1%EF%B8%8F&url=https://faf.one/68-minutes" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
+
 		<p style="text-align: center;">Made with 🧡 by <a href="https://github.com/Wolfe-Jam/faf" target="_blank" style="color: var(--faf-orange); text-decoration: none; font-weight: 600;">wolfejam</a></p>
 	</div>
 </article>
 
 <style>
+	:global(body) {
+		background: #FEFCF8 !important;
+	}
+
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
@@ -393,6 +401,30 @@
 		border-radius: 4px;
 		font-family: var(--font-mono);
 		font-size: 0.95rem;
+	}
+
+	.share-section {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+		background: #000;
+		color: #fff;
+		transition: opacity 0.2s;
+	}
+
+	.share-btn:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
 	}
 
 	@media (max-width: 768px) {

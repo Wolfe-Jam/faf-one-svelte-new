@@ -352,9 +352,9 @@ faf go
 		<section class="next-steps">
 			<h2 class="section-title">Next Steps</h2>
 			<div class="next-grid">
-				<a href="/guides/existing-project" class="next-card">
+				<a href="/docs" class="next-card">
 					<h3>Existing Project?</h3>
-					<p>Add AI context to projects already in progress</p>
+					<p>Use <code>faf git</code> or <code>faf auto</code> to add context to any repo</p>
 					<span class="next-arrow">→</span>
 				</a>
 				<a href="/try" class="next-card">
