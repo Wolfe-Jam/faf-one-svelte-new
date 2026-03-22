@@ -11,6 +11,8 @@
 	<meta property="og:description" content="Accepted into 4 curated awesome lists. Like waiting for a London bus — then 4 turn up at once." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/its-official-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/its-official-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -27,6 +29,10 @@
 			<span class="category milestone">Milestone</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/its-official-hero.png" alt="Developer at a London bus stop as four red double-decker buses arrive — AI DevTools, MCP Servers, DevOps, Skills" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -136,6 +142,17 @@
 <style>
 	:global(body) {
 		background: #FEFCF8;
+	}
+
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.blog-post {
