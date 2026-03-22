@@ -4,7 +4,9 @@
   "redirects": [
     { "source": "/docs/commands", "destination": "/docs", "permanent": true },
     { "source": "/sponsors", "destination": "/founders", "permanent": true },
-    { "source": "/drift", "destination": "/ecosystem", "permanent": true }
+    { "source": "/drift", "destination": "/ecosystem", "permanent": true },
+    { "source": "/rust", "destination": "/pro", "permanent": true },
+    { "source": "/3ws", "destination": "/ideas", "permanent": true }
   ],
   "rewrites": [
     {

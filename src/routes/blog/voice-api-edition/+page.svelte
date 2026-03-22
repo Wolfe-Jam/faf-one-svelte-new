@@ -405,7 +405,7 @@ xai_collections:
 	}
 
 	.image-caption a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 
@@ -420,7 +420,7 @@ xai_collections:
 	}
 
 	.breadcrumb a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 
@@ -574,7 +574,7 @@ xai_collections:
 	}
 
 	.tip-box a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-weight: 600;
 		text-decoration: none;
 	}
@@ -590,7 +590,7 @@ xai_collections:
 	}
 
 	a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 

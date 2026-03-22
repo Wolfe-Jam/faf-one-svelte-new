@@ -481,7 +481,7 @@
 	.w1 { border-color: #FF6B35; }
 	.w1 .w-label { color: #FF6B35; }
 	.w2 { border-color: #00D4D4; }
-	.w2 .w-label { color: #00D4D4; }
+	.w2 .w-label { color: var(--faf-cyan-text); }
 	.w3 { border-color: #27c93f; }
 	.w3 .w-label { color: #27c93f; }
 	.w4 { border-color: #888; }

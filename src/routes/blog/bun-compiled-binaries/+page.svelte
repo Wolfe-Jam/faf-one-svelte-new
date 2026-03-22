@@ -362,7 +362,7 @@
 	}
 
 	.size {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-weight: 600;
 		font-size: 0.95rem;

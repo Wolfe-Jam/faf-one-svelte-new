@@ -443,7 +443,7 @@ project.faf     → AI context`}</code></pre>
 	}
 
 	.insight-box.danger h3 {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 	}
 
 	.insight-box.danger p {

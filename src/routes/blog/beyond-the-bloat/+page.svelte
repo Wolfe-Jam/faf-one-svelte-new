@@ -782,7 +782,7 @@
 		border: 1px solid;
 	}
 
-	.output-claude { background: rgba(0,212,212,0.1); border-color: #00D4D4; color: #00D4D4; }
+	.output-claude { background: rgba(0,212,212,0.1); border-color: #00D4D4; color: var(--faf-cyan-text); }
 	.output-agents { background: rgba(88,166,255,0.1); border-color: #58a6ff; color: #58a6ff; }
 	.output-cursor { background: rgba(240,136,62,0.1); border-color: #f0883e; color: #f0883e; }
 	.output-gemini { background: rgba(155,114,203,0.1); border-color: #9B72CB; color: #9B72CB; }

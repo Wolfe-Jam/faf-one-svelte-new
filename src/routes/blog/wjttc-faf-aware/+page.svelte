@@ -404,7 +404,7 @@ ai_scoring_details:
 	}
 
 	.breadcrumb a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 
@@ -558,7 +558,7 @@ ai_scoring_details:
 	}
 
 	.tip-box a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-weight: 600;
 		text-decoration: none;
 	}
@@ -653,7 +653,7 @@ ai_scoring_details:
 	}
 
 	a {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 

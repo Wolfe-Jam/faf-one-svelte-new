@@ -428,7 +428,7 @@ stack:
 
 	.lang-small {
 		display: block;
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-size: 0.8rem;
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		margin-top: 0.25rem;

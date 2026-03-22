@@ -344,7 +344,7 @@ project.faf  → Structure for ANY AI (foundation)`}</code></pre>
 	}
 
 	.insight-box.danger h3 {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 	}
 
 	.insight-box.danger p {

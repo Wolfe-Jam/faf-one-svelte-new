@@ -375,7 +375,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 		display: block;
 		margin-top: 0.75rem;
 		font-style: normal;
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-size: 0.9rem;
 		font-weight: 600;
 	}

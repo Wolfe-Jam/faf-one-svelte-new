@@ -540,7 +540,7 @@
 	}
 
 	.col-tech {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-weight: 600;
 	}
 
@@ -595,7 +595,7 @@
 	}
 
 	.sdk-runtime {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		font-weight: 600;
 		font-size: 0.8rem;
 		margin: 0.4rem 0;

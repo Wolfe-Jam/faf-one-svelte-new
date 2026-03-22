@@ -646,7 +646,7 @@ human_context:
 	}
 
 	.proof-link:hover {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 	}
 
 	/* Time cost */

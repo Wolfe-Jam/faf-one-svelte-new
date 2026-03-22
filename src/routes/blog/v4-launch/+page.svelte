@@ -677,7 +677,7 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 	.quote-card.grok .source-name { color: #000; }
 	.quote-card.claude .source-name { color: var(--faf-orange, #FF6B35); }
 	.quote-card.codex .source-name { color: #0066CC; }
-	.quote-card.gemini .source-name { color: #00D4D4; }
+	.quote-card.gemini .source-name { color: var(--faf-cyan-text); }
 
 	/* Philosophy Cards */
 	.philosophy-cards {

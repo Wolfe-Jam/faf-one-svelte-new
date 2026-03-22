@@ -615,7 +615,7 @@ Demo complete - no files changed.
 	}
 
 	.revision-note h3 {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		margin: 0 0 0.75rem 0;
 		font-size: 1.3rem;
 	}
@@ -646,7 +646,7 @@ Demo complete - no files changed.
 	}
 
 	.workflow-example h3 {
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		margin: 0 0 1rem 0;
 		font-size: 1.2rem;
 	}

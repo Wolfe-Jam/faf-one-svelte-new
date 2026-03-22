@@ -697,7 +697,7 @@
 	.result {
 		text-align: center;
 		font-size: 1.2rem;
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 	}
 
 	/* Insight Box */
@@ -753,7 +753,7 @@
 
 	.layer.global .layer-name { color: #667eea; }
 	.layer.project .layer-name { color: #764ba2; }
-	.layer.merged .layer-name { color: #00D4D4; }
+	.layer.merged .layer-name { color: var(--faf-cyan-text); }
 
 	.layer-desc {
 		display: block;
