@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/its-official',
+			title: "It's Official — FAF is Awesome (x4)",
+			date: 'March 22, 2026',
+			timestamp: '2026-03-22',
+			excerpt: "Like waiting for a London bus — then 4 turn up at once. FAF accepted into awesome-ai-devtools, awesome-mcp-servers, awesome-devops-mcp-servers, and antigravity-awesome-skills.",
+			emoji: '🚌',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/wjttc-self-hosting',
 			title: 'Championship-Grade Testing You Can Self-Host',
 			date: 'March 21, 2026',
