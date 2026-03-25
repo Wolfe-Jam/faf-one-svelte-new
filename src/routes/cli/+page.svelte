@@ -1,3 +1,13 @@
+<script>
+	let copied = $state(false);
+
+	function copyCommand() {
+		navigator.clipboard.writeText('bunx faf-cli auto');
+		copied = true;
+		setTimeout(() => copied = false, 2000);
+	}
+</script>
+
 <svelte:head>
 	<title>faf-cli — The AI-Context CLI | faf.one</title>
 	<meta name="description" content="faf-cli — Define. Build. Lock. Relax. 38k+ downloads. IANA-registered format." />
@@ -13,9 +23,10 @@
 		<p class="tagline">Define. Build. Lock. Relax.</p>
 		<p class="sub">The CLI that gives AI instant, persistent project context.</p>
 
-		<div class="install">
+		<button class="install" onclick={copyCommand}>
 			<code>bunx faf-cli auto</code>
-		</div>
+			<span class="copy-hint">{copied ? 'Copied!' : 'click to copy'}</span>
+		</button>
 		<p class="manifesto">FAF defines. MD explains. AI interprets.</p>
 	</section>
 
@@ -114,12 +125,30 @@
 	}
 
 	.install {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
 		background-color: #1a1a1a;
 		border: 1px solid #333;
 		border-radius: 20px;
 		padding: 0.5rem 1.5rem;
 		color-scheme: dark;
+		cursor: pointer;
+		transition: border-color 0.2s;
+	}
+
+	.install:hover {
+		border-color: #555;
+	}
+
+	.copy-hint {
+		font-size: 0.75rem;
+		color: #555;
+		transition: color 0.2s;
+	}
+
+	.install:hover .copy-hint {
+		color: #888;
 	}
 
 	.install code {
