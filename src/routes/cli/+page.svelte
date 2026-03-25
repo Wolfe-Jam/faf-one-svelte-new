@@ -126,6 +126,8 @@
 		font-size: 1.1rem;
 		color: #FF6B35;
 		font-family: 'SF Mono', 'Fira Code', monospace;
+		background: none;
+		padding: 0;
 	}
 
 	h2 {
