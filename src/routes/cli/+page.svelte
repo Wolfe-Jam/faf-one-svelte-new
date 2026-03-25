@@ -36,7 +36,7 @@
 		<div class="grid">
 			<div class="card">
 				<strong>faf init</strong>
-				<p>Create .faf from your project</p>
+				<p>Create .faf for your project</p>
 			</div>
 			<div class="card">
 				<strong>faf auto</strong>
