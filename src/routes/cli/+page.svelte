@@ -18,10 +18,11 @@
 
 <main>
 	<section class="hero">
-		<div class="badge">38k+ downloads</div>
 		<h1>faf-cli</h1>
 		<p class="tagline">Define. Build. Lock. Relax.</p>
 		<p class="sub">The CLI that gives AI instant, persistent project context.</p>
+
+		<div class="spacer"></div>
 
 		<button class="install" onclick={copyCommand}>
 			<code>bunx faf-cli auto</code>
@@ -91,17 +92,11 @@
 	.hero {
 		text-align: center;
 		margin-bottom: 3rem;
+		padding-top: 1rem;
 	}
 
-	.badge {
-		display: inline-block;
-		background: #1a1a1a;
-		border: 1px solid #333;
-		border-radius: 20px;
-		padding: 0.3rem 1rem;
-		font-size: 0.85rem;
-		color: #aaa;
-		margin-bottom: 1rem;
+	.spacer {
+		height: 2rem;
 	}
 
 	h1 {
