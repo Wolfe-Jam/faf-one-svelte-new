@@ -56,7 +56,7 @@
 			</div>
 			<div class="card">
 				<strong>faf score</strong>
-				<p>Rate your AI-readiness 0-100%</p>
+				<p>Instant AI-readiness score 0-100%</p>
 			</div>
 		</div>
 	</section>
