@@ -205,7 +205,7 @@
 	}
 
 	.star-ask {
-		color: #fff;
+		color: #888;
 		font-size: 1.3rem;
 		font-weight: 600;
 		margin: 0 0 1.5rem;
