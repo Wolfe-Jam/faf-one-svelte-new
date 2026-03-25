@@ -184,7 +184,7 @@
 	}
 
 	.card p {
-		color: #888;
+		color: #ccc;
 		font-size: 0.85rem;
 		margin: 0.3rem 0 0;
 	}
@@ -199,7 +199,7 @@
 	}
 
 	.star-intro {
-		color: #888;
+		color: #ccc;
 		font-size: 0.95rem;
 		margin: 0 0 0.5rem;
 	}
@@ -228,7 +228,7 @@
 	}
 
 	.star-stats {
-		color: #666;
+		color: #ccc;
 		font-size: 0.8rem;
 		margin: 1rem 0 0;
 	}
@@ -241,7 +241,7 @@
 	}
 
 	.links a {
-		color: #666;
+		color: #ccc;
 		text-decoration: none;
 		font-size: 0.9rem;
 		transition: color 0.2s;
