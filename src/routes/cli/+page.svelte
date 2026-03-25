@@ -44,7 +44,7 @@
 			</div>
 			<div class="card">
 				<strong>faf go</strong>
-				<p>Guided interview to gold code</p>
+				<p>Guided interview to 100%</p>
 			</div>
 			<div class="card">
 				<strong>faf bi-sync</strong>
