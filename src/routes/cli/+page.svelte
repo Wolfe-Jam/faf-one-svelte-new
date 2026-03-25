@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<title>faf-cli — The AI-Context CLI | faf.one</title>
-	<meta name="description" content="faf-cli — Define. Build. Lock. Relax. 38k+ downloads. IANA-registered format." />
+	<meta name="description" content="faf-cli — How AI gets context. 38k+ downloads. IANA-registered format." />
 	<meta property="og:title" content="faf-cli — The AI-Context CLI" />
 	<meta property="og:description" content="One command. 100% AI-Context. 38k+ npm downloads." />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -19,7 +19,7 @@
 <main>
 	<section class="hero">
 		<h1>faf-cli</h1>
-		<p class="tagline">Define. Build. Lock. Relax.</p>
+		<p class="tagline">How AI gets context.</p>
 		<p class="sub">The CLI that gives AI instant, persistent project context.</p>
 
 		<div class="spacer"></div>
