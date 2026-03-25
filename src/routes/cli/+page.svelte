@@ -48,7 +48,7 @@
 			</div>
 			<div class="card">
 				<strong>faf bi-sync</strong>
-				<p>.faf ↔ CLAUDE.md — free forever</p>
+				<p>.faf ↔ CLAUDE.md/any — free forever</p>
 			</div>
 			<div class="card">
 				<strong>faf git &lt;url&gt;</strong>
