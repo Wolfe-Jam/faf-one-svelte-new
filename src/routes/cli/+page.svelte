@@ -92,11 +92,11 @@
 	.hero {
 		text-align: center;
 		margin-bottom: 3rem;
-		padding-top: 1rem;
+		padding-top: 0;
 	}
 
 	.spacer {
-		height: 2rem;
+		height: 4rem;
 	}
 
 	h1 {
@@ -116,7 +116,7 @@
 	.sub {
 		color: #999;
 		font-size: 1rem;
-		margin: 0.5rem 0 1.5rem;
+		margin: 0.5rem 0 0;
 	}
 
 	.install {
