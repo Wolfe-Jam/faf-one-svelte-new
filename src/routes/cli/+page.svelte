@@ -213,18 +213,18 @@
 
 	.star-button {
 		display: inline-block;
-		background: #FF6B35;
+		background: #6e40c9;
 		color: #fff;
 		text-decoration: none;
-		padding: 0.8rem 2rem;
-		border-radius: 8px;
-		font-size: 1.1rem;
+		padding: 0.5rem 1.2rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
 		font-weight: 600;
 		transition: background 0.2s;
 	}
 
 	.star-button:hover {
-		background: #ff8555;
+		background: #8957e5;
 	}
 
 	.star-stats {
