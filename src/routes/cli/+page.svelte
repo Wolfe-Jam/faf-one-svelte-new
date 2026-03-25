@@ -92,7 +92,7 @@
 	.hero {
 		text-align: center;
 		margin-bottom: 3rem;
-		padding-top: 0;
+		padding-top: 3rem;
 	}
 
 	.spacer {
