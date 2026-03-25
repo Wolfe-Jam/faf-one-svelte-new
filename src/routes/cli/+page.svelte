@@ -114,7 +114,7 @@
 	}
 
 	.sub {
-		color: #999;
+		color: #ccc;
 		font-size: 1rem;
 		margin: 0.5rem 0 0;
 	}
@@ -252,7 +252,7 @@
 	}
 
 	.manifesto {
-		color: #888;
+		color: #ccc;
 		font-size: 0.95rem;
 		font-weight: 600;
 		margin: 1.2rem 0 0;
