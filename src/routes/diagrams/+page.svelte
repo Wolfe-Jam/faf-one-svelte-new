@@ -1,6 +1,12 @@
 <script>
 	const diagrams = [
 		{
+			slug: 'faf-md-combo',
+			title: 'AI Context: Before & After',
+			description: 'CLAUDE.md only (25% context) vs .faf + CLAUDE.md combo (100% context)',
+			category: 'FAF Core'
+		},
+		{
 			slug: 'fafb-definitive',
 			title: 'FAFb — The Definitive Edition',
 			description: 'Compile flow: .faf YAML → FAFb binary with string table, DNA/Context/Pointer classification',
