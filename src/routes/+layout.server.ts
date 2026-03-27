@@ -2,9 +2,9 @@ const NPM_PACKAGES = ['faf-cli', 'claude-faf-mcp', 'faf-mcp', 'bun-sticky', 'wjt
 
 // PyPI + crates.io: API doesn't give reliable all-time, so we set a known floor
 // and let npm (which auto-updates) pull the total up. Update these periodically.
-// Last verified: 2026-03-25
+// Last verified: 2026-03-27
 const PYPI_FLOOR = 6_670;   // gemini-faf-mcp + faf-python-sdk
-const CRATES_FLOOR = 222;   // faf-rust-sdk
+const CRATES_FLOOR = 441;   // faf-rust-sdk + rust-faf-mcp + faf + faf-radio-rust + mcpaas
 
 export async function load({ fetch }) {
 	let npmTotal = 0;
