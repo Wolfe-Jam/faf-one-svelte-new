@@ -12,11 +12,55 @@
 <main class="legal-page">
 	<div class="container">
 		<h1>Privacy Policy</h1>
-		<p class="last-updated">Last Updated: September 23, 2025</p>
-		
+		<p class="last-updated">Last Updated: March 27, 2026</p>
+
 		<section>
 			<h2>Our Promise</h2>
 			<p><strong>NO BS Privacy:</strong> We collect only what's necessary, protect it fiercely, and never sell your data. Period.</p>
+		</section>
+
+		<section>
+			<h2>Developer Tools (faf-cli)</h2>
+			<p><strong>faf-cli runs 100% locally on your machine.</strong> When you run <code>faf init</code>, <code>faf auto</code>, or <code>faf score</code>:</p>
+			<ul>
+				<li>No source code is read, collected, or transmitted</li>
+				<li>No data leaves your machine — no API calls, no telemetry, no phone-home</li>
+				<li>The WASM scoring kernel runs locally — no cloud processing</li>
+				<li>Your <code>project.faf</code> file contains only metadata you control — never source code</li>
+				<li>Private repos stay private — we never see them</li>
+			</ul>
+			<p><strong>No training. No retention. No exceptions.</strong></p>
+			<p>FAF has no training pipeline. Your code, your data, and your project metadata are never used to train any AI model, improve any service, or feed any analytics system. We do not have access to your code — faf-cli is an offline tool.</p>
+		</section>
+
+		<section>
+			<h2>MCP Servers (claude-faf-mcp, faf-mcp, grok-faf-mcp, gemini-faf-mcp)</h2>
+			<p>FAF MCP servers run as local processes on your machine, invoked by your AI tool (Claude, Cursor, etc.). They read your local <code>project.faf</code> file and serve it via the MCP protocol to your AI. No data is sent to FAF servers — the MCP connection is between your AI tool and your local filesystem.</p>
+		</section>
+
+		<section>
+			<h2>WASM Scoring Kernel</h2>
+			<p>The faf-scoring-kernel (Rust to WASM) and Zig WASM ghost binary run entirely in-process — inside your Node.js runtime, your browser, or your edge function. No network calls. No data exfiltration. The WASM binary scores your <code>.faf</code> YAML locally and returns a result. Nothing leaves the process.</p>
+		</section>
+
+		<section>
+			<h2>Web Properties (faf.one, builder, mcpaas.live)</h2>
+			<p>When you visit our websites:</p>
+			<ul>
+				<li><strong>Vercel Analytics:</strong> Anonymous page view counts — no personal data, no cookies, no tracking</li>
+				<li><strong>FAF Builder:</strong> When you score a public GitHub repo, we fetch its file tree via the GitHub API. We do not store the results or your repo data</li>
+				<li><strong>MCPaaS:</strong> Edge location logging (Cloudflare data center code only — e.g. "ATL") for our <a href="https://mcpaas.live/globe">Globe</a> visualization. No personal data is logged</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Email</h2>
+			<p>If you provide your email (namepoint claims, contact forms, or purchases), we use it only to:</p>
+			<ul>
+				<li>Communicate about your account or purchase</li>
+				<li>Send important product updates (rare, no spam)</li>
+			</ul>
+			<p>We never sell, share, or use email addresses for marketing without consent. Unsubscribe anytime.</p>
 		</section>
 
 		<section>
@@ -108,15 +152,17 @@
 		</section>
 
 		<section class="privacy-commitment">
-			<h2>🧡 Our Commitment</h2>
-			<p>Your trust is everything. We'll never:</p>
+			<h2>🧡 Our Commitment — All FAF Products</h2>
+			<p>Across every FAF product — faf-cli, all MCP servers, MCPaaS, FAF Builder — your trust is everything. We will never:</p>
 			<ul>
-				<li>Sell your data</li>
-				<li>Share without permission</li>
+				<li>Read, collect, or retain your source code</li>
+				<li>Use your data for AI training — we have no training pipeline</li>
+				<li>Sell or share your data with third parties</li>
+				<li>Send telemetry without your knowledge</li>
 				<li>Use dark patterns</li>
 				<li>Hide important details</li>
 			</ul>
-			<p><strong>This is the NO BS way.</strong></p>
+			<p><strong>Your code is yours. Your context is yours. No BS. No exceptions.</strong></p>
 		</section>
 
 		<div class="legal-footer">
