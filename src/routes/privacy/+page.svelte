@@ -166,7 +166,7 @@
 		</section>
 
 		<div class="legal-footer">
-			<p>© {new Date().getFullYear()} FAF. The JPEG for AI.</p>
+			<p>© {new Date().getFullYear()} FAF. The Context Standard for AI.</p>
 			<p>Your privacy matters. No BS. 🧡</p>
 		</div>
 	</div>
