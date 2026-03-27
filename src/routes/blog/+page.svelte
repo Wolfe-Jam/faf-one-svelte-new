@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/sunset-edition',
+			title: 'The Sunset Edition',
+			date: 'March 27, 2026',
+			timestamp: '2026-03-27',
+			excerpt: 'faf-cli v5.2.5 — the final v5 release. 21 slots, 1,232 tests, 53K lines. Thank you, v5. v6 is here — 89% code reduction, WASM kernel, 33 Mk4 slots.',
+			emoji: '🌅',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/its-official',
 			title: "It's Official — FAF is Awesome (x4)",
 			date: 'March 22, 2026',
