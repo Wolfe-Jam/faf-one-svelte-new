@@ -13,6 +13,16 @@
 			category: 'Milestone'
 		},
 		{
+			slug: 'blog/globe-edition',
+			title: 'The Globe Edition — Where Your Code Runs',
+			date: 'March 27, 2026',
+			timestamp: '2026-03-27',
+			excerpt: 'World-first live 3D edge execution globe. 2.7KB of Zig WASM executing at 300+ Cloudflare locations. 17 cities, 4 continents, real data. Put your city on the map.',
+			emoji: '🌍',
+			category: 'Engineering',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/wjttc-self-hosting',
 			title: 'Championship-Grade Testing You Can Self-Host',
 			date: 'March 21, 2026',
