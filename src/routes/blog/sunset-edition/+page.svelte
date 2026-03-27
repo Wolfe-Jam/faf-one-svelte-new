@@ -11,6 +11,8 @@
 	<meta property="og:description" content="The final v5 release. Thank you, v5. v6 is here." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/sunset-edition-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/sunset-edition-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -28,6 +30,10 @@
 			<span class="category release">Release</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/sunset-edition-hero.png" alt="F1 car crossing finish line at sunset — LAP 68/68 — The Sunset Edition v5.2.5" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -124,6 +130,17 @@
 <style>
 	:global(body) {
 		background: #FEFCF8;
+	}
+
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.blog-post {
