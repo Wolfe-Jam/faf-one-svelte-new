@@ -55,9 +55,9 @@
 				</div>
 
 				<div class="cost-bar cost-before">
-					<div class="cost-label">Every session</div>
-					<div class="cost-value cost-red">Time + Tokens + Drift</div>
-					<div class="cost-detail">Variable results. Context degrades over time.</div>
+					<div class="cost-label">What does ~25% mean?</div>
+					<div class="cost-value cost-red">AI makes up the other 75%</div>
+					<div class="cost-detail">Without full context, AI hallucinates, makes assumptions, and introduces errors you won't find until production.</div>
 				</div>
 			</div>
 
@@ -119,9 +119,9 @@
 				</div>
 
 				<div class="cost-bar cost-after">
-					<div class="cost-label">Every session</div>
-					<div class="cost-value cost-green">Instant. Consistent. Portable.</div>
-					<div class="cost-detail">Same context, every time, any tool.</div>
+					<div class="cost-label">What does 100% mean?</div>
+					<div class="cost-value cost-green">AI is optimised for your project</div>
+					<div class="cost-detail">Full context, every session, any tool. No guessing. No drift.</div>
 				</div>
 			</div>
 		</div>
@@ -195,7 +195,7 @@
 
 	.column-after {
 		background: #1a1a1a;
-		border: 2px solid #4ade80;
+		border: 2px solid #00D4D4;
 	}
 
 	.column-header {
@@ -220,8 +220,8 @@
 	}
 
 	.label-after {
-		background: rgba(74, 222, 128, 0.15);
-		color: #4ade80;
+		background: rgba(0, 212, 212, 0.15);
+		color: #00D4D4;
 	}
 
 	.context-badge {
@@ -231,7 +231,7 @@
 	}
 
 	.badge-low { color: #f87171; }
-	.badge-full { color: #4ade80; }
+	.badge-full { color: #00D4D4; }
 
 	.file-block {
 		border-radius: 10px;
@@ -338,8 +338,8 @@
 	}
 
 	.task-good {
-		background: rgba(74, 222, 128, 0.08);
-		color: #4ade80;
+		background: rgba(0, 212, 212, 0.08);
+		color: #00D4D4;
 	}
 
 	.portable-row {
@@ -364,9 +364,9 @@
 	}
 
 	.badge-open {
-		background: rgba(74, 222, 128, 0.1);
-		color: #4ade80;
-		border: 1px solid rgba(74, 222, 128, 0.2);
+		background: rgba(0, 212, 212, 0.1);
+		color: #00D4D4;
+		border: 1px solid rgba(0, 212, 212, 0.2);
 	}
 
 	.cost-bar {
@@ -382,8 +382,8 @@
 	}
 
 	.cost-after {
-		background: rgba(74, 222, 128, 0.1);
-		border: 1px solid rgba(74, 222, 128, 0.3);
+		background: rgba(0, 212, 212, 0.1);
+		border: 1px solid rgba(0, 212, 212, 0.3);
 	}
 
 	.cost-label {
@@ -401,7 +401,7 @@
 	}
 
 	.cost-red { color: #f87171; }
-	.cost-green { color: #4ade80; }
+	.cost-green { color: #00D4D4; }
 
 	.cost-detail {
 		font-size: 11px;
