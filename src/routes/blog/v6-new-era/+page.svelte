@@ -32,6 +32,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
+				AI needed a format for Context. It got one.<br/><br/>
 				<strong>TL;DR:</strong> faf-cli v6 is a ground-up Bun-native rewrite. 94% smaller. MCP server detection for 10 frameworks. Python and Rust support. Format version 3.0. And now — three letters is all it takes.
 			</p>
 		</section>
@@ -262,7 +263,7 @@ stack:
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ FAF defines. AI consumes. 🏎️</p>
+			<p>Built with .faf ☑️ FAF defines. MD instructs. AI codes. 🏎️</p>
 		</section>
 	</article>
 </div>
