@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/v6-new-era',
+			title: 'V6 New Era — The Standard for AI Context',
+			date: 'March 28, 2026',
+			timestamp: '2026-03-28',
+			excerpt: 'Ground-up Bun-native rewrite. 94% smaller. MCP server detection for 10 frameworks. Python/Rust support. Format 3.0. Three letters to AI context.',
+			emoji: '🏎️',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/sunset-edition',
 			title: 'The Sunset Edition',
 			date: 'March 27, 2026',
