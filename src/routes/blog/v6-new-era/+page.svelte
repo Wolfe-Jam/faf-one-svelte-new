@@ -11,6 +11,8 @@
 	<meta property="og:description" content="Ground-up rewrite. 94% smaller. MCP detection. Three letters to AI context." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/v6-new-era-hero.jpg" />
+	<meta name="twitter:image" content="https://faf.one/blog/v6-new-era-hero.jpg" />
 </svelte:head>
 
 <div class="blog-post">
@@ -28,6 +30,10 @@
 			<span class="category launch">Launch</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/v6-new-era-hero.jpg" alt="Nelly Never Forgets — elephant carrying the entire FAF ecosystem into v6" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
