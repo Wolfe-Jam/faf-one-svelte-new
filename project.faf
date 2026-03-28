@@ -1,25 +1,39 @@
-# project.faf — Machine-readable project context for AI tools
-# Spec: https://faf.dev/spec | MIME: application/vnd.faf+yaml
-
 faf_version: 2.5.0
 project:
-  name: faf-one-svelte-new
-  description: The official website for .faf - Project DNA for ANY AI
-  language: Svelte
-  type: website
-  license: MIT
-metadata:
-  repository: https://github.com/Wolfe-Jam/faf-one-svelte-new
-  topics: [ai, ai-context, anthropic, faf, faf-one, mcp, svelte, sveltekit, website]
+  name: faf-one-svelte
+  goal: FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+  main_language: TypeScript
+  type: svelte
 stack:
+  frontend: SvelteKit
+  css_framework: ""
+  ui_library: ""
+  state_management: ""
+  backend: ""
+  api_type: ""
   runtime: Node.js
-  framework: SvelteKit
-  ui: Svelte
-  bundler: Vite
-context:
-  what: Official faf.one website built with SvelteKit
-  who: wolfejam.dev
-  how: "npm install && npm run dev"
-generated_by:
-  tool: faf-cli
-  version: 4.4.4
+  database: ""
+  connection: ""
+  hosting: Vercel
+  build: Vite
+  cicd: ""
+  monorepo_tool: slotignored
+  package_manager: slotignored
+  workspaces: slotignored
+  admin: slotignored
+  cache: slotignored
+  search: slotignored
+  storage: slotignored
+human_context:
+  who: ""
+  what: FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+  why: ""
+  where: ""
+  when: ""
+  how: ""
+monorepo:
+  packages_count: slotignored
+  build_orchestrator: slotignored
+  versioning_strategy: slotignored
+  shared_configs: slotignored
+  remote_cache: slotignored
