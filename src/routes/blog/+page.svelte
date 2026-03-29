@@ -4,6 +4,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/mk4-parity-edition',
+			title: 'The Mk4 Parity Edition',
+			date: 'March 29, 2026',
+			timestamp: '2026-03-29',
+			excerpt: 'Same engine, same scores, same truth. Mk4 Championship Scoring in Python — 100% parity with Rust and TypeScript. 396 tests. WJTTC championship suite caught 3 defects CI missed. Enterprise-ready.',
+			emoji: '=',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/v6-new-era',
 			title: 'V6 New Era — The Standard for AI Context',
 			date: 'March 28, 2026',
