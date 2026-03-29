@@ -243,7 +243,7 @@
 	}
 
 	.privacy-commitment {
-		background: linear-gradient(135deg, #fff5f0 0%, var(--faf-white) 100%);
+		background: var(--faf-white);
 		padding: 2rem;
 		border-radius: 12px;
 		border: 2px solid var(--faf-orange);
