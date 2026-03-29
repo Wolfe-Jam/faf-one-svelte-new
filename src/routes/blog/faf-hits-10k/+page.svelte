@@ -357,7 +357,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 </div>
 
 <style>
-	:global(body) { background: #FEFCF8; }
+	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
 		max-width: 800px;

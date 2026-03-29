@@ -234,7 +234,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 </div>
 
 <style>
-	:global(body) { background: #FEFCF8; }
+	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
 		max-width: 800px;

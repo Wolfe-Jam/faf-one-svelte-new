@@ -243,7 +243,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 </div>
 
 <style>
-	:global(body) { background: #FEFCF8; }
+	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
 		max-width: 800px;

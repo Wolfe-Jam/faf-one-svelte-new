@@ -279,7 +279,7 @@
 </article>
 
 <style>
-	:global(body) { background: #FEFCF8; }
+	:global(body) { background: var(--faf-cream); }
 
 	.back-nav {
 		padding: 1rem 2rem;
