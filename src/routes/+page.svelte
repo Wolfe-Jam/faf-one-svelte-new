@@ -356,8 +356,9 @@
 	}
 
 	.globe-link .arrow {
-		color: var(--faf-cyan-dark);
-		font-size: 1.2rem;
+		color: var(--faf-orange);
+		font-size: 1.4rem;
+		font-weight: 700;
 	}
 
 	/* Footer */
