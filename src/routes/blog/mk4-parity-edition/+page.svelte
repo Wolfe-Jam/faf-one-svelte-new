@@ -12,10 +12,10 @@
 </script>
 
 <svelte:head>
-	<title>The Mk4 Parity Edition — faf-python-sdk v1.1.1 + gemini-faf-mcp v2.2.0 | FAF</title>
-	<meta name="description" content="Same engine, same scores, same truth. The Mk4 Championship Scoring Engine now runs in Python — 100% parity with Rust and TypeScript." />
-	<meta property="og:title" content="The Mk4 Parity Edition" />
-	<meta property="og:description" content="Same engine, same scores, same truth. Mk4 scoring now runs in Python with 100% parity." />
+	<title>The Mk4 Python Edition — faf-python-sdk v1.1.1 + gemini-faf-mcp v2.2.0 | FAF</title>
+	<meta name="description" content="Same engine, same scores, same truth. The Mk4 Championship Scoring Engine now runs in Python. 33 slots. Enterprise-ready." />
+	<meta property="og:title" content="The Mk4 Python Edition" />
+	<meta property="og:description" content="Same engine, same scores, same truth. Mk4 scoring now runs in Python. 33 slots. Enterprise-ready." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/FAF-Python-Context-you-can-depend-on.png" />
@@ -25,10 +25,10 @@
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Mk4 Parity Edition
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / Mk4 Python Edition
 		</div>
 
-		<h1>The Mk4 Parity Edition</h1>
+		<h1>The Mk4 Python Edition</h1>
 		<p class="version-tag">faf-python-sdk v1.1.1 + gemini-faf-mcp v2.2.0</p>
 		<p class="subtitle">Same engine. Same scores. Same truth. Context you can depend on.</p>
 		<div class="meta">
@@ -130,7 +130,7 @@
 result = score_faf(yaml_content, LicenseTier.ENTERPRISE)
 # 33 slots — monorepo, cache, search, storage, remote build`}</code></pre>
 
-			<p>The same API, the same parity. Whether you're scoring a solo project or a 200-package monorepo, the engine is the same one running in Rust.</p>
+			<p>33 slots. Google Cloud, enterprise-ready. From solo projects to 200-package monorepos &mdash; one engine, one standard. The same API whether you're in Python, Rust, or TypeScript.</p>
 		</section>
 
 		<section>
