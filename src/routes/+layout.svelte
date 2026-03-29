@@ -2,7 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import SideNav from '$lib/components/SideNav.svelte';
+	// import SideNav from '$lib/components/SideNav.svelte';
 	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
 
 	let { children, data } = $props();
@@ -25,7 +25,7 @@
 	}
 </script>
 
-<SideNav />
+<!-- SideNav removed — using top nav only -->
 
 <div class="theme-toggle">
 	<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />

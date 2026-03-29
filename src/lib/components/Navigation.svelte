@@ -8,15 +8,10 @@
 	let isAtBottom = $state(false);
 
 	const navItems = [
+		{ label: 'Blog', href: '/blog' },
 		{ label: 'About', href: '/about' },
-		{ label: 'Features', href: '#features' },
-		{ label: 'Demo', href: '#demo' },
-		{ label: 'Journey', href: '#journey' },
-		{ label: 'Pro', href: '/pro' },
-		{ label: 'WJTTC', href: '/wjttc' },
-		{ label: 'n8n.faf', href: '/n8n' },
-		{ label: 'Apps', href: '/apps' },
-		{ label: 'DAAFT', href: '/daaft', isDanger: true }
+		{ label: 'Links', href: '/links' },
+		{ label: 'GitHub', href: 'https://github.com/Wolfe-Jam/faf-cli', external: true },
 	];
 
 	onMount(() => {
