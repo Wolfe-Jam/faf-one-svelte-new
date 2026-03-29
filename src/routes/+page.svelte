@@ -13,7 +13,7 @@
 	<title>FAF — The Context Standard for AI</title>
 	<meta name="description" content="project.faf — persistent AI context for any tool. One YAML file. Every AI tool. Zero drift. IANA registered. 47k+ downloads." />
 	<meta property="og:title" content="FAF — The Context Standard for AI" />
-	<meta property="og:description" content="Project context that persists across sessions, tools, and teams." />
+	<meta property="og:description" content="Context that persists." />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://faf.one/og-image-1200x630.png" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -25,7 +25,8 @@
 	<section class="hero">
 		<img src="/orange-smiley.svg" alt="FAF" class="hero-logo" width="80" height="80" />
 		<h1>The Context Standard for AI</h1>
-		<p class="hero-sub">Project context that persists across sessions, tools, and teams.</p>
+		<p class="hero-sub">Context that persists.</p>
+		<p class="hero-sub2">Across sessions. Models. Tools. Teams. Enterprises.</p>
 		<div class="install-block">
 			<code>npx faf-cli init</code>
 			<button class="copy-btn" onclick={copyCommand}>
@@ -140,6 +141,13 @@
 	.hero-sub {
 		font-size: 1.25rem;
 		color: var(--faf-gray);
+		margin-bottom: 0.5rem;
+	}
+
+	.hero-sub2 {
+		font-size: 0.95rem;
+		color: var(--faf-gray);
+		letter-spacing: 0.03em;
 		margin-bottom: 2.5rem;
 	}
 
