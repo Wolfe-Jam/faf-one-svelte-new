@@ -347,7 +347,7 @@
 	}
 	
 	.hero-section {
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		background: var(--faf-gray-light);
 		color: var(--faf-white);
 		padding: 4rem 0;
 		text-align: center;
@@ -454,7 +454,7 @@
 	.faf-text-large {
 		font-size: 6rem;
 		font-weight: 900;
-		color: #000;
+		color: var(--faf-black);
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
 		letter-spacing: -0.02em;
 	}
@@ -482,7 +482,7 @@
 	}
 
 	.enterprise-capabilities-bar {
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		background: var(--faf-gray-light);
 		border-radius: 15px;
 		padding: 2.5rem;
 		border: 1px solid rgba(255, 255, 255, 0.1);
