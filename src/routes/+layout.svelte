@@ -1,15 +1,35 @@
 <script>
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	import SideNav from '$lib/components/SideNav.svelte';
+	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
 
 	let { children, data } = $props();
+	let isDark = $state(true);
 
-	// function handleThemeToggle() {
-	// 	toggleTheme();
-	// }
+	onMount(() => {
+		const saved = localStorage.getItem('faf-theme');
+		if (saved) {
+			isDark = saved === 'dark';
+		} else {
+			isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		}
+		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+	});
+
+	function handleThemeToggle(e) {
+		isDark = e.isDark;
+		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+		localStorage.setItem('faf-theme', isDark ? 'dark' : 'light');
+	}
 </script>
 
 <SideNav />
+
+<div class="theme-toggle">
+	<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
+</div>
 
 <!-- 3-Section Banner -->
 <div class="official-banner">
@@ -255,5 +275,12 @@
 			font-size: 0.75rem;
 			padding: 4px 10px;
 		}
+	}
+
+	.theme-toggle {
+		position: fixed;
+		bottom: 1.5rem;
+		left: 1.5rem;
+		z-index: 9998;
 	}
 </style>

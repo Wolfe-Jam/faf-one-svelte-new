@@ -39,6 +39,20 @@
 	--transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Dark Mode — override semantic variables */
+[data-theme="dark"] {
+	--faf-cream: #0a0a0a;
+	--faf-dark: #e5e5e5;
+	--faf-black: #ffffff;
+	--faf-white: #0a0a0a;
+	--faf-gray: #999999;
+	--faf-gray-dark: #aaaaaa;
+	--faf-gray-medium: #333333;
+	--faf-gray-light: #222222;
+	--faf-light-gray: #222222;
+	--faf-cyan-text: #00d4d4;
+}
+
 /* Reset */
 * {
 	margin: 0;
