@@ -1,871 +1,216 @@
-<script>
-	import { onMount } from 'svelte';
-	
-	let isVisible = $state(false);
-	
-	onMount(() => {
-		isVisible = true;
-	});
-</script>
-
 <svelte:head>
-	<title>About FAF - The Foundational AI-context Format</title>
-	<meta name="description" content="Learn about .faf - the Foundational AI-context Format. Created by industry veterans with 40+ years of format expertise." />
+	<title>About FAF — The Context Standard for AI</title>
+	<meta name="description" content="FAF is the persistent AI context format. IANA registered. 47k+ downloads. 5 MCP servers." />
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">← Back to Home</a>
-</div>
+<main class="page">
 
-<div class="about-container" class:visible={isVisible}>
-	<section class="hero-section">
-		<div class="container">
-			<h1 class="page-title">About <span class="faf-highlight">.faf</span></h1>
-			<p class="tagline">The Foundational AI-context Format</p>
-		</div>
+	<section class="hero">
+		<h1>About FAF</h1>
+		<p class="sub">The Context Standard for AI</p>
 	</section>
 
-	<section class="definition-section">
-		<div class="container">
-			<div class="card clean-definition-card">
-				<h2 class="definition-header">Definition</h2>
+	<section class="content">
+		<h2>What is .faf?</h2>
+		<p><code>project.faf</code> is a structured YAML file that lives in your repo. It tells any AI tool what your project is, how it's built, and who it's for. One file, every tool, every session.</p>
+		<p>Think of it as <code>package.json</code> for AI context. Your dependencies have a manifest — now your context does too.</p>
+	</section>
 
-				<!-- Logo and faf display -->
-				<div class="faf-logo-display">
-					<img src="/faf-logo.png" alt=".faf logo" class="faf-logo-img" />
-					<span class="faf-text-large">.faf</span>
-				</div>
+	<section class="content">
+		<h2>Why it exists</h2>
+		<p>Every AI session starts from zero. Your AI re-discovers your stack, your goals, your conventions — every time. That's 91% wasted context.</p>
+		<p><code>project.faf</code> fixes that. Define once, AI remembers forever. Across sessions, models, tools, teams, and enterprises.</p>
+	</section>
 
-				<p class="format-subtitle">FOUNDATIONAL AI-CONTEXT FORMAT</p>
+	<section class="content">
+		<h2>Credentials</h2>
+		<ul>
+			<li><strong>IANA Registered</strong> — <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener"><code>application/vnd.faf+yaml</code></a></li>
+			<li><strong>Anthropic MCP #2759</strong> — <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener">merged into official registry</a></li>
+			<li><strong>47k+ downloads</strong> — npm, PyPI, crates.io</li>
+			<li><strong>5 MCP servers</strong> — Claude, Grok, Gemini, Cursor, Rust</li>
+			<li><strong>IETF standardization</strong> — in progress</li>
+			<li><strong>Zenodo/CERN</strong> — <a href="https://zenodo.org/records/18251362" target="_blank" rel="noopener">academic publication</a></li>
+		</ul>
+	</section>
 
-				<p class="definition-description">
-					Universal, shareable AI-Context for any AI, human or team, regardless of size, location, languages, stack, setup or documentation.
-				</p>
+	<section class="content">
+		<h2>The ecosystem</h2>
+		<div class="ecosystem-grid">
+			<div class="eco-item">
+				<strong>faf-cli</strong>
+				<span>Universal CLI — npm</span>
+			</div>
+			<div class="eco-item">
+				<strong>claude-faf-mcp</strong>
+				<span>Anthropic — npm</span>
+			</div>
+			<div class="eco-item">
+				<strong>grok-faf-mcp</strong>
+				<span>xAI — npm</span>
+			</div>
+			<div class="eco-item">
+				<strong>gemini-faf-mcp</strong>
+				<span>Google — PyPI</span>
+			</div>
+			<div class="eco-item">
+				<strong>faf-mcp</strong>
+				<span>Universal — npm</span>
+			</div>
+			<div class="eco-item">
+				<strong>faf-rust-sdk</strong>
+				<span>Rust — crates.io</span>
 			</div>
 		</div>
 	</section>
 
-	<!-- Enterprise Capabilities Section -->
-	<section class="enterprise-section">
-		<div class="container">
-			<div class="enterprise-capabilities-bar">
-				<h3 class="enterprise-header">Enterprise Capabilities</h3>
-				<div class="enterprise-grid">
-					<div class="enterprise-item">
-						<span class="enterprise-icon">🏛️</span>
-						<span>Bank-grade Tested</span>
-					</div>
-					<div class="enterprise-item">
-						<span class="enterprise-icon">♾️</span>
-						<span>Eternal-sync</span>
-					</div>
-					<div class="enterprise-item">
-						<span class="enterprise-icon">🔄</span>
-						<span>Self-healing</span>
-					</div>
-					<div class="enterprise-item">
-						<span class="enterprise-icon">🛡️</span>
-						<span>Disaster recovery</span>
-					</div>
-					<div class="enterprise-item">
-						<span class="enterprise-icon">⚡</span>
-						<span>&lt;50ms processing</span>
-					</div>
-				</div>
-			</div>
-		</div>
+	<section class="content">
+		<h2>The three layers</h2>
+		<p><code>.faf</code> defines. <code>.md</code> instructs. AI consumes.</p>
+		<p>The foundation layer (<code>project.faf</code>) holds structured facts. The instruction layer (<code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.cursorrules</code>) holds prose guidance — generated from <code>.faf</code>. The AI reads both.</p>
 	</section>
 
-	<section class="version-section">
-		<div class="container">
-			<div class="card">
-				<h2>Current Version</h2>
-				<div class="version-grid">
-					<div class="version-item">
-						<h3>IANA Registered</h3>
-						<div class="version-number">Oct 30, 2025</div>
-						<p><a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">application/vnd.faf+yaml</a></p>
-					</div>
-					<div class="version-item">
-						<h3>MCP Server</h3>
-						<div class="version-number">v3.3.2</div>
-						<p>PR #2759 MERGED</p>
-					</div>
-					<div class="version-item">
-						<h3>CLI</h3>
-						<div class="version-number">v3.1.6</div>
-						<p>Universal CLI</p>
-					</div>
-					<div class="version-item">
-						<h3>bun-sticky</h3>
-						<div class="version-number">NEW</div>
-						<p>Bun + Zig</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<section class="content">
+		<h2>Origin</h2>
+		<p>Created by <a href="https://wolfejam.dev" target="_blank" rel="noopener">Wolfe James</a>. AI context R&D since 2024. FAF launched 2025 — now IANA-registered and shipping across 3 registries.</p>
+		<p>Contact: <a href="mailto:team@faf.one">team@faf.one</a></p>
 	</section>
 
-	<section class="origin-section">
-		<div class="container">
-			<div class="card">
-				<h2>Origin Story</h2>
-				<div class="timeline">
-					<div class="timeline-item">
-						<div class="year">1994</div>
-						<div class="content">
-							<h4>The Beginning</h4>
-							<p>Journey starts with fascination of the .iff format on Commodore Amiga</p>
-						</div>
-					</div>
-					<div class="timeline-item">
-						<div class="year">2000-2020s</div>
-						<div class="content">
-							<h4>Format Evolution</h4>
-							<p>20+ years developing complex formats for color simulation, carpet industry</p>
-						</div>
-					</div>
-					<div class="timeline-item">
-						<div class="year">2024</div>
-						<div class="content">
-							<h4>AI Realization.. no format..🧐</h4>
-							<p>Recognized the need for standardized AI context file format</p>
-						</div>
-					</div>
-					<div class="timeline-item">
-						<div class="year">2025</div>
-						<div class="content">
-							<h4>Devised the .faf</h4>
-							<p>Considerations: size, language, universality, human-readable, shareable, security. Released .faf as the definitive, Foundational AI-context Format</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<section class="content footer-section">
+		<p class="footer-tagline">The Context Standard for AI</p>
+		<p class="footer-iana">IANA Registered · application/vnd.faf+yaml</p>
 	</section>
 
-	<section class="capabilities-section">
-		<div class="container">
-			<div class="card">
-				<h2>Current Format Capabilities 🤯</h2>
-				<p class="capabilities-subtitle">(things evolved..)</p>
-
-				<div class="capabilities-grid">
-					<!-- Core Pillars -->
-					<div class="capability-group">
-						<h3 class="capability-group-title">🏛️ Core Pillars</h3>
-						<ul class="capability-list">
-							<li><strong>Speed:</strong> &lt;50ms processing guaranteed</li>
-							<li><strong>Security:</strong> Bank-grade reliability</li>
-							<li><strong>Size:</strong> Optimized for minimal footprint</li>
-							<li><strong>Universality:</strong> Works with any AI, any platform</li>
-							<li><strong>Human-readable:</strong> YAML-based, clear structure</li>
-							<li><strong>Shareable:</strong> Version control friendly</li>
-						</ul>
-					</div>
-
-					<!-- Advanced Features -->
-					<div class="capability-group">
-						<h3 class="capability-group-title">⚡ Advanced Features</h3>
-						<ul class="capability-list">
-							<li><strong>Self-healing:</strong> Automatic error correction</li>
-							<li><strong>Eternal-sync:</strong> Context persistence across sessions</li>
-							<li><strong>Context-Mirroring™:</strong> Perfect state preservation</li>
-							<li><strong>Disaster recovery:</strong> Built-in redundancy</li>
-							<li><strong>AI-native:</strong> Optimized for LLM parsing</li>
-							<li><strong>Self-documenting:</strong> Contains own metadata</li>
-						</ul>
-					</div>
-
-					<!-- Technical Specs -->
-					<div class="capability-group">
-						<h3 class="capability-group-title">🔧 Technical Specs</h3>
-						<ul class="capability-list">
-							<li><strong>Format:</strong> YAML with custom extensions</li>
-							<li><strong>Compression:</strong> Text-based, highly compressible</li>
-							<li><strong>Version control:</strong> Git-friendly, diffable</li>
-							<li><strong>Cross-platform:</strong> OS agnostic</li>
-							<li><strong>Extensible:</strong> Plugin architecture ready</li>
-							<li><strong>Standards-based:</strong> Built on established formats</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="principles-section">
-		<div class="container">
-			<div class="card">
-				<h2>Core Principles</h2>
-				<p class="principles-subtitle">Context-first methodology</p>
-				<div class="principles-grid">
-					<div class="principle">
-						<div class="principle-icon">🏛️</div>
-						<h3>Trust Over Hope</h3>
-						<p>Bank-grade reliability. Zero errors.</p>
-					</div>
-					<div class="principle">
-						<div class="principle-icon">⚡</div>
-						<h3>Performance Based</h3>
-						<p>Every operation under 50ms, guaranteed</p>
-					</div>
-					<div class="principle">
-						<div class="principle-icon">🔄</div>
-						<h3>Self-Healing</h3>
-						<p>Automatic error correction and recovery, score will improve itself</p>
-					</div>
-					<div class="principle">
-						<div class="principle-icon">♾️</div>
-						<h3>Eternal Sync</h3>
-						<p>Context-Mirroring with persistence across all sessions</p>
-					</div>
-					<div class="principle">
-						<div class="principle-icon">🧡🩵</div>
-						<h3>Trusted AI</h3>
-						<p>Unique AI|HUMAN<br/>Balance</p>
-					</div>
-					<div class="principle">
-						<div class="principle-icon">🔒</div>
-						<h3>Security Focused</h3>
-						<p>FAST, SAFE, SECURE, RECOVERABLE</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="recognition-section">
-		<div class="container">
-			<div class="card">
-				<h2>Industry Recognition</h2>
-				<div class="recognition-grid">
-					<div class="recognition-item">
-						<div class="stat">
-							<div class="stat-number">IANA</div>
-							<div class="stat-label">Registered Format</div>
-						</div>
-					</div>
-					<div class="recognition-item">
-						<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener" class="recognition-link">
-							<div class="partner-logo-placeholder">🏛️</div>
-							<p>IANA Registered<br/><span class="recognition-date">Oct 30, 2025</span></p>
-						</a>
-					</div>
-					<div class="recognition-item">
-						<div class="partner-logo-placeholder">🤖</div>
-						<p>Anthropic MCP MERGED</p>
-					</div>
-					<div class="recognition-item">
-						<div class="stat">
-							<div class="stat-number">52</div>
-							<div class="stat-label">MCP Tools</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="founder-section">
-		<div class="container">
-			<div class="card">
-				<h2>Created By</h2>
-				<div class="founder-info">
-					<h3>Wolfejam</h3>
-					<p class="founder-title">Format Architect & AI Pioneer</p>
-					<p class="founder-bio">
-						30+ years of file format fascination starting with the Commodore Amiga's .iff through
-						2/2.5D and into complex 3D industrial simulation formats. Creator of the FAF specification and the
-						driving force behind making AI context management as reliable as image formats, albeit using YAML and
-						🍜noodles as the inventor calls it.
-					</p>
-					<div class="founder-quote">
-						"AI context needed a file format, it got one— .faf"
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="contact-section">
-		<div class="container">
-			<div class="contact-grid">
-				<a href="/docs" class="contact-card">
-					<span class="icon">📚</span>
-					<span>Documentation</span>
-				</a>
-				<a href="https://github.com/Wolfe-Jam/faf" class="contact-card">⭐
-					<span class="icon">🐙</span>
-					<span>GitHub</span>
-				</a>
-				<a href="/support" class="contact-card">
-					<span class="icon">💬</span>
-					<span>Support</span>
-				</a>
-				<a href="/press" class="contact-card">
-					<span class="icon">📰</span>
-					<span>Press Kit</span>
-				</a>
-			</div>
-		</div>
-	</section>
-</div>
+</main>
 
 <style>
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-white);
+	.page {
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.hero {
+		text-align: center;
+		padding: 4rem 0 2rem;
+		border-bottom: 1px solid var(--faf-light-gray);
+		margin-bottom: 2rem;
+	}
+
+	.hero h1 {
+		font-size: 2.2rem;
+		font-weight: 800;
+		color: var(--faf-black);
+		margin-bottom: 0.5rem;
+	}
+
+	.sub {
+		font-size: 1.1rem;
+		color: var(--faf-gray);
+	}
+
+	.content {
+		padding: 1.5rem 0;
+	}
+
+	.content h2 {
+		font-size: 1.3rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin-bottom: 1rem;
+	}
+
+	.content p {
+		color: var(--faf-dark);
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+
+	.content ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.content li {
+		padding: 0.5rem 0;
+		color: var(--faf-dark);
 		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
-	.back-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: var(--faf-dark);
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-	}
-
-	.back-button:hover {
-		background: var(--faf-cream);
-		color: var(--faf-orange);
-		transform: translateX(-2px);
-	}
-
-	.about-container {
-		opacity: 0;
-		transition: opacity 0.6s ease;
-	}
-	
-	.about-container.visible {
-		opacity: 1;
-	}
-	
-	.hero-section {
-		background: var(--faf-gray-light);
-		color: var(--faf-white);
-		padding: 4rem 0;
-		text-align: center;
-	}
-	
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 2rem;
-	}
-	
-	.page-title {
-		font-size: 3.5rem;
-		font-weight: 900;
-		margin-bottom: 1rem;
-		letter-spacing: -0.02em;
-	}
-	
-	.faf-highlight {
-		color: var(--faf-orange);
-		text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-	}
-	
-	.tagline {
-		font-size: 1.5rem;
-		color: var(--faf-cyan);
-		font-family: 'Roboto Mono', monospace;
-	}
-	
-	section {
-		padding: 4rem 0;
-	}
-	
-	.card {
-		background: var(--faf-white);
-		border-radius: 12px;
-		padding: 3rem;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		border: 2px solid var(--faf-light-gray);
-	}
-	
-	h2 {
-		font-size: 2.5rem;
-		font-weight: 800;
-		margin-bottom: 2rem;
-		color: var(--faf-dark);
-		text-align: center;
-	}
-	
-	.definition {
-		font-size: 1.25rem;
-		line-height: 1.8;
-		color: var(--faf-dark);
-		margin-bottom: 2rem;
-	}
-	
-	.key-points {
-		display: grid;
-		gap: 1rem;
-		margin-top: 2rem;
-	}
-	
-	.point {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		padding: 1rem;
-		background: var(--faf-cream);
-		border-radius: 8px;
-	}
-	
-	.icon {
-		font-size: 1.5rem;
-	}
-	
-	/* Clean Definition Card Styles */
-	.clean-definition-card {
-		text-align: center;
-		padding: 3rem;
-	}
-
-	.definition-header {
-		font-size: 2.5rem;
-		font-weight: 900;
-		margin-bottom: 3rem;
-		color: var(--faf-dark);
-	}
-
-	/* Logo and faf display */
-	.faf-logo-display {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 2rem;
-		margin: 2rem 0;
-	}
-
-	.faf-logo-img {
-		width: 80px;
-		height: 80px;
-		object-fit: contain;
-	}
-
-	.faf-text-large {
-		font-size: 6rem;
-		font-weight: 900;
-		color: var(--faf-black);
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
-		letter-spacing: -0.02em;
-	}
-
-	.format-subtitle {
-		font-size: 0.9rem;
-		font-weight: 600;
-		color: var(--faf-gray);
-		letter-spacing: 0.15em;
-		text-transform: uppercase;
-		margin: 2rem 0;
-	}
-
-	.definition-description {
-		font-size: 1.15rem;
-		color: var(--faf-gray-dark);
-		line-height: 1.8;
-		max-width: 700px;
-		margin: 2rem auto 0;
-	}
-
-	/* Enterprise Capabilities Bar */
-	.enterprise-section {
-		margin-top: -2rem;
-	}
-
-	.enterprise-capabilities-bar {
-		background: var(--faf-gray-light);
-		border-radius: 15px;
-		padding: 2.5rem;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-	}
-
-	.enterprise-header {
-		color: var(--faf-white);
-		font-size: 1.3rem;
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
-		margin-bottom: 2rem;
-		text-align: center;
-		opacity: 0.9;
-	}
-
-	.enterprise-grid {
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-		gap: 2rem;
-	}
-
-	.enterprise-item {
-		display: flex;
-		align-items: center;
-		gap: 0.6rem;
-		color: var(--faf-white);
-		font-size: 1rem;
-		opacity: 0.95;
-		transition: all 0.3s ease;
-		padding: 0.5rem;
-	}
-
-	.enterprise-item:hover {
-		transform: translateY(-3px);
-		opacity: 1;
-	}
-
-	.enterprise-icon {
-		font-size: 1.5rem;
-	}
-
-	code {
-		background: var(--faf-dark);
-		color: var(--faf-orange);
-		padding: 0.2em 0.4em;
-		border-radius: 4px;
-		font-family: 'Roboto Mono', monospace;
-	}
-	
-	.version-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		text-align: center;
-	}
-	
-	.version-item h3 {
-		font-size: 1.2rem;
-		color: var(--faf-gray);
-		margin-bottom: 0.5rem;
-	}
-	
-	.version-number {
-		font-size: 2.5rem;
-		font-weight: 900;
-		color: var(--faf-orange);
-		font-family: 'Roboto Mono', monospace;
-	}
-	
-	.version-item p {
-		color: var(--faf-green);
-		font-weight: 600;
-		margin-top: 0.5rem;
-	}
-	
-	.timeline {
-		position: relative;
-		padding-left: 2rem;
-	}
-	
-	.timeline::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: 3px;
-		background: linear-gradient(180deg, var(--faf-orange), var(--faf-cyan));
-	}
-	
-	.timeline-item {
-		position: relative;
-		padding: 1.5rem 0;
-		padding-left: 2rem;
-	}
-	
-	.timeline-item::before {
-		content: '';
-		position: absolute;
-		left: -0.5rem;
-		top: 2rem;
-		width: 1rem;
-		height: 1rem;
-		background: var(--faf-orange);
-		border-radius: 50%;
-		box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
-	}
-	
-	.year {
-		font-size: 0.9rem;
-		font-weight: 700;
-		color: var(--faf-orange);
-		margin-bottom: 0.5rem;
-		font-family: 'Roboto Mono', monospace;
-	}
-	
-	.timeline-item h4 {
-		font-size: 1.3rem;
-		margin-bottom: 0.5rem;
-	}
-	
-	.principles-subtitle {
-		text-align: center;
-		color: var(--faf-orange);
-		font-size: 1.3rem;
-		font-weight: 600;
-		font-style: italic;
-		margin-top: -1rem;
-		margin-bottom: 2.5rem;
-	}
-
-	.principles-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-	}
-	
-	.principle {
-		text-align: center;
-		padding: 2rem;
-		background: var(--faf-cream);
-		border-radius: 12px;
-		transition: transform 0.3s ease;
-	}
-	
-	.principle:hover {
-		transform: translateY(-5px);
-	}
-	
-	.principle-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
-	
-	.principle h3 {
-		font-size: 1.3rem;
-		margin-bottom: 0.5rem;
-		color: var(--faf-dark);
-	}
-	
-	.capabilities-subtitle {
-		text-align: center;
-		color: var(--faf-gray);
-		font-style: italic;
-		margin-top: -1rem;
-		margin-bottom: 2rem;
-	}
-
-	.capabilities-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	.capability-group {
-		background: var(--faf-cream);
-		border-radius: 12px;
-		padding: 1.5rem;
-	}
-
-	.capability-group-title {
-		font-size: 1.3rem;
-		color: var(--faf-dark);
-		margin-bottom: 1rem;
-		font-weight: 700;
-	}
-
-	.capability-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.capability-list li {
-		padding: 0.5rem 0;
-		color: var(--faf-gray-dark);
-		line-height: 1.6;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-	}
-
-	.capability-list li:last-child {
+	.content li:last-child {
 		border-bottom: none;
 	}
 
-	.capability-list strong {
-		color: var(--faf-dark);
-	}
-
-	.recognition-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 3rem;
-		align-items: center;
-		text-align: center;
-	}
-	
-	.recognition-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-	
-	.partner-logo {
-		height: 60px;
-		opacity: 0.8;
-		transition: opacity 0.3s ease;
-	}
-	
-	.partner-logo:hover {
-		opacity: 1;
-	}
-	
-	.stat {
-		text-align: center;
-	}
-	
-	.stat-number {
-		font-size: 3rem;
-		font-weight: 900;
-		color: var(--faf-orange);
-	}
-	
-	.stat-label {
-		font-size: 1.1rem;
-		color: var(--faf-gray);
-	}
-
-	.recognition-link {
-		text-decoration: none;
-		color: inherit;
-		transition: transform 0.3s ease;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-
-	.recognition-link:hover {
-		transform: scale(1.05);
-	}
-
-	.recognition-date {
-		font-size: 0.85rem;
-		color: var(--faf-orange);
-		font-weight: 600;
-	}
-
-	.version-item a {
+	.content a {
 		color: var(--faf-orange);
 		text-decoration: none;
-		transition: color 0.2s ease;
 	}
 
-	.version-item a:hover {
-		color: var(--faf-cyan);
+	.content a:hover {
 		text-decoration: underline;
 	}
-	
-	.founder-info {
-		text-align: center;
-		max-width: 800px;
-		margin: 0 auto;
+
+	code {
+		font-family: var(--font-mono);
+		background: var(--faf-gray-light);
+		padding: 0.15rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.9em;
+		color: var(--faf-cyan-text);
 	}
-	
-	.founder-info h3 {
-		font-size: 2rem;
-		color: var(--faf-dark);
-		margin-bottom: 0.5rem;
-	}
-	
-	.founder-title {
-		color: var(--faf-orange);
-		font-weight: 600;
-		margin-bottom: 1.5rem;
-	}
-	
-	.founder-bio {
-		font-size: 1.1rem;
-		line-height: 1.8;
-		color: var(--faf-gray-dark);
-		margin-bottom: 2rem;
-	}
-	
-	.founder-quote {
-		font-size: 1.5rem;
-		font-style: italic;
-		color: var(--faf-dark);
-		padding: 1.5rem;
-		background: var(--faf-cream);
-		border-left: 4px solid var(--faf-orange);
-		margin: 2rem 0;
-	}
-	
-	.contact-grid {
+
+	.ecosystem-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+		margin-top: 1rem;
 	}
-	
-	.contact-card {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		padding: 1.5rem;
-		background: var(--faf-white);
-		border: 2px solid var(--faf-light-gray);
+
+	.eco-item {
+		padding: 1rem;
+		background: var(--faf-gray-light);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 8px;
-		text-decoration: none;
-		color: var(--faf-dark);
+	}
+
+	.eco-item strong {
+		display: block;
+		color: var(--faf-black);
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+		margin-bottom: 0.25rem;
+	}
+
+	.eco-item span {
+		color: var(--faf-gray);
+		font-size: 0.85rem;
+	}
+
+	.footer-section {
+		text-align: center;
+		padding: 3rem 0;
+		border-top: 1px solid var(--faf-light-gray);
+		margin-top: 2rem;
+	}
+
+	.footer-tagline {
 		font-weight: 600;
-		transition: all 0.3s ease;
+		color: var(--faf-black);
 	}
-	
-	.contact-card:hover {
-		border-color: var(--faf-orange);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+
+	.footer-iana {
+		font-size: 0.8rem;
+		color: var(--faf-gray);
+		margin-top: 0.5rem;
 	}
-	
+
 	@media (max-width: 768px) {
-		.page-title {
-			font-size: 2.5rem;
-		}
-
-		.card {
-			padding: 2rem 1.5rem;
-		}
-
-		.principles-grid {
+		.ecosystem-grid {
 			grid-template-columns: 1fr;
 		}
 
-		/* Mobile styles for clean definition */
-		.faf-logo-display {
-			flex-direction: column;
-			gap: 1rem;
-		}
-
-		.faf-text-large {
-			font-size: 4rem;
-		}
-
-		.faf-logo-img {
-			width: 60px;
-			height: 60px;
-		}
-
-		.enterprise-grid {
-			flex-direction: column;
-			gap: 1rem;
-		}
-
-		.enterprise-item {
-			justify-content: flex-start;
-		}
-
-		.enterprise-capabilities-bar {
-			padding: 1.5rem 1rem;
+		.hero h1 {
+			font-size: 1.8rem;
 		}
 	}
 </style>
