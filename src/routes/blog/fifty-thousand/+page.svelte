@@ -11,6 +11,8 @@
 	<meta property="og:description" content="16 packages. 3 registries. 3 languages. Zero marketing budget. The format speaks for itself." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/fifty-thousand-hero.jpeg" />
+	<meta name="twitter:image" content="https://faf.one/blog/fifty-thousand-hero.jpeg" />
 </svelte:head>
 
 <div class="blog-post">
@@ -29,6 +31,10 @@
 	</header>
 
 	<article class="post-content">
+		<section class="hero-image">
+			<img src="/blog/fifty-thousand-hero.jpeg" alt="50,000+ Downloads — 16 packages, 3 registries, one format. DotFaf smiley with npm, PyPI, and crates.io logos." />
+		</section>
+
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> The FAF ecosystem just crossed 50,000 downloads.
