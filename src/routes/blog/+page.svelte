@@ -1,8 +1,19 @@
 <script>
+	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	let view = $state('list');
 	let sortBy = $state('newest');
 
 	const posts = [
+		{
+			slug: 'blog/fifty-thousand',
+			title: '50,000 Downloads',
+			date: 'April 1, 2026',
+			timestamp: '2026-04-01',
+			excerpt: '16 packages. 3 registries. 3 languages. One format. The FAF ecosystem crosses 50,000 downloads. No ads. No growth hacks. Just good software finding its people.',
+			emoji: '🏆',
+			category: 'Milestone',
+			theme: 'dark'
+		},
 		{
 			slug: 'blog/mk4-parity-edition',
 			title: 'The Mk4 Parity Edition',
@@ -754,7 +765,7 @@
 		{/if}
 
 		<div class="archive-note">
-			<p>More stories coming soon...</p>
+			<NewsletterSignup variant="blog" />
 		</div>
 	</div>
 </article>
