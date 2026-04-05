@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-03-07</p>
+			<p class="last-updated">Last Updated: 2026-04-04</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
@@ -30,6 +30,7 @@
 				<a href="#mcp" class="nav-pill">MCP</a>
 				<a href="#packages" class="nav-pill">Packages</a>
 				<a href="#homebrew" class="nav-pill">Homebrew</a>
+				<a href="#skills" class="nav-pill">Skills</a>
 				<a href="#grokipedia" class="nav-pill">Grokipedia</a>
 				<a href="#radio" class="nav-pill">Radio</a>
 				<a href="#wjttc" class="nav-pill">WJTTC</a>
@@ -381,7 +382,7 @@
 	</section>
 
 	<!-- FLEX: Skills Directories -->
-	<section class="links-section">
+	<section class="links-section" id="skills">
 		<div class="container">
 			<div class="card">
 				<h2>🎯 Skills Directories</h2>
@@ -395,6 +396,16 @@
 						<span class="link-name">travisvn/awesome-claude-skills</span>
 						<span class="link-desc">4 skills</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://github.com/sickn33/antigravity-awesome-skills" target="_blank" rel="noopener" class="link-item featured">
+						<span class="link-name">Antigravity Awesome Skills</span>
+						<span class="link-desc">1,344+ skills library — 30k+ GitHub stars</span>
+						<span class="link-stat">V9.5.1</span>
+					</a>
+					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit" target="_blank" rel="noopener" class="link-item featured">
+						<span class="link-name">Awesome Claude Code Toolkit</span>
+						<span class="link-desc">135 agents, 35 skills (+400k via SkillKit), 150+ plugins</span>
+						<span class="link-stat">Most comprehensive</span>
 					</a>
 				</div>
 			</div>

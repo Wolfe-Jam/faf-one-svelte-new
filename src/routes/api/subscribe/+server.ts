@@ -1,94 +1,59 @@
+/**
+ * 📧 Email Subscribe Endpoint
+ *
+ * Adds subscribers to Resend Audience for blog broadcasts.
+ * Requires: RESEND_API_KEY (full-access), RESEND_AUDIENCE_ID
+ */
+
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import fs from 'fs/promises';
-import path from 'path';
+import { Resend } from 'resend';
 
-const SUBSCRIBERS_FILE = path.join(process.cwd(), 'data', 'subscribers.json');
-
-async function ensureDataDir() {
-    const dataDir = path.join(process.cwd(), 'data');
-    try {
-        await fs.access(dataDir);
-    } catch {
-        await fs.mkdir(dataDir, { recursive: true });
-    }
-}
-
-async function loadSubscribers(): Promise<any[]> {
-    try {
-        const data = await fs.readFile(SUBSCRIBERS_FILE, 'utf-8');
-        return JSON.parse(data);
-    } catch {
-        return [];
-    }
-}
-
-async function saveSubscribers(subscribers: any[]) {
-    await ensureDataDir();
-    await fs.writeFile(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2));
+let resend: Resend | null = null;
+function getResend(): Resend | null {
+	if (!resend && process.env.RESEND_API_KEY) {
+		resend = new Resend(process.env.RESEND_API_KEY);
+	}
+	return resend;
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-    try {
-        const { email, source, version } = await request.json();
+	try {
+		const { email, source } = await request.json();
 
-        // Basic validation
-        if (!email || !email.includes('@')) {
-            return json({ error: 'Invalid email address' }, { status: 400 });
-        }
+		if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+			return json({ error: 'Invalid email address' }, { status: 400 });
+		}
 
-        // Load existing subscribers
-        const subscribers = await loadSubscribers();
+		const client = getResend();
+		const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-        // Check if already subscribed
-        const existing = subscribers.find(sub => sub.email === email);
-        if (existing) {
-            return json({
-                message: 'Already subscribed',
-                subscribed: true
-            });
-        }
+		if (!client || !audienceId) {
+			console.error('❌ RESEND_API_KEY or RESEND_AUDIENCE_ID not configured');
+			return json({ error: 'Email service not configured' }, { status: 500 });
+		}
 
-        // Add new subscriber
-        subscribers.push({
-            email,
-            source: source || 'unknown',
-            version: version || 'unknown',
-            subscribedAt: new Date().toISOString(),
-            ip: request.headers.get('x-forwarded-for') || 'unknown'
-        });
+		const { error } = await client.contacts.create({
+			audienceId,
+			email,
+			unsubscribed: false,
+		});
 
-        // Save
-        await saveSubscribers(subscribers);
+		if (error) {
+			// Resend returns 409 for duplicate contacts — treat as success
+			if ((error as any).statusCode === 409 || error.message?.includes('already exists')) {
+				console.log(`ℹ️ Already subscribed: ${email}`);
+				return json({ message: 'Already subscribed', subscribed: true });
+			}
+			console.error('❌ Subscribe error:', error);
+			return json({ error: error.message }, { status: 500 });
+		}
 
-        // Log for monitoring
-        console.log(`New subscriber: ${email} from ${source} v${version}`);
+		console.log(`✅ New subscriber: ${email} from ${source || 'unknown'}`);
+		return json({ message: 'Subscribed!', subscribed: true });
 
-        return json({
-            message: 'Successfully subscribed',
-            subscribed: true
-        });
-
-    } catch (error) {
-        console.error('Subscribe error:', error);
-        return json({
-            error: 'Failed to subscribe'
-        }, { status: 500 });
-    }
-};
-
-export const GET: RequestHandler = async () => {
-    // Simple stats endpoint (protect in production)
-    try {
-        const subscribers = await loadSubscribers();
-        return json({
-            total: subscribers.length,
-            sources: subscribers.reduce((acc, sub) => {
-                acc[sub.source] = (acc[sub.source] || 0) + 1;
-                return acc;
-            }, {} as Record<string, number>)
-        });
-    } catch {
-        return json({ total: 0, sources: {} });
-    }
+	} catch (error) {
+		console.error('❌ Subscribe error:', error);
+		return json({ error: 'Failed to subscribe' }, { status: 500 });
+	}
 };

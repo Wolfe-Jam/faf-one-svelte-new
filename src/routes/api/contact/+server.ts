@@ -223,6 +223,43 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		console.log(`✅ Contact form email sent from ${data.email}, ID: ${emailData?.id}`);
+
+		// Add to Resend Audience (fire-and-forget — don't block the response)
+		const audienceId = process.env.RESEND_AUDIENCE_ID;
+		if (audienceId) {
+			client.contacts.create({ audienceId, email: data.email, unsubscribed: false })
+				.catch((err: Error) => console.warn('⚠️ Audience add failed (non-critical):', err.message));
+		}
+
+		// Send auto-reply to submitter
+		const firstName = data.name ? data.name.split(' ')[0] : null;
+		const greeting = firstName ? `Hey ${firstName}` : 'Hey';
+		client.emails.send({
+			from: 'James @ FAF <team@faf.one>',
+			to: data.email,
+			subject: 'Got your message',
+			html: `<!DOCTYPE html><html><body style="margin:0;padding:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 20px;">
+  <tr><td align="center">
+    <table width="560" cellpadding="0" cellspacing="0">
+      <tr><td style="padding-bottom:24px;">
+        <img src="https://faf.one/orange-smiley.svg" width="48" height="48" alt="FAF" style="display:block;" />
+      </td></tr>
+      <tr><td style="font-size:18px;font-weight:700;color:#111;padding-bottom:12px;">${greeting},</td></tr>
+      <tr><td style="font-size:15px;color:#444;line-height:1.6;padding-bottom:20px;">
+        Got your message — I'll get back to you shortly.<br><br>
+        In the meantime, the latest is always at <a href="https://faf.one/blog" style="color:#FF6B35;text-decoration:none;">faf.one/blog</a>.
+      </td></tr>
+      <tr><td style="font-size:14px;color:#888;border-top:1px solid #eee;padding-top:16px;">
+        — James<br>
+        <span style="color:#bbb;font-size:12px;">faf.one</span>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body></html>`,
+		}).catch((err: Error) => console.warn('⚠️ Auto-reply failed (non-critical):', err.message));
+
 		return json({
 			success: true,
 			message: 'Message sent successfully'

@@ -1,6 +1,7 @@
 <script>
 	import FafLogo from '$lib/components/FafLogo.svelte';
 	import ContactModal from '$lib/components/ContactModal.svelte';
+	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 
 	const currentYear = new Date().getFullYear();
 	let showContactModal = $state(false);
@@ -62,6 +63,10 @@
 			</a>
 		</div>
 		
+		<div class="footer-newsletter">
+			<NewsletterSignup variant="footer" />
+		</div>
+
 		<div class="footer-bottom">
 			<p>© {currentYear} .faf Format Authority. Built with 🧡 in Atlanta.</p>
 			<p class="footer-creator">Creator: James Wolfe (Wolfe-Jam) | <a href="https://orcid.org/0009-0007-0801-3841" target="_blank" rel="noopener noreferrer">ORCID: 0009-0007-0801-3841</a></p>
@@ -191,6 +196,11 @@
 	.contact-button:hover {
 		color: var(--faf-orange);
 		transform: translateX(2px);
+	}
+
+	.footer-newsletter {
+		max-width: 280px;
+		margin: 0 auto 2rem;
 	}
 
 	.footer-bottom {
