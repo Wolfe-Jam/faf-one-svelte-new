@@ -5,6 +5,25 @@
 
 	const posts = [
 		{
+			slug: 'blog/radiofaf-eleven-episodes',
+			title: 'RadioFAF: 11 Episodes In',
+			date: 'April 6, 2026',
+			timestamp: '2026-04-06',
+			excerpt: '5 AI voices. 3 providers. 11 episodes. Nelly got the DJ gig. The world\'s first multi-voice AI radio show — powered by Grok voice, Claude text, and Gemini audio.',
+			emoji: '🐘',
+			category: 'Story',
+			theme: 'dark'
+		},
+		{
+			slug: 'blog/faf-voice-v2-cost-breakthrough',
+			title: 'FAF-Voice V2.0: 85% Cost Breakthrough',
+			date: 'April 5, 2026',
+			timestamp: '2026-04-05',
+			excerpt: '85% cost reduction through ephemeral token strategy. RadioFAF trailers: $1.48 to $0.23. Zero quality compromise. 105 championship tests validate every optimization.',
+			emoji: '🎯',
+			category: 'Research'
+		},
+		{
 			slug: 'blog/fifty-thousand',
 			title: '50,000 Downloads',
 			date: 'April 1, 2026',
