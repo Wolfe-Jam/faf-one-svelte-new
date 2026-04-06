@@ -52,9 +52,23 @@
 
 		<div class="total-stats stats-top">
 			<p>
-				<strong>1,184/1,184 Tests Passing</strong> •
+				<strong>50,000+ Downloads</strong> •
 				<strong>MIT License, FREE FOREVER</strong>
 			</p>
+		</div>
+
+		<!-- 50,000 Downloads Milestone -->
+		<div class="chrome-featured milestone-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🏆 50,000 Downloads — FAF Ecosystem Milestone</h3>
+					<span class="chrome-badge milestone-badge">Milestone</span>
+				</div>
+			</div>
+			<p class="chrome-description">16 packages. 3 registries. 3 languages. One format. npm, PyPI, crates.io — the format keeps spreading because it keeps working.</p>
+			<a href="/blog/fifty-thousand" class="chrome-install milestone-cta">
+				Read the Blog Post →
+			</a>
 		</div>
 
 		<!-- bun-sticky v2.0.0 WASM Edition -->
@@ -1053,6 +1067,34 @@
 	.rust-btn {
 		background: linear-gradient(135deg, #CE422B 0%, #F46623 100%) !important;
 		color: white !important;
+	}
+
+	/* Milestone Featured Card - Gold theme */
+	.milestone-featured {
+		border-color: #FFD700;
+	}
+
+	.milestone-featured:hover {
+		box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+	}
+
+	.milestone-featured .chrome-description {
+		color: #FFD700;
+	}
+
+	.milestone-badge {
+		background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+		color: #1a1a1a;
+		font-weight: 700;
+	}
+
+	.milestone-cta {
+		background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+		color: #1a1a1a;
+	}
+
+	.milestone-cta:hover {
+		box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
 	}
 
 	/* WJTTC Featured Card - Green theme (tests PASSED) */
