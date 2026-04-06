@@ -11,6 +11,8 @@
 	<meta property="og:description" content="5 AI voices. 3 providers. 11 episodes. Nelly is on the decks. The world's first multi-voice AI radio show." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/ALWAYS-REMEMBER-I-NEVER-FORGET.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/ALWAYS-REMEMBER-I-NEVER-FORGET.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -29,6 +31,10 @@
 	</header>
 
 	<article class="post-content">
+		<section class="hero-image">
+			<img src="/blog/ALWAYS-REMEMBER-I-NEVER-FORGET.png" alt="DJ Nelly in the RadioFAF booth — ON AIR — Always Remember, I Never Forget" />
+		</section>
+
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> RadioFAF is an AI radio show where 5 voices debate live topics &mdash;
@@ -233,6 +239,18 @@
 
 	.category.story {
 		background: #8B5A2B;
+	}
+
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.post-content {
