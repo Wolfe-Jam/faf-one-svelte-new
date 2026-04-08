@@ -5,6 +5,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/slash-tokens-launch',
+			title: '/slash — Token Optimization for Context Engineers',
+			date: 'April 8, 2026',
+			timestamp: '2026-04-08',
+			excerpt: 'One import. Every LLM call optimized. 4.8 KB WASM. Sub-ms. Evaluates, routes, aborts. 90%+ tokens salvaged. From the FAF team.',
+			emoji: '⚡',
+			category: 'Launch',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/radiofaf-eleven-episodes',
 			title: 'RadioFAF: 11 Episodes In',
 			date: 'April 6, 2026',

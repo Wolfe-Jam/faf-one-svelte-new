@@ -254,6 +254,17 @@
 		background: #0a0a0a !important;
 	}
 
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
