@@ -7,12 +7,13 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
+import { env } from '$env/dynamic/private';
 
 // Lazy-initialize to avoid build-time errors
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-	if (!resend && process.env.RESEND_API_KEY) {
-		resend = new Resend(process.env.RESEND_API_KEY);
+	if (!resend && env.RESEND_API_KEY) {
+		resend = new Resend(env.RESEND_API_KEY);
 	}
 	return resend;
 }
@@ -169,7 +170,7 @@ Reply to: ${data.email}
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-	if (!process.env.RESEND_API_KEY) {
+	if (!env.RESEND_API_KEY) {
 		console.error('❌ RESEND_API_KEY not set');
 		return json({
 			success: false,
@@ -225,7 +226,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		console.log(`✅ Contact form email sent from ${data.email}, ID: ${emailData?.id}`);
 
 		// Add to Resend Audience (fire-and-forget — don't block the response)
-		const audienceId = process.env.RESEND_AUDIENCE_ID;
+		const audienceId = env.RESEND_AUDIENCE_ID;
 		if (audienceId) {
 			client.contacts.create({ audienceId, email: data.email, unsubscribed: false })
 				.catch((err: Error) => console.warn('⚠️ Audience add failed (non-critical):', err.message));

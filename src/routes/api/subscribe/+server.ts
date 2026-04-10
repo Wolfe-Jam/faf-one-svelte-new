@@ -8,11 +8,12 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
+import { env } from '$env/dynamic/private';
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-	if (!resend && process.env.RESEND_API_KEY) {
-		resend = new Resend(process.env.RESEND_API_KEY);
+	if (!resend && env.RESEND_API_KEY) {
+		resend = new Resend(env.RESEND_API_KEY);
 	}
 	return resend;
 }
@@ -26,7 +27,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const client = getResend();
-		const audienceId = process.env.RESEND_AUDIENCE_ID;
+		const audienceId = env.RESEND_AUDIENCE_ID;
 
 		if (!client || !audienceId) {
 			console.error('❌ RESEND_API_KEY or RESEND_AUDIENCE_ID not configured');

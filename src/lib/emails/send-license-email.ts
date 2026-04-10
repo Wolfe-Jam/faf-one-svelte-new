@@ -5,13 +5,14 @@
  */
 
 import { Resend } from 'resend';
+import { env } from '$env/dynamic/private';
 import type { License } from '../license-generator';
 
 // Lazy-initialize to avoid build-time errors
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-    if (!resend && process.env.RESEND_API_KEY) {
-        resend = new Resend(process.env.RESEND_API_KEY);
+    if (!resend && env.RESEND_API_KEY) {
+        resend = new Resend(env.RESEND_API_KEY);
     }
     return resend;
 }
@@ -222,7 +223,7 @@ function generateLicenseEmailHTML(license: License): string {
  * Send license email to customer
  */
 export async function sendLicenseEmail(license: License): Promise<{ success: boolean; error?: string }> {
-    if (!process.env.RESEND_API_KEY) {
+    if (!env.RESEND_API_KEY) {
         console.error('❌ RESEND_API_KEY not set');
         return { success: false, error: 'Email service not configured' };
     }

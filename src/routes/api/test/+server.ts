@@ -10,16 +10,17 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { getSupabase } from '$lib/supabase';
+import { env } from '$env/dynamic/private';
 
 export const GET: RequestHandler = async () => {
     const checks: Record<string, any> = {};
 
     // Check 1: Environment variables
     checks.envVars = {
-        SUPABASE_URL: !!process.env.SUPABASE_URL,
-        SUPABASE_SERVICE_KEY: !!process.env.SUPABASE_SERVICE_KEY,
-        RESEND_API_KEY: !!process.env.RESEND_API_KEY,
-        STRIPE_SECRET_KEY: !!process.env.STRIPE_SECRET_KEY,
+        SUPABASE_URL: !!env.SUPABASE_URL,
+        SUPABASE_SERVICE_KEY: !!env.SUPABASE_SERVICE_KEY,
+        RESEND_API_KEY: !!env.RESEND_API_KEY,
+        STRIPE_SECRET_KEY: !!env.STRIPE_SECRET_KEY,
     };
 
     // Check 2: Supabase connection
