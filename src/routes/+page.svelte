@@ -58,7 +58,7 @@
 		</div>
 		<div class="card orange">
 			<h3>.md instructs</h3>
-			<p>CLAUDE.md, AGENTS.md, .cursorrules — all generated from .faf.</p>
+			<p>CLAUDE.md, AGENTS.md, .cursorrules — all compatible + bi-sync'd with .faf.</p>
 		</div>
 		<div class="card neutral">
 			<h3>AI consumes</h3>

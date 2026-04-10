@@ -17,8 +17,8 @@ export const GET: RequestHandler = async () => {
 
     // Check 1: Environment variables
     checks.envVars = {
-        SUPABASE_URL: !!env.SUPABASE_URL,
-        SUPABASE_SERVICE_KEY: !!env.SUPABASE_SERVICE_KEY,
+        SUPABASE_URL: !!env.SUPABASE_URL2,
+        SUPABASE_SERVICE_KEY: !!env.SUPABASE_SERVICE_KEY2,
         RESEND_API_KEY: !!env.RESEND_API_KEY,
         STRIPE_SECRET_KEY: !!env.STRIPE_SECRET_KEY,
     };
