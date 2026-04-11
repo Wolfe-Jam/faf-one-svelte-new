@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/nelly-never-forgets',
+			title: 'Nelly Never Forgets Edition',
+			date: 'April 10, 2026',
+			timestamp: '2026-04-10',
+			excerpt: 'claude-faf-mcp v5.3.0 — now on Smithery and Glama, persistent analytics via Upstash Redis, 3 CVEs fixed. The MCP that gives your AI memory now has memory of its own.',
+			emoji: '🐘',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/slash-tokens-launch',
 			title: '/slash — Token Optimization for Context Engineers',
 			date: 'April 8, 2026',
