@@ -1028,12 +1028,12 @@
 		padding: 0.75rem 1rem;
 		text-decoration: none;
 		color: inherit;
-		border-bottom: 1px solid #f0f0f0;
+		border-bottom: 2px solid #f0f0f0;
 		transition: background 0.15s;
 	}
 
 	.list-row:first-child {
-		border-top: 1px solid #f0f0f0;
+		border-top: 2px solid #f0f0f0;
 	}
 
 	.list-row:hover {
@@ -1092,7 +1092,7 @@
 
 	.dark-row {
 		background: #0a0a0a;
-		border-color: #222;
+		border-bottom: 2px solid #383838;
 	}
 
 	.dark-row .list-title {
