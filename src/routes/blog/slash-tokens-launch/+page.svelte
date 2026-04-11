@@ -147,6 +147,15 @@
 			<p><em>"We adopted /slash. Here's what we saved in month one."</em></p>
 		</section>
 
+		<section>
+			<h2>Further Reading</h2>
+			<ul>
+				<li><strong>Grok's Meta Moment</strong> — I asked Grok-4.20 how to cut token costs. Slash intercepted it, routed to Grok-4-1-fast. 90% cheaper. Grok described "intelligent model routing" while being routed. <a href="https://x.com/wolfe_jam" target="_blank">Read the full story on X</a></li>
+				<li><strong>The $360M Industry View</strong> — 3-5 trillion tokens/day, 40-80% waste, $110-360M/yr recoverable. The full data with charts. <a href="https://x.com/wolfe_jam" target="_blank">Read the article on X</a></li>
+				<li><strong>FAQ</strong> — What is Slash? How does it work? What does it cost? Can I cancel? <a href="https://slashtokens.com/faq">slashtokens.com/faq</a></li>
+			</ul>
+		</section>
+
 		<div class="share-section">
 			<a href="https://twitter.com/intent/tweet?text=Token%20Optimization%20for%20Context%20Engineers.%20One%20import.%20Every%20LLM%20call%20optimized.%20%E2%9A%A1%2Fslash&url=https%3A%2F%2Fslashtokens.com" target="_blank" class="share-btn">
 				Share on X
