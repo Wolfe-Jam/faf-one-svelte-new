@@ -22,6 +22,8 @@
 	<meta property="og:description" content="85% cost reduction through token strategy optimization. Sustainable $1.00 RadioFAF episodes now possible." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/faf-voice-v2-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/faf-voice-v2-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -41,6 +43,10 @@
 	</header>
 
 	<article class="post-content">
+		<section class="hero-image">
+			<img src="/blog/faf-voice-v2-hero.png" alt="FAF-Voice app — Nelly Never Forgets — 3 AI models, eternal memory" />
+		</section>
+
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> FAF-Voice V2.0 achieved <strong>85% cost reduction</strong> through ephemeral token strategy. RadioFAF trailers: $1.48 → $0.23. Zero quality compromise. Championship test suite validates every optimization.
@@ -474,6 +480,18 @@ for (const exchange of conversation) {
 		color: white;
 	}
 
+	.hero-image {
+		margin: -1rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
 	.post-content {
 		font-size: 1.1rem;
 	}
@@ -574,7 +592,7 @@ for (const exchange of conversation) {
 	}
 
 	.comparison-box.new {
-		border-color: #4ade80;
+		border-color: #166534;
 		background: #f0fdf4;
 	}
 
@@ -650,7 +668,7 @@ for (const exchange of conversation) {
 
 	.test-count {
 		font-family: 'SF Mono', monospace;
-		color: #22c55e;
+		color: #166534;
 		font-weight: 700;
 	}
 
@@ -727,7 +745,7 @@ for (const exchange of conversation) {
 	}
 
 	.reduction {
-		color: #4ade80;
+		color: #166534;
 		font-size: 0.9rem;
 		font-weight: 600;
 	}
@@ -825,7 +843,7 @@ for (const exchange of conversation) {
 	}
 
 	.proof-value small {
-		color: #4ade80;
+		color: #166534;
 		font-weight: 600;
 	}
 
@@ -896,7 +914,7 @@ for (const exchange of conversation) {
 	.achievement-number {
 		font-size: 2rem;
 		font-weight: 700;
-		color: #4ade80;
+		color: #166534;
 		font-family: 'SF Mono', monospace;
 		margin-bottom: 0.5rem;
 	}
@@ -961,7 +979,7 @@ for (const exchange of conversation) {
 	}
 
 	.footer-links a {
-		color: #4ade80;
+		color: #166534;
 		text-decoration: none;
 	}
 
