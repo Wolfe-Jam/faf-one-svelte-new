@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/relentless',
+			title: 'The Relentless Edition',
+			date: 'April 13, 2026',
+			timestamp: '2026-04-13',
+			excerpt: 'Type /faf in Claude Desktop. Your project goes to 100%. Relentlessly. FAF defines. MD instructs. AI codes.',
+			emoji: '🎼',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/nelly-never-forgets',
 			title: 'Nelly Never Forgets Edition',
 			date: 'April 10, 2026',
