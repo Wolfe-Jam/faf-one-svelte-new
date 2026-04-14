@@ -6,10 +6,10 @@
 	const posts = [
 		{
 			slug: 'blog/go-rusty-python',
-			title: 'The Go Rusty Python Edition',
+			title: 'The Go Rusty Python + One Sentence Editions',
 			date: 'April 14, 2026',
 			timestamp: '2026-04-14',
-			excerpt: 'faf git on github/github-mcp-server: was library 22%. Now mcp 41%. Go, Rust, and Python native manifest detection — zero config.',
+			excerpt: 'v6.1.0 + v6.2.0 back-to-back. Go/Rust/Python detection + faf go reimagined: one sentence in, AI thinks, 6Ws sign-off. 22% → 🏆 100%.',
 			emoji: '🦀',
 			category: 'Release'
 		},
