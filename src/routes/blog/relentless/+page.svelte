@@ -186,7 +186,7 @@
 	}
 
 	.hero-image {
-		margin: -1rem -1rem 2rem -1rem;
+		margin: 1.5rem -1rem 2rem -1rem;
 		border-radius: 12px;
 		overflow: hidden;
 	}
