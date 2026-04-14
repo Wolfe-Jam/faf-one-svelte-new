@@ -11,6 +11,8 @@
 	<meta property="og:description" content="faf git on github/github-mcp-server: was library 22%. Now mcp 41%. Better detection before you type a single answer." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" content="https://faf.one/blog/go-rusty-python-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/go-rusty-python-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -27,6 +29,10 @@
 			<span class="category release">Release</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/go-rusty-python-hero.png" alt="The Go Rusty Python Edition — faf-cli v6.1.0 — Go, Rust, Python native detection" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -298,6 +304,18 @@
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.9em;
+	}
+
+	.hero-image {
+		margin: 1.5rem -1rem 2rem -1rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	/* Score comparison */
