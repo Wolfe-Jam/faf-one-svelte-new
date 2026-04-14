@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/go-rusty-python',
+			title: 'The Go Rusty Python Edition',
+			date: 'April 14, 2026',
+			timestamp: '2026-04-14',
+			excerpt: 'faf git on github/github-mcp-server: was library 22%. Now mcp 41%. Go, Rust, and Python native manifest detection — zero config.',
+			emoji: '🦀',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/relentless',
 			title: 'The Relentless Edition',
 			date: 'April 13, 2026',
