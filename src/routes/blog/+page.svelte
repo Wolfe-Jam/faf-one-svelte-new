@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/extension-edition',
+			title: 'The Extension Edition',
+			date: 'April 15, 2026',
+			timestamp: '2026-04-15',
+			excerpt: 'claude-faf-mcp v5.5.0 — One-click install for Claude Desktop. No JSON, no terminal. Desktop Extension (.mcpb). 118 tests, zero failures.',
+			emoji: '🔌',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/go-rusty-python',
 			title: 'The Go Rusty Python + One Sentence Editions',
 			date: 'April 14, 2026',
