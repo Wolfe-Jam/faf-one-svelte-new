@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- Extension Edition v5.5.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🔌 claude-faf-mcp v5.5.0 — The Extension Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">One-click Desktop Extension for Claude. No JSON config, no terminal. 32 tools, 118 tests, zero failures. Submitted to Anthropic Connectors Directory.</p>
+			<a href="/blog/extension-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- 50,000 Downloads Milestone -->
 		<div class="chrome-featured milestone-featured">
 			<div class="chrome-header">
