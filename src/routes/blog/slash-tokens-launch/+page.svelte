@@ -29,7 +29,7 @@
 		</div>
 
 		<h1>I've Been Here Before</h1>
-		<p class="version-tag">slash-tokens v1.1.1</p>
+		<p class="version-tag">slash-tokens v1.2.0</p>
 		<p class="subtitle">Token Optimization for Context Engineers</p>
 		<div class="meta">
 			<time datetime="2026-04-08">April 8, 2026</time>
@@ -132,7 +132,7 @@
 		<section>
 			<h2>The Numbers</h2>
 			<ul>
-				<li><strong>v1.1.1</strong> — Released April 8, 2026</li>
+				<li><strong>v1.2.0</strong> — Released April 14, 2026</li>
 				<li><strong>99/99</strong> — Tests passing</li>
 				<li><strong>10</strong> — Models with built-in pricing</li>
 				<li><strong>4.8 KB</strong> — Zig-compiled WASM</li>
@@ -154,6 +154,34 @@
 				<li><strong>The $360M Industry View</strong> — 3-5 trillion tokens/day, 40-80% waste, $110-360M/yr recoverable. The full data with charts. <a href="https://x.com/wolfe_jam" target="_blank">Read the article on X</a></li>
 				<li><strong>FAQ</strong> — What is Slash? How does it work? What does it cost? Can I cancel? <a href="https://slashtokens.com/faq">slashtokens.com/faq</a></li>
 			</ul>
+		</section>
+
+		<div class="edition-divider">
+			<span class="edition-tag">v1.2.0 — April 14, 2026</span>
+		</div>
+
+		<section>
+			<div class="ferrari-image">
+				<img src="/blog/slash-ferrari.png" alt="Don't go to the corner shop in a Ferrari — tokens spilling out" />
+				<p class="ferrari-caption">Don't go to the corner shop in a Ferrari.</p>
+			</div>
+
+			<h2>The Next.js Edition</h2>
+			<p>Six days in. Here's what shipped in v1.2.0:</p>
+
+			<ul>
+				<li><strong>Session summary on exit</strong> — every time you stop your dev server, Slash tells you what you saved that session</li>
+				<li><strong>90-day transaction history</strong> — full log in the dashboard, expandable with Show All</li>
+				<li><strong>Live feed shows $</strong> — dollars saved per call, not raw token counts</li>
+				<li><strong>Balance warnings</strong> — yellow at $3, amber at $2, red at $1</li>
+				<li><strong>Low balance email</strong> — fires once per threshold, not on every call</li>
+			</ul>
+
+			<div class="terminal-block">
+				<code>[slash] Session: 47 calls | 23 routed | $0.89 salvaged — The more you build, the more you save</code>
+			</div>
+
+			<p>That's what you see when you hit Ctrl+C. Every session. The number only goes up.</p>
 		</section>
 
 		<div class="share-section">
@@ -431,6 +459,56 @@
 		font-size: 0.95rem;
 		color: #888;
 		text-align: center;
+	}
+
+	.edition-divider {
+		text-align: center;
+		margin: 3rem 0 2rem;
+		border-top: 2px solid #FF4400;
+		padding-top: 1.5rem;
+	}
+
+	.edition-tag {
+		background: #FF4400;
+		color: white;
+		padding: 0.3rem 1rem;
+		border-radius: 4px;
+		font-size: 0.85rem;
+		font-weight: 700;
+		font-family: 'SF Mono', monospace;
+	}
+
+	.ferrari-image {
+		margin: 0 0 2rem;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.ferrari-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 12px;
+	}
+
+	.ferrari-caption {
+		text-align: center;
+		font-size: 0.85rem;
+		color: #666;
+		margin-top: 0.5rem;
+		font-style: italic;
+	}
+
+	.terminal-block {
+		background: #0a0a0a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		padding: 1rem 1.5rem;
+		margin: 1.5rem 0;
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.85rem;
+		color: #4ade80;
+		overflow-x: auto;
 	}
 
 	@media (max-width: 768px) {
