@@ -9,7 +9,7 @@
 			title: 'The 10:1 Edition',
 			date: 'April 15, 2026',
 			timestamp: '2026-04-15',
-			excerpt: '/slash v1.2.1 — For every $1 you pay, you get $10 back. 3,451 calls. $477 prevented. 186 tests. Zero failures. The math works.',
+			excerpt: '/slash v1.2.1 — Saved $477 in one day. Took $47. You keep 90%. From a solo dev to SpaceX — same 10%. 186 tests. Zero failures.',
 			emoji: '⚡',
 			category: 'Release'
 		},

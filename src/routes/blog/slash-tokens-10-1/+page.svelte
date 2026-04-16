@@ -6,9 +6,9 @@
 
 <svelte:head>
 	<title>The 10:1 Edition - slash-tokens v1.2.1 | FAF</title>
-	<meta name="description" content="For every $1 you pay Slash, you get $10 back. 186 tests. 4 providers. Zero failures. The math works." />
+	<meta name="description" content="Slash saved $477 in one day. Took $47. You keep 90%. From a solo dev to SpaceX — same math." />
 	<meta property="og:title" content="The 10:1 Edition - slash-tokens v1.2.1" />
-	<meta property="og:description" content="For every $1 you pay Slash, you get $10 back. The math works." />
+	<meta property="og:description" content="Slash saved $477 in one day. Took $47. You keep 90%." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -21,7 +21,7 @@
 
 		<h1>The 10:1 Edition</h1>
 		<p class="version-tag">slash-tokens v1.2.1</p>
-		<p class="subtitle">For every $1 you pay, you get $10 back</p>
+		<p class="subtitle">Slash saves you money. We take 10%. You keep 90%.</p>
 		<div class="meta">
 			<time datetime="2026-04-15">April 15, 2026</time>
 			<span class="separator">|</span>
@@ -32,7 +32,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> We spent a full day testing /slash against live traffic. 3,451 API calls. $477 sunk cost prevented. Slash took $47. User kept $429. That's a <strong>10:1 return</strong>. Not a promise. Receipts.
+				<strong>TL;DR:</strong> Slash is a frictionless token optimizer. It saved $477 in one day of live traffic. It took $47 — its 10% cut. The user kept $429. No upfront cost. No subscription. Slash earns when you save. From a solo dev to SpaceX — same math, same 10%.
 			</p>
 		</section>
 
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 			<p style="text-align:center;color:#888;margin-top:0.5rem;">One day. One user. One dashboard.</p>
-			<p>The ratio holds: for every <strong>$1</strong> Slash takes, the user keeps <strong>$10</strong>. That's not a marketing claim. It's arithmetic. <code>cost_saved * 0.10 = fee</code>.</p>
+			<p>Slash takes 10% of what it saves you. That's it. No subscription. No minimum. No commitment. For every $10 Slash salvages, it keeps $1. The user never "pays" — Slash <em>earns</em>. <code>fee = savings * 0.10</code>. Same formula whether you're a solo dev or SpaceX.</p>
 		</section>
 
 		<section>
@@ -99,7 +99,7 @@
 				<span class="green">$5.00</span> &nbsp;Stripe top-up + confirmation email<br>
 				<span style="color:#888;">↓ alerts reset, cycle starts fresh</span>
 			</div>
-			<p>At $0, your calls still work. You just stop saving. Top up when you're ready.</p>
+			<p>The $5 balance is just the fee pool — it depletes as Slash earns its 10%. At $0, your calls still flow through. You just stop saving until you top up.</p>
 		</section>
 
 		<section>
@@ -131,7 +131,7 @@
 		</section>
 
 		<section class="footer-note">
-			<p>10:1 — the more you build, the more you save.</p>
+			<p>Slash 10% — the more you save, the more we earn. Aligned.</p>
 			<p style="margin-top:0.5rem;"><a href="https://slashtokens.com">slashtokens.com</a></p>
 		</section>
 	</article>
