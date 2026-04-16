@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/slash-tokens-10-1',
+			title: 'The 10:1 Edition',
+			date: 'April 15, 2026',
+			timestamp: '2026-04-15',
+			excerpt: '/slash v1.2.1 — For every $1 you pay, you get $10 back. 3,451 calls. $477 prevented. 186 tests. Zero failures. The math works.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/extension-edition',
 			title: 'The Extension Edition',
 			date: 'April 15, 2026',
