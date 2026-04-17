@@ -7,9 +7,9 @@
 		{
 			slug: 'blog/slash-tokens-10-1',
 			title: 'The 10:1 Edition',
-			date: 'April 15, 2026',
-			timestamp: '2026-04-15',
-			excerpt: '/slash v1.2.1 — Saved $477 in one day. Took $47. You keep 90%. From a solo dev to SpaceX — same 10%. 186 tests. Zero failures.',
+			date: 'April 16, 2026',
+			timestamp: '2026-04-16',
+			excerpt: '/slash v1.3.0 — Same-day Opus 4.7 support with measured calibration (1.16–1.51x). Plus Gemini proxy fix, benchmark harness, CI/CD. Saved $477 in a day, took $47. 10:1.',
 			emoji: '⚡',
 			category: 'Release'
 		},

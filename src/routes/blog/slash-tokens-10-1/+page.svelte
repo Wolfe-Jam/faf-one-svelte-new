@@ -5,10 +5,10 @@
 </script>
 
 <svelte:head>
-	<title>The 10:1 Edition - slash-tokens v1.2.1 | FAF</title>
-	<meta name="description" content="Slash saved $477 in one day. Took $47. You keep 90%. From a solo dev to SpaceX — same math." />
-	<meta property="og:title" content="The 10:1 Edition - slash-tokens v1.2.1" />
-	<meta property="og:description" content="Slash saved $477 in one day. Took $47. You keep 90%." />
+	<title>The 10:1 Edition - slash-tokens v1.3.0 | FAF</title>
+	<meta name="description" content="Same-day Opus 4.7 support. Slash saved $477 in one day, took $47. 10:1 — solo dev to SpaceX, same math." />
+	<meta property="og:title" content="The 10:1 Edition - slash-tokens v1.3.0" />
+	<meta property="og:description" content="Same-day Opus 4.7. Saved $477, took $47. 10:1." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -20,10 +20,10 @@
 		</div>
 
 		<h1>The 10:1 Edition</h1>
-		<p class="version-tag">slash-tokens v1.2.1</p>
+		<p class="version-tag">slash-tokens v1.3.0 — Opus 4.7 Support</p>
 		<p class="subtitle">Slash saves you money. We take 10%. You keep 90%.</p>
 		<div class="meta">
-			<time datetime="2026-04-15">April 15, 2026</time>
+			<time datetime="2026-04-16">April 16, 2026</time>
 			<span class="separator">|</span>
 			<span class="category release">Release</span>
 		</div>
@@ -32,8 +32,20 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> Slash is a frictionless token optimizer. It saved $477 in one day of live traffic. It took $47 — its 10% cut. The user kept $429. No upfront cost. No subscription. Slash earns when you save. From a solo dev to SpaceX — same math, same 10%.
+				<strong>TL;DR:</strong> Slash is a frictionless token optimizer. It saved $477 in one day of live traffic. It took $47 — its 10% cut. The user kept $429. No upfront cost. No subscription. Slash earns when you save. From a solo dev to SpaceX — same math, same 10:1.
 			</p>
+		</section>
+
+		<section>
+			<h2>Opus 4.7, Same Day</h2>
+			<p>v1.3 shipped the day Claude Opus 4.7 landed — with measured token calibration, not guesses.</p>
+			<ul>
+				<li><strong>Calibration layer</strong> — Opus 4.7 tokenizes 1.16–1.51x higher than prior generations. We measured it across real workloads, not estimated.</li>
+				<li><strong>Gemini proxy URL fix</strong> — model correctly extracted from <code>/v1beta/models/:model:generateContent</code>. The Gate now covers all 4 providers equally.</li>
+				<li><strong>Benchmark harness</strong> — now supports custom proxies and auth headers. Benchmark Slash against any upstream.</li>
+				<li><strong>CI/CD</strong> — unit tests on Bun + Node 20/22 matrix, plus a health-gated integration suite against live mcpaas.live.</li>
+			</ul>
+			<p>Same install. Sharper Gate. Same 10:1.</p>
 		</section>
 
 		<section>
