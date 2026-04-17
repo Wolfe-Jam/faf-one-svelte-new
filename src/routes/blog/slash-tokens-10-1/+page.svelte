@@ -10,7 +10,9 @@
 	<meta property="og:title" content="The 10:1 Edition - slash-tokens v1.3.0" />
 	<meta property="og:description" content="Same-day Opus 4.7. Saved $477, took $47. 10:1." />
 	<meta property="og:type" content="article" />
+	<meta property="og:image" content="https://faf.one/blog/slash-tokens-10-1-hero.png" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://faf.one/blog/slash-tokens-10-1-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -28,6 +30,10 @@
 			<span class="category release">Release</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/slash-tokens-10-1-hero.png" alt="Claudie and ⚡Slash the Evaluator — Claude Opus 4.7, same day, 10:1" />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -288,5 +294,16 @@
 		font-size: 0.95rem;
 		color: #888;
 		text-align: center;
+	}
+
+	.hero-image {
+		margin: 2rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 </style>
