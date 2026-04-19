@@ -59,7 +59,7 @@
 			<p>It started with a bug report: "The dashboard isn't updating."</p>
 			<p>Activity was flowing. Claude Code was running. But the stats panel was frozen. We traced it to a single line:</p>
 			<div class="example-box">
-				<span class="red">if (data.costSaved <= 0) return;</span>
+				<span class="red">{'if (data.costSaved <= 0) return;'}</span>
 			</div>
 			<p>Pass-through calls — the kind Claude Code makes hundreds of times a day — were silently dropped from transaction records. The live feed showed ticks. The numbers didn't move.</p>
 			<p>We fixed it. Then we asked: <em>what else is wrong?</em></p>
