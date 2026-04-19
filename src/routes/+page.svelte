@@ -37,6 +37,11 @@
 			<a href="https://github.com/Wolfe-Jam/faf-cli" class="btn-primary" target="_blank" rel="noopener">Get Started</a>
 			<a href="/blog" class="btn-secondary">Blog</a>
 		</div>
+		<div class="gh-star">
+			<iframe src="https://ghbtns.com/github-btn.html?user=Wolfe-Jam&repo=faf-cli&type=star&count=true&size=large"
+				frameborder="0" scrolling="0" width="170" height="30"
+				title="Star Wolfe-Jam/faf-cli on GitHub"></iframe>
+		</div>
 	</section>
 
 	<!-- Section 2: Trust Bar -->
@@ -191,6 +196,13 @@
 		display: flex;
 		gap: 1rem;
 		justify-content: center;
+	}
+
+	.gh-star {
+		display: flex;
+		justify-content: center;
+		margin-top: 1.25rem;
+		color-scheme: light;
 	}
 
 	.btn-primary {
