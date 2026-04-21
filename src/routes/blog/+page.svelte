@@ -5,11 +5,21 @@
 
 	const posts = [
 		{
+			slug: 'blog/radiofaf-token-tax',
+			title: 'The Token Tax',
+			date: 'April 21, 2026',
+			timestamp: '2026-04-21',
+			excerpt: 'Grok 4.3 shipped on April 17. We shipped RadioFAF Episode 12 × /slash three days later. Five xAI voices + Nelly the DJ debate /slash while /slash routes every Grok call that made the episode. 95.6% cheaper, 5.5× faster, same quality. First-mover receipts since January 10.',
+			emoji: '🎧',
+			category: 'Grok',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/slash-tokens-10-1',
 			title: 'The 10:1 Edition',
-			date: 'April 16, 2026',
-			timestamp: '2026-04-16',
-			excerpt: '/slash v1.3.0 — Same-day Opus 4.7 support with measured calibration (1.16–1.51x). Plus Gemini proxy fix, benchmark harness, CI/CD. Saved $477 in a day, took $47. 10:1.',
+			date: 'April 19, 2026',
+			timestamp: '2026-04-19',
+			excerpt: '/slash v1.4.0 — Single-Source-of-Truth: new preflightRoute() matches proxy behavior exactly, PROVIDER_MODELS shared between SDK and proxy, 127 SDK tests. Builds on v1.3.0 Opus 4.7. Saved $477 in a day, took $47. 10:1.',
 			emoji: '⚡',
 			category: 'Release'
 		},

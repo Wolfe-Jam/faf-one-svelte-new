@@ -5,10 +5,10 @@
 </script>
 
 <svelte:head>
-	<title>The 10:1 Edition - slash-tokens v1.3.0 | FAF</title>
-	<meta name="description" content="Same-day Opus 4.7 support. Slash saved $477 in one day, took $47. 10:1 — solo dev to SpaceX, same math." />
-	<meta property="og:title" content="The 10:1 Edition - slash-tokens v1.3.0" />
-	<meta property="og:description" content="Same-day Opus 4.7. Saved $477, took $47. 10:1." />
+	<title>The 10:1 Edition - slash-tokens v1.4.0 | FAF</title>
+	<meta name="description" content="v1.4.0 Single-Source-of-Truth. Same-day Opus 4.7. Saved $477 in a day, took $47. 10:1 — solo dev to SpaceX, same math." />
+	<meta property="og:title" content="The 10:1 Edition - slash-tokens v1.4.0" />
+	<meta property="og:description" content="v1.4.0 Single-Source-of-Truth. Saved $477, took $47. 10:1." />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="https://faf.one/blog/slash-tokens-10-1-hero.png" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -22,10 +22,10 @@
 		</div>
 
 		<h1>The 10:1 Edition</h1>
-		<p class="version-tag">slash-tokens v1.3.0 — Opus 4.7 Support</p>
+		<p class="version-tag">slash-tokens v1.4.0 — The Single-Source-of-Truth Edition</p>
 		<p class="subtitle">Slash saves you money. We take 10%. You keep 90%.</p>
 		<div class="meta">
-			<time datetime="2026-04-16">April 16, 2026</time>
+			<time datetime="2026-04-19">April 19, 2026 — updated from v1.3.0 (April 16)</time>
 			<span class="separator">|</span>
 			<span class="category release">Release</span>
 		</div>
@@ -38,8 +38,20 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> Slash is a frictionless token optimizer. It saved $477 in one day of live traffic. It took $47 — its 10% cut. The user kept $429. No upfront cost. No subscription. Slash earns when you save. From a solo dev to SpaceX — same math, same 10:1.
+				<strong>TL;DR:</strong> Slash is a frictionless token optimizer. It saved $477 in one day of live traffic. It took $47 — its 10% cut. The user kept $429. No upfront cost. No subscription. Slash earns when you save. From a solo dev to SpaceX — same math, same 10:1. <strong>v1.4.0</strong> hardens the SDK so the routing pill you see is the routing decision the proxy actually makes.
 			</p>
+		</section>
+
+		<section>
+			<h2>v1.4.0 — Single Source of Truth</h2>
+			<p>The SDK shipped with two preflight functions that <em>looked</em> interchangeable but weren't. Consumers reached for the analysis function and used it as if it were the routing function. The pill showed cross-provider routes like <code>claude-opus → grok-4-1-fast</code>. The proxy would never do that — routing is same-provider only.</p>
+			<ul>
+				<li><strong>New <code>preflightRoute(content, model)</code></strong> — returns the exact decision the Slash proxy makes. Same-provider only. Claude stays Claude, OpenAI stays OpenAI.</li>
+				<li><strong>New <code>PROVIDER_MODELS</code> shared module</strong> — single source of truth for provider groups. No more drift between SDK and proxy.</li>
+				<li><strong>Latent bug caught</strong> — <code>claude-opus-4.7</code> was in the model registry but orphaned from the Anthropic provider group. The new test suite surfaced it.</li>
+				<li><strong><code>preflight()</code> is unchanged</strong> — it's still cross-provider analysis. Use it to <em>show alternatives</em>, not as a routing decision.</li>
+			</ul>
+			<p>Non-breaking. Pure additions plus one internal refactor. If you were using <code>preflight().options[0]</code> as your routing signal — switch to <code>preflightRoute()</code>.</p>
 		</section>
 
 		<section>
@@ -121,11 +133,11 @@
 		</section>
 
 		<section>
-			<h2>186 Tests. Zero Failures.</h2>
-			<p>This release introduced a cross-repo integration test suite — the SDK proving it speaks the same protocol as the backend.</p>
+			<h2>195 Tests. Zero Failures.</h2>
+			<p>v1.4.0 added 9 new tests — 7 TIER 1 BRAKE assertions locking in the same-provider invariant plus <code>providerOf</code> hygiene. The routing bug that shipped in v1.3.0 would not have shipped with these tests in place. <code>TEST-NOTES.md</code> now lives in the repo as a living doc so the next invariant doesn't slip.</p>
 			<div class="stats-grid">
 				<div class="stat-card">
-					<div class="stat-value">118</div>
+					<div class="stat-value">127</div>
 					<div class="stat-label">slash-tokens (SDK)</div>
 				</div>
 				<div class="stat-card">
@@ -133,7 +145,7 @@
 					<div class="stat-label">mcpaas-cf (backend)</div>
 				</div>
 			</div>
-			<p>The integration tests are self-contained — they register their own trial key, run against live mcpaas.live, and cost less than $0.01 per run. No secrets. No mocks. Real API, real money, real proof.</p>
+			<p>Integration tests are self-contained — they register their own trial key, run against live mcpaas.live, and cost less than $0.01 per run. No secrets. No mocks. Real API, real money, real proof.</p>
 		</section>
 
 		<section>
