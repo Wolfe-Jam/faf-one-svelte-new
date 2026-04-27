@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/ghostty-inspired-edition',
+			title: 'The Ghostty-Inspired Edition',
+			date: 'April 27, 2026',
+			timestamp: '2026-04-27',
+			excerpt: 'faf-cli v6.3.0 — desktop notifications via OSC 9. Trophy unlocks pop in macOS Notification Center. Long auto scans ping you when ready. Inspired by Ghostty\'s notification model. 10 lines of code, zero new dependencies, one env var to opt out.',
+			emoji: '🏆',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/radiofaf-token-tax',
 			title: 'The Token Tax',
 			date: 'April 21, 2026',
