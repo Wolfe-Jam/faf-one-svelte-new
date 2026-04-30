@@ -16,8 +16,8 @@
 		{
 			slug: 'blog/sixty-thousand',
 			title: '60,000 Downloads',
-			date: 'April 28, 2026',
-			timestamp: '2026-04-28',
+			date: 'April 30, 2026',
+			timestamp: '2026-04-30',
 			excerpt: '60,000+ downloads. 16 packages. 27 days from 50k. The Mar → Apr jump alone is +24k — biggest calendar month on the chart. Same zero marketing budget. The format keeps spreading because the format keeps working.',
 			emoji: '🏆',
 			category: 'Milestone',

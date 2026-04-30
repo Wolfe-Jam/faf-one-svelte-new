@@ -24,7 +24,7 @@
 		<h1>60,000 Downloads</h1>
 		<p class="subtitle">+24k in 30 days. Biggest monthly jump yet.</p>
 		<div class="meta">
-			<time datetime="2026-04-28">April 28, 2026</time>
+			<time datetime="2026-04-30">April 30, 2026</time>
 			<span class="separator">&bull;</span>
 			<span class="category milestone">Milestone</span>
 		</div>
