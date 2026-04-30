@@ -38,11 +38,6 @@
 			<a href="/blog" class="btn-secondary">Blog</a>
 			<a href="/links" class="btn-secondary">Links</a>
 		</div>
-		<div class="gh-star">
-			<iframe src="https://ghbtns.com/github-btn.html?user=Wolfe-Jam&repo=faf-cli&type=star&count=false&size=large"
-				frameborder="0" scrolling="0" width="80" height="30"
-				title="Star Wolfe-Jam/faf-cli on GitHub"></iframe>
-		</div>
 	</section>
 
 	<!-- Section 2: Trust Bar -->
