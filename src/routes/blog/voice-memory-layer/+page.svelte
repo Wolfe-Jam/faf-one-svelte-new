@@ -160,6 +160,11 @@ foundation  central       global`}</code></pre>
 				</table>
 			</div>
 
+			<div class="favicon-demo">
+				<img src="/blog/voice-favicon.png" alt="The Voice favicon — gold dot at the bottom (.faf foundation), inner indigo arc (Grok central), outer indigo arcs (FAFmem global). Three nested layers radiating outward." />
+				<p class="favicon-caption">The Voice favicon — gold dot, inner beam, outer beam. The architecture in one glyph.</p>
+			</div>
+
 			<p>
 				Look at the favicon. The gold dot is <code>.faf</code>. The inner beam is
 				Grok. The outer beam is the Voice Memory Layer. <strong>Three independent
@@ -379,6 +384,25 @@ foundation  central       global`}</code></pre>
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	.favicon-demo {
+		text-align: center;
+		margin: 2.5rem 0;
+	}
+
+	.favicon-demo img {
+		width: 200px;
+		height: 200px;
+		border-radius: 16px;
+		display: inline-block;
+	}
+
+	.favicon-caption {
+		font-size: 0.9rem;
+		color: #666;
+		margin: 0.75rem 0 0;
+		font-style: italic;
 	}
 
 	.breadcrumb {
