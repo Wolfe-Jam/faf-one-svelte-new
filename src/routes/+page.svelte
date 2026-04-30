@@ -36,10 +36,11 @@
 		<div class="hero-ctas">
 			<a href="https://github.com/Wolfe-Jam/faf-cli" class="btn-primary" target="_blank" rel="noopener">Get Started</a>
 			<a href="/blog" class="btn-secondary">Blog</a>
+			<a href="/links" class="btn-secondary">Links</a>
 		</div>
 		<div class="gh-star">
-			<iframe src="https://ghbtns.com/github-btn.html?user=Wolfe-Jam&repo=faf-cli&type=star&count=true&size=large"
-				frameborder="0" scrolling="0" width="170" height="30"
+			<iframe src="https://ghbtns.com/github-btn.html?user=Wolfe-Jam&repo=faf-cli&type=star&count=false&size=large"
+				frameborder="0" scrolling="0" width="80" height="30"
 				title="Star Wolfe-Jam/faf-cli on GitHub"></iframe>
 		</div>
 	</section>
@@ -223,17 +224,18 @@
 	.btn-secondary {
 		display: inline-block;
 		padding: 0.75rem 2rem;
-		border: 1px solid var(--faf-light-gray);
-		color: var(--faf-gray);
+		border: 2px solid var(--faf-black);
+		color: var(--faf-black);
+		background: transparent;
 		border-radius: 8px;
 		text-decoration: none;
-		font-weight: 600;
+		font-weight: 700;
 		transition: var(--transition-fast);
 	}
 
 	.btn-secondary:hover {
-		border-color: var(--faf-cyan-dark);
-		color: var(--faf-cyan-dark);
+		background: var(--faf-black);
+		color: var(--faf-white);
 	}
 
 	/* Trust Bar */
