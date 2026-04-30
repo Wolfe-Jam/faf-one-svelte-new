@@ -5,6 +5,25 @@
 
 	const posts = [
 		{
+			slug: 'blog/voice-memory-layer',
+			title: 'xAI gave Grok Voice. We gave Grok memory.',
+			date: 'April 30, 2026',
+			timestamp: '2026-04-30',
+			excerpt: 'The Voice Memory Layer (VML) ships today. grok-faf-voice 0.1.3 — the reference SDK on PyPI. Sibling grok-faf-mcp 1.2.2 also lands on npm as FAST⚡️AF Context. .faf for context. .fafm for memory. Two packages, two scopes, one family.',
+			emoji: '🎙️',
+			category: 'Launch'
+		},
+		{
+			slug: 'blog/sixty-thousand',
+			title: '60,000 Downloads',
+			date: 'April 28, 2026',
+			timestamp: '2026-04-28',
+			excerpt: '60,000+ downloads. 16 packages. 27 days from 50k. The Mar → Apr jump alone is +24k — biggest calendar month on the chart. Same zero marketing budget. The format keeps spreading because the format keeps working.',
+			emoji: '🏆',
+			category: 'Milestone',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/ghostty-inspired-edition',
 			title: 'The Ghostty-Inspired Edition',
 			date: 'April 27, 2026',
