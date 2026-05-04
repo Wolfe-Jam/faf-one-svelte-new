@@ -110,8 +110,7 @@
 			</p>
 
 			<p>
-				Yesterday&rsquo;s post: <a href="/blog/the-grid-drew-itself">none</a>. Yesterday
-				was the architecture. Today is the product.
+				Yesterday was the architecture. Today is the product.
 			</p>
 		</section>
 
@@ -226,11 +225,10 @@
 			</p>
 
 			<p>
-				That makes <code>application/vnd.faf.grid+text</code> a candidate IANA media
-				type &mdash; sister to <code>application/vnd.faf+yaml</code>, the FAF format
-				registered in October. Same author. Same registry. Two levels of recursion:
-				FAF defines stamps; stamps emit a grid; the grid is itself a self-authored
-				format.
+				That makes <code>application/vnd.faf.grid+text</code> a formal IANA
+				media-type candidate &mdash; sister to the already-registered
+				<code>application/vnd.faf+yaml</code>. Same author. Same registry.
+				Two levels of recursion. The format is the moat.
 			</p>
 
 			<p>
@@ -281,9 +279,14 @@
 		<section>
 			<h2>Source</h2>
 
+			<p style="text-align:center;margin:1.5rem 0;">
+				<a class="release-link" href="https://github.com/Wolfe-Jam/faf-mcpaas/releases/tag/v1.5.0" target="_blank" rel="noopener">
+					Full release notes on GitHub &rarr;
+				</a>
+			</p>
+
 			<ul>
-				<li><a href="https://github.com/Wolfe-Jam/faf-mcpaas/releases/tag/v1.5.0" target="_blank" rel="noopener">v1.5.0 release notes on GitHub</a></li>
-				<li><a href="https://github.com/Wolfe-Jam/faf-mcpaas" target="_blank" rel="noopener">Wolfe-Jam/faf-mcpaas</a></li>
+				<li>Repo: <a href="https://github.com/Wolfe-Jam/faf-mcpaas" target="_blank" rel="noopener">Wolfe-Jam/faf-mcpaas</a></li>
 				<li>Architecture: <code>src/grid/sources/npm.ts</code>, <code>src/grid/sources/github.ts</code>, <code>src/grid/views/structure.ts</code></li>
 				<li>Memory: <em>cli-vs-url-migration-pattern</em>, <em>vnd-faf-grid-recursive-self-authoring</em>, <em>faf-truth-printing-applied-to-grid</em></li>
 			</ul>
@@ -506,6 +509,23 @@
 
 	.share-btn:hover {
 		opacity: 0.85;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	.release-link {
+		display: inline-block;
+		padding: 0.7rem 1.5rem;
+		background: #FF6B35;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 600;
+		border-radius: 6px;
+		transition: opacity 0.2s;
+	}
+
+	.release-link:hover {
+		opacity: 0.9;
 		text-decoration: none;
 		color: #fff;
 	}
