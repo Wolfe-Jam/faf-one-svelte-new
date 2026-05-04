@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/the-day-of-the-grid',
+			title: 'The Day of the GRID — Package.json got a UI',
+			date: 'May 4, 2026',
+			timestamp: '2026-05-04',
+			excerpt: 'May the 4th. The GRID at mcpaas.live/grid generalized today. Point it at any npm package or GitHub repo and the same renderer reads the structure. ?npm=react, ?gh=facebook/react. React showed 11/33 slots filled, 22 empty, 1 warn. We don\'t soften that. We print what we see.',
+			emoji: '🌐',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/voice-memory-layer',
 			title: 'xAI gave Grok Voice. We gave Grok memory.',
 			date: 'April 30, 2026',

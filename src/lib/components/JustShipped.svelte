@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The Day of the GRID v1.5.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🌐 mcpaas-cf v1.5.0 — The Day of the GRID</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Package.json got a UI. Point /grid at any npm package or GitHub repo — same renderer reads the structure. /grid?npm=react, /grid?gh=facebook/react. See what's there. See what's not.</p>
+			<a href="/blog/the-day-of-the-grid" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- Extension Edition v5.5.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">
