@@ -3,6 +3,7 @@
 
   <!-- Core Pages -->
   <url><loc>https://faf.one/</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://faf.one/agent</loc><lastmod>2026-05-05</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
   <url><loc>https://faf.one/try</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
   <url><loc>https://faf.one/about</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://faf.one/privacy</loc><lastmod>2026-02-22</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
