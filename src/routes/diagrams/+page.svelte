@@ -65,6 +65,12 @@
 			title: 'FAF Foundation (Light/Print)',
 			description: 'Light mode version for print and white backgrounds',
 			category: 'FAF Core'
+		},
+		{
+			slug: 'og-agent',
+			title: 'FAF Agent — OG Card',
+			description: '1200×630 social card for X, LinkedIn, Discord unfurls of faf.one/agent',
+			category: 'Social/OG'
 		}
 	];
 </script>

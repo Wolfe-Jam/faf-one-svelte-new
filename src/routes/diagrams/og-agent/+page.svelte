@@ -1,0 +1,242 @@
+<svelte:head>
+	<title>FAF Agent — OG Card | FAF Diagrams</title>
+</svelte:head>
+
+<div class="diagram-page">
+	<div class="diagram-header">
+		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<h1>FAF Agent — OG Card</h1>
+		<p>1.91:1 aspect ratio (1200×630px) — for X, LinkedIn, Discord, Slack unfurls of <code>faf.one/agent</code></p>
+	</div>
+
+	<!-- THE OG CARD - Screenshot this area -->
+	<div class="banner-container">
+		<div class="hero-banner">
+			<!-- Top-left brand -->
+			<div class="brand">.faf</div>
+
+			<!-- Top-right version badge -->
+			<div class="version-badge">v0.1.0 · MIT</div>
+
+			<!-- Center hero stack: mark + name + tagline -->
+			<div class="hero-content">
+				<img src="/orange-smiley.svg" alt="FAF" class="logo-mark" />
+				<h2 class="hero-title">FAF Agent</h2>
+				<p class="hero-subtitle">The Voice of FAF 🐘🎙️</p>
+			</div>
+
+			<!-- Bottom-left code snippet (install) -->
+			<div class="code-snippet">
+				<code>pip install faf-agent-mcp</code>
+			</div>
+
+			<!-- Bottom-right CTA (star mission) -->
+			<div class="star-cta">
+				<span class="star-text">⭐ Star on GitHub</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="usage-note">
+		<p><strong>Usage:</strong> Take screenshot of the banner area (1200×630px) for X cards, LinkedIn unfurls, Discord embeds. Save as <code>static/og/agent-og-1200x630.png</code>.</p>
+		<p><strong>Tip:</strong> Use browser zoom 100% to ensure exact 1200×630px output. Target file size &lt;200 KB for WhatsApp compatibility.</p>
+	</div>
+</div>
+
+<style>
+	.diagram-page {
+		min-height: 100vh;
+		background: #f8f9fa;
+		padding: 2rem;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	}
+
+	.diagram-header {
+		max-width: 1200px;
+		margin: 0 auto 2rem auto;
+	}
+
+	.back-link {
+		color: #FF6B35;
+		text-decoration: none;
+		font-size: 0.9rem;
+	}
+
+	.back-link:hover {
+		text-decoration: underline;
+	}
+
+	.diagram-header h1 {
+		font-size: 2rem;
+		margin: 1rem 0 0.5rem 0;
+		color: #000;
+	}
+
+	.diagram-header p code {
+		background: rgba(255, 107, 53, 0.1);
+		color: #FF6B35;
+		padding: 0.15rem 0.4rem;
+		border-radius: 4px;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.85rem;
+	}
+
+	.banner-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		background: white;
+		border-radius: 16px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+		padding: 2rem;
+	}
+
+	/* THE OG CARD - 1200x630px */
+	.hero-banner {
+		width: 1200px;
+		height: 630px;
+		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		position: relative;
+		overflow: hidden;
+		border-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 3rem;
+		box-sizing: border-box;
+	}
+
+	/* Subtle radial glow — apophatic, dialed way down vs voice-api-banner */
+	.hero-banner::after {
+		content: '';
+		position: absolute;
+		top: -30%;
+		left: -30%;
+		width: 160%;
+		height: 160%;
+		background: radial-gradient(circle, rgba(0, 212, 212, 0.06) 0%, transparent 55%);
+		pointer-events: none;
+	}
+
+	/* Top-left brand */
+	.brand {
+		position: absolute;
+		top: 2rem;
+		left: 2.5rem;
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: #FF6B35;
+		letter-spacing: 0.02em;
+		z-index: 10;
+	}
+
+	/* Top-right version badge */
+	.version-badge {
+		position: absolute;
+		top: 2rem;
+		right: 2.5rem;
+		background: linear-gradient(135deg, #00D4D4 0%, #00b8b8 100%);
+		color: #0a0a0a;
+		padding: 0.4rem 1rem;
+		border-radius: 6px;
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		box-shadow: 0 4px 12px rgba(0, 212, 212, 0.25);
+		z-index: 10;
+	}
+
+	/* Hero content (center) */
+	.hero-content {
+		position: relative;
+		z-index: 10;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.logo-mark {
+		width: 280px;
+		height: 280px;
+		display: block;
+		filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.2));
+	}
+
+	.hero-title {
+		font-size: 5rem;
+		font-weight: 800;
+		margin: 0.5rem 0 0;
+		color: #fff;
+		line-height: 1;
+		letter-spacing: -0.02em;
+	}
+
+	.hero-subtitle {
+		font-size: 1.6rem;
+		color: #00D4D4;
+		font-weight: 600;
+		margin: 0;
+		letter-spacing: 0.01em;
+	}
+
+	/* Bottom-left code snippet */
+	.code-snippet {
+		position: absolute;
+		bottom: 2rem;
+		left: 2.5rem;
+		background: rgba(10, 10, 10, 0.9);
+		border: 1px solid #333;
+		border-left: 4px solid #FF6B35;
+		border-radius: 8px;
+		padding: 0.55rem 1.1rem;
+		z-index: 10;
+	}
+
+	.code-snippet code {
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 1rem;
+		color: #FF6B35;
+		font-weight: 600;
+	}
+
+	/* Bottom-right CTA */
+	.star-cta {
+		position: absolute;
+		bottom: 2rem;
+		right: 2.5rem;
+		z-index: 10;
+	}
+
+	.star-text {
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.95rem;
+		color: #FFC857;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+
+	/* Usage note */
+	.usage-note {
+		max-width: 1200px;
+		margin: 2rem auto 0 auto;
+		padding: 1rem;
+		background: #fff3cd;
+		border-left: 4px solid #ffc107;
+		border-radius: 8px;
+		font-size: 0.9rem;
+	}
+
+	.usage-note p {
+		margin: 0.5rem 0;
+	}
+
+	.usage-note code {
+		background: rgba(0, 0, 0, 0.05);
+		padding: 0.1rem 0.4rem;
+		border-radius: 4px;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.85rem;
+	}
+</style>
