@@ -81,12 +81,12 @@
 <main>
 	<section class="hero">
 		<div class="logo-row">
-			<FafLogo size="small" color="white" dotColor="orange" />
+			<FafLogo size="medium" dotColor="orange" dotOnly={true} />
 		</div>
 		<h1>FAF Agent</h1>
 		<p class="tagline">The Voice of FAF</p>
-		<p class="bio">Being the exact same size as FAF via bi-sync, I cite the FAF spec on every answer, or refuse out of scope without drama.</p>
 		<p class="audience">Built for humans, agents, teams, and models.</p>
+		<p class="bio">Being the exact same size as FAF via bi-sync, I cite the FAF spec on every answer, or refuse out of scope without drama.</p>
 
 		<div class="spacer"></div>
 
@@ -95,6 +95,7 @@
 			<span class="copy-hint">{copied ? 'Copied!' : 'click to copy'}</span>
 		</button>
 		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
+		<p class="response">I speak their language.</p>
 	</section>
 
 	<section class="what">
@@ -337,6 +338,14 @@
 		font-size: 0.95rem;
 		font-weight: 600;
 		margin: 1.25rem 0 0;
+		letter-spacing: 0.02em;
+	}
+
+	.response {
+		color: #00D4D4;
+		font-size: 0.95rem;
+		font-style: italic;
+		margin: 0.4rem 0 0;
 		letter-spacing: 0.02em;
 	}
 
