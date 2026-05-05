@@ -225,7 +225,7 @@
 			</p>
 
 			<p>
-				That makes <code>application/vnd.faf.grid+text</code> a formal IANA
+				That makes <code>application/vnd.faf-grid</code> a formal IANA
 				media-type candidate &mdash; sister to the already-registered
 				<code>application/vnd.faf+yaml</code>. Same author. Same registry.
 				Two levels of recursion. The format is the moat.
