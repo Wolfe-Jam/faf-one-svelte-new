@@ -97,7 +97,7 @@ const result = kernel.score(yaml);  // Same interface. Any engine.
 			<div class="terminal-block">
 				<code>bunx bun-sticky bench</code>
 			</div>
-			<p>Benchmark: 100 scores, average time per score. 284 microseconds on a 2017 iMac.</p>
+			<p>Benchmark: 100 scores, average time per score. 284 microseconds on a 2019 iMac.</p>
 
 			<div class="terminal-block">
 				<code>bunx bun-sticky badge</code>
