@@ -57,7 +57,7 @@
 
 <svelte:head>
 	<title>FAF Agent — The Voice of FAF | faf.one</title>
-	<meta name="description" content="The Voice of FAF — narrow-domain MCP server that cites the spec on every answer or refuses out of scope. Built for humans, agents, teams, and models. pip install faf-agent-mcp." />
+	<meta name="description" content="The Voice of FAF — format-grade MCP that cites the spec on every answer or refuses out of scope. Built for humans, agents, teams, and models. pip install faf-agent-mcp." />
 	<link rel="canonical" href="https://faf.one/agent" />
 
 	<meta property="og:type" content="website" />
@@ -103,12 +103,12 @@
 		<p class="section-sub">Six tools. The size of FAF.</p>
 		<div class="grid">
 			<div class="card">
-				<strong>validate_faf</strong>
-				<p>Validate a .faf file (deterministic, WASM kernel)</p>
+				<strong>validate_faf <span class="defer">⌚</span></strong>
+				<p>Schema validation — deferred to v0.2.0; use <code>bunx faf-cli check</code> today</p>
 			</div>
 			<div class="card">
-				<strong>score_faf</strong>
-				<p>Score a .faf file using Mk4 (deterministic, WASM kernel)</p>
+				<strong>score_faf <span class="defer">⌚</span></strong>
+				<p>Mk4 scoring — deferred to v0.2.0; use <code>bunx faf-cli score</code> today</p>
 			</div>
 			<div class="card">
 				<strong>ask</strong>
@@ -127,6 +127,7 @@
 				<p>Read the soul body for a namepoint</p>
 			</div>
 		</div>
+		<p class="defer-note"><span class="defer">⌚</span> marker: v0.1.x returns a structured <code>not_implemented</code> response that points at <code>faf-cli</code>; the Rust/WASM kernel powering faf-cli's same-name commands wires through to this package in v0.2.0.</p>
 	</section>
 
 	<section class="contract">
@@ -394,6 +395,41 @@
 		font-size: 0.9rem;
 		margin: 0.4rem 0 0;
 		line-height: 1.45;
+	}
+
+	.card p code {
+		background: #1a1a1a;
+		color: #FF6B35;
+		padding: 0.05rem 0.35rem;
+		border-radius: 3px;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.85rem;
+	}
+
+	.defer {
+		color: #888;
+		font-size: 0.8rem;
+		font-weight: 400;
+	}
+
+	.defer-note {
+		color: #888;
+		font-size: 0.85rem;
+		line-height: 1.55;
+		margin: 1rem 0 0;
+		padding: 0.75rem 1rem;
+		background: rgba(0, 212, 212, 0.04);
+		border-left: 2px solid #333;
+		border-radius: 4px;
+	}
+
+	.defer-note code {
+		background: #1a1a1a;
+		color: #FF6B35;
+		padding: 0.05rem 0.35rem;
+		border-radius: 3px;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.8rem;
 	}
 
 	.contract-block {
