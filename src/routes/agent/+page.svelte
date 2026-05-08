@@ -17,7 +17,7 @@
 		"alternateName": "FAF Agent",
 		"applicationCategory": "DeveloperApplication",
 		"operatingSystem": "Any (Python 3.10+)",
-		"softwareVersion": "0.1.0",
+		"softwareVersion": "0.1.1",
 		"description": "Narrow-domain MCP server that cites the FAF spec on every answer or refuses out of scope. Six tools, the size of FAF.",
 		"url": "https://faf.one/agent",
 		"downloadUrl": "https://pypi.org/project/faf-agent-mcp/",
@@ -94,6 +94,7 @@
 			<code>pip install faf-agent-mcp</code>
 			<span class="copy-hint">{copied ? 'Copied!' : 'click to copy'}</span>
 		</button>
+		<p class="fam-tag">Join the FAM 🐘</p>
 		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
 		<p class="response">I speak their language.</p>
 	</section>
@@ -208,7 +209,7 @@
 
 	<section class="family">
 		<h2>The FAF Family</h2>
-		<p class="section-sub">One substrate. Three formats. Two architectural layers.</p>
+		<p class="section-sub">One substrate. Four formats. Two architectural layers.</p>
 		<div class="family-grid">
 			<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.faf</div>
@@ -218,12 +219,17 @@
 			<div class="family-card">
 				<div class="family-name">.fafm</div>
 				<div class="family-layer">VML — Voice Memory Layer</div>
-				<div class="family-status">⌚ IANA in progress</div>
+				<div class="family-status">⌚ IANA DE review</div>
 			</div>
 			<div class="family-card">
 				<div class="family-name">.fafb</div>
 				<div class="family-layer">Binary wire format</div>
-				<div class="family-status">⌚ IETF queued</div>
+				<div class="family-status">⌚ Defined, ready</div>
+			</div>
+			<div class="family-card">
+				<div class="family-name">.faf-grid</div>
+				<div class="family-layer">GRID — Diagnostic surface</div>
+				<div class="family-status">⌚ Spec prep</div>
 			</div>
 		</div>
 	</section>
@@ -332,6 +338,14 @@
 
 	.install:hover .copy-hint {
 		color: #888;
+	}
+
+	.fam-tag {
+		color: #FF6B35;
+		font-size: 0.9rem;
+		font-weight: 600;
+		margin: 0.75rem 0 0;
+		letter-spacing: 0.02em;
 	}
 
 	.manifesto {
