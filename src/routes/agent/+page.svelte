@@ -1,13 +1,13 @@
 <script>
 	import FafLogo from '$lib/components/FafLogo.svelte';
 
-	let copied = $state(false);
+	let copiedKey = $state(null);
 	let activeTab = $state('claude');
 
-	function copyCommand() {
-		navigator.clipboard.writeText('pip install faf-agent-mcp');
-		copied = true;
-		setTimeout(() => copied = false, 2000);
+	function copy(key, command) {
+		navigator.clipboard.writeText(command);
+		copiedKey = key;
+		setTimeout(() => copiedKey = null, 2000);
 	}
 
 	const softwareSchema = {
@@ -90,10 +90,22 @@
 
 		<div class="spacer"></div>
 
-		<button class="install" onclick={copyCommand}>
-			<code>pip install faf-agent-mcp</code>
-			<span class="copy-hint">{copied ? 'Copied!' : 'click to copy'}</span>
+		<button class="install" onclick={() => copy('uvx', 'uvx faf-agent-mcp')}>
+			<code>uvx faf-agent-mcp</code>
+			<span class="copy-hint">{copiedKey === 'uvx' ? 'Copied!' : 'click to copy'}</span>
 		</button>
+		<div class="install-alts">
+			<button class="install-alt" onclick={() => copy('pipx', 'pipx install faf-agent-mcp')}>
+				<span class="alt-arrow">↳</span>
+				<code>pipx install faf-agent-mcp</code>
+				<span class="alt-state">{copiedKey === 'pipx' ? '✓ Copied' : 'copy'}</span>
+			</button>
+			<button class="install-alt" onclick={() => copy('pip', 'python3 -m pip install faf-agent-mcp')}>
+				<span class="alt-arrow">↳</span>
+				<code>python3 -m pip install faf-agent-mcp</code>
+				<span class="alt-state">{copiedKey === 'pip' ? '✓ Copied' : 'copy'}</span>
+			</button>
+		</div>
 		<p class="fam-tag">Join the FAM 🐘</p>
 		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
 		<p class="response">I speak their language.</p>
@@ -337,6 +349,58 @@
 	}
 
 	.install:hover .copy-hint {
+		color: #888;
+	}
+
+	.install-alts {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		margin: 0.85rem 0 0;
+		align-items: center;
+	}
+
+	.install-alt {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		background: transparent;
+		border: 1px dashed #2a2a2a;
+		border-radius: 6px;
+		padding: 0.35rem 0.85rem;
+		color: #888;
+		font-size: 0.8rem;
+		cursor: pointer;
+		font-family: inherit;
+		transition: all 0.2s;
+	}
+
+	.install-alt:hover {
+		border-color: #444;
+		border-style: solid;
+		color: #ccc;
+	}
+
+	.install-alt code {
+		color: #FF6B35;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.85rem;
+		background: none;
+		padding: 0;
+	}
+
+	.alt-arrow {
+		color: #555;
+		font-size: 0.9rem;
+	}
+
+	.alt-state {
+		color: #555;
+		font-size: 0.7rem;
+		letter-spacing: 0.03em;
+	}
+
+	.install-alt:hover .alt-state {
 		color: #888;
 	}
 
