@@ -16,7 +16,7 @@
 			<div class="brand">.faf</div>
 
 			<!-- Top-right version badge -->
-			<div class="version-badge">v0.1.0 · MIT</div>
+			<div class="version-badge">v0.1.1 · MIT</div>
 
 			<!-- Center hero stack: mark + name + tagline -->
 			<div class="hero-content">
@@ -27,7 +27,7 @@
 
 			<!-- Bottom-left code snippet (install) -->
 			<div class="code-snippet">
-				<code>pip install faf-agent-mcp</code>
+				<code>uvx faf-agent-mcp</code>
 			</div>
 
 			<!-- Bottom-right CTA (star mission) -->

@@ -57,7 +57,7 @@
 
 <svelte:head>
 	<title>FAF Agent — The Voice of FAF | faf.one</title>
-	<meta name="description" content="The Voice of FAF — format-grade MCP that cites the spec on every answer or refuses out of scope. Built for humans, agents, teams, and models. pip install faf-agent-mcp." />
+	<meta name="description" content="The Voice of FAF — format-grade MCP that cites the spec on every answer or refuses out of scope. Built for humans, agents, teams, and models. uvx faf-agent-mcp." />
 	<link rel="canonical" href="https://faf.one/agent" />
 
 	<meta property="og:type" content="website" />
@@ -165,7 +165,7 @@
 		<h2>Quickstart</h2>
 		<div class="qs-step">
 			<h3>1. Install</h3>
-			<div class="code-block"><code>pip install faf-agent-mcp</code></div>
+			<div class="code-block"><code>uvx faf-agent-mcp</code></div>
 		</div>
 		<div class="qs-step">
 			<h3>2. Add to your MCP client</h3>
