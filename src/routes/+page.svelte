@@ -39,6 +39,9 @@
 				{copied ? 'Copied!' : 'Copy'}
 			</button>
 		</div>
+		<p class="hero-cta-text">
+			Want FAF? <a href="/agent" class="hero-cta-link">Talk to my Agent →</a>
+		</p>
 		<div class="hero-ctas">
 			<a href="https://github.com/Wolfe-Jam/faf-cli" class="btn-primary" target="_blank" rel="noopener">Get Started</a>
 			<a href="/blog" class="btn-secondary">Blog</a>
@@ -192,6 +195,25 @@
 	.copy-btn:hover {
 		color: var(--faf-cyan-dark);
 		background: rgba(0, 212, 212, 0.05);
+	}
+
+	.hero-cta-text {
+		font-size: 0.95rem;
+		color: var(--faf-gray);
+		margin: -0.5rem 0 1.75rem;
+		letter-spacing: 0.01em;
+	}
+
+	.hero-cta-link {
+		color: var(--faf-cyan-dark);
+		text-decoration: none;
+		font-weight: 500;
+		transition: var(--transition-fast);
+	}
+
+	.hero-cta-link:hover {
+		color: var(--faf-black);
+		text-decoration: underline;
 	}
 
 	.hero-ctas {
