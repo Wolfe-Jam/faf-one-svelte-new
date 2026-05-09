@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/glass-hood-edition',
+			title: 'The Glass-Hood Edition',
+			date: 'May 9, 2026',
+			timestamp: '2026-05-09',
+			excerpt: 'When faf-cli classifies your project, it tells you why. A YAML comment next to type: reveals the evidence — package.json bin, build.zig, pyproject.toml. Read the rationale, agree or disagree. No opaque hood — you can see the engine bay.',
+			emoji: '🔍',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/the-day-of-the-grid',
 			title: 'The Day of the GRID — Package.json got a UI',
 			date: 'May 4, 2026',
