@@ -94,6 +94,15 @@
 			<code>uvx faf-agent-mcp</code>
 			<span class="copy-hint">{copiedKey === 'uvx' ? 'Copied!' : 'click to copy'}</span>
 		</button>
+		<a
+			href="https://docs.astral.sh/uv/getting-started/installation/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="install-help"
+		>
+			don't have uv? <span class="install-help-arrow">install it in 5 seconds →</span>
+		</a>
+		<div class="install-or"><span>or</span></div>
 		<div class="install-alts">
 			<button class="install-alt" onclick={() => copy('pipx', 'pipx install faf-agent-mcp')}>
 				<span class="alt-arrow">↳</span>
@@ -352,11 +361,52 @@
 		color: #888;
 	}
 
+	.install-help {
+		display: inline-block;
+		margin: 0.65rem 0 0;
+		font-size: 0.78rem;
+		color: #666;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	.install-help:hover {
+		color: #00D4D4;
+	}
+
+	.install-help-arrow {
+		color: #888;
+	}
+
+	.install-help:hover .install-help-arrow {
+		color: #00D4D4;
+	}
+
+	.install-or {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		margin: 0.85rem auto 0;
+		max-width: 200px;
+		color: #555;
+		font-size: 0.7rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.install-or::before,
+	.install-or::after {
+		content: '';
+		flex: 1;
+		height: 1px;
+		background: #222;
+	}
+
 	.install-alts {
 		display: flex;
 		flex-direction: column;
 		gap: 0.4rem;
-		margin: 0.85rem 0 0;
+		margin: 0.5rem 0 0;
 		align-items: center;
 	}
 
