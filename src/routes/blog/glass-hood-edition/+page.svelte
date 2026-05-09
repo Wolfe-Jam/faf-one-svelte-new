@@ -109,10 +109,18 @@ type: monorepo-root  # found: pnpm-workspace.yaml + 18 packages/`}</code></pre>
 			</ul>
 		</section>
 
+		<section class="patch-trail">
+			<h2>Patch Trail</h2>
+			<ul>
+				<li><code>v6.5.1</code> &middot; May 9, 2026 &middot; Edition metadata correction.</li>
+				<li><code>v6.5.0</code> &middot; May 8, 2026 &middot; Initial Glass-Hood ship &mdash; <code>#&nbsp;found:</code> rationale on type detection.</li>
+			</ul>
+		</section>
+
 		<section class="share">
 			<a
 				class="share-x"
-				href="https://twitter.com/intent/tweet?text=The%20Glass-Hood%20Edition%20%E2%80%94%20faf-cli%20v6.5.1.%20The%20cli%20shows%20its%20work.&url=https%3A%2F%2Ffaf.one%2Fblog%2Fglass-hood-edition"
+				href="https://twitter.com/intent/tweet?text=The%20Glass-Hood%20Edition%20%E2%80%94%20The%20cli%20shows%20its%20work.&url=https%3A%2F%2Ffaf.one%2Fblog%2Fglass-hood-edition"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -277,6 +285,49 @@ type: monorepo-root  # found: pnpm-workspace.yaml + 18 packages/`}</code></pre>
 		background: none;
 		padding: 0;
 		color: inherit;
+	}
+
+	.patch-trail {
+		margin-top: 3rem;
+		padding: 1.5rem;
+		background: #f8f8f8;
+		border-radius: 8px;
+		border-left: 4px solid #00B8B8;
+	}
+
+	.patch-trail h2 {
+		font-size: 1.2rem;
+		margin: 0 0 1rem 0;
+		border-bottom: none;
+		padding-bottom: 0;
+		color: #333;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	.patch-trail ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.9rem;
+	}
+
+	.patch-trail li {
+		padding: 0.4rem 0;
+		border-bottom: 1px dashed #ddd;
+		color: #555;
+	}
+
+	.patch-trail li:last-child {
+		border-bottom: none;
+	}
+
+	.patch-trail code {
+		background: none;
+		padding: 0;
+		color: #FF6B35;
+		font-weight: 600;
 	}
 
 	.share {
