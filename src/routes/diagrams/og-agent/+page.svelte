@@ -15,8 +15,8 @@
 			<!-- Top-left brand -->
 			<div class="brand">.faf</div>
 
-			<!-- Top-right version badge -->
-			<div class="version-badge">v0.1.1 · MIT</div>
+			<!-- Top-right family mark (no edition numbers on OG cards — they're forever-assets) -->
+			<div class="family-mark">🐘🎙️</div>
 
 			<!-- Center hero stack: mark + name + tagline -->
 			<div class="hero-content">
@@ -130,20 +130,12 @@
 		z-index: 10;
 	}
 
-	/* Top-right version badge */
-	.version-badge {
+	/* Top-right family mark (forever-asset — no version numbers) */
+	.family-mark {
 		position: absolute;
 		top: 2rem;
 		right: 2.5rem;
-		background: linear-gradient(135deg, #00D4D4 0%, #00b8b8 100%);
-		color: #0a0a0a;
-		padding: 0.4rem 1rem;
-		border-radius: 6px;
-		font-size: 0.85rem;
-		font-weight: 700;
-		letter-spacing: 0.5px;
-		font-family: 'SF Mono', 'Fira Code', monospace;
-		box-shadow: 0 4px 12px rgba(0, 212, 212, 0.25);
+		font-size: 1.5rem;
 		z-index: 10;
 	}
 
