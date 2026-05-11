@@ -18,7 +18,7 @@
 		"applicationCategory": "DeveloperApplication",
 		"operatingSystem": "Any (Python 3.10+)",
 		"softwareVersion": "0.1.1",
-		"description": "Narrow-domain MCP server that cites the FAF spec on every answer or refuses out of scope. Six tools, the size of FAF.",
+		"description": "Format-grade MCP that cites the FAF spec on every answer or refuses out of scope. Six tools, the size of FAF.",
 		"url": "https://faf.one/agent",
 		"downloadUrl": "https://pypi.org/project/faf-agent-mcp/",
 		"license": "https://opensource.org/licenses/MIT",
