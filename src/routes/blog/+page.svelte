@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/trophy-edition',
+			title: 'The Trophy Edition',
+			date: 'May 11, 2026',
+			timestamp: '2026-05-11',
+			excerpt: 'Until now we had 85% as a recommended minimum. It\'s now 100. All or nothing. AI gets its best shot at assisting you. v6.6 adds the 20th app-type (about — owner-attested representation) and flips the recommendation: 🏆 Trophy only.',
+			emoji: '🏆',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/glass-hood-edition',
 			title: 'The Glass-Hood Edition',
 			date: 'May 9, 2026',

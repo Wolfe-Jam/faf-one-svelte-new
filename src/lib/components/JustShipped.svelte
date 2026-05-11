@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The Trophy Edition v6.6.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🏆 faf-cli v6.6.0 — The Trophy Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Until now we had 85% as a recommended minimum. It's now 100. All or nothing. AI gets its best shot at assisting you. v6.6 adds the 20th app-type — about — and flips the recommendation: 🏆 Trophy only.</p>
+			<a href="/blog/trophy-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- The Day of the GRID v1.5.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">
