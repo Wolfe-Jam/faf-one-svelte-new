@@ -196,6 +196,13 @@ Layer 1   .faf (FCL)          ← 🏆 Trophy = complete = foundation`}</code></
 			<p>FAF defines. MD instructs. AI codes. <strong>FAF don't lie.</strong></p>
 		</section>
 
+		<section class="patch-trail">
+			<h2>Patch Trail</h2>
+			<ul>
+				<li><strong>Plugin v6.6.0</strong> &middot; May 11, 2026 &middot; Claude Code plugin rebuild lands &mdash; sharp + elegant discovery surface for faf-cli. Install: <code>/plugin marketplace add Wolfe-Jam/faf-cli</code>, then <code>/faf</code>.</li>
+			</ul>
+		</section>
+
 		<section class="footer-note">
 			<p>Built with <code>.faf</code> &check; <code>v6.6.0</code> &mdash; The Trophy Edition. 🏎️</p>
 		</section>
@@ -388,9 +395,38 @@ Layer 1   .faf (FCL)          ← 🏆 Trophy = complete = foundation`}</code></
 		font-size: 0.85em;
 	}
 
-	.footer-note {
+	.patch-trail {
 		margin-top: 4rem;
 		padding-top: 2rem;
+		border-top: 1px dashed #ccc;
+		font-size: 0.95rem;
+		color: #555;
+	}
+
+	.patch-trail h2 {
+		font-size: 1.1rem;
+		margin: 0 0 1rem 0;
+		color: #666;
+		border-bottom: none;
+		padding-bottom: 0;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.patch-trail ul {
+		margin-left: 0;
+		list-style: none;
+	}
+
+	.patch-trail li {
+		padding: 0.5rem 0;
+		border-left: 2px solid #FF6B35;
+		padding-left: 1rem;
+	}
+
+	.footer-note {
+		margin-top: 2rem;
+		padding-top: 1.5rem;
 		border-top: 1px solid #eee;
 		font-size: 0.95rem;
 		color: #666;
