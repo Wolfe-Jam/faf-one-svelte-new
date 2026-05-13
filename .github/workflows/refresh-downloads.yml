@@ -1,0 +1,38 @@
+name: Refresh Download Counts
+
+on:
+  schedule:
+    # Daily at 09:00 UTC (matches end-of-day for US, start-of-day for EU)
+    - cron: '0 9 * * *'
+  workflow_dispatch:  # Manual trigger button in GH Actions UI
+
+permissions:
+  contents: write  # Required to commit + push updated packages.ts
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    name: Refresh packages.ts from live registries
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch live counts and update packages.ts
+        run: node scripts/refresh-downloads.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet src/lib/data/packages.ts; then
+            echo "No changes — counts unchanged or all APIs flat"
+            exit 0
+          fi
+          git config user.name "faf-download-bot"
+          git config user.email "noreply@faf.one"
+          git add src/lib/data/packages.ts
+          git commit -m "chore: refresh download counts (daily auto-update)"
+          git push
