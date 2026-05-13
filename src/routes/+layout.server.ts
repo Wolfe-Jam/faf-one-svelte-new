@@ -1,28 +1,15 @@
-const NPM_PACKAGES = ['faf-cli', 'claude-faf-mcp', 'faf-mcp', 'bun-sticky', 'wjttc', 'grok-faf-mcp', 'faf-wasm-sdk', 'faf-wasm', 'bun-sticky-faf'];
+import { grandTotal, formatTotal } from '$lib/data/packages';
 
-// PyPI + crates.io: API doesn't give reliable all-time, so we set a known floor
-// and let npm (which auto-updates) pull the total up. Update these periodically.
-// Last verified: 2026-03-27
-const PYPI_FLOOR = 6_670;   // gemini-faf-mcp + faf-python-sdk
-const CRATES_FLOOR = 441;   // faf-rust-sdk + rust-faf-mcp + faf + faf-radio-rust + mcpaas
+// Header banner downloads counter reads from the SAME source of truth
+// as the /downloads page (src/lib/data/packages.ts). One source, two
+// surfaces, no divergence. Numbers refresh via:
+//   • /downloads skill (manual: `/downloads` in this repo)
+//   • scripts/refresh-downloads.mjs (auto: daily GH Action)
+//
+// Previously this file did its own live npm fetch + hardcoded PyPI/crates
+// floors. That diverged from /downloads page numbers (the floors went
+// stale) and undercounted by ~15k. Rewired 2026-05-12.
 
-export async function load({ fetch }) {
-	let npmTotal = 0;
-
-	await Promise.all(NPM_PACKAGES.map(async (pkg) => {
-		try {
-			const res = await fetch(`https://api.npmjs.org/downloads/point/2000-01-01:2099-12-31/${pkg}`);
-			const data = await res.json();
-			npmTotal += data.downloads || 0;
-		} catch {
-			// silent fail
-		}
-	}));
-
-	const grandTotal = npmTotal + PYPI_FLOOR + CRATES_FLOOR;
-
-	// Round down to nearest thousand
-	const displayK = grandTotal > 0 ? Math.floor(grandTotal / 1000) : 45;
-
-	return { downloadCount: `${displayK}k+` };
+export function load() {
+	return { downloadCount: formatTotal(grandTotal) };
 }
