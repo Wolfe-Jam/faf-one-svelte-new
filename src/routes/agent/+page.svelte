@@ -124,7 +124,7 @@
 		<h2>Chat to FAFA. In FAF-Voice.</h2>
 		<p class="section-sub">Type or Talk &mdash; FAFA cites the spec or refuses out of scope.</p>
 		<a
-			href="https://direct-xai.vercel.app/agent"
+			href="https://faf-voice.vercel.app/agent"
 			class="chat-cta"
 			target="_blank"
 			rel="noopener noreferrer"
@@ -132,7 +132,7 @@
 			Chat to FAFA
 			<span class="chat-cta-arrow">&rarr;</span>
 		</a>
-		<p class="chat-host">direct-xai.vercel.app/agent</p>
+		<p class="chat-host">faf-voice.vercel.app/agent</p>
 		<p class="chat-note">
 			Default model: Grok. User-definable per
 			<a href="https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf" target="_blank" rel="noopener noreferrer">project.faf</a>.

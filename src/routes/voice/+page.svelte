@@ -46,8 +46,8 @@
 	<section class="content cta-section">
 		<h2>Try it</h2>
 		<p>The multi-model voice frontend uses VML for its memory layer. Speak to Leo, switch models, your facts persist.</p>
-		<a class="cta" href="https://direct-xai.vercel.app" target="_blank" rel="noopener">
-			Live demo at direct-xai.vercel.app →
+		<a class="cta" href="https://faf-voice.vercel.app" target="_blank" rel="noopener">
+			Live demo at faf-voice.vercel.app →
 		</a>
 	</section>
 
