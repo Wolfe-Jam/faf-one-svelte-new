@@ -120,6 +120,25 @@
 		<p class="response">I speak their language.</p>
 	</section>
 
+	<section class="chat">
+		<h2>Chat to FAFA. In FAF-Voice.</h2>
+		<p class="section-sub">Type or Talk &mdash; FAFA cites the spec or refuses out of scope.</p>
+		<a
+			href="https://direct-xai.vercel.app/agent"
+			class="chat-cta"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Chat to FAFA
+			<span class="chat-cta-arrow">&rarr;</span>
+		</a>
+		<p class="chat-host">direct-xai.vercel.app/agent</p>
+		<p class="chat-note">
+			Default model: Grok. User-definable per
+			<a href="https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf" target="_blank" rel="noopener noreferrer">project.faf</a>.
+		</p>
+	</section>
+
 	<section class="what">
 		<h2>What it does</h2>
 		<p class="section-sub">Six tools. The size of FAF.</p>
@@ -491,12 +510,62 @@
 		margin: 0 0 1.5rem;
 	}
 
+	.chat,
 	.what,
 	.contract,
 	.quickstart,
 	.family,
 	.resources {
 		margin-bottom: 4rem;
+	}
+
+	.chat {
+		text-align: center;
+	}
+
+	.chat-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.95rem 1.75rem;
+		background: #FF6B35;
+		color: #000;
+		border-radius: 10px;
+		font-weight: 700;
+		font-size: 1.05rem;
+		text-decoration: none;
+		transition: transform 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.chat-cta:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 6px 16px rgba(255, 107, 53, 0.35);
+	}
+
+	.chat-cta-arrow {
+		font-size: 1.15rem;
+	}
+
+	.chat-host {
+		margin: 0.75rem 0 0;
+		color: #888;
+		font-size: 0.85rem;
+		font-family: 'SF Mono', 'Fira Code', monospace;
+	}
+
+	.chat-note {
+		margin: 0.5rem 0 0;
+		color: #888;
+		font-size: 0.85rem;
+	}
+
+	.chat-note a {
+		color: #FF6B35;
+		text-decoration: none;
+	}
+
+	.chat-note a:hover {
+		text-decoration: underline;
 	}
 
 	.grid {
