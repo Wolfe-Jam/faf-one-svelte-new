@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-04-04</p>
+			<p class="last-updated">Last Updated: 2026-05-13</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
@@ -47,8 +47,13 @@
 				<div class="links-grid">
 					<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IANA Registration</span>
-						<span class="link-desc">application/vnd.faf+yaml</span>
+						<span class="link-desc">application/vnd.faf+yaml — Foundational Context Layer</span>
 						<span class="link-stat">Oct 30, 2025</span>
+					</a>
+					<a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">IANA Registration</span>
+						<span class="link-desc">application/vnd.fafm+yaml — Voice Memory Layer (VML)</span>
+						<span class="link-stat status-live">☑️ May 13, 2026</span>
 					</a>
 					<a href="https://mailarchive.ietf.org/arch/msg/media-types/4m9epGYthb2NukVyWCFEYLEiLD0/" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IETF Mail Archive</span>
