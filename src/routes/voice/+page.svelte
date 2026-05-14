@@ -39,7 +39,7 @@
 			<li><strong>On PyPI</strong> — <code>grok-faf-voice</code> v0.2.2</li>
 			<li><strong>LiveKit-enabled</strong> — cascaded pipeline, drop-in</li>
 			<li><strong>Sessionless MCP transport</strong> — talks to <code>mcpaas.live</code> via X-MCP-Mode: flexi</li>
-			<li><strong>FAF-powered</strong> — memories stored as <code>.fafm</code>, IANA-tracked format family</li>
+			<li><strong>FAFm-powered</strong> — memories stored as <a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" target="_blank" rel="noopener"><code>application/vnd.fafm+yaml</code></a>, IANA-registered May 13, 2026</li>
 		</ul>
 	</section>
 
@@ -53,7 +53,7 @@
 
 	<section class="content footer-section">
 		<p class="footer-tagline">FAF defines. VML remembers.</p>
-		<p class="footer-iana">Python SDK · LiveKit · xAI Grok · mcpaas.live</p>
+		<p class="footer-iana">IANA-registered: <a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" target="_blank" rel="noopener"><code>application/vnd.fafm+yaml</code></a> · 2026-05-13</p>
 	</section>
 
 </main>
