@@ -43,6 +43,10 @@
 		</div>
 	</header>
 
+	<div class="hero-image">
+		<img src="/blog/grok-grows-up-hero.png" alt="Grok Grows Up v1.3.0 — Dorothy Faff at center surrounded by xAI Grok, Vercel, Cloudflare, GitHub, and npm logos, with Trophy in the corner" />
+	</div>
+
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
@@ -192,6 +196,19 @@
 		margin: 0 auto;
 		padding: 2rem 1.5rem 4rem;
 		color: #333;
+	}
+
+	.hero-image {
+		margin: 0 -0.5rem 2.5rem -0.5rem;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.post-header {
