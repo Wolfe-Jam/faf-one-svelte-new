@@ -181,6 +181,10 @@
 			<p>FAF defines. Grok consumes. <strong>Receipts compound.</strong></p>
 		</section>
 
+		<section class="share-section">
+			<a href="https://twitter.com/intent/tweet?text={encodeURIComponent('@grok 🍊 grok-faf-mcp v1.3.0 ships — the first MCP for Grok grew up. 5 surfaces, real measurement (137 µs/score), identity restored.')}&url=https://faf.one/blog/grok-grows-up" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		</section>
+
 		<section class="footer-note">
 			<p>Built with .faf ☑️ <code>v1.3.0</code> — Grok Grows Up. 🏎️</p>
 		</section>
@@ -381,6 +385,28 @@
 
 	.receipts strong {
 		color: #000;
+	}
+
+	.share-section {
+		text-align: center;
+		padding: 2rem 0 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.share-btn {
+		display: inline-block;
+		padding: 0.7rem 1.5rem;
+		background: #111;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.95rem;
+		transition: background 0.2s;
+	}
+
+	.share-btn:hover {
+		background: #FF6B35;
 	}
 
 	.footer-note {
