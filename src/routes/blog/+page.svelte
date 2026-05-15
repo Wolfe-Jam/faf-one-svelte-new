@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/grok-grows-up',
+			title: 'Grok Grows Up',
+			date: 'May 14, 2026',
+			timestamp: '2026-05-14',
+			excerpt: 'grok-faf-mcp v1.3.0 ships as the hallmark online MCP. Identity restored across the stdio path. Comparison framing scrubbed. Server-card enriched. The "3,800% faster" claim — invented, retired — replaced with measured 137 µs/score, methodology disclosed. Four production surfaces live.',
+			emoji: '🍊',
+			category: 'Grok'
+		},
+		{
 			slug: 'blog/trophy-edition',
 			title: 'The Trophy Edition',
 			date: 'May 11, 2026',
