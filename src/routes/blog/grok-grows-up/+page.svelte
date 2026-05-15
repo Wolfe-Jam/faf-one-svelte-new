@@ -35,7 +35,7 @@
 
 		<h1>Grok Grows Up</h1>
 		<p class="version-tag">grok-faf-mcp v1.3.0</p>
-		<p class="subtitle">A teenager in AI versions. Identity restored, real numbers, four surfaces.</p>
+		<p class="subtitle">A teenager in AI versions. Identity restored, real numbers, five surfaces.</p>
 		<div class="meta">
 			<time datetime="2026-05-14">May 14, 2026</time>
 			<span class="separator">•</span>
@@ -50,7 +50,7 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> grok-faf-mcp v1.3.0 ships as the hallmark online MCP. Identity restored across the stdio path. Comparison framing scrubbed from the wire and page. Server-card enriched for MCP-client discovery. The "3,800% faster" claim — invented, retired — replaced with measured 137 µs/score, methodology disclosed. Four production surfaces live, all serving the same artifact.
+				<strong>TL;DR:</strong> grok-faf-mcp v1.3.0 ships as the hallmark online MCP. Identity restored across the stdio path. Comparison framing scrubbed from the wire and page. Server-card enriched for MCP-client discovery. The "3,800% faster" claim — invented, retired — replaced with measured 137 µs/score, methodology disclosed. Five production surfaces live, all serving the same artifact.
 			</p>
 		</section>
 
@@ -123,18 +123,19 @@
 		</section>
 
 		<section>
-			<h2>Four Surfaces, One Artifact</h2>
+			<h2>Five Surfaces, One Artifact</h2>
 
-			<p>v1.3.0 closes the ZEPH-pattern surface play. The first MCP for Grok now lives on four production-facing surfaces, all derived from the same source:</p>
+			<p>v1.3.0 closes the ZEPH-pattern surface play. The first MCP for Grok now lives on five production-facing surfaces, all derived from the same source:</p>
 
 			<ul class="receipts">
+				<li><strong>npm</strong> — <code>grok-faf-mcp v1.3.0</code> (the distribution surface — <code>npx grok-faf-mcp</code> works anywhere)</li>
 				<li><strong>grok-faf-mcp.vercel.app</strong> — Vercel canonical (MCP wire: <code>/sse</code>, <code>/health</code>, <code>/info</code>)</li>
 				<li><strong>wolfe-jam.github.io/grok-faf-mcp/</strong> — GitHub Pages mirror (static)</li>
 				<li><strong>faf.one/grok</strong> — discovery page (SvelteKit route)</li>
 				<li><strong>grok.faf.one</strong> — Cloudflare Worker canonical (CF edge)</li>
 			</ul>
 
-			<p>Plus the registry surfaces: npm, MCP Registry, GitHub Release. Eight production touchpoints in total. One artifact, eight consumers.</p>
+			<p>Plus the registry/release surfaces: MCP Registry, GitHub Release, GitHub repo. Eight production touchpoints in total. One artifact, eight consumers.</p>
 		</section>
 
 		<section>
@@ -162,7 +163,7 @@
 				<li><strong>🏆 Trophy 100%</strong> — project.faf (15/15 slots)</li>
 				<li><strong>137 µs/score · 7,279 ops/sec</strong> — Mk4 WASM kernel, p50, 2019 iMac</li>
 				<li><strong>314.5 kB</strong> npm tarball, 197 files</li>
-				<li><strong>4 production surfaces</strong> live (matching the ZEPH pattern)</li>
+				<li><strong>5 production surfaces</strong> live (matching the ZEPH pattern)</li>
 			</ul>
 		</section>
 
@@ -173,7 +174,7 @@
 				<li><strong>First MCP for Grok</strong> — origin credential (vendor-axis), falsifiable by publish timestamps</li>
 				<li><strong>First FAF MCP online</strong> — origin credential (medium-axis), preceded the rest of the FAF MCP family</li>
 				<li><strong>IANA-registered</strong> — <code>application/vnd.faf+yaml</code> + <code>application/vnd.fafm+yaml</code></li>
-				<li><strong>MCP Registry</strong> — <code>io.github.Wolfe-Jam/grok-faf-mcp@1.3.0</code></li>
+				<li><strong>MCP Registry</strong> — <code>io.github.Wolfe-Jam/grok-faf-mcp</code> v1.3.0</li>
 				<li><strong>FAF Ecosystem #2759</strong> — Five Fingers, the MCP family arc</li>
 			</ul>
 
