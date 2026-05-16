@@ -31,3 +31,13 @@ test-n8n-workflows/
 src/routes/drift/
 src/routes/sponsors/
 static/welcome.html
+
+# Loose screenshots / scratch images in repo root (static/ and src/ assets stay tracked)
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+/*.webp
+
+# Backup files
+*.bak
