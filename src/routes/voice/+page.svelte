@@ -49,6 +49,7 @@
 		<a class="cta" href="https://faf-voice.vercel.app/agent" target="_blank" rel="noopener">
 			Talk to FAFA →
 		</a>
+		<p class="cta-sub">FAF Agent is called FAFA (rhymes with RAFA).</p>
 	</section>
 
 	<section class="content footer-section">
@@ -149,6 +150,12 @@
 
 	.cta:hover {
 		transform: translateY(-1px);
+	}
+
+	.cta-sub {
+		font-size: 0.85rem;
+		color: var(--faf-gray);
+		margin-top: 0.6rem;
 	}
 
 	.footer-section {
