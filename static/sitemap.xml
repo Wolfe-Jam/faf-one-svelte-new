@@ -55,6 +55,7 @@
   <url><loc>https://faf.one/ecosystem</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://faf.one/mcp</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://faf.one/mcpaas</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://faf.one/voice</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://faf.one/v4</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://faf.one/docs</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://faf.one/chrome</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -70,7 +71,7 @@
   <!-- Tools & Utilities -->
   <url><loc>https://faf.one/sync</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://faf.one/updates</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://faf.one/links</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://faf.one/links</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://faf.one/support</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://faf.one/survival</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://faf.one/uniqueness</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
