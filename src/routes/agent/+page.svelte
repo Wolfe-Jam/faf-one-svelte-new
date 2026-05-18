@@ -115,6 +115,14 @@
 				<span class="alt-state">{copiedKey === 'pip' ? '✓ Copied' : 'copy'}</span>
 			</button>
 		</div>
+		<a
+			href="https://faf-voice.vercel.app/agent"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="install-help"
+		>
+			already set up? <span class="install-help-arrow">chat to FAFA live →</span>
+		</a>
 		<p class="fam-tag">Join the FAM 🐘</p>
 		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
 		<p class="response">I speak their language.</p>
