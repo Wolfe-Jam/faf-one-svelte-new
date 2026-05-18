@@ -553,6 +553,23 @@
 
 	.hero-cta {
 		margin-top: 1.25rem;
+		padding: 0.55rem 1.15rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		background: #00D4D4;
+		color: #000;
+		border: 1px solid #00D4D4;
+	}
+
+	.hero-cta:hover {
+		background: #fff;
+		color: #000;
+		border-color: #fff;
+		box-shadow: 0 4px 14px rgba(0, 212, 212, 0.3);
+	}
+
+	.hero-cta .chat-cta-arrow {
+		font-size: 1rem;
 	}
 
 	.chat-cta-arrow {
