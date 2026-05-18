@@ -64,7 +64,7 @@
 
 			<pre><code>{`FAF defines.   MD instructs.   AI codes.   HTML shows.`}</code></pre>
 
-			<p>The first three are <em>told</em>. README explains in prose, <code>.faf</code> declares in YAML, the AI executes. But a design isn't described &mdash; it's <strong>seen</strong>. HTML is the one render target the whole world already has. <code>project.html</code> introduces nothing to register: no mime-type, no IANA application, no new format. It is a <em>view</em>, not a member. A "show-me" for <code>.faf</code>.</p>
+			<p>The first three are <em>told</em>. README explains in prose, <code>.faf</code> declares in YAML, the AI executes. But a design isn't described &mdash; it's <strong>seen</strong>. HTML is the one render target the whole world already has. <code>project.html</code> introduces the "show-me" for <code>.faf</code>.</p>
 		</section>
 
 		<section>
@@ -187,7 +187,8 @@ Be precise, get great code.`}</code></pre>
 			<p>None of this is a brand promise &mdash; it's measurement.</p>
 
 			<ul>
-				<li><strong>IANA-registered:</strong> <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener"><code>application/vnd.faf+yaml</code></a> &mdash; registered 2025-10-30</li>
+				<li><strong>IANA-registered:</strong> <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener"><code>application/vnd.faf+yaml</code></a> (context) &mdash; registered 2025-10-30</li>
+				<li><strong>IANA-registered:</strong> <a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" target="_blank" rel="noopener"><code>application/vnd.fafm+yaml</code></a> (memory) &mdash; registered 2026-05-13</li>
 				<li><strong>Anthropic-listed:</strong> claude-faf-mcp shipped as <em>"Persistent Project Context Server"</em> in <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener">modelcontextprotocol/servers PR #2759</a></li>
 				<li><strong>MCP Registry:</strong> FAF Ecosystem #2759</li>
 				<li><strong>Single-sourced:</strong> tier colours from one <code>FAF_HEX</code> record &mdash; <code>tiers.ts</code> (ANSI) and <code>project.html</code> (hex) both derive from it. Bronze is now deep cyan <code>#0E8C8C</code>, distinct from Silver.</li>
