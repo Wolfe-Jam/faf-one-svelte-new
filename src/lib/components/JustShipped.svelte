@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The HTML Edition v6.7.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🏎️ faf-cli v6.7.0 — The HTML Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">We rendered a .faf. The day we saw FAF. faf show renders project.faf → project.html, on-demand, for human and team review. The 4th pillar: FAF defines. MD instructs. AI codes. HTML shows.</p>
+			<a href="/blog/html-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- The Trophy Edition v6.6.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">

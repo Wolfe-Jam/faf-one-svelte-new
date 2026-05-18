@@ -5,6 +5,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/html-edition',
+			title: 'The HTML Edition',
+			date: 'May 17, 2026',
+			timestamp: '2026-05-17',
+			excerpt: 'We rendered a .faf. The day we saw FAF. faf show renders project.faf → project.html, on-demand, for human and team review. The 4th pillar: FAF defines. MD instructs. AI codes. HTML shows. FAF became a team event — with a Pit Crew.',
+			emoji: '🏎️',
+			category: 'Release',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/grok-grows-up',
 			title: 'Grok Grows Up',
 			date: 'May 14, 2026',
