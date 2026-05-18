@@ -119,9 +119,10 @@
 			href="https://faf-voice.vercel.app/agent"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="install-help"
+			class="chat-cta hero-cta"
 		>
-			already set up? <span class="install-help-arrow">chat to FAFA live →</span>
+			Chat to FAFA live
+			<span class="chat-cta-arrow">&rarr;</span>
 		</a>
 		<p class="fam-tag">Join the FAM 🐘</p>
 		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
@@ -548,6 +549,10 @@
 	.chat-cta:hover {
 		transform: translateY(-1px);
 		box-shadow: 0 6px 16px rgba(255, 107, 53, 0.35);
+	}
+
+	.hero-cta {
+		margin-top: 1.25rem;
 	}
 
 	.chat-cta-arrow {
