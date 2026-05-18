@@ -92,6 +92,18 @@
 Be precise, get great code.`}</code></pre>
 
 			<p>Take a stale <code>project.faf</code> &mdash; empty 6 W's, empty stack &mdash; and it renders ○ RED. Fill those slots with the project's real context and the <em>same</em> render climbs to 🏆 Trophy. Same project, same FAF, same <code>faf show</code> &mdash; an incomplete <code>.faf</code> made complete. Not a conversion story. A precision story.</p>
+
+			<figure class="before-after">
+				<div class="ba-item">
+					<img src="/blog/html-edition-before.png" alt="faf show rendering a stale project.faf — empty 6 W's and stack — as RED 38 percent." />
+					<figcaption><strong>Before</strong> &mdash; a stale <code>project.faf</code> (empty 6 W's &amp; stack) renders ○ RED 38%</figcaption>
+				</div>
+				<div class="ba-item">
+					<img src="/blog/html-edition-after.png" alt="faf show rendering the same project.faf, completed, as TROPHY 100 percent with the All Required slots filled award line." />
+					<figcaption><strong>After</strong> &mdash; the <em>same</em> <code>.faf</code>, completed: 🏆 Trophy 100%</figcaption>
+				</div>
+				<figcaption class="ba-note">Same project, same <code>faf show</code>. The "after" is a faithful demonstration of a completed <code>.faf</code> &mdash; not a live-repo claim.</figcaption>
+			</figure>
 		</section>
 
 		<section>
@@ -461,6 +473,44 @@ Be precise, get great code.`}</code></pre>
 	}
 	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
+
+	.before-after {
+		margin: 1.5rem 0 2rem;
+	}
+	.before-after .ba-item {
+		display: grid;
+		gap: 0.5rem;
+		margin-bottom: 1.25rem;
+	}
+	.before-after img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border: 1px solid #333;
+		border-radius: 8px;
+	}
+	.before-after figcaption {
+		font-size: 0.9rem;
+		color: #aaa;
+	}
+	.before-after .ba-note {
+		font-size: 0.85rem;
+		color: #999;
+		font-style: italic;
+		margin-top: 0.5rem;
+		text-align: center;
+	}
+
+	@media (min-width: 720px) {
+		.before-after {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.25rem;
+		}
+		.before-after .ba-note {
+			grid-column: 1 / -1;
+		}
+	}
 
 	@media (max-width: 768px) {
 		h1 {
