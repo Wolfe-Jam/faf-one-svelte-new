@@ -108,9 +108,17 @@ for (const [reg, m] of Object.entries(counts)) {
 	runningTotal += subtotal;
 }
 
+// Per-fetch failure tolerance: updateSection() already skips null entries,
+// so existing packages.ts values are preserved automatically for any single
+// fetch that failed. Only abort if EVERY fetch failed (real outage signal),
+// not for transient blips on individual external APIs.
+const totalAttempts = NPM.length + PYPI.length + CRATES.length;
+const successes = totalAttempts - failures;
 if (failures > 0) {
-	console.error(`\n${failures} fetch failure(s) — aborting to avoid partial/stale write.`);
-	console.error('(Existing packages.ts numbers preserved; next cron run will retry.)');
+	console.warn(`\n⚠ ${failures}/${totalAttempts} fetch(es) failed — keeping existing packages.ts values for those (no partial garbage).`);
+}
+if (successes === 0) {
+	console.error('\nAll fetches failed — likely network/outage. Aborting; will retry next cron.');
 	process.exit(1);
 }
 
