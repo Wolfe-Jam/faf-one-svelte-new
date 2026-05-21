@@ -56,8 +56,28 @@ Use this palette for warning/solution flows throughout faf.one.
 - **Tagline Style**: White, bold, underlined for maximum impact
 - **Tagline Alignment**: Can be left-aligned or right-aligned, but NEVER centered
 
-## Blog Post Rules — MANDATORY
-1. **Every blog post MUST include `:global(body) { background: #FEFCF8; }` in its `<style>` block** (light theme) or `:global(body) { background: #0a0a0a; }` (dark theme). Without this, SvelteKit client-side navigation from a dark post to a light post leaves the wrong background color, making text unreadable. This is a known SvelteKit/Vite bug. No exceptions.
+## Theming Rules — MANDATORY (updated 2026-05-21)
+
+**The theme system lives in `src/app.css`.** `:root` defines brand vars; `[data-theme="dark"]` redefines them; `body { background: var(--faf-cream); color: var(--faf-dark); }` is set globally. The `WolfejamGizmo` toggle in `+layout.svelte` flips `data-theme` on `<html>` and the whole site responds — **but only for pages that use brand vars, not literal hex colors.**
+
+### Page-level rules
+
+1. **Default = theme-aware. Use brand vars, NOT literal colors.**
+   - Backgrounds: `var(--faf-white)` (cards), `var(--faf-cream)` (page surface), `var(--faf-light-gray)` (borders).
+   - Text: `var(--faf-dark)` (body), `var(--faf-gray)` (muted), `var(--faf-black)` (emphasis).
+   - Brand accents that stay constant across themes: `var(--faf-orange)`, `var(--faf-orange-dark)`, `var(--faf-cyan-text)`, `var(--faf-green)`.
+   - Hard literals like `#fff` / `#000` / `white` / `#FEFCF8` / `#0a0a0a` defeat the toggle and create unreadable mismatches when users switch theme — **don't use them** unless the element is deliberately theme-locked (terminal-look boxes, brand CTAs with intentional `color: white` on orange, etc.).
+
+2. **Theme-locked pages (when intentional)** — e.g., a page designed dark-only for visual effect — declare:
+   ```svelte
+   :global(body) { background: var(--faf-cream); color: var(--faf-dark); }
+   ```
+   for light-locked, or the dark equivalent. **Never with `!important`** — that creates a cascade tug-of-war during client-side navigation between two `!important`-locked pages, producing the white-on-white / black-on-black flash. The plain rule replaces cleanly on unmount.
+
+3. **Old rule retired (was at this position pre-2026-05-21):** *"Every blog post MUST include `:global(body) { background: #FEFCF8 !important; }`"* — that doctrine WAS the source of the flicker (per-page `!important` body bgs wrestling during nav). Existing blog posts using it still work, but new pages should follow rules 1 and 2 above. Migrate when convenient; never add new `!important` body backgrounds.
+
+### Blog Post Rules — MANDATORY
+1. Blog posts pick light-locked or dark-locked per design intent, following rule 2 above (no `!important`).
 2. Every blog post MUST have OG meta tags (`og:title`, `og:description`, `twitter:card`) in `<svelte:head>` for proper X card previews.
 3. Every blog post MUST have an X share button (web intent format).
 
