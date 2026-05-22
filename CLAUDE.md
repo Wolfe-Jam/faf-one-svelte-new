@@ -76,6 +76,8 @@ Use this palette for warning/solution flows throughout faf.one.
 
 3. **Old rule retired (was at this position pre-2026-05-21):** *"Every blog post MUST include `:global(body) { background: #FEFCF8 !important; }`"* — that doctrine WAS the source of the flicker (per-page `!important` body bgs wrestling during nav). Existing blog posts using it still work, but new pages should follow rules 1 and 2 above. Migrate when convenient; never add new `!important` body backgrounds.
 
+4. **Locked-dark layout elements (intentional, do NOT convert):** the `+layout.svelte` **announcement banner** (`.official-banner` + `.banner-section` + the metallic shimmer gradient `#5a5a5a → #3c4e60 → #1a1a1a → …`) is **deliberately dark in both themes** — it's a brand announcement bar designed to sit dark above any page below it, like Apple's nav. The 13 literal colors in the layout's style block are intentional design, not theming bugs. **Do not "fix" them.** If a future audit flags them, note: confirmed locked-dark by wolfejam 2026-05-22.
+
 ### Blog Post Rules — MANDATORY
 1. Blog posts pick light-locked or dark-locked per design intent, following rule 2 above (no `!important`).
 2. Every blog post MUST have OG meta tags (`og:title`, `og:description`, `twitter:card`) in `<svelte:head>` for proper X card previews.

@@ -74,6 +74,10 @@
 		}
 	} */
 
+	/* LOCKED-DARK by design (wolfejam 2026-05-22) — banner stays
+	   dark over any page below it, regardless of theme toggle. Do
+	   NOT convert these literals to brand vars. See CLAUDE.md
+	   "Theming Rules" §4 for the intent. */
 	.official-banner {
 		background: #0a0a0a;
 		backdrop-filter: blur(10px);
