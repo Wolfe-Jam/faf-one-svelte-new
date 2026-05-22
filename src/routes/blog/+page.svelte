@@ -986,7 +986,7 @@
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: #666;
+		color: var(--faf-gray);
 		margin-bottom: 3rem;
 		font-weight: 500;
 	}
@@ -1084,14 +1084,14 @@
 	}
 
 	.post-excerpt {
-		color: #666;
+		color: var(--faf-gray);
 		line-height: 1.5;
 		margin: 0 0 0.75rem;
 		font-size: 0.9rem;
 	}
 
 	.post-date {
-		color: #888;
+		color: var(--faf-gray);
 		font-size: 0.9rem;
 		font-style: italic;
 	}
@@ -1116,7 +1116,7 @@
 		border-radius: 6px;
 		font-size: 0.8rem;
 		font-weight: 600;
-		color: #999;
+		color: var(--faf-gray);
 		cursor: pointer;
 		transition: all 0.2s;
 		text-transform: uppercase;
@@ -1130,7 +1130,7 @@
 
 	.post-count {
 		font-size: 0.8rem;
-		color: #999;
+		color: var(--faf-gray);
 		margin-left: auto;
 	}
 
@@ -1171,7 +1171,7 @@
 	.list-date {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.8rem;
-		color: #999;
+		color: var(--faf-gray);
 		flex-shrink: 0;
 		width: 6.5rem;
 	}
@@ -1186,7 +1186,7 @@
 	.list-title {
 		flex: 1;
 		font-weight: 600;
-		color: #111;
+		color: var(--faf-dark);
 		font-size: 0.95rem;
 		white-space: nowrap;
 		overflow: hidden;
@@ -1234,7 +1234,7 @@
 	.archive-note {
 		text-align: center;
 		padding: 2rem;
-		color: #888;
+		color: var(--faf-gray);
 		font-style: italic;
 	}
 
