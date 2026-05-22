@@ -298,6 +298,11 @@
 						<span class="link-name">faf.one</span>
 						<span class="link-desc">Official FAF website</span>
 					</a>
+					<a href="https://memory.faf.one" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">memory.faf.one</span>
+						<span class="link-desc">Nelly Never Forgets — portable AI memory</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
 					<a href="https://radiofaf.com" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">radiofaf.com</span>
 						<span class="link-desc">Don't follow. Tune in.</span>
@@ -484,6 +489,11 @@
 						<span class="link-name">gemini-faf-mcp</span>
 						<span class="link-desc">Gemini MCP server (PyPI)</span>
 						<span class="link-stat">v1.1.0</span>
+					</a>
+					<a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">claude-fafm-sdk</span>
+						<span class="link-desc">Portable .fafm AI memory (PyPI)</span>
+						<span class="link-stat status-live">☑️ v0.1.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-python-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>

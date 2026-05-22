@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" shape-rendering="crispEdges">
+  <!-- Nelly — pixel-elephant favicon (faf-cli banner mark), FAF orange -->
+  <g transform="translate(-8,16)" fill="#FF6B35">
+    <rect x="16" y="32" width="16" height="96"/>   <!-- trunk -->
+    <rect x="48" y="0" width="64" height="16"/>    <!-- head dome -->
+    <rect x="32" y="16" width="112" height="16"/>
+    <rect x="32" y="32" width="128" height="16"/>
+    <rect x="32" y="48" width="128" height="16"/>
+    <rect x="32" y="64" width="128" height="16"/>
+    <rect x="32" y="80" width="128" height="16"/>  <!-- body bottom -->
+    <rect x="48" y="96" width="32" height="16"/>   <!-- legs -->
+    <rect x="96" y="96" width="32" height="16"/>
+    <rect x="144" y="96" width="16" height="16"/>
+    <rect x="48" y="112" width="32" height="16"/>
+    <rect x="96" y="112" width="32" height="16"/>
+    <rect x="144" y="112" width="16" height="16"/>
+  </g>
+  <rect transform="translate(-8,16)" x="48" y="32" width="16" height="16" fill="#ffffff"/> <!-- eye -->
+</svg>
