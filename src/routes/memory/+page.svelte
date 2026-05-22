@@ -119,6 +119,16 @@
 		margin-bottom: 1rem;
 	}
 
+	/* Links = dark-cyan (never blue — unreadable on dark). CTA stays orange/white. */
+	.content p a {
+		color: var(--faf-cyan-dark);
+		text-decoration: underline;
+	}
+
+	.content p a:hover {
+		color: var(--faf-cyan);
+	}
+
 	.receipts {
 		list-style: none;
 		padding: 0;
