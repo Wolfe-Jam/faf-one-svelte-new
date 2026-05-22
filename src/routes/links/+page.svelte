@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-05-13</p>
+			<p class="last-updated">Last Updated: 2026-05-22</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
@@ -71,8 +71,13 @@
 					</a>
 					<a href="https://doi.org/10.5281/zenodo.18251362" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">CERN/Zenodo Paper</span>
-						<span class="link-desc">Format-Driven AI Context Architecture</span>
+						<span class="link-desc">Format-Driven AI Context Architecture (.faf)</span>
 						<span class="link-stat">DOI: 10.5281/zenodo.18251362</span>
+					</a>
+					<a href="https://doi.org/10.5281/zenodo.20348942" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">CERN/Zenodo Paper</span>
+						<span class="link-desc">Voice Memory Layer (.fafm)</span>
+						<span class="link-stat status-live">☑️ DOI: 10.5281/zenodo.20348942</span>
 					</a>
 				</div>
 			</div>
