@@ -298,7 +298,13 @@
 </main>
 
 <style>
-	:global(body) { background: #0a0a0a !important; color: #eee; }
+	/* /agent is INTENTIONALLY DARK in both themes (carefully tuned
+	   dark visual hierarchy across 87 dark-spectrum literals below;
+	   not a candidate for theme-aware conversion). Plain rule, NOT
+	   `!important` — stops the cascade tug-of-war during client-side
+	   navigation between this dark-locked page and light-themed
+	   pages. See CLAUDE.md Theming Rules §2 and §4. */
+	:global(body) { background: #0a0a0a; color: #eee; }
 
 	main {
 		max-width: 720px;
