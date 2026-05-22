@@ -955,7 +955,7 @@
 
 	.blog {
 		padding: 3rem 0;
-		background: white;
+		background: var(--faf-white);
 		min-height: 80vh;
 	}
 
@@ -998,10 +998,10 @@
 	}
 
 	.post-card {
-		background: #f9f9f9;
+		background: var(--faf-light-gray);
 		padding: 1.25rem 1.5rem;
 		border-radius: 12px;
-		border: 1px solid #e0e0e0;
+		border: 1px solid var(--faf-light-gray);
 		border-left: 4px solid var(--faf-orange);
 		text-decoration: none;
 		color: inherit;
@@ -1047,7 +1047,7 @@
 	}
 
 	.post-card[href*="the-missing-format"] .post-category {
-		background: #00bf63;
+		background: var(--faf-green);
 	}
 
 	.post-card[href*="faf-hits-10k"] .post-category {
@@ -1148,16 +1148,16 @@
 		padding: 0.75rem 1rem;
 		text-decoration: none;
 		color: inherit;
-		border-bottom: 2px solid #f0f0f0;
+		border-bottom: 2px solid var(--faf-light-gray);
 		transition: background 0.15s;
 	}
 
 	.list-row:first-child {
-		border-top: 2px solid #f0f0f0;
+		border-top: 2px solid var(--faf-light-gray);
 	}
 
 	.list-row:hover {
-		background: #fafafa;
+		background: var(--faf-cream);
 	}
 
 	.list-dot {
