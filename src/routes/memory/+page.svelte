@@ -32,6 +32,12 @@
 	</section>
 
 	<section class="content">
+		<h2>Two profiles, one format</h2>
+		<p><strong>Voice — the Voice Memory Layer (VML).</strong> The original <code>.fafm</code> profile: durable memory for voice agents, so the assistant remembers you across calls. Reference: <a href="https://pypi.org/project/grok-faf-voice/" target="_blank" rel="noopener">grok-faf-voice</a>.</p>
+		<p><strong>Knowledge.</strong> Typed, cross-linked memory for agent runtimes like Claude Code. Reference: <a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">claude-fafm-sdk</a>.</p>
+	</section>
+
+	<section class="content">
 		<h2>Why it exists</h2>
 		<p>Every AI session starts from zero, and what memory exists is trapped in one vendor's walled garden. <code>.fafm</code> is a plain, open, versionable file your agent's memory lives in — readable by Grok, Claude, and Gemini alike. One format, never a fork.</p>
 	</section>
