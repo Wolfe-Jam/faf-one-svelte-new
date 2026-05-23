@@ -263,7 +263,7 @@
 			<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.faf</div>
 				<div class="family-layer">FCL — Foundational Context Layer</div>
-				<div class="family-status">☑️ IANA registered</div>
+				<div class="family-status">✅ IANA registered</div>
 			</a>
 			<div class="family-card">
 				<div class="family-name">.fafm</div>
@@ -335,7 +335,7 @@
 
 	.tagline {
 		font-size: 1.2rem;
-		color: #00D4D4;
+		color: #00ffff;
 		font-weight: 600;
 		margin: 0.25rem 0 1.25rem;
 	}
@@ -349,7 +349,7 @@
 	}
 
 	.audience {
-		color: #888;
+		color: #eee;
 		font-size: 0.95rem;
 		font-style: italic;
 		margin: 0.25rem 0 0;
@@ -374,7 +374,7 @@
 	}
 
 	.install:hover {
-		border-color: #555;
+		border-color: #eee;
 	}
 
 	.install code {
@@ -386,34 +386,34 @@
 	}
 
 	.copy-hint {
-		font-size: 0.75rem;
-		color: #555;
+		font-size: 0.85rem;
+		color: #eee;
 		transition: color 0.2s;
 	}
 
 	.install:hover .copy-hint {
-		color: #888;
+		color: #eee;
 	}
 
 	.install-help {
 		display: inline-block;
 		margin: 0.65rem 0 0;
-		font-size: 0.78rem;
-		color: #666;
+		font-size: 0.85rem;
+		color: #eee;
 		text-decoration: none;
 		transition: color 0.2s;
 	}
 
 	.install-help:hover {
-		color: #00D4D4;
+		color: #00ffff;
 	}
 
 	.install-help-arrow {
-		color: #888;
+		color: #eee;
 	}
 
 	.install-help:hover .install-help-arrow {
-		color: #00D4D4;
+		color: #00ffff;
 	}
 
 	.install-or {
@@ -422,8 +422,8 @@
 		gap: 0.6rem;
 		margin: 0.85rem auto 0;
 		max-width: 200px;
-		color: #555;
-		font-size: 0.7rem;
+		color: #eee;
+		font-size: 0.85rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
@@ -452,7 +452,7 @@
 		border: 1px dashed #2a2a2a;
 		border-radius: 6px;
 		padding: 0.35rem 0.85rem;
-		color: #888;
+		color: #eee;
 		font-size: 0.8rem;
 		cursor: pointer;
 		font-family: inherit;
@@ -474,18 +474,18 @@
 	}
 
 	.alt-arrow {
-		color: #555;
+		color: #eee;
 		font-size: 0.9rem;
 	}
 
 	.alt-state {
-		color: #555;
-		font-size: 0.7rem;
+		color: #eee;
+		font-size: 0.85rem;
 		letter-spacing: 0.03em;
 	}
 
 	.install-alt:hover .alt-state {
-		color: #888;
+		color: #eee;
 	}
 
 	.fam-tag {
@@ -505,7 +505,7 @@
 	}
 
 	.response {
-		color: #00D4D4;
+		color: #00ffff;
 		font-size: 0.95rem;
 		font-style: italic;
 		margin: 0.4rem 0 0;
@@ -520,7 +520,7 @@
 	}
 
 	.section-sub {
-		color: #888;
+		color: #eee;
 		font-size: 0.95rem;
 		margin: 0 0 1.5rem;
 	}
@@ -562,9 +562,9 @@
 		padding: 0.55rem 1.15rem;
 		font-size: 0.9rem;
 		font-weight: 600;
-		background: #00D4D4;
+		background: #00ffff;
 		color: #000;
-		border: 1px solid #00D4D4;
+		border: 1px solid #00ffff;
 	}
 
 	.hero-cta:hover {
@@ -584,14 +584,14 @@
 
 	.chat-host {
 		margin: 0.75rem 0 0;
-		color: #888;
+		color: #eee;
 		font-size: 0.85rem;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 	}
 
 	.chat-note {
 		margin: 0.5rem 0 0;
-		color: #888;
+		color: #eee;
 		font-size: 0.85rem;
 	}
 
@@ -618,7 +618,7 @@
 	}
 
 	.card strong {
-		color: #00D4D4;
+		color: #00ffff;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 		font-size: 0.95rem;
 	}
@@ -640,13 +640,13 @@
 	}
 
 	.defer {
-		color: #888;
+		color: #eee;
 		font-size: 0.8rem;
 		font-weight: 400;
 	}
 
 	.defer-note {
-		color: #888;
+		color: #eee;
 		font-size: 0.85rem;
 		line-height: 1.55;
 		margin: 1rem 0 0;
@@ -681,7 +681,7 @@
 	}
 
 	.contract-block .attribution {
-		color: #888;
+		color: #eee;
 		font-size: 0.85rem;
 		margin: 0;
 		font-style: italic;
@@ -712,12 +712,12 @@
 	}
 
 	.refusals strong {
-		color: #00D4D4;
+		color: #00ffff;
 		font-weight: 600;
 	}
 
 	.refusals em {
-		color: #aaa;
+		color: #eee;
 		font-style: italic;
 	}
 
@@ -746,25 +746,25 @@
 		border-radius: 6px;
 		font-size: 0.9rem;
 		font-weight: 600;
-		color: #aaa;
+		color: #eee;
 		cursor: pointer;
 		font-family: inherit;
 		transition: all 0.2s;
 	}
 
 	.tab:hover {
-		border-color: #00D4D4;
-		color: #00D4D4;
+		border-color: #00ffff;
+		color: #00ffff;
 	}
 
 	.tab.active {
-		background: #00D4D4;
-		border-color: #00D4D4;
+		background: #00ffff;
+		border-color: #00ffff;
 		color: #0a0a0a;
 	}
 
 	.tab-note {
-		color: #aaa;
+		color: #eee;
 		font-size: 0.85rem;
 		margin: 0 0 0.5rem;
 	}
@@ -811,7 +811,7 @@
 	}
 
 	.env-list code {
-		color: #00D4D4;
+		color: #00ffff;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 		font-size: 0.9rem;
 	}
@@ -838,7 +838,7 @@
 	}
 
 	a.family-card:hover {
-		border-color: #00D4D4;
+		border-color: #00ffff;
 	}
 
 	.family-name {
@@ -856,7 +856,7 @@
 	}
 
 	.family-status {
-		color: #888;
+		color: #eee;
 		font-size: 0.85rem;
 	}
 
@@ -881,7 +881,7 @@
 	}
 
 	.resource-list a:hover {
-		color: #00D4D4;
+		color: #00ffff;
 	}
 
 	@media (max-width: 600px) {
