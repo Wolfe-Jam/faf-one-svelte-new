@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/zero-config-memory',
+			title: 'Zero-Config Memory',
+			date: 'May 23, 2026',
+			timestamp: '2026-05-23',
+			excerpt: 'claude-fafm-sdk v0.3.0: just push — a namepoint auto-provisions and your .fafm soul goes live, cross-vendor, with no claim page and no key to copy. The whole document round-trips, so ids, types, and priorities survive intact.',
+			emoji: '🐘',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/permanent-memory-instant-recall',
 			title: 'Permanent Memory. Instant Recall.',
 			date: 'May 22, 2026',
