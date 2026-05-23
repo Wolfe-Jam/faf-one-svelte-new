@@ -152,7 +152,7 @@
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
-		color: #333;
+		color: var(--faf-dark);
 	}
 
 	.post-header {
@@ -164,7 +164,7 @@
 	.breadcrumb {
 		font-size: 0.9rem;
 		margin-bottom: 1rem;
-		color: #666;
+		color: var(--faf-gray);
 	}
 
 	.breadcrumb a {
@@ -179,7 +179,7 @@
 	h1 {
 		font-size: 2.2rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: var(--faf-dark);
 		line-height: 1.3;
 	}
 
@@ -197,7 +197,7 @@
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: #666;
+		color: var(--faf-gray);
 		margin: 0.5rem 0 1rem 0;
 	}
 
@@ -206,11 +206,11 @@
 		align-items: center;
 		gap: 0.5rem;
 		font-size: 0.9rem;
-		color: #666;
+		color: var(--faf-gray);
 	}
 
 	.separator {
-		color: #ccc;
+		color: var(--faf-light-gray);
 	}
 
 	.category {
@@ -231,6 +231,7 @@
 		margin-bottom: 2rem;
 		padding: 1.5rem;
 		background: #fff5f0;
+		color: #1a1a1a; /* bg is locked light (peach); text MUST also be locked dark, otherwise inherits var(--faf-dark) which flips to light text on light bg in dark theme */
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -238,8 +239,8 @@
 	h2 {
 		font-size: 1.8rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
-		border-bottom: 1px solid #eee;
+		color: var(--faf-dark);
+		border-bottom: 1px solid var(--faf-light-gray);
 		padding-bottom: 0.5rem;
 	}
 
@@ -257,7 +258,7 @@
 
 	code {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
-		background: #f0f0f0;
+		background: var(--faf-gray-light);
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.9em;
@@ -292,7 +293,7 @@
 		padding-top: 2rem;
 		border-top: 1px solid #eee;
 		font-size: 0.95rem;
-		color: #666;
+		color: var(--faf-gray);
 		text-align: center;
 	}
 
