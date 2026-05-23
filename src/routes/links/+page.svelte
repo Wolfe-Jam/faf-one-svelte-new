@@ -114,10 +114,6 @@
 						<span class="link-name">faf-taf-git</span>
 						<span class="link-desc">Git-native receipt printer (TAF)</span>
 					</a>
-					<a href="https://github.com/Wolfe-Jam/FAF-Voice" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">FAF-Voice</span>
-						<span class="link-desc">Multi-voice AI crews (xAI Grok)</span>
-					</a>
 				</div>
 			</div>
 		</div>
@@ -347,10 +343,6 @@
 						<span class="link-desc">npm package</span>
 						<span class="link-stat">v1.1.0</span>
 					</a>
-					<a href="https://github.com/Wolfe-Jam/wjttc" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">wjttc</span>
-						<span class="link-desc">GitHub repo + Action</span>
-					</a>
 					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2FWJTTC/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">WJTTC</span>
 						<span class="link-desc">MCP Registry</span>
@@ -373,18 +365,6 @@
 					<a href="https://github.com/Wolfe-Jam/xai-cookbook" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">xai-cookbook</span>
 						<span class="link-desc">xAI Grok API examples</span>
-					</a>
-					<a href="https://github.com/Wolfe-Jam/xai-faf-zig" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">xai-faf-zig</span>
-						<span class="link-desc">Zig-native FAF for Grok</span>
-					</a>
-					<a href="https://github.com/Wolfe-Jam/xai-wasm-sdk" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">xai-wasm-sdk</span>
-						<span class="link-desc">Rust WASM for browser FAF</span>
-					</a>
-					<a href="https://github.com/Wolfe-Jam/xai-mcp-server" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">xai-mcp-server</span>
-						<span class="link-desc">Rust MCP Server for FAF</span>
 					</a>
 				</div>
 			</div>
@@ -449,25 +429,10 @@
 			<div class="card highlight-card">
 				<h2>📻 Radio SDKs (FM Protocol)</h2>
 				<div class="links-grid">
-					<a href="https://github.com/Wolfe-Jam/faf-radio-bun" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">faf-radio-bun</span>
-						<span class="link-desc">Bun/TypeScript radio client</span>
-						<span class="link-stat">19/19 tests</span>
-					</a>
 					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-rust</span>
 						<span class="link-desc">Rust radio client (crates.io)</span>
 						<span class="link-stat">46/46 tests</span>
-					</a>
-					<a href="https://github.com/Wolfe-Jam/faf-radio-zig" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">faf-radio-zig</span>
-						<span class="link-desc">Zig WASM radio client</span>
-						<span class="link-stat">2.7KB</span>
-					</a>
-					<a href="https://github.com/Wolfe-Jam/mcpaas-beacon" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">mcpaas-beacon</span>
-						<span class="link-desc">Beacon server (Durable Objects)</span>
-						<span class="link-stat">103/103 tests</span>
 					</a>
 				</div>
 			</div>
@@ -546,17 +511,9 @@
 			<div class="card">
 				<h2>⚡ Zig</h2>
 				<div class="links-grid">
-					<a href="https://github.com/Wolfe-Jam/faf-zig" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">faf-zig</span>
-						<span class="link-desc">High-performance FAF CLI in Zig</span>
-					</a>
 					<a href="https://github.com/Wolfe-Jam/bun-sticky-zig" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">bun-sticky-zig</span>
 						<span class="link-desc">Zig-native FAF CLI</span>
-					</a>
-					<a href="https://github.com/Wolfe-Jam/bun-sticky-zig-plus" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">bun-sticky-zig-plus</span>
-						<span class="link-desc">Premium Zig-native FAF CLI</span>
 					</a>
 				</div>
 			</div>
