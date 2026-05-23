@@ -228,6 +228,21 @@
 						<span class="link-desc">v1.2.1</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fgemini-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">gemini-faf-mcp</span>
+						<span class="link-desc">v2.1.2</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fgrok-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">grok-faf-mcp</span>
+						<span class="link-desc">v1.3.1</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Frust-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rust-faf-mcp</span>
+						<span class="link-desc">v0.2.2</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
 				</div>
 			</div>
 		</div>
