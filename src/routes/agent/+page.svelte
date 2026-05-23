@@ -388,11 +388,12 @@
 	}
 
 	.copy-hint {
-		/* Distinct button chip — not text that extends the command.
-		   Cyan brand color (the other brand half), black text on top
-		   (rule 2 default: opposite high contrast on a colored button bg). */
-		background: #00ffff;
-		color: #000;
+		/* Named exception #2 (install-CTA chip): black bg + cyan text +
+		   cyan border. Clearly chip-shaped action button distinct from
+		   the orange command text. See CLAUDE.md Theming Rules §2. */
+		background: #000;
+		color: #00ffff;
+		border: 1px solid #00ffff;
 		padding: 0.3rem 0.7rem;
 		border-radius: 4px;
 		font-size: 0.85rem;
@@ -492,9 +493,10 @@
 	}
 
 	.alt-state {
-		/* Distinct button chip, matches .copy-hint pattern (cyan + black). */
-		background: #00ffff;
-		color: #000;
+		/* Matches .copy-hint chip — named exception #2 (install-CTA pattern). */
+		background: #000;
+		color: #00ffff;
+		border: 1px solid #00ffff;
 		padding: 0.25rem 0.6rem;
 		border-radius: 4px;
 		font-size: 0.85rem;
