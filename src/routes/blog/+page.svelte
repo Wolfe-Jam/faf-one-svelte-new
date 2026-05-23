@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/permanent-memory-instant-recall',
+			title: 'Permanent Memory. Instant Recall.',
+			date: 'May 22, 2026',
+			timestamp: '2026-05-22',
+			excerpt: '.fafm — portable, cross-vendor AI memory in one IANA-registered format — is live. Two profiles: voice (grok-faf-voice v0.3.2) + knowledge (claude-fafm-sdk v0.1.1), both on PyPI and cross-linked. memory.faf.one is up. Companion paper on Zenodo (10.5281/zenodo.20348942).',
+			emoji: '🐘',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/html-edition',
 			title: 'The HTML Edition',
 			date: 'May 17, 2026',
