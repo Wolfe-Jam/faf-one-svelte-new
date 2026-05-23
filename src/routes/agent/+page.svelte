@@ -388,12 +388,13 @@
 	}
 
 	.copy-hint {
-		/* Named exception #2 (install-CTA chip): black bg + cyan text +
-		   cyan border. Clearly chip-shaped action button distinct from
-		   the orange command text. See CLAUDE.md Theming Rules §2. */
+		/* White chip — rule 2 default (black bg -> white text). Cyan
+		   chip overpowered the orange command (which IS the content
+		   being copied); white subordinates the action to the content.
+		   Action affordance < content it acts upon. */
 		background: #000;
-		color: #00ffff;
-		border: 1px solid #00ffff;
+		color: #fff;
+		border: 1px solid #fff;
 		padding: 0.3rem 0.7rem;
 		border-radius: 4px;
 		font-size: 0.85rem;
@@ -493,10 +494,10 @@
 	}
 
 	.alt-state {
-		/* Matches .copy-hint chip — named exception #2 (install-CTA pattern). */
+		/* Matches .copy-hint white chip — rule 2 default. */
 		background: #000;
-		color: #00ffff;
-		border: 1px solid #00ffff;
+		color: #fff;
+		border: 1px solid #fff;
 		padding: 0.25rem 0.6rem;
 		border-radius: 4px;
 		font-size: 0.85rem;
