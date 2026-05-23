@@ -124,7 +124,7 @@
 			Chat to FAFA live
 			<span class="chat-cta-arrow">&rarr;</span>
 		</a>
-		<p class="fam-tag">Join the FAM 🐘</p>
+		<a class="fam-tag" href="https://mcpaas.live/claim" target="_blank" rel="noopener">Join the FAM 🐘 →</a>
 		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
 		<p class="response">I speak their language.</p>
 	</section>
@@ -511,11 +511,21 @@
 	}
 
 	.fam-tag {
+		/* Link to mcpaas.live/claim — farms namepoint claims off the FAM-CTA */
 		color: #FF6B35;
 		font-size: 0.9rem;
 		font-weight: 600;
 		margin: 0.75rem 0 0;
 		letter-spacing: 0.02em;
+		text-decoration: none;
+		display: inline-block;
+		transition: text-shadow 0.2s;
+	}
+
+	.fam-tag:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-color: #FF6B35;
 	}
 
 	.manifesto {
