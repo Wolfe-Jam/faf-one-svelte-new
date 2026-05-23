@@ -6,7 +6,8 @@
 	--faf-cyan: #00ffff;         /* AI-Happy/Tech 🩵 */
 	--faf-cyan-dark: #00d4d4;    /* Darker cyan for dark backgrounds */
 	--faf-cyan-text: #009999;    /* Readable cyan on light/white backgrounds */
-	--faf-green: #00bf63;        /* FAF Success/Safety 💚 */
+	--faf-green: #00BC61;        /* FAF Foundation Green — canonical (wolfejam 2026-05-23) */
+	--faf-green-hover: #14D075;  /* FAF Foundation Green hover/lighter variant */
 	
 	/* Foundation Colors */
 	--faf-cream: #FEFCF8;        /* Background warmth (NEVER pure white) */
