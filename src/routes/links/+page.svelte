@@ -273,11 +273,6 @@
 						<span class="link-desc">PR #1612</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://github.com/appcypher/awesome-mcp-servers/pull/208" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">appcypher/awesome-mcp</span>
-						<span class="link-desc">PR #208 - Needs Review</span>
-						<span class="link-stat status-pending">⏳ OPEN</span>
-					</a>
 					<a href="https://github.com/rohitg00/awesome-devops-mcp-servers/pull/20" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rohitg00/awesome-devops</span>
 						<span class="link-desc">PR #20</span>
