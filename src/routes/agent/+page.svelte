@@ -379,7 +379,7 @@
 
 	.install code {
 		font-size: 1.1rem;
-		color: #FF6B35;
+		color: #fff;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 		background: none;
 		padding: 0;
@@ -466,7 +466,7 @@
 	}
 
 	.install-alt code {
-		color: #FF6B35;
+		color: #fff;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 		font-size: 0.85rem;
 		background: none;
@@ -632,7 +632,7 @@
 
 	.card p code {
 		background: #1a1a1a;
-		color: #FF6B35;
+		color: #fff;
 		padding: 0.05rem 0.35rem;
 		border-radius: 3px;
 		font-family: 'SF Mono', 'Fira Code', monospace;
@@ -658,7 +658,7 @@
 
 	.defer-note code {
 		background: #1a1a1a;
-		color: #FF6B35;
+		color: #fff;
 		padding: 0.05rem 0.35rem;
 		border-radius: 3px;
 		font-family: 'SF Mono', 'Fira Code', monospace;
@@ -754,7 +754,7 @@
 
 	.tab:hover {
 		border-color: #00ffff;
-		color: #00ffff;
+		color: #fff;
 	}
 
 	.tab.active {

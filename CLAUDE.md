@@ -64,6 +64,7 @@ Use this palette for warning/solution flows throughout faf.one.
 
 1. **Contrast over color.** The site works in pure black/white alone. Color is decoration. If your edit reads correctly with all color stripped to grayscale, you're on doctrine.
 2. **Text is always the opposite of its background.** High contrast, always. Dark text on light bg; light text on dark bg. Never anything in between.
+   - **Buttons with a black background → white text. No exceptions.** Including inline text button-graphics (code pills, badges, chips, button-shaped inline UI). White text is the canonical "readable on black" — brand-color text belongs on light/colored bgs, not on black-bg buttons. (Brand-color BUTTON BG with black text is the right place for orange/cyan; the inverse — black bg with brand-color text on a button — is the violation.)
 3. **Color is only for: brand, buttons, title text, highlights.** Not body text. Not body backgrounds.
 4. **Brand colors only: orange + cyan.**
    - Orange: `#FF6B35` = `var(--faf-orange)`. Works both themes unchanged.
