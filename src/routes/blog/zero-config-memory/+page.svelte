@@ -22,9 +22,9 @@
 	<meta property="og:description" content="Just push — a namepoint auto-provisions and your .fafm soul goes live, cross-vendor. Structured memory round-trips intact. claude-fafm-sdk v0.3.0 on PyPI." />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/zero-config-memory" />
-	<meta property="og:image" content="https://memory.faf.one/nelly-og.png" />
+	<meta property="og:image" content="https://faf.one/blog/zero-config-memory-hero.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="https://memory.faf.one/nelly-og.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/zero-config-memory-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -42,31 +42,8 @@
 		</div>
 	</header>
 
-	<div class="hero-diagram" role="img" aria-label="Zero-config flow: a local .fafm soul, one push, a live namepoint, readable by Claude, Grok and Gemini.">
-		<div class="flow">
-			<div class="node">
-				<span class="node-label">Local soul</span>
-				<code class="node-code">soul.fafm</code>
-			</div>
-			<span class="arrow">&rarr;</span>
-			<div class="node node-action">
-				<span class="node-label">One push</span>
-				<code class="node-code">namepoint push</code>
-			</div>
-			<span class="arrow">&rarr;</span>
-			<div class="node">
-				<span class="node-label">Live, hosted</span>
-				<code class="node-code">mcpaas.live/you</code>
-			</div>
-		</div>
-		<div class="readers">
-			<span class="readers-label">Readable by</span>
-			<div class="chips">
-				<span class="chip">Claude</span>
-				<span class="chip">Grok</span>
-				<span class="chip">Gemini</span>
-			</div>
-		</div>
+	<div class="hero-image">
+		<img src="/blog/zero-config-memory-hero.png" alt="FAF family flash card: context (the orange DotFaf smiley, .faf) and memory (orange Nelly the elephant, .fafm), joined by a bi-sync symbol. faf is the smiley; fafm is Nelly." />
 	</div>
 
 	<article class="post-content">
@@ -106,6 +83,32 @@
 				Grok, Claude, and Gemini over the same protocol. <code>pull</code> and <code>sync</code>
 				keep local and hosted reconciled.
 			</p>
+			<div class="hero-diagram" role="img" aria-label="Zero-config flow: a local .fafm soul, one push, a live namepoint, readable by Claude, Grok and Gemini.">
+				<div class="flow">
+					<div class="node">
+						<span class="node-label">Local soul</span>
+						<code class="node-code">soul.fafm</code>
+					</div>
+					<span class="arrow">&rarr;</span>
+					<div class="node node-action">
+						<span class="node-label">One push</span>
+						<code class="node-code">namepoint push</code>
+					</div>
+					<span class="arrow">&rarr;</span>
+					<div class="node">
+						<span class="node-label">Live, hosted</span>
+						<code class="node-code">mcpaas.live/you</code>
+					</div>
+				</div>
+				<div class="readers">
+					<span class="readers-label">Readable by</span>
+					<div class="chips">
+						<span class="chip">Claude</span>
+						<span class="chip">Grok</span>
+						<span class="chip">Gemini</span>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -151,6 +154,7 @@
 		</section>
 
 		<section class="footer-note">
+			<img class="nelly-mark" src="/blog/nelly-gem.png" alt="Nelly, the orange elephant mark for .fafm" />
 			<p><strong>FAF defines. MD instructs. AI codes.</strong></p>
 			<p>Nelly Never Forgets. <code>.fafm 🐘</code> — now live in one push. 🏎️</p>
 		</section>
@@ -238,7 +242,24 @@
 		font-size: 0.85rem;
 	}
 
-	/* Inline hero diagram — locked-dark panel (like the copy-boxes), flat colors,
+	.hero-image {
+		margin: 0 0 2.5rem 0;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.nelly-mark {
+		width: 72px;
+		height: auto;
+		display: block;
+		margin: 0 auto 1rem auto;
+	}
+
+	/* Inline flow diagram — locked-dark panel (like the copy-boxes), flat colors,
 	   explicit literals so it never inherits theme-aware text. */
 	.hero-diagram {
 		margin: 0 0 3rem 0;
