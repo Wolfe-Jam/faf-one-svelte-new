@@ -259,6 +259,7 @@
 	code {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		background: var(--faf-gray-light);
+		color: var(--faf-dark); /* explicit — don't inherit .lead's locked #1a1a1a (which goes dark-on-dark inside a theme-aware code bg) */
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.9em;
