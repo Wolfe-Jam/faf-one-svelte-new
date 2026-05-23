@@ -64,7 +64,9 @@ Use this palette for warning/solution flows throughout faf.one.
 
 1. **Contrast over color.** The site works in pure black/white alone. Color is decoration. If your edit reads correctly with all color stripped to grayscale, you're on doctrine.
 2. **Text is always the opposite of its background.** High contrast, always. Dark text on light bg; light text on dark bg. Never anything in between.
-   - **Buttons with a black background → white text. No exceptions.** Including inline text button-graphics (code pills, badges, chips, button-shaped inline UI). White text is the canonical "readable on black" — brand-color text belongs on light/colored bgs, not on black-bg buttons. (Brand-color BUTTON BG with black text is the right place for orange/cyan; the inverse — black bg with brand-color text on a button — is the violation.)
+   - **Buttons with a black background → white text. No exceptions** *by default*. Including inline text button-graphics (code pills, badges, chips, button-shaped inline UI). White text is the canonical "readable on black" — brand-color text belongs on light/colored bgs, not on black-bg buttons. (Brand-color BUTTON BG with black text is the right place for orange/cyan; the inverse — black bg with brand-color text on a button — is the violation.)
+   - **Named exception(s)** — explicit, never catch-all:
+     - **Install-command CTA pattern** (`.install`, `.install-alt`, and equivalents): the `uvx … / pipx install … / pip install …` command text may use orange (`#FF6B35`) on the near-black button bg. This is the recognizable terminal/command-pop aesthetic — the orange IS the brand pop on the page's primary action. Scope is narrow: only the install-command text inside install CTA buttons. Inline code pills elsewhere (e.g. `.card p code`, `.defer-note code`) still follow the default white-on-black rule. New exceptions must be NAMED here — vibes-based brand-pop arguments don't qualify.
 3. **Color is only for: brand, buttons, title text, highlights.** Not body text. Not body backgrounds.
 4. **Brand colors only: orange + cyan.**
    - Orange: `#FF6B35` = `var(--faf-orange)`. Works both themes unchanged.

@@ -374,25 +374,36 @@
 	}
 
 	.install:hover {
-		border-color: #eee;
+		border-color: #FF6B35;
 	}
 
 	.install code {
+		/* Named exception per CLAUDE.md rule 2: install-command CTAs use
+		   orange text on near-black bg for the brand command-pop. */
 		font-size: 1.1rem;
-		color: #fff;
+		color: #FF6B35;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 		background: none;
 		padding: 0;
 	}
 
 	.copy-hint {
+		/* Distinct button chip — not text that extends the command.
+		   Cyan brand color (the other brand half), black text on top
+		   (rule 2 default: opposite high contrast on a colored button bg). */
+		background: #00ffff;
+		color: #000;
+		padding: 0.3rem 0.7rem;
+		border-radius: 4px;
 		font-size: 0.85rem;
-		color: #eee;
-		transition: color 0.2s;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		transition: opacity 0.15s;
 	}
 
 	.install:hover .copy-hint {
-		color: #eee;
+		opacity: 0.9;
 	}
 
 	.install-help {
@@ -460,13 +471,15 @@
 	}
 
 	.install-alt:hover {
-		border-color: #444;
+		border-color: #FF6B35;
 		border-style: solid;
-		color: #ccc;
+		color: #eee;
 	}
 
 	.install-alt code {
-		color: #fff;
+		/* Named exception per CLAUDE.md rule 2: install-command CTAs use
+		   orange text on near-black bg (matches .install primary CTA). */
+		color: #FF6B35;
 		font-family: 'SF Mono', 'Fira Code', monospace;
 		font-size: 0.85rem;
 		background: none;
@@ -479,13 +492,20 @@
 	}
 
 	.alt-state {
-		color: #eee;
+		/* Distinct button chip, matches .copy-hint pattern (cyan + black). */
+		background: #00ffff;
+		color: #000;
+		padding: 0.25rem 0.6rem;
+		border-radius: 4px;
 		font-size: 0.85rem;
-		letter-spacing: 0.03em;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		transition: opacity 0.15s;
 	}
 
 	.install-alt:hover .alt-state {
-		color: #eee;
+		opacity: 0.9;
 	}
 
 	.fam-tag {
