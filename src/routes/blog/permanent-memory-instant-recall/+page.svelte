@@ -164,7 +164,7 @@
 	.breadcrumb {
 		font-size: 0.9rem;
 		margin-bottom: 1rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 	}
 
 	.breadcrumb a {
@@ -197,7 +197,7 @@
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		margin: 0.5rem 0 1rem 0;
 	}
 
@@ -206,7 +206,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		font-size: 0.9rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 	}
 
 	.separator {
@@ -294,7 +294,7 @@
 		padding-top: 2rem;
 		border-top: 1px solid #eee;
 		font-size: 0.95rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		text-align: center;
 	}
 

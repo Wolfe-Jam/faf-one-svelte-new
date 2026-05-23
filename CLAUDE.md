@@ -56,30 +56,53 @@ Use this palette for warning/solution flows throughout faf.one.
 - **Tagline Style**: White, bold, underlined for maximum impact
 - **Tagline Alignment**: Can be left-aligned or right-aligned, but NEVER centered
 
-## Theming Rules — MANDATORY (updated 2026-05-21)
+## Theming Rules — MANDATORY (wolfejam doctrine, 2026-05-22)
 
-**The theme system lives in `src/app.css`.** `:root` defines brand vars; `[data-theme="dark"]` redefines them; `body { background: var(--faf-cream); color: var(--faf-dark); }` is set globally. The `WolfejamGizmo` toggle in `+layout.svelte` flips `data-theme` on `<html>` and the whole site responds — **but only for pages that use brand vars, not literal hex colors.**
+> **The 11 rules below are the load-bearing site contract.** They supersede any earlier theming guidance in this file. The `WolfejamGizmo` toggle is a promise to every visitor that they can read the site how they prefer — these rules keep that promise.
 
-### Page-level rules
+### The 11 Rules
 
-1. **Default = theme-aware. Use brand vars, NOT literal colors.**
-   - Backgrounds: `var(--faf-white)` (cards), `var(--faf-cream)` (page surface), `var(--faf-light-gray)` (borders).
-   - Text: `var(--faf-dark)` (body), `var(--faf-gray)` (muted), `var(--faf-black)` (emphasis).
-   - Brand accents that stay constant across themes: `var(--faf-orange)`, `var(--faf-orange-dark)`, `var(--faf-cyan-text)`, `var(--faf-green)`.
-   - Hard literals like `#fff` / `#000` / `white` / `#FEFCF8` / `#0a0a0a` defeat the toggle and create unreadable mismatches when users switch theme — **don't use them** unless the element is deliberately theme-locked (terminal-look boxes, brand CTAs with intentional `color: white` on orange, etc.).
+1. **Contrast over color.** The site works in pure black/white alone. Color is decoration. If your edit reads correctly with all color stripped to grayscale, you're on doctrine.
+2. **Text is always the opposite of its background.** High contrast, always. Dark text on light bg; light text on dark bg. Never anything in between.
+3. **Color is only for: brand, buttons, title text, highlights.** Not body text. Not body backgrounds.
+4. **Brand colors only: orange + cyan.**
+   - Orange: `#FF6B35` = `var(--faf-orange)`. Works both themes unchanged.
+   - Cyan on light pages: **dark cyan `#00D4D4` = `var(--faf-cyan-dark)` / `var(--faf-cyan-text)`** (better contrast than bright cyan on cream).
+   - Cyan on dark pages: bright cyan `#00ffff` = `var(--faf-cyan)`.
+5. **Gray is allowed for stacked surfaces only** — almost-black on black, black on almost-black (e.g., a card slightly lifted from body bg). Stacking is fine; mid-gray contrast is not.
+6. **No mid-gray text. Ever.** `var(--faf-gray)` (`#666` / `#999`) is **RETIRED for text content.** Use the opposites:
+   - Light theme text → very dark gray / black (`var(--faf-black)` for primary, `var(--faf-dark)` for secondary)
+   - Dark theme text → very light gray / white (same tokens flip to the right shade automatically)
+   - For hierarchy below primary, use **font weight or size**, NOT a mid-gray color.
+7. **Readability over all.** When a rule conflicts with anything else, readability wins.
+8. **No tiny fonts.** If you can't read it comfortably, the font is too small.
+9. **Copy = 3–4 words, not long sentences.** Headlines, buttons, badges, CTAs — terse.
+10. **No gradients. Flat colors only.** (Exception: the brand-locked layout banner metallic shimmer; do not introduce new ones.)
+11. **No emojis.** Sparing + pre-approved set only (🏆 is the only one in the brand emoji ladder per `feedback-tier-symbols` memory). Drawn flat icons preferred. If you must, an emoji is a placeholder for an unbuilt icon — replace at next opportunity.
 
-2. **Theme-locked pages (when intentional)** — e.g., a page designed dark-only for visual effect — declare:
-   ```svelte
-   :global(body) { background: var(--faf-cream); color: var(--faf-dark); }
-   ```
-   for light-locked, or the dark equivalent. **Never with `!important`** — that creates a cascade tug-of-war during client-side navigation between two `!important`-locked pages, producing the white-on-white / black-on-black flash. The plain rule replaces cleanly on unmount.
+### Token usage (the only legal palette)
 
-3. **Old rule retired (was at this position pre-2026-05-21):** *"Every blog post MUST include `:global(body) { background: #FEFCF8 !important; }`"* — that doctrine WAS the source of the flicker (per-page `!important` body bgs wrestling during nav). Existing blog posts using it still work, but new pages should follow rules 1 and 2 above. Migrate when convenient; never add new `!important` body backgrounds.
+| Surface | Token | Light | Dark |
+|---|---|---|---|
+| Body bg | `var(--faf-cream)` | `#FEFCF8` (classy with the black) | `#0a0a0a` |
+| Card surface (aliased) | `var(--faf-white)` | `#FEFCF8` | `#0a0a0a` |
+| Primary text | `var(--faf-black)` | `#1a1a1a` | `#ffffff` |
+| Secondary text | `var(--faf-dark)` | `#1a1a1a` | `#e5e5e5` |
+| Border / subtle stack | `var(--faf-light-gray)` | `#e5e5e5` | `#222` |
+| Brand orange | `var(--faf-orange)` | `#FF6B35` (both themes) | |
+| Brand cyan (light) | `var(--faf-cyan-text)` / `var(--faf-cyan-dark)` | `#00D4D4` | |
+| Brand cyan (dark) | `var(--faf-cyan)` | | `#00ffff` |
 
-4. **Locked-dark layout elements (intentional, do NOT convert):** the `+layout.svelte` **announcement banner** (`.official-banner` + `.banner-section` + the metallic shimmer gradient `#5a5a5a → #3c4e60 → #1a1a1a → …`) is **deliberately dark in both themes** — it's a brand announcement bar designed to sit dark above any page below it, like Apple's nav. The 13 literal colors in the layout's style block are intentional design, not theming bugs. **Do not "fix" them.** If a future audit flags them, note: confirmed locked-dark by wolfejam 2026-05-22.
+**RETIRED for text:** `var(--faf-gray)`. It still exists in `app.css` for legacy components; do NOT use it on new text.
+
+### Architectural rules (still in force)
+
+- **NEVER `:global(body) { ... !important }`** on pages — creates cascade tug-of-war during client-side navigation. Plain rule replaces cleanly on unmount. (The old "every blog post MUST include `!important` body bg" doctrine WAS the flash source — retired 2026-05-21.)
+- **Theme-locked pages** (a page designed only-light or only-dark) → use a plain `:global(body) { background: <token>; color: <token>; }` without `!important`. ANY child block with a locked bg MUST also explicitly set its text color to a literal — never inherit theme-aware text into a locked-bg context (creates dark-on-dark / light-on-light when the inherited text flips with the theme but the bg doesn't).
+- **Locked-dark layout elements (intentional, do NOT convert):** `+layout.svelte` announcement banner (`.official-banner`, `.banner-section`, metallic shimmer `#5a5a5a → #3c4e60 → #1a1a1a → …`) is deliberately dark in both themes — brand chrome over any page below it. 13 literal colors in the layout style block are intentional, not theming bugs. Do NOT "fix" them. Confirmed locked-dark by wolfejam 2026-05-22.
 
 ### Blog Post Rules — MANDATORY
-1. Blog posts pick light-locked or dark-locked per design intent, following rule 2 above (no `!important`).
+1. Blog posts follow the 11 rules above (especially #2 contrast, #6 no mid-gray text, #10 no gradients).
 2. Every blog post MUST have OG meta tags (`og:title`, `og:description`, `twitter:card`) in `<svelte:head>` for proper X card previews.
 3. Every blog post MUST have an X share button (web intent format).
 
