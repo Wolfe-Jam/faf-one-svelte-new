@@ -14,6 +14,15 @@
 			category: 'Release'
 		},
 		{
+			slug: 'blog/permanent-memory',
+			title: 'Memory Paper Published on Zenodo',
+			date: 'May 22, 2026',
+			timestamp: '2026-05-22',
+			excerpt: 'The .fafm Memory paper is on CERN\'s Zenodo. Multi-profile AI agent memory, IANA-registered, CC BY 4.0. The first formal standard for how AI agents remember reliably, portably, and across vendors. Permanent Memory. Instant Recall.',
+			emoji: '🏁',
+			category: 'Research'
+		},
+		{
 			slug: 'blog/permanent-memory-instant-recall',
 			title: 'Permanent Memory. Instant Recall.',
 			date: 'May 22, 2026',
