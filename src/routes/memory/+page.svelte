@@ -1,19 +1,19 @@
 <svelte:head>
-	<title>memory.faf.one — Nelly Never Forgets</title>
-	<meta name="description" content="Portable, cross-vendor AI memory in the IANA-registered .fafm format. Offline-first claude-fafm-sdk; connect a free namepoint for full intel. Nelly Never Forgets." />
+	<title>etch and forget · memory.faf.one</title>
+	<meta name="description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Cross-vendor — Claude, Cursor, Grok, Gemini all read the same memory. Nelly Never Forgets (so you can!)." />
 	<link rel="icon" type="image/svg+xml" href="/nelly.svg" />
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="memory.faf.one — Nelly Never Forgets" />
-	<meta property="og:description" content="Portable, cross-vendor AI memory in .fafm. Offline-first SDK; a free namepoint for full intel at personal scale." />
+	<meta property="og:title" content="etch and forget · memory.faf.one" />
+	<meta property="og:description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Cross-vendor — Claude, Cursor, Grok, Gemini. Nelly Never Forgets (so you can!)." />
 	<meta property="og:url" content="https://www.faf.one/memory" />
 	<meta property="og:image" content="https://memory.faf.one/nelly-og.png" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="memory.faf.one — Nelly Never Forgets" />
-	<meta name="twitter:description" content="Portable, cross-vendor AI memory in .fafm. Offline-first; free namepoint for full intel." />
+	<meta name="twitter:title" content="etch and forget · memory.faf.one" />
+	<meta name="twitter:description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Nelly Never Forgets (so you can!)." />
 	<meta name="twitter:image" content="https://memory.faf.one/nelly-og.png" />
 </svelte:head>
 
