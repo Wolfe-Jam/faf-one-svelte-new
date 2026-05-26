@@ -22,7 +22,9 @@
 	<section class="hero">
 		<img class="nelly" src="/nelly.svg" alt="Nelly — the FAF memory elephant" width="72" height="72" />
 		<h1>memory.faf.one</h1>
-		<p class="sub">Nelly Never Forgets — portable, cross-vendor AI memory</p>
+		<p class="tagline"><span class="etched">etch</span> and forget</p>
+		<p class="kicker"><span class="etched">etched</span> in stone… becomes <span class="etched">etched</span> in memory <span class="pml-mark">(PML)</span></p>
+		<p class="sub">Nelly Never Forgets <span class="so-you-can">(so you can!)</span> — portable, cross-vendor AI memory</p>
 	</section>
 
 	<section class="content">
@@ -97,9 +99,48 @@
 		margin-bottom: 0.5rem;
 	}
 
+	.tagline {
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: var(--faf-black);
+		margin: 0.75rem 0 0.5rem;
+		letter-spacing: -0.01em;
+	}
+
+	.tagline .etched {
+		color: var(--faf-orange);
+		font-weight: 800;
+	}
+
+	.kicker {
+		font-size: 1rem;
+		color: var(--faf-dark);
+		font-style: italic;
+		font-weight: 500;
+		line-height: 1.5;
+		margin: 0 0 0.75rem;
+	}
+
+	.kicker .etched {
+		color: var(--faf-orange);
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	.kicker .pml-mark {
+		font-style: normal;
+		font-size: 0.85em;
+		color: var(--faf-dark);
+	}
+
 	.sub {
 		font-size: 1.1rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
+	}
+
+	.sub .so-you-can {
+		color: var(--faf-orange);
+		font-weight: 600;
 	}
 
 	.content {
