@@ -139,7 +139,7 @@
 	}
 
 	.sub .so-you-can {
-		color: var(--faf-orange);
+		color: var(--faf-cyan-text);
 		font-weight: 600;
 	}
 
