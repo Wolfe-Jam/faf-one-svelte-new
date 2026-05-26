@@ -66,6 +66,7 @@
 	</section>
 
 	<section class="content footer-section">
+		<img class="nelly-mark" src="/nelly-mark.png" alt="Nelly — the .fafm orange-elephant mark" width="96" height="84" />
 		<p class="footer-tagline">Nelly Never Forgets.</p>
 		<p class="footer-iana">Permanent Memory. Instant Recall. · application/vnd.fafm+yaml</p>
 	</section>
@@ -240,6 +241,13 @@
 		padding: 3rem 0;
 		border-top: 1px solid var(--faf-light-gray);
 		margin-top: 2rem;
+	}
+
+	.nelly-mark {
+		width: 96px;
+		height: auto;
+		display: block;
+		margin: 0 auto 1.25rem auto;
 	}
 
 	.footer-tagline {
