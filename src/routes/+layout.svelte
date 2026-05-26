@@ -25,6 +25,16 @@
 	}
 </script>
 
+<!-- Site-wide default <title> + <meta description>. Route-level <svelte:head>
+     blocks override (Svelte head-management dedups, page wins). Routes without
+     their own title fall back to these defaults. Moved here from app.html on
+     2026-05-26 to fix the duplicate-<title> drift that was demoting route-set
+     titles like /memory's "etch and forget · memory.faf.one" silently. -->
+<svelte:head>
+	<title>.faf = Project DNA ✨ for ANY AI | IANA-Registered Format</title>
+	<meta name="description" content="Official IANA-registered format (application/vnd.faf+yaml) for AI context. 43k+ downloads across npm, PyPI, and crates.io. Anthropic-approved MCP server. Project DNA for ANY AI." />
+</svelte:head>
+
 <!-- SideNav removed — using top nav only -->
 
 <div class="theme-toggle">

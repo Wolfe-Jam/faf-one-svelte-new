@@ -26,9 +26,12 @@
 			})();
 		</script>
 
-		<title>.faf = Project DNA ✨ for ANY AI | IANA-Registered Format</title>
-		<meta name="description" content="Official IANA-registered format (application/vnd.faf+yaml) for AI context. 43k+ downloads across npm, PyPI, and crates.io. Anthropic-approved MCP server. Project DNA for ANY AI." />
-		
+		<!-- Default <title> + <meta description> live in src/routes/+layout.svelte's
+		     <svelte:head> so route-level overrides resolve cleanly (Svelte head-management
+		     dedups; page-level wins over layout-level). Putting them HERE in app.html
+		     bypasses Svelte's dedup → duplicate <title> tags → browser picks the FIRST
+		     (the shell's), which breaks route-specific titles silently. Don't put them back. -->
+
 		<!-- Site-wide metadata only — page-specific og:title/description/image
 		     are set by each route's <svelte:head>. Do NOT add og:image here:
 		     it would force-pin every blog post to the homepage card. -->
