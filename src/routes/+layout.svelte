@@ -25,14 +25,17 @@
 	}
 </script>
 
-<!-- Site-wide default <title> + <meta description>. Route-level <svelte:head>
-     blocks override (Svelte head-management dedups, page wins). Routes without
-     their own title fall back to these defaults. Moved here from app.html on
-     2026-05-26 to fix the duplicate-<title> drift that was demoting route-set
-     titles like /memory's "etch and forget · memory.faf.one" silently. -->
+<!-- Site-wide default <title> ONLY. Svelte head-management dedups <title>
+     (page-level overrides layout-level cleanly), so routes that set their own
+     title win. Routes without one (/3ws, /rust) fall back to this default.
+
+     Do NOT add <meta name="description"> here: Svelte does NOT dedup <meta>
+     tags (they're additive by design), so a layout-level description would
+     render FIRST in the document, and Google + many parsers pick the FIRST
+     <meta description> they encounter — silently overriding every route's
+     own description in search snippets. Each route sets its own. -->
 <svelte:head>
 	<title>.faf = Project DNA ✨ for ANY AI | IANA-Registered Format</title>
-	<meta name="description" content="Official IANA-registered format (application/vnd.faf+yaml) for AI context. 43k+ downloads across npm, PyPI, and crates.io. Anthropic-approved MCP server. Project DNA for ANY AI." />
 </svelte:head>
 
 <!-- SideNav removed — using top nav only -->
