@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The Relentless Edition v6.8.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>🏎️ faf-cli v6.8.0 — The Relentless Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Birth DNA, 6-W extractor, format-finder — restored. Grok interop (faf export --grok), extension App-Type — added. One shared pipeline makes init, auto, git impossible to drift between.</p>
+			<a href="/blog/relentless-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- The HTML Edition v6.7.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">

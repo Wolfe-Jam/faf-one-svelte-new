@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/relentless-edition',
+			title: 'The Relentless Edition',
+			date: 'May 30, 2026',
+			timestamp: '2026-05-30',
+			excerpt: 'faf-cli v6.8.0: Birth DNA, 6-W extractor, format-finder — restored. Grok interop (faf export --grok), extension App-Type — added. One shared pipeline makes init, auto, git impossible to drift between. 762/762 tests, 🏆 Trophy 100%.',
+			emoji: '🏎️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/zero-config-memory',
 			title: 'Zero-Config Memory',
 			date: 'May 23, 2026',
