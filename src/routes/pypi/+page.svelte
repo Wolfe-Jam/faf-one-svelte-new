@@ -25,6 +25,7 @@
 		<p class="tagline"><span class="brand">uvx</span> and go</p>
 		<p class="kicker">Six packages. One <span class="brand">IANA-registered</span> family.</p>
 		<p class="sub">The FAF Python ecosystem — <span class="so-you-can">two implement Zenodo papers, all share the same standard.</span></p>
+		<p class="live-link"><a href="https://pypi.faf.one" target="_blank" rel="noopener">Live discovery → pypi.faf.one</a></p>
 	</section>
 
 	<section class="content">
@@ -125,6 +126,8 @@
 			<a href="https://github.com/Wolfe-Jam" target="_blank" rel="noopener">all FAF on GitHub</a>
 			·
 			<a href="https://faf.one" target="_blank" rel="noopener">faf.one</a>
+			·
+			<a href="https://pypi.faf.one" target="_blank" rel="noopener">pypi.faf.one (live)</a>
 		</p>
 	</section>
 
@@ -202,6 +205,28 @@
 	.sub .so-you-can {
 		color: var(--faf-cyan-text);
 		font-weight: 600;
+	}
+
+	.live-link {
+		margin: 1.5rem 0 0;
+		text-align: center;
+	}
+
+	.live-link a {
+		display: inline-block;
+		padding: 0.7rem 1.4rem;
+		background: var(--faf-orange);
+		color: var(--faf-cream);
+		border-radius: 999px;
+		font-weight: 700;
+		text-decoration: none;
+		font-family: var(--font-mono);
+		font-size: 0.95rem;
+		letter-spacing: -0.01em;
+	}
+
+	.live-link a:hover {
+		background: var(--faf-black);
 	}
 
 	.content {
