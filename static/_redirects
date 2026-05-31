@@ -1,0 +1,6 @@
+# Cloudflare Pages routing rules
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# pypi.faf.one — subdomain root serves the /pypi showcase
+# (rewrite, not redirect — URL stays pypi.faf.one for the user)
+https://pypi.faf.one/  /pypi  200
