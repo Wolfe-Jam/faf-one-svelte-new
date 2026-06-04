@@ -84,13 +84,13 @@
 			<div class="pkg">
 				<div class="pkg-head"><code>faf-python-sdk</code> <span class="badge popular">Popular</span></div>
 				<p class="pkg-role">Persistent project context for Python — parse, validate, and score <code>.faf</code> files. The foundation other Python FAF tools (gemini-faf-mcp, custom MCP servers, CI validators) build on. IANA-registered <code>application/vnd.faf+yaml</code>.</p>
-				<pre>uvx faf-python-sdk</pre>
+				<pre>pip install faf-python-sdk</pre>
 			</div>
 
 			<div class="pkg">
 				<div class="pkg-head"><code>grok-faf-voice</code> <span class="badge grok">Built w/GROK</span></div>
 				<p class="pkg-role">Voice Memory Layer (VML) for Grok — persistent across sessions, devices, and models. LiveKit-enabled.</p>
-				<pre>uvx grok-faf-voice</pre>
+				<pre>pip install grok-faf-voice</pre>
 			</div>
 
 			<div class="pkg">
@@ -131,7 +131,7 @@
 
 		<section class="cta">
 			<h2>Try it</h2>
-			<p>Lead with <code>uvx</code> — zero install, runs at the current version. Use <code>pip</code> when you want a project pin.</p>
+			<p>The MCP servers and the SDK CLI run straight from <code>uvx</code> — zero install, current version. The two SDK libraries (<code>faf-python-sdk</code>, <code>grok-faf-voice</code>) install with <code>pip</code> and import in your code.</p>
 			<pre>uvx claude-fafm-sdk init</pre>
 			<p class="links">
 				<a href="https://pypi.org/user/wolfejam/" target="_blank" rel="noopener">all FAF on PyPI</a>
