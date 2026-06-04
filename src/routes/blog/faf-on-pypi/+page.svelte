@@ -64,37 +64,37 @@
 			<h2>The family</h2>
 
 			<div class="pkg">
-				<div class="pkg-head"><code>claude-fafm-sdk</code> <span class="ver">v0.4.0</span> <span class="badge">new</span></div>
+				<div class="pkg-head"><code>claude-fafm-sdk</code> <span class="ver">v0.4.0</span> <span class="badge new">New</span></div>
 				<p class="pkg-role">Portable, cross-vendor AI memory in <code>.fafm</code> — offline-first SDK; connect a free namepoint for full intel. Implements the Memory paper.</p>
 				<pre>uvx claude-fafm-sdk</pre>
 			</div>
 
 			<div class="pkg">
-				<div class="pkg-head"><code>faf-memory-mcp</code> <span class="ver">v0.1.0</span> <span class="badge">new</span></div>
+				<div class="pkg-head"><code>faf-memory-mcp</code> <span class="ver">v0.1.0</span> <span class="badge new">New</span></div>
 				<p class="pkg-role">MCP server for <code>.fafm</code> — the Permanent Memory Layer (PML). Wraps claude-fafm-sdk via fastmcp. IANA-registered, cross-vendor, offline-first.</p>
 				<pre>uvx faf-memory-mcp</pre>
 			</div>
 
 			<div class="pkg">
-				<div class="pkg-head"><code>gemini-faf-mcp</code> <span class="ver">v2.2.5</span></div>
+				<div class="pkg-head"><code>gemini-faf-mcp</code> <span class="ver">v2.2.5</span> <span class="badge fastmcp">FastMCP</span></div>
 				<p class="pkg-role">Persistent Project Context for Google Gemini. IANA-registered <code>.faf</code> format, MCP server + Cloud Run REST API; unifies CLAUDE.md, GEMINI.md, AGENTS.md. Implements the Context paper.</p>
 				<pre>uvx gemini-faf-mcp</pre>
 			</div>
 
 			<div class="pkg">
-				<div class="pkg-head"><code>faf-python-sdk</code></div>
+				<div class="pkg-head"><code>faf-python-sdk</code> <span class="badge popular">Popular</span></div>
 				<p class="pkg-role">Persistent project context for Python — parse, validate, and score <code>.faf</code> files. The foundation other Python FAF tools (gemini-faf-mcp, custom MCP servers, CI validators) build on. IANA-registered <code>application/vnd.faf+yaml</code>.</p>
 				<pre>uvx faf-python-sdk</pre>
 			</div>
 
 			<div class="pkg">
-				<div class="pkg-head"><code>grok-faf-voice</code></div>
+				<div class="pkg-head"><code>grok-faf-voice</code> <span class="badge grok">Built w/GROK</span></div>
 				<p class="pkg-role">Voice Memory Layer (VML) for Grok — persistent across sessions, devices, and models. LiveKit-enabled.</p>
 				<pre>uvx grok-faf-voice</pre>
 			</div>
 
 			<div class="pkg">
-				<div class="pkg-head"><code>faf-agent-mcp</code></div>
+				<div class="pkg-head"><code>faf-agent-mcp</code> <span class="badge fafipedia">FAFipedia</span></div>
 				<p class="pkg-role">FAF Agent — the Voice of FAF. MCP server.</p>
 				<pre>uvx faf-agent-mcp</pre>
 			</div>
@@ -267,14 +267,32 @@
 		font-weight: 600;
 	}
 	.pkg-head .badge {
-		background: var(--faf-orange);
-		color: #ffffff;
-		padding: 0.1rem 0.5rem;
+		padding: 0.12rem 0.5rem;
 		border-radius: 4px;
 		font-size: 0.68rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.01em;
+		white-space: nowrap;
+	}
+	.pkg-head .badge.new {
+		background: var(--faf-orange);
+		color: #ffffff;
+	}
+	.pkg-head .badge.fastmcp {
+		background: #4285F4;
+		color: #ffffff;
+	}
+	.pkg-head .badge.popular {
+		background: #FFD43B;
+		color: #1a1a1a;
+	}
+	.pkg-head .badge.grok {
+		background: #1a1a1a;
+		color: #ffffff;
+	}
+	.pkg-head .badge.fafipedia {
+		background: #1a1a1a;
+		color: #ffffff;
 	}
 	.pkg-role {
 		margin: 0.2rem 0 0.5rem;
@@ -331,13 +349,14 @@
 		padding: 0.6rem 1.3rem;
 		background: var(--faf-black);
 		color: #ffffff;
+		border: 1.5px solid var(--faf-black);
 		border-radius: 999px;
 		font-weight: 700;
 		text-decoration: none;
 		font-size: 0.95rem;
 	}
 	.x-share:hover {
-		background: var(--faf-orange);
+		background: var(--faf-cream);
 		color: var(--faf-black);
 	}
 
