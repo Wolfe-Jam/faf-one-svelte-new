@@ -287,12 +287,14 @@
 		color: #1a1a1a;
 	}
 	.pkg-head .badge.grok {
-		background: #1a1a1a;
+		background: #000000;
 		color: #ffffff;
+		border: 1px solid #ffffff;
 	}
 	.pkg-head .badge.fafipedia {
-		background: #1a1a1a;
+		background: #000000;
 		color: #ffffff;
+		border: 1px solid #ffffff;
 	}
 	.pkg-role {
 		margin: 0.2rem 0 0.5rem;
@@ -347,17 +349,17 @@
 	.x-share {
 		display: inline-block;
 		padding: 0.6rem 1.3rem;
-		background: var(--faf-black);
+		background: #000000;
 		color: #ffffff;
-		border: 1.5px solid var(--faf-black);
+		border: 1.5px solid #000000;
 		border-radius: 999px;
 		font-weight: 700;
 		text-decoration: none;
 		font-size: 0.95rem;
 	}
 	.x-share:hover {
-		background: var(--faf-cream);
-		color: var(--faf-black);
+		background: #ffffff;
+		color: #000000;
 	}
 
 	@media (max-width: 600px) {
