@@ -35,7 +35,7 @@
                 <span class="badge advanced">Advanced</span>
             </div>
             <p class="description">
-                Specialized guide for Rust WASM projects. Example: faf-generator-wasm
+                Specialized guide for Rust WASM projects. Example: faf-wasm-gen
             </p>
             <ul class="features">
                 <li>WASM project focus</li>

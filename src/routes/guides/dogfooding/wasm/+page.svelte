@@ -7,7 +7,7 @@
     <div class="header">
         <h1>FAF Dogfooding Guide</h1>
         <p class="subtitle">The Right Way to Add AI Context</p>
-        <p class="example">Example: faf-generator-wasm</p>
+        <p class="example">Example: faf-wasm-gen</p>
     </div>
 
     <div class="philosophy">
@@ -33,7 +33,7 @@ git init
 
 <span class="comment"># Write README</span>
 cat > README.md &lt;&lt; <span class="string">'EOF'</span>
-<span class="comment"># faf-generator-wasm</span>
+<span class="comment"># faf-wasm-gen</span>
 
 Rust WASM generator for FAF (Foundational AI-context Format).
 
@@ -376,7 +376,7 @@ faf auto → 80%</code></pre>
 
     <div class="footer">
         <p><strong>Status:</strong> Championship workflow documented</p>
-        <p><strong>Tested on:</strong> faf-generator-wasm (Feb 7, 2026)</p>
+        <p><strong>Tested on:</strong> faf-wasm-gen (Feb 7, 2026)</p>
         <p><strong>Owner:</strong> wolfejam 🏎️⚡️</p>
         <p style="margin-top: 1rem; font-style: italic; color: #FF6B35;">"AI needed a format, it got one — .faf"</p>
     </div>
