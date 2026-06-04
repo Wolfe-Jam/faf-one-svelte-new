@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/faf-on-pypi',
+			title: 'FAF on PyPI',
+			date: 'May 31, 2026',
+			timestamp: '2026-05-31',
+			excerpt: 'Six packages on PyPI, one IANA-registered family. claude-fafm-sdk and faf-memory-mcp join gemini-faf-mcp, faf-python-sdk, grok-faf-voice, and faf-agent-mcp. Persistent Context (.faf) plus Permanent Memory (.fafm). Two implement Zenodo papers. uvx and go.',
+			emoji: '🐍',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/relentless-edition',
 			title: 'The Relentless Edition',
 			date: 'May 30, 2026',

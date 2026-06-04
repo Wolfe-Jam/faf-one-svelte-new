@@ -25,10 +25,10 @@
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://www.faf.one/blog/faf-on-pypi" />
-	<meta property="og:image" content="https://pypi.faf.one/pypi-og.png" />
+	<meta property="og:image" content="https://faf.one/blog/faf-on-pypi-hero.png" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="FAF on PyPI" />
-	<meta name="twitter:image" content="https://pypi.faf.one/pypi-og.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/faf-on-pypi-hero.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -42,9 +42,13 @@
 		<div class="meta">
 			<time datetime="2026-05-31">May 31, 2026</time>
 			<span class="separator">-</span>
-			<span class="category release">Release</span>
+			<span class="category launch">Launch</span>
 		</div>
 	</header>
+
+	<div class="hero-image">
+		<img src="/blog/faf-on-pypi-hero.png" alt="FAF on PyPI — six packages, one IANA-registered family. .faf is Context, .fafm is Memory, PyPI is where it lives." />
+	</div>
 
 	<article class="post-content">
 		<section class="intro">
@@ -145,6 +149,25 @@
 </div>
 
 <style>
+	:global(body) {
+		background: var(--faf-cream);
+		color: var(--faf-black);
+	}
+
+	.hero-image {
+		max-width: 760px;
+		margin: 0 auto 2rem;
+		padding: 0 1.25rem;
+		border-radius: 0;
+		overflow: hidden;
+	}
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 12px;
+	}
+
 	.blog-post {
 		max-width: 760px;
 		margin: 0 auto;
@@ -189,7 +212,7 @@
 	.meta .separator {
 		margin: 0 0.5rem;
 	}
-	.category.release {
+	.category.launch {
 		color: var(--faf-orange);
 		font-weight: 700;
 	}
