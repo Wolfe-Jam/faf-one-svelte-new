@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/chameleon-edition',
+			title: 'The Chameleon Edition',
+			date: 'June 7, 2026',
+			timestamp: '2026-06-07',
+			excerpt: 'gemini-faf-mcp v2.4.0: one command, both modes. Auto-selects its transport — stdio locally, Streamable HTTP on Cloud Run. Same binary, 12 tools, zero config. Drops straight into Google Antigravity (stdio or serverUrl). 221 tests.',
+			emoji: '🦎',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/faf-on-pypi',
 			title: 'FAF on PyPI',
 			date: 'May 31, 2026',
