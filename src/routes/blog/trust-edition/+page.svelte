@@ -66,7 +66,7 @@ faf: CLAUDE.md created — ○ 10%`}</code></pre>
 
 			<p>The hook goes in through <code>faf_setup</code>, tool #35. It shows you the <em>exact</em> settings JSON and the exact path before anything is written. Confirm, and it merges non-destructively into your project's <code>.claude/settings.json</code> &mdash; every existing key and hook preserved, re-runs idempotent. <code>remove: true</code> takes out exactly the faf hook and nothing else.</p>
 
-			<p>A Trust Edition that silently edited your settings would refute its own headline. So it doesn't.</p>
+			<p>A Trust Edition that silently edited your settings would refute its own headline. So this one, doesn't.</p>
 		</section>
 
 		<section>
