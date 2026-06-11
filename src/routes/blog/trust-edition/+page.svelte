@@ -76,7 +76,7 @@ faf: CLAUDE.md created — ○ 10%`}</code></pre>
 
 			<p><strong>Typed:</strong> the data tools return <code>structuredContent</code> with published <code>outputSchema</code> &mdash; agents parse structures, humans read text, neither gets noise.</p>
 
-			<p><strong>Provable:</strong> every score carries a <strong>determinism parity hash</strong> &mdash; a SHA-256 over the canonical score projection, bound to the input bytes. Any conformant engine (faf-cli, the Rust kernel, this server) reproduces it, and a third party can check <code>sha256(projection) === parityHash</code> without trusting us. The <strong>&#10026; trust receipt</strong> wraps score + parity into a self-verifying artifact that means the same thing in a terminal, a CI log, and a report. FAF don't lie &mdash; and now you can verify that yourself.</p>
+			<p><strong>Provable:</strong> every score carries a <strong>determinism parity hash</strong> &mdash; a SHA-256 over the canonical score projection, bound to the input bytes. Any conformant engine (faf-cli, the Rust kernel, this server) reproduces it, and a third party can check <code>sha256(projection) === parityHash</code> without trusting us. The <strong>&#10026; trust receipt</strong> wraps score + parity into a self-verifying artifact that means the same thing in a terminal, a CI log, and a report. FAF don't lie &mdash; and now you can verify that for yourself.</p>
 		</section>
 
 		<section>
