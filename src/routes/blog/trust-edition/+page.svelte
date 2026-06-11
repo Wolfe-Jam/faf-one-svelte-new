@@ -343,7 +343,7 @@ faf: CLAUDE.md created — ○ 10%`}</code></pre>
 	.copy-code {
 		flex: 1;
 		font-family: 'Monaco', 'Courier New', monospace;
-		color: #FF6B35;
+		color: #00ff88; /* green = go signal; matches the heartbeat terminal */
 		background: transparent;
 		padding: 0;
 		font-size: 0.95rem;
