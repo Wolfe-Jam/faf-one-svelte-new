@@ -83,7 +83,8 @@ Use this palette for warning/solution flows throughout faf.one.
 8. **No tiny fonts.** If you can't read it comfortably, the font is too small.
 9. **Copy = 3–4 words, not long sentences.** Headlines, buttons, badges, CTAs — terse.
 10. **No gradients. Flat colors only.** (Exception: the brand-locked layout banner metallic shimmer; do not introduce new ones.)
-11. **No emojis.** Sparing + pre-approved set only (🏆 is the only one in the brand emoji ladder per `feedback-tier-symbols` memory). Drawn flat icons preferred. If you must, an emoji is a placeholder for an unbuilt icon — replace at next opportunity.
+11. **No emojis *in running text*.** Body copy, CTAs, labels, badges, code/copy lines → emoji-free; pre-approved set only (🏆) and even then sparing; drawn flat icons preferred (an inline emoji is a placeholder for an unbuilt icon — replace at next opportunity).
+    - **Carve-out — emoji-as-design-feature (wolfejam 2026-06-04):** a *super-scaled* emoji used as a **graphic element** on a design-featured card or blog hero (e.g. a large 🥐 / ⚡ / 🤝) is **ALLOWED** — at that size it's iconography/illustration, not running-text emoji. "When is an emoji not an emoji? When it's a scaled design feature." The ban is on emoji **in text**, not on scaled emoji-as-art. Still: generic emoji only, never others' logos.
 
 ### Token usage (the only legal palette)
 
