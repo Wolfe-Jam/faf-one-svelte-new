@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The Trust Edition v5.8.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>✪ claude-faf-mcp v5.8.0 — The Trust Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Claude Code-native context that just works. Every session opens with faf: context ✪ 100% — fresh. Quiet output, typed results, a parity hash any engine can verify. 35 tools, 547 tests.</p>
+			<a href="/blog/trust-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- The Relentless Edition v6.8.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">

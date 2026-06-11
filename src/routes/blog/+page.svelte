@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/trust-edition',
+			title: 'The Trust Edition',
+			date: 'June 11, 2026',
+			timestamp: '2026-06-11',
+			excerpt: 'claude-faf-mcp v5.8.0: Claude Code-native context that just works. Every session opens with faf: context ✪ 100% — fresh. Quiet output, typed results, a parity hash any engine can verify. 35 tools, 547 tests.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/chameleon-edition',
 			title: 'The Chameleon Edition',
 			date: 'June 7, 2026',
