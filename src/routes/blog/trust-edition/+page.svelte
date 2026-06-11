@@ -54,7 +54,7 @@
 
 			<p>Context is a relay. Every Claude Code session start is a handover &mdash; and the baton is one line:</p>
 
-			<pre><code>{`faf: context ✪ 100% — fresh
+			<pre class="heartbeat"><code>{`faf: context ✪ 100% — fresh
 faf: context refreshed — ✪ 100%
 faf: CLAUDE.md created — ○ 10%`}</code></pre>
 
@@ -267,6 +267,22 @@ faf: CLAUDE.md created — ○ 10%`}</code></pre>
 	pre code {
 		background: none;
 		padding: 0;
+	}
+
+	/* The heartbeat is the headline of the release — display treatment, not a footnote */
+	pre.heartbeat {
+		font-size: 1.5rem;
+		line-height: 2.1;
+		padding: 2.25rem 2.5rem;
+		border: 1px solid #333;
+		font-weight: 600;
+	}
+
+	@media (max-width: 768px) {
+		pre.heartbeat {
+			font-size: 1.05rem;
+			padding: 1.5rem 1.25rem;
+		}
 	}
 
 	.share-section {
