@@ -49,6 +49,21 @@
 		</div>
 	</section>
 
+	<!-- Section 1.5: Blog Ticker (latest releases) -->
+	<section class="blog-ticker" aria-label="Latest from the blog">
+		<a href="/blog" class="ticker-label">Latest</a>
+		<div class="ticker-viewport">
+			<div class="ticker-track">
+				<a href="/blog/sourced-edition" class="ticker-item"><b>v5.9.0</b> The Sourced Edition — sourced, not guessed</a>
+				<a href="/blog/composed-edition" class="ticker-item"><b>faf-cli 6.10</b> The Composed Edition — compose, never reimplement</a>
+				<a href="/blog/grounded-edition" class="ticker-item"><b>faf-cli 6.9</b> The Grounded Edition — grounding, measured</a>
+				<a href="/blog/sourced-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>v5.9.0</b> The Sourced Edition — sourced, not guessed</a>
+				<a href="/blog/composed-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 6.10</b> The Composed Edition — compose, never reimplement</a>
+				<a href="/blog/grounded-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 6.9</b> The Grounded Edition — grounding, measured</a>
+			</div>
+		</div>
+	</section>
+
 	<!-- Section 2: Trust Bar -->
 	<section class="trust">
 		<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">IANA Registered</a>
@@ -259,6 +274,66 @@
 	.btn-secondary:hover {
 		background: var(--faf-black);
 		color: var(--faf-white);
+	}
+
+	/* Blog Ticker (latest releases) */
+	.blog-ticker {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.75rem 1rem;
+		border-top: 1px solid var(--faf-light-gray);
+		border-bottom: 1px solid var(--faf-light-gray);
+		overflow: hidden;
+	}
+	.ticker-label {
+		flex-shrink: 0;
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--faf-orange);
+		text-decoration: none;
+	}
+	.ticker-label:hover {
+		text-decoration: underline;
+	}
+	.ticker-viewport {
+		flex: 1;
+		overflow: hidden;
+	}
+	.ticker-track {
+		display: inline-flex;
+		gap: 2.5rem;
+		white-space: nowrap;
+		animation: ticker-scroll 36s linear infinite;
+	}
+	.blog-ticker:hover .ticker-track {
+		animation-play-state: paused;
+	}
+	.ticker-item {
+		font-size: 0.9rem;
+		color: var(--faf-black);
+		text-decoration: none;
+	}
+	.ticker-item b {
+		color: var(--faf-cyan-dark);
+		font-weight: 700;
+	}
+	.ticker-item:hover {
+		color: var(--faf-orange);
+	}
+	@keyframes ticker-scroll {
+		from { transform: translateX(0); }
+		to { transform: translateX(-50%); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.ticker-track {
+			animation: none;
+		}
+		.ticker-viewport {
+			overflow-x: auto;
+		}
 	}
 
 	/* Trust Bar */
