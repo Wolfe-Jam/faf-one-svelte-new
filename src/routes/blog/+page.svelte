@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/lying-switch-trust-code',
+			title: 'The Lying, the Switch and the Trust Code',
+			date: 'June 12, 2026',
+			timestamp: '2026-06-12',
+			excerpt: "72 hours, 5 releases, 4 editions — the story of how software goes from telling the truth to being unable to lie. A disclosure handled with honest credit, a benchmark where the repo grades itself, and two Claude sessions catching each other's blind spots. FAF don't lie. And now it can't.",
+			emoji: '✪',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/sourced-edition',
 			title: 'The Sourced Edition',
 			date: 'June 12, 2026',
