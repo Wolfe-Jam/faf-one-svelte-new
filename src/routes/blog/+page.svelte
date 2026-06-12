@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/countdown-100k',
+			title: 'Countdown to 100k',
+			date: 'June 12, 2026',
+			timestamp: '2026-06-12',
+			excerpt: "91,565 downloads. 8,435 to go. The 100k milestone post is already written — and a robot checks every morning whether today's the day. Counts fed, pace derived, nothing typed by hand.",
+			emoji: '🏆',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/lying-switch-trust-code',
 			title: 'The Lying, the Switch and the Trust Code',
 			date: 'June 12, 2026',
