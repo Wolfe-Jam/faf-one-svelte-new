@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The Composed Edition v6.10.x -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>✪ faf-cli v6.10.x — The Composed Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">Every FAF MCP composes single-source engines, never reimplements them. Turbo-Cat + the bench engine join the public API — and a same-day no-guess patch proves the doctrine polices itself.</p>
+			<a href="/blog/composed-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- The Grounded Edition v6.9.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">

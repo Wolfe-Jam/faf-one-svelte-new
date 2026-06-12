@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/composed-edition',
+			title: 'The Composed Edition',
+			date: 'June 12, 2026',
+			timestamp: '2026-06-12',
+			excerpt: 'faf-cli v6.10.x: every FAF MCP composes single-source engines, never reimplements them. Turbo-Cat (~200 formats) and the bench engine join the public API — plus the same-day no-guess patch that proves the doctrine polices itself. 843 tests.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/grounded-edition',
 			title: "You're Grounded!",
 			date: 'June 12, 2026',
