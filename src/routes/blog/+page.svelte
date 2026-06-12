@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/sourced-edition',
+			title: 'The Sourced Edition',
+			date: 'June 12, 2026',
+			timestamp: '2026-06-12',
+			excerpt: "claude-faf-mcp v5.9.0 — composes faf-cli's single-source engines instead of carrying its own copies that drift. faf_go and Turbo-Cat now share one source; the guessing extractor is gone. Sourced, not guessed. 567 tests.",
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/composed-edition',
 			title: 'The Composed Edition',
 			date: 'June 12, 2026',
