@@ -420,7 +420,7 @@
 	}
 
 	.black-pill {
-		background: var(--faf-black);
+		background: #1a1a1a;
 		color: white;
 		border-radius: 30px 0 0 30px;
 	}
@@ -727,7 +727,7 @@
 
 	.roi-section {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		padding: 2rem;
 		border-radius: 12px;
 	}

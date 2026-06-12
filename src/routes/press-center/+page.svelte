@@ -241,7 +241,7 @@
 		border: 2px solid var(--faf-cream);
 		border-radius: 8px;
 		text-decoration: none;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		font-weight: 600;
 		transition: all 0.3s ease;
 	}

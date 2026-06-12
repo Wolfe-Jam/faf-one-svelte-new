@@ -380,7 +380,7 @@
 	.community-card.full-width {
 		grid-column: 1 / -1;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		border-color: var(--faf-orange);
 	}
 
@@ -539,7 +539,7 @@
 	.founders-stats {
 		padding: 4rem 0;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 	}
 	
 	.founders-stats h2 {

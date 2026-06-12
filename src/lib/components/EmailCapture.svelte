@@ -307,7 +307,7 @@
 	
 	.status.error {
 		background: #ff5252;
-		color: var(--faf-white);
+		color: white;
 		border: 2px solid #ff5252;
 	}
 	

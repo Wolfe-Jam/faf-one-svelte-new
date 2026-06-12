@@ -544,7 +544,7 @@ Claude: [Direct function call, 63ms execution]
 
 	.category {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		padding: 0.25rem 0.75rem;
 		border-radius: 20px;
 		font-size: 0.8rem;
@@ -696,7 +696,7 @@ Claude: [Direct function call, 63ms execution]
 
 	thead {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 	}
 
 	th {

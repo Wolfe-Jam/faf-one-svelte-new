@@ -459,7 +459,7 @@
 
 	.category {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		padding: 0.25rem 0.75rem;
 		border-radius: 20px;
 		font-size: 0.8rem;
@@ -732,7 +732,7 @@
 
 	.creator-statement {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		border-left: 6px solid var(--faf-orange);
 		padding: 2rem;
 		margin: 2rem 0;
@@ -909,7 +909,7 @@
 
 	.creator-philosophy {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		border-left: 6px solid var(--faf-orange);
 		padding: 2rem;
 		margin: 2rem 0;

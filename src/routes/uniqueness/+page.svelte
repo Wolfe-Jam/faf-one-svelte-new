@@ -797,7 +797,7 @@
 	.mcp-servers-table thead,
 	.competitive-table thead {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 	}
 
 	.comparison-table th,
@@ -837,7 +837,7 @@
 
 	.matrix-table thead {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 	}
 
 	.matrix-table th {
@@ -1041,7 +1041,7 @@
 
 	.final-statement {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		border-left: 6px solid var(--faf-orange);
 		padding: 2rem;
 		margin: 2rem 0;

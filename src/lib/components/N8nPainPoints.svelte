@@ -564,7 +564,7 @@
 
 	.reality-with .reality-header {
 		background: #019193;
-		color: var(--faf-white);
+		color: white;
 	}
 
 	.reality-list {
@@ -650,7 +650,7 @@
 	.code-badge {
 		font-size: 0.875rem;
 		background: #019193;
-		color: var(--faf-white);
+		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 999px;
 		display: inline-block;
@@ -681,7 +681,7 @@
 		margin: 0 auto;
 		text-align: center;
 		background: #019193;
-		color: var(--faf-white);
+		color: white;
 		border-radius: 16px;
 		padding: 3rem 2rem;
 		border: 3px solid var(--faf-black);
@@ -740,12 +740,12 @@
 
 	.btn-incident {
 		background: #dc2626;
-		color: var(--faf-white);
+		color: white;
 		border-color: #dc2626;
 	}
 
 	.btn-incident:hover {
-		background: var(--faf-white);
+		background: white;
 		color: #dc2626;
 		transform: translateY(-2px);
 		box-shadow: 0 6px 12px rgba(220, 38, 38, 0.3);
@@ -765,7 +765,7 @@
 	}
 
 	.btn-primary {
-		background: var(--faf-white);
+		background: white;
 		color: #019193;
 		border-color: var(--faf-white);
 	}

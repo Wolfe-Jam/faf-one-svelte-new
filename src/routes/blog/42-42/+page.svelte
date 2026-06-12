@@ -500,7 +500,7 @@
 		gap: 1rem;
 		padding: 0.75rem 1rem;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		font-weight: 700;
 		border-radius: 8px 8px 0 0;
 	}

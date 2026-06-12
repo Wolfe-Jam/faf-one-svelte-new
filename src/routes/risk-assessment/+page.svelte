@@ -397,14 +397,14 @@
 	}
 
 	.black-pill {
-		background: var(--faf-black);
+		background: #1a1a1a;
 		color: white;
 		border-radius: 30px 0 0 30px;
 	}
 
 	.white-pill {
 		background: white;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		border-radius: 0 30px 30px 0;
 	}
 
@@ -460,7 +460,7 @@
 	}
 
 	.white-pill input {
-		color: var(--faf-black);
+		color: #1a1a1a;
 		background: rgba(0, 0, 0, 0.05);
 		border-color: rgba(0, 0, 0, 0.1);
 	}
@@ -522,7 +522,7 @@
 
 	.toggle-btn.active {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 	}
 
 	.risk-grid {
@@ -613,7 +613,7 @@
 
 	.scale-item.active {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		transform: scale(1.1);
 	}
 
@@ -714,7 +714,7 @@
 
 	.buffer-explanation {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		padding: 0.25rem 0.75rem;
 		border-radius: 6px;
 		font-weight: 700;
@@ -762,7 +762,7 @@
 	/* Impact Summary */
 	.impact-summary {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		padding: 2rem;
 		border-radius: 12px;
 		margin-bottom: 2rem;

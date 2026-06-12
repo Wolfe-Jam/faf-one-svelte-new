@@ -492,17 +492,17 @@
 
 	.tier-badge.silver {
 		background: #C0C0C0;
-		color: var(--faf-black);
+		color: #1a1a1a;
 	}
 
 	.tier-badge.gold {
 		background: #FFD700;
-		color: var(--faf-black);
+		color: #1a1a1a;
 	}
 
 	.tier-badge.platinum {
 		background: #E5E4E2;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		border: 2px solid #B9B9B9;
 	}
 

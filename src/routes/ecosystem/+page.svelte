@@ -325,9 +325,9 @@
     .tool-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
     .link-primary { background: var(--faf-orange); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.925rem; transition: all 0.2s ease; }
     .link-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    .link-secondary { background: #f0f0f0; color: var(--faf-black); padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.925rem; transition: all 0.2s ease; }
+    .link-secondary { background: #f0f0f0; color: #1a1a1a; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.925rem; transition: all 0.2s ease; }
     .link-secondary:hover { background: #e0e0e0; }
-    .install-box { background: var(--faf-black); color: white; padding: 1rem; border-radius: 6px; margin-top: 0.5rem; }
+    .install-box { background: #1a1a1a; color: white; padding: 1rem; border-radius: 6px; margin-top: 0.5rem; }
     .install-box code { font-family: var(--font-mono); font-size: 0.875rem; color: white; }
     .ecosystem-stats { max-width: 1200px; margin: 4rem auto; text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #fff5f0 0%, white 100%); border-radius: 12px; border: 2px solid var(--faf-orange); }
     .ecosystem-stats h2 { font-size: 2rem; color: var(--faf-black); margin-bottom: 0.5rem; }
@@ -342,7 +342,7 @@
     .option { background: white; border: 2px solid #e0e0e0; border-radius: 12px; padding: 2rem; }
     .option h3 { font-size: 1.25rem; color: var(--faf-black); margin: 0 0 0.5rem 0; }
     .option p { color: #666; margin: 0 0 1rem 0; }
-    .code-block { background: var(--faf-black); color: white; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
+    .code-block { background: #1a1a1a; color: white; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
     .code-block code { font-family: var(--font-mono); font-size: 0.875rem; color: white; }
     .btn-primary { display: inline-block; background: var(--faf-orange); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.2s ease; margin-top: 1rem; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }

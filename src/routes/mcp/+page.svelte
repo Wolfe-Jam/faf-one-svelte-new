@@ -491,7 +491,7 @@
 		background: var(--faf-black);
 		padding: 1rem;
 		font-weight: 700;
-		color: white;
+		color: var(--faf-white);
 		font-size: 1.125rem;
 	}
 
@@ -700,12 +700,12 @@
 
 	.tab {
 		padding: 0.75rem 1.5rem;
-		background: white;
+		background: var(--faf-white);
 		border: 2px solid var(--faf-light-gray);
 		border-radius: 8px;
 		font-size: 1rem;
 		font-weight: 600;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		cursor: pointer;
 		transition: all 0.3s ease;
 	}
@@ -722,7 +722,7 @@
 	}
 
 	.tab-content {
-		background: white;
+		background: var(--faf-white);
 		border-radius: 12px;
 		padding: 2rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -910,7 +910,7 @@
 	}
 
 	.pattern-examples code {
-		background: var(--faf-black);
+		background: #1a1a1a;
 		color: white;
 		padding: 0.5rem 1rem;
 		border-radius: 6px;
@@ -965,7 +965,7 @@
 
 	.btn-secondary:hover {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		transform: translateY(-2px);
 	}
 

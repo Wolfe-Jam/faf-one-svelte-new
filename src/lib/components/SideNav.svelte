@@ -125,7 +125,7 @@
 		width: 300px;
 		height: 100vh;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		transition: left 0.3s ease;
 		z-index: 1000;
 		overflow-y: auto;

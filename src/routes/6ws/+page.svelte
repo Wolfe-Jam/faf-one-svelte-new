@@ -737,11 +737,11 @@
   .tab {
     padding: 0.75rem 1.5rem;
     border: none;
-    background: #e5e5e5;
+    background: var(--faf-light-gray);
     border-radius: 8px 8px 0 0;
     cursor: pointer;
     font-weight: 600;
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     transition: all 0.2s;
   }
 

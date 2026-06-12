@@ -428,7 +428,7 @@
 		margin-top: 2rem;
 		padding: 2rem;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		border-radius: 12px;
 		text-align: center;
 	}

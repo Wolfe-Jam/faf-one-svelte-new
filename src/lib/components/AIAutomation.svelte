@@ -377,7 +377,7 @@ automation:
 		font-weight: 900;
 		font-family: var(--font-mono);
 		color: #019193;
-		background: var(--faf-white);
+		background: white;
 		padding: 0.5rem 1rem;
 		border-radius: 8px;
 		border: 2px solid #019193;
@@ -499,7 +499,7 @@ automation:
 	}
 
 	.platform-tag {
-		background: var(--faf-white);
+		background: white;
 		color: #019193;
 		padding: 0.5rem 1rem;
 		border-radius: 999px;
@@ -520,7 +520,7 @@ automation:
 		margin: 0 auto;
 		text-align: center;
 		background: #019193;
-		color: var(--faf-white);
+		color: white;
 		border-radius: 16px;
 		padding: 3rem 2rem;
 		border: 3px solid var(--faf-black);
@@ -531,7 +531,7 @@ automation:
 		display: inline-flex;
 		align-items: center;
 		gap: 0.5rem;
-		background: var(--faf-white);
+		background: white;
 		color: #019193;
 		padding: 0.5rem 1.5rem;
 		border-radius: 999px;
@@ -548,14 +548,14 @@ automation:
 		font-size: 2.5rem;
 		font-weight: 900;
 		margin-bottom: 1rem;
-		color: var(--faf-white);
+		color: white;
 	}
 
 	.availability-description {
 		font-size: 1.125rem;
 		line-height: 1.6;
 		margin-bottom: 2rem;
-		color: var(--faf-white);
+		color: white;
 	}
 
 	.availability-cta {
@@ -589,7 +589,7 @@ automation:
 
 	.btn-primary {
 		display: inline-block;
-		background: var(--faf-white);
+		background: white;
 		color: #019193;
 		padding: 1rem 2rem;
 		border-radius: 8px;

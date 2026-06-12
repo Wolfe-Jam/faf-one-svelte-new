@@ -803,7 +803,7 @@ Dashboard application
 		padding: 1.5rem;
 		background: var(--faf-black);
 		border-radius: 8px;
-		color: white;
+		color: var(--faf-white);
 	}
 
 	.cta-section h2 {

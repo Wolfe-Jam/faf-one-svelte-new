@@ -797,12 +797,12 @@
 		align-items: center;
 		gap: 0.75rem;
 		padding: 0.75rem 1.5rem;
-		background: white;
+		background: var(--faf-white);
 		border: 2px solid var(--faf-gray-medium);
 		border-radius: 999px;
 		font-size: 0.875rem;
 		font-weight: 600;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		transition: all 0.3s ease;
 		cursor: pointer;
 		text-decoration: none;
@@ -890,7 +890,7 @@
 		gap: 0.5rem;
 		padding: 0.75rem 1.5rem;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		border-radius: 999px;
 		font-weight: 600;
 		font-size: 0.9rem;
@@ -907,7 +907,7 @@
 
 	.official-badge.official-merged {
 		background: linear-gradient(135deg, var(--faf-orange) 0%, #ff8c4d 100%);
-		color: white;
+		color: var(--faf-white);
 		font-weight: 700;
 		animation: pulse 2s ease-in-out infinite;
 		box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);

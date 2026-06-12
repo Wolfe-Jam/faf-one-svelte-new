@@ -500,8 +500,8 @@ faf auto</code></pre>
 	}
 
 	.code-block {
-		background: var(--faf-dark);
-		color: #009999;
+		background: #1a1a1a;
+		color: #00d4d4;
 		padding: 1.5rem;
 		border-radius: 8px;
 		margin: 1rem 0;

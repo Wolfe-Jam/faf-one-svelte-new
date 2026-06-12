@@ -319,7 +319,7 @@
 
 	.press-hero {
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		padding: 4rem 0;
 		text-align: center;
 		border-bottom: 3px solid var(--faf-orange);
@@ -469,7 +469,7 @@
 	.press-quotes {
 		padding: 4rem 0;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 	}
 	
 	.press-quotes h2 {
@@ -725,7 +725,7 @@
 	.social-link {
 		padding: 0.5rem 1.5rem;
 		background: var(--faf-black);
-		color: white;
+		color: var(--faf-white);
 		text-decoration: none;
 		border-radius: 6px;
 		font-weight: 600;

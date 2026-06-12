@@ -84,16 +84,16 @@
 	.blog-signup {
 		margin: 3rem 0 1rem;
 		padding: 2rem;
-		border: 1px solid #e5e5e5;
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 10px;
 		text-align: center;
-		background: #fafafa;
+		background: var(--faf-white);
 	}
 
 	.blog-label {
 		margin: 0 0 1rem;
 		font-size: 1rem;
-		color: #555;
+		color: var(--faf-dark);
 		font-weight: 600;
 	}
 
@@ -109,7 +109,9 @@
 		flex: 1;
 		padding: 0.75rem 1rem;
 		font-size: 0.9rem;
-		border: 2px solid #ddd;
+		background: var(--faf-cream);
+		color: var(--faf-dark);
+		border: 2px solid var(--faf-light-gray);
 		border-radius: 6px;
 		outline: none;
 		transition: border-color 0.2s;
@@ -142,7 +144,7 @@
 
 	.blog-success {
 		margin: 0;
-		color: #555;
+		color: var(--faf-dark);
 		font-size: 0.95rem;
 	}
 
@@ -185,7 +187,7 @@
 	}
 
 	.footer-input::placeholder {
-		color: #555;
+		color: #aaa;
 	}
 
 	.footer-input:focus {
