@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/grounded-edition',
+			title: "You're Grounded!",
+			date: 'June 12, 2026',
+			timestamp: '2026-06-12',
+			excerpt: 'faf-cli v6.9.0 — The Grounded Edition. faf bench: your AI without context vs with it, graded by your own .faf (8/15 → 15/15 on our fleet). The 6Ws Interview goes public-API. faf refresh: drift → refresh → re-grounded. 820 tests.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/trust-edition',
 			title: 'The Trust Edition',
 			date: 'June 11, 2026',

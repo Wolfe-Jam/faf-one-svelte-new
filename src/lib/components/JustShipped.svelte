@@ -57,6 +57,20 @@
 			</p>
 		</div>
 
+		<!-- The Grounded Edition v6.9.0 -->
+		<div class="chrome-featured">
+			<div class="chrome-header">
+				<div class="chrome-title">
+					<h3>✪ faf-cli v6.9.0 — The Grounded Edition</h3>
+					<span class="chrome-badge">Just Shipped</span>
+				</div>
+			</div>
+			<p class="chrome-description">You're Grounded! faf bench measures your AI cold vs with-faf — graded by your own .faf, ✪ receipts. The 6Ws Interview goes public-API. faf refresh: drift → refresh → re-grounded.</p>
+			<a href="/blog/grounded-edition" class="chrome-install">
+				Read the Blog Post →
+			</a>
+		</div>
+
 		<!-- The Trust Edition v5.8.0 -->
 		<div class="chrome-featured">
 			<div class="chrome-header">
