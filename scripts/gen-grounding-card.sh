@@ -22,6 +22,7 @@ set -euo pipefail
 
 MODEL="" REPO="your-repo" COLD="9/20" WARM="20/20" LOOKC="11" LOOKW="0"
 FILE="" ACCENT="" URL="" CMD="faf export --agents" BENCH="npx faf-cli bench" OUT=""
+COLDNOTE="" WARMNOTE="" RECEIPT="" MODELLABEL=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --model)     MODEL="$2"; shift 2;;
@@ -30,6 +31,10 @@ while [ $# -gt 0 ]; do
     --warm)      WARM="$2"; shift 2;;
     --look-cold) LOOKC="$2"; shift 2;;
     --look-warm) LOOKW="$2"; shift 2;;
+    --cold-note) COLDNOTE="$2"; shift 2;;
+    --warm-note) WARMNOTE="$2"; shift 2;;
+    --receipt)   RECEIPT="$2"; shift 2;;
+    --model-label) MODELLABEL="$2"; shift 2;;
     --file)      FILE="$2"; shift 2;;
     --accent)    ACCENT="$2"; shift 2;;
     --url)       URL="$2"; shift 2;;
@@ -54,6 +59,12 @@ esac
 [ -z "$FILE" ]   && FILE="$DEFFILE"
 [ -z "$ACCENT" ] && ACCENT="$DEFACC"
 [ -z "$URL" ]    && URL="faf.one/${MODEL_LC}"
+# Sub-line notes: explicit --cold-note/--warm-note win; else fall back to lookups text.
+[ -z "$COLDNOTE" ] && COLDNOTE="${MODEL} re-reads the repo &mdash; <b>${LOOKC} lookups</b> / task, answers drift"
+[ -z "$WARMNOTE" ] && WARMNOTE="structured context in <b>${FILE}</b> &mdash; <b>${LOOKW} lookups</b>, same answer every time"
+# Foot label: real ✪ receipt sha when provided, else the generic label.
+FOOTLABEL="context grounding score"
+[ -n "$RECEIPT" ] && FOOTLABEL="✪ ${RECEIPT}"
 
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 [ -x "$CHROME" ] || CHROME="$(command -v chromium || command -v google-chrome || true)"
@@ -115,7 +126,7 @@ cat > "$WORK/card.html" <<EOF
         <span class="bigscore">${COLD}</span>
         <span class="tag">guessing</span>
       </div>
-      <div class="sub">${MODEL} re-reads the repo &mdash; <b>${LOOKC} lookups</b> / task, answers drift</div>
+      <div class="sub">${COLDNOTE}</div>
 
       <div class="arrow">&darr;</div>
       <div class="fix">
@@ -129,10 +140,10 @@ cat > "$WORK/card.html" <<EOF
         <span class="seal">✪</span>
         <span class="tag">grounded</span>
       </div>
-      <div class="sub">structured context in <b>${FILE}</b> &mdash; <b>${LOOKW} lookups</b>, same answer every time</div>
+      <div class="sub">${WARMNOTE}</div>
 
       <div class="foot">
-        <span class="what">context grounding score</span>
+        <span class="what">${FOOTLABEL}</span>
         <span class="url"><b>${URL}</b></span>
       </div>
     </div>
