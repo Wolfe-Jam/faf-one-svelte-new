@@ -2,7 +2,6 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	// import SideNav from '$lib/components/SideNav.svelte';
 	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
 
 	let { children, data } = $props();
@@ -38,7 +37,6 @@
 	<title>.faf = Project DNA ✨ for ANY AI | IANA-Registered Format</title>
 </svelte:head>
 
-<!-- SideNav removed — using top nav only -->
 
 <div class="theme-toggle">
 	<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
@@ -63,30 +61,7 @@
 
 {@render children?.()}
 
-<!-- WolfejamGizmo Theme Toggle - Hidden until full theme implementation -->
-<!-- <div class="theme-toggle-container">
-	<WolfejamGizmo
-		isDark={$isDarkMode}
-		size={48}
-		ontoggle={handleThemeToggle}
-	/>
-</div> -->
-
 <style>
-	/* .theme-toggle-container {
-		position: fixed;
-		bottom: 24px;
-		right: 24px;
-		z-index: 1000;
-	}
-
-	@media (max-width: 640px) {
-		.theme-toggle-container {
-			bottom: 16px;
-			right: 16px;
-		}
-	} */
-
 	/* LOCKED-DARK by design (wolfejam 2026-05-22) — banner stays
 	   dark over any page below it, regardless of theme toggle. Do
 	   NOT convert these literals to brand vars. See CLAUDE.md
