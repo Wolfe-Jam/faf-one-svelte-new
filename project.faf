@@ -6,17 +6,17 @@ project:
   type: svelte
 stack:
   frontend: SvelteKit
-  css_framework: ""
-  ui_library: ""
-  state_management: ""
-  backend: ""
-  api_type: ""
+  css_framework: slotignored
+  ui_library: slotignored
+  state_management: Svelte 5 runes
+  backend: Supabase (BaaS)
+  api_type: REST (Supabase)
   runtime: Node.js
-  database: ""
-  connection: ""
-  hosting: Vercel
+  database: Supabase (Postgres)
+  connection: "@supabase/supabase-js"
+  hosting: Cloudflare Pages
   build: Vite
-  cicd: ""
+  cicd: GitHub Actions
   monorepo_tool: slotignored
   package_manager: slotignored
   workspaces: slotignored
@@ -25,12 +25,12 @@ stack:
   search: slotignored
   storage: slotignored
 human_context:
-  who: ""
+  who: Developers and teams adopting AI context, and anyone discovering the .faf format
   what: FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
-  why: ""
-  where: ""
-  when: ""
-  how: ""
+  why: Be the canonical home for .faf - explain the format, host docs and blog, drive adoption of AI-readable project context
+  where: faf.one - Cloudflare Pages
+  when: Production - live, continuously deployed
+  how: SvelteKit (Svelte 5 runes), built with Vite, deployed to Cloudflare Pages
 monorepo:
   packages_count: slotignored
   build_orchestrator: slotignored

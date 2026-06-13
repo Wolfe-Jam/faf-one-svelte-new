@@ -1,3 +1,41 @@
+<!-- faf:start -->
+<!-- faf: faf-one-svelte | TypeScript | svelte | FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management -->
+<!-- faf: claim=project.faf | family=FAF -->
+
+# CLAUDE.md — faf-one-svelte
+
+## What This Is
+
+FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+
+## Stack
+
+- **Language:** TypeScript
+- **Frontend:** SvelteKit
+- **State Management:** Svelte 5 runes
+- **Backend:** Supabase (BaaS)
+- **Api Type:** REST (Supabase)
+- **Runtime:** Node.js
+- **Database:** Supabase (Postgres)
+- **Connection:** @supabase/supabase-js
+- **Hosting:** Cloudflare Pages
+- **Build:** Vite
+- **Cicd:** GitHub Actions
+
+## Context
+
+- **Who:** Developers and teams adopting AI context, and anyone discovering the .faf format
+- **What:** FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+- **Why:** Be the canonical home for .faf - explain the format, host docs and blog, drive adoption of AI-readable project context
+- **Where:** faf.one - Cloudflare Pages
+- **When:** Production - live, continuously deployed
+- **How:** SvelteKit (Svelte 5 runes), built with Vite, deployed to Cloudflare Pages
+
+---
+
+*STATUS: BI-SYNC ACTIVE — 2026-06-13T18:30:55.676Z*
+<!-- faf:end -->
+
 # CLAUDE.md - FAF Website Development
 
 ## 🛑 NO BS ZONE 🛑
