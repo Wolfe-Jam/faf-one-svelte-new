@@ -1,16 +1,31 @@
 {
-  "_comment": "Grounding bench receipts — the growing proof wall. Each entry is a real faf bench run (mechanical grading against the repo's own .faf), sha-stamped and falsifiable. Append one per run; never edit a number. NO-BS: only real runs go here.",
+  "_comment": "Grounding bench receipts — the growing proof wall. Each entry is a real faf bench run (mechanical grading against the repo's own .faf, the .faf IS the answer key), sha-stamped and falsifiable. Track 'in-session' = honor-system cold (agent self-run, depth track). Append one per run; never edit a number. NO-BS: only real runs here.",
   "schema": "faf-grounding-receipts/1",
   "receipts": [
     {
-      "date": "2026-06-13",
-      "model": "Claude Opus 4.8",
-      "repo": "faf-cli",
-      "qset": "afd631cf7491",
-      "cold": "1/9",
-      "faf": "8/9",
-      "sha256": "ecbdf362483ae1d6",
-      "card": "/cards/faf-cli-claude-real.png"
+      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "faf-cli",
+      "qset": "afd631cf7491", "cold": "1/9", "faf": "8/9",
+      "sha256": "ecbdf362483ae1d6", "track": "in-session", "card": "/cards/faf-cli-claude-real.png"
+    },
+    {
+      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "claude-faf-mcp",
+      "qset": "15e8cf16c307", "cold": "5/15", "faf": "15/15",
+      "sha256": "eba37563276c8f70", "track": "in-session", "card": "/cards/claude-faf-mcp-claude.png"
+    },
+    {
+      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "grok-faf-mcp",
+      "qset": "15e8cf16c307", "cold": "4/15", "faf": "11/15",
+      "sha256": "0cb9593756ab5c27", "track": "in-session", "card": "/cards/grok-faf-mcp-claude.png"
+    },
+    {
+      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "faf-mcp",
+      "qset": "15e8cf16c307", "cold": "3/15", "faf": "12/15",
+      "sha256": "8ef4e764b5ebb897", "track": "in-session", "card": "/cards/faf-mcp-claude.png"
+    },
+    {
+      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "mcpaas-cf",
+      "qset": "6c404ce12195", "cold": "6/17", "faf": "16/17",
+      "sha256": "6f2d5958d02d2770", "track": "in-session", "card": "/cards/mcpaas-cf-claude.png"
     }
   ]
 }
