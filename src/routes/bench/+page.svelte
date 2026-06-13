@@ -1,7 +1,7 @@
 <script>
-	import ledger from '$lib/grounding-receipts.json';
+	let { data } = $props();
 
-	const runs = ledger.receipts;
+	const runs = data.receipts;
 	const pct = (s) => { const [a, b] = s.split('/').map(Number); return Math.round((a / b) * 100); };
 	const avgCold = Math.round(runs.reduce((s, r) => s + pct(r.cold), 0) / runs.length);
 	const avgFaf = Math.round(runs.reduce((s, r) => s + pct(r.faf), 0) / runs.length);
