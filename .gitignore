@@ -42,3 +42,4 @@ static/welcome.html
 # Backup files
 *.bak
 .faf-bench.json
+project.html
