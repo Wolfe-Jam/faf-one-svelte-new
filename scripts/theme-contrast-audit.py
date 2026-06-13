@@ -108,6 +108,7 @@ def parse_rules(css, fname):
     return issues
 
 def main():
+    ci = '--ci' in sys.argv
     all_issues = []
     for dirpath, _, files in os.walk(ROOT):
         for f in files:
@@ -123,16 +124,24 @@ def main():
         by_file.setdefault(i['file'], []).append(i)
     hard = [i for i in all_issues if i['verdict'].startswith('BREAKS')]
     print(f"TOTAL issues: {len(all_issues)}  HARD breaks: {len(hard)}  files: {len(by_file)}")
-    print()
-    for f in sorted(by_file, key=lambda f: -len([i for i in by_file[f] if i['verdict'].startswith('BREAKS')])):
-        fi = by_file[f]
-        h = len([i for i in fi if i['verdict'].startswith('BREAKS')])
-        print(f"== {f}  ({h} hard / {len(fi)} total)")
-        for i in fi:
-            if i['verdict'].startswith('BREAKS'):
-                print(f"   L{i['line']:4} {i['selector'][:50]:50} bg={str(i['bg'])[:30]:30} color={str(i['color'])[:25]:25} {i['verdict']}")
+    if hard or not ci:
+        print()
+        for f in sorted(by_file, key=lambda f: -len([i for i in by_file[f] if i['verdict'].startswith('BREAKS')])):
+            fi = by_file[f]
+            h = len([i for i in fi if i['verdict'].startswith('BREAKS')])
+            if ci and not h: continue
+            print(f"== {f}  ({h} hard / {len(fi)} total)")
+            for i in fi:
+                if i['verdict'].startswith('BREAKS'):
+                    print(f"   L{i['line']:4} {i['selector'][:50]:50} bg={str(i['bg'])[:30]:30} color={str(i['color'])[:25]:25} {i['verdict']}")
     if '--json' in sys.argv:
         json.dump(all_issues, open('/tmp/theme-audit.json', 'w'), indent=1)
         print("\nJSON: /tmp/theme-audit.json")
+    if ci and hard:
+        print(f"\nFAIL: {len(hard)} hard theme-contrast breaks — fix before deploy "
+              "(see CLAUDE.md Theming Rules)")
+        sys.exit(1)
+    if ci:
+        print("PASS: zero hard theme-contrast breaks")
 
 main()
