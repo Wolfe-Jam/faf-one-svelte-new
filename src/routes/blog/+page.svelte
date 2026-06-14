@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/ledger-edition',
+			title: 'The Ledger Edition',
+			date: 'June 14, 2026',
+			timestamp: '2026-06-14',
+			excerpt: 'faf bench --submit posts your cold-vs-grounded receipt to the public ledger — the context bench goes public, one command.',
+			emoji: '🏎️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/countdown-100k',
 			title: 'Countdown to 100k',
 			date: 'June 12, 2026',
