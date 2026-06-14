@@ -23,11 +23,15 @@ export async function load({ fetch }) {
 		// endpoint not deployed / slow / down → seed-only, no error to the user
 	}
 
+	// Dedup by repo+sha: the receipt sha is a score attestation, so distinct
+	// repos can share one. repo+sha keeps different repos, collapses re-submits.
 	const seen = new Set();
 	const receipts = [];
 	for (const r of [...bundled.receipts, ...live]) {
-		if (!r || typeof r.sha256 !== 'string' || seen.has(r.sha256)) continue;
-		seen.add(r.sha256);
+		if (!r || typeof r.sha256 !== 'string') continue;
+		const key = `${r.repo}::${r.sha256}`;
+		if (seen.has(key)) continue;
+		seen.add(key);
 		receipts.push(r);
 	}
 	return { receipts };
