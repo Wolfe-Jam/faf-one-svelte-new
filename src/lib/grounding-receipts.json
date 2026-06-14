@@ -3,29 +3,59 @@
   "schema": "faf-grounding-receipts/1",
   "receipts": [
     {
-      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "faf-cli",
-      "qset": "afd631cf7491", "cold": "1/9", "faf": "8/9",
-      "sha256": "ecbdf362483ae1d6", "track": "in-session", "card": "/cards/faf-cli-claude-real.png"
+      "date": "2026-06-13",
+      "model": "Claude Opus 4.8",
+      "repo": "faf-cli",
+      "qset": "afd631cf7491",
+      "cold": "1/9",
+      "faf": "8/9",
+      "sha256": "4d0b9cad80b3d382",
+      "track": "in-session",
+      "card": "/cards/faf-cli-claude-real.png"
     },
     {
-      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "claude-faf-mcp",
-      "qset": "15e8cf16c307", "cold": "5/15", "faf": "15/15",
-      "sha256": "eba37563276c8f70", "track": "in-session", "card": "/cards/claude-faf-mcp-claude.png"
+      "date": "2026-06-13",
+      "model": "Claude Opus 4.8",
+      "repo": "claude-faf-mcp",
+      "qset": "15e8cf16c307",
+      "cold": "5/15",
+      "faf": "15/15",
+      "sha256": "6c384139ed0b26e2",
+      "track": "in-session",
+      "card": "/cards/claude-faf-mcp-claude.png"
     },
     {
-      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "grok-faf-mcp",
-      "qset": "15e8cf16c307", "cold": "4/15", "faf": "11/15",
-      "sha256": "0cb9593756ab5c27", "track": "in-session", "card": "/cards/grok-faf-mcp-claude.png"
+      "date": "2026-06-13",
+      "model": "Claude Opus 4.8",
+      "repo": "grok-faf-mcp",
+      "qset": "15e8cf16c307",
+      "cold": "4/15",
+      "faf": "11/15",
+      "sha256": "99c3127da583d4d9",
+      "track": "in-session",
+      "card": "/cards/grok-faf-mcp-claude.png"
     },
     {
-      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "faf-mcp",
-      "qset": "15e8cf16c307", "cold": "3/15", "faf": "12/15",
-      "sha256": "8ef4e764b5ebb897", "track": "in-session", "card": "/cards/faf-mcp-claude.png"
+      "date": "2026-06-13",
+      "model": "Claude Opus 4.8",
+      "repo": "faf-mcp",
+      "qset": "15e8cf16c307",
+      "cold": "3/15",
+      "faf": "12/15",
+      "sha256": "cd5e526ac9995490",
+      "track": "in-session",
+      "card": "/cards/faf-mcp-claude.png"
     },
     {
-      "date": "2026-06-13", "model": "Claude Opus 4.8", "repo": "mcpaas-cf",
-      "qset": "6c404ce12195", "cold": "6/17", "faf": "16/17",
-      "sha256": "6f2d5958d02d2770", "track": "in-session", "card": "/cards/mcpaas-cf-claude.png"
+      "date": "2026-06-13",
+      "model": "Claude Opus 4.8",
+      "repo": "mcpaas-cf",
+      "qset": "6c404ce12195",
+      "cold": "6/17",
+      "faf": "16/17",
+      "sha256": "702e70d78f84ea2f",
+      "track": "in-session",
+      "card": "/cards/mcpaas-cf-claude.png"
     }
   ]
 }
