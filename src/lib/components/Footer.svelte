@@ -38,6 +38,7 @@
 					<li><a href="/docs">Documentation</a></li>
 					<li><a href="https://fafdev.tools/welcome.html" target="_blank">Links</a></li>
 					<li><a href="/support">Support</a></li>
+					<li><a href="/sponsors">Sponsor</a></li>
 					<li><a href="/calculator">ROI Calculator</a></li>
 					<li><a href="https://billing.stripe.com/p/login/4gM3cx1NPbfo42Lab6bV600" target="_blank">Customer Portal</a></li>
 					<li><a href="/founders">Founders Circle</a></li>
