@@ -133,7 +133,7 @@
 
 			<ul>
 				<li><strong>Structure:</strong> YAML-based with sections for mission, tech_stack, key_files, context (architecture, conventions).</li>
-				<li><strong>Tools:</strong> faf-cli (41 commands), MCP server integration (Anthropic-approved merge #2759), Rust SDK.</li>
+				<li><strong>Tools:</strong> faf-cli (41 commands), MCP server integration (Anthropic-merged #2759), Rust SDK.</li>
 				<li><strong>Validation:</strong> Cross-platform scores (9.0-9.5/10), IANA registration (<code>application/vnd.faf+yaml</code>, Oct 2025).</li>
 				<li><strong>Binary Companion:</strong> .fafb for efficient loading&mdash;32-byte header, priority sections for token budgets.</li>
 			</ul>

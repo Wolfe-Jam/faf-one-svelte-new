@@ -41,7 +41,7 @@
 					<p>Permanent standard status</p>
 				</div>
 				<div class="benefit-card">
-					<h3>🤖 MCP Approved</h3>
+					<h3>🤖 MCP Merged</h3>
 					<p>Official Anthropic integration</p>
 				</div>
 				<div class="benefit-card">
@@ -280,7 +280,7 @@
 			</div>
 
 			<p class="cta-footer">
-				<small>IANA-registered | Anthropic MCP-approved | xAI-integrated</small>
+				<small>IANA-registered | Anthropic-merged | xAI-integrated</small>
 			</p>
 		</div>
 	</section>

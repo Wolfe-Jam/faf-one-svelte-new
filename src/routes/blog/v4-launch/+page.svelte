@@ -17,7 +17,7 @@
 
 <svelte:head>
 	<title>FAF v4.0: The Format That Became a Standard | FAF</title>
-	<meta name="description" content="FAF v4.0 Foundation Layer release. IANA registered, Anthropic approved, 21,000+ downloads. Grok: 'Game-changer for eternal AI context' (9.5/10)." />
+	<meta name="description" content="FAF v4.0 Foundation Layer release. IANA registered, Anthropic merged, 21,000+ downloads. Grok: 'Game-changer for eternal AI context' (9.5/10)." />
 	<meta property="og:title" content="FAF v4.0: The Format That Became a Standard" />
 	<meta property="og:description" content="The Foundation Layer release. Persistent AI context for every project." />
 	<meta property="og:image" content="/blog-assets/faf-v4-banner.png" />

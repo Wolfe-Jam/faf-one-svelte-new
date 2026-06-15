@@ -98,7 +98,7 @@
 			<div class="faf-position">
 				<h3>FAF Was There</h3>
 				<p>
-					<strong>claude-faf-mcp</strong> is an Anthropic-approved MCP server, merged to the official registry (PR #2759, October 17, 2025). We were MCP before MCP went mainstream.
+					<strong>claude-faf-mcp</strong> is an Anthropic-merged MCP server in the official registry (PR #2759, October 17, 2025). We were MCP before MCP went mainstream.
 				</p>
 			</div>
 		</section>
@@ -140,7 +140,7 @@
 				</div>
 			</div>
 			<p class="summary-text">
-				20k+ ecosystem downloads. Anthropic-approved. Building on infrastructure that's now industry standard.
+				20k+ ecosystem downloads. Anthropic-merged. Building on infrastructure that's now industry standard.
 			</p>
 		</section>
 

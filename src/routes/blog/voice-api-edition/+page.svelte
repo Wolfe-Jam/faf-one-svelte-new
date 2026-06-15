@@ -308,7 +308,7 @@ xai_collections:
 				<li>✅ <strong>Open source</strong> (MIT license)</li>
 				<li>✅ <strong>Battle-tested</strong> (25k+ downloads)</li>
 				<li>✅ <strong>IANA-registered</strong> (application/vnd.faf+yaml)</li>
-				<li>✅ <strong>Anthropic-approved</strong> (MCP ecosystem #2759)</li>
+				<li>✅ <strong>Anthropic-merged</strong> (MCP ecosystem #2759)</li>
 			</ul>
 			<p class="highlight">
 				<strong>One format. One file. Universal AI context.</strong><br>

@@ -41,7 +41,7 @@ export const npmPackages: Package[] = [
 	},
 	{
 		name: 'claude-faf-mcp',
-		description: 'Anthropic-approved MCP server (#2759)',
+		description: 'Anthropic-merged MCP server (#2759)',
 		downloads: 15_380,
 		install: 'npx claude-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/claude-faf-mcp',

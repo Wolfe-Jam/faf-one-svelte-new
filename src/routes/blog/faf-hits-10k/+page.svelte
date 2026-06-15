@@ -211,7 +211,7 @@ description: What this skill does
 				<li><strong>Interconnected structure:</strong> Noodles 🍜, not flat data</li>
 				<li><strong>Tested & Proven across 10,000+ projects:</strong> Real-world validation</li>
 				<li><strong>BIG-3 AI tested:</strong> Claude, Gemini, OpenAI compatibility verified</li>
-				<li><strong>Anthropic-approved:</strong> Official MCP steward for the format</li>
+				<li><strong>Anthropic-merged:</strong> Official MCP steward for the format</li>
 			</ul>
 
 			<p>

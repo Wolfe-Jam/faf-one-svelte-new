@@ -96,7 +96,7 @@
 					</a>
 					<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
-						<span class="link-desc">Anthropic-approved MCP server (#2759 merged)</span>
+						<span class="link-desc">Anthropic-merged MCP server (#2759)</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
@@ -132,7 +132,7 @@
 					</a>
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
-						<span class="link-desc">Anthropic-approved (#2759 merged)</span>
+						<span class="link-desc">Anthropic-merged (#2759)</span>
 						<span class="link-stat">8,200+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="link-item">
@@ -256,7 +256,7 @@
 				<div class="links-grid">
 					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-item featured">
 						<span class="link-name">Anthropic/servers #2759</span>
-						<span class="link-desc">Official MCP Registry — Anthropic-approved</span>
+						<span class="link-desc">Official MCP Registry — Anthropic-merged</span>
 						<span class="link-stat status-live">☑️ MERGED</span>
 					</a>
 					<a href="https://mcpservers.org/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">

@@ -684,7 +684,7 @@
 			title: 'FAF v4.0: The Format That Became a Standard',
 			date: 'January 24, 2026',
 			timestamp: '2026-01-24',
-			excerpt: 'Foundation Layer release. IANA registered, Anthropic approved, 21,000+ downloads. Grok: "Game-changer for eternal AI context" (9.5/10). The tool became the standard.',
+			excerpt: 'Foundation Layer release. IANA registered, Anthropic merged, 21,000+ downloads. Grok: "Game-changer for eternal AI context" (9.5/10). The tool became the standard.',
 			emoji: '🏛️',
 			category: 'Release'
 		},

@@ -304,7 +304,7 @@
 				<li>Structured pipelines fix all three</li>
 			</ul>
 
-			<p>FAF has been shipping this fix since October 2025. IANA registered. Anthropic approved (MCP merge #2759). 33,500+ ecosystem downloads across npm, PyPI, and crates.io. The architecture isn't theoretical &mdash; it's infrastructure.</p>
+			<p>FAF has been shipping this fix since October 2025. IANA registered. Anthropic-merged (MCP #2759). 33,500+ ecosystem downloads across npm, PyPI, and crates.io. The architecture isn't theoretical &mdash; it's infrastructure.</p>
 
 			<div class="benchmark-note">
 				<strong>Note on benchmarks:</strong> The ETH Zurich papers measure coding agent task resolution (Paper 1) and multilingual benchmark reliability (Paper 2). FAF measures AI-Readiness &mdash; persistent project context scoring as defined in Anthropic's MCP ecosystem. Three complementary measurement systems, one shared enemy: drift.
