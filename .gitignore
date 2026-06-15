@@ -29,7 +29,6 @@ test-n8n-workflows/
 
 # WIP pages
 src/routes/drift/
-src/routes/sponsors/
 static/welcome.html
 
 # Loose screenshots / scratch images in repo root (static/ and src/ assets stay tracked)
