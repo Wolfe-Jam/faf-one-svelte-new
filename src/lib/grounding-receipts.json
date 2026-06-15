@@ -5,11 +5,11 @@
     {
       "date": "2026-06-13",
       "model": "Claude Opus 4.8",
-      "repo": "faf-cli",
+      "repo": "faf-cli v6",
       "qset": "afd631cf7491",
       "cold": "1/9",
       "faf": "8/9",
-      "sha256": "4d0b9cad80b3d382",
+      "sha256": "0b4515d62ac2c3c7",
       "track": "in-session",
       "card": "/cards/faf-cli-claude-real.png"
     },
@@ -49,11 +49,11 @@
     {
       "date": "2026-06-13",
       "model": "Claude Opus 4.8",
-      "repo": "mcpaas-cf",
+      "repo": "MCPaaS MCP Test",
       "qset": "6c404ce12195",
       "cold": "6/17",
       "faf": "16/17",
-      "sha256": "702e70d78f84ea2f",
+      "sha256": "39941c67e74f1f47",
       "track": "in-session",
       "card": "/cards/mcpaas-cf-claude.png"
     }
