@@ -1,6 +1,7 @@
 <script>
 	import FafLogo from '$lib/components/FafLogo.svelte';
 	import ScrollRevealText from '$lib/components/ScrollRevealText.svelte';
+	import PageActions from '$lib/components/PageActions.svelte';
 
 	let activeTab = 'cursor';
 </script>
@@ -22,7 +23,7 @@
 				<FafLogo size="small" color="black" />
 			</div>
 			<h1 class="page-title">Model Context Protocol + .faf</h1>
-			<p class="subtitle">Universal AI Context • IANA-Registered Format • Anthropic-Approved</p>
+			<p class="subtitle">Universal AI Context • IANA-Registered Format • Anthropic-Merged</p>
 			<p class="hero-desc">The official MCP documentation for .faf - persistent project context across Claude Desktop, Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms.</p>
 		</div>
 	</section>
@@ -120,7 +121,7 @@
 						<ul class="package-features">
 							<li>☑️ 51 MCP tools (Claude-optimized)</li>
 							<li>☑️ Claude Desktop integration</li>
-							<li>☑️ Anthropic-approved</li>
+							<li>☑️ Anthropic-merged</li>
 							<li>☑️ IANA-registered format</li>
 						</ul>
 						<div class="package-install">
@@ -354,6 +355,13 @@
 							⭐ GitHub
 						</a>
 					</div>
+					<PageActions
+						headline="One context format, every MCP tool."
+						point1="Cursor, Windsurf, Cline, VS Code — all read the same .faf."
+						point2="IANA-registered. No per-tool reinvention."
+						url="https://faf.one/mcp"
+						hashtags="AI,MCP,DevTools"
+					/>
 				</div>
 			</ScrollRevealText>
 

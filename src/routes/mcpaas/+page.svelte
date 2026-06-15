@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import PageActions from '$lib/components/PageActions.svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 </script>
@@ -144,6 +145,13 @@
 			<a href="https://foundation.faf.one" class="btn secondary" target="_blank">FAF Foundation</a>
 			<a href="https://github.com/Wolfe-Jam/grok-faf-mcp" class="btn tertiary" target="_blank">GitHub</a>
 		</div>
+		<PageActions
+			headline="MCP servers with zero install."
+			point1="Point to a URL. Done."
+			point2="MCPaaS — Model Context Protocol as a Service."
+			url="https://faf.one/mcpaas"
+			hashtags="AI,MCP"
+		/>
 	</section>
 
 	<footer class="page-footer">

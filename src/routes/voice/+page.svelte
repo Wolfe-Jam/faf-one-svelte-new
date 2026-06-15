@@ -1,3 +1,7 @@
+<script>
+	import PageActions from '$lib/components/PageActions.svelte';
+</script>
+
 <svelte:head>
 	<title>VML — Voice Memory Layer for AI agents</title>
 	<meta name="description" content="VML is the Voice Memory Layer for AI agents. Drop-in Python SDK for LiveKit + xAI Grok voice agents. Memory survives sessions, devices, and model switches. FAF-powered." />
@@ -56,6 +60,15 @@
 		<p class="footer-tagline">FAF defines. VML remembers.</p>
 		<p class="footer-iana">IANA-registered: <a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" target="_blank" rel="noopener"><code>application/vnd.fafm+yaml</code></a> · 2026-05-13</p>
 	</section>
+
+	<PageActions
+		headline="xAI gave Grok a voice. We gave it memory."
+		point1="VML — the Voice Memory Layer for AI agents."
+		point2="Drop-in Python SDK. Survives sessions, devices, models."
+		cta="uvx grok-faf-voice"
+		url="https://www.faf.one/voice"
+		hashtags="AI,Voice,Grok"
+	/>
 
 </main>
 

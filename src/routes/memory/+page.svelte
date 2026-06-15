@@ -1,3 +1,7 @@
+<script>
+	import PageActions from '$lib/components/PageActions.svelte';
+</script>
+
 <svelte:head>
 	<title>etch and forget · memory.faf.one</title>
 	<meta name="description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Cross-vendor — Claude, Cursor, Grok, Gemini all read the same memory. Nelly Never Forgets (so you can!)." />
@@ -63,6 +67,13 @@
 			<a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">PyPI</a> ·
 			<a href="https://github.com/Wolfe-Jam/claude-fafm-sdk" target="_blank" rel="noopener">GitHub</a>
 		</p>
+		<PageActions
+			headline="Your AI forgets everything between sessions."
+			point1="Etch it once in .fafm — persistent, portable memory."
+			point2="Cross-vendor: Claude, Cursor, Grok, Gemini, one memory."
+			url="https://www.faf.one/memory"
+			hashtags="AI,Memory,fafm"
+		/>
 	</section>
 
 	<section class="content footer-section">

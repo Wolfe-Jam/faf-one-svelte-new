@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import PageActions from '$lib/components/PageActions.svelte';
 
 	let heroVisible = $state(false);
 	let problemVisible = $state(false);
@@ -483,6 +484,13 @@
 					for n8n workflows.<br/>
 					Interested in partnering? <a href="mailto:contact@faf.one">Let's talk.</a>
 				</p>
+				<PageActions
+					headline="n8n workflows are powerful — but AI can't read them."
+					point1="n8n.faf makes your workflows AI-native."
+					point2="Works with Claude, Cursor, Codex, and more."
+					url="https://faf.one/n8n"
+					hashtags="AI,n8n,Automation"
+				/>
 			</div>
 		</div>
 	</section>

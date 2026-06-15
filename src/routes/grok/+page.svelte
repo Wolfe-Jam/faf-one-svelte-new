@@ -1,3 +1,7 @@
+<script>
+	import PageActions from '$lib/components/PageActions.svelte';
+</script>
+
 <svelte:head>
 	<title>grok-faf-mcp — The first MCP for Grok</title>
 	<meta name="description" content="The first MCP server built for xAI Grok, and the first FAF MCP online. Persistent project context via IANA-registered .faf. Live at grok-faf-mcp.vercel.app." />
@@ -56,6 +60,14 @@
 		<p class="footer-tagline">Grok asked for MCP on a URL. This is it.</p>
 		<p class="footer-iana">FAF Ecosystem #2759 · The first MCP for Grok</p>
 	</section>
+
+	<PageActions
+		headline="Give xAI Grok persistent project context."
+		point1="grok-faf-mcp — MCP server, IANA-registered .faf."
+		point2="Context that survives the session."
+		url="https://www.faf.one/grok"
+		hashtags="AI,Grok,xAI,MCP"
+	/>
 
 </main>
 

@@ -1,3 +1,7 @@
+<script>
+	import PageActions from '$lib/components/PageActions.svelte';
+</script>
+
 <svelte:head>
 	<title>.faf — Foundational Context Layer</title>
 	<meta name="description" content="Persistent project context for AI. The IANA-registered .faf format and the Claude Code plugin that ships it. Cross-vendor: works in Claude, Cursor, Grok, Gemini." />
@@ -64,6 +68,13 @@
 			<a href="https://github.com/Wolfe-Jam/faf" target="_blank" rel="noopener">Spec</a> &middot;
 			<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener">CLI</a>
 		</p>
+		<PageActions
+			headline="Stop re-explaining your project to every AI."
+			point1=".faf — the IANA-registered context layer."
+			point2="Define once. Works in Claude, Cursor, Grok, Gemini."
+			url="https://www.faf.one/context"
+			hashtags="AI,Context,faf"
+		/>
 	</section>
 
 	<section class="content footer-section">

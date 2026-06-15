@@ -1,4 +1,6 @@
 <script>
+	import PageActions from '$lib/components/PageActions.svelte';
+
 	let { data } = $props();
 
 	const runs = data.receipts;
@@ -76,6 +78,13 @@
 			<li><strong>Fair across models.</strong> Same repo → same questions → a like-for-like comparison.</li>
 		</ul>
 		<p class="note">These runs are <code>in-session</code> — honest, self-reported. The authoritative leaderboard runs each model under controlled conditions.</p>
+		<PageActions
+			headline="How well does your AI actually know your repo?"
+			point1="Cold vs one .faf file of context — measured."
+			point2="Mechanically graded, sha-stamped, falsifiable."
+			url="https://faf.one/bench"
+			hashtags="AI,Benchmark,faf"
+		/>
 	</section>
 </main>
 

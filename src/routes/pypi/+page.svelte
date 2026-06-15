@@ -1,3 +1,7 @@
+<script>
+	import PageActions from '$lib/components/PageActions.svelte';
+</script>
+
 <svelte:head>
 	<title>uvx and go · pypi.faf.one</title>
 	<meta name="description" content="FAF on PyPI — six packages, one IANA-registered family. Gemini MCP, Claude .fafm SDK, Grok Voice, Python SDK, Voice MCP, slash-tokens. Two implement Zenodo papers." />
@@ -129,6 +133,14 @@
 			·
 			<a href="https://pypi.faf.one" target="_blank" rel="noopener">pypi.faf.one (live)</a>
 		</p>
+		<PageActions
+			headline="Every Python AI tool reinvents context."
+			point1=".faf is the one IANA-registered standard underneath."
+			point2="Six packages — Claude, Gemini, Grok, voice, agents."
+			cta="uvx claude-fafm-sdk"
+			url="https://pypi.faf.one"
+			hashtags="AI,Python,MCP,BuildInPublic"
+		/>
 	</section>
 
 	<section class="footer-section">

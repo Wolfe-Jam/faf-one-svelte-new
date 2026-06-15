@@ -1,4 +1,6 @@
 <script>
+    import PageActions from '$lib/components/PageActions.svelte';
+
     let { data } = $props();
 
     const tools = [
@@ -54,7 +56,7 @@
         },
         {
             name: 'Claude FAF MCP',
-            tagline: 'Anthropic-Approved #2759',
+            tagline: 'Anthropic-Merged #2759',
             description: 'Seamless FAF integration for Claude Desktop. Official Anthropic MCP registry.',
             features: [
                 'Native Claude Desktop integration',
@@ -291,6 +293,13 @@
         <p class="topics-link">
             <a href="https://github.com/topics/faf" target="_blank" rel="noopener">View all FAF projects on GitHub →</a>
         </p>
+        <PageActions
+            headline="One standard. A whole ecosystem."
+            point1="CLI, MCP servers, dev tools, Chrome extension."
+            point2="IANA-registered. Universal AI context."
+            url="https://faf.one/ecosystem"
+            hashtags="AI,MCP,faf"
+        />
     </footer>
 </main>
 

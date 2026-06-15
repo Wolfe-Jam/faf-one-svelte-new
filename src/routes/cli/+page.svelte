@@ -1,4 +1,6 @@
 <script>
+	import PageActions from '$lib/components/PageActions.svelte';
+
 	let copied = $state(false);
 
 	function copyCommand() {
@@ -76,6 +78,14 @@
 		<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">IANA</a>
 		<a href="/">faf.one</a>
 	</section>
+
+	<PageActions
+		headline="Your AI re-learns your project every session."
+		point1="faf-cli gives it persistent, structured context."
+		point2="One command. IANA-registered format."
+		url="https://faf.one/cli"
+		hashtags="AI,DevTools,CLI"
+	/>
 </main>
 
 <style>

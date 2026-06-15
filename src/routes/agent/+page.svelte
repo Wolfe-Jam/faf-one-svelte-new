@@ -1,5 +1,6 @@
 <script>
 	import FafLogo from '$lib/components/FafLogo.svelte';
+	import PageActions from '$lib/components/PageActions.svelte';
 
 	let copiedKey = $state(null);
 	let activeTab = $state('claude');
@@ -295,6 +296,15 @@
 			<li><a href="/">faf.one</a></li>
 		</ul>
 	</section>
+
+	<PageActions
+		headline="An agent that cites the spec — or refuses."
+		point1="FAF Agent — format-grade MCP, no drama out of scope."
+		point2="Built for humans, agents, teams, and models."
+		cta="uvx faf-agent-mcp"
+		url="https://faf.one/agent"
+		hashtags="AI,Agents,MCP"
+	/>
 </main>
 
 <style>
