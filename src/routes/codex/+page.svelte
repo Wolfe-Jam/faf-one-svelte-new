@@ -11,11 +11,13 @@
 	<meta property="og:title" content="Codex grounding: this is a blind spot." />
 	<meta property="og:description" content="Codex graded its own grounding on faf-cli: 2/9 without context, 9/9 with the .faf. Measure yours free: npx faf-cli@latest bench" />
 	<meta property="og:url" content="https://www.faf.one/codex" />
+	<meta property="og:image" content="https://www.faf.one/cards/codex-faf-cli.png" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Codex grounding: this is a blind spot." />
 	<meta name="twitter:description" content="Codex graded its own grounding: 2/9 without context, 9/9 with the .faf. Measure yours free in one command." />
+	<meta name="twitter:image" content="https://www.faf.one/cards/codex-faf-cli.png" />
 </svelte:head>
 
 <main class="page">
