@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/claude-dart-edition',
+			title: 'The Dart Edition',
+			date: 'June 17, 2026',
+			timestamp: '2026-06-17',
+			excerpt: 'claude-faf-mcp now reads Dart & Flutter — it knows a Flutter app from a pure-Dart CLI. By composition, not a fork. Zero-Config — one-click .mcpb.',
+			emoji: '🏎️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/dart-edition',
 			title: "Run It, Don't Grep It",
 			date: 'June 16, 2026',
