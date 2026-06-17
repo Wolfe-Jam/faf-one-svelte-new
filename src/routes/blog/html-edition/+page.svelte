@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -12,7 +13,7 @@
 
 	const shareText = 'We rendered a .faf. faf-cli v6.7.0 — The HTML Edition. FAF defines. MD instructs. AI codes. HTML shows.';
 	const shareUrl = 'https://faf.one/blog/html-edition';
-	const shareHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const shareHref = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

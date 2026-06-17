@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { buildShareIntent } from '$lib/shareIntent.js';
+
 	let copiedId = $state('');
 	async function copyText(text: string, id: string) {
 		await navigator.clipboard.writeText(text);
@@ -9,7 +11,7 @@
 	const shareUrl = 'https://www.faf.one/blog/faf-on-pypi';
 	const shareText =
 		'FAF on PyPI — 6 packages, one IANA-registered family. Persistent Context + Permanent Memory. uvx and go.';
-	const xShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xShare = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

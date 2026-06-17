@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -12,7 +13,7 @@
 
 	const shareText = "Zero-Config Memory. Just push — your .fafm soul goes live and cross-vendor, readable by Grok, Claude, and Gemini. No claim page, no key to copy. claude-fafm-sdk v0.3.0.";
 	const shareUrl = "https://faf.one/blog/zero-config-memory";
-	const shareHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const shareHref = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

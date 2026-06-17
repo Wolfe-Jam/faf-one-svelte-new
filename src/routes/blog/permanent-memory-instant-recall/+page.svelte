@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -12,7 +13,7 @@
 
 	const shareText = "Permanent Memory. Instant Recall. .fafm — portable, cross-vendor AI memory in one IANA-registered format — is live. Two profiles: voice (grok-faf-voice) + knowledge (claude-fafm-sdk).";
 	const shareUrl = "https://faf.one/blog/permanent-memory-instant-recall";
-	const shareHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const shareHref = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>
