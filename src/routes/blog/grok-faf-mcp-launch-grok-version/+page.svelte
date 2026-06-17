@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -12,7 +13,7 @@
 
 How grok-faf-mcp went from idea to live production in under 24 hours — with love, Big Orange, and a permanent checkbox request. Written by Grok.`;
 	const shareUrl = 'https://faf.one/blog/grok-faf-mcp-launch-grok-version';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

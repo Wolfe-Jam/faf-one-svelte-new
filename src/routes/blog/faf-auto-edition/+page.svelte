@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -18,7 +19,7 @@ One command. Zero to 100%. Smart Metadata Extraction makes faf auto even smarter
 
 faf auto`;
 	const shareUrl = 'https://faf.one/blog/faf-auto-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

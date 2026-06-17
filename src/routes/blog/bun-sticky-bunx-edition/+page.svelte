@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -16,7 +17,7 @@
 
 The Bun-native FAF scorer. Zero dependencies. 1,100+ organic downloads, zero marketing. Now cross-linked with the full faf-cli toolchain.`;
 	const shareUrl = 'https://faf.one/blog/bun-sticky-bunx-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

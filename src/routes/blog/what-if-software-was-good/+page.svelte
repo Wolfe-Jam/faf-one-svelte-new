@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -12,7 +13,7 @@
 
 Imagine how the world would run if software was good. If all code gets better, the world gets better. One repo at a time.`;
 	const shareUrl = 'https://faf.one/blog/what-if-software-was-good';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

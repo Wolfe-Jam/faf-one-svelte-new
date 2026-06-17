@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = $state(false);
 	let copiedId = $state('');
@@ -21,7 +22,7 @@ Part 2 of the Gemini story. Universal AI context for Claude, Gemini CLI, and Ant
 
 One project.faf. Every AI. Zero drift.`;
 	const shareUrl = 'https://faf.one/blog/antigravity-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

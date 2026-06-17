@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -21,7 +22,7 @@ Persistent session memory across every AI session. Steel blue means business. Fr
 
 Define once. Remember forever.`;
 	const shareUrl = 'https://faf.one/blog/pro-launch';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

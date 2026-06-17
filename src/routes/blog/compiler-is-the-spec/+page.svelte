@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -19,7 +20,7 @@
 
 322KB of WASM. No server. No API calls. The same Rust compiler runs everywhere.`;
 	const shareUrl = 'https://faf.one/blog/compiler-is-the-spec';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

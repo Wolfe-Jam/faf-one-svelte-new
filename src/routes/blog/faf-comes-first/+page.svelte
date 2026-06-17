@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -13,7 +14,7 @@
 
 Claude Code read project.faf before CLAUDE.md. The format designed for AI context is being recognized as authoritative.`;
 	const shareUrl = 'https://faf.one/blog/faf-comes-first';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

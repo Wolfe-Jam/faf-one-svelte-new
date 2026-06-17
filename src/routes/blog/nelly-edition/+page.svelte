@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -20,7 +21,7 @@
 
 33 MCP tools. Nelly tri-sync for persistent AI memory. 3Ws — answer 3 questions and your AI stops guessing.`;
 	const shareUrl = 'https://faf.one/blog/nelly-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

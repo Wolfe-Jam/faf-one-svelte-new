@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 	let copiedId = $state('');
@@ -18,7 +19,7 @@
 
 Full plugin support, SSH bug fix, and discoverable in 8,500+ plugin registry. 20k+ ecosystem downloads.`;
 	const shareUrl = 'https://faf.one/blog/v3-3-0-plugin-launch';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

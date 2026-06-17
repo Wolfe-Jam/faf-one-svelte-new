@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 	let copiedId = $state('');
@@ -18,7 +19,7 @@
 
 Even the AI that built FAF scored it at 12% without .faf context. One command later: 89%. 12% → 89% in 344ms.`;
 	const shareUrl = 'https://faf.one/blog/when-claude-forgot-faf';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

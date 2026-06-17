@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 	let copiedId = $state('');
@@ -19,7 +20,7 @@
 
 Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already there.`;
 	const shareUrl = 'https://faf.one/blog/december-2025-ecosystem';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

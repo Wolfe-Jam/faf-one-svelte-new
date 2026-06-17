@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -9,7 +10,7 @@
 
 ArXiv exposes the AGENTS.md bloat problem. FAF solves it with structured Project DNA. Two papers, one roadmap.`;
 	const shareUrl = 'https://faf.one/blog/beyond-the-bloat';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

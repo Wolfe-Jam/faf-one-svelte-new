@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 	let copiedId = $state('');
@@ -19,7 +20,7 @@
 
 From desktop frustration to Anthropic approval. Persistent project context is real.`;
 	const shareUrl = 'https://faf.one/blog/faf-hits-10k';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 	let copiedId = $state('');
@@ -18,7 +19,7 @@
 
 The universal AI context standard with TURBO-CAT format discovery, C-Mirror bi-sync, and 8ms sync. Open source, free forever.`;
 	const shareUrl = 'https://faf.one/blog/v3-launch';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

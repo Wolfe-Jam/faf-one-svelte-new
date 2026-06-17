@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -8,7 +9,7 @@
 
 The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude-faf-mcp, faf-mcp, and grok-faf-mcp. Verified from api.npmjs.org.`;
 	const shareUrl = 'https://faf.one/blog/faf-hits-20k';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

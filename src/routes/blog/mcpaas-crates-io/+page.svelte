@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -19,7 +20,7 @@
 
 Persistent AI context for Rust. Broadcast once, every AI receives. 46 tests, championship-grade. Zero drift.`;
 	const shareUrl = 'https://faf.one/blog/mcpaas-crates-io';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

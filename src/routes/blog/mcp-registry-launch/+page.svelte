@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 	let copiedId = $state('');
@@ -18,7 +19,7 @@
 
 Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ tools for universal AI context across Claude, VS Code, GitHub Copilot, and any terminal.`;
 	const shareUrl = 'https://faf.one/blog/mcp-registry-launch';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

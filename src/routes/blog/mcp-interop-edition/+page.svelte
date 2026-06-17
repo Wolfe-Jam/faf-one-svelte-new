@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	let copiedId = $state('');
 	onMount(() => { mounted = true; });
@@ -15,7 +16,7 @@
 
 61 tools. 4 AI formats. One project.faf. Zero CLI dependency.`;
 	const shareUrl = 'https://faf.one/blog/mcp-interop-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

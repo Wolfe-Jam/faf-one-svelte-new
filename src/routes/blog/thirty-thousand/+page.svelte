@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -8,7 +9,7 @@
 
 9 npm packages, 2 PyPI, 1 crate. 3 registries. Zero marketing budget. From 20k to 30k in 2026.`;
 	const shareUrl = 'https://faf.one/blog/thirty-thousand';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -20,7 +21,7 @@
 
 FAF now speaks Gemini. Full interoperability with GEMINI.md, Antigravity, and Conductor. One .faf file. Every AI platform.`;
 	const shareUrl = 'https://faf.one/blog/google-gemini-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -21,7 +22,7 @@ Define once in .faf, sync to .cursorrules, AGENTS.md, GEMINI.md, and CLAUDE.md.
 
 61 tools, 309 tests, 7 bundled parsers.`;
 	const shareUrl = 'https://faf.one/blog/interop-mcp';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

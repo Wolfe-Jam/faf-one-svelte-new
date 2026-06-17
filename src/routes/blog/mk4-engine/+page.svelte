@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = false;
 
@@ -21,7 +22,7 @@ One Rust engine, 33 slots, 596 tests. Claude, Gemini, OpenAI, and Grok finally s
 
 One engine. Four frontiers. Zero context drift.`;
 	const shareUrl = 'https://faf.one/blog/mk4-engine';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

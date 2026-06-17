@@ -15,6 +15,7 @@
 // button styling: `<a href={buildShareIntent({...})} class="...">`.
 
 export function buildShareIntent({
+	text = '',
 	headline = '',
 	point1 = '',
 	point2 = '',
@@ -24,12 +25,17 @@ export function buildShareIntent({
 	url = '',
 	hashtags = ''
 } = {}) {
-	const lines = [];
-	if (headline) lines.push(headline);
-	const pts = [point1, point2, point3].filter(Boolean);
-	if (pts.length) lines.push('', ...pts);
-	if (cta) lines.push('', `${ctaPrefix} ${cta}`);
-	const tweet = lines.join('\n');
+	// `text` = a pre-assembled tweet body (blog posts craft their own shareText).
+	// Otherwise, assemble from parts.
+	let tweet = text;
+	if (!tweet) {
+		const lines = [];
+		if (headline) lines.push(headline);
+		const pts = [point1, point2, point3].filter(Boolean);
+		if (pts.length) lines.push('', ...pts);
+		if (cta) lines.push('', `${ctaPrefix} ${cta}`);
+		tweet = lines.join('\n');
+	}
 
 	return (
 		'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) +

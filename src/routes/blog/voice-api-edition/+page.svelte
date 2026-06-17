@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	let copiedId = $state('');
 
@@ -18,7 +19,7 @@ The answer is 4.2.0 = 42. Eternal voice memory for xAI Grok. Zero drift. Zero re
 
 Save Our Souls.`;
 	const shareUrl = 'https://faf.one/blog/voice-api-edition';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>

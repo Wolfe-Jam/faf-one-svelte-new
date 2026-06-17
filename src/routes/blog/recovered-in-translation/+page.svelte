@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
@@ -8,7 +9,7 @@
 
 Two ETH Zurich papers. One CERN paper. One solution. Semantic drift doesn't care what it corrupts — benchmarks or AI context. FAF fixes both.`;
 	const shareUrl = 'https://faf.one/blog/recovered-in-translation';
-	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>
