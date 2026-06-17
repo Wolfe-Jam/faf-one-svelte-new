@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/dart-edition',
+			title: "Run It, Don't Grep It",
+			date: 'June 16, 2026',
+			timestamp: '2026-06-16',
+			excerpt: "A Dart/Flutter expert grepped the source for 'Flutter', found none, and called it. He was right about the gap — gemini-faf-mcp 2.5.0 closed it: it now reads your pubspec and writes Dart/Flutter into the .faf.",
+			emoji: '🏎️',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/ledger-edition',
 			title: 'The Ledger Edition',
 			date: 'June 14, 2026',
