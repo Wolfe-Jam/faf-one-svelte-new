@@ -1,15 +1,9 @@
 <script>
-	// "Share on 𝕏" intent builder — assembles a consistent tweet from parts.
-	// Template:
-	//   {headline}            ← hook: attention, but TRUE (not hype)
-	//                            (blank line)
-	//   {point1}              ← 2–3 scannable receipts/benefits
-	//   {point2}
-	//   {point3?}
-	//                            (blank line)
-	//   {ctaPrefix} {cta}     ← e.g. "Try it → bunx faf"
-	// NOTE: the page URL auto-renders as an OG card on X (title + description +
-	// image), so DON'T repeat the page description here — that's the card's job.
+	// Standalone "Share on 𝕏" pill. The share FORMULA lives in one place —
+	// $lib/shareIntent.js (buildShareIntent) — shared with pages that keep their
+	// own button styling. This component = that formula + the default pill style.
+	import { buildShareIntent } from '$lib/shareIntent.js';
+
 	let {
 		headline = '',
 		point1 = '',
@@ -21,19 +15,8 @@
 		hashtags = ''
 	} = $props();
 
-	const tweet = $derived.by(() => {
-		const lines = [];
-		if (headline) lines.push(headline);
-		const pts = [point1, point2, point3].filter(Boolean);
-		if (pts.length) lines.push('', ...pts);
-		if (cta) lines.push('', `${ctaPrefix} ${cta}`);
-		return lines.join('\n');
-	});
-
 	const href = $derived(
-		'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) +
-		(url ? '&url=' + encodeURIComponent(url) : '') +
-		(hashtags ? '&hashtags=' + encodeURIComponent(hashtags) : '')
+		buildShareIntent({ headline, point1, point2, point3, cta, ctaPrefix, url, hashtags })
 	);
 </script>
 

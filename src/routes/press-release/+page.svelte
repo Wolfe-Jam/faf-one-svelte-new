@@ -1,3 +1,7 @@
+<script>
+	import ShareX from '$lib/components/ShareX.svelte';
+</script>
+
 <svelte:head>
 	<title>.faf - The JPEG for AI is YAML & 🍜noodles</title>
 	<meta name="description" content="Foundational AI-context Format - Universal, shareable AI context for any AI, human or team">
@@ -129,7 +133,7 @@ human_context:
 		<hr class="divider">
 
 		<div class="share-section">
-			<a href="https://twitter.com/intent/tweet?text=.faf%20-%20The%20JPEG%20for%20AI%20is%20YAML.%20Universal%20AI%20context%20format.%20IANA%20registered.&url=https://faf.one/press-release" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<ShareX headline=".faf — the JPEG for AI." point1="Universal AI context format. YAML. IANA-registered." url="https://faf.one/press-release" />
 		</div>
 
 		<p class="tagline"><em>".faf is here. No more faffing about."</em></p>

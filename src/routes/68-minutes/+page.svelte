@@ -1,3 +1,7 @@
+<script>
+	import ShareX from '$lib/components/ShareX.svelte';
+</script>
+
 <svelte:head>
 	<title>68 Minutes: B&W to Technicolor | FAF CLI</title>
 	<meta name="description" content="B&W-to-color TVs took ~20 years. We transformed our CLI in 68 minutes." />
@@ -86,7 +90,7 @@
 		<hr class="divider">
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?text=68%20Minutes%3A%20B%26W%20to%20Technicolor%20%E2%80%94%20we%20transformed%20our%20CLI%20in%2068%20minutes%20%E2%9A%A1%EF%B8%8F&url=https://faf.one/68-minutes" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<ShareX headline="68 Minutes: black & white to Technicolor ⚡️" point1="We rebuilt our CLI — start to finish — in 68 minutes." url="https://faf.one/68-minutes" />
 		</section>
 
 		<p style="text-align: center;">Made with 🧡 by <a href="https://github.com/Wolfe-Jam/faf" target="_blank" style="color: var(--faf-orange); text-decoration: none; font-weight: 600;">wolfejam</a></p>

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let codeTyped = $state('');
 	let showOutput = $state(false);
@@ -241,7 +242,7 @@
 				</a>
 
 				<a
-					href="https://twitter.com/intent/tweet?text=I%20found%20this--it%20works!%20Score%20Your%20Repo!&url=https://faf.one/try"
+					href={buildShareIntent({ headline: "Score your repo's AI-readiness — free.", point1: '0–100% in seconds. No signup.', url: 'https://faf.one/try' })}
 					target="_blank"
 					rel="noopener noreferrer"
 					class="action-btn x-btn"

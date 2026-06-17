@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { buildShareIntent } from '$lib/shareIntent.js';
+
 	type Project = {
 		project_id: string;
 		project_name: string;
@@ -134,7 +136,7 @@
 			<a href="/blog">Blog</a>
 			<span class="sep">·</span>
 			<a
-				href="https://twitter.com/intent/tweet?text=The%20FAF%20Glory%20Wall%20%E2%80%94%20projects%20scoring%20100%25%20on%20AI-readiness.%20%F0%9F%8D%8A&url=https%3A%2F%2Ffaf.one%2Fglory"
+				href={buildShareIntent({ headline: 'The FAF Glory Wall 🍊', point1: 'Projects scoring 100% on AI-readiness.', url: 'https://faf.one/glory' })}
 				target="_blank"
 				rel="noopener">Share on X</a
 			>

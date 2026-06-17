@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { buildShareIntent } from '$lib/shareIntent.js';
 
 	let mounted = $state(false);
 	let showSplash = $state(true);
@@ -321,7 +322,7 @@
 					Learn More
 				</a>
 				<a
-					href="https://twitter.com/intent/tweet?text=91%25%20of%20tokens%20wasted%20on%20rediscovery.%20%245%2C460%2Fyear%20per%20dev.%2070%25%20of%20projects%20fail.%0A%0AThe%20invisible%20problem%20killing%20AI%20productivity.%0A%0ADon%27t%20be%20DAAFT.&url=https://faf.one/daaft&hashtags=AI,Claude,DevTools,BuildInPublic"
+					href={buildShareIntent({ headline: '91% of tokens wasted on rediscovery.', point1: '$5,460/year per dev. 70% of projects fail.', point2: "Don't be DAAFT.", cta: '', url: 'https://faf.one/daaft', hashtags: 'AI,Claude,DevTools,BuildInPublic' })}
 					target="_blank"
 					rel="noopener"
 					class="btn btn-share"
