@@ -9,6 +9,18 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula: 🏁 Just shipped: <pkg> v<ver> — <Edition> / headline / hook / install
+	const shareText = `🏁 Just shipped: claude-faf-mcp v5.10.0 — The Dart Edition
+
+Now reads Dart & Flutter. Knows a Flutter app from a pure-Dart CLI — by composition, not a forked parser.
+
+Zero-Config. One-click .mcpb.
+
+npm i -g claude-faf-mcp`;
+	const shareUrl = 'https://faf.one/blog/claude-dart-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -125,7 +137,7 @@ claude-faf-mcp   grok-faf-mcp   gemini-faf-mcp`}</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/claude-dart-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">
