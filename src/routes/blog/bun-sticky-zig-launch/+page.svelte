@@ -13,6 +13,15 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 bun-sticky-zig: Native FAF Scoring in Bun's Language
+
+Zig-native FAF CLI. 77KB binary. Zero runtime dependencies. Sub-millisecond cold start. 136 tests.
+
+77KB. Zero dependencies. Pure Zig.`;
+	const shareUrl = 'https://faf.one/blog/bun-sticky-zig-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -275,7 +284,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 			</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/bun-sticky-zig-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

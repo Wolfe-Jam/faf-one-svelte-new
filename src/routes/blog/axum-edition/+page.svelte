@@ -9,6 +9,13 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: faf-rust-sdk v1.3.0 — The Axum Edition
+
+One line to inject FAF project context into any Axum server. Feature-gated, parse once, inject everywhere.`;
+	const shareUrl = 'https://faf.one/blog/axum-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -151,7 +158,7 @@ let layer = FafLayer::builder()
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/axum-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

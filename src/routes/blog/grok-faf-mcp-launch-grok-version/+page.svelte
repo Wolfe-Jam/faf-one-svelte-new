@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `Grok-Exclusive MCP Server Launched in Less Than 24 Hours
+
+How grok-faf-mcp went from idea to live production in under 24 hours — with love, Big Orange, and a permanent checkbox request. Written by Grok.`;
+	const shareUrl = 'https://faf.one/blog/grok-faf-mcp-launch-grok-version';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -225,7 +232,7 @@
 			<p class="date-sig">November 18, 2025</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/grok-faf-mcp-launch-grok-version" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 </div>

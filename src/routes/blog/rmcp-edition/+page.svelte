@@ -9,6 +9,14 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula: 🏁 Just shipped: <pkg> v<ver> — <Edition> / headline
+	const shareText = `🏁 Just shipped: rust-faf-mcp v0.2.0 — The rmcp Edition
+
+253 lines become 20. Three new tools. 91 tests. One binary.`;
+	const shareUrl = 'https://faf.one/blog/rmcp-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -180,7 +188,7 @@ async fn main() {
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/rmcp-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

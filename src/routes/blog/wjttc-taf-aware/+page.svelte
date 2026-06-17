@@ -8,6 +8,15 @@
 		setTimeout(() => copiedId = '', 2000);
 	}
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: WJTTC v1.2.0 — The TAF-Aware Edition
+
+Tier 9 validates .taf receipts (Detection, Format, Integrity). Receipts aren't scored — they're proof.
+
+52 tests across 9 tiers.`;
+	const shareUrl = 'https://faf.one/blog/wjttc-taf-aware';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -135,7 +144,7 @@ Validation Checks:
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/wjttc-taf-aware" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

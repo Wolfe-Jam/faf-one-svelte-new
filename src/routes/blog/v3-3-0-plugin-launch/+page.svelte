@@ -12,6 +12,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: faf-cli v3.3.0 — Claude Code Plugin Support
+
+Full plugin support, SSH bug fix, and discoverable in 8,500+ plugin registry. 20k+ ecosystem downloads.`;
+	const shareUrl = 'https://faf.one/blog/v3-3-0-plugin-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -178,7 +185,7 @@
 			</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/v3-3-0-plugin-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

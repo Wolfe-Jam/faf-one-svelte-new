@@ -13,6 +13,15 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `The Day We Added BORIS-FLOW
+
+.faf brought the format. Boris brought the workflow. AI brought Gold Code.
+
+12 integration tests for championship-grade AI context.`;
+	const shareUrl = 'https://faf.one/blog/boris-flow';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -417,7 +426,7 @@ Demo complete - no files changed.
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/boris-flow" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

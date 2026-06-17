@@ -9,6 +9,13 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: faf-cli v6.8.0 — The Relentless Edition
+
+Birth DNA, 6-W extractor, format-finder — restored. Grok interop, extension App-Type — added. One shared pipeline.`;
+	const shareUrl = 'https://faf.one/blog/relentless-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -126,7 +133,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/relentless-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

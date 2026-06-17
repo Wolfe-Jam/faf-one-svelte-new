@@ -13,6 +13,13 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 MCPaaS hits crates.io — Radio Protocol for Rust
+
+Persistent AI context for Rust. Broadcast once, every AI receives. 46 tests, championship-grade. Zero drift.`;
+	const shareUrl = 'https://faf.one/blog/mcpaas-crates-io';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -171,7 +178,7 @@ gemini.tune(vec!["91.0".to_string()]).await?;
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/mcpaas-crates-io" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

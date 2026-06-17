@@ -13,6 +13,13 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: grok-faf-mcp v1.0.0 — First MCP Server for Grok
+
+URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive features.`;
+	const shareUrl = 'https://faf.one/blog/grok-faf-mcp-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -369,7 +376,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/grok-faf-mcp-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

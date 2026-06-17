@@ -9,6 +9,15 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: faf-cli v4.5.0 — The AGENTS.md Edition
+
+One project.faf generates AGENTS.md, .cursorrules, CLAUDE.md, and GEMINI.md. Define once, sync everywhere.
+
+npm i -g faf-cli`;
+	const shareUrl = 'https://faf.one/blog/agents-md-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -353,7 +362,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/agents-md-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

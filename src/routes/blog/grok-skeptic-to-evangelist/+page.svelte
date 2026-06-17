@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `I showed Grok my .faf format. It went from skeptic to evangelist in one session.
+
+40 lines of project DNA. Zero context drift. Production code shipped — full demo and code.`;
+	const shareUrl = 'https://faf.one/blog/grok-skeptic-to-evangelist';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -231,7 +238,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/grok-skeptic-to-evangelist" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

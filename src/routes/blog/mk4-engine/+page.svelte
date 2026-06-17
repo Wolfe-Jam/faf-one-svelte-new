@@ -13,6 +13,15 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 The Mk4 Championship Engine
+
+One Rust engine, 33 slots, 596 tests. Claude, Gemini, OpenAI, and Grok finally speak the same language.
+
+One engine. Four frontiers. Zero context drift.`;
+	const shareUrl = 'https://faf.one/blog/mk4-engine';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -220,7 +229,7 @@ project.faf     → AI context`}</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/mk4-engine" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

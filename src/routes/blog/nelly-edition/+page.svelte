@@ -13,6 +13,14 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula: 🏁 Just shipped: <pkg> v<ver> — <Edition> / headline
+	const shareText = `🏁 Just shipped: claude-faf-mcp v5.0 + v5.1 — The Nelly Edition
+
+33 MCP tools. Nelly tri-sync for persistent AI memory. 3Ws — answer 3 questions and your AI stops guessing.`;
+	const shareUrl = 'https://faf.one/blog/nelly-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -174,7 +182,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/nelly-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

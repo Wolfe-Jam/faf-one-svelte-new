@@ -6,6 +6,14 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (milestone): 🎉 the moment + the one-line essence.
+	const shareText = `🎉 The moment .faf came first.
+
+Claude Code read project.faf before CLAUDE.md. The format designed for AI context is being recognized as authoritative.`;
+	const shareUrl = 'https://faf.one/blog/faf-comes-first';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -219,7 +227,7 @@ Metadata:     10%</code></pre>
 			<p class="tagline-footer">Format Authority for AI Context 🏎️⚡</p>
 		</div>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/faf-comes-first" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</footer>
 </div>

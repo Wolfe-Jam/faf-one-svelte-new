@@ -12,6 +12,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: claude-faf-mcp v4.1.0 — README evolution for AI era
+
+We finally realized what Gemini meant: 6Ws Builder integration and automatic README extraction make AI-readiness instant.`;
+	const shareUrl = 'https://faf.one/blog/readme-evolution';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -244,7 +251,7 @@ Next steps:
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/readme-evolution" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

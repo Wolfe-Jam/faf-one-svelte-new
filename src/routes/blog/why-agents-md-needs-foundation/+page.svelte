@@ -2,6 +2,15 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `Why AGENTS.md needs a foundation layer.
+
+.faf defines. .md instructs. AI interprets. Three layers, three jobs, no overlap.
+
+AGENTS.md solves the instruction problem. But what defines the project underneath?`;
+	const shareUrl = 'https://faf.one/blog/why-agents-md-needs-foundation';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -166,7 +175,7 @@ context:
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/why-agents-md-needs-foundation" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

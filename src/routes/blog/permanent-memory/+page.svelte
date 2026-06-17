@@ -2,6 +2,15 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `📄 New paper: Memory Paper Published on Zenodo
+
+The .fafm Memory paper is on Zenodo — a multi-profile AI agent memory format, IANA-registered, CC BY 4.0.
+
+Permanent Memory. Instant Recall.`;
+	const shareUrl = 'https://faf.one/blog/permanent-memory';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -103,7 +112,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/permanent-memory&text=Permanent%20Memory.%20Instant%20Recall.%20The%20.fafm%20paper%20is%20on%20Zenodo." target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

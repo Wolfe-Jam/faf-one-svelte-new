@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `The Missing Format — how .faf provides persistent context for Anthropic's agent architecture.
+
+Format before code. .faf defines, Claude interprets. IANA-registered, MCP-integrated, production-deployed.`;
+	const shareUrl = 'https://faf.one/blog/the-missing-format';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -431,7 +438,7 @@ competitors:
 			</p>
 		</footer>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/the-missing-format" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 </div>

@@ -2,6 +2,15 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `📄 New paper: FAF Whitepaper Published on CERN/Zenodo
+
+Peer-citable academic paper on the .faf standard. Published on CERN's Zenodo, used by NASA and NIH.
+
+DOI: 10.5281/zenodo.18251362`;
+	const shareUrl = 'https://faf.one/blog/zenodo-paper';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -112,7 +121,7 @@
 			</div>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/zenodo-paper" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

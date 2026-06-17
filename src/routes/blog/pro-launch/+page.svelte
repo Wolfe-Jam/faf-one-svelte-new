@@ -13,6 +13,15 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 FAF Pro is live — Loyal Builders Show Steel
+
+Persistent session memory across every AI session. Steel blue means business. From $3/mo.
+
+Define once. Remember forever.`;
+	const shareUrl = 'https://faf.one/blog/pro-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -207,7 +216,7 @@ tri-sync = ROM ↔ CLAUDE.md ↔ RAM (Claude's session memory)</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/pro-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

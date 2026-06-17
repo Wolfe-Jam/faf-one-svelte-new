@@ -12,6 +12,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🎉 It's Official — claude-faf-mcp accepted into Anthropic's MCP Registry
+
+Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ tools for universal AI context across Claude, VS Code, GitHub Copilot, and any terminal.`;
+	const shareUrl = 'https://faf.one/blog/mcp-registry-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -287,7 +294,7 @@
 			<p class="tagline-footer">F1-Inspired Software Engineering 🏎️⚡️</p>
 		</div>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/mcp-registry-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</footer>
 </div>

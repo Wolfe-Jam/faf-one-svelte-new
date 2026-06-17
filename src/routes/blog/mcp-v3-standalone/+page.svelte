@@ -12,6 +12,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: claude-faf-mcp v3.0.4 — 100% Standalone
+
+Zero CLI dependencies across all 50 MCP tools. 16.2x faster. Championship-grade performance.`;
+	const shareUrl = 'https://faf.one/blog/mcp-v3-standalone';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -477,7 +484,7 @@ Claude: [Direct function call, 63ms execution]
 			</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/mcp-v3-standalone" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 </div>

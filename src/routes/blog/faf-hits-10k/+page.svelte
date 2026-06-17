@@ -12,6 +12,14 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (milestone): 🎉 <title> + the milestone line.
+	const shareText = `🎉 .faf hits 10,500+ downloads — 5,800 CLI, 4,700 MCP.
+
+From desktop frustration to Anthropic approval. Persistent project context is real.`;
+	const shareUrl = 'https://faf.one/blog/faf-hits-10k';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -351,7 +359,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 			<p class="tagline-footer">Format Authority for AI Context 🏎️⚡</p>
 		</div>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/faf-hits-10k" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</footer>
 </div>

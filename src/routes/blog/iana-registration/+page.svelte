@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🎉 .faf is officially registered by IANA as application/vnd.faf+yaml
+
+From grassroots format to official Internet standard — the same status as PDF, JSON, and XML.`;
+	const shareUrl = 'https://faf.one/blog/iana-registration';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -379,7 +386,7 @@
 			</div>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/iana-registration" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 </div>

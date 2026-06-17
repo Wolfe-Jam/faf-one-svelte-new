@@ -13,6 +13,15 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 FAF v4.0: The Format That Became a Standard
+
+The Foundation Layer release. Persistent AI context for every project.
+
+Foundation Layer. 21,000+ downloads. The tool became the standard.`;
+	const shareUrl = 'https://faf.one/blog/v4-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -276,7 +285,7 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 			<p class="tagline"><strong>.faf — The Persistent AI Context Standard</strong></p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/v4-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 </div>

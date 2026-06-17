@@ -6,6 +6,14 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (milestone): 🎉 <title> + the milestone line.
+	const shareText = `🎉 xAI commits to native .faf integration for Grok.
+
+Native bi-sync embedding for instant context wins. Full-scale deployment for all Grok users worldwide.`;
+	const shareUrl = 'https://faf.one/blog/xai-native-embedding';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -177,7 +185,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/xai-native-embedding" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

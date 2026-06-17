@@ -13,6 +13,14 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (case study): the hook + the one-line essence.
+	const shareText = `How MCPaaS gave Grok eternal voice memory.
+
+Case study: browser-to-AI voice with persistent context. Zero drift. Zero re-explain.`;
+	const shareUrl = 'https://faf.one/blog/grok-voice-case-study';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -297,7 +305,7 @@ re-explain their stack, goals, or architecture. Just help.
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/grok-voice-case-study" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

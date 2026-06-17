@@ -8,6 +8,13 @@
 		setTimeout(() => copiedId = '', 2000);
 	}
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🍊 WJTTC Goes FAF-Aware — Testing the Tester
+
+The championship MCP testing standard now validates FAF documentation. Enterprise capabilities on the FAF Foundation.`;
+	const shareUrl = 'https://faf.one/blog/wjttc-faf-aware';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -325,7 +332,7 @@ ai_scoring_details:
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/wjttc-faf-aware" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

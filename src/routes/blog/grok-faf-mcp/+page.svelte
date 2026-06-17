@@ -2,6 +2,14 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (launch): the hook + the firsts.
+	const shareText = `🏁 grok-faf-mcp: three industry firsts.
+
+First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
+	const shareUrl = 'https://faf.one/blog/grok-faf-mcp';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -161,7 +169,7 @@
 			</div>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/grok-faf-mcp" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

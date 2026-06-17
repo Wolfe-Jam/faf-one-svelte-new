@@ -2,6 +2,13 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `Recovered in Translation: Same Lab, Same Disease, Same Cure
+
+Two ETH Zurich papers. One CERN paper. One solution. Semantic drift doesn't care what it corrupts — benchmarks or AI context. FAF fixes both.`;
+	const shareUrl = 'https://faf.one/blog/recovered-in-translation';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -348,7 +355,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/recovered-in-translation" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

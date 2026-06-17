@@ -2,6 +2,13 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🎉 FAF Hits 20,000 Downloads
+
+The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude-faf-mcp, faf-mcp, and grok-faf-mcp. Verified from api.npmjs.org.`;
+	const shareUrl = 'https://faf.one/blog/faf-hits-20k';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -150,7 +157,7 @@
 			</div>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/faf-hits-20k" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

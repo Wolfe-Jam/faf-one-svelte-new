@@ -12,6 +12,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `When Claude Forgot FAF — the meta-proof that proves the product.
+
+Even the AI that built FAF scored it at 12% without .faf context. One command later: 89%. 12% → 89% in 344ms.`;
+	const shareUrl = 'https://faf.one/blog/when-claude-forgot-faf';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -356,7 +363,7 @@
 			<p class="tagline">F1-Inspired Software Engineering 🏎️⚡️</p>
 		</div>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/when-claude-forgot-faf" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</footer>
 </div>

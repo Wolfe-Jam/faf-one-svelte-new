@@ -6,6 +6,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: FAF Chrome Extension — Grab Any Codebase as .txt
+
+One-click context extraction for developers. Works on GitHub, Monaco editor, StackBlitz, and 15+ platforms. Google approved.`;
+	const shareUrl = 'https://faf.one/blog/chrome-extension-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -228,7 +235,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 			</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/chrome-extension-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 </div>

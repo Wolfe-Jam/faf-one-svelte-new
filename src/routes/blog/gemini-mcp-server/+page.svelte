@@ -13,6 +13,13 @@
 		copiedId = id;
 		setTimeout(() => copiedId = '', 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: gemini-faf-mcp v2.1.1 — The MCP Server Edition
+
+Native FastMCP server with 12 tools for Gemini CLI. Auto-detect your stack. IANA-registered .faf project context.`;
+	const shareUrl = 'https://faf.one/blog/gemini-mcp-server';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -275,7 +282,7 @@ python -m pytest tests/ -v`}</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/gemini-mcp-server" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

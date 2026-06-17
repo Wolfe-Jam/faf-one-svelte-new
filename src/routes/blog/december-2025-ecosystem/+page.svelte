@@ -12,6 +12,14 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (ecosystem): the hook + the one-line essence.
+	const shareText = `December 2025: We bet on the right stack.
+
+Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already there.`;
+	const shareUrl = 'https://faf.one/blog/december-2025-ecosystem';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -165,7 +173,7 @@
 			</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/december-2025-ecosystem" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

@@ -2,6 +2,14 @@
 	import { onMount } from 'svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula (research): the hook + the one-line essence.
+	const shareText = `Beyond the Bloat — how FAF transforms AI context from liability to superpower.
+
+ArXiv exposes the AGENTS.md bloat problem. FAF solves it with structured Project DNA. Two papers, one roadmap.`;
+	const shareUrl = 'https://faf.one/blog/beyond-the-bloat';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -372,7 +380,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/beyond-the-bloat" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

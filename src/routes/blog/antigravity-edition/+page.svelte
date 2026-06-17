@@ -13,6 +13,15 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: FAF v4.0 — The AntiGravity Edition
+
+Part 2 of the Gemini story. Universal AI context for Claude, Gemini CLI, and Antigravity IDE.
+
+One project.faf. Every AI. Zero drift.`;
+	const shareUrl = 'https://faf.one/blog/antigravity-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -381,7 +390,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/antigravity-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

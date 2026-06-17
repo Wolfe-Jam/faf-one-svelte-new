@@ -10,6 +10,15 @@
 		copiedIndex = index;
 		setTimeout(() => { copiedIndex = -1; }, 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `Your CLAUDE.md Is Not a Foundation
+
+It's an instruction manual. And that's fine — but it's not enough.
+
+MD explains. FAF defines. AI consumes.`;
+	const shareUrl = 'https://faf.one/blog/claude-md-not-a-foundation';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -173,7 +182,7 @@ project.faf  → Structure for ANY AI (foundation)`}</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/claude-md-not-a-foundation" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

@@ -9,6 +9,13 @@
 		setTimeout(() => copiedId = '', 2000);
 	}
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `The DAAFT Approach to Context — why your AI assistant forgets you every morning.
+
+91% of your tokens wasted on rediscovery. Every session. Every day. Here's why—and how to fix it.`;
+	const shareUrl = 'https://faf.one/blog/daaft';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -311,7 +318,7 @@ human_context:
 			</div>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/daaft" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

@@ -10,6 +10,13 @@
 		copiedIndex = index;
 		setTimeout(() => { copiedIndex = -1; }, 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: bun-sticky v1.1.0 — The Bunx Edition
+
+The Bun-native FAF scorer. Zero dependencies. 1,100+ organic downloads, zero marketing. Now cross-linked with the full faf-cli toolchain.`;
+	const shareUrl = 'https://faf.one/blog/bun-sticky-bunx-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -135,7 +142,7 @@
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/bun-sticky-bunx-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

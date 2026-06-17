@@ -10,6 +10,14 @@
 		copiedIndex = index;
 		setTimeout(() => { copiedIndex = -1; }, 2000);
 	}
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	// FAF formula: 🏁 Just shipped: <pkg> v<ver> — <Edition> / headline
+	const shareText = `🏁 Just shipped: faf-cli v5.0.6 — Best Context Under the Bun
+
+bunx faf-cli auto — 0% to 100% AI context in 0.5s. Zero code changes.`;
+	const shareUrl = 'https://faf.one/blog/best-context-under-the-bun';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -159,7 +167,7 @@ brew install faf-cli && faf auto   # Homebrew`}</code></pre>
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/best-context-under-the-bun" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">

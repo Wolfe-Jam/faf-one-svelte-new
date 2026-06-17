@@ -13,6 +13,13 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `🏁 Just shipped: bun-sticky-faf — Zero-Dependency FAF Scoring for Bun
+
+The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native. 333 championship-grade tests.`;
+	const shareUrl = 'https://faf.one/blog/bun-sticky-launch';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -266,7 +273,7 @@
 			</p>
 		</section>
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/bun-sticky-launch" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 	</article>
 

@@ -10,6 +10,15 @@
 	}
 
 	onMount(() => { mounted = true; });
+
+	// Rich X share — pre-fill the crafted post, not just the URL.
+	const shareText = `👻 Just shipped: faf-cli v4.2.0 — The Voice API Edition
+
+The answer is 4.2.0 = 42. Eternal voice memory for xAI Grok. Zero drift. Zero re-explain.
+
+Save Our Souls.`;
+	const shareUrl = 'https://faf.one/blog/voice-api-edition';
+	const xIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 </script>
 
 <svelte:head>
@@ -343,7 +352,7 @@ xai_collections:
 		</section>
 
 		<section class="share-section">
-			<a href="https://twitter.com/intent/tweet?url=https://faf.one/blog/voice-api-edition" target="_blank" rel="noopener" class="share-btn">Post on X</a>
+			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
 		<section class="footer-note">
