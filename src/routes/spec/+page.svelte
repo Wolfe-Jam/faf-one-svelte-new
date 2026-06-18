@@ -10,7 +10,14 @@
 	<meta property="og:title" content="The FAF Format — .faf and .fafb" />
 	<meta property="og:description" content="The Foundational AI-context Format. Human-readable YAML, IANA-registered, with a compiled binary form. The readable spec, pointing to BINARY-FORMAT.md." />
 	<meta property="og:type" content="article" />
-	<meta name="twitter:card" content="summary" />
+	<meta property="og:url" content="https://faf.one/spec" />
+	<meta property="og:image" content="https://faf.one/cards/spec-og.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="The FAF Format — .faf and .fafb" />
+	<meta name="twitter:description" content="Context, compiled. The Foundational AI-context Format — readable YAML, IANA-registered, with a compiled binary form (.fafb)." />
+	<meta name="twitter:image" content="https://faf.one/cards/spec-og.png" />
 </svelte:head>
 
 <div class="blog-post">
