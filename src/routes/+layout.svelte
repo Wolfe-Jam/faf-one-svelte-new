@@ -57,7 +57,9 @@
 <!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
      homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
 {#if $page.url.pathname === '/'}
-	<span class="home-badge home-here" title="Home" aria-current="page"></span>
+	<span class="home-badge home-here" title="Home" aria-current="page">
+		<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="18" fill="white" /></svg>
+	</span>
 {:else}
 	<a href="/" class="home-badge" title="Back">
 		<svg viewBox="0 0 100 100" fill="none">
@@ -256,17 +258,12 @@
 		height: 20px;
 	}
 
-	.home-badge:hover {
+	/* Black always — only the inner glyph changes (arrow vs you-are-home dot). */
+	.home-badge:not(.home-here):hover {
 		transform: scale(1.1);
-		background: #fff;
-	}
-
-	.home-badge:hover svg path {
-		stroke: #000;
 	}
 
 	.home-here {
-		background: #fff;
 		cursor: default;
 	}
 
