@@ -54,6 +54,18 @@
 	</div>
 {/if}
 
+<!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
+     homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
+{#if $page.url.pathname === '/'}
+	<span class="home-badge home-here" title="Home" aria-current="page"></span>
+{:else}
+	<a href="/" class="home-badge" title="Back">
+		<svg viewBox="0 0 100 100" fill="none">
+			<path d="M60 25 L35 50 L60 75" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</a>
+{/if}
+
 <!-- Milestone banner -->
 <div class="official-banner" class:auto-hide={!$page.data?.pinBanner} class:revealed={nearTop}>
 	<a href="/downloads" class="banner-line">
@@ -217,5 +229,58 @@
 		bottom: 1.5rem;
 		left: 1.5rem;
 		z-index: 9998;
+	}
+
+	/* Home badge — black circle, thick white outline, white back-arrow.
+	   On the homepage (.home-here) it's a filled white "you are home" dot. */
+	.home-badge {
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		width: 40px;
+		height: 40px;
+		background: #000;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		z-index: 1000;
+		text-decoration: none;
+	}
+
+	.home-badge svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.home-badge:hover {
+		transform: scale(1.1);
+		background: #fff;
+	}
+
+	.home-badge:hover svg path {
+		stroke: #000;
+	}
+
+	.home-here {
+		background: #fff;
+		cursor: default;
+	}
+
+	@media (max-width: 768px) {
+		.home-badge {
+			width: 36px;
+			height: 36px;
+			top: 15px;
+			left: 15px;
+		}
+
+		.home-badge svg {
+			width: 18px;
+			height: 18px;
+		}
 	}
 </style>

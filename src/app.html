@@ -102,13 +102,8 @@
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 
-		<!-- Floating Home Badge (twin, top-left) — black/white, simple back arrow -->
-		<a href="/" class="home-badge" title="Home" style="position: fixed; top: 20px; left: 20px; width: 40px; height: 40px; background: #000; border: 1px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 1000; text-decoration: none;">
-			<svg viewBox="0 0 100 100" fill="none" style="width: 20px; height: 20px;">
-				<path d="M60 25 L35 50 L60 75" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-			</svg>
-		</a>
-		<!-- Floating Foundation Badge (twin, top-right) -->
+		<!-- Floating Foundation Badge (top-right). HOME twin lives in +layout.svelte
+		     (it needs route awareness: a filled white "you are home" dot on /). -->
 		<a href="https://foundation.faf.one" class="foundation-badge" title="FAF Foundation" style="position: fixed; top: 20px; right: 20px; width: 40px; height: 40px; background: #00bf63; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0, 191, 99, 0.35); cursor: pointer; transition: all 0.3s ease; z-index: 1000; text-decoration: none;">
 			<svg viewBox="0 0 100 100" fill="none" style="width: 22px; height: 22px;">
 				<path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -119,24 +114,14 @@
 				transform: scale(1.1);
 				box-shadow: 0 5px 16px rgba(0, 191, 99, 0.55);
 			}
-			.home-badge:hover {
-				transform: scale(1.1);
-				background: #fff;
-			}
-			.home-badge:hover svg path {
-				stroke: #000;
-			}
 			@media (max-width: 768px) {
-				.foundation-badge,
-				.home-badge {
+				.foundation-badge {
 					width: 36px !important;
 					height: 36px !important;
 					top: 15px !important;
+					right: 15px !important;
 				}
-				.foundation-badge { right: 15px !important; }
-				.home-badge { left: 15px !important; }
-				.foundation-badge svg,
-				.home-badge svg {
+				.foundation-badge svg {
 					width: 20px !important;
 					height: 20px !important;
 				}
