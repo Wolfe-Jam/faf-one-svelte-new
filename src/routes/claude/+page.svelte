@@ -3,35 +3,35 @@
 </script>
 
 <svelte:head>
-	<title>Codex + .faf — is your agent grounded?</title>
-	<meta name="description" content="Codex (gpt-5.5) graded its own grounding on faf-cli: 2/9 without context, 9/9 with the .faf. This is a blind spot — measure yours in one command. IANA-registered, in Anthropic's MCP Registry, 96.1k downloads." />
+	<title>Claude + .faf — is your agent grounded?</title>
+	<meta name="description" content="Claude graded its own grounding on faf-cli: 1/9 without context, 8/9 with the .faf. This is a blind spot — measure yours in one command. IANA-registered, in Anthropic's MCP Registry, 96.1k downloads." />
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Codex grounding: this is a blind spot." />
-	<meta property="og:description" content="Codex graded its own grounding on faf-cli: 2/9 without context, 9/9 with the .faf. Measure yours: npx faf-cli@latest bench" />
-	<meta property="og:url" content="https://www.faf.one/codex" />
-	<meta property="og:image" content="https://www.faf.one/cards/codex-faf-cli.png" />
+	<meta property="og:title" content="Claude grounding: this is a blind spot." />
+	<meta property="og:description" content="Claude graded its own grounding on faf-cli: 1/9 without context, 8/9 with the .faf. Measure yours: npx faf-cli@latest bench" />
+	<meta property="og:url" content="https://www.faf.one/claude" />
+	<meta property="og:image" content="https://www.faf.one/cards/claude-faf-cli.png" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Codex grounding: this is a blind spot." />
-	<meta name="twitter:description" content="Codex graded its own grounding: 2/9 without context, 9/9 with the .faf. Measure yours in one command." />
-	<meta name="twitter:image" content="https://www.faf.one/cards/codex-faf-cli.png" />
+	<meta name="twitter:title" content="Claude grounding: this is a blind spot." />
+	<meta name="twitter:description" content="Claude graded its own grounding: 1/9 without context, 8/9 with the .faf. Measure yours in one command." />
+	<meta name="twitter:image" content="https://www.faf.one/cards/claude-faf-cli.png" />
 </svelte:head>
 
 <main class="page">
 
 	<section class="score-hero">
-		<p class="eyebrow">For Codex · gpt-5.5 · faf-cli</p>
+		<p class="eyebrow">For Claude · faf-cli</p>
 		<div class="score-pair">
 			<div class="score">
-				<span class="score-num cold">2<span class="denom">/9</span></span>
+				<span class="score-num cold">1<span class="denom">/9</span></span>
 				<span class="score-label">without context</span>
 			</div>
 			<span class="arrow">&rarr;</span>
 			<div class="score">
-				<span class="score-num win">9<span class="denom">/9</span></span>
+				<span class="score-num win">8<span class="denom">/9</span></span>
 				<span class="score-label">with context</span>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 
 	<section class="content qa">
 		<p class="q">What is this?</p>
-		<p>A bench that scores how grounded your Codex agent really is on your project — and the tiny file that enhances <code>AGENTS.md</code> instantly, deterministically and on-demand.</p>
+		<p>A bench that scores how grounded your Claude agent really is on your project — and the tiny file that enhances <code>CLAUDE.md</code> instantly, deterministically and on-demand.</p>
 	</section>
 
 	<section class="content qa">
@@ -58,12 +58,12 @@
 			</div>
 			<div class="lane md">
 				<span class="lane-tag">Instructions</span>
-				<span class="lane-file">AGENTS.md</span>
-				<p>The agent's playbook. Conventions, commands, the house style. AGENTS.md rules here.</p>
+				<span class="lane-file">CLAUDE.md</span>
+				<p>The agent's playbook. Conventions, commands, the house style. CLAUDE.md rules here.</p>
 			</div>
 		</div>
 		<p class="lanes-doctrine">FAF defines. MD Instructs.</p>
-		<p class="blind-reveal">Can you see your blind-spot?<br />AGENTS.md is doing your Context.<br />There are two lanes, not one.</p>
+		<p class="blind-reveal">Can you see your blind-spot?<br />CLAUDE.md is doing your Context.<br />There are two lanes, not one.</p>
 		<p class="lanes-doctrine">Stay in lane.</p>
 	</section>
 
@@ -88,7 +88,7 @@
 
 	<section class="content cta-section">
 		<h2>Measure your own — one command</h2>
-		<p>Run the bench on your repo. Keep your <code>AGENTS.md</code>. Nothing replaced.</p>
+		<p>Run the bench on your repo. Keep your <code>CLAUDE.md</code>. Nothing replaced.</p>
 		<div class="terminal">
 			<code class="cmd">npx faf-cli@latest bench</code>
 		</div>
@@ -97,9 +97,9 @@
 	</section>
 
 	<section class="content faq">
-		<h2>"What does it do that AGENTS.md doesn't?"</h2>
-		<p>The fair question, and the honest answer isn't an argument — it's a number. AGENTS.md is a keeper, but why waste tokens and leave context to guesswork? We measured it and fixed it, so you don't have to.</p>
-		<p>The <code>.faf</code> adds the structured layer AGENTS.md was never meant to be: deterministic facts, same every read, <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">IANA-registered</a>. Run the bench, keep both files, and let the gap decide.</p>
+		<h2>"What does it do that CLAUDE.md doesn't?"</h2>
+		<p>The fair question, and the honest answer isn't an argument — it's a number. CLAUDE.md is a keeper, but why waste tokens and leave context to guesswork? We measured it and fixed it, so you don't have to.</p>
+		<p>The <code>.faf</code> adds the structured layer CLAUDE.md was never meant to be: deterministic facts, same every read, <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">IANA-registered</a>. Run the bench, keep both files, and let the gap decide.</p>
 	</section>
 
 	<section class="content footer-section">
@@ -108,11 +108,11 @@
 	</section>
 
 	<PageActions
-		headline="Codex graded its own grounding: 2/9 without context, 9/9 with the .faf."
-		point1="Your AGENTS.md instructs. The .faf grounds. Keep both."
+		headline="Claude graded its own grounding: 1/9 without context, 8/9 with the .faf."
+		point1="Your CLAUDE.md instructs. The .faf grounds. Keep both."
 		point2="Measure your repo: npx faf-cli@latest bench"
-		url="https://www.faf.one/codex"
-		hashtags="Codex,OpenAI,AI,Context"
+		url="https://www.faf.one/claude"
+		hashtags="Claude,Anthropic,AI,Context"
 	/>
 
 </main>
@@ -160,7 +160,6 @@
 		color: var(--faf-dark);
 	}
 
-	/* Score pair — the page's reason to exist */
 	.score-pair {
 		display: flex;
 		align-items: center;
@@ -228,7 +227,6 @@
 		margin-bottom: 1rem;
 	}
 
-	/* Q&A flow — the newcomer's questions, in their voice */
 	.qa .q {
 		font-size: 1.3rem;
 		font-weight: 800;
@@ -240,7 +238,6 @@
 		margin-bottom: 0;
 	}
 
-	/* Two lanes — Context vs Instructions, complementary */
 	.lanes-intro {
 		font-weight: 700;
 		color: var(--faf-black);
@@ -271,11 +268,11 @@
 	}
 
 	.lane.md {
-		border-left: 3px solid #4A90E2;
+		border-left: 3px solid #D97757;
 	}
 
 	.lane.md .lane-file {
-		color: #4A90E2;
+		color: #D97757;
 	}
 
 	.lane-tag {
@@ -315,7 +312,6 @@
 		margin: 1.25rem 0 0;
 	}
 
-	/* Proof — receipts, not adjectives */
 	.proof-lead {
 		font-weight: 600;
 		color: var(--faf-black);
@@ -349,7 +345,6 @@
 		color: var(--faf-dark);
 	}
 
-	/* Terminal command — green on near-black, per theming carve-out */
 	.terminal {
 		background: #0a0a0a;
 		border-radius: 8px;
