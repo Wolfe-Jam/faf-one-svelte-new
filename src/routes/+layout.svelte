@@ -59,7 +59,6 @@
 	<a href="/downloads" class="banner-line">
 		<strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-receipt"> · Anthropic-merged</span><span class="banner-receipt-extra"> #2759 · IANA-registered</span>
 	</a>
-	<div class="banner-shine"></div>
 </div>
 
 {@render children?.()}
@@ -141,35 +140,8 @@
 		justify-content: center;
 	}
 
-	.official-banner::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 2px;
-		background: linear-gradient(90deg,
-			var(--faf-orange) 0%,
-			var(--faf-cyan-dark) 50%,
-			var(--faf-orange) 100%
-		);
-		animation: shimmer 3s linear infinite;
-	}
-
-	@keyframes shimmer {
-		0% { transform: translateX(-100%); }
-		100% { transform: translateX(100%); }
-	}
-
 	.official-banner:hover {
-		background: linear-gradient(135deg,
-			#5a5a5a 0%,
-			#3c4e60 20%,
-			#1a1a1a 50%,
-			#3c4e60 80%,
-			#5a5a5a 100%
-		);
-		transform: translateY(-1px);
+		background: #0a0a0a;
 	}
 
 	.banner-content {
@@ -224,26 +196,6 @@
 		background: linear-gradient(135deg, var(--faf-cyan-dark) 0%, #00E5E5 100%);
 		transform: scale(1.05);
 		box-shadow: 0 0 15px rgba(0, 229, 229, 0.4);
-	}
-
-	.banner-shine {
-		position: absolute;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg,
-			transparent 0%,
-			rgba(255, 255, 255, 0.03) 50%,
-			transparent 100%
-		);
-		animation: steelSheen 4s ease-in-out infinite;
-		pointer-events: none;
-	}
-
-	@keyframes steelSheen {
-		0% { left: -100%; }
-		100% { left: 100%; }
 	}
 
 	@media (max-width: 640px) {
