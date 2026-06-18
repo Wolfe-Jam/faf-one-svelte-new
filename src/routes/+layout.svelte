@@ -57,11 +57,11 @@
 <!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
      homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
 {#if $page.url.pathname === '/'}
-	<span class="home-badge home-here" title="Home" aria-current="page">
-		<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="18" fill="white" /></svg>
+	<span class="home-badge home-here" aria-label="Home" aria-current="page">
+		<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="white" /></svg>
 	</span>
 {:else}
-	<a href="/" class="home-badge" title="Back">
+	<a href="/" class="home-badge" aria-label="Back">
 		<svg viewBox="0 0 100 100" fill="none">
 			<path d="M60 25 L35 50 L60 75" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
 		</svg>
@@ -237,7 +237,7 @@
 	   On the homepage (.home-here) it's a filled white "you are home" dot. */
 	.home-badge {
 		position: fixed;
-		top: 20px;
+		top: 5px;
 		left: 20px;
 		width: 40px;
 		height: 40px;
@@ -267,11 +267,40 @@
 		cursor: default;
 	}
 
+	/* Instant tooltip (native title lags ~1s) */
+	.home-badge::after {
+		position: absolute;
+		top: calc(100% + 6px);
+		left: 0;
+		background: #000;
+		color: #fff;
+		font: 600 12px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		padding: 5px 8px;
+		border-radius: 6px;
+		white-space: nowrap;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.08s ease;
+		z-index: 1001;
+	}
+
+	.home-badge:not(.home-here)::after {
+		content: 'Back';
+	}
+
+	.home-here::after {
+		content: 'Home';
+	}
+
+	.home-badge:hover::after {
+		opacity: 1;
+	}
+
 	@media (max-width: 768px) {
 		.home-badge {
 			width: 36px;
 			height: 36px;
-			top: 15px;
+			top: 5px;
 			left: 15px;
 		}
 

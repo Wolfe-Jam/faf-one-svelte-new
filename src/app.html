@@ -104,7 +104,7 @@
 
 		<!-- Floating Foundation Badge (top-right). HOME twin lives in +layout.svelte
 		     (it needs route awareness: a filled white "you are home" dot on /). -->
-		<a href="https://foundation.faf.one" class="foundation-badge" title="FAF Foundation" style="position: fixed; top: 20px; right: 20px; width: 40px; height: 40px; background: #00bf63; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0, 191, 99, 0.35); cursor: pointer; transition: all 0.3s ease; z-index: 1000; text-decoration: none;">
+		<a href="https://foundation.faf.one" class="foundation-badge" aria-label="FAF Foundation" style="position: fixed; top: 5px; right: 20px; width: 40px; height: 40px; background: #00bf63; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0, 191, 99, 0.35); cursor: pointer; transition: all 0.3s ease; z-index: 1000; text-decoration: none;">
 			<svg viewBox="0 0 100 100" fill="none" style="width: 22px; height: 22px;">
 				<path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
@@ -114,11 +114,31 @@
 				transform: scale(1.1);
 				box-shadow: 0 5px 16px rgba(0, 191, 99, 0.55);
 			}
+			/* Instant tooltip (native title lags ~1s) */
+			.foundation-badge::after {
+				content: "FAF Foundation";
+				position: absolute;
+				top: calc(100% + 6px);
+				right: 0;
+				background: #000;
+				color: #fff;
+				font: 600 12px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+				padding: 5px 8px;
+				border-radius: 6px;
+				white-space: nowrap;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.08s ease;
+				z-index: 1001;
+			}
+			.foundation-badge:hover::after {
+				opacity: 1;
+			}
 			@media (max-width: 768px) {
 				.foundation-badge {
 					width: 36px !important;
 					height: 36px !important;
-					top: 15px !important;
+					top: 5px !important;
 					right: 15px !important;
 				}
 				.foundation-badge svg {
