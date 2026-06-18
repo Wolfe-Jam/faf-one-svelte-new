@@ -148,8 +148,9 @@ commands:
 </div>
 
 <style>
+	/* Dark IANA register: almost-black background, white text, austere. Locked dark. */
 	:global(body) {
-		background: #FEFCF8;
+		background: #0a0a0a;
 	}
 
 	.blog-post {
@@ -158,32 +159,32 @@ commands:
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: #e5e5e5;
 	}
 
 	.post-header {
 		margin-bottom: 3rem;
-		border-bottom: 3px solid #FF6B35;
+		border-bottom: 2px solid #333;
 		padding-bottom: 2rem;
 	}
 
 	h1 {
 		font-size: 2.2rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: #ffffff;
 		line-height: 1.3;
 	}
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: #1a1a1a;
+		color: #ffffff;
 		font-weight: 600;
 		margin: 0.5rem 0;
 	}
 
 	.media-type {
 		font-size: 0.9rem;
-		color: #1a1a1a;
+		color: #e5e5e5;
 		margin: 0.75rem 0 0 0;
 	}
 
@@ -195,22 +196,23 @@ commands:
 		font-size: 1.2rem;
 		line-height: 1.7;
 		margin-bottom: 2rem;
-		padding: 1.5rem;
-		background: #fff5f0;
-		border-radius: 8px;
-		border-left: 4px solid #FF6B35;
+		color: #ffffff;
 	}
 
 	h2 {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
-		border-bottom: 1px solid #e5e5e5;
+		color: #ffffff;
+		border-bottom: 1px solid #222;
 		padding-bottom: 0.5rem;
 	}
 
 	p {
 		margin-bottom: 1.25rem;
+	}
+
+	strong {
+		color: #ffffff;
 	}
 
 	ul, ol {
@@ -223,16 +225,18 @@ commands:
 
 	code {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
-		background: #f0f0f0;
+		background: #1f1f1f;
+		color: #ffffff;
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.9em;
 	}
 
 	pre {
-		background: #1a1a1a;
-		color: #00ff88;
+		background: #161616;
+		color: #e5e5e5;
 		padding: 1.25rem;
+		border: 1px solid #333;
 		border-radius: 8px;
 		overflow-x: auto;
 		font-size: 0.95rem;
@@ -242,7 +246,7 @@ commands:
 	pre code {
 		background: none;
 		padding: 0;
-		color: #00ff88;
+		color: #e5e5e5;
 	}
 
 	table {
@@ -255,12 +259,12 @@ commands:
 	th, td {
 		text-align: left;
 		padding: 0.6rem 0.75rem;
-		border-bottom: 1px solid #e5e5e5;
+		border-bottom: 1px solid #222;
 	}
 
 	th {
 		font-weight: 700;
-		color: #000;
+		color: #ffffff;
 	}
 
 	.spec-pointer {
@@ -269,7 +273,8 @@ commands:
 	}
 
 	a {
-		color: #FF6B35;
+		color: #00ffff;
+		text-decoration: underline;
 	}
 
 	a:hover {
