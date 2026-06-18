@@ -3,9 +3,11 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
+	import { page } from '$app/stores';
 
 	let { children, data } = $props();
 	let isDark = $state(true);
+	let nearTop = $state(false);
 
 	onMount(() => {
 		const saved = localStorage.getItem('faf-theme');
@@ -15,6 +17,14 @@
 			isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		}
 		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+	});
+
+	// Auto-hide banner: reveal when the cursor nears the top of the viewport.
+	// Only has a visible effect on pages that opt in (see .auto-hide below).
+	onMount(() => {
+		const onMove = (e) => { nearTop = e.clientY <= 64; };
+		window.addEventListener('mousemove', onMove);
+		return () => window.removeEventListener('mousemove', onMove);
 	});
 
 	function handleThemeToggle(e) {
@@ -38,12 +48,14 @@
 </svelte:head>
 
 
-<div class="theme-toggle">
-	<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
-</div>
+{#if !$page.data?.hideThemeToggle}
+	<div class="theme-toggle">
+		<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
+	</div>
+{/if}
 
 <!-- Milestone banner -->
-<div class="official-banner">
+<div class="official-banner" class:auto-hide={!$page.data?.pinBanner} class:revealed={nearTop}>
 	<a href="/downloads" class="banner-line">
 		<strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-receipt"> · Anthropic-merged</span><span class="banner-receipt-extra"> #2759 · IANA-registered</span>
 	</a>
@@ -77,6 +89,21 @@
 		text-align: center;
 		will-change: transform;
 		transform: translateZ(0);
+	}
+
+	/* Auto-hide by DEFAULT, everywhere. Banner becomes a fixed overlay, slid up
+	   out of view; the cursor nearing the top (nearTop) slides it down. A page
+	   opts OUT (pins the banner visible) via load returning { pinBanner: true }. */
+	.official-banner.auto-hide {
+		position: fixed;
+		left: 0;
+		right: 0;
+		transform: translateY(-100%);
+		transition: transform 0.25s ease;
+	}
+
+	.official-banner.auto-hide.revealed {
+		transform: translateY(0);
 	}
 
 	.banner-line {

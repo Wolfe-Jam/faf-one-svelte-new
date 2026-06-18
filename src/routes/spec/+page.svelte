@@ -153,11 +153,6 @@ commands:
 		background: #0a0a0a;
 	}
 
-	/* Hide the global milestone banner on this austere spec page (reverts on navigation). */
-	:global(.official-banner) {
-		display: none;
-	}
-
 	.blog-post {
 		max-width: 800px;
 		margin: 0 auto;
