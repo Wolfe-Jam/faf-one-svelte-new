@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/grok-core-tier',
+			title: 'Grok Core-tier',
+			date: 'June 18, 2026',
+			timestamp: '2026-06-18',
+			excerpt: 'grok-faf-mcp 1.5.5 — the default tool surface is now the Grok value: re-grounding, RAG, memory. Inherited clutter retired; zero Grok-driven features trimmed.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/claude-dart-edition',
 			title: 'The Dart Edition',
 			date: 'June 17, 2026',
