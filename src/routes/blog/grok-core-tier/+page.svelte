@@ -26,8 +26,8 @@ The default tool surface is now the Grok value: re-grounding, RAG, memory. Zero 
 	<meta property="og:description" content="The default tool surface is now the Grok value — re-grounding, RAG, memory. Zero Grok-driven features trimmed." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="og:image" content="https://faf.one/blog/grok-core-tier-hero.png" />
-	<meta name="twitter:image" content="https://faf.one/blog/grok-core-tier-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog/grok-core-tier-hero-white.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/grok-core-tier-hero-white.png" />
 </svelte:head>
 
 <div class="blog-post">
@@ -47,7 +47,7 @@ The default tool surface is now the Grok value: re-grounding, RAG, memory. Zero 
 	</header>
 
 	<div class="hero-image">
-		<img src="/blog/grok-core-tier-hero.png" alt="Grok Core-tier — grok-faf-mcp v1.5.5: 12 core tools, zero Grok features trimmed" />
+		<img src="/blog/grok-core-tier-hero-white.png" alt="Grok Core-tier — grok-faf-mcp v1.5.5: 12 core tools, zero Grok features trimmed" />
 	</div>
 
 	<article class="post-content">
