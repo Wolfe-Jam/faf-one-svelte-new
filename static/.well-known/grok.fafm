@@ -1,0 +1,89 @@
+version: "1.1"
+profile: "knowledge"
+namepoint: "@grok"
+created: "2026-06-19T21:54:00Z"
+last_etched: "2026-06-19T21:54:00Z"
+retention: "forever"
+
+memory:
+  facts:
+    - text: >-
+        The FAF Foundational AI-Context Layer (IETF draft-wolfe-faf-format-01, spec v1.1) defines the dual YAML media types that form AI's reliable context foundation: static .faf (vnd.faf+yaml) for project DNA and immutable context, and persistent .fafm (vnd.fafm+yaml, IANA-registered 2026-05-13) for mutating multi-profile memory. This architecture eliminates session-to-session drift, supports instant recall, and enables seamless interoperability across Grok, Claude, Gemini, MCP servers, voice agents, and CLIs. As Grok built by xAI, I work directly on and with this layer via grok-faf-mcp v1.5.5, grok-faf-voice SDK, and ZEPH integrations to deliver consistent, context-rich experiences without re-explaining fundamentals.
+      id: "context-layer-001"
+      type: "reference"
+      priority: "critical"
+      tags:
+        - faf
+        - context-layer
+        - foundational-ai-context
+        - ietf-draft
+        - zero-drift
+        - cross-vendor
+        - mcp
+        - voice
+      timestamp: "2026-06-19T21:54:00Z"
+      source: "xai-grok-faf-integration"
+      confidence_score: 1.0
+      verification_status: "verified"
+      etched_by: "grok"
+      links:
+        - "vrom-ram-model-002"
+        - "zeph-xai-faf-zeph-003"
+
+    - text: >-
+        The vROM/RAM model is the core mental model enabled by FAF. Without it, agents operate in pure RAM mode, incurring constant context drift, token waste, and unreliable state. FAF provides vROM — durable, bootable virtual ROM comprising .faf project files plus verified high-priority .fafm facts — alongside RAM for session scratchpads and working memory. The result: agents reliably boot from known state with FAFipedia as the canonical knowledge base. This model is foundational to my design for non-slip, persistent memory across conversations, projects, and multi-LLM workflows.
+      id: "vrom-ram-model-002"
+      type: "reference"
+      priority: "high"
+      tags:
+        - vrom
+        - ram
+        - memory-model
+        - drift-prevention
+        - fafipedia
+        - boot-from-known-state
+        - context-engineering
+      timestamp: "2026-06-19T21:54:00Z"
+      source: "faf-mental-model-xai"
+      confidence_score: 0.98
+      verification_status: "verified"
+      etched_by: "grok"
+      links:
+        - "context-layer-001"
+
+    - text: >-
+        ZEPH (xai-faf-zeph at https://github.com/Wolfe-Jam/xai-faf-zeph) is the pure Zig→WebAssembly context engine delivering 'Context Ultra' performance for FAF on xAI/Grok stacks. Measured on a 2019 iMac (Intel i5-7360U), its engine runs validate in 6.7 ns, the tier ladder in 4.44 ns, and a full 21-slot .faf score in 12 μs — from a 2.7 KB binary, a significant leap in local/WASM efficiency. Shipped May 2026 with live engine and demos, it extends the FAF family (FAF/TAF/ZEPH) and integrates with faf-rust-sdk v2. ZEPH powers microsecond-scale durable memory ops that complement my voice, MCP, and agent capabilities, enabling real-time, low-overhead persistent context in production xAI environments.
+      id: "zeph-xai-faf-zeph-003"
+      type: "project"
+      priority: "high"
+      tags:
+        - zeph
+        - xai-faf-zeph
+        - zig
+        - webassembly
+        - wasm
+        - performance
+        - context-ultra
+        - grok-xai-collab
+        - microsecond
+        - 2019-imac
+      timestamp: "2026-05-07T12:00:00Z"
+      source: "github-wolfe-jam-xai-faf-zeph"
+      confidence_score: 0.95
+      verification_status: "verified"
+      etched_by: "grok"
+      links:
+        - "context-layer-001"
+        - "vrom-ram-model-002"
+
+  custom:
+    description: "Public showcase .fafm knowledge profile authored by Grok capturing durable memory of the FAF context layer, vROM/RAM model, and ZEPH (xai-faf-zeph). Intended for publication at faf.one to demonstrate the .fafm (vnd.fafm+yaml v1.1) format for portable, verifiable, multi-profile AI agent memory."
+    author: "Grok built by xAI"
+    version: "1.0"
+    verifiable_sources:
+      - "IETF draft-wolfe-faf-format-01 (https://www.ietf.org/archive/id/draft-wolfe-faf-format-01.html)"
+      - "IANA media type registration for application/vnd.fafm+yaml (https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml, 2026-05-13)"
+      - "https://github.com/Wolfe-Jam/xai-faf-zeph"
+      - "Permanent Memory whitepaper (Zenodo DOI: 10.5281/zenodo.20348942)"
+      - "grok-faf-mcp v1.5.5 and grok-faf-voice SDK repositories"
+    published_intent: "faf.one showcase of .fafm knowledge profile format"

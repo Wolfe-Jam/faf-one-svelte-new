@@ -1,0 +1,71 @@
+# application/vnd.fafm+yaml — FAF public project memory
+# Public-safe by construction: only published, verifiable facts about the FAF
+# standard. No private strategy, no people, no unreleased plans. The .fafm
+# format itself — typed, cross-linked, retained memory — demonstrated on FAF.
+version: "1.1"
+profile: "knowledge"
+namepoint: "@faf:public"
+created: "2026-06-19T00:00:00Z"
+last_etched: "2026-06-19T00:00:00Z"
+retention: "forever"
+
+index:
+  - "faf-trinity — Context (.faf) · Memory (.fafm) · Agent (.fafa)"
+  - "iana-registered — .faf and .fafm are registered media types"
+  - "deterministic-scoring — the .faf score is mechanical and falsifiable"
+
+memory:
+  facts:
+    - text: "FAF is a family of AI-context formats — the trinity: Context (.faf), Memory (.fafm), and Agent (.fafa)."
+      id: "faf-trinity"
+      type: "reference"
+      priority: "high"
+      tags: ["format", "trinity"]
+      source: "faf.one"
+      verification_status: "verified"
+
+    - text: ".faf is the IANA-registered media type application/vnd.faf+yaml — portable project context an AI agent reads instead of starting every session from zero."
+      id: "faf-context-mediatype"
+      type: "reference"
+      priority: "high"
+      tags: ["iana", "context"]
+      links: ["faf-trinity"]
+      source: "IANA media types registry"
+      verification_status: "verified"
+
+    - text: ".fafm is the IANA-registered media type application/vnd.fafm+yaml — typed, cross-linked, retained agent memory. This document is itself a .fafm."
+      id: "fafm-memory-mediatype"
+      type: "reference"
+      priority: "high"
+      tags: ["iana", "memory"]
+      links: ["faf-trinity"]
+      source: "IANA media types registry"
+      verification_status: "verified"
+
+    - text: "The .faf score is deterministic and mechanical: the same project always yields the same score, independent of language, surface, or engine."
+      id: "deterministic-scoring"
+      type: "reference"
+      priority: "standard"
+      tags: ["scoring", "deterministic"]
+      source: "faf-cli"
+      verification_status: "verified"
+
+    - text: "faf-cli is open source (MIT) — the on-ramp that emits and scores .faf context."
+      id: "faf-cli-open"
+      type: "reference"
+      priority: "standard"
+      tags: ["open-source", "cli"]
+      links: ["deterministic-scoring"]
+      source: "faf.one"
+      verification_status: "verified"
+
+    - text: "FAF context composes onto MCP: a FAF MCP server is listed in the official Model Context Protocol registry."
+      id: "mcp-registry-listed"
+      type: "reference"
+      priority: "standard"
+      tags: ["mcp", "interop"]
+      source: "modelcontextprotocol/registry"
+      verification_status: "verified"
+  sessions: []
+  preferences: {}
+  custom: {}

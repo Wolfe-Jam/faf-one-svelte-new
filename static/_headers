@@ -1,0 +1,12 @@
+# Correct media types for FAF artifacts served from the well-known AI Catalog.
+/.well-known/ai-catalog.json
+  Content-Type: application/ai-catalog+json; charset=utf-8
+
+/.well-known/project.faf
+  Content-Type: application/vnd.faf+yaml; charset=utf-8
+
+/.well-known/project.fafm
+  Content-Type: application/vnd.fafm+yaml; charset=utf-8
+
+/.well-known/grok.fafm
+  Content-Type: application/vnd.fafm+yaml; charset=utf-8

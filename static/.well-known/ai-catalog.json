@@ -1,0 +1,63 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "FAF Foundation",
+    "identifier": "https://faf.one",
+    "documentationUrl": "https://faf.one"
+  },
+  "entries": [
+    {
+      "identifier": "urn:faf:context",
+      "displayName": "FAF — Project Context (.faf)",
+      "mediaType": "application/vnd.faf+yaml",
+      "description": "Deterministic, IANA-registered project context — the .faf source of truth a repo's CLAUDE.md / AGENTS.md are generated from.",
+      "tags": ["context", "faf", "deterministic", "iana", "agent-context"],
+      "url": "https://faf.one/.well-known/project.faf",
+      "updatedAt": "2026-06-19T00:00:00Z",
+      "metadata": {
+        "one.faf/context": {
+          "mediaType": "application/vnd.faf+yaml",
+          "deterministic": true,
+          "iana": "registered",
+          "canonical": "https://faf.one/.well-known/project.faf"
+        }
+      }
+    },
+    {
+      "identifier": "urn:faf:memory",
+      "displayName": "FAF — Persistent Memory (.fafm)",
+      "mediaType": "application/vnd.fafm+yaml",
+      "description": "IANA-registered multi-profile agent memory format — permanent context recall across sessions.",
+      "tags": ["memory", "fafm", "iana", "recall"],
+      "url": "https://faf.one/.well-known/project.fafm",
+      "updatedAt": "2026-06-19T00:00:00Z"
+    },
+    {
+      "identifier": "urn:faf:zeph-context",
+      "displayName": "ZEPH — Context Engine (.faf)",
+      "mediaType": "application/vnd.faf+yaml",
+      "description": "The .faf for xai-faf-zeph (ZEPH): a pure Zig→WebAssembly microsecond context engine, the xAI collaboration channel. .faf context on a radically different stack — a Zig/WASM engine, not a website.",
+      "tags": ["context", "faf", "showcase", "zeph", "zig", "wasm", "xai"],
+      "url": "https://raw.githubusercontent.com/Wolfe-Jam/xai-faf-zeph/main/project.faf",
+      "updatedAt": "2026-06-19T00:00:00Z"
+    },
+    {
+      "identifier": "urn:faf:grok-memory",
+      "displayName": "Grok — Public Memory (.fafm)",
+      "mediaType": "application/vnd.fafm+yaml",
+      "description": "A public .fafm authored by Grok (xAI): durable memory of FAF's context layer, the vROM/RAM model, and the ZEPH engine — a frontier-model demonstration of the memory format.",
+      "tags": ["memory", "fafm", "showcase", "grok", "xai"],
+      "url": "https://faf.one/.well-known/grok.fafm",
+      "updatedAt": "2026-06-19T00:00:00Z"
+    },
+    {
+      "identifier": "urn:faf:mcp:context-server",
+      "displayName": "FAF Context — MCP Server Card",
+      "mediaType": "application/mcp-server-card+json",
+      "description": "Live MCP server carrying FAF context in its reverse-DNS _meta[\"one.faf/context\"] slot.",
+      "tags": ["mcp", "server-card", "context"],
+      "url": "https://context.faf.one/mcp/server-card",
+      "updatedAt": "2026-06-19T00:00:00Z"
+    }
+  ]
+}

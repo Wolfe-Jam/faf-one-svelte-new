@@ -1,0 +1,39 @@
+faf_version: "3.0"
+project:
+  name: faf-one-svelte
+  goal: Persistent project context for the AI era
+  main_language: TypeScript
+  type: svelte
+stack:
+  frontend: SvelteKit
+  css_framework: slotignored
+  ui_library: slotignored
+  state_management: Svelte 5 runes
+  backend: Supabase (BaaS)
+  api_type: REST (Supabase)
+  runtime: Node.js
+  database: Supabase (Postgres)
+  connection: "@supabase/supabase-js"
+  hosting: Cloudflare Pages
+  build: Vite
+  cicd: GitHub Actions
+  monorepo_tool: slotignored
+  package_manager: slotignored
+  workspaces: slotignored
+  admin: slotignored
+  cache: slotignored
+  search: slotignored
+  storage: slotignored
+human_context:
+  who: Developers and teams adopting AI context, and anyone discovering the .faf format
+  what: Context that persists. Across sessions. Models. Tools. Teams. Enterprises.
+  why: Be the canonical home for .faf - explain the format, host docs and blog, drive adoption of AI-readable project context
+  where: faf.one - Cloudflare Pages
+  when: Production - live, continuously deployed
+  how: SvelteKit (Svelte 5 runes), built with Vite, deployed to Cloudflare Pages
+monorepo:
+  packages_count: slotignored
+  build_orchestrator: slotignored
+  versioning_strategy: slotignored
+  shared_configs: slotignored
+  remote_cache: slotignored
