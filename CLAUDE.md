@@ -1,12 +1,12 @@
 <!-- faf:start -->
-<!-- faf: faf-one-svelte | TypeScript | svelte | FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management -->
+<!-- faf: faf-one-svelte | TypeScript | svelte | Persistent project context for the AI era -->
 <!-- faf: claim=project.faf | family=FAF -->
 
 # CLAUDE.md — faf-one-svelte
 
 ## What This Is
 
-FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+Persistent project context for the AI era
 
 ## Stack
 
@@ -25,7 +25,7 @@ FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Con
 ## Context
 
 - **Who:** Developers and teams adopting AI context, and anyone discovering the .faf format
-- **What:** FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+- **What:** Context that persists. Across sessions. Models. Tools. Teams. Enterprises.
 - **Why:** Be the canonical home for .faf - explain the format, host docs and blog, drive adoption of AI-readable project context
 - **Where:** faf.one - Cloudflare Pages
 - **When:** Production - live, continuously deployed
@@ -33,7 +33,7 @@ FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Con
 
 ---
 
-*STATUS: BI-SYNC ACTIVE — 2026-06-13T22:48:39.756Z*
+*STATUS: BI-SYNC ACTIVE — 2026-06-20T00:46:29.390Z*
 <!-- faf:end -->
 
 # CLAUDE.md - FAF Website Development

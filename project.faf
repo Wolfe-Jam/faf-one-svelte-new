@@ -1,7 +1,7 @@
 faf_version: "3.0"
 project:
   name: faf-one-svelte
-  goal: FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+  goal: Persistent project context for the AI era
   main_language: TypeScript
   type: svelte
 stack:
@@ -26,7 +26,7 @@ stack:
   storage: slotignored
 human_context:
   who: Developers and teams adopting AI context, and anyone discovering the .faf format
-  what: FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management
+  what: Context that persists. Across sessions. Models. Tools. Teams. Enterprises.
   why: Be the canonical home for .faf - explain the format, host docs and blog, drive adoption of AI-readable project context
   where: faf.one - Cloudflare Pages
   when: Production - live, continuously deployed
