@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/zeph-edition',
+			title: 'The ZEPH Edition',
+			date: 'June 20, 2026',
+			timestamp: '2026-06-20',
+			excerpt: 'grok-faf-mcp 1.6.0 — the ZEPH fast path for re-grounding. Zig→WASM scoring (~12µs), flag-gated, faf-cli the canonical fallback, parity locked in CI. Same number, just faster.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/grok-core-tier',
 			title: 'Grok Core-tier',
 			date: 'June 18, 2026',
