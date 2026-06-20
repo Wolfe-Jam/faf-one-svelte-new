@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/hundred-thousand',
+			title: '100,000 Downloads',
+			date: 'June 20, 2026',
+			timestamp: '2026-06-20',
+			excerpt: 'The FAF ecosystem crosses 100,000 downloads across npm, PyPI and crates.io. Six figures, zero marketing budget — the format keeps spreading because the format keeps working.',
+			emoji: '🏆',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/grok-core-tier',
 			title: 'Grok Core-tier',
 			date: 'June 18, 2026',
