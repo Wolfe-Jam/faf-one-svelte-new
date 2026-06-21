@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/grounded-memory',
+			title: 'The Grounded Memory Edition',
+			date: 'June 21, 2026',
+			timestamp: '2026-06-21',
+			excerpt: 'grok-faf-mcp 1.7.0 — the FRC layer above Grok Collections: faf_gate (promote/hold), faf_section (exact structured retrieval), faf_memory (durable .fafm). Opt-in via USE_FRC; the 12-tool core surface stays unchanged.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/hundred-thousand',
 			title: '100,000 Downloads',
 			date: 'June 20, 2026',
