@@ -49,7 +49,7 @@
 		<p class="subtitle">Six figures. Every registry. Zero marketing budget.</p>
 		<div class="meta">
 			<!-- LAND: set the real crossing date -->
-			<time datetime="2026-MM-DD">Month DD, 2026</time>
+			<time datetime="2026-06-20">June 20, 2026</time>
 			<span class="separator">&bull;</span>
 			<span class="category milestone">Milestone</span>
 		</div>
@@ -65,7 +65,7 @@
 				<strong>TL;DR:</strong> The FAF ecosystem just crossed <strong>100,000 downloads</strong>
 				across npm, PyPI, and crates.io.
 				<!-- LAND: X days after 60k (60k = 2026-04-30) -->
-				From 60k to six figures in X days. Same packages. Same three registries. Same zero
+				From 60k to six figures in 51 days. Same packages. Same three registries. Same zero
 				marketing budget. The format keeps spreading because the format keeps working.
 			</p>
 		</section>
