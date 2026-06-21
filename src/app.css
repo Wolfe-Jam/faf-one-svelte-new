@@ -104,6 +104,7 @@ p {
 code {
 	font-family: var(--font-mono);
 	background: var(--faf-gray-light);
+	color: var(--faf-black); /* MUST pair with bg from the same token set — both flip together, so the pill always contrasts (light theme, dark theme, AND theme-locked posts). Without this, text is inherited and goes invisible on locked-dark pages. */
 	padding: 0.2em 0.4em;
 	border-radius: 4px;
 	font-size: 0.9em;
