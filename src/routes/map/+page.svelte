@@ -97,9 +97,13 @@
 	<meta name="description" content="Every page on faf.one — the full site directory." />
 </svelte:head>
 
-<div class="back-nav"><a href="/" class="back-button">←</a></div>
+<!-- Scoped full-height wrapper paints the page bg on an ELEMENT, not :global(body).
+     Immune to leaked :global(body){dark} from other visited routes (SvelteKit keeps
+     their CSS in the document). var(--faf-cream) flips, so it's correct both themes. -->
+<div class="map-root">
+	<div class="back-nav"><a href="/" class="back-button">←</a></div>
 
-<main class="map-page">
+	<main class="map-page">
 	<header class="map-header">
 		<h1>
 			<svg class="title-globe" viewBox="0 0 100 100" fill="none" aria-hidden="true">
@@ -116,8 +120,13 @@
 		config={{ defaultView: 'section', categoryOrder: CATEGORY_ORDER, categoryEmoji: CATEGORY_EMOJI, unit: 'pages' }}
 	/>
 </main>
+</div>
 
 <style>
+	.map-root {
+		min-height: 100vh;
+		background: var(--faf-cream);
+	}
 	.back-nav {
 		padding: 1rem 2rem;
 	}
