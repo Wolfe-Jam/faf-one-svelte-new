@@ -1030,7 +1030,7 @@ competitors:
 	.foundation-statement {
 		font-size: 1.3rem;
 		font-weight: 700;
-		color: #000;
+		color: var(--faf-black);
 		text-align: center;
 		margin: 2rem 0;
 		padding: 1.5rem;

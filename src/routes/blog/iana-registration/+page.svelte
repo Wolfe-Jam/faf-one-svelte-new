@@ -849,7 +849,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 		font-size: 1.3rem;
 		font-style: normal;
 		line-height: 1.6;
-		color: #1a73e8;
+		color: var(--faf-black);
 	}
 
 	.gemini-quote footer {

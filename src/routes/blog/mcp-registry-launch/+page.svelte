@@ -408,7 +408,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 		border-radius: 4px;
 		font-family: 'Monaco', 'Courier New', monospace;
 		font-size: 0.9em;
-		color: #009999;
+		color: var(--faf-black);
 	}
 
 	.code-block {
