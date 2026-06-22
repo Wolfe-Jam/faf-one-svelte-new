@@ -5,6 +5,24 @@
 
 	const posts = [
 		{
+			slug: 'blog/proof-edition',
+			title: 'The Proof Edition',
+			date: 'June 22, 2026',
+			timestamp: '2026-06-22',
+			excerpt: "faf_bench proves FAF's grounding lift in-session — a cold-vs-.faf benchmark with a mechanical ✪ receipt — and faf_go now bootstraps from a cold repo (init → auto → 6Ws).",
+			emoji: '🏁',
+			category: 'Release'
+		},
+		{
+			slug: 'blog/loop-edition',
+			title: 'The Loop Edition',
+			date: 'June 22, 2026',
+			timestamp: '2026-06-22',
+			excerpt: 'faf-cli v6.14.0 — faf loop drives any repo to 100% or the honest human wall, sourcing every slot it can with provenance, asking only what only you know, never inventing. Three honest terminals: done / needs-human / stuck.',
+			emoji: '🏆',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/grounded-memory',
 			title: 'The Grounded Memory Edition',
 			date: 'June 21, 2026',

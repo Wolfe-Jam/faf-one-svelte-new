@@ -114,7 +114,7 @@ The default tool surface is now the Grok value: re-grounding, RAG, memory. Zero 
 
 	.post-header {
 		margin-bottom: 2rem;
-		border-bottom: 3px solid #FF6B35;
+		border-bottom: 3px solid #000000;
 		padding-bottom: 2rem;
 	}
 

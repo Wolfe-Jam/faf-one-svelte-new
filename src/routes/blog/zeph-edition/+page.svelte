@@ -125,7 +125,7 @@ ZEPH fast path for re-grounding — microsecond-cheap scoring, flag-gated. Same 
 
 	.post-header {
 		margin-bottom: 2rem;
-		border-bottom: 3px solid #FF6B35;
+		border-bottom: 3px solid #000000;
 		padding-bottom: 2rem;
 	}
 

@@ -224,7 +224,7 @@ Be precise, get great code.`}</code></pre>
 
 	.post-header {
 		margin-bottom: 2rem;
-		border-bottom: 3px solid #FF6B35;
+		border-bottom: 3px solid #000000;
 		padding-bottom: 2rem;
 	}
 
