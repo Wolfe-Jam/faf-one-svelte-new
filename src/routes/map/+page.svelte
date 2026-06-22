@@ -6,7 +6,7 @@
 	// "More" — so a new page can never silently hide. Re-bucket by editing META.
 	const META = {
 		'/': { title: 'Home', category: 'Core', emoji: '🏠', description: 'The Context Standard for AI' },
-		'/about': { title: 'About', category: 'Core', emoji: '📖', description: 'What .faf is and why it exists' },
+		'/about': { title: 'About', category: 'Core', emoji: '📖', description: 'What .faf is and why it exists', order: 1 },
 		'/pro': { title: 'FAF Pro', category: 'Core', emoji: '⭐', description: 'Full access. Every tool.' },
 		'/cli': { title: 'faf-cli', category: 'Core', emoji: '⌨️', description: 'The CLI for the .faf format' },
 		'/rust': { title: 'Rust SDK', category: 'Core', emoji: '🦀', description: 'Rust-native FAF compiler' },
@@ -18,7 +18,7 @@
 		'/ecosystem': { title: 'Ecosystem', category: 'Core', emoji: '🌍', description: 'The FAF ecosystem' },
 		'/context': { title: 'Context', category: 'Core', emoji: '🧬', description: 'Context intelligence' },
 		'/guides': { title: 'Guides', category: 'Core', emoji: '🧭', description: 'How-to guides' },
-		'/6ws': { title: '6Ws', category: 'Core', emoji: '❓', description: 'The six Ws of context' },
+		'/6ws': { title: '6Ws', category: 'Core', emoji: '❓', description: 'The six Ws of context', order: 2 },
 
 		'/calculator': { title: 'Calculator', category: 'Tools', emoji: '🧮', description: 'Context cost calculator' },
 		'/automation-calculator': { title: 'Automation Calculator', category: 'Tools', emoji: '⚙️', description: 'Automation ROI' },

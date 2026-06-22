@@ -21,7 +21,7 @@
 		}
 		return [...m.entries()]
 			.sort((a, b) => rank(a[0]) - rank(b[0]) || a[0].localeCompare(b[0]))
-			.map(([cat, list]) => [cat, [...list].sort((x, y) => x.title.localeCompare(y.title))]);
+			.map(([cat, list]) => [cat, [...list].sort((x, y) => (x.order ?? 999) - (y.order ?? 999) || x.title.localeCompare(y.title))]);
 	});
 	const az = $derived([...entries].sort((a, b) => a.title.localeCompare(b.title)));
 </script>
