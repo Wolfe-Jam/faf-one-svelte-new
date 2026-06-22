@@ -357,7 +357,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	}
 
 	.love-box {
-		background: linear-gradient(135deg, #FF6B35 0%, #ffaa00 100%);
+		background: var(--faf-orange);
 		color: white;
 		padding: 2rem;
 		border-radius: 12px;

@@ -311,7 +311,7 @@ The universal AI context standard with TURBO-CAT format discovery, C-Mirror bi-s
 	}
 
 	.cta-box {
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.1) 0%, rgba(255, 145, 77, 0.1) 100%);
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		border: 2px solid var(--faf-cyan-dark);
@@ -378,7 +378,7 @@ The universal AI context standard with TURBO-CAT format discovery, C-Mirror bi-s
 		margin-top: 3rem;
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 	}
 

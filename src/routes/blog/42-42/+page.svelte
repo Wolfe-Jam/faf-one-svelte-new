@@ -365,7 +365,7 @@
 
 	/* Hero Comparison */
 	.hero-comparison {
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		background: #1a1a1a;
 		border-radius: 12px;
 		padding: 2rem;
 		text-align: center;
@@ -456,7 +456,7 @@
 	}
 
 	.iana-banner {
-		background: linear-gradient(135deg, var(--faf-orange) 0%, #e85a2c 100%);
+		background: var(--faf-orange);
 		border-radius: 12px;
 		padding: 3rem;
 		text-align: center;
@@ -545,7 +545,7 @@
 	}
 
 	.iana-banner-small {
-		background: linear-gradient(135deg, var(--faf-orange) 0%, #e85a2c 100%);
+		background: var(--faf-orange);
 		color: white;
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -689,7 +689,7 @@
 	}
 
 	.achievement.highlight {
-		background: linear-gradient(135deg, var(--faf-orange) 0%, #e85a2c 100%);
+		background: var(--faf-orange);
 		color: white;
 		font-weight: 700;
 	}

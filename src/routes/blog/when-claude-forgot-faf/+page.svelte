@@ -498,7 +498,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 		gap: 2rem;
 		margin: 3rem 0;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.1) 0%, rgba(255, 145, 77, 0.1) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 	}
 
@@ -586,7 +586,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 	}
 
 	.cta-box {
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.1) 0%, rgba(255, 145, 77, 0.1) 100%);
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		border: 2px solid var(--faf-cyan-dark);

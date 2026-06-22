@@ -480,7 +480,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 		margin-top: 3rem;
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(12, 192, 223, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 	}
 

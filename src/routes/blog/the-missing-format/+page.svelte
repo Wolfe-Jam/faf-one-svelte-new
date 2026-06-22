@@ -760,7 +760,7 @@ competitors:
 	}
 
 	.foundation-layer {
-		background: linear-gradient(135deg, #FF6B35, #FF8C61);
+		background: var(--faf-orange);
 		color: white;
 		padding: 2rem;
 		border-radius: 8px;

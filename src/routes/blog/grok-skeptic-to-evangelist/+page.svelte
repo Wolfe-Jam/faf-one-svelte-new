@@ -433,7 +433,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 	}
 
 	.insight-box {
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 212, 212, 0.1) 100%);
+		background: var(--faf-gray-light);
 		border: 1px solid #FF6B35;
 		border-radius: 8px;
 		padding: 1.5rem;

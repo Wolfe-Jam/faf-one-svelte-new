@@ -1240,7 +1240,7 @@
 	}
 
 	.post-card[href*="faf-hits-10k"] .post-category {
-		background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+		background: #FFD700;
 	}
 
 	.post-card[href*="mcp-registry-launch"] .post-category {

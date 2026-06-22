@@ -475,7 +475,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 		color: var(--faf-orange);
 		text-align: center;
 		padding: 1rem;
-		background: linear-gradient(135deg, rgba(255, 145, 77, 0.1) 0%, rgba(12, 192, 223, 0.1) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		margin: 1.5rem 0;
 	}
@@ -503,7 +503,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 		gap: 0.5rem;
 		margin: 2rem 0;
 		padding: 2rem 1rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 		border: 2px solid #e5e5e5;
 		overflow-x: auto;
@@ -573,7 +573,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 		gap: 2rem;
 		margin: 2rem 0;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 		border: 2px solid #e5e5e5;
 	}
@@ -622,7 +622,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 	}
 
 	.cta-box {
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.1) 0%, rgba(255, 145, 77, 0.1) 100%);
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		border: 2px solid #009999;
@@ -698,7 +698,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 		margin-top: 3rem;
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 	}
 

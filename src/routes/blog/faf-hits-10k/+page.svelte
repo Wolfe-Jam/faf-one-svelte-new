@@ -476,7 +476,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 		font-weight: 500;
 		font-style: italic;
 		color: var(--faf-black);
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.08) 0%, rgba(255, 145, 77, 0.08) 100%);
+		background: var(--faf-gray-light);
 		border-left: 4px solid var(--faf-orange);
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -489,7 +489,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 		font-weight: 600;
 		font-style: italic;
 		color: var(--faf-black);
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.1) 0%, rgba(12, 192, 223, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-left: 4px solid var(--faf-cyan-dark);
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -570,7 +570,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 	}
 
 	.validation-card {
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: var(--faf-gray-light);
 		padding: 1.5rem;
 		border-radius: 12px;
 		border: 2px solid #e5e5e5;
@@ -614,7 +614,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 		font-size: 1.25rem;
 		font-weight: 800;
 		color: var(--faf-orange);
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 145, 77, 0.1) 100%);
+		background: var(--faf-gray-light);
 		padding: 0.5rem;
 		border-radius: 6px;
 		margin-top: 1rem;
@@ -706,7 +706,7 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 		margin-top: 3rem;
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, rgba(12, 192, 223, 0.05) 0%, rgba(255, 145, 77, 0.05) 100%);
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 	}
 
