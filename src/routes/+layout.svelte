@@ -32,6 +32,32 @@
 		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
 		localStorage.setItem('faf-theme', isDark ? 'dark' : 'light');
 	}
+
+	// Central body-theme guard. SvelteKit keeps every visited route's CSS in the
+	// document, so any page's `:global(body){...}` bleeds onto later pages and wins
+	// by source order — that's the recurring "dark-on-dark on a clean page" bug.
+	// Fix: set the body background/color INLINE on every navigation. Inline beats
+	// any stylesheet rule, so leaks can never win. Each page declares intent via
+	// load → `data.bg`:  'dark' | 'light' (locked) · 'self' (page paints its own
+	// body) · anything else / undefined (flip — the immune default).
+	$effect(() => {
+		if (!browser) return;
+		const bg = $page.data?.bg;
+		const s = document.body.style;
+		if (bg === 'dark') {
+			s.background = '#0a0a0a';
+			s.color = '#e5e5e5';
+		} else if (bg === 'light') {
+			s.background = '#FEFCF8';
+			s.color = '#1a1a1a';
+		} else if (bg === 'self') {
+			s.removeProperty('background');
+			s.removeProperty('color');
+		} else {
+			s.background = 'var(--faf-cream)';
+			s.color = 'var(--faf-dark)';
+		}
+	});
 </script>
 
 <!-- Site-wide default <title> ONLY. Svelte head-management dedups <title>
