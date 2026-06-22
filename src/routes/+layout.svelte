@@ -68,6 +68,22 @@
 	</a>
 {/if}
 
+<!-- Site-map badge — opens the full page directory. Twin of the home badge,
+     flat white globe (not the colored emoji) to match the badge family. -->
+<a href="/map" class="map-badge" aria-label="Site map" title="Site map">
+	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+		<circle cx="50" cy="50" r="36" stroke="white" stroke-width="8" />
+		<ellipse cx="50" cy="50" rx="17" ry="36" stroke="white" stroke-width="6" />
+		<line x1="14" y1="50" x2="86" y2="50" stroke="white" stroke-width="6" />
+	</svg>
+</a>
+
+<!-- Minimal persistent nav: Home · Map · Blog. Black pill (white text) so it
+     reads on any page + over the dark banner. -->
+<nav class="mini-nav" aria-label="Primary">
+	<a href="/">Home</a><span class="sep">·</span><a href="/map">Map</a><span class="sep">·</span><a href="/blog">Blog</a>
+</nav>
+
 <!-- Milestone banner -->
 <div class="official-banner" class:auto-hide={!$page.data?.pinBanner} class:revealed={nearTop}>
 	<a href="/downloads" class="banner-line">
@@ -294,6 +310,67 @@
 
 	.home-badge:hover::after {
 		opacity: 1;
+	}
+
+	/* Site-map badge (🌐) — sits right of the home badge, opens /map. */
+	.map-badge {
+		position: fixed;
+		top: 5px;
+		left: 70px;
+		width: 40px;
+		height: 40px;
+		background: #000;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		z-index: 1000;
+		transition: transform 0.3s ease;
+	}
+	.map-badge svg {
+		width: 22px;
+		height: 22px;
+	}
+	.map-badge:hover {
+		transform: scale(1.1);
+	}
+
+	/* Minimal persistent nav: black pill + white text → readable on any page
+	   and over the dark banner. Home · Map · Blog. */
+	.mini-nav {
+		position: fixed;
+		top: 10px;
+		left: 120px;
+		z-index: 1000;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.55rem;
+		height: 30px;
+		padding: 0 14px;
+		background: #000;
+		border: 2px solid #fff;
+		border-radius: 16px;
+		box-sizing: border-box;
+	}
+	.mini-nav a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 0.85rem;
+	}
+	.mini-nav a:hover {
+		color: var(--faf-orange);
+	}
+	.mini-nav .sep {
+		color: #777;
+	}
+
+	@media (max-width: 640px) {
+		.mini-nav {
+			display: none;
+		}
 	}
 
 	@media (max-width: 768px) {
