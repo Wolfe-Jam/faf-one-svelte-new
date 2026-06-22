@@ -58,7 +58,7 @@
 
 <div class="try-page">
 	<div class="back-nav">
-		<a href="/" class="back-link">← Back to Home</a>
+		<a href="/" class="back-link">←</a>
 	</div>
 
 	<main class="content">

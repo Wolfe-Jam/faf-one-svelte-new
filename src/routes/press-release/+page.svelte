@@ -12,7 +12,7 @@
 </svelte:head>
 
 <div class="back-nav">
-	<a href="/" class="back-button">← Back to Home</a>
+	<a href="/" class="back-button">←</a>
 </div>
 
 <article class="press-release">

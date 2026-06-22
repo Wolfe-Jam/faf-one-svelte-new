@@ -127,6 +127,28 @@ pre code {
 	color: inherit;
 }
 
+/* Inline prose code (bare, unclassed <code>) — AUTHORITATIVE single source of truth.
+   Gray box + text, BOTH from the same token set so they flip together →
+   HIGH contrast in BOTH themes (light: #1a1a1a on #e5e5e5; dark: #fff on #222).
+   `!important` is required: Svelte scoped per-post `code{}` rules outrank a plain
+   global selector, so ~96 posts that hardcode literals (e.g. `background:#f0f0f0`
+   + `color:#fff` → white-on-white) were silently winning. This is the cascade fix.
+   Scope is deliberately narrow — only `<code>` with NO class and NOT inside <pre>:
+   classed pills (.copy-code, .terminal-block code, green command text) and block
+   code keep their own styling. */
+:not(pre) > code:not([class]) {
+	background: var(--faf-gray-light) !important;
+	color: var(--faf-black) !important;
+}
+
+/* Blog breadcrumb (Home / Blog / edition) sits under the auto-hide banner's
+   reveal zone, so its links get intercepted. Drop it a few rems so it clears
+   the banner and stays clickable. Global so all 111 per-post breadcrumbs move
+   together (posts set margin-bottom/color but never margin-top, so this wins). */
+.breadcrumb {
+	margin-top: 3rem;
+}
+
 /* Buttons */
 .btn {
 	display: inline-flex;

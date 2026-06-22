@@ -76,7 +76,7 @@
 </svelte:head>
 
 <div class="back-nav">
-	<a href="/" class="back-button">&larr; Back to Home</a>
+	<a href="/" class="back-button">&larr;</a>
 </div>
 
 <div class="dl-page" class:visible={isVisible}>
