@@ -101,7 +101,13 @@
 
 <main class="map-page">
 	<header class="map-header">
-		<h1>🌐 Site Map</h1>
+		<h1>
+			<svg class="title-globe" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+				<circle cx="50" cy="50" r="36" stroke="currentColor" stroke-width="8" />
+				<ellipse cx="50" cy="50" rx="17" ry="36" stroke="currentColor" stroke-width="6" />
+				<line x1="14" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="6" />
+			</svg>Site Map
+		</h1>
 		<p class="map-sub">Every page on faf.one. <a href="/links">External links →</a> · <a href="/blog">Blog →</a></p>
 	</header>
 
@@ -131,10 +137,18 @@
 		margin: 0 0 2.5rem;
 	}
 	.map-header h1 {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
 		font-size: 2.2rem;
 		font-weight: 900;
 		color: var(--faf-black);
 		margin: 0 0 0.5rem;
+	}
+	.title-globe {
+		width: 1em;
+		height: 1em;
+		flex-shrink: 0;
 	}
 	.map-sub {
 		color: var(--faf-dark);
