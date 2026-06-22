@@ -622,14 +622,10 @@
 </div>
 
 <style>
-	:global(body) {
-		background: #0a0a0a;
-	}
-
 	.back-nav {
 		padding: 1rem 2rem;
-		background: #1a1a1a;
-		border-bottom: 1px solid #333;
+		background: var(--faf-white);
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.back-button {
@@ -648,7 +644,7 @@
 		opacity: 0;
 		transform: translateY(20px);
 		transition: opacity 0.6s ease, transform 0.6s ease;
-		background: #0a0a0a;
+		background: var(--faf-cream);
 		min-height: 100vh;
 	}
 
@@ -660,14 +656,14 @@
 	.hero-section {
 		text-align: center;
 		padding: 3rem 2rem 2rem;
-		background: linear-gradient(180deg, rgba(255, 107, 53, 0.15) 0%, #0a0a0a 100%);
+		background: var(--faf-cream);
 	}
 
 	.page-title {
 		font-size: 2.5rem;
 		font-weight: 700;
 		margin-bottom: 0.5rem;
-		color: white;
+		color: var(--faf-black);
 	}
 
 	.faf-highlight {
@@ -676,13 +672,13 @@
 
 	.tagline {
 		font-size: 1.2rem;
-		color: rgba(255, 255, 255, 0.8);
+		color: var(--faf-black);
 		margin-bottom: 0.5rem;
 	}
 
 	.last-updated {
 		font-size: 0.9rem;
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--faf-dark);
 	}
 
 	.quick-nav {
@@ -723,16 +719,16 @@
 	}
 
 	.card {
-		background: #111;
-		border: 1px solid #222;
+		background: var(--faf-white);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 1.5rem;
 		margin-bottom: 1rem;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 	}
 
 	.highlight-card {
-		background: linear-gradient(135deg, #1a1208 0%, #111 100%);
+		background: var(--faf-gray-light);
 		border-color: rgba(255, 107, 53, 0.4);
 		box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
 	}
@@ -740,12 +736,12 @@
 	.card h2 {
 		font-size: 1.3rem;
 		margin-bottom: 1rem;
-		color: white;
+		color: var(--faf-black);
 	}
 
 	.section-note {
 		font-size: 0.85rem;
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--faf-dark);
 		margin-bottom: 1rem;
 	}
 
@@ -760,15 +756,15 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 0.75rem 1rem;
-		background: #0d0d0d;
-		border: 1px solid #1a1a1a;
+		background: var(--faf-gray-light);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 8px;
 		text-decoration: none;
 		transition: all 0.2s;
 	}
 
 	.link-item:hover {
-		background: #151510;
+		background: var(--faf-gray-light);
 		border-color: #FF6B35;
 		transform: translateX(4px);
 		box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
@@ -782,13 +778,13 @@
 
 	.link-desc {
 		flex: 1;
-		color: rgba(255, 255, 255, 0.7);
+		color: var(--faf-black);
 		font-size: 0.9rem;
 	}
 
 	.link-stat {
 		font-size: 0.8rem;
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--faf-dark);
 		white-space: nowrap;
 	}
 
@@ -803,8 +799,8 @@
 	}
 
 	.iana-link {
-		background: #0f0d08;
-		border-color: #332200 !important;
+		background: var(--faf-gray-light);
+		border-color: var(--faf-light-gray) !important;
 	}
 
 	@media (max-width: 768px) {

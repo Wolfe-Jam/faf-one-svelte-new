@@ -149,10 +149,6 @@ human_context:
 </article>
 
 <style>
-	:global(body) {
-		background: #FEFCF8;
-	}
-
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
@@ -179,7 +175,7 @@ human_context:
 
 	.press-release {
 		padding: 3rem 0;
-		background: white;
+		background: var(--faf-white);
 	}
 
 	.container {
@@ -215,7 +211,7 @@ human_context:
 
 	.subtitle {
 		font-size: 1.3rem;
-		color: #666;
+		color: var(--faf-dark);
 		margin-bottom: 1rem;
 		font-weight: 500;
 	}
@@ -233,7 +229,7 @@ human_context:
 	}
 
 	.date {
-		color: #888;
+		color: var(--faf-dark);
 		margin-bottom: 2rem;
 		font-style: italic;
 		font-size: 1rem;
@@ -255,7 +251,7 @@ human_context:
 	}
 
 	.metrics {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		margin: 2rem 0;
@@ -290,7 +286,7 @@ human_context:
 	}
 
 	.metrics-box {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		margin: 2rem 0;
@@ -321,7 +317,7 @@ human_context:
 	.testimonial {
 		margin: 2rem 0;
 		padding: 1.5rem;
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 		border-left: 4px solid var(--faf-orange);
 	}
@@ -343,7 +339,7 @@ human_context:
 		border-left: 4px solid var(--faf-orange);
 		padding-left: 1.5rem;
 		margin: 2rem 0;
-		color: #666;
+		color: var(--faf-dark);
 		font-style: italic;
 		font-size: 1.125rem;
 	}
@@ -435,7 +431,8 @@ human_context:
 	}
 
 	.contact-list code {
-		background: #f4f4f4;
+		background: var(--faf-gray-light);
+		color: var(--faf-black);
 		padding: 0.25rem 0.5rem;
 		border-radius: 4px;
 		font-family: var(--font-mono);

@@ -150,19 +150,15 @@
 </div>
 
 <style>
-	:global(body) {
-		background: #0a0a0a !important;
-	}
-
 	.migrate-page {
 		min-height: 100vh;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-		color: #f5f5dc;
+		background: var(--faf-cream);
+		color: var(--faf-black);
 	}
 
 	.back-nav {
 		padding: 1rem 2rem;
-		border-bottom: 1px solid #333;
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.back-link {
@@ -206,7 +202,7 @@
 	.title {
 		font-size: clamp(3rem, 8vw, 5rem);
 		font-weight: 900;
-		color: #f5f5dc;
+		color: var(--faf-black);
 		margin: 0 0 0.75rem 0;
 		letter-spacing: -0.03em;
 	}
@@ -220,7 +216,7 @@
 
 	.subtitle-detail {
 		font-size: 1.1rem;
-		color: #aaa;
+		color: var(--faf-dark);
 		margin: 0;
 		line-height: 1.6;
 	}
@@ -237,7 +233,7 @@
 	.section-title {
 		font-size: 2rem;
 		font-weight: 700;
-		color: #f5f5dc;
+		color: var(--faf-black);
 		text-align: center;
 		margin-bottom: 2rem;
 	}
@@ -257,8 +253,8 @@
 		display: flex;
 		align-items: flex-start;
 		gap: 1.25rem;
-		background: #1a1a1a;
-		border: 1px solid #333;
+		background: var(--faf-white);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 1.5rem;
 	}
@@ -283,13 +279,13 @@
 	}
 
 	.step-content h4 {
-		color: #f5f5dc;
+		color: var(--faf-black);
 		margin: 0 0 0.5rem 0;
 		font-size: 1.1rem;
 	}
 
 	.step-content p {
-		color: #aaa;
+		color: var(--faf-dark);
 		margin: 0.5rem 0 0 0;
 		font-size: 0.95rem;
 		line-height: 1.6;
@@ -312,15 +308,15 @@
 	}
 
 	.diagram-box {
-		background: #1a1a1a;
-		border: 2px solid #333;
+		background: var(--faf-white);
+		border: 2px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 1.5rem;
 		text-align: center;
 	}
 
 	.diagram-box.old {
-		border-color: #555;
+		border-color: var(--faf-light-gray);
 	}
 
 	.diagram-box.new {
@@ -330,7 +326,7 @@
 
 	.diagram-label {
 		font-size: 0.8rem;
-		color: #666;
+		color: var(--faf-dark);
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		margin-bottom: 0.5rem;
@@ -338,7 +334,7 @@
 
 	.diagram-content {
 		font-weight: 700;
-		color: #f5f5dc;
+		color: var(--faf-black);
 		font-size: 1.05rem;
 		margin-bottom: 0.5rem;
 	}
@@ -349,7 +345,7 @@
 
 	.diagram-note {
 		font-size: 0.85rem;
-		color: #888;
+		color: var(--faf-dark);
 		font-style: italic;
 	}
 
@@ -380,13 +376,13 @@
 	}
 
 	.point-text {
-		color: #aaa;
+		color: var(--faf-dark);
 		font-size: 0.95rem;
 		line-height: 1.6;
 	}
 
 	.point-text strong {
-		color: #f5f5dc;
+		color: var(--faf-black);
 	}
 
 	.point-text code {
@@ -410,19 +406,19 @@
 	}
 
 	.provider {
-		background: #1a1a1a;
-		border: 1px solid #333;
+		background: var(--faf-white);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 8px;
 		padding: 1rem;
 		text-align: center;
-		color: #aaa;
+		color: var(--faf-dark);
 		font-weight: 600;
 		font-size: 0.95rem;
 	}
 
 	.also-note {
 		text-align: center;
-		color: #888;
+		color: var(--faf-dark);
 		font-size: 0.95rem;
 		line-height: 1.6;
 	}
@@ -442,7 +438,7 @@
 
 	.try-note {
 		text-align: center;
-		color: #888;
+		color: var(--faf-dark);
 		font-size: 0.95rem;
 		font-style: italic;
 		margin-bottom: 2rem;
@@ -455,7 +451,7 @@
 	}
 
 	.cta-box {
-		background: #1a1a1a;
+		background: var(--faf-white);
 		border: 2px solid #4682B4;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -477,7 +473,7 @@
 	}
 
 	.cta-box p {
-		color: #888;
+		color: var(--faf-dark);
 		margin: 0;
 		font-size: 0.9rem;
 	}

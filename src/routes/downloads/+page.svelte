@@ -305,14 +305,10 @@
 </div>
 
 <style>
-	:global(body) {
-		background: #0a0a0a;
-	}
-
 	.back-nav {
 		padding: 1rem 2rem;
-		background: #1a1a1a;
-		border-bottom: 1px solid #333;
+		background: var(--faf-white);
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.back-button {
@@ -331,7 +327,7 @@
 		opacity: 0;
 		transform: translateY(20px);
 		transition: opacity 0.6s ease, transform 0.6s ease;
-		background: #0a0a0a;
+		background: var(--faf-cream);
 		min-height: 100vh;
 	}
 
@@ -351,7 +347,7 @@
 	.hero {
 		text-align: center;
 		padding: 3rem 2rem 1.5rem;
-		background: linear-gradient(180deg, rgba(255, 107, 53, 0.12) 0%, #0a0a0a 100%);
+		background: var(--faf-cream);
 	}
 
 	.big-number {
@@ -365,14 +361,14 @@
 
 	.hero-sub {
 		font-size: 1.5rem;
-		color: rgba(255, 255, 255, 0.9);
+		color: var(--faf-black);
 		font-weight: 700;
 		margin-bottom: 0.25rem;
 	}
 
 	.hero-detail {
 		font-size: 1rem;
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--faf-dark);
 		margin-bottom: 1.5rem;
 	}
 
@@ -444,7 +440,7 @@
 	}
 
 	.try-card {
-		background: linear-gradient(135deg, #1a1208 0%, #111 100%);
+		background: var(--faf-gray-light);
 		border: 1px solid rgba(255, 107, 53, 0.4);
 		border-radius: 12px;
 		padding: 1.25rem 1.5rem;
@@ -453,7 +449,7 @@
 	}
 
 	.try-label {
-		color: rgba(255, 255, 255, 0.8);
+		color: var(--faf-black);
 		font-size: 0.95rem;
 		font-weight: 600;
 		margin-bottom: 0.75rem;
@@ -484,7 +480,7 @@
 	}
 
 	.try-note {
-		color: rgba(255, 255, 255, 0.4);
+		color: var(--faf-dark);
 		font-size: 0.8rem;
 		margin-top: 0.5rem;
 	}
@@ -551,7 +547,7 @@
 		align-items: center;
 		gap: 0.75rem;
 		margin-bottom: 1.25rem;
-		color: white;
+		color: var(--faf-black);
 		font-size: 1.3rem;
 		flex-wrap: wrap;
 	}
@@ -577,7 +573,7 @@
 
 	.section-count {
 		font-size: 0.85rem;
-		color: rgba(255, 255, 255, 0.4);
+		color: var(--faf-dark);
 		font-weight: 400;
 		margin-left: auto;
 	}
@@ -591,8 +587,8 @@
 	}
 
 	.pkg-card {
-		background: #111;
-		border: 1px solid #222;
+		background: var(--faf-white);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 1.25rem;
 		transition: all 0.25s ease;
@@ -625,13 +621,13 @@
 
 	.card-dl {
 		font-size: 0.85rem;
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--faf-dark);
 		font-family: var(--font-mono);
 		white-space: nowrap;
 	}
 
 	.card-desc {
-		color: rgba(255, 255, 255, 0.6);
+		color: var(--faf-dark);
 		font-size: 0.875rem;
 		margin-bottom: 0.75rem;
 		line-height: 1.4;
@@ -735,21 +731,21 @@
 	}
 
 	.github-link {
-		background: rgba(255, 255, 255, 0.05);
-		color: rgba(255, 255, 255, 0.6);
-		border: 1px solid rgba(255, 255, 255, 0.1);
+		background: var(--faf-gray-light);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 	}
 
 	.github-link:hover {
-		background: rgba(255, 255, 255, 0.1);
-		color: white;
+		background: var(--faf-gray-light);
+		color: var(--faf-orange);
 	}
 
 	/* ── CTA Section ─────────────────────────────────── */
 
 	.cta-section {
 		padding: 2.5rem 0 3rem;
-		border-top: 1px solid #1a1a1a;
+		border-top: 1px solid var(--faf-light-gray);
 	}
 
 	.cta-grid {
@@ -759,21 +755,21 @@
 	}
 
 	.cta-card {
-		background: #111;
-		border: 1px solid #222;
+		background: var(--faf-white);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 1.5rem;
 		text-align: center;
 	}
 
 	.cta-card h3 {
-		color: white;
+		color: var(--faf-black);
 		font-size: 1.1rem;
 		margin-bottom: 0.5rem;
 	}
 
 	.cta-card p {
-		color: rgba(255, 255, 255, 0.5);
+		color: var(--faf-dark);
 		font-size: 0.875rem;
 		margin-bottom: 1rem;
 		line-height: 1.4;
@@ -789,10 +785,10 @@
 	.email-input {
 		flex: 1;
 		padding: 0.6rem 0.75rem;
-		background: #0a0a0a;
-		border: 1px solid #333;
+		background: var(--faf-white);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 6px;
-		color: white;
+		color: var(--faf-black);
 		font-family: var(--font-mono);
 		font-size: 0.85rem;
 	}
@@ -844,7 +840,7 @@
 	}
 
 	.email-note {
-		color: rgba(255, 255, 255, 0.3) !important;
+		color: var(--faf-dark) !important;
 		font-size: 0.75rem !important;
 		margin-top: 0.5rem;
 		margin-bottom: 0 !important;
@@ -865,15 +861,15 @@
 	}
 
 	.github-cta {
-		background: rgba(255, 255, 255, 0.08);
-		color: white;
-		border: 1px solid rgba(255, 255, 255, 0.2);
+		background: var(--faf-gray-light);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 	}
 
 	.github-cta:hover {
-		background: rgba(255, 255, 255, 0.15);
+		background: var(--faf-gray-light);
 		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	}
 
 	.sponsor-cta {

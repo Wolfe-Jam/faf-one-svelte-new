@@ -41,7 +41,7 @@
 			We wanted people to see our art without hunting for it. Solution? Put it on the NPM page where it can't be hidden.
 		</p>
 		<img src="/images/68-minutes/npm-bw.png" alt="Broken B&W ASCII art on NPM v2.4.16" class="hero-image">
-		<p style="text-align: center; color: #666; font-size: 0.9rem; font-style: italic;">v2.4.16: First attempt - ASCII art broken in NPM's markdown renderer.</p>
+		<p style="text-align: center; color: var(--faf-dark); font-size: 0.9rem; font-style: italic;">v2.4.16: First attempt - ASCII art broken in NPM's markdown renderer.</p>
 
 		<h2>8:13am-8:48am — The Solution</h2>
 		<p>
@@ -51,7 +51,7 @@
 			The trick? GitHub raw URLs for images. NPM can fetch and display them. Perfect workaround.
 		</p>
 		<img src="/images/68-minutes/npm-no-banner.png" alt="NPM page with no banner showing" class="hero-image">
-		<p style="text-align: center; color: #666; font-size: 0.9rem; font-style: italic;">v2.4.17: Wrong URL = 404. Getting warmer.</p>
+		<p style="text-align: center; color: var(--faf-dark); font-size: 0.9rem; font-style: italic;">v2.4.17: Wrong URL = 404. Getting warmer.</p>
 
 		<h2>8:48am-9:21am — The Polish</h2>
 		<p>
@@ -66,7 +66,7 @@
 
 		<h2>9:21am — Victory</h2>
 		<img src="/images/68-minutes/npm-color.png" alt="Full color championship banner on NPM v2.4.21" class="hero-image">
-		<p style="text-align: center; color: #666; font-size: 0.9rem; font-style: italic;">v2.4.21: Championship-grade technicolor banner. Cyan-to-orange gradient. Perfect.</p>
+		<p style="text-align: center; color: var(--faf-dark); font-size: 0.9rem; font-style: italic;">v2.4.21: Championship-grade technicolor banner. Cyan-to-orange gradient. Perfect.</p>
 		<p>
 			68 minutes from disaster to triumph. From monochrome mess to full-color glory.
 		</p>
@@ -98,11 +98,6 @@
 </article>
 
 <style>
-	:global(body) {
-		background: #FEFCF8;
-		color: #1a1a1a;
-	}
-
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
@@ -129,7 +124,7 @@
 
 	.press-release {
 		padding: 3rem 0;
-		background: white;
+		background: var(--faf-white);
 	}
 
 	.container {
@@ -151,10 +146,10 @@
 
 	@keyframes fadeToOrange {
 		0% {
-			color: #888;
+			color: var(--faf-dark);
 		}
 		33% {
-			color: #000;
+			color: var(--faf-black);
 		}
 		100% {
 			color: var(--faf-orange);
@@ -181,7 +176,7 @@
 
 	.subtitle {
 		font-size: 1.3rem;
-		color: #666;
+		color: var(--faf-dark);
 		margin-bottom: 1rem;
 		font-weight: 500;
 	}
@@ -199,7 +194,7 @@
 	}
 
 	.date {
-		color: #888;
+		color: var(--faf-dark);
 		margin-bottom: 2rem;
 		font-style: italic;
 		font-size: 1rem;
@@ -221,7 +216,7 @@
 	}
 
 	.metrics {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		margin: 2rem 0;
@@ -256,7 +251,7 @@
 	}
 
 	.metrics-box {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 12px;
 		margin: 2rem 0;
@@ -287,7 +282,7 @@
 	.testimonial {
 		margin: 2rem 0;
 		padding: 1.5rem;
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 		border-left: 4px solid var(--faf-orange);
 	}
@@ -309,7 +304,7 @@
 		border-left: 4px solid var(--faf-orange);
 		padding-left: 1.5rem;
 		margin: 2rem 0;
-		color: #666;
+		color: var(--faf-dark);
 		font-style: italic;
 		font-size: 1.125rem;
 	}
@@ -401,7 +396,8 @@
 	}
 
 	.contact-list code {
-		background: #f4f4f4;
+		background: var(--faf-gray-light);
+		color: var(--faf-black);
 		padding: 0.25rem 0.5rem;
 		border-radius: 4px;
 		font-family: var(--font-mono);
