@@ -89,7 +89,7 @@
 </main>
 
 <style>
-	:global(body) { background: #0a0a0a !important; color: #eee; }
+	:global(body) { background: #0a0a0a; color: #eee; }
 
 	main {
 		max-width: 640px;

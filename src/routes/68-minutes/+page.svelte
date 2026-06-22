@@ -99,7 +99,8 @@
 
 <style>
 	:global(body) {
-		background: #FEFCF8 !important;
+		background: #FEFCF8;
+		color: #1a1a1a;
 	}
 
 	.back-nav {

@@ -318,7 +318,8 @@
 
 <style>
 	:global(body) {
-		background: #0a0a0a !important;
+		background: #0a0a0a;
+		color: #eee;
 	}
 
 	.pro-page {
