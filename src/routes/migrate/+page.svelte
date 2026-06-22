@@ -162,7 +162,7 @@
 	}
 
 	.back-link {
-		color: #4682B4;
+		color: var(--faf-black);
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 0.95rem;
@@ -190,7 +190,7 @@
 		display: inline-block;
 		background: rgba(39, 201, 63, 0.15);
 		border: 1px solid rgba(39, 201, 63, 0.4);
-		color: #27c93f;
+		color: var(--faf-black);
 		padding: 0.35rem 1rem;
 		border-radius: 20px;
 		font-size: 0.85rem;
@@ -269,7 +269,7 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 700;
-		color: #4682B4;
+		color: var(--faf-black);
 		font-size: 1.1rem;
 		flex-shrink: 0;
 	}
@@ -340,7 +340,7 @@
 	}
 
 	.diagram-box.new .diagram-content {
-		color: #4682B4;
+		color: var(--faf-black);
 	}
 
 	.diagram-note {
@@ -467,7 +467,7 @@
 	}
 
 	.cta-box h4 {
-		color: #4682B4;
+		color: var(--faf-black);
 		margin: 0 0 0.5rem 0;
 		font-size: 1.1rem;
 	}
@@ -506,7 +506,7 @@
 		padding: 0.5rem 1rem;
 		background: rgba(70, 130, 180, 0.2);
 		border: 1px solid rgba(70, 130, 180, 0.4);
-		color: #4682B4;
+		color: var(--faf-black);
 		border-radius: 6px;
 		font-weight: 600;
 		font-size: 0.8rem;

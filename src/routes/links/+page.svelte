@@ -789,13 +789,13 @@
 	}
 
 	.status-live {
-		color: #4ade80;
-		text-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+		color: var(--faf-black);
+		font-weight: 600;
 	}
 
 	.status-pending {
-		color: #fbbf24;
-		text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+		color: var(--faf-black);
+		font-weight: 600;
 	}
 
 	.iana-link {
