@@ -295,7 +295,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	.hero-banner {
@@ -400,7 +400,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 
 	.lead {
 		font-size: 1.25rem;
-		color: #333;
+		color: var(--faf-black);
 		margin: 1rem 0;
 	}
 
@@ -412,7 +412,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 		font-size: 2rem;
 		font-weight: 700;
 		margin: 2rem 0 1rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	h3 {
@@ -423,7 +423,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 	}
 
 	code {
-		background: #f5f5f5;
+		background: var(--faf-gray-light);
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-family: 'Monaco', 'Courier New', monospace;
@@ -511,7 +511,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 		gap: 1rem;
 		padding: 0.75rem 1rem;
 		border-radius: 6px;
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 	}
 
 	.tier-emoji {
@@ -574,7 +574,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 
 	.tagline {
 		font-size: 1.5rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 		margin: 1rem 0;
 	}
 

@@ -259,7 +259,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -286,7 +286,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 	h1 {
 		font-size: 2.2rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 		line-height: 1.3;
 	}
 
@@ -325,7 +325,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 	}
 
@@ -351,7 +351,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 	h2 {
 		font-size: 1.8rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 		border-bottom: 1px solid #eee;
 		padding-bottom: 0.5rem;
 	}
@@ -361,7 +361,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 	}
 
 	blockquote {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #ccc;
 		padding: 1.25rem 1.5rem;
 		margin: 1.5rem 0;
@@ -371,12 +371,12 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 
 	.grok-quote {
 		border-left-color: #00D4D4;
-		background: linear-gradient(135deg, #f0fafa 0%, #f8f8f8 100%);
+		background: var(--faf-gray-light);
 	}
 
 	.grok-quote.highlight {
 		border-left-color: #FF6B35;
-		background: linear-gradient(135deg, #fff5f0 0%, #f8f8f8 100%);
+		background: var(--faf-gray-light);
 	}
 
 	.grok-quote cite {
@@ -415,9 +415,9 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 	}
 
 	th {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		font-weight: 600;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.screenshot-showcase {
@@ -465,7 +465,7 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 	}
 
 	.cta-box {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border: 2px solid #FF6B35;
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -505,10 +505,10 @@ api = "Use Grok-4 model for analysis"`}</code></pre>
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		text-decoration: none;
-		color: #333;
+		color: var(--faf-black);
 		transition: all 0.2s;
 		border: 1px solid #eee;
 	}

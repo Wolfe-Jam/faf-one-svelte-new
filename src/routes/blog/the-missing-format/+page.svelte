@@ -475,7 +475,7 @@ competitors:
 		font-size: 3rem;
 		font-weight: bold;
 		margin: 0 0 1rem 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.subtitle {
@@ -503,7 +503,7 @@ competitors:
 	.intro {
 		margin: 3rem 0;
 		padding: 2rem;
-		background: #F5F5F5;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #333;
 	}
 
@@ -536,7 +536,7 @@ competitors:
 		gap: 2rem;
 		margin: 3rem 0;
 		padding: 2rem;
-		background: #FAFAFA;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 	}
 
@@ -575,7 +575,7 @@ competitors:
 		flex-direction: column;
 		gap: 1rem;
 		padding: 1.5rem;
-		background: white;
+		background: var(--faf-white);
 		border-radius: 8px;
 		min-height: 280px;
 		position: relative;
@@ -590,7 +590,7 @@ competitors:
 	}
 
 	.arch-component {
-		background: #F5F5F5;
+		background: var(--faf-gray-light);
 		padding: 1rem;
 		border-radius: 6px;
 		border: 2px solid #DDD;
@@ -606,7 +606,7 @@ competitors:
 	.comp-label {
 		font-weight: 700;
 		font-size: 1.1rem;
-		color: #000;
+		color: var(--faf-black);
 		margin-bottom: 0.5rem;
 	}
 
@@ -680,8 +680,8 @@ competitors:
 	}
 
 	.foundation-props span {
-		background: white;
-		color: #000;
+		background: var(--faf-white);
+		color: var(--faf-black);
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
 		font-size: 0.9rem;
@@ -689,7 +689,7 @@ competitors:
 	}
 
 	.architecture-insight {
-		background: #F5F5F5;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 8px;
 		border-left: 4px solid #333;
@@ -699,11 +699,11 @@ competitors:
 	.architecture-insight p {
 		margin: 0;
 		line-height: 1.7;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.architecture-insight strong {
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.before-diagram {
@@ -714,7 +714,7 @@ competitors:
 	}
 
 	.component-bubble {
-		background: white;
+		background: var(--faf-white);
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: center;
@@ -728,7 +728,7 @@ competitors:
 
 	.component-name {
 		font-weight: 700;
-		color: #000;
+		color: var(--faf-black);
 		margin-bottom: 0.75rem;
 		font-size: 1.1rem;
 	}
@@ -794,7 +794,7 @@ competitors:
 	}
 
 	.component-connected {
-		background: white;
+		background: var(--faf-white);
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: center;
@@ -804,7 +804,7 @@ competitors:
 
 	.component-connected .component-name {
 		font-weight: 700;
-		color: #000;
+		color: var(--faf-black);
 		margin-bottom: 0.75rem;
 		font-size: 1.1rem;
 	}
@@ -830,7 +830,7 @@ competitors:
 	}
 
 	.credential {
-		background: #F9F9F9;
+		background: var(--faf-gray-light);
 		padding: 1.5rem;
 		border-radius: 8px;
 		border-left: 4px solid #333;
@@ -838,7 +838,7 @@ competitors:
 
 	.credential h3 {
 		margin-top: 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.credential ul {
@@ -883,7 +883,7 @@ competitors:
 	}
 
 	.progressive-disclosure {
-		background: #F5F5F5;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 8px;
 		margin: 2rem 0;
@@ -891,7 +891,7 @@ competitors:
 
 	.progressive-disclosure h3 {
 		margin-top: 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.progressive-disclosure ol {
@@ -911,7 +911,7 @@ competitors:
 
 	.integration {
 		padding: 2rem;
-		background: #FAFAFA;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		border-left: 4px solid #00bf63;
 	}
@@ -970,13 +970,13 @@ competitors:
 	.alignment-quote {
 		font-size: 1.25rem;
 		font-weight: 600;
-		color: #000;
+		color: var(--faf-black);
 		text-align: center;
 		margin: 2rem 0;
 	}
 
 	.ai-quote {
-		background: #F5F5F5;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #666;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -995,7 +995,7 @@ competitors:
 	}
 
 	.ecosystem-metrics, .cross-platform-testing {
-		background: #F9F9F9;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 8px;
 		margin: 2rem 0;
@@ -1003,7 +1003,7 @@ competitors:
 
 	.ecosystem-metrics h3, .cross-platform-testing h3 {
 		margin-top: 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.test-results {
@@ -1014,7 +1014,7 @@ competitors:
 	.test-results li {
 		margin: 1rem 0;
 		padding: 0.75rem;
-		background: white;
+		background: var(--faf-white);
 		border-radius: 4px;
 		border-left: 4px solid #00bf63;
 	}
@@ -1023,7 +1023,7 @@ competitors:
 		font-size: 1.25rem;
 		font-weight: 600;
 		text-align: center;
-		color: #333;
+		color: var(--faf-black);
 		margin: 2rem 0;
 	}
 
@@ -1034,7 +1034,7 @@ competitors:
 		text-align: center;
 		margin: 2rem 0;
 		padding: 1.5rem;
-		background: linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%);
+		background: var(--faf-gray-light);
 		border-left: 5px solid #00bf63;
 		border-radius: 4px;
 	}
@@ -1042,7 +1042,7 @@ competitors:
 	.conclusion, .final-thought {
 		font-size: 1.1rem;
 		font-weight: 500;
-		color: #333;
+		color: var(--faf-black);
 		margin: 1.5rem 0;
 	}
 
@@ -1054,7 +1054,7 @@ competitors:
 	}
 
 	.link-category h3 {
-		color: #000;
+		color: var(--faf-black);
 		margin-top: 0;
 	}
 
@@ -1085,7 +1085,7 @@ competitors:
 	}
 
 	.postscript {
-		background: #F9F9F9;
+		background: var(--faf-gray-light);
 		padding: 2rem;
 		border-radius: 8px;
 		margin-bottom: 3rem;
@@ -1099,20 +1099,20 @@ competitors:
 
 	.postscript h3 {
 		margin-top: 0;
-		color: #000;
+		color: var(--faf-black);
 		font-size: 1.3rem;
 		margin-bottom: 1rem;
 	}
 
 	.postscript p {
-		color: #333;
+		color: var(--faf-black);
 		line-height: 1.8;
 		margin-bottom: 1rem;
 	}
 
 	.postscript .closing-line {
 		font-weight: 600;
-		color: #000;
+		color: var(--faf-black);
 		font-size: 1.1rem;
 		margin-top: 1.5rem;
 		margin-bottom: 0;
@@ -1129,12 +1129,12 @@ competitors:
 	}
 
 	code {
-		background: #F5F5F5;
+		background: var(--faf-gray-light);
 		padding: 0.2rem 0.4rem;
 		border-radius: 3px;
 		font-family: 'Monaco', 'Courier New', monospace;
 		font-size: 0.9em;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	/* Override inline code styling when inside pre.code-block */

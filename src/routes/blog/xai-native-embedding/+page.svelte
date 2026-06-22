@@ -206,7 +206,7 @@ Native bi-sync embedding for instant context wins. Full-scale deployment for all
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.6;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -233,7 +233,7 @@ Native bi-sync embedding for instant context wins. Full-scale deployment for all
 	h1 {
 		font-size: 2.5rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.subtitle {
@@ -273,7 +273,7 @@ Native bi-sync embedding for instant context wins. Full-scale deployment for all
 	}
 
 	.achievement-box {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #FF6B35;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -298,7 +298,7 @@ Native bi-sync embedding for instant context wins. Full-scale deployment for all
 	h2 {
 		font-size: 2rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 		border-bottom: 1px solid #eee;
 		padding-bottom: 0.5rem;
 	}
@@ -326,13 +326,13 @@ Native bi-sync embedding for instant context wins. Full-scale deployment for all
 	}
 
 	th {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		font-weight: 600;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	tr:hover {
-		background: #fafafa;
+		background: var(--faf-gray-light);
 	}
 
 	.result-approved {
@@ -356,7 +356,7 @@ Native bi-sync embedding for instant context wins. Full-scale deployment for all
 	}
 
 	.cta-box {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border: 2px solid #FF6B35;
 		padding: 1.5rem;
 		margin: 1.5rem 0;

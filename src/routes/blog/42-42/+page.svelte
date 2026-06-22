@@ -305,7 +305,7 @@
 	}
 
 	.blog-post {
-		background: white;
+		background: var(--faf-white);
 		min-height: 100vh;
 	}
 
@@ -393,7 +393,7 @@
 	.story-content {
 		font-size: 1.15rem;
 		line-height: 1.9;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.story-content p {
@@ -574,7 +574,7 @@
 	}
 
 	.sdk-card {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border: 2px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 1.25rem;

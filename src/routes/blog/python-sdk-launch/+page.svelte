@@ -155,7 +155,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-white);
 		min-height: 100vh;
 	}
 
@@ -223,7 +223,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 	.post-content {
 		font-size: 1.125rem;
 		line-height: 1.8;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	section {
@@ -247,7 +247,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 	.lead {
 		font-size: 1.3rem;
 		line-height: 1.7;
-		color: #222;
+		color: var(--faf-black);
 		margin-bottom: 1.5rem;
 	}
 
@@ -261,7 +261,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 	}
 
 	.announcement-box {
-		background: linear-gradient(135deg, #fff5f0 0%, #fffbf0 100%);
+		background: var(--faf-gray-light);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -300,7 +300,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 	}
 
 	.flex-item {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border: 2px solid var(--faf-cream);
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -379,7 +379,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 
 	.resource-link {
 		display: block;
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border: 2px solid var(--faf-cream);
 		border-radius: 8px;
 		padding: 1.5rem;

@@ -399,7 +399,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-white);
 		min-height: 100vh;
 	}
 
@@ -479,7 +479,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	.post-content {
 		font-size: 1.125rem;
 		line-height: 1.8;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	section {
@@ -503,7 +503,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	.lead {
 		font-size: 1.3rem;
 		line-height: 1.7;
-		color: #222;
+		color: var(--faf-black);
 		margin-bottom: 2rem;
 	}
 
@@ -521,7 +521,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.iana-notice {
-		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+		background: var(--faf-gray-light);
 		border: 3px solid #0ea5e9;
 		border-radius: 12px;
 		padding: 2rem;
@@ -534,7 +534,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.official-email {
-		background: white;
+		background: var(--faf-white);
 		border-left: 4px solid #0ea5e9;
 		padding: 1.5rem;
 		margin: 1rem 0 0 0;
@@ -559,7 +559,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.comparison-list {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		padding: 2rem;
 		list-style: none;
@@ -586,14 +586,14 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.timeline-event {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-left: 4px solid var(--faf-orange);
 		padding: 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
 
 	.timeline-event.highlighted {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-gray-light);
 		border-left-width: 6px;
 		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
 	}
@@ -638,7 +638,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.spec-item {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		padding: 1.5rem;
 	}
@@ -668,7 +668,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.validation-box {
-		background: white;
+		background: var(--faf-white);
 		border: 2px solid var(--faf-cream);
 		border-radius: 12px;
 		padding: 2rem;
@@ -711,7 +711,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.stat-card {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-gray-light);
 		border: 2px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -763,7 +763,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 
 	.resource-link {
 		display: block;
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border: 2px solid var(--faf-cream);
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -842,7 +842,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.gemini-quote {
-		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+		background: var(--faf-gray-light);
 		border-left: 6px solid #4285f4;
 		padding: 2rem;
 		margin: 2rem 0;
@@ -880,14 +880,14 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.expertise-event {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #666;
 		padding: 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
 
 	.expertise-event.highlighted {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-gray-light);
 		border-left: 6px solid var(--faf-orange);
 		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
 	}
@@ -933,7 +933,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	}
 
 	.uniqueness-callout {
-		background: linear-gradient(135deg, #fff5f0 0%, #fffbf0 100%);
+		background: var(--faf-gray-light);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;

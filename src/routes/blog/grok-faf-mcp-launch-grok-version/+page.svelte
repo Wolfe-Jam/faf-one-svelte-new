@@ -247,7 +247,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.6;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -277,7 +277,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 		gap: 1rem;
 		margin: 1rem 0;
 		padding: 1rem;
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		font-size: 0.95rem;
 	}
@@ -312,7 +312,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	h1 {
 		font-size: 2.5rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.subtitle {
@@ -373,7 +373,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	h2 {
 		font-size: 2rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 		border-bottom: 1px solid #eee;
 		padding-bottom: 0.5rem;
 	}
@@ -389,7 +389,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 		grid-template-columns: 150px 1fr;
 		gap: 1.5rem;
 		padding: 1.5rem;
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #FF6B35;
 		border-radius: 4px;
 	}
@@ -400,7 +400,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	}
 
 	.timeline-desc {
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.comparison-table {
@@ -427,7 +427,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	}
 
 	tr:nth-child(even) {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 	}
 
 	.instruction-box {
@@ -454,7 +454,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	}
 
 	.request-box {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border: 2px solid #FF6B35;
 		padding: 2rem;
 		border-radius: 12px;
@@ -474,7 +474,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	.request-box li {
 		padding: 0.5rem 0;
 		font-size: 1.1rem;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.squeeze-line {

@@ -397,7 +397,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.6;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -427,7 +427,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 		gap: 1rem;
 		margin: 1rem 0;
 		padding: 1rem;
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		font-size: 0.95rem;
 	}
@@ -462,7 +462,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	h1 {
 		font-size: 2.5rem;
 		margin: 0.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 	}
 
 	.subtitle {
@@ -502,7 +502,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	}
 
 	.achievement-box {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #FF6B35;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -527,7 +527,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	h2 {
 		font-size: 2rem;
 		margin: 3rem 0 1.5rem 0;
-		color: #000;
+		color: var(--faf-black);
 		border-bottom: 1px solid #eee;
 		padding-bottom: 0.5rem;
 	}
@@ -535,7 +535,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	h3 {
 		font-size: 1.5rem;
 		margin: 2rem 0 1rem 0;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.usage-options {
@@ -546,7 +546,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	}
 
 	.option-card {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		padding: 1.5rem;
 		border-radius: 8px;
 		border: 1px solid #eee;
@@ -592,13 +592,13 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	}
 
 	th {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		font-weight: 600;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	tr:hover {
-		background: #fafafa;
+		background: var(--faf-gray-light);
 	}
 
 	.tools-grid {
@@ -639,7 +639,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	}
 
 	.cta-box {
-		background: #f8f8f8;
+		background: var(--faf-gray-light);
 		border: 2px solid #FF6B35;
 		padding: 1.5rem;
 		margin: 1.5rem 0;

@@ -225,7 +225,7 @@ Metadata:     10%`}</code></pre>
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -298,7 +298,7 @@ Metadata:     10%`}</code></pre>
 
 	.lead {
 		font-size: 1.25rem;
-		color: #333;
+		color: var(--faf-black);
 		margin: 1rem 0;
 		font-weight: 400;
 	}
@@ -311,11 +311,11 @@ Metadata:     10%`}</code></pre>
 		font-size: 2rem;
 		font-weight: 700;
 		margin: 2rem 0 1rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	code {
-		background: #f5f5f5;
+		background: var(--faf-gray-light);
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-family: 'Monaco', 'Courier New', monospace;
@@ -392,7 +392,7 @@ Metadata:     10%`}</code></pre>
 
 	.tagline {
 		font-size: 1.5rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 		margin: 1rem 0;
 	}
 

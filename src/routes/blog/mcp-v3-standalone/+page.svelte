@@ -497,7 +497,7 @@ Claude: [Direct function call, 63ms execution]
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-white);
 		min-height: 100vh;
 	}
 
@@ -564,7 +564,7 @@ Claude: [Direct function call, 63ms execution]
 	.post-content {
 		font-size: 1.125rem;
 		line-height: 1.8;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	section {
@@ -588,7 +588,7 @@ Claude: [Direct function call, 63ms execution]
 	.lead {
 		font-size: 1.3rem;
 		line-height: 1.7;
-		color: #222;
+		color: var(--faf-black);
 		margin-bottom: 2rem;
 	}
 
@@ -623,7 +623,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.achievement-box {
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: var(--faf-gray-light);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -654,7 +654,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.feature-card {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-left: 4px solid var(--faf-orange);
 		padding: 1.5rem;
 		border-radius: 0 8px 8px 0;
@@ -684,7 +684,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.commands-list code {
-		background: white;
+		background: var(--faf-white);
 		margin: 0 0.25rem;
 	}
 
@@ -696,7 +696,7 @@ Claude: [Direct function call, 63ms execution]
 	table {
 		width: 100%;
 		border-collapse: collapse;
-		background: white;
+		background: var(--faf-white);
 		border-radius: 8px;
 		overflow: hidden;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -728,7 +728,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.total-row {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		font-weight: 700;
 	}
 
@@ -739,7 +739,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.tech-item {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		padding: 1.5rem;
 	}
@@ -785,7 +785,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.recognition-item {
-		background: white;
+		background: var(--faf-white);
 		border: 2px solid var(--faf-cream);
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -822,14 +822,14 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.before {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #666;
 		padding: 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
 
 	.after {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-gray-light);
 		border-left: 4px solid var(--faf-orange);
 		padding: 1.5rem;
 		border-radius: 0 8px 8px 0;
@@ -852,14 +852,14 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.evolution-event {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-left: 4px solid #666;
 		padding: 1rem 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
 
 	.evolution-event.highlighted {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-gray-light);
 		border-left: 6px solid var(--faf-orange);
 		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
 	}
@@ -883,7 +883,7 @@ Claude: [Direct function call, 63ms execution]
 	}
 
 	.philosophy-item {
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		padding: 1.5rem;
 	}
@@ -918,7 +918,7 @@ Claude: [Direct function call, 63ms execution]
 
 	.resource-link {
 		display: block;
-		background: #f9f9f9;
+		background: var(--faf-gray-light);
 		border: 2px solid var(--faf-cream);
 		border-radius: 8px;
 		padding: 1.5rem;

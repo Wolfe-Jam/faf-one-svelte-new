@@ -250,7 +250,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 		line-height: 1.6;
-		color: #0a0a0a;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -290,7 +290,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 		font-size: 2.5rem;
 		font-weight: 800;
 		margin: 0 0 0.5rem 0;
-		color: #0a0a0a;
+		color: var(--faf-black);
 	}
 
 	.subtitle {
@@ -331,13 +331,13 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 		font-size: 1.8rem;
 		font-weight: 700;
 		margin: 2rem 0 1rem 0;
-		color: #0a0a0a;
+		color: var(--faf-black);
 	}
 
 	.lead {
 		font-size: 1.3rem;
 		line-height: 1.6;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	ul {
@@ -452,7 +452,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 	}
 
 	tbody tr:hover {
-		background: #fafafa;
+		background: var(--faf-gray-light);
 	}
 
 	.links {

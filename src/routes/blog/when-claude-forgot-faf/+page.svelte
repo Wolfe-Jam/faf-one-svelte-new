@@ -378,7 +378,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -449,7 +449,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 
 	.lead {
 		font-size: 1.25rem;
-		color: #333;
+		color: var(--faf-black);
 		margin: 1rem 0;
 		font-weight: 500;
 	}
@@ -462,14 +462,14 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 		font-size: 2rem;
 		font-weight: 700;
 		margin: 2rem 0 1rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	h3 {
 		font-size: 1.5rem;
 		font-weight: 600;
 		margin: 1.5rem 0 1rem;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	.visual-block {
@@ -523,7 +523,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 	}
 
 	code {
-		background: #f5f5f5;
+		background: var(--faf-gray-light);
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-family: 'Monaco', 'Courier New', monospace;
@@ -559,7 +559,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 		margin: 2rem 0;
 		font-size: 1.25rem;
 		font-style: italic;
-		color: #333;
+		color: var(--faf-black);
 	}
 
 	blockquote p {

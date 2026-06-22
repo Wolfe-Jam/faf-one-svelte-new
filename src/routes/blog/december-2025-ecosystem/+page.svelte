@@ -195,7 +195,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	.post-header {
@@ -263,7 +263,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 
 	.lead {
 		font-size: 1.25rem;
-		color: #333;
+		color: var(--faf-black);
 		margin: 1rem 0;
 		font-weight: 400;
 	}
@@ -271,7 +271,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 	section.announcement {
 		margin: 3rem 0;
 		padding: 2rem;
-		background: #fafafa;
+		background: var(--faf-gray-light);
 		border-radius: 12px;
 		border-left: 4px solid var(--faf-orange);
 	}
@@ -280,7 +280,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 		font-size: 1.75rem;
 		font-weight: 700;
 		margin: 0 0 0.5rem 0;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	h3 {
@@ -303,8 +303,8 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 		display: inline-block;
 		font-size: 0.75rem;
 		font-weight: 600;
-		color: #666;
-		background: #e5e5e5;
+		color: var(--faf-black);
+		background: var(--faf-gray-light);
 		padding: 0.25rem 0.75rem;
 		border-radius: 999px;
 		margin-bottom: 1rem;
@@ -317,7 +317,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 	.faf-position {
 		margin-top: 1.5rem;
 		padding: 1.5rem;
-		background: white;
+		background: var(--faf-white);
 		border-radius: 8px;
 		border: 2px solid var(--faf-orange);
 	}
@@ -380,12 +380,12 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 	}
 
 	.service {
-		background: white;
+		background: var(--faf-white);
 		padding: 0.5rem 1rem;
 		border-radius: 6px;
 		font-size: 0.875rem;
 		font-weight: 500;
-		border: 1px solid #e5e5e5;
+		border: 1px solid var(--faf-light-gray);
 	}
 
 	.summary {
@@ -401,7 +401,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 		justify-content: space-between;
 		align-items: center;
 		padding: 1rem;
-		background: #fafafa;
+		background: var(--faf-gray-light);
 		border-radius: 8px;
 		margin-bottom: 0.5rem;
 	}
@@ -486,7 +486,7 @@ Anthropic owns Bun. MCP goes to Linux Foundation. Google joins. FAF was already 
 
 	.tagline {
 		font-size: 1.5rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 		margin: 0;
 	}
 
