@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>Voice Drift: Problem → Solution</h1>
 		<p>Before/After comparison showing the voice persistence problem and FAF solution</p>
 	</div>

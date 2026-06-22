@@ -31,7 +31,7 @@
 
 <div class="pro-page">
 	<div class="back-nav">
-		<a href="/" class="back-link">&larr; faf.one</a>
+		<a href="/" class="back-link">&larr;</a>
 	</div>
 
 	<main class="content">

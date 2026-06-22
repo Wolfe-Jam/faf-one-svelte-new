@@ -33,7 +33,7 @@
 </svelte:head>
 
 <div class="back-nav">
-	<a href="/blog" class="back-button">← Back to Blog</a>
+	<a href="/blog" class="back-button">←</a>
 </div>
 
 <article class="blog-post">

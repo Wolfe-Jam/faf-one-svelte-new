@@ -149,6 +149,18 @@ pre code {
 	margin-top: 3rem;
 }
 
+/* X share buttons (.share-btn, .x-share, .share-x) — a crisp 2px WHITE outline.
+   1px fragments (sub-pixel rendering) and is too thin; the buttons are black
+   (#000), so a white border reads cleanly on any page background, both themes.
+   Global so all ~108 inline share buttons get it without editing each post —
+   the scoped per-post rules set bg/color/radius but NEVER a border, so this
+   applies uncontested. */
+.share-btn,
+.x-share,
+.share-x {
+	border: 2px solid #fff;
+}
+
 /* Buttons */
 .btn {
 	display: inline-flex;

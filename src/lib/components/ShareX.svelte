@@ -30,7 +30,7 @@
 		padding: 0 1.1rem;
 		background: #000;
 		color: #fff;
-		border: 1px solid #333;
+		border: 2px solid #fff;
 		border-radius: 6px;
 		font-weight: 700;
 		font-size: 0.9rem;

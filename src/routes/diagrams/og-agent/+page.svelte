@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>FAF Agent — OG Card</h1>
 		<p>1.91:1 aspect ratio (1200×630px) — for X, LinkedIn, Discord, Slack unfurls of <code>faf.one/agent</code></p>
 	</div>

@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>FAF Interoperability</h1>
 		<p>.faf ↔ CLAUDE.md ↔ GEMINI.md ↔ conductor/ sync</p>
 	</div>

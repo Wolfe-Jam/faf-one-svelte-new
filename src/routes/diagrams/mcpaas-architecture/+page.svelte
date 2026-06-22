@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>MCPaaS Architecture</h1>
 		<p>Cloudflare Edge → Zig-WASM → KV storage flow</p>
 	</div>

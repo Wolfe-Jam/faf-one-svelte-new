@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>FAF-Voice Flow</h1>
 		<p>Browser → MCPaaS → xAI Grok voice architecture</p>
 	</div>

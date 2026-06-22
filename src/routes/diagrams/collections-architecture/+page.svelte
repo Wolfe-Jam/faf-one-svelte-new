@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>xAI Collections + FAF Architecture</h1>
 		<p>How project.faf enables eternal voice memory in Grok Collections</p>
 	</div>

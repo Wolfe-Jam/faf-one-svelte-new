@@ -4,7 +4,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>Voice API Edition - Hero Banner</h1>
 		<p>5:2 aspect ratio (1200x480px) - For X, LinkedIn, blog headers</p>
 	</div>

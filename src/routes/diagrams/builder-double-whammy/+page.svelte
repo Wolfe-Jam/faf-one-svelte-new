@@ -5,7 +5,7 @@
 
 <div class="diagram-page">
 	<div class="diagram-header">
-		<a href="/diagrams" class="back-link">← All Diagrams</a>
+		<a href="/diagrams" class="back-link">←</a>
 		<h1>builder.faf.one - DOUBLE-WHAMMY Architecture</h1>
 		<p>Rust WASM generates .faf (211KB, 3ms) + Zig WASM scores (2.7KB, 14μs) = Championship-grade context in browser</p>
 	</div>
