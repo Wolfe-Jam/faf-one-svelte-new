@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/heartbeat-edition',
+			title: 'The Heartbeat Edition',
+			date: 'June 23, 2026',
+			timestamp: '2026-06-23',
+			excerpt: "Persistent Project Context with Memory, looped for you. The SessionStart heartbeat now carries the intent the code can't — the goal and 6Ws only you can give or confirm. Plus AAA on Glama.",
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/proof-edition',
 			title: 'The Proof Edition',
 			date: 'June 22, 2026',
