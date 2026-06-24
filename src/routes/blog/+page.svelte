@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/111111',
+			title: '111,111 Downloads',
+			date: 'June 24, 2026',
+			timestamp: '2026-06-24',
+			excerpt: 'The FAF ecosystem crosses 111,111 downloads across npm, PyPI and crates.io. Lucky numbers. Real receipts. The format keeps spreading because the format keeps working.',
+			emoji: '🏆',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/heartbeat-edition',
 			title: 'The Heartbeat Edition',
 			date: 'June 23, 2026',
