@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/copilot-edition',
+			title: 'The Copilot Edition',
+			date: 'June 24, 2026',
+			timestamp: '2026-06-24',
+			excerpt: "faf-cli v6.15.0 — faf export --copilot emits .github/copilot-instructions.md, the widest-surface Copilot file, straight from your scored .faf. Plus faf git hardened against URL injection, and all five WJTTC tiers.",
+			emoji: '🏁',
+			category: 'Interop'
+		},
+		{
 			slug: 'blog/heartbeat-edition',
 			title: 'The Heartbeat Edition',
 			date: 'June 23, 2026',
