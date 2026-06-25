@@ -130,6 +130,11 @@ npm i -g faf-cli`;
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
+		<section class="star-cta">
+			<p>If you like our work, consider a star on the repo — it helps others find us too.</p>
+			<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="star-btn">Star faf-cli on GitHub</a>
+		</section>
+
 		<section class="footer-note">
 			<p>Built with .faf ☑️ Define once. Sync everywhere. 🏎️</p>
 		</section>
@@ -294,6 +299,29 @@ npm i -g faf-cli`;
 	}
 	.share-btn:hover {
 		background: #000;
+	}
+
+	.star-cta {
+		margin-top: 2.5rem;
+		text-align: center;
+	}
+	.star-cta p {
+		color: #333;
+		margin: 0 0 1rem;
+	}
+	.star-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.7rem 1.5rem;
+		border-radius: 6px;
+		font-size: 0.95rem;
+		font-weight: 700;
+		text-decoration: none;
+		background: #FF6B35;
+		color: #1a1a1a;
+	}
+	.star-btn:hover {
+		background: #ff7d4d;
 	}
 
 	.footer-note {
