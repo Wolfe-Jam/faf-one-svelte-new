@@ -104,10 +104,10 @@
 	</svg>
 </a>
 
-<!-- Minimal persistent nav: Home · Map · Blog. Black pill (white text) so it
-     reads on any page + over the dark banner. -->
+<!-- Minimal persistent nav: Home · Map · Blog · Skills. Black pill (white text)
+     so it reads on any page + over the dark banner. -->
 <nav class="mini-nav" aria-label="Primary">
-	<a href="/">Home</a><span class="sep">·</span><a href="/map">Map</a><span class="sep">·</span><a href="/blog">Blog</a>
+	<a href="/">Home</a><span class="sep">·</span><a href="/map">Map</a><span class="sep">·</span><a href="/blog">Blog</a><span class="sep">·</span><a href="https://skills.faf.one">Skills</a>
 </nav>
 
 <!-- Milestone banner -->
