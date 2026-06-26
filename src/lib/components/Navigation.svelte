@@ -11,6 +11,7 @@
 		{ label: 'Blog', href: '/blog' },
 		{ label: 'About', href: '/about' },
 		{ label: 'Links', href: '/links' },
+		{ label: 'Skills', href: 'https://skills.faf.one', external: true },
 		{ label: 'GitHub', href: 'https://github.com/Wolfe-Jam/faf-cli', external: true },
 	];
 
