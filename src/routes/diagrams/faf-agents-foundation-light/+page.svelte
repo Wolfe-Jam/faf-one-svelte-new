@@ -325,7 +325,7 @@
 
 	.foundation-box {
 		position: relative;
-		background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
+		background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, var(--faf-green-light) 100%);
 		padding: 1.5rem 2rem;
 		border-radius: 16px;
 		text-align: center;

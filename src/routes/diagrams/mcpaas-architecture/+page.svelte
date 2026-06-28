@@ -335,7 +335,7 @@
 	}
 
 	.metric-value {
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-size: 1.1rem;
 		font-weight: 700;
 		font-family: 'SF Mono', monospace;

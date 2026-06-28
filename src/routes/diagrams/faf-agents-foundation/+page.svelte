@@ -229,7 +229,7 @@
 	}
 
 	.consume-arrows {
-		color: #4ade80;
+		color: var(--faf-green-light);
 	}
 
 	.arrow-up {
@@ -346,7 +346,7 @@
 		border-radius: 16px;
 		text-align: center;
 		box-shadow: 0 8px 32px rgba(74, 222, 128, 0.25);
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 	}
 
 	.foundation-icon {

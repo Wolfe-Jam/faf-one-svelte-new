@@ -145,7 +145,7 @@
 		position: absolute;
 		top: 2rem;
 		right: 2rem;
-		background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+		background: linear-gradient(135deg, var(--faf-green-light) 0%, #22c55e 100%);
 		color: #0a0a0a;
 		padding: 0.5rem 1.25rem;
 		border-radius: 8px;
@@ -168,9 +168,9 @@
 		font-weight: 900;
 		margin: 0;
 		background: linear-gradient(135deg,
-			#4ade80 0%,
+			var(--faf-green-light) 0%,
 			#FF6B35 50%,
-			#4ade80 100%);
+			var(--faf-green-light) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -193,7 +193,7 @@
 		margin: 2rem auto;
 		display: inline-block;
 		background: rgba(26, 26, 26, 0.8);
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 12px;
 		padding: 1rem 2rem;
 		backdrop-filter: blur(10px);
@@ -202,7 +202,7 @@
 	.answer-text {
 		font-family: 'SF Mono', monospace;
 		font-size: 1.5rem;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-weight: 600;
 		letter-spacing: 1px;
 	}
@@ -243,7 +243,7 @@
 	.code-snippet code {
 		font-family: 'SF Mono', monospace;
 		font-size: 1.25rem;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-weight: 600;
 	}
 

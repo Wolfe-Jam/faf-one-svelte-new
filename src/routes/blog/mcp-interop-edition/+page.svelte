@@ -534,7 +534,7 @@
 	}
 
 	.claude-target { border-left-color: #f59e0b; }
-	.agents-target { border-left-color: #4ade80; }
+	.agents-target { border-left-color: var(--faf-green-light); }
 	.cursor-target { border-left-color: #059669; }
 	.gemini-target { border-left-color: #3b82f6; }
 

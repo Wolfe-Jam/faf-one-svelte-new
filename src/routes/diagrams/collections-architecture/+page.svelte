@@ -160,7 +160,7 @@
 	}
 
 	.flow-arrow {
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-size: 2rem;
 		font-weight: bold;
 	}
@@ -171,7 +171,7 @@
 		gap: 1.5rem;
 		padding: 1.5rem 2rem;
 		background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 12px;
 		width: 100%;
 	}
@@ -232,7 +232,7 @@
 	}
 
 	.file-badge {
-		background: #4ade80;
+		background: var(--faf-green-light);
 		color: #0a0a0a;
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
@@ -261,7 +261,7 @@
 	}
 
 	.yaml-value {
-		color: #4ade80;
+		color: var(--faf-green-light);
 	}
 
 	.upload-box {
@@ -325,7 +325,7 @@
 	.grok-box {
 		width: 100%;
 		background: white;
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 12px;
 		overflow: hidden;
 	}
@@ -335,7 +335,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1rem 1.5rem;
-		background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+		background: linear-gradient(135deg, var(--faf-green-light) 0%, #22c55e 100%);
 		color: white;
 	}
 
@@ -386,7 +386,7 @@
 	}
 
 	.step-num {
-		background: #4ade80;
+		background: var(--faf-green-light);
 		color: white;
 		width: 1.75rem;
 		height: 1.75rem;
@@ -440,7 +440,7 @@
 	}
 
 	.benefit-icon {
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-weight: 700;
 		font-size: 1.25rem;
 	}

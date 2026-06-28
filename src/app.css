@@ -8,6 +8,7 @@
 	--faf-cyan-text: #009999;    /* Readable cyan on light/white backgrounds */
 	--faf-green: #00aa55;        /* FAF-Green — canonical (wolfejam 2026-06-28) */
 	--faf-green-hover: #008040;  /* FAF-Green dark — hover/active, AA-small on white */
+	--faf-green-light: #4ade80;  /* FAF-Green light — accents on dark (diagrams, callouts) */
 	
 	/* Foundation Colors */
 	--faf-cream: #FEFCF8;        /* Background warmth (NEVER pure white) */

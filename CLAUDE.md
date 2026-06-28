@@ -77,7 +77,7 @@ Warm (Danger/Warning):
 
 Cool (Solution/Trust):
 - Cyan:    #00D4D4 (primary), #00ffff (hover)
-- Green:   #27c93f (success, terminal)
+- Green:   #00aa55 (success, canonical FAF-Green) · #00ff88 (terminal carve-out)
 
 Grays (Brightened for dark bg):
 - #aaa (was #666) - primary gray text

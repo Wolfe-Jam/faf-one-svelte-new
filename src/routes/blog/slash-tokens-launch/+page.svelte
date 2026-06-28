@@ -331,7 +331,7 @@
 
 	.red { color: #dc2626; font-weight: 700; }
 	.orange { color: #FF4400; font-weight: 700; }
-	.green { color: #4ade80; font-weight: 700; }
+	.green { color: var(--faf-green-light); font-weight: 700; }
 
 	.big-number {
 		text-align: center;
@@ -507,7 +507,7 @@
 		margin: 1.5rem 0;
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.85rem;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		overflow-x: auto;
 	}
 

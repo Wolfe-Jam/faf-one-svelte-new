@@ -310,7 +310,7 @@
 	}
 
 	.speed-badge {
-		background: #4ade80;
+		background: var(--faf-green-light);
 		color: white;
 	}
 

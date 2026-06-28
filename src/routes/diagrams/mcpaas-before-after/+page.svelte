@@ -188,7 +188,7 @@
 	}
 
 	.session-status.success {
-		color: #4ade80;
+		color: var(--faf-green-light);
 	}
 
 	.session-status.failure {

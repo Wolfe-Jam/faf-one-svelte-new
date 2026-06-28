@@ -248,7 +248,7 @@
 	.faf-section {
 		font-family: 'SF Mono', monospace;
 		font-size: 0.85rem;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		margin: 0;
 		padding-left: 1rem;
 	}
@@ -322,7 +322,7 @@
 	.command-box code {
 		font-family: 'SF Mono', monospace;
 		font-size: 1.1rem;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-weight: 600;
 	}
 

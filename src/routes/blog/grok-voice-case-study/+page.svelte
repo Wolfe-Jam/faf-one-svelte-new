@@ -366,7 +366,7 @@ re-explain their stack, goals, or architecture. Just help.
 
 	.version-tag {
 		display: inline-block;
-		background: #4ade80;
+		background: var(--faf-green-light);
 		color: #000;
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
@@ -403,7 +403,7 @@ re-explain their stack, goals, or architecture. Just help.
 	}
 
 	.category.case-study {
-		background: #4ade80;
+		background: var(--faf-green-light);
 		color: #000;
 	}
 
@@ -418,7 +418,7 @@ re-explain their stack, goals, or architecture. Just help.
 		padding: 1.5rem;
 		background: #f0fff4;
 		border-radius: 8px;
-		border-left: 4px solid #4ade80;
+		border-left: 4px solid var(--faf-green-light);
 	}
 
 	h2 {
@@ -518,7 +518,7 @@ re-explain their stack, goals, or architecture. Just help.
 	}
 
 	.grok-box {
-		background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+		background: linear-gradient(135deg, var(--faf-green-light) 0%, #22c55e 100%);
 		color: #000;
 		min-width: 200px;
 	}
@@ -569,7 +569,7 @@ re-explain their stack, goals, or architecture. Just help.
 		margin-top: 1.5rem;
 		padding: 1rem;
 		background: #f0fdf4;
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 8px;
 		color: #166534;
 	}
@@ -584,13 +584,13 @@ re-explain their stack, goals, or architecture. Just help.
 		background: #f8f8f8;
 		border-radius: 8px;
 		padding: 1.5rem;
-		border-left: 4px solid #4ade80;
+		border-left: 4px solid var(--faf-green-light);
 	}
 
 	.act-number {
 		font-size: 0.85rem;
 		font-weight: 700;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		margin-bottom: 0.5rem;
@@ -650,7 +650,7 @@ re-explain their stack, goals, or architecture. Just help.
 	.result-value {
 		font-size: 2rem;
 		font-weight: 700;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 	}
 
@@ -669,7 +669,7 @@ re-explain their stack, goals, or architecture. Just help.
 
 	.cta-box {
 		background: #f8f8f8;
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: center;
@@ -677,7 +677,7 @@ re-explain their stack, goals, or architecture. Just help.
 
 	.cta-box h3 {
 		margin: 0 0 0.5rem 0;
-		color: #4ade80;
+		color: var(--faf-green-light);
 		font-size: 1.1rem;
 	}
 
@@ -688,7 +688,7 @@ re-explain their stack, goals, or architecture. Just help.
 	}
 
 	.cta-link {
-		color: #4ade80;
+		color: var(--faf-green-light);
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 0.95rem;
@@ -737,7 +737,7 @@ re-explain their stack, goals, or architecture. Just help.
 	}
 
 	.footer-links a {
-		color: #4ade80;
+		color: var(--faf-green-light);
 		text-decoration: none;
 	}
 

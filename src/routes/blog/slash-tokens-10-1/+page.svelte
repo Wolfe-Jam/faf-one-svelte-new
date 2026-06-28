@@ -249,7 +249,7 @@
 	a:hover { text-decoration: none; }
 
 	.red { color: #dc2626; font-weight: 700; }
-	.green { color: #4ade80; font-weight: 700; }
+	.green { color: var(--faf-green-light); font-weight: 700; }
 
 	code {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;

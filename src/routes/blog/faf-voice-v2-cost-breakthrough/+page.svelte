@@ -503,7 +503,7 @@ for (const exchange of conversation) {
 		padding: 1.5rem;
 		background: #f0fdf4;
 		border-radius: 8px;
-		border-left: 4px solid #4ade80;
+		border-left: 4px solid var(--faf-green-light);
 	}
 
 	h2 {
@@ -653,7 +653,7 @@ for (const exchange of conversation) {
 
 	.test-category {
 		background: #f0fdf4;
-		border: 1px solid #4ade80;
+		border: 1px solid var(--faf-green-light);
 		border-radius: 6px;
 		padding: 1rem;
 		display: flex;
@@ -713,7 +713,7 @@ for (const exchange of conversation) {
 
 	.after {
 		background: #f0fdf4;
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 8px;
 		padding: 1.5rem;
 	}
@@ -764,7 +764,7 @@ for (const exchange of conversation) {
 		text-align: center;
 		padding: 1rem;
 		background: #f0fdf4;
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 8px;
 		margin: 1.5rem 0;
 		color: #166534;
@@ -800,7 +800,7 @@ for (const exchange of conversation) {
 
 	.lesson {
 		background: #f8f8f8;
-		border-left: 4px solid #4ade80;
+		border-left: 4px solid var(--faf-green-light);
 		border-radius: 8px;
 		padding: 1.5rem;
 	}
@@ -931,7 +931,7 @@ for (const exchange of conversation) {
 
 	.championship-note {
 		background: #f0fdf4;
-		border: 2px solid #4ade80;
+		border: 2px solid var(--faf-green-light);
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin: 2rem 0;
