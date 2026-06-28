@@ -149,7 +149,7 @@ Permanent Memory. Instant Recall.`;
 	}
 
 	.breadcrumb a {
-		color: #00BC61;
+		color: #00aa55;
 		text-decoration: none;
 	}
 
@@ -201,7 +201,7 @@ Permanent Memory. Instant Recall.`;
 		background: #FAFAF7;
 		padding: 2rem;
 		border-radius: 12px;
-		border: 2px solid #00BC61;
+		border: 2px solid #00aa55;
 		margin: 2rem 0;
 	}
 
@@ -244,13 +244,13 @@ Permanent Memory. Instant Recall.`;
 	}
 
 	.meta-value.link {
-		color: #00BC61;
+		color: #00aa55;
 		text-decoration: none;
 	}
 
 	.paper-button {
 		display: inline-block;
-		background: #00BC61;
+		background: #00aa55;
 		color: white;
 		padding: 0.75rem 1.5rem;
 		border-radius: 8px;
@@ -274,7 +274,7 @@ Permanent Memory. Instant Recall.`;
 	}
 
 	.post-content .meta-value.link {
-		color: #00BC61;
+		color: #00aa55;
 	}
 
 	.teaser-list {
@@ -344,7 +344,7 @@ Permanent Memory. Instant Recall.`;
 	}
 
 	.post-footer a {
-		color: #00BC61;
+		color: #00aa55;
 	}
 
 	.share-section {

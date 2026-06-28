@@ -372,7 +372,7 @@
 
 	.dot.red { background: #ff5f56; }
 	.dot.yellow { background: #ffbd2e; }
-	.dot.green { background: #27c93f; }
+	.dot.green { background: #00aa55; }
 
 	.terminal-title {
 		margin-left: auto;
@@ -397,7 +397,7 @@
 	}
 
 	.prompt {
-		color: #27c93f;
+		color: #00aa55;
 		font-weight: 700;
 	}
 
@@ -431,7 +431,7 @@
 	}
 
 	.output-line.success {
-		color: #27c93f;
+		color: #00aa55;
 		font-weight: 700;
 		margin-top: 1.5rem;
 		font-size: 1.1rem;

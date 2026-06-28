@@ -1470,17 +1470,17 @@
 
 	.academic-card {
 		background: #fdfdf8;
-		border-color: #27c93f;
-		border-left: 4px solid #27c93f;
+		border-color: #00aa55;
+		border-left: 4px solid #00aa55;
 	}
 
 	.academic-card .post-category {
-		background: #27c93f;
+		background: #00aa55;
 	}
 
 	.academic-card:hover {
 		box-shadow: 0 8px 24px rgba(39, 201, 63, 0.15);
-		border-color: #27c93f;
+		border-color: #00aa55;
 	}
 
 	@media (max-width: 768px) {

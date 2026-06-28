@@ -918,11 +918,11 @@ human_context:
 
 	.after {
 		background: linear-gradient(135deg, #f0fff4 0%, #e0ffe8 100%);
-		border: 2px solid #27c93f;
+		border: 2px solid #00aa55;
 	}
 
 	.before h3 { color: #ff3333; }
-	.after h3 { color: #27c93f; }
+	.after h3 { color: #00aa55; }
 
 	.before ul, .after ul {
 		margin: 0;
@@ -946,7 +946,7 @@ human_context:
 	.terminal code {
 		display: block;
 		background: none;
-		color: #27c93f;
+		color: #00aa55;
 		padding: 0.25rem 0;
 	}
 

@@ -643,7 +643,7 @@
 
   /* Completion Button */
   .completion-button {
-    background: linear-gradient(135deg, var(--faf-green) 0%, #00d97e 100%);
+    background: linear-gradient(135deg, var(--faf-green) 0%, #00aa55 100%);
     color: white;
     padding: 1.5rem 2rem;
     border-radius: 12px;
@@ -665,7 +665,7 @@
   .completion-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 191, 99, 0.5);
-    background: linear-gradient(135deg, #00d97e 0%, var(--faf-green) 100%);
+    background: linear-gradient(135deg, #00aa55 0%, var(--faf-green) 100%);
   }
 
   .completion-button:active {

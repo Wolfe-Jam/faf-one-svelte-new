@@ -449,7 +449,7 @@
 	}
 
 	.solution h2 {
-		color: #27c93f;
+		color: #00aa55;
 	}
 
 	.problem-solution h2 {
@@ -557,12 +557,12 @@
 	}
 
 	.after {
-		color: #27c93f;
+		color: #00aa55;
 		font-weight: 600;
 	}
 
 	.improvement {
-		background: #27c93f;
+		background: #00aa55;
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 12px;
@@ -881,7 +881,7 @@
 	}
 
 	.layer.verify-layer .layer-number {
-		background: #27c93f;
+		background: #00aa55;
 	}
 
 	.layer h3 {

@@ -958,7 +958,7 @@ faf go
 	}
 
 	.mistake-card.right {
-		border-color: #27c93f;
+		border-color: #00aa55;
 		background: linear-gradient(135deg, #1a1a1a 0%, #102a10 100%);
 	}
 

@@ -493,7 +493,7 @@
   }
 
   .question.done {
-    border-color: #27c93f;
+    border-color: #00aa55;
     background: #f8fdf8;
   }
 
@@ -523,7 +523,7 @@
   }
 
   .question.done .q-number {
-    background: #27c93f;
+    background: #00aa55;
     color: white;
   }
 
@@ -546,7 +546,7 @@
   }
 
   .question.done .w-tag {
-    background: #27c93f;
+    background: #00aa55;
   }
 
   .q-label-row {
@@ -632,7 +632,7 @@
   }
 
   .submit-btn.go {
-    background: #27c93f;
+    background: #00aa55;
     transform: scale(1.1);
     letter-spacing: 0.1em;
   }
@@ -646,7 +646,7 @@
   /* Output */
   .output {
     background: white;
-    border: 2px solid #27c93f;
+    border: 2px solid #00aa55;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 0.75rem;

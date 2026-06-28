@@ -1114,7 +1114,7 @@
 
 	.dot.red { background: #ff5f56; }
 	.dot.yellow { background: #ffbd2e; }
-	.dot.green { background: #27c93f; }
+	.dot.green { background: #00aa55; }
 
 	.terminal-body {
 		padding: 1.5rem;
@@ -1127,7 +1127,7 @@
 	}
 
 	.prompt {
-		color: #27c93f;
+		color: #00aa55;
 		margin-right: 0.5rem;
 	}
 
@@ -1140,7 +1140,7 @@
 	}
 
 	.broken {
-		color: #27c93f;
+		color: #00aa55;
 		font-weight: 700;
 	}
 
@@ -1175,11 +1175,11 @@
 	}
 
 	.after {
-		border: 1px solid #27c93f;
+		border: 1px solid #00aa55;
 	}
 
 	.after h4 {
-		color: #27c93f;
+		color: #00aa55;
 		margin-bottom: 1rem;
 		text-align: center;
 	}

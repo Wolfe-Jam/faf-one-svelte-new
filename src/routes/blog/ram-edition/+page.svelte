@@ -492,8 +492,8 @@ npm i -g faf-cli`;
 	.w1 .w-label { color: #FF6B35; }
 	.w2 { border-color: #00D4D4; }
 	.w2 .w-label { color: var(--faf-cyan-text); }
-	.w3 { border-color: #27c93f; }
-	.w3 .w-label { color: #27c93f; }
+	.w3 { border-color: #00aa55; }
+	.w3 .w-label { color: #00aa55; }
 	.w4 { border-color: #888; }
 	.w4 .w-label { color: #555; }
 	.w5 { border-color: #888; }
@@ -504,7 +504,7 @@ npm i -g faf-cli`;
 	/* Insight box */
 	.insight-box {
 		background: #f0fff0;
-		border: 2px solid #27c93f;
+		border: 2px solid #00aa55;
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -512,7 +512,7 @@ npm i -g faf-cli`;
 	}
 
 	.insight-box h3 {
-		color: #27c93f;
+		color: #00aa55;
 		margin: 0 0 0.5rem 0;
 		font-size: 1.3rem;
 	}

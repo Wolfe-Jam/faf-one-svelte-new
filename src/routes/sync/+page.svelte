@@ -647,7 +647,7 @@ Dashboard application
 
 	.terminal-dot.red { background: #ff5f56; }
 	.terminal-dot.yellow { background: #ffbd2e; }
-	.terminal-dot.green { background: #27ca40; }
+	.terminal-dot.green { background: #00aa55; }
 
 	.terminal-title {
 		margin-left: 0.5rem;
