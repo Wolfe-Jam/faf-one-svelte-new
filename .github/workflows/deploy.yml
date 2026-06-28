@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy faf.one
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4.4.0
+      - uses: actions/setup-node@v5
         with:
           node-version: '24'
           cache: 'npm'
