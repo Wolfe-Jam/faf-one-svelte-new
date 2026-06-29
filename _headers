@@ -2,6 +2,10 @@
 /.well-known/ai-catalog.json
   Content-Type: application/ai-catalog+json; charset=utf-8
 
+# RFC 8615 well-known URI "faf" - canonical discovery anchor (draft-wolfe-faf-format).
+/.well-known/faf
+  Content-Type: application/vnd.faf+yaml; charset=utf-8
+
 /.well-known/project.faf
   Content-Type: application/vnd.faf+yaml; charset=utf-8
 

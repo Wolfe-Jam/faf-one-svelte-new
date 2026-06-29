@@ -1,0 +1,56 @@
+faf_version: "3.0"
+project:
+  name: faf-one-svelte
+  goal: Persistent project context for the AI era
+  main_language: TypeScript
+  type: svelte
+stack:
+  frontend: SvelteKit
+  css_framework: slotignored
+  ui_library: slotignored
+  state_management: Svelte 5 runes
+  backend: Supabase (BaaS)
+  api_type: REST (Supabase)
+  runtime: Node.js
+  database: Supabase (Postgres)
+  connection: "@supabase/supabase-js"
+  hosting: Cloudflare Pages
+  build: Vite
+  cicd: GitHub Actions
+  monorepo_tool: slotignored
+  package_manager: slotignored
+  workspaces: slotignored
+  admin: slotignored
+  cache: slotignored
+  search: slotignored
+  storage: slotignored
+human_context:
+  who: Developers and teams adopting AI context, and anyone discovering the .faf format
+  what: Context that persists. Across sessions. Models. Tools. Teams. Enterprises.
+  why: Be the canonical home for .faf - explain the format, host docs and blog, drive adoption of AI-readable project context
+  where: faf.one - Cloudflare Pages
+  when: Production - live, continuously deployed
+  how: SvelteKit (Svelte 5 runes), built with Vite, deployed to Cloudflare Pages
+monorepo:
+  packages_count: slotignored
+  build_orchestrator: slotignored
+  versioning_strategy: slotignored
+  shared_configs: slotignored
+  remote_cache: slotignored
+discovery:
+  well_known: faf
+  description: Canonical discovery anchor for the FAF media-type family at this origin, per RFC 8615.
+  family:
+    context:
+      media_type: application/vnd.faf+yaml
+      iana: https://www.iana.org/assignments/media-types/application/vnd.faf+yaml
+    memory:
+      media_type: application/vnd.fafm+yaml
+      iana: https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml
+      resource: /.well-known/project.fafm
+    agent:
+      media_type: application/vnd.fafa+yaml
+      iana: https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml
+  catalog:
+    media_type: application/ai-catalog+json
+    resource: /.well-known/ai-catalog.json
