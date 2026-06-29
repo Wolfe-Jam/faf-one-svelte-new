@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/git-version',
+			title: 'The GIT Version',
+			date: 'June 27, 2026',
+			timestamp: '2026-06-27',
+			excerpt: "faf-cli v7.0.0 — FAF is to Context what Git is to Versions. Your project.faf is now a git-native artifact you can diff, log, guard with a pre-commit hook, and pull at any ref — score delta and all. Purely additive, safe upgrade.",
+			emoji: '🏆',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/copilot-edition',
 			title: 'The Copilot Edition',
 			date: 'June 24, 2026',
