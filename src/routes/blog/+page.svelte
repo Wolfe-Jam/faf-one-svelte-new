@@ -7,6 +7,7 @@
 		{
 			slug: 'blog/git-version',
 			title: 'The GIT Version',
+			version: 'v7.0.0',
 			date: 'June 27, 2026',
 			timestamp: '2026-06-27',
 			excerpt: "faf-cli v7.0.0 — FAF is to Context what Git is to Versions. Your project.faf is now a git-native artifact you can diff, log, guard with a pre-commit hook, and pull at any ref — score delta and all. Purely additive, safe upgrade.",
@@ -1119,6 +1120,7 @@
 					<div class="post-emoji">{post.emoji}</div>
 					<div class="post-category">{post.category}</div>
 					<h2>{post.title}</h2>
+					{#if post.version}<div class="post-version">{post.version}</div>{/if}
 					<p class="post-excerpt">{post.excerpt}</p>
 					<div class="post-date">{post.date}</div>
 				</a>
@@ -1132,6 +1134,7 @@
 					<span class="list-date">{post.timestamp}</span>
 					<span class="list-emoji">{post.emoji}</span>
 					<span class="list-title">{post.title}</span>
+					{#if post.version}<span class="list-version">{post.version}</span>{/if}
 					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: #111' : ''}">{post.category}</span>
 				</a>
 			{/each}
@@ -1260,6 +1263,26 @@
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		margin-bottom: 0.5rem;
+	}
+
+	/* Version stamp — orange mono, shown on cards/list when post.version is set */
+	.post-version {
+		display: inline-block;
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.72rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+		margin: -0.1rem 0 0.55rem;
+		letter-spacing: 0.02em;
+	}
+
+	.list-version {
+		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+		font-size: 0.72rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+		flex-shrink: 0;
+		letter-spacing: 0.02em;
 	}
 
 	.post-card[href*="the-missing-format"] .post-category {
