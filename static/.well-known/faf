@@ -6,8 +6,6 @@ project:
   type: svelte
 stack:
   frontend: SvelteKit
-  css_framework: slotignored
-  ui_library: slotignored
   state_management: Svelte 5 runes
   backend: Supabase (BaaS)
   api_type: REST (Supabase)
@@ -17,13 +15,6 @@ stack:
   hosting: Cloudflare Pages
   build: Vite
   cicd: GitHub Actions
-  monorepo_tool: slotignored
-  package_manager: slotignored
-  workspaces: slotignored
-  admin: slotignored
-  cache: slotignored
-  search: slotignored
-  storage: slotignored
 human_context:
   who: Developers and teams adopting AI context, and anyone discovering the .faf format
   what: Context that persists. Across sessions. Models. Tools. Teams. Enterprises.
@@ -31,12 +22,6 @@ human_context:
   where: faf.one - Cloudflare Pages
   when: Production - live, continuously deployed
   how: SvelteKit (Svelte 5 runes), built with Vite, deployed to Cloudflare Pages
-monorepo:
-  packages_count: slotignored
-  build_orchestrator: slotignored
-  versioning_strategy: slotignored
-  shared_configs: slotignored
-  remote_cache: slotignored
 discovery:
   well_known: faf
   description: Canonical discovery anchor for the FAF media-type family at this origin, per RFC 8615.
