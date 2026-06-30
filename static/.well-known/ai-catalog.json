@@ -16,10 +16,8 @@
       "updatedAt": "2026-06-19T00:00:00Z",
       "metadata": {
         "one.faf/context": {
-          "mediaType": "application/vnd.faf+yaml",
           "deterministic": true,
-          "iana": "registered",
-          "canonical": "https://faf.one/.well-known/project.faf"
+          "iana": "registered"
         }
       }
     },
@@ -52,7 +50,6 @@
     },
     {
       "identifier": "urn:air:faf.one:mcp:context-server",
-      "displayName": "FAF Context — MCP Server Card",
       "type": "application/mcp-server-card+json",
       "description": "Live MCP server carrying FAF context in its reverse-DNS _meta[\"one.faf/context\"] slot.",
       "tags": ["mcp", "server-card", "context"],
