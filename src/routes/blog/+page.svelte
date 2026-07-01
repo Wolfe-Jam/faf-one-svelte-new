@@ -5,6 +5,25 @@
 
 	const posts = [
 		{
+			slug: 'blog/faf-context',
+			title: '.FAF Context',
+			version: 'faf-mcp v2.3.1',
+			date: 'July 1, 2026',
+			timestamp: '2026-07-01',
+			excerpt: "The FAF context server for your editor — Cursor, VS Code, Windsurf, Cline. One .faf in your repo, read by every MCP-compatible IDE. On the GitHub MCP Registry. v2.3.1 grounds on the project you have open.",
+			emoji: '🎯',
+			category: 'Interop'
+		},
+		{
+			slug: 'blog/same-grade-opposite-flag',
+			title: 'Same Grade. Opposite Flag.',
+			date: 'June 30, 2026',
+			timestamp: '2026-06-30',
+			excerpt: "Two skills score a perfect 100/100. One earns the flag, one doesn't. Why the grade isn't the gate — and why a skill test gets weaker as the models get stronger.",
+			emoji: '🏁',
+			category: 'WJTTC'
+		},
+		{
 			slug: 'blog/git-version',
 			title: 'The GIT Version',
 			version: 'v7.0.0',
