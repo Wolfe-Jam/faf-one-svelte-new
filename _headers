@@ -14,3 +14,7 @@
 
 /.well-known/grok.fafm
   Content-Type: application/vnd.fafm+yaml; charset=utf-8
+
+# Agent layer — the FAF Agent Card (.fafa) completes the context/memory/agent trinity.
+/.well-known/claude.fafa
+  Content-Type: application/vnd.fafa+yaml; charset=utf-8
