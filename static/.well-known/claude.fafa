@@ -235,7 +235,7 @@ provenance:
   faf: ./project.faf
   mediaType: application/vnd.faf+yaml
   deterministic: true
-  generated: 2026-07-01T03:40:17Z
+  generated: 2026-07-01T04:35:37Z
 metadata:
   repository: https://github.com/Wolfe-Jam/claude-faf-mcp
   privacy: Runs locally. No telemetry, no analytics, no data leaves the machine.
@@ -245,5 +245,5 @@ metadata:
     note: Capabilities declared flat for now; tier-based surfacing is a planned dimension (per the tool-surface curation design), not yet finalized — no fabricated split.
   trinity:
     context: ./project.faf (live)
-    memory: soul.fafm (planned)
+    memory: soul.fafm (live)
     agent: this card
