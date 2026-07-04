@@ -130,7 +130,18 @@
 						<div class="package-links">
 							<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
 							<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+							<a href="https://smithery.ai/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">Smithery →</a>
 						</div>
+						<p class="smithery-badge">
+							<a href="https://smithery.ai/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">
+								<img
+									src="https://smithery.ai/badge/wolfe-jam/claude-faf-mcp"
+									alt="smithery badge"
+									width="200"
+									height="20"
+								/>
+							</a>
+						</p>
 					</div>
 				</div>
 			</ScrollRevealText>
@@ -684,6 +695,14 @@
 
 	.package-links a:hover {
 		opacity: 0.7;
+	}
+
+	.smithery-badge {
+		margin-top: 0.75rem;
+	}
+
+	.smithery-badge a {
+		display: inline-block;
 	}
 
 	/* Installation Tabs */
