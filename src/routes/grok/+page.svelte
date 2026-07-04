@@ -50,10 +50,21 @@
 
 	<section class="content cta-section">
 		<h2>Try it</h2>
-		<p>Point your Grok integration at the SSE endpoint, or run locally with one command.</p>
-		<a class="cta" href="https://grok-faf-mcp.vercel.app" target="_blank" rel="noopener">
-			Live at grok-faf-mcp.vercel.app →
+		<p>Point your Grok integration at the hosted endpoint, or run locally with one command.</p>
+		<a class="cta" href="https://mcpaas.live/grok/mcp/v1" target="_blank" rel="noopener">
+			Live at mcpaas.live/grok/mcp/v1 →
 		</a>
+		<p class="smithery">
+			Also on Smithery:
+			<a href="https://smithery.ai/servers/wolfe-jam/grok-faf-mcp" target="_blank" rel="noopener">
+				<img
+					src="https://smithery.ai/badge/wolfe-jam/grok-faf-mcp"
+					alt="smithery badge"
+					width="200"
+					height="20"
+				/>
+			</a>
+		</p>
 	</section>
 
 	<section class="content footer-section">
@@ -162,6 +173,18 @@
 
 	.cta:hover {
 		transform: translateY(-1px);
+	}
+
+	.smithery {
+		margin-top: 1.25rem;
+		font-size: 0.95rem;
+		color: var(--faf-gray);
+	}
+
+	.smithery a {
+		display: inline-block;
+		margin-left: 0.35rem;
+		vertical-align: middle;
 	}
 
 	.footer-section {
