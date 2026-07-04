@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/aaif-ambassador',
+			title: 'AAIF Ambassador',
+			date: 'July 4, 2026',
+			timestamp: '2026-07-04',
+			excerpt: "Now an Ambassador for the Agentic AI Foundation — the Linux Foundation home for the open standards agentic AI is being built on: MCP, goose, AGENTS.md, agentgateway. Helping developers adopt them, starting with AGENTS.md.",
+			emoji: '🏛️',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/faf-context',
 			title: '.FAF Context',
 			version: 'faf-mcp v2.3.1',
