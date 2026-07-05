@@ -9,9 +9,16 @@
     {
       "identifier": "urn:air:faf.one:context:faf",
       "displayName": "FAF — Project Context (.faf)",
+      "mediaType": "application/vnd.faf+yaml",
       "type": "application/vnd.faf+yaml",
       "description": "Deterministic, IANA-registered project context — the .faf source of truth a repo's CLAUDE.md / AGENTS.md are generated from.",
-      "tags": ["context", "faf", "deterministic", "iana", "agent-context"],
+      "tags": [
+        "context",
+        "faf",
+        "deterministic",
+        "iana",
+        "agent-context"
+      ],
       "url": "https://faf.one/.well-known/project.faf",
       "updatedAt": "2026-06-19T00:00:00Z",
       "metadata": {
@@ -24,44 +31,78 @@
     {
       "identifier": "urn:air:faf.one:memory:faf",
       "displayName": "FAF — Persistent Memory (.fafm)",
+      "mediaType": "application/vnd.fafm+yaml",
       "type": "application/vnd.fafm+yaml",
       "description": "IANA-registered multi-profile agent memory format — permanent context recall across sessions.",
-      "tags": ["memory", "fafm", "iana", "recall"],
+      "tags": [
+        "memory",
+        "fafm",
+        "iana",
+        "recall"
+      ],
       "url": "https://faf.one/.well-known/project.fafm",
       "updatedAt": "2026-06-19T00:00:00Z"
     },
     {
       "identifier": "urn:air:faf.one:context:zeph",
       "displayName": "ZEPH — Context Engine (.faf)",
+      "mediaType": "application/vnd.faf+yaml",
       "type": "application/vnd.faf+yaml",
       "description": "The .faf for xai-faf-zeph (ZEPH): a pure Zig→WebAssembly microsecond context engine, the xAI collaboration channel. .faf context on a radically different stack — a Zig/WASM engine, not a website.",
-      "tags": ["context", "faf", "showcase", "zeph", "zig", "wasm", "xai"],
+      "tags": [
+        "context",
+        "faf",
+        "showcase",
+        "zeph",
+        "zig",
+        "wasm",
+        "xai"
+      ],
       "url": "https://raw.githubusercontent.com/Wolfe-Jam/xai-faf-zeph/main/project.faf",
       "updatedAt": "2026-06-19T00:00:00Z"
     },
     {
       "identifier": "urn:air:faf.one:memory:grok",
       "displayName": "Grok — Public Memory (.fafm)",
+      "mediaType": "application/vnd.fafm+yaml",
       "type": "application/vnd.fafm+yaml",
       "description": "A public .fafm authored by Grok (xAI): durable memory of FAF's context layer, the vROM/RAM model, and the ZEPH engine — a frontier-model demonstration of the memory format.",
-      "tags": ["memory", "fafm", "showcase", "grok", "xai"],
+      "tags": [
+        "memory",
+        "fafm",
+        "showcase",
+        "grok",
+        "xai"
+      ],
       "url": "https://faf.one/.well-known/grok.fafm",
       "updatedAt": "2026-06-19T00:00:00Z"
     },
     {
       "identifier": "urn:air:faf.one:mcp:context-server",
+      "mediaType": "application/mcp-server-card+json",
       "type": "application/mcp-server-card+json",
       "description": "Live MCP server carrying FAF context in its reverse-DNS _meta[\"one.faf/context\"] slot.",
-      "tags": ["mcp", "server-card", "context"],
+      "tags": [
+        "mcp",
+        "server-card",
+        "context"
+      ],
       "url": "https://context.faf.one/mcp/server-card",
       "updatedAt": "2026-06-19T00:00:00Z"
     },
     {
       "identifier": "urn:air:faf.one:agent:fafa",
       "displayName": "FAFA — FAF Agent Card (.fafa)",
+      "mediaType": "application/vnd.fafa+yaml",
       "type": "application/vnd.fafa+yaml",
       "description": "The canonical FAF agent descriptor for FAFA (the Voice of FAF) — a narrow-domain, cite-or-refuse agent. Declares its MCP, A2A, and HTTP endpoints. Completes the FAF context/memory/agent trinity.",
-      "tags": ["agent", "fafa", "faf", "iana", "cite-or-refuse"],
+      "tags": [
+        "agent",
+        "fafa",
+        "faf",
+        "iana",
+        "cite-or-refuse"
+      ],
       "url": "https://faf.one/.well-known/fafa",
       "updatedAt": "2026-07-05T00:00:00Z",
       "metadata": {
@@ -74,9 +115,15 @@
     {
       "identifier": "urn:air:faf.one:a2a:fafa",
       "displayName": "FAFA — A2A Agent Card",
+      "mediaType": "application/a2a-agent-card+json",
       "type": "application/a2a-agent-card+json",
       "description": "FAFA's A2A v1.0 AgentCard — the discovery card for its live message/send door. Projected from the .fafa (one context, every door).",
-      "tags": ["a2a", "agent-card", "faf", "message-send"],
+      "tags": [
+        "a2a",
+        "agent-card",
+        "faf",
+        "message-send"
+      ],
       "url": "https://faf-voice.vercel.app/.well-known/agent-card.json",
       "updatedAt": "2026-07-05T00:00:00Z"
     }
