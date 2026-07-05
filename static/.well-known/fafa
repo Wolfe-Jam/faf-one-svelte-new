@@ -1,0 +1,82 @@
+# FAF Agent Card (.fafa) — FAFA, the Voice of FAF
+# The canonical FAF agent descriptor. Served at https://faf.one/.well-known/fafa
+# with Content-Type: application/vnd.fafa+yaml. The live agent is: uvx faf-agent-mcp.
+# Source of truth: github.com/Wolfe-Jam/faf-agent (project.faf). Every scalar quoted.
+
+version: "1.0"
+agent:
+  name: faf-agent
+  id: did:web:faf.one:agent
+  vendor: WolfeJAM
+  version: "0.1.4"
+  description: >-
+    FAFA (rhymes with Rafa) — the Voice of FAF. A narrow-domain, citation-mandatory
+    agent for the .faf family: it cites the spec or says "I don't know" — no bluffing.
+    Reads 5 canonical FAF docs live from github.com/Wolfe-Jam/faf, plus FAFipedia
+    (the curated, drift-flagged knowledge layer). Model is Grok (xAI) by default,
+    user-definable per project.faf.
+  homepage: https://faf.one/agent
+  license: MIT
+capabilities:
+  - name: ask
+    type: tool
+    description: Answer a FAF question from the live corpus + FAFipedia — cite the spec or refuse. No bluffing.
+    cites_spec: application/vnd.faf+yaml
+    apophatic: true
+    tags: ["faf", "rag", "cite-or-refuse"]
+  - name: cite
+    type: tool
+    description: Return the exact specification citation for a FAF topic.
+    cites_spec: application/vnd.faf+yaml
+    tags: ["faf", "citation"]
+  - name: validate_faf
+    type: tool
+    description: Validate a project.faf document against the .faf specification.
+    cites_spec: application/vnd.faf+yaml
+    tags: ["faf", "validate"]
+  - name: score_faf
+    type: tool
+    description: Score a project.faf's AI-readiness (0–100).
+    cites_spec: application/vnd.faf+yaml
+    tags: ["faf", "score"]
+  - name: etch_memory
+    type: tool
+    description: Persist a memory across sessions (🐘) via mcpaas.live — the .fafm memory layer.
+    cites_spec: application/vnd.fafm+yaml
+    tags: ["memory", "fafm", "mcpaas"]
+  - name: recall_memory
+    type: tool
+    description: Recall memories from the project soul (.fafm) via mcpaas.live.
+    cites_spec: application/vnd.fafm+yaml
+    tags: ["memory", "fafm", "mcpaas"]
+endpoints:
+  - protocol: mcp
+    transport: stdio
+    location: uvx faf-agent-mcp
+    version: "2025-06-18"
+  - protocol: http
+    transport: http
+    location: https://faf-voice.vercel.app/agent
+provenance:
+  faf: https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf
+  spec: application/vnd.faf+yaml
+  version: "2.5.2"
+metadata:
+  persona: FAFA (rhymes with Rafa) — the Voice of FAF
+  product_version: "1.2"
+  product_surface: FAF-Voice (2026-05)
+  model: Grok (xAI) by default; user-definable per project.faf
+  knowledge:
+    canonical: "5 FAF docs, fetched live from https://github.com/Wolfe-Jam/faf"
+    curated: "FAFipedia — 35 drift-flagged entries across 7 categories"
+  memory:
+    layer: application/vnd.fafm+yaml
+    substrate: mcpaas.live
+    namepoint: "fafa-d091d8ba"
+  discipline: 'Cites the spec or says "I don''t know" — no bluffing (apophatic guard).'
+  repository: https://github.com/Wolfe-Jam/faf-agent
+  pypi: faf-agent-mcp
+  trinity:
+    context: application/vnd.faf+yaml
+    memory: application/vnd.fafm+yaml
+    agent: application/vnd.fafa+yaml

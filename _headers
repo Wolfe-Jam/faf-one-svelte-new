@@ -16,5 +16,10 @@
   Content-Type: application/vnd.fafm+yaml; charset=utf-8
 
 # Agent layer — the FAF Agent Card (.fafa) completes the context/memory/agent trinity.
+
+# The canonical FAF Agent anchor (.fafa) — mirrors /.well-known/faf. Live agent: uvx faf-agent-mcp.
+/.well-known/fafa
+  Content-Type: application/vnd.fafa+yaml; charset=utf-8
+
 /.well-known/claude.fafa
   Content-Type: application/vnd.fafa+yaml; charset=utf-8
