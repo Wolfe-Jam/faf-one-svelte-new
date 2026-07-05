@@ -1,3 +1,9 @@
+# HSTS — browsers upgrade http://faf.one to https:// before the request, so a
+# stray/typed http:// link can't create an insecure download hop. Apex only
+# (no includeSubDomains: a not-fully-HTTPS subdomain must not be forced).
+/*
+  Strict-Transport-Security: max-age=31536000
+
 # Correct media types for FAF artifacts served from the well-known AI Catalog.
 /.well-known/ai-catalog.json
   Content-Type: application/ai-catalog+json; charset=utf-8
