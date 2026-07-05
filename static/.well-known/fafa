@@ -55,6 +55,10 @@ endpoints:
     transport: stdio
     location: uvx faf-agent-mcp
     version: "2025-06-18"
+  - protocol: a2a
+    transport: http
+    location: https://faf-voice.vercel.app/api/a2a
+    version: "1.0"
   - protocol: http
     transport: http
     location: https://faf-voice.vercel.app/agent
