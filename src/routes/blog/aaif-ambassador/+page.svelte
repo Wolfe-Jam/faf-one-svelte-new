@@ -95,6 +95,10 @@ Helping developers actually use them, starting with AGENTS.md.`;
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
+		<div class="closing-badge">
+			<img src="/blog/aaif-ambassador-badge.png" alt="AAIF Ambassador badge — Agentic AI Foundation, hosted by the Linux Foundation" />
+		</div>
+
 		<section class="footer-note">
 			<p>Open standards, in the open.</p>
 		</section>
@@ -320,8 +324,20 @@ Helping developers actually use them, starting with AGENTS.md.`;
 		color: #fff;
 	}
 
+	.closing-badge {
+		text-align: center;
+		margin: 3.5rem 0 0 0;
+	}
+
+	.closing-badge img {
+		width: 100%;
+		max-width: 360px;
+		height: auto;
+		display: inline-block;
+	}
+
 	.footer-note {
-		margin-top: 4rem;
+		margin-top: 2rem;
 		padding-top: 2rem;
 		border-top: 1px solid #eee;
 		font-size: 0.95rem;
