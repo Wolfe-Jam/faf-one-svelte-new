@@ -6,6 +6,7 @@
 version: "1.0"
 agent:
   name: faf-agent
+  displayName: "FAFA — the Voice of FAF"
   id: did:web:faf.one:agent
   vendor: WolfeJAM
   version: "0.1.4"
