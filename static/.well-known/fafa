@@ -59,7 +59,7 @@ endpoints:
     location: https://faf-voice.vercel.app/agent
 provenance:
   faf: https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf
-  spec: application/vnd.faf+yaml
+  mediaType: application/vnd.faf+yaml
   version: "2.5.2"
 metadata:
   persona: FAFA (rhymes with Rafa) — the Voice of FAF
