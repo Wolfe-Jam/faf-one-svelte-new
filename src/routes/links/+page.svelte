@@ -156,6 +156,18 @@
 						<span class="link-name">faf-taf-git</span>
 						<span class="link-desc">Git-native receipt printer (TAF)</span>
 					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-rust-sdk" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-rust-sdk</span>
+						<span class="link-desc">Rust SDK — parse, validate, score, FAFb</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/faf-wasm-sdk" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-wasm-sdk</span>
+						<span class="link-desc">Browser SDK — WASM scoring kernel</span>
+					</a>
+					<a href="https://github.com/Wolfe-Jam/mcpaas-cf" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcpaas-cf</span>
+						<span class="link-desc">MCPaaS platform (public About repo)</span>
+					</a>
 				</div>
 			</div>
 		</div>
