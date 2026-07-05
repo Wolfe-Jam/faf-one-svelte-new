@@ -26,6 +26,7 @@
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
+				<a href="#schemas" class="nav-pill">Schemas</a>
 				<a href="#github" class="nav-pill">GitHub</a>
 				<a href="#mcp" class="nav-pill">MCP</a>
 				<a href="#packages" class="nav-pill">Packages</a>
@@ -66,8 +67,13 @@
 					</a>
 					<a href="https://datatracker.ietf.org/doc/draft-wolfe-faf-format/" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IETF Internet-Draft</span>
-						<span class="link-desc">draft-wolfe-faf-format-00 (application/faf+yaml)</span>
+						<span class="link-desc">draft-wolfe-faf-format — Context + Memory (ISE stream, Informational)</span>
 						<span class="link-stat status-live">☑️ ACTIVE</span>
+					</a>
+					<a href="https://datatracker.ietf.org/doc/draft-wolfe-faf-agent/" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">IETF Internet-Draft</span>
+						<span class="link-desc">draft-wolfe-faf-agent — Agent Card (.fafa)</span>
+						<span class="link-stat status-live">☑️ Submitted</span>
 					</a>
 					<a href="https://www.iana.org/form/media-types" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IANA FAFb Submission</span>
@@ -83,6 +89,37 @@
 						<span class="link-name">CERN/Zenodo Paper</span>
 						<span class="link-desc">Permanent Memory and Instant Recall</span>
 						<span class="link-stat status-live">☑️ DOI: 10.5281/zenodo.20348942</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schemas -->
+	<section class="links-section" id="schemas">
+		<div class="container">
+			<div class="card">
+				<h2>📐 Schemas</h2>
+				<div class="links-grid">
+					<a href="https://faf.one/schemas/faf.schema.json" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">faf.schema.json</span>
+						<span class="link-desc">JSON Schema — FAF Context (.faf)</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://faf.one/schemas/fafm.schema.json" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">fafm.schema.json</span>
+						<span class="link-desc">JSON Schema — FAF Memory (.fafm)</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://faf.one/schemas/fafa.schema.json" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">fafa.schema.json</span>
+						<span class="link-desc">JSON Schema — FAF Agent (.fafa)</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://faf.one/.well-known/claude.fafa" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">claude.fafa</span>
+						<span class="link-desc">Live Agent Card (.fafa) — well-known discovery</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 				</div>
 			</div>
