@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-05-22</p>
+			<p class="last-updated">Last Updated: 2026-07-04</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
@@ -294,6 +294,11 @@
 						<span class="link-desc">Auto-syncs from punkpeye</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
+						<a href="https://cursor.directory/plugins/faf-context" target="_blank" rel="noopener" class="link-item">
+							<span class="link-name">cursor.directory</span>
+							<span class="link-desc">.FAF Context — Cursor plugin (MCP + Rule)</span>
+							<span class="link-stat status-live">☑️ LIVE</span>
+						</a>
 				</div>
 			</div>
 		</div>
@@ -592,6 +597,10 @@
 						<span class="link-name">ORCID</span>
 						<span class="link-desc">0009-0007-0801-3841</span>
 					</a>
+						<a href="https://cursor.directory/u/wolfejam" target="_blank" rel="noopener" class="link-item">
+							<span class="link-name">cursor.directory</span>
+							<span class="link-desc">Dev profile (@wolfejam)</span>
+						</a>
 				</div>
 			</div>
 		</div>
