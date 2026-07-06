@@ -155,11 +155,11 @@
 		<div class="grid">
 			<div class="card">
 				<strong>validate_faf <span class="defer">⌚</span></strong>
-				<p>Schema validation — deferred to v0.2.0; use <code>bunx faf-cli check</code> today</p>
+				<p>Deterministic validation via <code>bunx faf-cli check</code>; this tool wires the same kernel in v0.2.0</p>
 			</div>
 			<div class="card">
 				<strong>score_faf <span class="defer">⌚</span></strong>
-				<p>Mk4 scoring — deferred to v0.2.0; use <code>bunx faf-cli score</code> today</p>
+				<p>Mk4 scoring via <code>bunx faf-cli score</code>; this tool wires the same kernel in v0.2.0</p>
 			</div>
 			<div class="card">
 				<strong>ask</strong>
