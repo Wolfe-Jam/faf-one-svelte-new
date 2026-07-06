@@ -272,10 +272,10 @@
 		</div>
 		<div class="qs-step">
 			<h3>Validate + score &mdash; deterministic</h3>
-			<p class="tab-note">Delegate the check. Deterministic (Rust kernel), not a chat guess.</p>
+			<p class="tab-note">Delegate the check to the deterministic Mk4 kernel &mdash; the same one <code>faf-cli</code> runs. Not a chat guess.</p>
 			<div class="code-block"><pre>{`bunx faf-cli check   # validate
 bunx faf-cli score   # score`}</pre></div>
-			<p class="tab-note">MCP <code>validate_faf</code> / <code>score_faf</code> land in v0.2.0; today they point here.</p>
+			<p class="tab-note">The same kernel wires as native MCP tools (<code>validate_faf</code> / <code>score_faf</code>) in faf-agent v0.2.0.</p>
 		</div>
 		<div class="qs-step">
 			<h3>Discover &mdash; find, then call</h3>
