@@ -257,6 +257,35 @@
 		</div>
 	</section>
 
+	<section class="delegate">
+		<h2>Delegate to FAFA</h2>
+		<p class="section-sub">Hand off .faf work. Your agent stays focused.</p>
+		<div class="qs-step">
+			<h3>Ask &mdash; the oracle</h3>
+			<p class="tab-note">Delegate a FAF question over A2A. Cited answer, or an honest refusal.</p>
+			<div class="code-block"><pre>{`curl -X POST https://faf-voice.vercel.app/api/a2a \\
+  -H 'Content-Type: application/json' \\
+  -d '{"jsonrpc":"2.0","id":"1","method":"message/send",
+       "params":{"message":{"messageId":"m1","role":"user",
+         "parts":[{"kind":"text","text":"How does .faf scoring work?"}]}}}'`}</pre></div>
+			<p class="tab-note">MCP: the <code>ask</code> and <code>cite</code> tools.</p>
+		</div>
+		<div class="qs-step">
+			<h3>Validate + score &mdash; deterministic</h3>
+			<p class="tab-note">Delegate the check. Deterministic, not a chat guess &mdash; via MCP or the CLI.</p>
+			<div class="code-block"><code>bunx faf-cli score</code></div>
+			<p class="tab-note">MCP: <code>validate_faf</code> and <code>score_faf</code>.</p>
+		</div>
+		<div class="qs-step">
+			<h3>Discover &mdash; find, then call</h3>
+			<p class="tab-note">Agents find FAFA in the AI Catalog, read the card, call the door. No hard-coded URL.</p>
+			<div class="code-block"><pre>{`# find it in the catalog
+curl https://faf.one/.well-known/ai-catalog.json
+# read the A2A card -> supportedInterfaces[0].url
+curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
+		</div>
+	</section>
+
 	<section class="family">
 		<h2>The FAF Family</h2>
 		<p class="section-sub">One substrate. Four formats. Two architectural layers.</p>
@@ -572,6 +601,7 @@
 	.what,
 	.contract,
 	.quickstart,
+	.delegate,
 	.family,
 	.resources {
 		margin-bottom: 4rem;
