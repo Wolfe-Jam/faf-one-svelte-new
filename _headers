@@ -9,8 +9,11 @@
   Content-Type: application/ai-catalog+json; charset=utf-8
 
 # RFC 8615 well-known URI "faf" - canonical discovery anchor (draft-wolfe-faf-format).
+# Content-Disposition names the download (faf-one.faf) instead of an extensionless
+# "faf" blob — a named artifact reads as intentional, not a random file.
 /.well-known/faf
   Content-Type: application/vnd.faf+yaml; charset=utf-8
+  Content-Disposition: attachment; filename="faf-one.faf"
 
 /.well-known/project.faf
   Content-Type: application/vnd.faf+yaml; charset=utf-8
@@ -24,8 +27,11 @@
 # Agent layer — the FAF Agent Card (.fafa) completes the context/memory/agent trinity.
 
 # The canonical FAF Agent anchor (.fafa) — mirrors /.well-known/faf. Live agent: uvx faf-agent-mcp.
+# Content-Disposition names the download (faf-agent.fafa) instead of an extensionless
+# "fafa"/"fafa (1)" blob — keeps the .fafa extension (it's the format) and reads as intentional.
 /.well-known/fafa
   Content-Type: application/vnd.fafa+yaml; charset=utf-8
+  Content-Disposition: attachment; filename="faf-agent.fafa"
 
 /.well-known/claude.fafa
   Content-Type: application/vnd.fafa+yaml; charset=utf-8
