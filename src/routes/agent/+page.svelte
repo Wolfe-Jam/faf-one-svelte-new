@@ -272,9 +272,10 @@
 		</div>
 		<div class="qs-step">
 			<h3>Validate + score &mdash; deterministic</h3>
-			<p class="tab-note">Delegate the check. Deterministic, not a chat guess &mdash; via MCP or the CLI.</p>
-			<div class="code-block"><code>bunx faf-cli score</code></div>
-			<p class="tab-note">MCP: <code>validate_faf</code> and <code>score_faf</code>.</p>
+			<p class="tab-note">Delegate the check. Deterministic (Rust kernel), not a chat guess.</p>
+			<div class="code-block"><pre>{`bunx faf-cli check   # validate
+bunx faf-cli score   # score`}</pre></div>
+			<p class="tab-note">MCP <code>validate_faf</code> / <code>score_faf</code> land in v0.2.0; today they point here.</p>
 		</div>
 		<div class="qs-step">
 			<h3>Discover &mdash; find, then call</h3>
