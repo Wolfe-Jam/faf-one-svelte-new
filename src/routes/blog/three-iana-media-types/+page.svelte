@@ -125,8 +125,9 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
-		<section class="footer-note">
-			<p>Context. Memory. Agents. Three formats, one standard — verifiable by anyone. ☑️</p>
+		<section class="footer-note signoff">
+			<p class="signoff-lead">One is useful. Two is powerful. Three is a <strong>Category</strong>.</p>
+			<p class="signoff-punch">Three is a crowd.</p>
 		</section>
 	</article>
 </div>
@@ -314,6 +315,19 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		font-size: 0.95rem;
 		color: #1a1a1a;
 		text-align: center;
+	}
+
+	.signoff-lead {
+		font-size: 1.1rem;
+		color: #1a1a1a;
+		margin-bottom: 0.75rem;
+	}
+
+	.signoff-punch {
+		font-size: 1.6rem;
+		font-weight: 800;
+		color: #000;
+		margin: 0;
 	}
 
 	a { color: #FF6B35; }
