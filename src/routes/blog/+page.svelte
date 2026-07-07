@@ -5,6 +5,15 @@
 
 	const posts = [
 		{
+			slug: 'blog/three-iana-media-types',
+			title: 'Three IANA Media Types',
+			date: 'July 6, 2026',
+			timestamp: '2026-07-06',
+			excerpt: "The trinity is complete: .faf (Context), .fafm (Memory), and .fafa (Agents) are now three IANA-registered media types — official, verifiable, all under one registrant in the IANA registry.",
+			emoji: '☑️',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/aaif-ambassador',
 			title: 'AAIF Ambassador',
 			date: 'July 4, 2026',
