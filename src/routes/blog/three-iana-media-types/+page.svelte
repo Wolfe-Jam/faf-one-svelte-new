@@ -78,6 +78,10 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 			<p><strong>.faf</strong> is the persistent project context an AI reads first. <strong>.fafm</strong> is the memory that survives across sessions. <strong>.fafa</strong> is the agent card — the agentic definition. Context, Memory, Agents.</p>
 		</section>
 
+		<div class="trinity-diagram">
+			<img src="/blog/three-iana-media-types-diagram.png" alt="The FAF trinity — the Agent rises through AGENTS.md into your project, standing on a Context and Memory foundation; whole at the center" />
+		</div>
+
 		<section>
 			<h2>Why a registered media type matters</h2>
 			<p>A real IANA registration isn't a label — it's something an AI can resolve and trust by syntax alone:</p>
@@ -194,6 +198,9 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		border: 1px solid #e5e5e5;
 	}
 	.hero-image img { width: 100%; height: auto; display: block; }
+
+	.trinity-diagram { margin: 1.5rem 0 2.5rem 0; }
+	.trinity-diagram img { width: 100%; height: auto; display: block; }
 
 	.post-content { font-size: 1.1rem; }
 
