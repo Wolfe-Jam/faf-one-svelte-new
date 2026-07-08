@@ -155,12 +155,12 @@ Conventional commits (feat: / fix: / test:). Branch off main; never commit to ma
 		</p>
 		<p>The rule that fixes both is simple: every line traces to a fact — a real command, a real file, a real constraint — and the file changes in the same PR as the code. Simple, and rarely kept.</p>
 		<p>You have two options. A dedicated, effective human maintainer can do this — sustaining the discipline on every change, in every repo. Or FAF can do it for you, with minimal human checks as required, per repo.</p>
-		<p><code>faf export --agents</code> reads your repo and writes the file from what's actually there — the real build and test commands, the key files, the conventions your linters enforce, the guardrails. It never invents: every line is a detected fact, not generated prose, which is precisely why it sidesteps the auto-generated-bloat trap above. Change the code, regenerate, it's current. It preserves anything you hand-added.</p>
+		<p><code>faf export --agents</code> reads your repo and generates the file from what's actually there — the real build and test commands, the key files, the conventions your linters enforce, the guardrails. It fills the slots for you, from your repo's real facts rather than invented ones — which is exactly why it sidesteps the bloat trap above. Change the code, regenerate, it's current. It keeps anything you hand-added.</p>
 		<pre><code>npx faf-cli export --agents</code></pre>
 		<p class="muted-note">
 			Works with or without — a follow-on, not a religion. Write a great AGENTS.md by hand today. When keeping
-			it true gets old, don't reach for an AI to write it — that's the bloat. Reach for the repo: the file,
-			rebuilt from the facts already there. <strong>Detected, not generated.</strong>
+			it true gets old, let FAF generate it from your repo — your real commands, files, and guardrails. The
+			trap was never generation; it's generation that guesses. <strong>Generated from what's already there — Done For You.</strong>
 		</p>
 	</article>
 
