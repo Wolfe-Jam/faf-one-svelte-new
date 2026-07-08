@@ -58,7 +58,7 @@
 			<li><strong>Commit &amp; PR</strong> — message format and branch rules.</li>
 		</ol>
 		<p>
-			<strong>Footer</strong> — a freshness marker (last-generated date). In a monorepo, use nested AGENTS.md
+			<strong>Footer</strong> — a freshness marker (a last-updated date). In a monorepo, use nested AGENTS.md
 			files: nearest wins, and the root points outward.
 		</p>
 		<p class="muted-note">
@@ -92,7 +92,7 @@
 	<article class="content">
 		<h2>Anti-patterns</h2>
 		<ol class="anti">
-			<li><strong>Letting an AI write the whole thing.</strong> The strongest finding in the field: auto-generated instruction files measurably <em>reduce</em> task success — the model pads them with plausible-sounding rules the agent then over-obeys. Generate from truth, not from a guess.</li>
+			<li><strong>Letting an AI write the whole thing.</strong> The strongest finding in the field: auto-generated instruction files measurably <em>reduce</em> task success — the model pads them with plausible-sounding rules the agent then over-obeys. Author from truth, not from a guess.</li>
 			<li><strong>Duplicating the README.</strong> README is what and why; AGENTS.md is how-to-work-here.</li>
 			<li><strong>Vague prose</strong> ("be careful", "clean code"). No verification hook — ignored.</li>
 			<li><strong>Directory dumps.</strong> The agent can run <code>ls</code>.</li>
@@ -119,7 +119,7 @@ bun test tests/interop    # a single area
 
 ## Where things live
 - src/cli.ts — entry point (command dispatch)
-- src/interop/ — the export generators (AGENTS.md, CLAUDE.md, ...)
+- src/interop/ — the exporters (AGENTS.md, CLAUDE.md, ...)
 - src/detect/ — repo detection (stack, commands, key files)
 - tests/ — bun test suites
 
@@ -155,12 +155,12 @@ Conventional commits (feat: / fix: / test:). Branch off main; never commit to ma
 		</p>
 		<p>The rule that fixes both is simple: every line traces to a fact — a real command, a real file, a real constraint — and the file changes in the same PR as the code. Simple, and rarely kept.</p>
 		<p>You have two options. A dedicated, effective human maintainer can do this — sustaining the discipline on every change, in every repo. Or FAF can do it for you, with minimal human checks as required, per repo.</p>
-		<p><code>faf export --agents</code> reads your repo and generates the file from what's actually there — the real build and test commands, the key files, the conventions your linters enforce, the guardrails. It fills the slots for you, from your repo's real facts rather than invented ones — which is exactly why it sidesteps the bloat trap above. Change the code, regenerate, it's current. It keeps anything you hand-added.</p>
+		<p><code>faf export --agents</code> reads your repo, discerns what matters, and authors the definitions from the intel it finds — your real build and test commands, the key files, the conventions your linters enforce, the guardrails. Every line is verified and true — sourced from the repo, not invented — which is exactly why it sidesteps the bloat trap above. Change the code, re-run it, it's current. It keeps anything you hand-added.</p>
 		<pre><code>npx faf-cli export --agents</code></pre>
 		<p class="muted-note">
 			Works with or without — a follow-on, not a religion. Write a great AGENTS.md by hand today. When keeping
-			it true gets old, let FAF generate it from your repo — your real commands, files, and guardrails. The
-			trap was never generation; it's generation that guesses. <strong>Generated from what's already there — Done For You.</strong>
+			it true gets old, hand it to FAF: it reads the repo, discerns, and authors the definitions from intel.
+			<strong>Verified and true. Scored and recorded. Done For You.</strong>
 		</p>
 	</article>
 
