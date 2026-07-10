@@ -25,12 +25,12 @@
         {
             name: 'FAF Dev Tools',
             tagline: 'Mk1 Engine',
-            description: 'Browser-based FAF context generator. No install required.',
+            description: 'Browser-based FAF context authoring. No install required.',
             features: [
                 'Zero install, runs in browser',
                 'First FAF engine implementation',
                 'Drag-and-drop interface',
-                'Instant .faf generation',
+                'Instant .faf authoring',
                 'Built with Svelte'
             ],
             github: 'https://github.com/Wolfe-Jam/faf-dev-tools',
