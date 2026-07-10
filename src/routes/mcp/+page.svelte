@@ -42,7 +42,7 @@
 		<div class="container">
 
 			<!-- What is MCP + .faf? -->
-			<ScrollRevealText threshold={0.3}>
+			<ScrollRevealText threshold={0}>
 				<div class="intro-block">
 					<h2>What is MCP + .faf?</h2>
 					<p>MCP is an open protocol connecting AI assistants to context. <strong>.faf</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) — one source, every model and tool.</p>
@@ -51,7 +51,7 @@
 			</ScrollRevealText>
 
 			<!-- MCP Breakdown Table -->
-			<ScrollRevealText threshold={0.3} delay={100}>
+			<ScrollRevealText threshold={0} delay={100}>
 				<div class="mcp-breakdown">
 					<h3>The Trinity: Model → Context → Protocol</h3>
 					<div class="breakdown-table">
@@ -115,7 +115,7 @@
 			</ScrollRevealText>
 
 			<!-- MCP Packages Section -->
-			<ScrollRevealText threshold={0.3} delay={200}>
+			<ScrollRevealText threshold={0} delay={200}>
 				<div class="packages-section">
 					<h2>The MCP Family</h2>
 					<p class="packages-intro">One IANA-registered format. A server for every model — plus the CLI that authors it.</p>
@@ -258,7 +258,7 @@
 			</ScrollRevealText>
 
 			<!-- Platform Installation Tabs -->
-			<ScrollRevealText threshold={0.3} delay={300}>
+			<ScrollRevealText threshold={0} delay={300}>
 				<div class="installation-section">
 					<h2>Installation by Platform</h2>
 
@@ -435,7 +435,7 @@
 			</ScrollRevealText>
 
 			<!-- The "Use FAF" Pattern -->
-			<ScrollRevealText threshold={0.3} delay={400}>
+			<ScrollRevealText threshold={0} delay={400}>
 				<div class="pattern-section">
 					<h2>The "Use FAF" Pattern</h2>
 					<p class="pattern-intro">Just start prompts with <strong>Use FAF</strong>.</p>
@@ -453,7 +453,7 @@
 			</ScrollRevealText>
 
 			<!-- CTA Section -->
-			<ScrollRevealText threshold={0.3} delay={600}>
+			<ScrollRevealText threshold={0} delay={600}>
 				<div class="cta-section">
 					<h2>Get Started</h2>
 					<div class="cta-buttons">
@@ -479,6 +479,11 @@
 </div>
 
 <style>
+	/* /mcp render fix: the shared ScrollRevealText fade-in leaves content stuck at
+	   opacity:0 on this page (its observer never fires on the tall sections). Force
+	   the revealed state here so nothing goes blank. */
+	.mcp-page :global(.scroll-reveal) { opacity: 1 !important; transform: none !important; }
+
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
@@ -844,6 +849,7 @@
 
 	.badge.dedicated {
 		background: var(--faf-black);
+		color: var(--faf-white);
 	}
 
 	.package-desc {
@@ -866,8 +872,8 @@
 	}
 
 	.package-install {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: #1a1a1a;
+		color: #00ff88;
 		padding: 1rem 1.5rem;
 		border-radius: 8px;
 		margin-bottom: 1rem;
@@ -875,7 +881,7 @@
 	}
 
 	.package-install code {
-		color: white !important;
+		color: #00ff88 !important;
 		background: transparent;
 	}
 
