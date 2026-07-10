@@ -168,6 +168,7 @@ Conventional commits (feat: / fix: / test:). Branch off main; never commit to ma
 		<h2>Further reading</h2>
 		<ul>
 			<li><strong>The standard</strong> — <a href="https://agents.md" target="_blank" rel="noopener">agents.md</a> (the spec itself).</li>
+			<li><strong>The research</strong> — <a href="/blog/beyond-the-bloat">Beyond the Bloat</a> and <a href="/blog/recovered-in-translation">Recovered in Translation</a>: why context built from a repo's own signals — real commands, real paths, no prose — is exactly the "minimal requirements" ETH Zürich's SRI Lab pointed to.</li>
 			<li><strong>The format underneath</strong> — <a href="/spec">the <code>.faf</code> format</a> and <a href="/">faf.one</a>.</li>
 			<li><strong>faf-cli</strong> — <a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener">on npm</a> (<code>npx faf-cli export --agents</code>).</li>
 		</ul>
