@@ -45,8 +45,8 @@
 			<ScrollRevealText threshold={0.3}>
 				<div class="intro-block">
 					<h2>What is MCP + .faf?</h2>
-					<p>The Model Context Protocol (MCP) is an open protocol that connects AI assistants to external context. The <strong>.faf format</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) that makes MCP work universally across every model and tool.</p>
-					<p><code>.faf</code> owns the <strong>write</strong> side — one structured source, IANA-registered. The <strong>Context-Ingestion contract</strong> owns the <strong>read</strong> side — how any agent projects that context live. The <a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener noreferrer">faf-cli</a> is the Claude-first on-ramp that authors it.</p>
+					<p>MCP is an open protocol connecting AI assistants to context. <strong>.faf</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) — one source, every model and tool.</p>
+					<p><code>.faf</code> owns the <strong>write</strong> side. The <strong>Context-Ingestion contract</strong> owns the <strong>read</strong> side. <a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener noreferrer">faf-cli</a> authors it — Claude-first, cross-vendor.</p>
 				</div>
 			</ScrollRevealText>
 
@@ -109,9 +109,6 @@
 					<p class="breakdown-caption">.faf is the <strong>universal Context</strong> layer for any Model using the MCP Protocol</p>
 
 					<div class="prime-messaging">
-						<p><strong>We are the 'C' in MCP.</strong></p>
-						<p>IANA .FAF Format is AI context foundation.</p>
-						<p>Format foundation is non-negotiable.</p>
 						<p class="facts">Formats = facts.</p>
 					</div>
 				</div>
@@ -134,7 +131,6 @@
 							<li>☑️ Claude-first — Desktop + Claude Code</li>
 							<li>☑️ In Anthropic's MCP Registry — <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener noreferrer">merged #2759</a></li>
 							<li>☑️ bi-sync <code>.faf</code> ↔ <code>CLAUDE.md</code></li>
-							<li>☑️ IANA-registered — <code>application/vnd.faf+yaml</code></li>
 						</ul>
 						<div class="package-install">
 							<code>npx claude-faf-mcp</code>
@@ -153,7 +149,6 @@
 						</div>
 						<p class="package-desc">The core, universal MCP server for Cursor, Windsurf, Cline, VS Code, and any MCP-compatible client.</p>
 						<ul class="package-features">
-							<li>☑️ Core / universal MCP server</li>
 							<li>☑️ Cursor, Windsurf, Cline, VS Code — any MCP client</li>
 							<li>☑️ bi-sync <code>.faf</code> ↔ your context files</li>
 							<li>☑️ In the official MCP Registry</li>
@@ -175,10 +170,9 @@
 						</div>
 						<p class="package-desc">The MCP server for xAI Grok — the same <code>.faf</code> context, read by Grok.</p>
 						<ul class="package-features">
-							<li>☑️ MCP server for xAI Grok</li>
 							<li>☑️ Same IANA <code>.faf</code> format</li>
-							<li>☑️ In the official MCP Registry</li>
 							<li>☑️ Cross-vendor context, one file</li>
+							<li>☑️ In the official MCP Registry</li>
 						</ul>
 						<div class="package-install">
 							<code>npx grok-faf-mcp</code>
@@ -195,9 +189,8 @@
 							<span class="package-icon">📦</span>
 							<h3>gemini-faf-mcp <span class="badge">Gemini</span></h3>
 						</div>
-						<p class="package-desc">The MCP server for Google Gemini — Python, published to PyPI. Reference implementation of the Zenodo Context paper.</p>
+						<p class="package-desc">The MCP server for Google Gemini — Python, published to PyPI.</p>
 						<ul class="package-features">
-							<li>☑️ MCP server for Google Gemini</li>
 							<li>☑️ Python — <code>uvx gemini-faf-mcp</code> (PyPI)</li>
 							<li>☑️ Reference implementation of the Zenodo Context paper</li>
 							<li>☑️ Same IANA <code>.faf</code> format</li>
@@ -219,7 +212,6 @@
 						</div>
 						<p class="package-desc">Championship-grade MCP testing. If a server passes WJTTC, it works.</p>
 						<ul class="package-features">
-							<li>☑️ Championship-grade MCP testing</li>
 							<li>☑️ GitHub Action included</li>
 							<li>☑️ Verifies MCP servers actually work</li>
 							<li>☑️ In the official MCP Registry</li>
@@ -242,7 +234,6 @@
 						<p class="package-desc">The CLI on-ramp — author, score, and sync your <code>.faf</code> from any terminal. Claude-first, works cross-vendor.</p>
 						<ul class="package-features">
 							<li>☑️ The on-ramp — <code>faf init</code>, <code>faf score</code>, <code>faf sync</code></li>
-							<li>☑️ Claude-first, works cross-vendor</li>
 							<li>☑️ bi-sync <code>.faf</code> ↔ <code>CLAUDE.md</code></li>
 							<li>☑️ Free forever · open source</li>
 						</ul>
@@ -261,7 +252,7 @@
 					<p class="family-note">Also in the family: <a href="https://github.com/Wolfe-Jam/rust-faf-mcp" target="_blank" rel="noopener noreferrer">rust-faf-mcp</a> (Rust · crates.io) — <strong>six FAF servers</strong> total in the official MCP Registry.</p>
 
 					<div class="tool-count-note">
-						<p><strong>Tools:</strong> each server ships a core toolset (~12–14 tools); the family spans ~29–33 tools in total. Exact counts live in each server's README — that's the source of truth.</p>
+						<p><strong>Tools:</strong> core ~12–14 per server, family ~29–33 total. Each server's README is the source of truth.</p>
 					</div>
 				</div>
 			</ScrollRevealText>
@@ -447,23 +438,10 @@
 			<ScrollRevealText threshold={0.3} delay={400}>
 				<div class="pattern-section">
 					<h2>The "Use FAF" Pattern</h2>
-					<p class="pattern-intro">Universal onboarding across all platforms - just start your prompts with <strong>"Use FAF"</strong></p>
-
-					<div class="pattern-comparison">
-						<div class="pattern-old">
-							<h4>❌ The old way</h4>
-							<p>"Can you help me set up AI context for my React TypeScript project with Tailwind CSS?"</p>
-							<span class="time-badge">20 minutes of questions</span>
-						</div>
-						<div class="pattern-new">
-							<h4>✅ The FAF way</h4>
-							<p>"Use FAF to initialize your project"</p>
-							<span class="time-badge success">30 seconds</span>
-						</div>
-					</div>
+					<p class="pattern-intro">Just start prompts with <strong>Use FAF</strong>.</p>
 
 					<div class="pattern-examples">
-						<h4>Example commands:</h4>
+						<h4>Example commands</h4>
 						<ul>
 							<li><code>Use FAF to initialize your project</code></li>
 							<li><code>Use FAF to sync my project.faf to all platforms</code></li>
@@ -477,13 +455,13 @@
 			<!-- CTA Section -->
 			<ScrollRevealText threshold={0.3} delay={600}>
 				<div class="cta-section">
-					<h2>Ready to Get Started?</h2>
+					<h2>Get Started</h2>
 					<div class="cta-buttons">
 						<a href="https://www.npmjs.com/package/faf-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
 							Install faf-mcp →
 						</a>
 						<a href="https://github.com/Wolfe-Jam/faf-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-							⭐ GitHub
+							GitHub →
 						</a>
 					</div>
 					<PageActions
@@ -739,19 +717,9 @@
 		text-align: center;
 	}
 
-	.prime-messaging p {
-		margin: 0.5rem 0;
-		font-size: 1.1rem;
-		color: var(--faf-black);
-	}
-
-	.prime-messaging p:first-child {
-		font-size: 1.3rem;
-		margin-bottom: 1rem;
-	}
-
 	.prime-messaging .facts {
-		margin-top: 1rem;
+		margin: 0;
+		font-size: 1.3rem;
 		font-style: italic;
 		color: var(--faf-orange);
 		font-weight: 600;
@@ -1081,56 +1049,6 @@
 		margin-bottom: 3rem;
 	}
 
-	.pattern-comparison {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	.pattern-old, .pattern-new {
-		padding: 2rem;
-		border-radius: 8px;
-		border: 2px solid;
-	}
-
-	.pattern-old {
-		border-color: rgba(255, 0, 0, 0.2);
-		background: rgba(255, 0, 0, 0.02);
-	}
-
-	.pattern-new {
-		border-color: var(--faf-orange);
-		background: rgba(255, 107, 53, 0.02);
-	}
-
-	.pattern-old h4, .pattern-new h4 {
-		font-size: 1.25rem;
-		margin-bottom: 1rem;
-	}
-
-	.pattern-old p, .pattern-new p {
-		font-size: 1rem;
-		color: var(--faf-gray-dark);
-		font-style: italic;
-		margin-bottom: 1rem;
-	}
-
-	.time-badge {
-		display: inline-block;
-		padding: 0.25rem 0.75rem;
-		border-radius: 12px;
-		font-size: 0.875rem;
-		font-weight: 600;
-		background: rgba(255, 0, 0, 0.1);
-		color: #d32f2f;
-	}
-
-	.time-badge.success {
-		background: rgba(255, 107, 53, 0.1);
-		color: var(--faf-orange);
-	}
-
 	.pattern-examples {
 		background: rgba(0, 212, 212, 0.05);
 		padding: 2rem;
@@ -1234,10 +1152,6 @@
 		.step {
 			flex-direction: column;
 			align-items: flex-start;
-		}
-
-		.pattern-comparison {
-			grid-template-columns: 1fr;
 		}
 	}
 </style>
