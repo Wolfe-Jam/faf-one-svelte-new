@@ -396,6 +396,11 @@
 						<span class="link-name">foundation.faf.one</span>
 						<span class="link-desc">FAF Foundation</span>
 					</a>
+					<a href="/trinity.html" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">The Trinity</span>
+						<span class="link-desc">Context · Memory · Agents — interactive</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
 				</div>
 			</div>
 		</div>

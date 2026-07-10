@@ -89,7 +89,12 @@
 		.filter((p) => !EXCLUDE.test(p) && !PRESET.has(p))
 		.map((p) => (META[p] ? { url: p, ...META[p] } : { url: p, title: pretty(p), category: 'More', emoji: '📄' }));
 
-	const entries = [...discovered, ...POINTERS];
+	// /trinity.html is a static file (not a +page.svelte), so it's curated by hand here.
+	const STATIC_PAGES = [
+		{ url: '/trinity.html', title: 'Trinity', category: 'Tools', emoji: '🔺', description: 'Context · Memory · Agents — interactive' }
+	];
+
+	const entries = [...discovered, ...STATIC_PAGES, ...POINTERS];
 </script>
 
 <svelte:head>
