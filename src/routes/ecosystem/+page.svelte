@@ -41,7 +41,7 @@
         {
             name: 'Chrome Extension',
             tagline: 'Browser Integration',
-            description: 'Generate .faf context directly from your browser.',
+            description: 'Author .faf context directly from your browser.',
             features: [
                 'One-click context extraction',
                 'Works on any webpage',

@@ -75,7 +75,7 @@
 **6W (HOW):** ${data.how || '_________'}
 
 ---
-*Generated with [FAF](https://faf.one) - AI-ready project context*`;
+*Authored with [FAF](https://faf.one) - AI-ready project context*`;
   }
 
   function generateFafYaml(data) {
