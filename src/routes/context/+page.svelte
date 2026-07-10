@@ -39,7 +39,7 @@
 		<h2>The plugin</h2>
 		<pre>/plugin install faf</pre>
 		<p>The plugin wraps <a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">claude-faf-mcp</a> — already listed in the official MCP Registry (PR <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener">#2759</a>, merged). Auto-detect your stack, score 0&ndash;100% (🏆 Trophy at 100%), and bi-sync <code>.faf</code> &harr; <code>CLAUDE.md</code>.</p>
-		<p>Complementary to Anthropic's own <code>claude-md-management</code> plugin: <code>.faf</code> is the structured source that generates what <code>claude-md-management</code> maintains.</p>
+		<p>Complementary to Anthropic's own <code>claude-md-management</code> plugin: <code>.faf</code> is the structured source that authors what <code>claude-md-management</code> maintains.</p>
 	</section>
 
 	<section class="content">

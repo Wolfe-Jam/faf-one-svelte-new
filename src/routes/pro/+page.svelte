@@ -113,7 +113,7 @@
 			<div class="interops-section">
 				<h3 class="interops-title">interops &mdash; no drift</h3>
 				<p class="interops-desc">
-					One <code>.faf</code> source generates <code>AGENTS.md</code>, <code>.cursorrules</code>, and <code>GEMINI.md</code>. Every AI tool reads the same truth. No copy-paste. No drift.
+					One <code>.faf</code> source authors <code>AGENTS.md</code>, <code>.cursorrules</code>, and <code>GEMINI.md</code>. Every AI tool reads the same truth. No copy-paste. No drift.
 				</p>
 			</div>
 		</section>
