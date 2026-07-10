@@ -510,7 +510,8 @@
 
 	.hero-section {
 		padding: 4rem 0 3rem;
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(0, 243, 255, 0.05) 100%);
+		background: rgba(255, 107, 53, 0.05);
+		color: var(--faf-black);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
@@ -563,7 +564,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
 		border: 1px solid var(--faf-light-gray);
 		border-left: 3px solid var(--faf-orange);
 		border-radius: 0 8px 8px 0;
@@ -636,7 +638,8 @@
 	}
 
 	.breakdown-table {
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -711,7 +714,8 @@
 	.prime-messaging {
 		margin-top: 2rem;
 		padding: 1.5rem;
-		background: linear-gradient(135deg, #F9F9F9 0%, #F0F0F0 100%);
+		background: var(--faf-white);
+		color: var(--faf-black);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 4px;
 		text-align: center;
@@ -790,7 +794,8 @@
 	}
 
 	.package-card {
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
 		border-radius: 12px;
 		padding: 2rem;
 		margin-bottom: 2rem;
@@ -805,7 +810,7 @@
 
 	.package-card.featured {
 		border: 3px solid var(--faf-orange);
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.02) 0%, white 100%);
+		background: rgba(255, 107, 53, 0.02);
 	}
 
 	.package-header {
@@ -1029,7 +1034,8 @@
 	/* Pattern Section */
 	.pattern-section {
 		margin: 4rem 0;
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
 		padding: 3rem 2rem;
 		border-radius: 12px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
