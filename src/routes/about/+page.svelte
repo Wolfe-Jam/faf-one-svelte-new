@@ -67,7 +67,7 @@
 	<section class="content">
 		<h2>The three layers</h2>
 		<p><code>.faf</code> defines. <code>.md</code> instructs. AI consumes.</p>
-		<p>The foundation layer (<code>project.faf</code>) holds structured facts. The instruction layer (<code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.cursorrules</code>) holds prose guidance — generated from <code>.faf</code>. The AI reads both.</p>
+		<p>The foundation layer (<code>project.faf</code>) holds structured facts. The instruction layer (<code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.cursorrules</code>) holds prose guidance — authored from <code>.faf</code>. The AI reads both.</p>
 	</section>
 
 	<section class="content">

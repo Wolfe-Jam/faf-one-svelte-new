@@ -11,26 +11,26 @@
             features: [
                 'TURBO-CAT 😽 - The .faf Representative',
                 'Catalytic Converter: Raw files → AI context',
-                '154 formats (1 .faf + 153 in pyramid)',
-                '41 championship commands',
+                'Validates a pyramid of formats',
+                'Championship command suite',
                 '100% Strict TypeScript'
             ],
             github: 'https://github.com/Wolfe-Jam/faf-cli',
             npm: 'https://www.npmjs.com/package/faf-cli',
             install: 'npm install -g faf-cli',
             brewInstall: 'brew install wolfe-jam/faf/faf-cli',
-            status: 'v4.5.0',
+            status: 'v7.1.2',
             icon: '🏎️'
         },
         {
             name: 'FAF Dev Tools',
             tagline: 'Mk1 Engine',
-            description: 'Browser-based FAF context generator. No install required.',
+            description: 'Browser-based FAF context authoring. No install required.',
             features: [
                 'Zero install, runs in browser',
                 'First FAF engine implementation',
                 'Drag-and-drop interface',
-                'Instant .faf generation',
+                'Authors .faf in the browser',
                 'Built with Svelte'
             ],
             github: 'https://github.com/Wolfe-Jam/faf-dev-tools',
@@ -41,11 +41,11 @@
         {
             name: 'Chrome Extension',
             tagline: 'Browser Integration',
-            description: 'Generate .faf context directly from your browser.',
+            description: 'Author .faf context directly from your browser.',
             features: [
                 'One-click context extraction',
                 'Works on any webpage',
-                'Instant clipboard copy',
+                'Copy context to clipboard',
                 'Approved by Google',
                 'Built with Svelte'
             ],
@@ -59,16 +59,16 @@
             tagline: 'Anthropic-Merged #2759',
             description: 'Seamless FAF integration for Claude Desktop. Official Anthropic MCP registry.',
             features: [
-                'Native Claude Desktop integration',
+                'Claude Desktop integration',
                 'Auto-context loading',
                 `${(data.packageStats['claude-faf-mcp'] || 0).toLocaleString()}+ downloads last month`,
                 'MCP protocol compliant',
-                'Instant project understanding'
+                'Reads your project context'
             ],
             github: 'https://github.com/Wolfe-Jam/claude-faf-mcp',
             npm: 'https://www.npmjs.com/package/claude-faf-mcp',
             install: 'npx claude-faf-mcp',
-            status: 'v3.3.7',
+            status: 'v5.20.0',
             icon: '🤖'
         },
         {
@@ -85,24 +85,56 @@
             github: 'https://github.com/Wolfe-Jam/faf-mcp',
             npm: 'https://www.npmjs.com/package/faf-mcp',
             install: 'npx faf-mcp',
-            status: 'v1.2.1',
+            status: 'v2.3.1',
             icon: '🔌'
+        },
+        {
+            name: 'grok-faf-mcp',
+            tagline: 'xAI Grok MCP Server',
+            description: 'Persistent project context for xAI Grok — MCP server on a URL.',
+            features: [
+                'Built for xAI Grok',
+                'IANA-registered .faf format',
+                'MCP server on a URL',
+                'Official MCP registry listed'
+            ],
+            github: 'https://github.com/Wolfe-Jam/grok-faf-mcp',
+            npm: 'https://www.npmjs.com/package/grok-faf-mcp',
+            live: 'https://grok.faf.one',
+            install: 'npx grok-faf-mcp',
+            status: 'v1.9.1',
+            icon: '🛰️'
+        },
+        {
+            name: 'gemini-faf-mcp',
+            tagline: 'Google Gemini MCP Server',
+            description: 'Persistent project context for Google Gemini — MCP server plus Cloud Run REST API.',
+            features: [
+                'Built for Google Gemini',
+                'IANA-registered .faf format',
+                'Unifies CLAUDE.md, GEMINI.md, AGENTS.md',
+                'PyPI published'
+            ],
+            github: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
+            pypi: 'https://pypi.org/project/gemini-faf-mcp/',
+            install: 'pip install gemini-faf-mcp',
+            status: 'v2.5.1',
+            icon: '♊'
         },
         {
             name: 'rust-faf-mcp',
             tagline: 'Rust MCP Server',
-            description: 'MCP server for .faf built in Rust with rmcp SDK. Native performance.',
+            description: 'MCP server for .faf built in Rust with the rmcp SDK.',
             features: [
                 'Built with Rust + rmcp SDK',
-                '8 tools for .faf operations',
-                'Native compiled performance',
-                'crates.io published',
-                'Zero runtime overhead'
+                'MCP tools for .faf operations',
+                'IANA-registered .faf format',
+                'crates.io published'
             ],
             github: 'https://github.com/Wolfe-Jam/rust-faf-mcp',
             crates: 'https://crates.io/crates/rust-faf-mcp',
             install: 'cargo install rust-faf-mcp',
-            status: 'v0.1.0',
+            status: 'v0.3.1',
             icon: '🦀'
         },
         {
@@ -114,12 +146,12 @@
                 'GitHub Action included',
                 'MCP registry listed',
                 'Homebrew installable',
-                '103/103 beacon tests'
+                'Beacon test suite'
             ],
             github: 'https://github.com/Wolfe-Jam/wjttc',
             npm: 'https://www.npmjs.com/package/wjttc',
             install: 'npx wjttc',
-            status: 'v1.1.0',
+            status: 'v1.4.0',
             icon: '🍊'
         },
         {
@@ -135,7 +167,7 @@
             ],
             github: 'https://github.com/Wolfe-Jam/FAF',
             docs: 'https://faf.one/docs',
-            status: 'v1.1.0',
+            status: 'IANA',
             icon: '📋'
         },
         {
@@ -174,11 +206,11 @@
     <header class="page-header">
         <h1>🏎️ The FAF Ecosystem</h1>
         <p class="lead">Powered by TURBO-CAT 😽 - The Catalytic Converter</p>
-        <p class="subtitle">9 tools, one mission: Transform raw projects into clean AI context</p>
+        <p class="subtitle">11 tools, one mission: Transform raw projects into clean AI context</p>
         <div class="turbo-cat-intro">
             <p><strong>Meet TURBO-CAT 😽</strong> - The .faf representative. Just like a catalytic converter transforms exhaust into clean emissions, TURBO-CAT transforms raw project files into clean, AI-ready context.</p>
             <p class="purr-line"><strong>CATs keep themselves clean.</strong> He can make your Stack positively <strong>PURR</strong>. 😽</p>
-            <p class="pyramid-note"><strong>154 formats validated:</strong> 1 .faf at apex + 153 in the 17-level pyramid.</p>
+            <p class="pyramid-note"><strong>A validated format pyramid</strong> — .faf at the apex, a stack of formats below.</p>
         </div>
     </header>
 
@@ -206,6 +238,9 @@
                     {/if}
                     {#if tool.crates}
                         <a href={tool.crates} class="link-secondary" target="_blank" rel="noopener">📦 crates.io</a>
+                    {/if}
+                    {#if tool.pypi}
+                        <a href={tool.pypi} class="link-secondary" target="_blank" rel="noopener">📦 PyPI</a>
                     {/if}
                     {#if tool.live}
                         <a href={tool.live} class="link-secondary" target="_blank" rel="noopener">🚀 Live Demo</a>
@@ -240,20 +275,8 @@
                 <div class="stat-label">Claude MCP Downloads</div>
             </div>
             <div class="stat">
-                <div class="stat-value">154</div>
-                <div class="stat-label">Formats (1+153 Pyramid)</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">9</div>
+                <div class="stat-value">11</div>
                 <div class="stat-label">Active Tools</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">100%</div>
-                <div class="stat-label">Strict TypeScript</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">&lt;50ms</div>
-                <div class="stat-label">Processing Time</div>
             </div>
             <div class="stat">
                 <div class="stat-value">IANA</div>

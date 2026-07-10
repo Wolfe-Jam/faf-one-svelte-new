@@ -268,10 +268,10 @@
 				<div class="ai-file-card">
 					<h3>project.faf</h3>
 					<p>Universal (all AIs)</p>
-					<code>Always generated</code>
+					<code>Always authored</code>
 				</div>
 			</div>
-			<p class="ai-files-note">💡 <strong>Tip:</strong> project.faf is the source of truth. AI-specific files are generated from it.</p>
+			<p class="ai-files-note">💡 <strong>Tip:</strong> project.faf is the source of truth. AI-specific files are authored from it.</p>
 		</section>
 
 		<!-- Common Mistakes -->
@@ -359,7 +359,7 @@ faf go
 				</a>
 				<a href="/try" class="next-card">
 					<h3>Try It Now</h3>
-					<p>Generate context for any GitHub repo in 2 seconds</p>
+					<p>Author context for any GitHub repo in 2 seconds</p>
 					<span class="next-arrow">→</span>
 				</a>
 				<a href="/docs" class="next-card">

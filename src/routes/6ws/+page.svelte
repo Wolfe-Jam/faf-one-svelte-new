@@ -75,7 +75,7 @@
 **6W (HOW):** ${data.how || '_________'}
 
 ---
-*Generated with [FAF](https://faf.one) - AI-ready project context*`;
+*Authored with [FAF](https://faf.one) - AI-ready project context*`;
   }
 
   function generateFafYaml(data) {
@@ -156,8 +156,8 @@
 </script>
 
 <svelte:head>
-  <title>6Ws Builder - Generate AI-Ready Context | FAF</title>
-  <meta name="description" content="Answer 6 questions to generate AI-ready context. Works with Claude, Gemini, Grok, Cursor, Codex, WARP, any AI assistant." />
+  <title>6Ws Builder - Author AI-Ready Context | FAF</title>
+  <meta name="description" content="Answer 6 questions to author AI-ready context. Works with Claude, Gemini, Grok, Cursor, Codex, WARP, any AI assistant." />
 </svelte:head>
 
 <div class="page">

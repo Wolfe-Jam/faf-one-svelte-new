@@ -95,7 +95,7 @@
 **3W (WHY):** ${wy}
 
 ---
-*Generated with FAF (https://faf.one) - 3 of 6Ws complete*`;
+*Authored with FAF (https://faf.one) - 3 of 6Ws complete*`;
   }
 
   function nextExample() {
