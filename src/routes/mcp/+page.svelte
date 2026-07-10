@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>MCP - Model Context Protocol + .faf | Universal AI Context</title>
-	<meta name="description" content="Official MCP documentation for .faf format. Universal AI context for Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms. IANA-registered format." />
+	<meta name="description" content="Official MCP documentation for the .faf format — persistent AI context for Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code. IANA-registered, in Anthropic's MCP Registry (#2759)." />
 </svelte:head>
 
 <div class="back-nav">
@@ -23,8 +23,18 @@
 				<FafLogo size="small" color="black" />
 			</div>
 			<h1 class="page-title">Model Context Protocol + .faf</h1>
-			<p class="subtitle">Universal AI Context • IANA-Registered Format • Anthropic-Merged</p>
-			<p class="hero-desc">The official MCP documentation for .faf - persistent project context across Claude Desktop, Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms.</p>
+			<p class="subtitle">We are the 'C' in MCP • Universal AI Context</p>
+			<p class="hero-desc">The official MCP documentation for .faf — persistent project context across Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code, and every MCP-compatible platform.</p>
+			<div class="hero-receipts">
+				<a class="receipt-chip" href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener noreferrer">
+					<span class="receipt-key">IANA</span>
+					<span class="receipt-val">application/vnd.faf+yaml</span>
+				</a>
+				<a class="receipt-chip" href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener noreferrer">
+					<span class="receipt-key">MCP Registry</span>
+					<span class="receipt-val">merged #2759</span>
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -35,7 +45,8 @@
 			<ScrollRevealText threshold={0.3}>
 				<div class="intro-block">
 					<h2>What is MCP + .faf?</h2>
-					<p>The Model Context Protocol (MCP) is an open-source protocol that enables seamless integration between AI assistants and external data sources. The <strong>.faf format</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) that makes MCP work universally across all platforms.</p>
+					<p>The Model Context Protocol (MCP) is an open protocol that connects AI assistants to external context. The <strong>.faf format</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) that makes MCP work universally across every model and tool.</p>
+					<p><code>.faf</code> owns the <strong>write</strong> side — one structured source, IANA-registered. The <strong>Context-Ingestion contract</strong> owns the <strong>read</strong> side — how any agent projects that context live. The <a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener noreferrer">faf-cli</a> is the Claude-first on-ramp that authors it.</p>
 				</div>
 			</ScrollRevealText>
 
@@ -45,12 +56,19 @@
 					<h3>The Trinity: Model → Context → Protocol</h3>
 					<div class="breakdown-table">
 						<div class="breakdown-header">
-							<div class="breakdown-col">Model</div>
+							<div class="breakdown-col">Model / Tool</div>
 							<div class="breakdown-col highlight">Context</div>
 							<div class="breakdown-col">Protocol</div>
 						</div>
+
+						<div class="breakdown-group">Models</div>
 						<div class="breakdown-row">
 							<div class="breakdown-col">Claude</div>
+							<div class="breakdown-col highlight">.faf</div>
+							<div class="breakdown-col">MCP</div>
+						</div>
+						<div class="breakdown-row">
+							<div class="breakdown-col">Grok</div>
 							<div class="breakdown-col highlight">.faf</div>
 							<div class="breakdown-col">MCP</div>
 						</div>
@@ -59,6 +77,8 @@
 							<div class="breakdown-col highlight">.faf</div>
 							<div class="breakdown-col">MCP</div>
 						</div>
+
+						<div class="breakdown-group">Tools &amp; IDEs</div>
 						<div class="breakdown-row">
 							<div class="breakdown-col">Cursor</div>
 							<div class="breakdown-col highlight">.faf</div>
@@ -69,6 +89,17 @@
 							<div class="breakdown-col highlight">.faf</div>
 							<div class="breakdown-col">MCP</div>
 						</div>
+						<div class="breakdown-row">
+							<div class="breakdown-col">Cline</div>
+							<div class="breakdown-col highlight">.faf</div>
+							<div class="breakdown-col">MCP</div>
+						</div>
+						<div class="breakdown-row">
+							<div class="breakdown-col">VS Code</div>
+							<div class="breakdown-col highlight">.faf</div>
+							<div class="breakdown-col">MCP</div>
+						</div>
+
 						<div class="breakdown-row final-row">
 							<div class="breakdown-col">Any LLM</div>
 							<div class="breakdown-col highlight">IANA Format</div>
@@ -89,22 +120,46 @@
 			<!-- MCP Packages Section -->
 			<ScrollRevealText threshold={0.3} delay={200}>
 				<div class="packages-section">
-					<h2>MCP Packages</h2>
+					<h2>The MCP Family</h2>
+					<p class="packages-intro">One IANA-registered format. A server for every model — plus the CLI that authors it.</p>
 
+					<!-- claude-faf-mcp — Claude-first, carries the #2759 receipt -->
 					<div class="package-card featured">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>claude-faf-mcp <span class="badge dedicated">Claude</span></h3>
+						</div>
+						<p class="package-desc">The Claude-first MCP server — persistent <code>.faf</code> context for Claude Desktop and Claude Code.</p>
+						<ul class="package-features">
+							<li>☑️ Claude-first — Desktop + Claude Code</li>
+							<li>☑️ In Anthropic's MCP Registry — <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener noreferrer">merged #2759</a></li>
+							<li>☑️ bi-sync <code>.faf</code> ↔ <code>CLAUDE.md</code></li>
+							<li>☑️ IANA-registered — <code>application/vnd.faf+yaml</code></li>
+						</ul>
+						<div class="package-install">
+							<code>npx claude-faf-mcp</code>
+						</div>
+						<div class="package-links">
+							<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<!-- faf-mcp — core / universal -->
+					<div class="package-card">
 						<div class="package-header">
 							<span class="package-icon">📦</span>
 							<h3>faf-mcp <span class="badge">Universal</span></h3>
 						</div>
-						<p class="package-desc">The universal MCP server for Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms.</p>
+						<p class="package-desc">The core, universal MCP server for Cursor, Windsurf, Cline, VS Code, and any MCP-compatible client.</p>
 						<ul class="package-features">
-							<li>☑️ 50 MCP tools bundled</li>
-							<li>☑️ Works across all platforms</li>
-							<li>☑️ Context-Mirroring support</li>
-							<li>☑️ Championship performance (16.2x faster)</li>
+							<li>☑️ Core / universal MCP server</li>
+							<li>☑️ Cursor, Windsurf, Cline, VS Code — any MCP client</li>
+							<li>☑️ bi-sync <code>.faf</code> ↔ your context files</li>
+							<li>☑️ In the official MCP Registry</li>
 						</ul>
 						<div class="package-install">
-							<code>npm install -g faf-mcp</code>
+							<code>npx faf-mcp</code>
 						</div>
 						<div class="package-links">
 							<a href="https://www.npmjs.com/package/faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
@@ -112,36 +167,101 @@
 						</div>
 					</div>
 
+					<!-- grok-faf-mcp — Grok -->
 					<div class="package-card">
 						<div class="package-header">
 							<span class="package-icon">📦</span>
-							<h3>claude-faf-mcp <span class="badge dedicated">Claude</span></h3>
+							<h3>grok-faf-mcp <span class="badge">Grok</span></h3>
 						</div>
-						<p class="package-desc">Dedicated MCP server optimized specifically for Claude Desktop.</p>
+						<p class="package-desc">The MCP server for xAI Grok — the same <code>.faf</code> context, read by Grok.</p>
 						<ul class="package-features">
-							<li>☑️ 51 MCP tools (Claude-optimized)</li>
-							<li>☑️ Claude Desktop integration</li>
-							<li>☑️ Anthropic-merged</li>
-							<li>☑️ IANA-registered format</li>
+							<li>☑️ MCP server for xAI Grok</li>
+							<li>☑️ Same IANA <code>.faf</code> format</li>
+							<li>☑️ In the official MCP Registry</li>
+							<li>☑️ Cross-vendor context, one file</li>
 						</ul>
 						<div class="package-install">
-							<code>npm install -g claude-faf-mcp</code>
+							<code>npx grok-faf-mcp</code>
 						</div>
 						<div class="package-links">
-							<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
-							<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
-							<a href="https://smithery.ai/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">Smithery →</a>
+							<a href="https://www.npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/grok-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
 						</div>
-						<p class="smithery-badge">
-							<a href="https://smithery.ai/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">
-								<img
-									src="https://smithery.ai/badge/wolfe-jam/claude-faf-mcp"
-									alt="smithery badge"
-									width="200"
-									height="20"
-								/>
-							</a>
-						</p>
+					</div>
+
+					<!-- gemini-faf-mcp — Gemini (Python / PyPI) -->
+					<div class="package-card">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>gemini-faf-mcp <span class="badge">Gemini</span></h3>
+						</div>
+						<p class="package-desc">The MCP server for Google Gemini — Python, published to PyPI. Reference implementation of the Zenodo Context paper.</p>
+						<ul class="package-features">
+							<li>☑️ MCP server for Google Gemini</li>
+							<li>☑️ Python — <code>uvx gemini-faf-mcp</code> (PyPI)</li>
+							<li>☑️ Reference implementation of the Zenodo Context paper</li>
+							<li>☑️ Same IANA <code>.faf</code> format</li>
+						</ul>
+						<div class="package-install">
+							<code>uvx gemini-faf-mcp</code>
+						</div>
+						<div class="package-links">
+							<a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener noreferrer">PyPI →</a>
+							<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<!-- WJTTC — testing -->
+					<div class="package-card">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>WJTTC <span class="badge">Testing</span></h3>
+						</div>
+						<p class="package-desc">Championship-grade MCP testing. If a server passes WJTTC, it works.</p>
+						<ul class="package-features">
+							<li>☑️ Championship-grade MCP testing</li>
+							<li>☑️ GitHub Action included</li>
+							<li>☑️ Verifies MCP servers actually work</li>
+							<li>☑️ In the official MCP Registry</li>
+						</ul>
+						<div class="package-install">
+							<code>npx wjttc</code>
+						</div>
+						<div class="package-links">
+							<a href="https://www.npmjs.com/package/wjttc" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/wjttc" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<!-- faf-cli — the CLI on-ramp -->
+					<div class="package-card">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>faf-cli <span class="badge">CLI</span></h3>
+						</div>
+						<p class="package-desc">The CLI on-ramp — author, score, and sync your <code>.faf</code> from any terminal. Claude-first, works cross-vendor.</p>
+						<ul class="package-features">
+							<li>☑️ The on-ramp — <code>faf init</code>, <code>faf score</code>, <code>faf sync</code></li>
+							<li>☑️ Claude-first, works cross-vendor</li>
+							<li>☑️ bi-sync <code>.faf</code> ↔ <code>CLAUDE.md</code></li>
+							<li>☑️ Free forever · open source</li>
+						</ul>
+						<div class="package-install">
+							<code>npm install -g faf-cli</code>
+						</div>
+						<div class="package-install">
+							<code>brew install wolfe-jam/faf/faf-cli</code>
+						</div>
+						<div class="package-links">
+							<a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<p class="family-note">Also in the family: <a href="https://github.com/Wolfe-Jam/rust-faf-mcp" target="_blank" rel="noopener noreferrer">rust-faf-mcp</a> (Rust · crates.io) — <strong>six FAF servers</strong> total in the official MCP Registry.</p>
+
+					<div class="tool-count-note">
+						<p><strong>Tools:</strong> each server ships a core toolset (~12–14 tools); the family spans ~29–33 tools in total. Exact counts live in each server's README — that's the source of truth.</p>
 					</div>
 				</div>
 			</ScrollRevealText>
@@ -453,6 +573,47 @@
 		line-height: 1.6;
 	}
 
+	.hero-receipts {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.receipt-chip {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background: white;
+		border: 1px solid var(--faf-light-gray);
+		border-left: 3px solid var(--faf-orange);
+		border-radius: 0 8px 8px 0;
+		padding: 0.6rem 1rem;
+		text-decoration: none;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.receipt-chip:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.receipt-key {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--faf-gray-dark);
+	}
+
+	.receipt-val {
+		font-family: 'Roboto Mono', monospace;
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+	}
+
 	.content-section {
 		padding: 4rem 0;
 	}
@@ -512,6 +673,18 @@
 		font-weight: 700;
 		color: var(--faf-white);
 		font-size: 1.125rem;
+	}
+
+	.breakdown-group {
+		background: rgba(0, 0, 0, 0.04);
+		padding: 0.5rem 1rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--faf-gray-dark);
+		text-align: left;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	.breakdown-row {
@@ -592,8 +765,60 @@
 	.packages-section h2 {
 		font-size: 2.5rem;
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 0.75rem;
 		color: var(--faf-black);
+	}
+
+	.packages-intro {
+		text-align: center;
+		font-size: 1.125rem;
+		color: var(--faf-gray-dark);
+		max-width: 640px;
+		margin: 0 auto 3rem;
+		line-height: 1.6;
+	}
+
+	.family-note {
+		text-align: center;
+		font-size: 1rem;
+		color: var(--faf-gray-dark);
+		margin: 1.5rem 0 0.5rem;
+	}
+
+	.family-note a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.family-note a:hover {
+		text-decoration: underline;
+	}
+
+	.tool-count-note {
+		max-width: 720px;
+		margin: 1.5rem auto 0;
+		padding: 1rem 1.5rem;
+		background: rgba(0, 212, 212, 0.05);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 4px;
+	}
+
+	.tool-count-note p {
+		margin: 0;
+		font-size: 1rem;
+		color: var(--faf-gray-dark);
+		line-height: 1.6;
+	}
+
+	.package-features li a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.package-features li a:hover {
+		text-decoration: underline;
 	}
 
 	.package-card {
@@ -695,14 +920,6 @@
 
 	.package-links a:hover {
 		opacity: 0.7;
-	}
-
-	.smithery-badge {
-		margin-top: 0.75rem;
-	}
-
-	.smithery-badge a {
-		display: inline-block;
 	}
 
 	/* Installation Tabs */
