@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>MCP - Model Context Protocol + .faf | Universal AI Context</title>
-	<meta name="description" content="Official MCP documentation for .faf format. Universal AI context for Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms. IANA-registered format." />
+	<meta name="description" content="Official MCP documentation for the .faf format — persistent AI context for Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code. IANA-registered, in Anthropic's MCP Registry (#2759)." />
 </svelte:head>
 
 <div class="back-nav">
@@ -23,8 +23,18 @@
 				<FafLogo size="small" color="black" />
 			</div>
 			<h1 class="page-title">Model Context Protocol + .faf</h1>
-			<p class="subtitle">Universal AI Context • IANA-Registered Format • Anthropic-Merged</p>
-			<p class="hero-desc">The official MCP documentation for .faf - persistent project context across Claude Desktop, Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms.</p>
+			<p class="subtitle">We are the 'C' in MCP • Universal AI Context</p>
+			<p class="hero-desc">The official MCP documentation for .faf — persistent project context across Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code, and every MCP-compatible platform.</p>
+			<div class="hero-receipts">
+				<a class="receipt-chip" href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener noreferrer">
+					<span class="receipt-key">IANA</span>
+					<span class="receipt-val">application/vnd.faf+yaml</span>
+				</a>
+				<a class="receipt-chip" href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener noreferrer">
+					<span class="receipt-key">MCP Registry</span>
+					<span class="receipt-val">merged #2759</span>
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -32,25 +42,33 @@
 		<div class="container">
 
 			<!-- What is MCP + .faf? -->
-			<ScrollRevealText threshold={0.3}>
+			<ScrollRevealText threshold={0}>
 				<div class="intro-block">
 					<h2>What is MCP + .faf?</h2>
-					<p>The Model Context Protocol (MCP) is an open-source protocol that enables seamless integration between AI assistants and external data sources. The <strong>.faf format</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) that makes MCP work universally across all platforms.</p>
+					<p>MCP is an open protocol connecting AI assistants to context. <strong>.faf</strong> is the IANA-registered context format (<code>application/vnd.faf+yaml</code>) — one source, every model and tool.</p>
+					<p><code>.faf</code> owns the <strong>write</strong> side. The <strong>Context-Ingestion contract</strong> owns the <strong>read</strong> side. <a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener noreferrer">faf-cli</a> authors it — Claude-first, cross-vendor.</p>
 				</div>
 			</ScrollRevealText>
 
 			<!-- MCP Breakdown Table -->
-			<ScrollRevealText threshold={0.3} delay={100}>
+			<ScrollRevealText threshold={0} delay={100}>
 				<div class="mcp-breakdown">
 					<h3>The Trinity: Model → Context → Protocol</h3>
 					<div class="breakdown-table">
 						<div class="breakdown-header">
-							<div class="breakdown-col">Model</div>
+							<div class="breakdown-col">Model / Tool</div>
 							<div class="breakdown-col highlight">Context</div>
 							<div class="breakdown-col">Protocol</div>
 						</div>
+
+						<div class="breakdown-group">Models</div>
 						<div class="breakdown-row">
 							<div class="breakdown-col">Claude</div>
+							<div class="breakdown-col highlight">.faf</div>
+							<div class="breakdown-col">MCP</div>
+						</div>
+						<div class="breakdown-row">
+							<div class="breakdown-col">Grok</div>
 							<div class="breakdown-col highlight">.faf</div>
 							<div class="breakdown-col">MCP</div>
 						</div>
@@ -59,6 +77,8 @@
 							<div class="breakdown-col highlight">.faf</div>
 							<div class="breakdown-col">MCP</div>
 						</div>
+
+						<div class="breakdown-group">Tools &amp; IDEs</div>
 						<div class="breakdown-row">
 							<div class="breakdown-col">Cursor</div>
 							<div class="breakdown-col highlight">.faf</div>
@@ -69,6 +89,17 @@
 							<div class="breakdown-col highlight">.faf</div>
 							<div class="breakdown-col">MCP</div>
 						</div>
+						<div class="breakdown-row">
+							<div class="breakdown-col">Cline</div>
+							<div class="breakdown-col highlight">.faf</div>
+							<div class="breakdown-col">MCP</div>
+						</div>
+						<div class="breakdown-row">
+							<div class="breakdown-col">VS Code</div>
+							<div class="breakdown-col highlight">.faf</div>
+							<div class="breakdown-col">MCP</div>
+						</div>
+
 						<div class="breakdown-row final-row">
 							<div class="breakdown-col">Any LLM</div>
 							<div class="breakdown-col highlight">IANA Format</div>
@@ -78,33 +109,52 @@
 					<p class="breakdown-caption">.faf is the <strong>universal Context</strong> layer for any Model using the MCP Protocol</p>
 
 					<div class="prime-messaging">
-						<p><strong>We are the 'C' in MCP.</strong></p>
-						<p>IANA .FAF Format is AI context foundation.</p>
-						<p>Format foundation is non-negotiable.</p>
 						<p class="facts">Formats = facts.</p>
 					</div>
 				</div>
 			</ScrollRevealText>
 
 			<!-- MCP Packages Section -->
-			<ScrollRevealText threshold={0.3} delay={200}>
+			<ScrollRevealText threshold={0} delay={200}>
 				<div class="packages-section">
-					<h2>MCP Packages</h2>
+					<h2>The MCP Family</h2>
+					<p class="packages-intro">One IANA-registered format. A server for every model — plus the CLI that authors it.</p>
 
+					<!-- claude-faf-mcp — Claude-first, carries the #2759 receipt -->
 					<div class="package-card featured">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>claude-faf-mcp <span class="badge dedicated">Claude</span></h3>
+						</div>
+						<p class="package-desc">The Claude-first MCP server — persistent <code>.faf</code> context for Claude Desktop and Claude Code.</p>
+						<ul class="package-features">
+							<li>☑️ Claude-first — Desktop + Claude Code</li>
+							<li>☑️ In Anthropic's MCP Registry — <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener noreferrer">merged #2759</a></li>
+							<li>☑️ bi-sync <code>.faf</code> ↔ <code>CLAUDE.md</code></li>
+						</ul>
+						<div class="package-install">
+							<code>npx claude-faf-mcp</code>
+						</div>
+						<div class="package-links">
+							<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<!-- faf-mcp — core / universal -->
+					<div class="package-card">
 						<div class="package-header">
 							<span class="package-icon">📦</span>
 							<h3>faf-mcp <span class="badge">Universal</span></h3>
 						</div>
-						<p class="package-desc">The universal MCP server for Cursor, Windsurf, Cline, VS Code, and all MCP-compatible platforms.</p>
+						<p class="package-desc">The core, universal MCP server for Cursor, Windsurf, Cline, VS Code, and any MCP-compatible client.</p>
 						<ul class="package-features">
-							<li>☑️ 50 MCP tools bundled</li>
-							<li>☑️ Works across all platforms</li>
-							<li>☑️ Context-Mirroring support</li>
-							<li>☑️ Championship performance (16.2x faster)</li>
+							<li>☑️ Cursor, Windsurf, Cline, VS Code — any MCP client</li>
+							<li>☑️ bi-sync <code>.faf</code> ↔ your context files</li>
+							<li>☑️ In the official MCP Registry</li>
 						</ul>
 						<div class="package-install">
-							<code>npm install -g faf-mcp</code>
+							<code>npx faf-mcp</code>
 						</div>
 						<div class="package-links">
 							<a href="https://www.npmjs.com/package/faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
@@ -112,42 +162,103 @@
 						</div>
 					</div>
 
+					<!-- grok-faf-mcp — Grok -->
 					<div class="package-card">
 						<div class="package-header">
 							<span class="package-icon">📦</span>
-							<h3>claude-faf-mcp <span class="badge dedicated">Claude</span></h3>
+							<h3>grok-faf-mcp <span class="badge">Grok</span></h3>
 						</div>
-						<p class="package-desc">Dedicated MCP server optimized specifically for Claude Desktop.</p>
+						<p class="package-desc">The MCP server for xAI Grok — the same <code>.faf</code> context, read by Grok.</p>
 						<ul class="package-features">
-							<li>☑️ 51 MCP tools (Claude-optimized)</li>
-							<li>☑️ Claude Desktop integration</li>
-							<li>☑️ Anthropic-merged</li>
-							<li>☑️ IANA-registered format</li>
+							<li>☑️ Same IANA <code>.faf</code> format</li>
+							<li>☑️ Cross-vendor context, one file</li>
+							<li>☑️ In the official MCP Registry</li>
 						</ul>
 						<div class="package-install">
-							<code>npm install -g claude-faf-mcp</code>
+							<code>npx grok-faf-mcp</code>
 						</div>
 						<div class="package-links">
-							<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
-							<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
-							<a href="https://smithery.ai/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">Smithery →</a>
+							<a href="https://www.npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/grok-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
 						</div>
-						<p class="smithery-badge">
-							<a href="https://smithery.ai/servers/wolfe-jam/claude-faf-mcp" target="_blank" rel="noopener noreferrer">
-								<img
-									src="https://smithery.ai/badge/wolfe-jam/claude-faf-mcp"
-									alt="smithery badge"
-									width="200"
-									height="20"
-								/>
-							</a>
-						</p>
+					</div>
+
+					<!-- gemini-faf-mcp — Gemini (Python / PyPI) -->
+					<div class="package-card">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>gemini-faf-mcp <span class="badge">Gemini</span></h3>
+						</div>
+						<p class="package-desc">The MCP server for Google Gemini — Python, published to PyPI.</p>
+						<ul class="package-features">
+							<li>☑️ Python — <code>uvx gemini-faf-mcp</code> (PyPI)</li>
+							<li>☑️ Reference implementation of the Zenodo Context paper</li>
+							<li>☑️ Same IANA <code>.faf</code> format</li>
+						</ul>
+						<div class="package-install">
+							<code>uvx gemini-faf-mcp</code>
+						</div>
+						<div class="package-links">
+							<a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener noreferrer">PyPI →</a>
+							<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<!-- WJTTC — testing -->
+					<div class="package-card">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>WJTTC <span class="badge">Testing</span></h3>
+						</div>
+						<p class="package-desc">Championship-grade MCP testing. If a server passes WJTTC, it works.</p>
+						<ul class="package-features">
+							<li>☑️ GitHub Action included</li>
+							<li>☑️ Verifies MCP servers actually work</li>
+							<li>☑️ In the official MCP Registry</li>
+						</ul>
+						<div class="package-install">
+							<code>npx wjttc</code>
+						</div>
+						<div class="package-links">
+							<a href="https://www.npmjs.com/package/wjttc" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/wjttc" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<!-- faf-cli — the CLI on-ramp -->
+					<div class="package-card">
+						<div class="package-header">
+							<span class="package-icon">📦</span>
+							<h3>faf-cli <span class="badge">CLI</span></h3>
+						</div>
+						<p class="package-desc">The CLI on-ramp — author, score, and sync your <code>.faf</code> from any terminal. Claude-first, works cross-vendor.</p>
+						<ul class="package-features">
+							<li>☑️ The on-ramp — <code>faf init</code>, <code>faf score</code>, <code>faf sync</code></li>
+							<li>☑️ bi-sync <code>.faf</code> ↔ <code>CLAUDE.md</code></li>
+							<li>☑️ Free forever · open source</li>
+						</ul>
+						<div class="package-install">
+							<code>npm install -g faf-cli</code>
+						</div>
+						<div class="package-install">
+							<code>brew install wolfe-jam/faf/faf-cli</code>
+						</div>
+						<div class="package-links">
+							<a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener noreferrer">npm →</a>
+							<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener noreferrer">GitHub →</a>
+						</div>
+					</div>
+
+					<p class="family-note">Also in the family: <a href="https://github.com/Wolfe-Jam/rust-faf-mcp" target="_blank" rel="noopener noreferrer">rust-faf-mcp</a> (Rust · crates.io) — <strong>six FAF servers</strong> total in the official MCP Registry.</p>
+
+					<div class="tool-count-note">
+						<p><strong>Tools:</strong> core ~12–14 per server, family ~29–33 total. Each server's README is the source of truth.</p>
 					</div>
 				</div>
 			</ScrollRevealText>
 
 			<!-- Platform Installation Tabs -->
-			<ScrollRevealText threshold={0.3} delay={300}>
+			<ScrollRevealText threshold={0} delay={300}>
 				<div class="installation-section">
 					<h2>Installation by Platform</h2>
 
@@ -324,26 +435,13 @@
 			</ScrollRevealText>
 
 			<!-- The "Use FAF" Pattern -->
-			<ScrollRevealText threshold={0.3} delay={400}>
+			<ScrollRevealText threshold={0} delay={400}>
 				<div class="pattern-section">
 					<h2>The "Use FAF" Pattern</h2>
-					<p class="pattern-intro">Universal onboarding across all platforms - just start your prompts with <strong>"Use FAF"</strong></p>
-
-					<div class="pattern-comparison">
-						<div class="pattern-old">
-							<h4>❌ The old way</h4>
-							<p>"Can you help me set up AI context for my React TypeScript project with Tailwind CSS?"</p>
-							<span class="time-badge">20 minutes of questions</span>
-						</div>
-						<div class="pattern-new">
-							<h4>✅ The FAF way</h4>
-							<p>"Use FAF to initialize your project"</p>
-							<span class="time-badge success">30 seconds</span>
-						</div>
-					</div>
+					<p class="pattern-intro">Just start prompts with <strong>Use FAF</strong>.</p>
 
 					<div class="pattern-examples">
-						<h4>Example commands:</h4>
+						<h4>Example commands</h4>
 						<ul>
 							<li><code>Use FAF to initialize your project</code></li>
 							<li><code>Use FAF to sync my project.faf to all platforms</code></li>
@@ -355,15 +453,15 @@
 			</ScrollRevealText>
 
 			<!-- CTA Section -->
-			<ScrollRevealText threshold={0.3} delay={600}>
+			<ScrollRevealText threshold={0} delay={600}>
 				<div class="cta-section">
-					<h2>Ready to Get Started?</h2>
+					<h2>Get Started</h2>
 					<div class="cta-buttons">
 						<a href="https://www.npmjs.com/package/faf-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
 							Install faf-mcp →
 						</a>
 						<a href="https://github.com/Wolfe-Jam/faf-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-							⭐ GitHub
+							GitHub →
 						</a>
 					</div>
 					<PageActions
@@ -381,9 +479,15 @@
 </div>
 
 <style>
+	/* /mcp render fix: the shared ScrollRevealText fade-in leaves content stuck at
+	   opacity:0 on this page (its observer never fires on the tall sections). Force
+	   the revealed state here so nothing goes blank. */
+	.mcp-page :global(.scroll-reveal) { opacity: 1 !important; transform: none !important; }
+
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
+		color: var(--faf-dark);
 		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
@@ -408,12 +512,14 @@
 	.mcp-page {
 		min-height: 100vh;
 		background: var(--faf-cream);
+		color: var(--faf-dark);
 	}
 
 	.hero-section {
 		padding: 4rem 0 3rem;
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(0, 243, 255, 0.05) 100%);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		background: rgba(255, 107, 53, 0.05);
+		color: var(--faf-black);
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.container {
@@ -447,10 +553,52 @@
 	.hero-desc {
 		text-align: center;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		max-width: 800px;
 		margin: 0 auto;
 		line-height: 1.6;
+	}
+
+	.hero-receipts {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.receipt-chip {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background: var(--faf-white);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 3px solid var(--faf-orange);
+		border-radius: 0 8px 8px 0;
+		padding: 0.6rem 1rem;
+		text-decoration: none;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.receipt-chip:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.receipt-key {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--faf-dark);
+	}
+
+	.receipt-val {
+		font-family: 'Roboto Mono', monospace;
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--faf-orange);
 	}
 
 	.content-section {
@@ -472,7 +620,7 @@
 	.intro-block p {
 		font-size: 1.25rem;
 		line-height: 1.6;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.intro-block code {
@@ -497,7 +645,9 @@
 	}
 
 	.breakdown-table {
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -507,18 +657,30 @@
 	.breakdown-header {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		background: var(--faf-black);
+		background: var(--faf-light-gray);
 		padding: 1rem;
 		font-weight: 700;
-		color: var(--faf-white);
+		color: var(--faf-black);
 		font-size: 1.125rem;
+	}
+
+	.breakdown-group {
+		background: var(--faf-light-gray);
+		padding: 0.5rem 1rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--faf-dark);
+		text-align: left;
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.breakdown-row {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		padding: 1rem;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--faf-light-gray);
 		transition: background 0.2s ease;
 	}
 
@@ -528,6 +690,7 @@
 
 	.breakdown-row.final-row {
 		background: rgba(255, 107, 53, 0.05);
+		color: var(--faf-dark);
 		font-weight: 600;
 	}
 
@@ -538,7 +701,7 @@
 	.breakdown-col {
 		padding: 0.5rem;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.breakdown-col.highlight {
@@ -549,7 +712,7 @@
 
 	.breakdown-caption {
 		font-size: 1rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		font-style: italic;
 	}
 
@@ -560,25 +723,17 @@
 	.prime-messaging {
 		margin-top: 2rem;
 		padding: 1.5rem;
-		background: linear-gradient(135deg, #F9F9F9 0%, #F0F0F0 100%);
+		background: var(--faf-white);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 4px;
 		text-align: center;
 	}
 
-	.prime-messaging p {
-		margin: 0.5rem 0;
-		font-size: 1.1rem;
-		color: var(--faf-black);
-	}
-
-	.prime-messaging p:first-child {
-		font-size: 1.3rem;
-		margin-bottom: 1rem;
-	}
-
 	.prime-messaging .facts {
-		margin-top: 1rem;
+		margin: 0;
+		font-size: 1.3rem;
 		font-style: italic;
 		color: var(--faf-orange);
 		font-weight: 600;
@@ -592,12 +747,67 @@
 	.packages-section h2 {
 		font-size: 2.5rem;
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 0.75rem;
 		color: var(--faf-black);
 	}
 
+	.packages-intro {
+		text-align: center;
+		font-size: 1.125rem;
+		color: var(--faf-dark);
+		max-width: 640px;
+		margin: 0 auto 3rem;
+		line-height: 1.6;
+	}
+
+	.family-note {
+		text-align: center;
+		font-size: 1rem;
+		color: var(--faf-dark);
+		margin: 1.5rem 0 0.5rem;
+	}
+
+	.family-note a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.family-note a:hover {
+		text-decoration: underline;
+	}
+
+	.tool-count-note {
+		max-width: 720px;
+		margin: 1.5rem auto 0;
+		padding: 1rem 1.5rem;
+		background: rgba(0, 212, 212, 0.05);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 4px;
+	}
+
+	.tool-count-note p {
+		margin: 0;
+		font-size: 1rem;
+		color: var(--faf-dark);
+		line-height: 1.6;
+	}
+
+	.package-features li a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.package-features li a:hover {
+		text-decoration: underline;
+	}
+
 	.package-card {
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 2rem;
 		margin-bottom: 2rem;
@@ -612,7 +822,7 @@
 
 	.package-card.featured {
 		border: 3px solid var(--faf-orange);
-		background: linear-gradient(135deg, rgba(255, 107, 53, 0.02) 0%, white 100%);
+		background: rgba(255, 107, 53, 0.02);
 	}
 
 	.package-header {
@@ -645,12 +855,13 @@
 	}
 
 	.badge.dedicated {
-		background: var(--faf-black);
+		background: var(--faf-cyan-dark);
+		color: #0a0a0a;
 	}
 
 	.package-desc {
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		margin-bottom: 1.5rem;
 		line-height: 1.6;
 	}
@@ -664,12 +875,12 @@
 	.package-features li {
 		padding: 0.5rem 0;
 		font-size: 1rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.package-install {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: #1a1a1a;
+		color: #00ff88;
 		padding: 1rem 1.5rem;
 		border-radius: 8px;
 		margin-bottom: 1rem;
@@ -677,7 +888,7 @@
 	}
 
 	.package-install code {
-		color: white !important;
+		color: #00ff88 !important;
 		background: transparent;
 	}
 
@@ -695,14 +906,6 @@
 
 	.package-links a:hover {
 		opacity: 0.7;
-	}
-
-	.smithery-badge {
-		margin-top: 0.75rem;
-	}
-
-	.smithery-badge a {
-		display: inline-block;
 	}
 
 	/* Installation Tabs */
@@ -750,6 +953,8 @@
 
 	.tab-content {
 		background: var(--faf-white);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 2rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -763,6 +968,7 @@
 
 	.platform-note {
 		background: rgba(255, 107, 53, 0.1);
+		color: var(--faf-dark);
 		padding: 1rem;
 		border-radius: 8px;
 		margin-bottom: 2rem;
@@ -801,14 +1007,14 @@
 	}
 
 	.step-content p {
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		margin-bottom: 1rem;
 		line-height: 1.5;
 	}
 
 	.code-block {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: #1a1a1a;
+		color: #00ff88;
 		padding: 1rem 1.5rem;
 		border-radius: 8px;
 		font-family: 'Roboto Mono', monospace;
@@ -820,11 +1026,12 @@
 		margin: 0;
 		white-space: pre-wrap;
 		word-wrap: break-word;
-		color: white !important;
+		color: #00ff88;
+		background: transparent;
 	}
 
 	.code-block code {
-		color: white !important;
+		color: #00ff88;
 		background: transparent;
 	}
 
@@ -844,7 +1051,9 @@
 	/* Pattern Section */
 	.pattern-section {
 		margin: 4rem 0;
-		background: white;
+		background: var(--faf-white);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		padding: 3rem 2rem;
 		border-radius: 12px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -860,62 +1069,14 @@
 	.pattern-intro {
 		text-align: center;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		margin-bottom: 3rem;
-	}
-
-	.pattern-comparison {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	.pattern-old, .pattern-new {
-		padding: 2rem;
-		border-radius: 8px;
-		border: 2px solid;
-	}
-
-	.pattern-old {
-		border-color: rgba(255, 0, 0, 0.2);
-		background: rgba(255, 0, 0, 0.02);
-	}
-
-	.pattern-new {
-		border-color: var(--faf-orange);
-		background: rgba(255, 107, 53, 0.02);
-	}
-
-	.pattern-old h4, .pattern-new h4 {
-		font-size: 1.25rem;
-		margin-bottom: 1rem;
-	}
-
-	.pattern-old p, .pattern-new p {
-		font-size: 1rem;
-		color: var(--faf-gray-dark);
-		font-style: italic;
-		margin-bottom: 1rem;
-	}
-
-	.time-badge {
-		display: inline-block;
-		padding: 0.25rem 0.75rem;
-		border-radius: 12px;
-		font-size: 0.875rem;
-		font-weight: 600;
-		background: rgba(255, 0, 0, 0.1);
-		color: #d32f2f;
-	}
-
-	.time-badge.success {
-		background: rgba(255, 107, 53, 0.1);
-		color: var(--faf-orange);
 	}
 
 	.pattern-examples {
 		background: rgba(0, 212, 212, 0.05);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
 		padding: 2rem;
 		border-radius: 8px;
 	}
@@ -938,7 +1099,7 @@
 
 	.pattern-examples code {
 		background: #1a1a1a;
-		color: white;
+		color: #00ff88;
 		padding: 0.5rem 1rem;
 		border-radius: 6px;
 		font-family: 'Roboto Mono', monospace;
@@ -991,8 +1152,9 @@
 	}
 
 	.btn-secondary:hover {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: var(--faf-orange);
+		color: white;
+		border-color: var(--faf-orange);
 		transform: translateY(-2px);
 	}
 
@@ -1017,10 +1179,6 @@
 		.step {
 			flex-direction: column;
 			align-items: flex-start;
-		}
-
-		.pattern-comparison {
-			grid-template-columns: 1fr;
 		}
 	}
 </style>
