@@ -487,6 +487,7 @@
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
+		color: var(--faf-dark);
 		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
@@ -511,13 +512,14 @@
 	.mcp-page {
 		min-height: 100vh;
 		background: var(--faf-cream);
+		color: var(--faf-dark);
 	}
 
 	.hero-section {
 		padding: 4rem 0 3rem;
 		background: rgba(255, 107, 53, 0.05);
 		color: var(--faf-black);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.container {
@@ -551,7 +553,7 @@
 	.hero-desc {
 		text-align: center;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		max-width: 800px;
 		margin: 0 auto;
 		line-height: 1.6;
@@ -589,7 +591,7 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.receipt-val {
@@ -618,7 +620,7 @@
 	.intro-block p {
 		font-size: 1.25rem;
 		line-height: 1.6;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.intro-block code {
@@ -645,6 +647,7 @@
 	.breakdown-table {
 		background: var(--faf-white);
 		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -654,30 +657,30 @@
 	.breakdown-header {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		background: var(--faf-black);
+		background: var(--faf-light-gray);
 		padding: 1rem;
 		font-weight: 700;
-		color: var(--faf-white);
+		color: var(--faf-black);
 		font-size: 1.125rem;
 	}
 
 	.breakdown-group {
-		background: rgba(0, 0, 0, 0.04);
+		background: var(--faf-light-gray);
 		padding: 0.5rem 1rem;
 		font-size: 0.75rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		text-align: left;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--faf-light-gray);
 	}
 
 	.breakdown-row {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		padding: 1rem;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--faf-light-gray);
 		transition: background 0.2s ease;
 	}
 
@@ -687,6 +690,7 @@
 
 	.breakdown-row.final-row {
 		background: rgba(255, 107, 53, 0.05);
+		color: var(--faf-dark);
 		font-weight: 600;
 	}
 
@@ -697,7 +701,7 @@
 	.breakdown-col {
 		padding: 0.5rem;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.breakdown-col.highlight {
@@ -708,7 +712,7 @@
 
 	.breakdown-caption {
 		font-size: 1rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		font-style: italic;
 	}
 
@@ -721,6 +725,7 @@
 		padding: 1.5rem;
 		background: var(--faf-white);
 		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 4px;
 		text-align: center;
@@ -749,7 +754,7 @@
 	.packages-intro {
 		text-align: center;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		max-width: 640px;
 		margin: 0 auto 3rem;
 		line-height: 1.6;
@@ -758,7 +763,7 @@
 	.family-note {
 		text-align: center;
 		font-size: 1rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		margin: 1.5rem 0 0.5rem;
 	}
 
@@ -777,6 +782,7 @@
 		margin: 1.5rem auto 0;
 		padding: 1rem 1.5rem;
 		background: rgba(0, 212, 212, 0.05);
+		border: 1px solid var(--faf-light-gray);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 4px;
 	}
@@ -784,7 +790,7 @@
 	.tool-count-note p {
 		margin: 0;
 		font-size: 1rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		line-height: 1.6;
 	}
 
@@ -801,6 +807,7 @@
 	.package-card {
 		background: var(--faf-white);
 		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 2rem;
 		margin-bottom: 2rem;
@@ -848,13 +855,13 @@
 	}
 
 	.badge.dedicated {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: var(--faf-cyan-dark);
+		color: #0a0a0a;
 	}
 
 	.package-desc {
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		margin-bottom: 1.5rem;
 		line-height: 1.6;
 	}
@@ -868,7 +875,7 @@
 	.package-features li {
 		padding: 0.5rem 0;
 		font-size: 1rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 	}
 
 	.package-install {
@@ -946,6 +953,8 @@
 
 	.tab-content {
 		background: var(--faf-white);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
 		border-radius: 12px;
 		padding: 2rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -959,6 +968,7 @@
 
 	.platform-note {
 		background: rgba(255, 107, 53, 0.1);
+		color: var(--faf-dark);
 		padding: 1rem;
 		border-radius: 8px;
 		margin-bottom: 2rem;
@@ -997,14 +1007,14 @@
 	}
 
 	.step-content p {
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		margin-bottom: 1rem;
 		line-height: 1.5;
 	}
 
 	.code-block {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: #1a1a1a;
+		color: #00ff88;
 		padding: 1rem 1.5rem;
 		border-radius: 8px;
 		font-family: 'Roboto Mono', monospace;
@@ -1016,11 +1026,12 @@
 		margin: 0;
 		white-space: pre-wrap;
 		word-wrap: break-word;
-		color: white !important;
+		color: #00ff88;
+		background: transparent;
 	}
 
 	.code-block code {
-		color: white !important;
+		color: #00ff88;
 		background: transparent;
 	}
 
@@ -1042,6 +1053,7 @@
 		margin: 4rem 0;
 		background: var(--faf-white);
 		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
 		padding: 3rem 2rem;
 		border-radius: 12px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -1057,12 +1069,14 @@
 	.pattern-intro {
 		text-align: center;
 		font-size: 1.125rem;
-		color: var(--faf-gray-dark);
+		color: var(--faf-dark);
 		margin-bottom: 3rem;
 	}
 
 	.pattern-examples {
 		background: rgba(0, 212, 212, 0.05);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
 		padding: 2rem;
 		border-radius: 8px;
 	}
@@ -1085,7 +1099,7 @@
 
 	.pattern-examples code {
 		background: #1a1a1a;
-		color: white;
+		color: #00ff88;
 		padding: 0.5rem 1rem;
 		border-radius: 6px;
 		font-family: 'Roboto Mono', monospace;
@@ -1138,8 +1152,9 @@
 	}
 
 	.btn-secondary:hover {
-		background: var(--faf-black);
-		color: var(--faf-white);
+		background: var(--faf-orange);
+		color: white;
+		border-color: var(--faf-orange);
 		transform: translateY(-2px);
 	}
 
