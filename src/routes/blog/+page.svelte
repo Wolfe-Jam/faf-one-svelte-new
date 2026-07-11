@@ -7,10 +7,10 @@
 		{
 			slug: 'blog/authored-not-generated',
 			title: 'Authored, Not Generated',
-			version: 'faf-cli v7.1',
+			version: 'faf-cli v7.1.3',
 			date: 'July 10, 2026',
 			timestamp: '2026-07-10',
-			excerpt: "faf export --agents authors a complete, best-in-class AGENTS.md for any repo — detected from your code, non-destructive, never stale. Authored, not generated: the Concise Context for AI.",
+			excerpt: "faf export --agents authors a complete, best-in-class AGENTS.md for any repo — detected from your code, non-destructive, never stale. Authored, not generated: the Concise Context format for AI.",
 			emoji: '☑️',
 			category: 'Release'
 		},

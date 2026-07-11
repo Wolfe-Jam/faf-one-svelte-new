@@ -9,7 +9,7 @@
 	}
 
 	// Rich X share — the crafted post, not a bare URL.
-	const shareText = `🏁 Just shipped: faf-cli v7.1 — The AGENTS.md Edition
+	const shareText = `🏁 Just shipped: faf-cli v7.1.3 — The AGENTS.md Edition
 
 faf export --agents authors a complete, best-in-class AGENTS.md for any repo — detected from your code, non-destructive, never stale.
 
@@ -21,10 +21,10 @@ bunx faf export --agents`;
 </script>
 
 <svelte:head>
-	<title>Authored, Not Generated — faf-cli v7.1, The AGENTS.md Edition | FAF</title>
-	<meta name="description" content="faf export --agents authors a complete, best-in-class AGENTS.md for any repo — detected from your code, non-destructive, never stale. Authored, not generated: the Concise Context for AI." />
+	<title>Authored, Not Generated — faf-cli v7.1.3, The AGENTS.md Edition | FAF</title>
+	<meta name="description" content="faf export --agents authors a complete, best-in-class AGENTS.md for any repo — detected from your code, non-destructive, never stale. Authored, not generated: the Concise Context format for AI." />
 	<meta property="og:title" content="Authored, Not Generated — The AGENTS.md Edition" />
-	<meta property="og:description" content="faf export --agents authors a complete AGENTS.md from your real code. Authored, not generated — the Concise Context for AI." />
+	<meta property="og:description" content="faf export --agents authors a complete AGENTS.md from your real code. Authored, not generated — the Concise Context format for AI." />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="https://faf.one/blog/authored-not-generated-hero.png" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -39,8 +39,8 @@ bunx faf export --agents`;
 
 		<p class="kicker">CONTEXT, versioned.</p>
 		<h1>Authored, Not Generated</h1>
-		<p class="version-tag">faf-cli v7.1 — The AGENTS.md Edition</p>
-		<p class="subtitle">faf export --agents authors the definitive AGENTS.md — the Concise Context for AI.</p>
+		<p class="version-tag">faf-cli v7.1.3 — The AGENTS.md Edition</p>
+		<p class="subtitle">faf export --agents authors the definitive AGENTS.md — the Concise Context format for AI.</p>
 		<div class="meta">
 			<time datetime="2026-07-10">July 10, 2026</time>
 			<span class="separator">•</span>
@@ -49,7 +49,7 @@ bunx faf export --agents`;
 	</header>
 
 	<div class="hero-image">
-		<img src="/blog/authored-not-generated-hero.png" alt="faf-cli v7.1 — The AGENTS.md Edition: authored, not generated" />
+		<img src="/blog/authored-not-generated-hero.png" alt="faf-cli v7.1.3 — The AGENTS.md Edition: authored, not generated" />
 	</div>
 
 	<article class="post-content">
@@ -67,9 +67,9 @@ bunx faf export --agents`;
 		</section>
 
 		<section>
-			<h2>The Concise Context for AI</h2>
+			<h2>The Concise Context format for AI</h2>
 			<p>The model for a good <code>AGENTS.md</code> isn't a blog post. It's the <strong>Concise Oxford</strong> — definitions, not prose.</p>
-			<p>That's what faf authors: the <strong>Concise Context for AI</strong>. Orientation, setup, tests, conventions, guardrails — dense with fact, stripped of filler. An agent doesn't need your project narrated; it needs to know what's true, fast. Persistent project context for AI — concise, correct, current.</p>
+			<p>That's what faf authors: the <strong>Concise Context format for AI</strong>. Orientation, setup, tests, conventions, guardrails — dense with fact, stripped of filler. An agent doesn't need your project narrated; it needs to know what's true, fast. Persistent project context for AI — concise, current, correct.</p>
 		</section>
 
 		<section>
@@ -104,7 +104,7 @@ bunx faf export --agents`;
 		<section>
 			<h2>The Numbers</h2>
 			<ul>
-				<li><strong>v7.1 — The AGENTS.md Edition</strong> (current: v7.1.3)</li>
+				<li><strong>v7.1.3 — The AGENTS.md Edition</strong></li>
 				<li><strong>1,146 / 1,146</strong> — tests passing</li>
 				<li><strong>100%</strong> — Trophy score</li>
 				<li><strong>115,000+</strong> — downloads across the FAF ecosystem</li>
