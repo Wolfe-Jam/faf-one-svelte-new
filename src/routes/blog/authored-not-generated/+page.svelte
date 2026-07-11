@@ -117,7 +117,7 @@ bunx faf export --agents`;
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ FAF defines. MD instructs. AI codes. 🏎️</p>
+			<p>Built with .faf ☑️<br>FAF defines. MD instructs. AI codes. 🏎️</p>
 		</section>
 	</article>
 </div>
