@@ -5,6 +5,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/authored-not-generated',
+			title: 'Authored, Not Generated',
+			version: 'faf-cli v7.1',
+			date: 'July 10, 2026',
+			timestamp: '2026-07-10',
+			excerpt: "faf export --agents authors a complete, best-in-class AGENTS.md for any repo — detected from your code, non-destructive, never stale. Authored, not generated: the Concise Context for AI.",
+			emoji: '☑️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/three-iana-media-types',
 			title: 'Three IANA Media Types',
 			date: 'July 6, 2026',
