@@ -68,7 +68,7 @@ bunx faf export --agents`;
 
 		<section>
 			<h2>The Concise Context format for AI</h2>
-			<p>The model for a good <code>AGENTS.md</code> isn't a blog post — it's a dictionary. <strong>Inspired by the Concise Oxford English Dictionary</strong>, the concise, authoritative reference for a language, FAF brings that to AI: a Concise Oxford for AI context. Definitions, not prose.</p>
+			<p>The model for a good <code>AGENTS.md</code> isn't a blog post — it's a dictionary. <strong>Inspired by the Concise Oxford English Dictionary</strong>, FAF does the same for AI: a Concise Oxford for AI context. Definitions, not prose.</p>
 			<p>That's what faf authors: the <strong>Concise Context format for AI</strong>. Orientation, setup, tests, conventions, guardrails — dense with fact, stripped of filler. An agent doesn't need your project narrated; it needs to know what's true, fast. Persistent project context for AI — concise, current, correct.</p>
 		</section>
 
