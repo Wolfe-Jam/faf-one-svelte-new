@@ -27,6 +27,7 @@
 		'/bench': { title: 'Bench', category: 'Tools', emoji: '🏁', description: 'AI-grounding benchmark' },
 		'/demos': { title: 'Demos', category: 'Tools', emoji: '🎬', description: 'Live demos' },
 		'/sync': { title: 'Sync', category: 'Tools', emoji: '🔄', description: 'bi-sync / tri-sync' },
+		'/trinity': { title: 'Trinity', category: 'Tools', emoji: '🔺', description: 'Context · Memory · Agents — interactive' },
 
 		'/mcp': { title: 'MCP', category: 'Ecosystem', emoji: '🔌', description: 'Model Context Protocol' },
 		'/mcpaas': { title: 'MCPaaS', category: 'Ecosystem', emoji: '📡', description: 'MCP as a Service' },
@@ -89,12 +90,7 @@
 		.filter((p) => !EXCLUDE.test(p) && !PRESET.has(p))
 		.map((p) => (META[p] ? { url: p, ...META[p] } : { url: p, title: pretty(p), category: 'More', emoji: '📄' }));
 
-	// /trinity.html is a static file (not a +page.svelte), so it's curated by hand here.
-	const STATIC_PAGES = [
-		{ url: '/trinity.html', title: 'Trinity', category: 'Tools', emoji: '🔺', description: 'Context · Memory · Agents — interactive' }
-	];
-
-	const entries = [...discovered, ...STATIC_PAGES, ...POINTERS];
+	const entries = [...discovered, ...POINTERS];
 </script>
 
 <svelte:head>
