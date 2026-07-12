@@ -12,9 +12,9 @@
 
 <svelte:head>
 	<title>faf-cli — The AI-Context CLI | faf.one</title>
-	<meta name="description" content="faf-cli — How AI gets context. 38k+ downloads. IANA-registered format." />
+	<meta name="description" content="faf-cli — How AI gets context. IANA-registered format." />
 	<meta property="og:title" content="faf-cli — The AI-Context CLI" />
-	<meta property="og:description" content="One command. 100% AI-Context. 38k+ npm downloads." />
+	<meta property="og:description" content="One command. 100% AI-Context." />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
@@ -69,7 +69,7 @@
 		<a href="https://github.com/Wolfe-Jam/faf-cli" class="star-button" target="_blank" rel="noopener">
 			⭐ Star on GitHub
 		</a>
-		<p class="star-stats">19,484 downloads — 21 stars — help us close the gap</p>
+		<p class="star-stats">CONTEXT, versioned.</p>
 	</section>
 
 	<section class="links">
