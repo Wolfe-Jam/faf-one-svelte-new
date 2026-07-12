@@ -237,7 +237,7 @@
 				<div class="timeline-date">Q3 2024</div>
 				<div class="timeline-event">
 					<h4>MCP Server Launch</h4>
-					<p>Released MCP server for Claude Desktop - 3000+ total downloads (PR #2759 pending)</p>
+					<p>Released MCP server for Claude Desktop - 3000+ total downloads (PR #2759 merged)</p>
 				</div>
 			</div>
 			
