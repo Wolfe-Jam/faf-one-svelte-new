@@ -77,6 +77,22 @@
 		/>
 	</section>
 
+	<section class="content" id="key">
+		<h2>The <code>one.faf/context</code> key</h2>
+		<p>FAF's namespaced extension key. <code>one.faf</code> is reverse-DNS for <code>faf.one</code> &mdash; the key dereferences here. This page documents it; the payload is machine-described by a <a href="/schemas/one.faf-context.schema.json">JSON Schema</a>.</p>
+		<p>Wherever a host format offers a namespaced slot, the FAF receipt rides under this key &mdash; a thin, falsifiable pointer at the <code>.faf</code> artifact, never a copy of it:</p>
+		<ul class="receipts">
+			<li><strong>AI Catalog</strong> &mdash; on the <code>.faf</code> entry in <a href="/.well-known/ai-catalog.json">faf.one/.well-known/ai-catalog.json</a></li>
+			<li><strong>MCP server card</strong> &mdash; <code>_meta</code> on <a href="https://context.faf.one/mcp/server-card" target="_blank" rel="noopener">context.faf.one/mcp/server-card</a></li>
+		</ul>
+		<pre>{`"one.faf/context": {
+  "faf": "https://context.faf.one/.well-known/project.faf",
+  "mediaType": "application/vnd.faf+yaml",
+  "deterministic": true
+}`}</pre>
+		<p>Fields: <code>faf</code> (URL of the artifact) &middot; <code>mediaType</code> &middot; <code>iana</code> (registration status) &middot; <code>deterministic</code> &middot; <code>scoreEndpoint</code> &middot; <code>generated</code> / <code>generated_at</code>. The <code>.faf</code> stays the single source of truth; the key only points.</p>
+	</section>
+
 	<section class="content footer-section">
 		<p class="footer-tagline">FAF defines. MD instructs. AI codes.</p>
 		<p class="footer-iana">Foundational Context Layer &middot; application/vnd.faf+yaml</p>

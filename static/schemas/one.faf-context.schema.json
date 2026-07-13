@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://faf.one/schemas/one.faf-context.schema.json",
+  "title": "one.faf/context",
+  "description": "FAF's namespaced extension key. one.faf is reverse-DNS for faf.one, so the key dereferences to https://faf.one/context. It carries the FAF receipt — a thin, falsifiable pointer at a .faf artifact — wherever a host format offers a namespaced slot: an AI Catalog entry, an MCP server card _meta, or any equivalent extension surface. The payload never duplicates the artifact; the .faf stays the single source of truth. Forward-compatible: unknown keys are permitted.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "faf": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the .faf artifact this receipt points at.",
+      "examples": ["https://context.faf.one/.well-known/project.faf"]
+    },
+    "mediaType": {
+      "type": "string",
+      "description": "IANA media type of the artifact.",
+      "examples": ["application/vnd.faf+yaml"]
+    },
+    "iana": {
+      "type": "string",
+      "description": "IANA registration status of the media type: the literal \"registered\" or the registry URL.",
+      "examples": [
+        "registered",
+        "https://www.iana.org/assignments/media-types/application/vnd.faf+yaml"
+      ]
+    },
+    "deterministic": {
+      "type": "boolean",
+      "description": "True when the payload and the artifact's score are mechanically derived — same input, same output."
+    },
+    "scoreEndpoint": {
+      "type": "string",
+      "format": "uri",
+      "description": "Where the artifact's score can be reproduced."
+    },
+    "generated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the receipt payload was first generated."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the receipt payload was last regenerated."
+    }
+  }
+}
