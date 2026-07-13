@@ -5,7 +5,7 @@
  *   • /routes/+layout.server.ts (header banner — formatTotal(grandTotal))
  *   • /routes/downloads/+page.svelte (full table)
  *
- * Verified: 2026-07-12 (refreshed via /downloads skill — all 3 registries live)
+ * Verified: 2026-07-13 (refreshed via /downloads skill — all 3 registries live)
  * Auto-refresh: scripts/refresh-downloads.mjs (run daily via GH Actions)
  *
  * To add a new package: edit this file manually, keeping descriptions/icons
@@ -167,7 +167,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'gemini-faf-mcp',
 		description: 'Google Gemini MCP server',
-		downloads: 14_633,
+		downloads: 14_695,
 		install: 'pip install gemini-faf-mcp',
 		registryUrl: 'https://pypi.org/project/gemini-faf-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
@@ -177,7 +177,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-python-sdk',
 		description: 'Python SDK for .faf files',
-		downloads: 6_411,
+		downloads: 6_437,
 		install: 'pip install faf-python-sdk',
 		registryUrl: 'https://pypi.org/project/faf-python-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-python-sdk',
@@ -187,7 +187,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-agent-mcp',
 		description: 'Voice of FAF — MCP server',
-		downloads: 3_457,
+		downloads: 3_489,
 		install: 'uvx faf-agent-mcp',
 		registryUrl: 'https://pypi.org/project/faf-agent-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-agent',
@@ -197,7 +197,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'grok-faf-voice',
 		description: 'Voice Memory Layer — LiveKit + xAI Grok',
-		downloads: 3_973,
+		downloads: 4_005,
 		install: 'pip install grok-faf-voice',
 		registryUrl: 'https://pypi.org/project/grok-faf-voice/',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-voice',
@@ -207,7 +207,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization (Python placeholder)',
-		downloads: 1_937,
+		downloads: 1_938,
 		install: 'pip install slash-tokens',
 		registryUrl: 'https://pypi.org/project/slash-tokens/',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
