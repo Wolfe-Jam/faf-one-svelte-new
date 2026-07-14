@@ -25,7 +25,13 @@ THEME_TOKENS = {
 # Brand tokens that do NOT flip (same both themes)
 STATIC_TOKENS = {
     '--faf-orange', '--faf-orange-dark', '--faf-cyan', '--faf-cyan-dark',
-    '--faf-green', '--faf-green-hover',
+    '--faf-green', '--faf-green-hover', '--faf-green-light',
+    '--faf-locked-dark', '--faf-locked-dark-elevated', '--faf-locked-dark-text',
+    '--faf-locked-dark-hover', '--faf-locked-dark-muted',
+    '--faf-chrome-bg', '--faf-chrome-fg',
+    '--faf-foundation-green', '--faf-foundation-green-dark',
+    '--faf-surface-border', '--faf-section-alt', '--faf-orange-tint',
+    '--faf-page-bg', '--faf-surface',
 }
 
 DARK_LITERALS = re.compile(

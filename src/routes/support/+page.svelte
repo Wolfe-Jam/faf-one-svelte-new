@@ -477,7 +477,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 	}
 
 	.emergency-banner {
-		background: linear-gradient(135deg, var(--faf-black) 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-black) 0%, var(--faf-locked-dark-elevated) 100%);
 		color: var(--faf-white);
 		padding: 2rem;
 		border-radius: 12px;

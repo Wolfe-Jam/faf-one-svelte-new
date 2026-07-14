@@ -105,9 +105,9 @@
 <style>
 	.updates-page {
 		min-height: 100vh;
-		background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, var(--faf-locked-dark-muted) 100%);
 		padding: 2rem 0;
-		color: #fff;
+		color: var(--faf-chrome-fg);
 	}
 
 	.container {
@@ -125,7 +125,7 @@
 	.page-header h1 {
 		font-size: 3rem;
 		margin-bottom: 1rem;
-		background: linear-gradient(135deg, #00D4D4 0%, #00ffff 100%);
+		background: linear-gradient(135deg, var(--faf-cyan-dark) 0%, var(--faf-cyan) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -183,7 +183,7 @@
 
 	.release-title h2 {
 		font-size: 2rem;
-		color: #ff6b35;
+		color: var(--faf-orange);
 		margin: 0;
 	}
 
@@ -198,12 +198,12 @@
 
 	.badge.beta {
 		background: #ffaa70;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 	}
 
 	.release-name {
 		font-size: 1.25rem;
-		color: #fff;
+		color: var(--faf-chrome-fg);
 		margin: 0.5rem 0;
 		font-weight: 500;
 	}
@@ -216,7 +216,7 @@
 
 	.release-content h3 {
 		font-size: 1.1rem;
-		color: #ff6b35;
+		color: var(--faf-orange);
 		margin-bottom: 1rem;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
@@ -230,8 +230,8 @@
 		background: rgba(0, 0, 0, 0.3);
 		padding: 1.5rem;
 		border-radius: 8px;
-		border-left: 3px solid #ff6b35;
-		color: #ffffff;
+		border-left: 3px solid var(--faf-orange);
+		color: var(--faf-chrome-fg);
 		font-weight: 500;
 		font-family: 'Courier New', monospace;
 		font-size: 0.95rem;
@@ -262,7 +262,7 @@
 	}
 
 	.command .prompt {
-		color: #ff6b35;
+		color: var(--faf-orange);
 		margin-right: 0.5rem;
 	}
 
@@ -273,18 +273,18 @@
 	}
 
 	.links a {
-		color: #ff6b35;
+		color: var(--faf-orange);
 		text-decoration: none;
 		padding: 0.75rem 1.5rem;
-		border: 1px solid #ff6b35;
+		border: 1px solid var(--faf-orange);
 		border-radius: 6px;
 		transition: all 0.2s ease;
 		font-weight: 500;
 	}
 
 	.links a:hover {
-		background: #ff6b35;
-		color: #fff;
+		background: var(--faf-orange);
+		color: var(--faf-chrome-fg);
 		transform: translateY(-2px);
 		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
 	}

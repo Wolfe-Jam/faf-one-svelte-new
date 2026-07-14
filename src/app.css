@@ -22,6 +22,7 @@
 	--faf-section-alt: #f9f6f1;          /* Alternating section wash (membership, etc.) */
 	--faf-orange-tint: #fff5f0;          /* Orange callout wash (blog, ecosystem) */
 	--faf-locked-dark-hover: #111111;    /* Hover on locked-dark rows/cards */
+	--faf-locked-dark-muted: #2d2d2d;   /* Dark page gradients (updates, etc.) */
 	
 	/* Page canvas — soft creme / almost-black (not pure #fff / #000) */
 	--faf-page-bg: #FEFCF8;

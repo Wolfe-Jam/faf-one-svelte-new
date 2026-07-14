@@ -14,7 +14,7 @@
 <iframe src="/trinity.html" title="The FAF Trinity — interactive" class="trinity-frame"></iframe>
 
 <style>
-	:global(body) { background: #060607; }
+	:global(body) { background: var(--faf-locked-dark); }
 	.trinity-frame {
 		position: fixed;
 		inset: 0;
