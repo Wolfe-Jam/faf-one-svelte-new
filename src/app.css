@@ -10,15 +10,19 @@
 	--faf-green-hover: #008040;  /* FAF-Green dark — hover/active, AA-small on white */
 	--faf-green-light: #4ade80;  /* FAF-Green light — accents on dark (diagrams, callouts) */
 	
+	/* Page canvas — soft creme / almost-black (not pure #fff / #000) */
+	--faf-page-bg: #FEFCF8;
+	--faf-surface: #FFFFFF;      /* Cards/boxes on the page — strong white on creme */
+
 	/* Foundation Colors */
-	--faf-cream: #FEFCF8;        /* Background warmth (NEVER pure white) */
+	--faf-cream: #FEFCF8;        /* Alias of page bg in light mode */
 	--faf-dark: #1a1a1a;         /* Text/Terminal */
 	--faf-gray: #666666;         /* Secondary text */
 	--faf-light-gray: #e5e5e5;   /* Borders */
 	
 	/* Legacy mappings for compatibility */
 	--faf-black: var(--faf-dark);
-	--faf-white: var(--faf-cream);
+	--faf-white: var(--faf-surface);
 	--faf-gray-light: var(--faf-light-gray);
 	--faf-gray-medium: var(--faf-light-gray);
 	--faf-gray-dark: var(--faf-gray);
@@ -41,12 +45,14 @@
 	--transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode — override semantic variables */
+/* Dark Mode — page canvas almost-black; surfaces/boxes stay darker for contrast */
 [data-theme="dark"] {
-	--faf-cream: #0a0a0a;
+	--faf-page-bg: #121212;
+	--faf-surface: #1a1a1a;
+	--faf-cream: #121212;
 	--faf-dark: #e5e5e5;
 	--faf-black: #ffffff;
-	--faf-white: #0a0a0a;
+	--faf-white: #1a1a1a;
 	--faf-gray: #999999;
 	--faf-gray-dark: #aaaaaa;
 	--faf-gray-medium: #333333;
@@ -68,7 +74,7 @@ html {
 
 body {
 	font-family: var(--font-sans);
-	background: var(--faf-cream); /* NEVER pure white per brand guide */
+	background: var(--faf-page-bg);
 	color: var(--faf-dark);
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;

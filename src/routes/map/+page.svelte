@@ -125,7 +125,7 @@
 <style>
 	.map-root {
 		min-height: 100vh;
-		background: var(--faf-cream);
+		background: var(--faf-page-bg);
 	}
 	.back-nav {
 		padding: 1rem 2rem;

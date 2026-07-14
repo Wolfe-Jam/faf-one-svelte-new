@@ -241,7 +241,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 	.support-page {
 		padding: 6rem 0 4rem;
 		min-height: 100vh;
-		background: var(--faf-white);
+		background: var(--faf-page-bg);
 	}
 
 	.support-header {

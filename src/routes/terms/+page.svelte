@@ -97,7 +97,7 @@
 	.legal-page {
 		min-height: calc(100vh - 200px);
 		padding: 4rem 0;
-		background: var(--faf-white);
+		background: var(--faf-page-bg);
 	}
 
 	.container {

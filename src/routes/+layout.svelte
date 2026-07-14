@@ -49,13 +49,13 @@
 			s.background = '#0a0a0a';
 			s.color = '#e5e5e5';
 		} else if (bg === 'light') {
-			s.background = '#FEFCF8';
+			s.background = 'var(--faf-page-bg)';
 			s.color = '#1a1a1a';
 		} else if (bg === 'self') {
 			s.removeProperty('background');
 			s.removeProperty('color');
 		} else {
-			s.background = 'var(--faf-cream)';
+			s.background = 'var(--faf-page-bg)';
 			s.color = 'var(--faf-dark)';
 		}
 	});

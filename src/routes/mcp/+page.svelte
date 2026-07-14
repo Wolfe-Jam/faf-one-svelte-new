@@ -511,7 +511,7 @@
 
 	.mcp-page {
 		min-height: 100vh;
-		background: var(--faf-cream);
+		background: var(--faf-page-bg);
 		color: var(--faf-dark);
 	}
 

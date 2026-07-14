@@ -1221,7 +1221,7 @@
 
 	.blog {
 		padding: 3rem 0;
-		background: var(--faf-white);
+		background: var(--faf-page-bg);
 		min-height: 80vh;
 	}
 

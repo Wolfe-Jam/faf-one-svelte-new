@@ -330,7 +330,7 @@
     .back-nav { padding: 1rem 2rem; background: var(--faf-white); border-bottom: 1px solid #e0e0e0; }
     .back-button { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--faf-dark); text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 8px; transition: all 0.3s ease; }
     .back-button:hover { background: var(--faf-cream); color: var(--faf-orange); transform: translateX(-2px); }
-    .ecosystem-page { background: var(--faf-white); min-height: 100vh; padding: 3rem 2rem; }
+    .ecosystem-page { background: var(--faf-page-bg); min-height: 100vh; padding: 3rem 2rem; }
     .page-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
     .page-header h1 { font-size: 3rem; color: var(--faf-black); margin-bottom: 1rem; }
     .lead { font-size: 1.5rem; color: #666; margin: 0.5rem 0; }

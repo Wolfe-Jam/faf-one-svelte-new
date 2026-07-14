@@ -707,7 +707,7 @@
 		opacity: 0;
 		transform: translateY(20px);
 		transition: opacity 0.6s ease, transform 0.6s ease;
-		background: var(--faf-cream);
+		background: var(--faf-page-bg);
 		min-height: 100vh;
 	}
 
@@ -719,7 +719,7 @@
 	.hero-section {
 		text-align: center;
 		padding: 3rem 2rem 2rem;
-		background: var(--faf-cream);
+		background: var(--faf-page-bg);
 	}
 
 	.page-title {
