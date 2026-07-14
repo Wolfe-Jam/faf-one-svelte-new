@@ -114,12 +114,13 @@
 
 {@render children?.()}
 
+{#if !$page.data?.hideThemeToggle}
+	<div class="theme-toggle">
+		<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
+	</div>
+{/if}
+
 <div class="footer-chrome">
-	{#if !$page.data?.hideThemeToggle}
-		<div class="theme-toggle">
-			<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
-		</div>
-	{/if}
 	<Footer />
 </div>
 
@@ -272,23 +273,17 @@
 		}
 	}
 
-	/* Footer chrome — full-bleed breakout so gizmo stays viewport-left even when
-	   an ancestor centers content. Do NOT add max-width: 100% here — it caps to
-	   the parent and recenters the gizmo as the window widens. */
 	.footer-chrome {
 		margin-top: 3rem;
-		width: 100vw;
-		margin-left: calc(50% - 50vw);
-		margin-right: calc(50% - 50vw);
-		box-sizing: border-box;
 	}
 
-	/* Locked to viewport left (1.5rem), not a centered max-width column. */
+	/* Theme gizmo — same left lock as .home-badge (fixed, left: 20px). In-flow
+	   placement drifted toward center on wide screens when ancestors centered. */
 	.theme-toggle {
-		margin: 0 0 1.25rem 1.5rem;
-		padding: 0;
-		width: max-content;
-		display: block;
+		position: fixed;
+		left: 20px;
+		bottom: 11rem;
+		z-index: 9998;
 	}
 
 	/* Home badge — black circle, thick white outline, white back-arrow.
@@ -426,6 +421,11 @@
 		.home-badge svg {
 			width: 18px;
 			height: 18px;
+		}
+
+		.theme-toggle {
+			left: 15px;
+			bottom: 10rem;
 		}
 	}
 </style>
