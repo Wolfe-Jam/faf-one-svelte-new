@@ -156,7 +156,7 @@
 	}
 
 	.content a:not(.cta):hover {
-		color: var(--faf-cyan-dark);
+		color: var(--faf-cyan-text);
 	}
 
 	.receipts {

@@ -192,7 +192,7 @@
 	}
 
 	.copy-btn:hover {
-		color: var(--faf-cyan-dark);
+		color: var(--faf-cyan-text);
 		background: rgba(0, 212, 212, 0.05);
 	}
 
@@ -204,7 +204,7 @@
 	}
 
 	.hero-cta-link {
-		color: var(--faf-cyan-dark);
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 		font-weight: 500;
 		transition: var(--transition-fast);
@@ -301,7 +301,7 @@
 		text-decoration: none;
 	}
 	.ticker-item b {
-		color: var(--faf-cyan-dark);
+		color: var(--faf-cyan-text);
 		font-weight: 700;
 	}
 	.ticker-item:hover {
@@ -341,7 +341,7 @@
 	}
 
 	.trust a:hover {
-		color: var(--faf-cyan-dark);
+		color: var(--faf-cyan-text);
 	}
 
 	.dot {
@@ -376,7 +376,7 @@
 		line-height: 1.6;
 	}
 
-	.card.cyan h3 { color: var(--faf-cyan-dark); }
+	.card.cyan h3 { color: var(--faf-cyan-text); }
 	.card.orange h3 { color: var(--faf-orange); }
 	.card.neutral h3 { color: var(--faf-black); }
 
@@ -414,7 +414,7 @@
 	}
 
 	.platforms a:hover {
-		color: var(--faf-cyan-dark);
+		color: var(--faf-cyan-text);
 	}
 
 	/* Globe Teaser */
@@ -435,7 +435,7 @@
 	}
 
 	.globe-link:hover {
-		border-color: var(--faf-cyan-dark);
+		border-color: var(--faf-cyan-text);
 	}
 
 	.globe-link h2 {

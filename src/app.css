@@ -5,7 +5,7 @@
 	--faf-orange-dark: #FF5722;  /* Darker orange for hover states */
 	--faf-cyan: #00ffff;         /* AI-Happy/Tech 🩵 */
 	--faf-cyan-dark: #00d4d4;    /* Darker cyan for dark backgrounds */
-	--faf-cyan-text: #009999;    /* Readable cyan on light/white backgrounds */
+	--faf-cyan-text: #006e6e;    /* Darker cyan on creme page canvas — not bright #00d4d4 */
 	--faf-green: #00aa55;        /* FAF-Green — canonical (wolfejam 2026-06-28) */
 	--faf-green-hover: #008040;  /* FAF-Green dark — hover/active, AA-small on white */
 	--faf-green-light: #4ade80;  /* FAF-Green light — accents on dark (diagrams, callouts) */
@@ -275,7 +275,7 @@ section {
 }
 
 .text-cyan {
-	color: var(--faf-cyan-dark);
+	color: var(--faf-cyan-text);
 }
 
 .text-green {
