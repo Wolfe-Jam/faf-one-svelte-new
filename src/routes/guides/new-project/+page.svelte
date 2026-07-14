@@ -352,7 +352,7 @@ faf go
 		<section class="next-steps">
 			<h2 class="section-title">Next Steps</h2>
 			<div class="next-grid">
-				<a href="/docs" class="next-card">
+				<a href="https://docs.faf.one/getting-started" class="next-card" target="_blank" rel="noopener noreferrer">
 					<h3>Existing Project?</h3>
 					<p>Use <code>faf git</code> or <code>faf auto</code> to add context to any repo</p>
 					<span class="next-arrow">→</span>
@@ -362,7 +362,7 @@ faf go
 					<p>Author context for any GitHub repo in 2 seconds</p>
 					<span class="next-arrow">→</span>
 				</a>
-				<a href="/docs" class="next-card">
+				<a href="https://docs.faf.one" class="next-card" target="_blank" rel="noopener noreferrer">
 					<h3>Full Documentation</h3>
 					<p>Complete reference for all FAF commands</p>
 					<span class="next-arrow">→</span>

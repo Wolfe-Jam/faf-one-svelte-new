@@ -73,8 +73,8 @@
 				<div class="card-icon">⚡</div>
 				<h3>Quick Help</h3>
 				<ul>
-					<li><a href="/docs">Documentation</a></li>
-					<li><a href="/docs#faq">FAQ</a></li>
+					<li><a href="https://docs.faf.one" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+					<li><a href="https://docs.faf.one/getting-started" target="_blank" rel="noopener noreferrer">Getting started</a></li>
 					<li><a href="https://github.com/Wolfe-Jam/faf/issues" target="_blank">Known Issues</a></li>
 				</ul>
 			</div>

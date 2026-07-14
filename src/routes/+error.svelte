@@ -55,7 +55,7 @@
 				<span class="icon">🏠</span>
 				Return Home
 			</a>
-			<a href="/docs" class="btn btn-ghost">
+			<a href="https://docs.faf.one" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
 				<span class="icon">📚</span>
 				Browse Docs
 			</a>

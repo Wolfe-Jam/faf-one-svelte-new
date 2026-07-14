@@ -82,7 +82,7 @@
 			{/each}
 			
 			<div class="nav-cta">
-				<a href="/docs" class="btn btn-outline btn-small" title="MCP + Docs">
+				<a href="https://docs.faf.one" class="btn btn-outline btn-small" title="faf-cli manual" target="_blank" rel="noopener noreferrer">
 					Docs
 				</a>
 				<a href="/ideas" class="btn btn-primary btn-small">

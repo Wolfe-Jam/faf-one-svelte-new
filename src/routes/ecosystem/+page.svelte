@@ -166,7 +166,7 @@
                 'Format authority'
             ],
             github: 'https://github.com/Wolfe-Jam/FAF',
-            docs: 'https://faf.one/docs',
+            docs: 'https://docs.faf.one',
             status: 'IANA',
             icon: '📋'
         },

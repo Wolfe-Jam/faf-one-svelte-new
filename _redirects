@@ -1,0 +1,2 @@
+/docs    https://docs.faf.one    301
+/docs/*  https://docs.faf.one/:splat    301

@@ -10,7 +10,7 @@
 		'/pro': { title: 'FAF Pro', category: 'Core', emoji: '⭐', description: 'Full access. Every tool.' },
 		'/cli': { title: 'faf-cli', category: 'Core', emoji: '⌨️', description: 'The CLI for the .faf format' },
 		'/rust': { title: 'Rust SDK', category: 'Core', emoji: '🦀', description: 'Rust-native FAF compiler' },
-		'/docs': { title: 'Docs', category: 'Core', emoji: '📚', description: 'Documentation' },
+		'/docs': { title: 'Docs', category: 'Core', emoji: '📚', description: 'Redirects to docs.faf.one' },
 		'/downloads': { title: 'Downloads', category: 'Core', emoji: '⬇️', description: 'Get the tools' },
 		'/memory': { title: 'Memory', category: 'Core', emoji: '🐘', description: '.fafm persistent memory' },
 		'/try': { title: 'Try It', category: 'Core', emoji: '🚀', description: 'Try .faf right now' },

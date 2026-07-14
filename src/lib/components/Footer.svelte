@@ -3,7 +3,7 @@
 
 	const links = [
 		{ label: 'GitHub', href: 'https://github.com/Wolfe-Jam/faf-cli', external: true },
-		{ label: 'Docs', href: '/docs' },
+		{ label: 'Docs', href: 'https://docs.faf.one', external: true },
 		{ label: 'Links', href: '/links' },
 		{ label: 'Blog', href: '/blog' },
 		{ label: 'Sponsor', href: '/sponsors' },

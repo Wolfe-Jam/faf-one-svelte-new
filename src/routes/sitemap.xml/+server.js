@@ -11,6 +11,7 @@ const PAGE_FILES = Object.keys(import.meta.glob('/src/routes/**/+page.svelte'));
 
 // Routes that exist as pages but must NOT be indexed.
 const EXCLUDE = [
+	/^\/docs$/, // 301 → docs.faf.one (external canonical)
 	/^\/og(\/|$)/, // OpenGraph image render targets
 	/^\/blog\/drafts(\/|$)/, // unpublished drafts
 	/^\/diagrams\/og-/, // diagram OG render targets
@@ -33,7 +34,7 @@ function meta(route) {
 	if (route === '/updates') return ['weekly', '0.8'];
 	if (
 		['/voice', '/zeph', '/grok', '/cli', '/rust', '/pro', '/mcp', '/mcpaas',
-			'/ecosystem', '/v4', '/docs', '/wjttc', '/demos'].includes(route)
+			'/ecosystem', '/v4', '/wjttc', '/demos'].includes(route)
 	) return ['monthly', '0.85'];
 	if (route === '/diagrams') return ['monthly', '0.8'];
 	if (route.startsWith('/diagrams/')) return ['monthly', '0.6'];

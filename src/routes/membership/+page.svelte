@@ -140,7 +140,7 @@
 
 					<p class="tier-note"><small>Public projects only</small></p>
 
-					<a href="/docs" class="btn btn-secondary">
+					<a href="https://docs.faf.one/getting-started" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
 						Get Started
 					</a>
 				</div>
@@ -276,7 +276,7 @@
 				<a href="mailto:team@faf.one?subject=Strategic Partnership" class="btn btn-primary">Strategic Partner</a>
 				<a href="mailto:team@faf.one?subject=Enterprise" class="btn btn-secondary">Enterprise</a>
 				<a href="mailto:team@faf.one?subject=Professional" class="btn btn-secondary">Professional</a>
-				<a href="/docs" class="btn btn-secondary">Individual (Free)</a>
+				<a href="https://docs.faf.one/getting-started" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Individual (Free)</a>
 			</div>
 
 			<p class="cta-footer">

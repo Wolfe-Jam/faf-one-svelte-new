@@ -195,7 +195,7 @@ function generateLicenseEmailHTML(license: License): string {
         <p>That's it! TURBO will generate championship-grade .faf files with 85-100% AI readiness scores. 🏆</p>
         `}
 
-        <a href="${isPro ? 'https://faf.one/pro' : 'https://faf.one/docs'}" class="button">${isPro ? 'FAF Pro' : 'View Documentation'}</a>
+        <a href="${isPro ? 'https://faf.one/pro' : 'https://docs.faf.one'}" class="button">${isPro ? 'FAF Pro' : 'View Documentation'}</a>
 
         <h3>Need Help?</h3>
         <p>We're here for you:</p>
@@ -297,7 +297,7 @@ ${isPro ? `1. Update:
 3. Analyze:
    faf-turbo analyze my-workflow.json`}
 
-Documentation: https://faf.one/docs
+Documentation: https://docs.faf.one
 Support: Reply to this email
 
 — The .FAF Team

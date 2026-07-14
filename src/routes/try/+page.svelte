@@ -265,7 +265,7 @@
 			<p class="deep-dive-description">
 				Install the MCP server for persistent AI context in Claude Desktop
 			</p>
-			<a href="/docs" class="deep-dive-btn">
+			<a href="/mcp" class="deep-dive-btn">
 				Deep Dive (For MCP Developers) →
 			</a>
 		</section>
