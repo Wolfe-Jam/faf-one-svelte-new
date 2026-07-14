@@ -272,22 +272,23 @@
 		}
 	}
 
-	/* Footer chrome — gizmo lives in the page flow above the locked-dark bar,
-	   never fixed over content and never inside the black footer strip. */
+	/* Footer chrome — full-bleed so gizmo stays viewport-left even if an ancestor
+	   centers content. Gizmo sits above the locked-dark bar, never on it. */
 	.footer-chrome {
 		margin-top: 3rem;
-		width: 100%;
+		width: 100vw;
+		max-width: 100%;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		box-sizing: border-box;
 	}
 
-	/* Page-left, not centered in the 700px content column — matches the old
-	   fixed gizmo at left: 1.5rem on the viewport edge. */
+	/* Locked to viewport left (1.5rem), not a centered max-width column. */
 	.theme-toggle {
-		width: 100%;
-		margin: 0 0 1.25rem;
-		padding-left: 1.5rem;
-		display: flex;
-		justify-content: flex-start;
-		box-sizing: border-box;
+		margin: 0 0 1.25rem 1.5rem;
+		padding: 0;
+		width: max-content;
+		display: block;
 	}
 
 	/* Home badge — black circle, thick white outline, white back-arrow.
