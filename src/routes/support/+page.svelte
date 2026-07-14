@@ -98,7 +98,6 @@
 				<ul>
 					<li><a href="https://github.com/Wolfe-Jam/faf/discussions" target="_blank">GitHub Discussions</a></li>
 					<li><a href="https://x.com/wolfe_jam" target="_blank">X (Twitter)</a></li>
-					<li><a href="/founders">Founders Circle</a></li>
 				</ul>
 			</div>
 		</div>
