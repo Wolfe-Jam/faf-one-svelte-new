@@ -98,25 +98,22 @@
 	<section class="content">
 		<h2>Ways to 100%</h2>
 		<p class="section-intro">Three paths. Same honest score. Pick your friction level.</p>
-		<div class="path-matrix" role="table" aria-label="Three paths to 100 percent AI context">
-			<div class="matrix-head" role="row">
-				<div class="matrix-corner" role="columnheader"></div>
-				<div class="matrix-col" role="columnheader">Start</div>
-				<div class="matrix-col" role="columnheader">Grow</div>
-				<div class="matrix-col" role="columnheader">Finish</div>
-			</div>
+		<div class="path-flows" aria-label="Three paths to 100 percent AI context">
 			{#each paths as path}
-				<div class="matrix-row" class:highlight={path.id === 'popular'} role="row">
-					<div class="matrix-row-label" role="rowheader">
+				<div class="path-row" class:highlight={path.id === 'popular'}>
+					<div class="path-label">
 						<span class="path-name">{path.label}</span>
 						<span class="path-tag">{path.tag}</span>
 					</div>
-					{#each path.steps as step}
-						<div class="matrix-cell" role="cell">
-							<code class="cell-cmd">{step.cmd}</code>
-							<span class="cell-note">{step.note}</span>
-						</div>
-					{/each}
+					<div class="path-steps">
+						{#each path.steps as step, i}
+							{#if i > 0}<span class="step-arrow" aria-hidden="true">→</span>{/if}
+							<div class="step-chip">
+								<code class="cell-cmd">{step.cmd}</code>
+								<span class="cell-note">{step.note}</span>
+							</div>
+						{/each}
+					</div>
 				</div>
 			{/each}
 		</div>
@@ -491,62 +488,36 @@ faf go
 		color: var(--faf-orange);
 	}
 
-	.path-matrix {
-		display: grid;
-		gap: 0;
-		border: 1px solid var(--faf-light-gray);
-		border-radius: 10px;
-		overflow: hidden;
+	.path-flows {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.path-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: 0.75rem 1rem;
+		padding: 1rem 1.15rem;
 		background: var(--faf-surface);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 8px;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
-	.matrix-head,
-	.matrix-row {
-		display: grid;
-		grid-template-columns: 7.5rem repeat(3, 1fr);
-	}
-
-	.matrix-head {
-		background: var(--faf-locked-dark-elevated);
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.matrix-corner {
-		background: var(--faf-locked-dark-elevated);
-	}
-
-	.matrix-col {
-		padding: 0.65rem 0.75rem;
-		font-size: 0.72rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		color: var(--faf-orange);
-		text-align: center;
-		border-left: 1px solid rgba(255, 255, 255, 0.08);
-	}
-
-	.matrix-row {
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.matrix-row:last-child {
-		border-bottom: none;
-	}
-
-	.matrix-row.highlight {
+	.path-row.highlight {
 		background: var(--faf-orange-tint);
+		border-left-color: var(--faf-cyan-dark);
 	}
 
-	.matrix-row-label {
+	.path-label {
+		flex: 0 0 7.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: 0.2rem;
-		padding: 0.85rem 0.75rem;
-		background: var(--faf-section-alt);
-		border-right: 1px solid var(--faf-light-gray);
 	}
 
 	.path-name {
@@ -564,14 +535,32 @@ faf go
 		letter-spacing: 0.04em;
 	}
 
-	.matrix-cell {
+	.path-steps {
+		flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem 0.65rem;
+		min-width: 0;
+	}
+
+	.step-arrow {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+		line-height: 1;
+		flex-shrink: 0;
+	}
+
+	.step-chip {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		gap: 0.3rem;
-		padding: 0.85rem 0.75rem;
-		border-left: 1px solid var(--faf-light-gray);
-		min-height: 4.5rem;
+		gap: 0.2rem;
+		padding: 0.55rem 0.75rem;
+		background: var(--faf-section-alt);
+		border: 1px solid var(--faf-light-gray);
+		border-radius: 6px;
+		min-width: 5.5rem;
 	}
 
 	.cell-cmd {
@@ -938,47 +927,26 @@ faf go
 			font-size: 1.9rem;
 		}
 
-		.matrix-head {
-			display: none;
+		.path-row {
+			flex-direction: column;
 		}
 
-		.matrix-row {
-			grid-template-columns: 1fr;
-		}
-
-		.matrix-row-label {
-			border-right: none;
-			border-bottom: 1px solid var(--faf-light-gray);
+		.path-label {
+			flex: none;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-		}
-
-		.matrix-cell {
-			border-left: none;
+			width: 100%;
+			padding-bottom: 0.35rem;
 			border-bottom: 1px solid var(--faf-light-gray);
-			min-height: auto;
 		}
 
-		.matrix-cell::before {
-			content: attr(data-step);
-			font-size: 0.65rem;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.06em;
-			color: var(--faf-cyan-text);
+		.path-steps {
+			width: 100%;
 		}
 
-		.matrix-row .matrix-cell:nth-child(2)::before {
-			content: 'Start';
-		}
-
-		.matrix-row .matrix-cell:nth-child(3)::before {
-			content: 'Grow';
-		}
-
-		.matrix-row .matrix-cell:nth-child(4)::before {
-			content: 'Finish';
+		.step-chip {
+			flex: 1 1 auto;
 		}
 
 		.command-row {
