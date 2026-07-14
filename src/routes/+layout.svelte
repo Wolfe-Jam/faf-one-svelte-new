@@ -114,13 +114,14 @@
 
 {@render children?.()}
 
-{#if !$page.data?.hideThemeToggle}
-	<div class="theme-toggle">
-		<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
-	</div>
-{/if}
-
-<Footer />
+<div class="footer-chrome">
+	{#if !$page.data?.hideThemeToggle}
+		<div class="theme-toggle">
+			<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
+		</div>
+	{/if}
+	<Footer />
+</div>
 
 <style>
 	/* LOCKED-DARK by design (wolfejam 2026-05-22) — banner stays
@@ -271,11 +272,15 @@
 		}
 	}
 
-	/* Theme gizmo — sits just above the footer, bottom-left of the page flow
-	   (not fixed over content mid-scroll). */
+	/* Footer chrome — gizmo lives in the page flow above the locked-dark bar,
+	   never fixed over content and never inside the black footer strip. */
+	.footer-chrome {
+		margin-top: 3rem;
+	}
+
 	.theme-toggle {
 		max-width: 700px;
-		margin: 2rem auto 0;
+		margin: 0 auto 1.25rem;
 		padding: 0 1.5rem;
 		display: flex;
 		justify-content: flex-start;

@@ -47,7 +47,7 @@
 		background: #0a0a0a;
 		color: #e5e5e5;
 		padding: 2.5rem 1.5rem 2rem;
-		margin-top: 3rem;
+		margin-top: 0;
 		border-top: 3px solid var(--faf-orange);
 		text-align: center;
 	}
