@@ -117,7 +117,7 @@
 <!-- Milestone banner -->
 <div class="official-banner" class:auto-hide={!$page.data?.pinBanner} class:revealed={nearTop}>
 	<a href="/downloads" class="banner-line">
-		<strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-receipt"> · Anthropic-merged</span><span class="banner-receipt-extra"> #2759 · IANA-registered</span>
+		<span class="banner-receipt">Anthropic-merged<span class="banner-receipt-extra"> #2759</span></span><span class="banner-sep"> · </span><strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-tail"> · IANA-registered</span>
 	</a>
 </div>
 
@@ -277,7 +277,8 @@
 			font-size: 0.82em;
 		}
 
-		.banner-receipt-extra {
+		.banner-receipt-extra,
+		.banner-tail {
 			display: none;
 		}
 	}
