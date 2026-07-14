@@ -46,7 +46,6 @@
 		'/ideas': { title: 'Ideas', category: 'Standards', emoji: '💡', description: 'Concepts & proposals' },
 		'/drift': { title: 'Drift', category: 'Standards', emoji: '🌊', description: 'Context drift' },
 
-		'/founders': { title: 'Founders', category: 'Community', emoji: '👥', description: 'The people behind FAF' },
 		'/sponsors': { title: 'Sponsors', category: 'Community', emoji: '💛', description: 'Support the project' },
 		'/membership': { title: 'Membership', category: 'Community', emoji: '🎟️', description: 'Friends of FAF' },
 		'/support': { title: 'Support', category: 'Community', emoji: '🆘', description: 'Get help' },

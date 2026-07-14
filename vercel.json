@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "redirects": [
     { "source": "/docs/commands", "destination": "/docs", "permanent": true },
-    { "source": "/sponsors", "destination": "/founders", "permanent": true },
+    { "source": "/founders", "destination": "/sponsors", "permanent": true },
     { "source": "/drift", "destination": "/ecosystem", "permanent": true },
     { "source": "/rust", "destination": "/pro", "permanent": true },
     { "source": "/3ws", "destination": "/ideas", "permanent": true }
