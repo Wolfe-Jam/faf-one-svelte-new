@@ -852,8 +852,9 @@ faf go
 	}
 
 	pre {
-		background: var(--faf-locked-dark-elevated);
-		color: var(--faf-locked-dark-text);
+		background: var(--faf-gray-light);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
 		padding: 0.75rem 1rem;
 		border-radius: 8px;
 		overflow-x: auto;
@@ -864,10 +865,15 @@ faf go
 		white-space: pre-wrap;
 	}
 
+	/* Beat .card code specificity so block code stays clean on the soft gray */
+	.card pre code,
 	pre code {
+		display: inline;
+		margin-top: 0;
 		background: none;
 		padding: 0;
 		color: inherit;
+		border-radius: 0;
 	}
 
 	code {
