@@ -6,12 +6,12 @@
 	<title>Sponsor .faf | Support the AI-Context Standard</title>
 	<meta
 		name="description"
-		content="FAF is free software, IANA-registered, and Anthropic-merged — built and maintained in the open. Sponsorship funds development of the standard."
+		content="Sponsor FAF on GitHub. MIT-licensed, IANA-registered, Anthropic-merged — sponsorship funds maintenance of the open standard."
 	/>
 	<meta property="og:title" content="Sponsor .faf" />
 	<meta
 		property="og:description"
-		content="Free, open, IANA-registered, Anthropic-merged. Sponsorship keeps the AI-context standard free and moving."
+		content="MIT licensed. IANA-registered. Sponsorship on GitHub keeps the standard free and maintained."
 	/>
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -20,7 +20,7 @@
 <main class="page">
 	<section class="hero">
 		<h1>Sponsor <span class="faf">.faf</span></h1>
-		<p class="sub">Free software. Built in the open. Funded by you.</p>
+		<p class="sub">The standard stays free. Sponsorship funds maintenance.</p>
 		<div class="hero-receipts">
 			<span class="receipt">IANA-registered</span>
 			<span class="receipt">Anthropic MCP #2759</span>
@@ -32,51 +32,33 @@
 			rel="noopener noreferrer"
 			class="cta"
 		>
-			Sponsor on GitHub
+			Sponsor on GitHub →
 		</a>
+		<p class="cta-note">Monthly or one-time — tiers and amounts live on GitHub Sponsors.</p>
 	</section>
 
 	<section class="content">
-		<h2>Why Sponsor</h2>
+		<h2>Why sponsor</h2>
 		<div class="cards">
 			<div class="card">
-				<h3>A Format, Not a Tool</h3>
+				<h3>Infrastructure, not a product</h3>
 				<p>
-					You back infrastructure — like JSON, YAML, or Markdown. The standard that gives any AI
-					your project context.
+					Like JSON or Markdown — a format devs depend on. Sponsorship keeps the spec, tooling, and
+					registrations maintained.
 				</p>
 			</div>
 			<div class="card">
-				<h3>Free Stays Free</h3>
+				<h3>Free stays free</h3>
 				<p>
-					MIT licensed. IANA-registered. Anthropic-merged. The format and dev tools stay free — no
-					paywalls, no lock-in. Sponsorship keeps it that way.
+					faf-cli, MCP servers, and SDKs stay MIT. Sponsorship pays for upkeep — domains, CI, IANA —
+					not access.
 				</p>
 			</div>
 			<div class="card">
-				<h3>Maintained in the Open</h3>
-				<p>
-					The CLI, the MCP server fleet, the spec, the IANA registrations — built and maintained in
-					the open. Your support makes it sustainable.
-				</p>
+				<h3>Built in the open</h3>
+				<p>One maintainer, public repos, public receipts. GitHub Sponsors is the only sponsorship path.</p>
 			</div>
 		</div>
-	</section>
-
-	<section class="content funnel">
-		<h2>Pick a Tier on GitHub</h2>
-		<p>
-			Monthly from $5. One-time from $20. Custom amounts welcome. Every sponsor is a receipt that
-			open AI-context infrastructure is worth backing.
-		</p>
-		<a
-			href="https://github.com/sponsors/Wolfe-Jam"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="cta"
-		>
-			Sponsor on GitHub
-		</a>
 	</section>
 
 	<section class="content">
@@ -84,37 +66,27 @@
 		<div class="faq">
 			<div class="faq-item">
 				<h3>Will .faf stay free?</h3>
-				<p>
-					Yes. faf-cli, the MCPs and SDKs stay MIT licensed and free for all devs. Sponsorship funds
-					sustainable maintenance — it never gates the format. Team and Enterprise licenses are paid
-					products on top.
-				</p>
+				<p>Yes. The format and dev tools stay MIT. Sponsorship never gates the standard.</p>
 			</div>
 			<div class="faq-item">
-				<h3>Can't afford to sponsor?</h3>
-				<p>That's fine. Keep using .faf for free. Sponsorship is for those who want to back continued development.</p>
+				<h3>Can't afford it?</h3>
+				<p>Use .faf for free. Sponsor only if you want to fund continued maintenance.</p>
 			</div>
 			<div class="faq-item">
 				<h3>Sponsoring as a company?</h3>
-				<p>
-					The Works Team and Title Sponsor tiers are built for companies — logo placement, a direct
-					line, and a say in what gets built next.
-				</p>
+				<p>GitHub Sponsors supports org accounts. Pick any tier or amount on the sponsor page.</p>
 			</div>
 			<div class="faq-item">
 				<h3>Where does it go?</h3>
-				<p>
-					Straight to keeping FAF alive — domains, edge hosting, CI, IANA upkeep, and real time on
-					the standard.
-				</p>
+				<p>Domains, edge hosting, CI, IANA upkeep, and time on the spec and tooling.</p>
 			</div>
 		</div>
 	</section>
 
 	<PageActions
-		headline="Back open AI-context infrastructure."
-		point1="FAF is IANA-registered, Anthropic-merged, MIT licensed."
-		point2="Sponsorship keeps the standard free and moving."
+		headline="Back the open AI-context standard."
+		point1="IANA-registered · Anthropic MCP #2759 · MIT licensed."
+		point2="Sponsor on GitHub — free software stays free."
 		url="https://faf.one/sponsors"
 		hashtags="AI,OpenSource,FAF"
 	/>
@@ -147,7 +119,7 @@
 	}
 
 	.sub {
-		font-size: 1.15rem;
+		font-size: 1.1rem;
 		color: var(--faf-gray);
 		margin: 0 0 1.25rem;
 		font-weight: 600;
@@ -158,7 +130,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 0.5rem;
-		margin-bottom: 1.75rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.receipt {
@@ -168,6 +140,12 @@
 		background: var(--faf-gray-light);
 		padding: 0.35rem 0.65rem;
 		border-radius: 6px;
+	}
+
+	.cta-note {
+		margin: 1rem 0 0;
+		font-size: 0.85rem;
+		color: var(--faf-gray);
 	}
 
 	.content {
@@ -180,12 +158,6 @@
 		color: var(--faf-black);
 		margin: 0 0 1.25rem;
 		text-align: center;
-	}
-
-	.content p {
-		color: var(--faf-dark);
-		line-height: 1.7;
-		margin: 0;
 	}
 
 	.cards {
@@ -210,17 +182,9 @@
 
 	.card p {
 		font-size: 0.95rem;
-	}
-
-	.funnel {
-		text-align: center;
-		border-top: 1px solid var(--faf-light-gray);
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.funnel p {
-		max-width: 36rem;
-		margin: 0 auto 1.5rem;
+		color: var(--faf-dark);
+		line-height: 1.65;
+		margin: 0;
 	}
 
 	.faq {
@@ -244,6 +208,9 @@
 
 	.faq-item p {
 		font-size: 0.95rem;
+		color: var(--faf-dark);
+		line-height: 1.65;
+		margin: 0;
 	}
 
 	.cta {
