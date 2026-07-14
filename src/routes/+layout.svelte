@@ -272,12 +272,12 @@
 		}
 	}
 
-	/* Footer chrome — full-bleed so gizmo stays viewport-left even if an ancestor
-	   centers content. Gizmo sits above the locked-dark bar, never on it. */
+	/* Footer chrome — full-bleed breakout so gizmo stays viewport-left even when
+	   an ancestor centers content. Do NOT add max-width: 100% here — it caps to
+	   the parent and recenters the gizmo as the window widens. */
 	.footer-chrome {
 		margin-top: 3rem;
 		width: 100vw;
-		max-width: 100%;
 		margin-left: calc(50% - 50vw);
 		margin-right: calc(50% - 50vw);
 		box-sizing: border-box;
