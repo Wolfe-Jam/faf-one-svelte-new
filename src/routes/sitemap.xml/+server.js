@@ -15,9 +15,8 @@ const EXCLUDE = [
 	/^\/blog\/drafts(\/|$)/, // unpublished drafts
 	/^\/diagrams\/og-/, // diagram OG render targets
 	/^\/diagrams\/.*-banner$/, // diagram banner render targets
-	/^\/logo-demo$/, // dev/demo page
-	/^\/drift(\/|$)/, // WIP (gitignored)
-	/^\/sponsors(\/|$)/ // WIP
+	/^\/logo-demo$/ // dev/demo page
+	// /drift is gitignored WIP — excluded if the route file exists locally
 ];
 
 function routeFor(file) {
