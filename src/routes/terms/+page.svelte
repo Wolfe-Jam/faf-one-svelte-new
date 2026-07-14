@@ -1,6 +1,5 @@
 <script>
 	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -93,8 +92,6 @@
 		</div>
 	</div>
 </main>
-
-<Footer />
 
 <style>
 	.legal-page {

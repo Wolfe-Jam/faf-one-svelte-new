@@ -1,6 +1,5 @@
 <script>
 	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -79,8 +78,6 @@
 		</div>
 	</section>
 </main>
-
-<Footer />
 
 <style>
 	main {

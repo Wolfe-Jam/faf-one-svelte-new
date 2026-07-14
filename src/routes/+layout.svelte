@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import { page } from '$app/stores';
 
 	let { children, data } = $props();
@@ -118,6 +119,8 @@
 </div>
 
 {@render children?.()}
+
+<Footer />
 
 <style>
 	/* LOCKED-DARK by design (wolfejam 2026-05-22) — banner stays

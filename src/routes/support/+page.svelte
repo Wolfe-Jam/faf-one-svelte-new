@@ -1,6 +1,5 @@
 <script>
 	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 	import ContactModal from '$lib/components/ContactModal.svelte';
 
 	let showContactModal = $state(false);
@@ -235,8 +234,6 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 		</div>
 	</div>
 </main>
-
-<Footer />
 
 <ContactModal bind:isOpen={showContactModal} />
 

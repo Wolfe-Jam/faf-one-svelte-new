@@ -120,22 +120,6 @@
 		</a>
 	</section>
 
-	<!-- Section 6: Footer -->
-	<footer class="landing-footer">
-		<p class="footer-tagline">The Context Standard for AI</p>
-		<div class="footer-links">
-			<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener">GitHub</a>
-			<span class="dot">·</span>
-			<a href="/blog">Blog</a>
-			<span class="dot">·</span>
-			<a href="/privacy">Privacy</a>
-			<span class="dot">·</span>
-			<a href="/about">About</a>
-		</div>
-		<p class="footer-iana">IANA Registered · application/vnd.faf+yaml</p>
-		<p class="footer-copy">© {new Date().getFullYear()} FAF</p>
-	</footer>
-
 </main>
 
 <style>
@@ -471,50 +455,6 @@
 		color: var(--faf-orange);
 		font-size: 1.4rem;
 		font-weight: 700;
-	}
-
-	/* Footer */
-	.landing-footer {
-		text-align: center;
-		padding: 4rem 0 3rem;
-		border-top: 1px solid var(--faf-light-gray);
-	}
-
-	.footer-tagline {
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--faf-black);
-		margin-bottom: 1rem;
-	}
-
-	.footer-links {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		margin-bottom: 1.5rem;
-		font-size: 0.9rem;
-	}
-
-	.footer-links a {
-		color: var(--faf-gray);
-		text-decoration: none;
-		transition: var(--transition-fast);
-	}
-
-	.footer-links a:hover {
-		color: var(--faf-orange);
-	}
-
-	.footer-iana {
-		font-size: 0.8rem;
-		color: var(--faf-gray);
-		margin-bottom: 0.5rem;
-	}
-
-	.footer-copy {
-		font-size: 0.75rem;
-		color: var(--faf-gray);
 	}
 
 	/* Mobile */

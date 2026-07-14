@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 
 	const RELEASES_URL =
 		'https://raw.githubusercontent.com/Wolfe-Jam/faf-cli/main/website/releases.json';
@@ -106,8 +105,6 @@
 		{/if}
 	</div>
 </main>
-
-<Footer />
 
 <style>
 	.updates-page {

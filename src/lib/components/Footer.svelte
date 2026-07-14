@@ -1,284 +1,112 @@
 <script>
-	import FafLogo from '$lib/components/FafLogo.svelte';
-	import ContactModal from '$lib/components/ContactModal.svelte';
-	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
-
 	const currentYear = new Date().getFullYear();
-	let showContactModal = $state(false);
+
+	const links = [
+		{ label: 'GitHub', href: 'https://github.com/Wolfe-Jam/faf-cli', external: true },
+		{ label: 'Docs', href: '/docs' },
+		{ label: 'Links', href: '/links' },
+		{ label: 'Blog', href: '/blog' },
+		{ label: 'Sponsor', href: '/sponsors' },
+		{ label: 'Privacy', href: '/privacy' },
+		{ label: 'Terms', href: '/terms' }
+	];
 </script>
 
 <footer class="footer" id="footer">
 	<div class="container">
-		<div class="footer-grid">
-			<div class="footer-brand">
-				<div class="footer-logo">
-					<FafLogo size="small" color="orange" />
-					<span class="logo-tagline">Project DNA ✨ for ANY AI</span>
-				</div>
-				<p class="footer-mission">NO BS. No FAFfing About.</p>
-				<div class="footer-stats">
-					<div class="stat">☑️ 16 Packages, 3 Registries</div>
-					<div class="stat">☑️ Chrome Extension LIVE</div>
-				</div>
-			</div>
-			
-			<div class="footer-column">
-				<h4>Product</h4>
-				<ul>
-					<li><a href="https://www.fafcli.dev/" target="_blank">.faf CLI</a></li>
-					<li><a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank">Chrome Extension</a></li>
-					<li><a href="https://github.com/Wolfe-Jam/faf" target="_blank">⭐ MCP Server</a></li>
-					<li><a href="/n8n">n8n.faf AIAaaS</a></li>
-				</ul>
-			</div>
-			
-			<div class="footer-column">
-				<h4>Resources</h4>
-				<ul>
-					<li><a href="/docs">Documentation</a></li>
-					<li><a href="https://fafdev.tools/welcome.html" target="_blank">Links</a></li>
-					<li><a href="/support">Support</a></li>
-					<li><a href="/sponsors">Sponsor</a></li>
-					<li><a href="/calculator">ROI Calculator</a></li>
-					<li><a href="https://billing.stripe.com/p/login/4gM3cx1NPbfo42Lab6bV600" target="_blank">Customer Portal</a></li>
-				</ul>
-			</div>
-			
-			<div class="footer-column">
-				<h4>Company</h4>
-				<ul>
-					<li><a href="/terms">Terms of Service</a></li>
-					<li><a href="/privacy">Privacy Policy</a></li>
-					<li><button onclick={() => showContactModal = true} class="contact-button">Contact</button></li>
-					<li><a href="/press">Press Kit</a></li>
-				</ul>
-			</div>
-		</div>
-		
-		<div class="footer-social">
-			<a href="https://github.com/Wolfe-Jam/faf" target="_blank" rel="noopener noreferrer" aria-label="⭐ GitHub">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-					<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-				</svg>
-			</a>
-		</div>
-		
-		<div class="footer-newsletter">
-			<NewsletterSignup variant="footer" />
-		</div>
+		<p class="tagline">The Context Standard for AI</p>
 
-		<div class="footer-bottom">
-			<p>© {currentYear} .faf Format Authority. Built with 🧡 in Atlanta.</p>
-			<p class="footer-creator">Creator: James Wolfe (Wolfe-Jam) | <a href="https://orcid.org/0009-0007-0801-3841" target="_blank" rel="noopener noreferrer">ORCID: 0009-0007-0801-3841</a></p>
-		</div>
+		<nav class="footer-nav" aria-label="Site footer">
+			{#each links as link, i}
+				{#if i > 0}<span class="sep" aria-hidden="true">·</span>{/if}
+				<a
+					href={link.href}
+					target={link.external ? '_blank' : undefined}
+					rel={link.external ? 'noopener noreferrer' : undefined}
+				>
+					{link.label}
+				</a>
+			{/each}
+		</nav>
+
+		<p class="meta">IANA-registered · application/vnd.faf+yaml · Atlanta</p>
+
+		<p class="copy">
+			© {currentYear} FAF ·
+			<a href="https://orcid.org/0009-0007-0801-3841" target="_blank" rel="noopener noreferrer">
+				James Wolfe (ORCID)
+			</a>
+		</p>
 	</div>
 </footer>
-
-<ContactModal bind:isOpen={showContactModal} />
 
 <style>
 	.footer {
 		background: var(--faf-black);
 		color: var(--faf-white);
-		padding: 4rem 0 2rem;
-		margin-top: 4rem;
+		padding: 2.5rem 1.5rem 2rem;
+		margin-top: 3rem;
 		border-top: 3px solid var(--faf-orange);
-	}
-	
-	.footer-grid {
-		display: grid;
-		grid-template-columns: 2fr 1fr 1fr 1fr;
-		gap: 3rem;
-		margin-bottom: 3rem;
-		padding-bottom: 3rem;
-		border-bottom: 1px solid #333;
-	}
-	
-	.footer-brand {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-	
-	.footer-logo {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		align-items: flex-start;
-	}
-	
-	.logo-tagline {
-		font-size: 0.875rem;
-		color: var(--faf-white);
-		font-weight: 700;
-		text-decoration: underline;
-		font-family: var(--font-mono);
-	}
-	
-	.footer-mission {
-		margin: 0;
-		color: var(--faf-white);
-		font-weight: 600;
-		font-size: 1.125rem;
-	}
-	
-	.footer-stats {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-	
-	.stat {
-		color: #999;
-		font-size: 0.875rem;
-		font-family: var(--font-mono);
-	}
-
-	.stat :global(.stat-link) {
-		color: #999;
-		text-decoration: none;
-		transition: color 0.2s ease;
-	}
-
-	.stat :global(.stat-link:hover) {
-		color: var(--faf-orange);
-	}
-	
-	.footer-column h4 {
-		margin: 0 0 1rem 0;
-		font-size: 0.875rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: var(--faf-orange);
-		font-weight: 700;
-	}
-	
-	.footer-column ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-	
-	.footer-column li {
-		margin: 0;
-	}
-	
-	.footer-column a {
-		color: #999;
-		text-decoration: none;
-		font-size: 0.875rem;
-		transition: color 0.2s ease;
-		display: inline-block;
-	}
-	
-	.footer-column a:hover {
-		color: var(--faf-orange);
-		transform: translateX(2px);
-	}
-
-	.contact-button {
-		background: none;
-		border: none;
-		color: #999;
-		text-decoration: none;
-		font-size: 0.875rem;
-		transition: color 0.2s ease;
-		display: inline-block;
-		cursor: pointer;
-		padding: 0;
-		font-family: inherit;
-		text-align: left;
-	}
-
-	.contact-button:hover {
-		color: var(--faf-orange);
-		transform: translateX(2px);
-	}
-
-	.footer-newsletter {
-		max-width: 280px;
-		margin: 0 auto 2rem;
-	}
-
-	.footer-bottom {
 		text-align: center;
-		padding-top: 2rem;
-	}
-	
-	.footer-bottom p {
-		margin: 0;
-		color: #666;
-		font-size: 0.875rem;
 	}
 
-	.footer-creator {
-		margin-top: 0.5rem !important;
-		font-size: 0.8rem !important;
+	.container {
+		max-width: 700px;
+		margin: 0 auto;
 	}
 
-	.footer-creator a {
-		color: var(--faf-orange);
+	.tagline {
+		margin: 0 0 1rem;
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: var(--faf-white);
+	}
+
+	.footer-nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.35rem 0.5rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.footer-nav a {
+		color: #bbb;
 		text-decoration: none;
+		font-size: 0.875rem;
+		font-weight: 500;
 		transition: color 0.2s ease;
 	}
 
-	.footer-creator a:hover {
-		text-decoration: underline;
-	}
-	
-	.footer-social {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		padding: 2rem 0;
-		border-bottom: 1px solid #333;
-	}
-	
-	.footer-social a {
-		color: #666;
-		transition: all 0.3s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	
-	.footer-social a:hover {
+	.footer-nav a:hover {
 		color: var(--faf-orange);
-		transform: translateY(-3px);
 	}
-	
-	.footer-social svg {
-		width: 24px;
-		height: 24px;
+
+	.sep {
+		color: #555;
+		user-select: none;
 	}
-	
-	@media (max-width: 968px) {
-		.footer-grid {
-			grid-template-columns: 1fr 1fr;
-			gap: 2rem;
-		}
-		
-		.footer-brand {
-			grid-column: 1 / -1;
-		}
+
+	.meta {
+		margin: 0 0 0.5rem;
+		font-size: 0.8rem;
+		color: #888;
+		font-family: var(--font-mono);
 	}
-	
-	@media (max-width: 600px) {
-		.footer-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-			text-align: center;
-		}
-		
-		.footer-column ul {
-			align-items: center;
-		}
-		
-		.footer-stats {
-			align-items: center;
-		}
+
+	.copy {
+		margin: 0;
+		font-size: 0.8rem;
+		color: #666;
+	}
+
+	.copy a {
+		color: var(--faf-orange);
+		text-decoration: none;
+	}
+
+	.copy a:hover {
+		text-decoration: underline;
 	}
 </style>
