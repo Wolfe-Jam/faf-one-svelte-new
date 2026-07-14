@@ -287,12 +287,11 @@
 		margin-top: 3rem;
 	}
 
-	/* Theme gizmo — viewport bottom-left (same left as .home-badge). Raised above
-	   the locked-dark footer so it never reads as sitting on the footer bar. */
+	/* Theme gizmo — viewport bottom-left (mirror of .home-badge top-left). */
 	.theme-toggle {
 		position: fixed;
 		left: 20px;
-		bottom: 17rem;
+		bottom: 1.5rem;
 		z-index: 9998;
 	}
 
@@ -413,7 +412,7 @@
 
 		.theme-toggle {
 			left: 15px;
-			bottom: 15rem;
+			bottom: 1.25rem;
 		}
 	}
 </style>
