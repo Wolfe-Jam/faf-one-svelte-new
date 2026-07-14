@@ -276,14 +276,18 @@
 	   never fixed over content and never inside the black footer strip. */
 	.footer-chrome {
 		margin-top: 3rem;
+		width: 100%;
 	}
 
+	/* Page-left, not centered in the 700px content column — matches the old
+	   fixed gizmo at left: 1.5rem on the viewport edge. */
 	.theme-toggle {
-		max-width: 700px;
-		margin: 0 auto 1.25rem;
-		padding: 0 1.5rem;
+		width: 100%;
+		margin: 0 0 1.25rem;
+		padding-left: 1.5rem;
 		display: flex;
 		justify-content: flex-start;
+		box-sizing: border-box;
 	}
 
 	/* Home badge — black circle, thick white outline, white back-arrow.
