@@ -450,7 +450,7 @@ faf go
 	}
 
 	.card {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
@@ -463,12 +463,12 @@ faf go
 
 	.card.bad {
 		border-left-color: #dc2626;
-		background: #fef2f2;
+		background: var(--faf-card-error-bg);
 	}
 
 	.card.good {
 		border-left-color: #16a34a;
-		background: #f0fdf4;
+		background: var(--faf-card-success-bg);
 	}
 
 	.link-card {
@@ -709,7 +709,7 @@ faf go
 	}
 
 	.faq-item {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;

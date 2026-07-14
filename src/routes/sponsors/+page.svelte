@@ -166,7 +166,7 @@
 	}
 
 	.card {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
@@ -193,7 +193,7 @@
 	}
 
 	.faq-item {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;

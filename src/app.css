@@ -21,6 +21,16 @@
 	--faf-surface-border: #e0e0e0;        /* Card borders on creme canvas */
 	--faf-section-alt: #f9f6f1;          /* Alternating section wash (membership, etc.) */
 	--faf-orange-tint: #fff5f0;          /* Orange callout wash (blog, ecosystem) */
+	--faf-card-success-bg: #f0fdf4;
+	--faf-card-success-border: #bbf7d0;
+	--faf-card-error-bg: #fef2f2;
+	--faf-card-info-bg: #eff6ff;
+	--faf-pill-success-bg: #f0fdf4;
+	--faf-pill-success-fg: #16a34a;
+	--faf-pill-success-border: #bbf7d0;
+	--faf-pill-info-bg: #eff6ff;
+	--faf-pill-info-fg: #2563eb;
+	--faf-pill-info-border: #bfdbfe;
 	--faf-locked-dark-hover: #111111;    /* Hover on locked-dark rows/cards */
 	--faf-locked-dark-muted: #2d2d2d;   /* Dark page gradients (updates, etc.) */
 	
@@ -73,6 +83,18 @@
 	--faf-gray-light: #222222;
 	--faf-light-gray: #222222;
 	--faf-cyan-text: #00d4d4;
+	--faf-section-alt: #1e1e1e;
+	--faf-orange-tint: #2a2018;
+	--faf-card-success-bg: #0f2318;
+	--faf-card-success-border: #1e4a30;
+	--faf-card-error-bg: #2a1414;
+	--faf-card-info-bg: #141c2a;
+	--faf-pill-success-bg: #0f2318;
+	--faf-pill-success-fg: #4ade80;
+	--faf-pill-success-border: #1e4a30;
+	--faf-pill-info-bg: #141c2a;
+	--faf-pill-info-fg: #60a5fa;
+	--faf-pill-info-border: #1e3a5f;
 }
 
 /* Reset */

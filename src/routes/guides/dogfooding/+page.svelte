@@ -169,7 +169,7 @@
 	}
 
 	.card {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
@@ -218,15 +218,15 @@
 	}
 
 	.pill.recommended {
-		background: #f0fdf4;
-		color: #16a34a;
-		border: 1px solid #bbf7d0;
+		background: var(--faf-pill-success-bg);
+		color: var(--faf-pill-success-fg);
+		border: 1px solid var(--faf-pill-success-border);
 	}
 
 	.pill.advanced {
-		background: #eff6ff;
-		color: #2563eb;
-		border: 1px solid #bfdbfe;
+		background: var(--faf-pill-info-bg);
+		color: var(--faf-pill-info-fg);
+		border: 1px solid var(--faf-pill-info-border);
 	}
 
 	.features {
@@ -279,7 +279,7 @@
 	}
 
 	.faq-item {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;

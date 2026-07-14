@@ -502,7 +502,7 @@ faf init
 	}
 
 	.card {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
@@ -511,12 +511,12 @@ faf init
 
 	.card.bad {
 		border-left-color: #dc2626;
-		background: #fef2f2;
+		background: var(--faf-card-error-bg);
 	}
 
 	.card.good {
 		border-left-color: #16a34a;
-		background: #f0fdf4;
+		background: var(--faf-card-success-bg);
 	}
 
 	.card h3 {
@@ -553,8 +553,8 @@ faf init
 	.result {
 		margin-top: 0.75rem !important;
 		padding: 0.65rem 0.85rem;
-		background: #f0fdf4;
-		border: 1px solid #bbf7d0;
+		background: var(--faf-card-success-bg);
+		border: 1px solid var(--faf-card-success-border);
 		border-radius: 6px;
 	}
 
@@ -564,7 +564,7 @@ faf init
 	}
 
 	.faq-item {
-		background: var(--faf-white);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
