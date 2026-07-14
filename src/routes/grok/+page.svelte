@@ -57,12 +57,7 @@
 		<p class="smithery">
 			Also on Smithery:
 			<a href="https://smithery.ai/servers/wolfe-jam/grok-faf-mcp" target="_blank" rel="noopener">
-				<img
-					src="https://smithery.ai/badge/wolfe-jam/grok-faf-mcp"
-					alt="smithery badge"
-					width="200"
-					height="20"
-				/>
+				wolfe-jam/grok-faf-mcp →
 			</a>
 		</p>
 	</section>
@@ -182,9 +177,14 @@
 	}
 
 	.smithery a {
-		display: inline-block;
 		margin-left: 0.35rem;
-		vertical-align: middle;
+		color: var(--faf-cyan-text);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.smithery a:hover {
+		text-decoration: underline;
 	}
 
 	.footer-section {
