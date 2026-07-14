@@ -147,7 +147,7 @@ bunx faf-mcp`;
 <style>
 	/* Light theme — plain :global(body), no !important (prevents nav flash) */
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {

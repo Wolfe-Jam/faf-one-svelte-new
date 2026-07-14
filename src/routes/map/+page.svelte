@@ -47,7 +47,7 @@
 		'/drift': { title: 'Drift', category: 'Standards', emoji: '🌊', description: 'Context drift' },
 
 		'/sponsors': { title: 'Sponsors', category: 'Community', emoji: '💛', description: 'Support the project' },
-		'/membership': { title: 'Membership', category: 'Community', emoji: '🎟️', description: 'Friends of FAF' },
+		'/membership': { title: 'Foundation', category: 'Community', emoji: '🏛️', description: 'Stewardship → foundation.faf.one' },
 		'/support': { title: 'Support', category: 'Community', emoji: '🆘', description: 'Get help' },
 		'/press': { title: 'Press', category: 'Community', emoji: '📰', description: 'Press resources' },
 		'/press-center': { title: 'Press Center', category: 'Community', emoji: '📰', description: 'Media kit' },

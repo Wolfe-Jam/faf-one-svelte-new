@@ -542,7 +542,7 @@
 		max-width: 900px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		min-height: 100vh;
 	}
 
@@ -752,7 +752,7 @@
 	}
 
 	.findings-box.negative {
-		background: #fff5f5;
+		background: var(--faf-surface)5f5;
 		border: 2px solid #ef4444;
 	}
 
@@ -787,7 +787,7 @@
 		width: 100%;
 		border-collapse: collapse;
 		margin: 2rem 0;
-		background: white;
+		background: var(--faf-surface);
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 		border-radius: 8px;
 		overflow: hidden;
@@ -829,7 +829,7 @@
 	.matrix-table {
 		width: 100%;
 		border-collapse: collapse;
-		background: white;
+		background: var(--faf-surface);
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 		border-radius: 8px;
 		overflow: hidden;

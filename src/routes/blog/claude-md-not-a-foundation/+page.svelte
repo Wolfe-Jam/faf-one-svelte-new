@@ -195,12 +195,12 @@ project.faf  → Structure for ANY AI (foundation)`}</code></pre>
 
 <style>
 	:global(body) {
-		background: #FEFCF8 !important;
+		background: var(--faf-page-bg) !important;
 		color: #333 !important;
 	}
 
 	:global(html) {
-		background: #FEFCF8 !important;
+		background: var(--faf-page-bg) !important;
 	}
 
 	.blog-post {
@@ -279,7 +279,7 @@ project.faf  → Structure for ANY AI (foundation)`}</code></pre>
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}

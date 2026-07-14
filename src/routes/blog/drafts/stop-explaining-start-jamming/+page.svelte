@@ -616,7 +616,7 @@ faf auto</code></pre>
 	}
 
 	.insight-box {
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border: 3px solid var(--faf-orange);
 		padding: 2rem;
 		margin: 2rem 0;
@@ -632,7 +632,7 @@ faf auto</code></pre>
 	}
 
 	.code-example {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #00d4d4;
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -673,7 +673,7 @@ faf auto</code></pre>
 
 	.with {
 		background: linear-gradient(135deg, #f0fff0 0%, #e0ffe0 100%);
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 	}
 
 	.without h3 {
@@ -682,7 +682,7 @@ faf auto</code></pre>
 	}
 
 	.with h3 {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin-top: 0;
 	}
 
@@ -704,7 +704,7 @@ faf auto</code></pre>
 
 	.verdict-success {
 		font-weight: 700;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin-top: 1rem !important;
 		font-size: 1.2rem;
 	}
@@ -717,7 +717,7 @@ faf auto</code></pre>
 	}
 
 	.flow-def, .jam-def {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #009999;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -766,7 +766,7 @@ faf auto</code></pre>
 		color: var(--faf-orange);
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border-radius: 12px;
 		margin: 2rem 0 !important;
 	}
@@ -782,7 +782,7 @@ faf auto</code></pre>
 	}
 
 	.arch-layer {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #009999;
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -793,7 +793,7 @@ faf auto</code></pre>
 
 	.arch-layer.highlight {
 		border: 3px solid var(--faf-orange);
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 	}
 
 	.layer-icon {
@@ -839,7 +839,7 @@ faf auto</code></pre>
 	}
 
 	.standard {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #009999;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -884,7 +884,7 @@ faf auto</code></pre>
 	}
 
 	.differentiation {
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -925,7 +925,7 @@ faf auto</code></pre>
 		color: var(--faf-orange);
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border-radius: 12px;
 		border: 3px solid var(--faf-orange);
 		margin: 2rem 0 !important;
@@ -939,7 +939,7 @@ faf auto</code></pre>
 	}
 
 	.install-option {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #009999;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -952,7 +952,7 @@ faf auto</code></pre>
 	}
 
 	.code-block {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #00d4d4;
 		padding: 1rem;
 		border-radius: 8px;

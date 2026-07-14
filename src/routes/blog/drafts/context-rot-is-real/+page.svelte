@@ -500,7 +500,7 @@ faf auto</code></pre>
 	}
 
 	.code-block {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #00d4d4;
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -521,7 +521,7 @@ faf auto</code></pre>
 	}
 
 	.problem-box {
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border: 2px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -548,7 +548,7 @@ faf auto</code></pre>
 		color: var(--faf-orange) !important;
 		text-align: center;
 		padding: 1.5rem;
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border-radius: 8px;
 		border-left: 5px solid var(--faf-orange);
 		margin: 2rem 0 !important;
@@ -562,7 +562,7 @@ faf auto</code></pre>
 	}
 
 	.cost-item {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e5e5;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -649,7 +649,7 @@ faf auto</code></pre>
 	}
 
 	.feature {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #009999;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -725,7 +725,7 @@ faf auto</code></pre>
 
 	.after {
 		background: linear-gradient(135deg, #f0fff0 0%, #e0ffe0 100%);
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 	}
 
 	.before h3 {
@@ -734,7 +734,7 @@ faf auto</code></pre>
 	}
 
 	.after h3 {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin-top: 0;
 	}
 
@@ -763,7 +763,7 @@ faf auto</code></pre>
 		content: "✓";
 		position: absolute;
 		left: 0;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		font-weight: bold;
 		font-size: 1.2rem;
 	}
@@ -786,7 +786,7 @@ faf auto</code></pre>
 		display: flex;
 		gap: 1.5rem;
 		align-items: flex-start;
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e5e5;
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -831,7 +831,7 @@ faf auto</code></pre>
 	}
 
 	.install-option {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #009999;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -861,7 +861,7 @@ faf auto</code></pre>
 	}
 
 	.time-to-value {
-		background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;

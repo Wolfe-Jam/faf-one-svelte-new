@@ -206,7 +206,7 @@
 
 <style>
 	:global(body) {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 	}
 
 	.blog-post {
@@ -442,14 +442,14 @@
 		font-weight: 600;
 		text-decoration: none;
 		background: #f5f5f5;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 		transition: opacity 0.2s;
 	}
 
 	.share-btn:hover {
 		opacity: 0.85;
 		text-decoration: none;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 	}
 
 	.footer-note {
@@ -500,7 +500,7 @@
 	}
 
 	.terminal-block {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 8px;
 		padding: 1rem 1.5rem;

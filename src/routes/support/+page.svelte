@@ -1,5 +1,4 @@
 <script>
-	import Navigation from '$lib/components/Navigation.svelte';
 	import ContactModal from '$lib/components/ContactModal.svelte';
 
 	let showContactModal = $state(false);
@@ -57,8 +56,6 @@
 <svelte:head>
 	<title>Support | .faf Format</title>
 </svelte:head>
-
-<Navigation />
 
 <main class="support-page">
 	<div class="container">
@@ -239,7 +236,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 
 <style>
 	.support-page {
-		padding: 6rem 0 4rem;
+		padding: 3.5rem 0 4rem;
 		min-height: 100vh;
 		background: var(--faf-page-bg);
 	}

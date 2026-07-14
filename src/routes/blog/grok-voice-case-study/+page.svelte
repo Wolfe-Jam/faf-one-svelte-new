@@ -324,7 +324,7 @@ re-explain their stack, goals, or architecture. Just help.
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -456,7 +456,7 @@ re-explain their stack, goals, or architecture. Just help.
 	}
 
 	.challenge-box {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border: 2px solid #FF6B35;
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -494,7 +494,7 @@ re-explain their stack, goals, or architecture. Just help.
 	}
 
 	.browser-box {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e7eb;
 		min-width: 180px;
 	}

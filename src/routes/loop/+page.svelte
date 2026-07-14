@@ -227,7 +227,7 @@
 
 	/* Terminal — the "ask Claude" witness block */
 	.terminal {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-radius: 8px;
 		padding: 1rem 1.25rem;
 		margin: 1rem 0 0.75rem;

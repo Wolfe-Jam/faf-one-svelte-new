@@ -169,7 +169,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -194,13 +194,13 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 	}
 
 	.breadcrumb a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
 	.badge {
 		display: inline-block;
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
@@ -247,7 +247,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 		border-radius: 4px;
 		font-family: monospace;
 		font-size: 0.9em;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	ul {
@@ -300,14 +300,14 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 
 	.stat-link {
 		font-size: 0.8rem;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 		margin-top: 0.5rem;
 		display: inline-block;
 	}
 
 	.total-card {
-		background: linear-gradient(135deg, #00bf63 0%, #00a855 100%);
+		background: linear-gradient(135deg, var(--faf-foundation-green) 0%, var(--faf-foundation-green-dark) 100%);
 		color: white;
 		padding: 2rem;
 		border-radius: 12px;
@@ -345,7 +345,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 	}
 
 	.timeline-item.highlight {
-		border-left-color: #00bf63;
+		border-left-color: var(--faf-foundation-green);
 		background: linear-gradient(90deg, rgba(0, 191, 99, 0.05) 0%, transparent 100%);
 		margin-left: 0;
 		padding-left: 2rem;
@@ -354,7 +354,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 
 	.timeline-date {
 		font-weight: 700;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		min-width: 80px;
 		font-size: 0.9rem;
 	}
@@ -392,7 +392,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 	.closing {
 		text-align: center;
 		font-size: 1.25rem;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin-top: 2rem;
 	}
 
@@ -413,7 +413,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 	}
 
 	.npm-button { background: #cb3837; }
-	.foundation-button { background: #00bf63; }
+	.foundation-button { background: var(--faf-foundation-green); }
 	.github-button { background: #1a1a1a; }
 
 	.post-footer {
@@ -425,7 +425,7 @@ The FAF format surpasses 20,000 npm downloads across 4 packages: faf-cli, claude
 	}
 
 	.post-footer a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	@media (max-width: 768px) {

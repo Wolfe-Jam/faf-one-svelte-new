@@ -157,7 +157,7 @@ commands:
 <style>
 	/* Dark IANA register: almost-black background, white text, austere. Locked dark. */
 	:global(body) {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 	}
 
 	.blog-post {

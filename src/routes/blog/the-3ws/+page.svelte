@@ -176,7 +176,7 @@ WHO, WHAT, WHY. Three questions. That's all a developer needs to start.`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -402,7 +402,7 @@ WHO, WHAT, WHY. Three questions. That's all a developer needs to start.`;
 	}
 
 	.reorder-row.changed {
-		background: #fff3ee;
+		background: var(--faf-surface)3ee;
 	}
 
 	.arrow {

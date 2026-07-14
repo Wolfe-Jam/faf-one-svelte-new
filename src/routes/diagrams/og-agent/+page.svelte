@@ -94,7 +94,7 @@
 	.banner-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 		padding: 2rem;
@@ -104,7 +104,7 @@
 	.hero-banner {
 		width: 1200px;
 		height: 630px;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark) 0%, #1a1a1a 100%);
 		position: relative;
 		overflow: hidden;
 		border-radius: 12px;
@@ -229,7 +229,7 @@
 		max-width: 1200px;
 		margin: 2rem auto 0 auto;
 		padding: 1rem;
-		background: #fff3cd;
+		background: var(--faf-surface)3cd;
 		border-left: 4px solid #ffc107;
 		border-radius: 8px;
 		font-size: 0.9rem;

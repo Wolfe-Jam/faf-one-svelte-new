@@ -118,7 +118,7 @@
 
 	.press-center {
 		padding: 3rem 0;
-		background: white;
+		background: var(--faf-surface);
 	}
 
 	.container {

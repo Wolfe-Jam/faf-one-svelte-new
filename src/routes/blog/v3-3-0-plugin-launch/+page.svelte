@@ -200,7 +200,7 @@ Full plugin support, SSH bug fix, and discoverable in 8,500+ plugin registry. 20
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {

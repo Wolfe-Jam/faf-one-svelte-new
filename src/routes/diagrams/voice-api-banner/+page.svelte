@@ -80,7 +80,7 @@
 	.banner-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 		padding: 2rem;
@@ -91,7 +91,7 @@
 		width: 1200px;
 		height: 480px;
 		background: linear-gradient(135deg,
-			#0a0a0a 0%,
+			var(--faf-locked-dark) 0%,
 			#1a1a1a 25%,
 			#1a2a1a 50%,
 			#2a1a0a 75%,
@@ -146,7 +146,7 @@
 		top: 2rem;
 		right: 2rem;
 		background: linear-gradient(135deg, var(--faf-green-light) 0%, #22c55e 100%);
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 		padding: 0.5rem 1.25rem;
 		border-radius: 8px;
 		font-size: 0.95rem;
@@ -252,7 +252,7 @@
 		max-width: 1200px;
 		margin: 2rem auto 0 auto;
 		padding: 1rem;
-		background: #fff3cd;
+		background: var(--faf-surface)3cd;
 		border-left: 4px solid #ffc107;
 		border-radius: 8px;
 		font-size: 0.9rem;

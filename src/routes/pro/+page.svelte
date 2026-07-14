@@ -318,13 +318,13 @@
 
 <style>
 	:global(body) {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		color: #eee;
 	}
 
 	.pro-page {
 		min-height: 100vh;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: LOCKED_GRAD;
 		color: #f5f5dc;
 		transition: background 0.4s ease;
 	}
@@ -498,7 +498,7 @@
 	}
 
 	.free-statement code {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #00d4d4;
 		padding: 0.1rem 0.4rem;
 		border-radius: 4px;
@@ -528,7 +528,7 @@
 	}
 
 	.sync-node {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 2px solid #333;
 		border-radius: 12px;
 		padding: 1.25rem 1.5rem;
@@ -569,7 +569,7 @@
 
 	/* Interops */
 	.interops-section {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 1.5rem 2rem;
@@ -590,7 +590,7 @@
 	}
 
 	.interops-desc code {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		color: #00d4d4;
 		padding: 0.1rem 0.4rem;
 		border-radius: 4px;
@@ -677,7 +677,7 @@
 	}
 
 	.rust-code-box {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #2a2420;
 		border-radius: 6px;
 		padding: 0.75rem 1rem;
@@ -719,7 +719,7 @@
 	}
 
 	.pricing-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 2px solid #333;
 		border-radius: 12px;
 		padding: 2rem 1.5rem;
@@ -760,7 +760,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		background: #00d4d4;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 		padding: 0.25rem 1rem;
 		border-radius: 12px;
 		font-size: 0.8rem;
@@ -923,7 +923,7 @@
 		display: flex;
 		align-items: flex-start;
 		gap: 1.25rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -961,7 +961,7 @@
 	}
 
 	.step-content code {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #00d4d4;
 		padding: 0.1rem 0.4rem;
 		border-radius: 4px;
@@ -969,7 +969,7 @@
 	}
 
 	.code-box {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 6px;
 		padding: 0.75rem 1rem;
@@ -1008,7 +1008,7 @@
 	}
 
 	.faq-item code {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #00d4d4;
 		padding: 0.1rem 0.4rem;
 		border-radius: 4px;

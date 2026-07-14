@@ -42,10 +42,10 @@
 
 <style>
 	/* LOCKED-DARK — footer always contrasts the page, regardless of theme toggle.
-	   Do not use --faf-black/--faf-white here; they invert in [data-theme="dark"]. */
+	   Use --faf-locked-* (constant; does not flip in [data-theme="dark"]). */
 	.footer {
-		background: #0a0a0a;
-		color: #e5e5e5;
+		background: var(--faf-locked-dark);
+		color: var(--faf-locked-dark-text);
 		padding: 2.5rem 1.5rem 2rem;
 		margin-top: 0;
 		border-top: 3px solid var(--faf-orange);
@@ -61,7 +61,7 @@
 		margin: 0 0 1rem;
 		font-weight: 600;
 		font-size: 0.95rem;
-		color: #ffffff;
+		color: var(--faf-chrome-fg);
 	}
 
 	.footer-nav {

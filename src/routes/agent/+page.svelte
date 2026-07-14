@@ -344,7 +344,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 	   `!important` — stops the cascade tug-of-war during client-side
 	   navigation between this dark-locked page and light-themed
 	   pages. See CLAUDE.md Theming Rules §2 and §4. */
-	:global(body) { background: #0a0a0a; color: #eee; }
+	:global(body) { background: var(--faf-locked-dark); color: var(--faf-locked-dark-text); }
 
 	main {
 		max-width: 720px;
@@ -403,7 +403,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 		display: inline-flex;
 		align-items: center;
 		gap: 0.75rem;
-		background-color: #1a1a1a;
+		background-color: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 20px;
 		padding: 0.5rem 1.5rem;
@@ -642,7 +642,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 	}
 
 	.hero-cta:hover {
-		background: #fff;
+		background: var(--faf-surface);
 		color: #000;
 		border-color: #fff;
 		box-shadow: 0 4px 14px rgba(0, 212, 212, 0.3);
@@ -705,7 +705,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 	}
 
 	.card p code {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #fff;
 		padding: 0.05rem 0.35rem;
 		border-radius: 3px;
@@ -731,7 +731,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 	}
 
 	.defer-note code {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #fff;
 		padding: 0.05rem 0.35rem;
 		border-radius: 3px;
@@ -778,7 +778,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 		font-size: 0.95rem;
 		line-height: 1.55;
 		padding: 0.5rem 0;
-		border-bottom: 1px solid #1a1a1a;
+		border-bottom: 1px solid var(--faf-locked-dark-elevated);
 	}
 
 	.refusals li:last-child {
@@ -834,7 +834,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 	.tab.active {
 		background: #00ffff;
 		border-color: #00ffff;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 	}
 
 	.tab-note {
@@ -851,7 +851,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 
 	.code-block {
 		background: #111;
-		border: 1px solid #1a1a1a;
+		border: 1px solid var(--faf-locked-dark-elevated);
 		color: #eee;
 		padding: 0.85rem 1rem;
 		border-radius: 6px;

@@ -435,7 +435,7 @@ human_context:
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -527,7 +527,7 @@ human_context:
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -633,7 +633,7 @@ human_context:
 	}
 
 	.session-box {
-		background: white;
+		background: var(--faf-surface);
 		padding: 0.75rem 1.25rem;
 		border-radius: 6px;
 		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -677,7 +677,7 @@ human_context:
 	}
 
 	.mcpaas-box {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 		padding: 0.75rem 1.5rem;
 		border-radius: 6px;
@@ -726,7 +726,7 @@ human_context:
 	}
 
 	.badge {
-		background: white;
+		background: var(--faf-surface);
 		color: #16a34a;
 		padding: 0.25rem 0.5rem;
 		border-radius: 4px;
@@ -756,7 +756,7 @@ human_context:
 	}
 
 	.ai-box {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e7eb;
 		min-width: 100px;
 	}
@@ -817,7 +817,7 @@ human_context:
 	}
 
 	.faf-file {
-		background: white;
+		background: var(--faf-surface);
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
 		margin-top: 0.5rem;
@@ -844,7 +844,7 @@ human_context:
 
 	/* CODE BLOCKS */
 	.code-block {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border-radius: 8px;
 		padding: 1.25rem;
 		margin: 1.5rem 0;
@@ -940,7 +940,7 @@ human_context:
 	}
 
 	.stat-box {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		padding: 1.5rem 1rem;
 		border-radius: 8px;
 		text-align: center;
@@ -1020,7 +1020,7 @@ human_context:
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 8px;
 		margin: 1rem 0;

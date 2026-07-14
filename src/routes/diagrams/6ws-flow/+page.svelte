@@ -193,7 +193,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 	}
@@ -207,7 +207,7 @@
 	}
 
 	.entry-box {
-		background: white;
+		background: var(--faf-surface);
 		border: 3px solid #e5e7eb;
 		border-radius: 12px;
 		padding: 1.5rem 2rem;
@@ -298,7 +298,7 @@
 	}
 
 	.question-item {
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 12px;
 		padding: 1.25rem;
 		text-align: center;
@@ -348,7 +348,7 @@
 	}
 
 	.output-box {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e7eb;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -443,7 +443,7 @@
 	}
 
 	.flywheel-item {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e7eb;
 		border-radius: 8px;
 		padding: 1rem;

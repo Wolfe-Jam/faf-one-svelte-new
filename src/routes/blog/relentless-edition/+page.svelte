@@ -145,7 +145,7 @@ Birth DNA, 6-W extractor, format-finder — restored. Grok interop, extension Ap
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -240,7 +240,7 @@ Birth DNA, 6-W extractor, format-finder — restored. Grok interop, extension Ap
 		font-size: 1.1rem;
 		color: #222;
 		padding: 1.25rem 1.5rem;
-		background: #fff;
+		background: var(--faf-surface);
 		border: 1px solid #f0e6d8;
 		border-left: 3px solid #FF6B35;
 		border-radius: 6px;
@@ -271,7 +271,7 @@ Birth DNA, 6-W extractor, format-finder — restored. Grok interop, extension Ap
 	}
 
 	.cta-box {
-		background: #fff;
+		background: var(--faf-surface);
 		border: 1px solid #f0e6d8;
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;

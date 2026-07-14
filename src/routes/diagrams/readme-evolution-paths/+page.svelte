@@ -153,7 +153,7 @@
 <style>
 	.diagram-page {
 		min-height: 100vh;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		padding: 2rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	}
@@ -209,7 +209,7 @@
 	}
 
 	.path {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-radius: 12px;
 		padding: 2rem;
 		border: 2px solid #333;

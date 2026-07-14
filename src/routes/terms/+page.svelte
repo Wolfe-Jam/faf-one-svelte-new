@@ -1,12 +1,6 @@
-<script>
-	import Navigation from '$lib/components/Navigation.svelte';
-</script>
-
 <svelte:head>
 	<title>Terms of Service | .faf - The JPEG for AI</title>
 </svelte:head>
-
-<Navigation />
 
 <main class="legal-page">
 	<div class="container">

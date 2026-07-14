@@ -299,7 +299,7 @@ bun-sticky v1.0.0 [ZIG]</pre>
 
 <style>
 	:global(body) {
-		background: #0a0a0a !important;
+		background: var(--faf-locked-dark) !important;
 	}
 
 	.blog-post {

@@ -194,7 +194,7 @@
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -285,7 +285,7 @@
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -484,7 +484,7 @@
 		margin: 1.5rem 0;
 	}
 	.w-card {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border: 2px solid #FF6B35;
 		border-radius: 8px;
 		padding: 1rem;

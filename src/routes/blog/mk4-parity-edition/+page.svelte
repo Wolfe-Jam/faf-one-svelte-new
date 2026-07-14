@@ -201,7 +201,7 @@ result = score_faf(yaml_content, LicenseTier.ENTERPRISE)
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -303,7 +303,7 @@ result = score_faf(yaml_content, LicenseTier.ENTERPRISE)
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -393,7 +393,7 @@ result = score_faf(yaml_content, LicenseTier.ENTERPRISE)
 	}
 
 	.parity-table tr:hover td {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 	}
 
 	.bug-list {
@@ -401,7 +401,7 @@ result = score_faf(yaml_content, LicenseTier.ENTERPRISE)
 	}
 
 	.bug-item {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-left: 4px solid #FF6B35;
 		padding: 1rem 1.5rem;
 		margin-bottom: 1rem;

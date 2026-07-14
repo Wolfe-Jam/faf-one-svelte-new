@@ -484,7 +484,7 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 8px;
 		margin: 1rem 0;

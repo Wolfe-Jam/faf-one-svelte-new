@@ -467,7 +467,7 @@ competitors:
 	}
 
 	.breadcrumb a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
@@ -496,7 +496,7 @@ competitors:
 	}
 
 	.category {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		font-weight: 600;
 	}
 
@@ -516,7 +516,7 @@ competitors:
 	.opportunity {
 		font-size: 1.1rem;
 		font-weight: 600;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin-top: 2rem;
 	}
 
@@ -566,8 +566,8 @@ competitors:
 	}
 
 	.comparison-side.after h3 {
-		color: #00bf63;
-		border-bottom-color: #00bf63;
+		color: var(--faf-foundation-green);
+		border-bottom-color: var(--faf-foundation-green);
 	}
 
 	.arch-components {
@@ -586,7 +586,7 @@ competitors:
 	}
 
 	.arch-components.grounded {
-		border: 3px solid #00bf63;
+		border: 3px solid var(--faf-foundation-green);
 	}
 
 	.arch-component {
@@ -599,7 +599,7 @@ competitors:
 
 	.arch-component.connected {
 		background: #E8F5E9;
-		border-color: #00bf63;
+		border-color: var(--faf-foundation-green);
 		padding-bottom: 2.5rem;
 	}
 
@@ -617,7 +617,7 @@ competitors:
 	}
 
 	.comp-status.success {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		font-weight: 600;
 		font-style: normal;
 	}
@@ -629,7 +629,7 @@ competitors:
 		transform: translateX(-50%);
 		width: 2px;
 		height: 1.5rem;
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 	}
 
 	.arch-component.connected:last-child .connection-line {
@@ -661,7 +661,7 @@ competitors:
 	}
 
 	.faf-foundation {
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 		border: none;
 	}
@@ -750,7 +750,7 @@ competitors:
 	.component-status.persistent {
 		background: #C8E6C9;
 		color: #1B5E20;
-		border: 1px solid #00bf63;
+		border: 1px solid var(--faf-foundation-green);
 	}
 
 	.after-diagram {
@@ -798,7 +798,7 @@ competitors:
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: center;
-		border: 3px solid #00bf63;
+		border: 3px solid var(--faf-foundation-green);
 		box-shadow: 0 2px 8px rgba(0, 191, 99, 0.2);
 	}
 
@@ -913,19 +913,19 @@ competitors:
 		padding: 2rem;
 		background: var(--faf-gray-light);
 		border-radius: 8px;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 	}
 
 	.integration h3 {
 		margin-top: 0;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	.convergence-note {
 		background: #E8F5E9;
 		padding: 1.5rem;
 		border-radius: 8px;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 		margin: 2rem 0;
 	}
 
@@ -954,7 +954,7 @@ competitors:
 
 	.with-format {
 		background: #E8F5E9;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 	}
 
 	.without-format h3 {
@@ -963,7 +963,7 @@ competitors:
 	}
 
 	.with-format h3 {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin-top: 0;
 	}
 
@@ -1016,7 +1016,7 @@ competitors:
 		padding: 0.75rem;
 		background: var(--faf-white);
 		border-radius: 4px;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 	}
 
 	.gravity {
@@ -1035,7 +1035,7 @@ competitors:
 		margin: 2rem 0;
 		padding: 1.5rem;
 		background: var(--faf-gray-light);
-		border-left: 5px solid #00bf63;
+		border-left: 5px solid var(--faf-foundation-green);
 		border-radius: 4px;
 	}
 
@@ -1068,7 +1068,7 @@ competitors:
 	}
 
 	.link-category a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
@@ -1090,7 +1090,7 @@ competitors:
 		border-radius: 8px;
 		margin-bottom: 3rem;
 		text-align: left;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 	}
 
 	.postscript hr {

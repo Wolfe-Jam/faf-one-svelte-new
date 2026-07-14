@@ -856,7 +856,7 @@
 
 	.badge.dedicated {
 		background: var(--faf-cyan-dark);
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 	}
 
 	.package-desc {

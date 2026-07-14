@@ -107,7 +107,7 @@ Helping developers actually use them, starting with AGENTS.md.`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -199,7 +199,7 @@ Helping developers actually use them, starting with AGENTS.md.`;
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 		color: #1a1a1a;
@@ -237,7 +237,7 @@ Helping developers actually use them, starting with AGENTS.md.`;
 		justify-content: space-between;
 		gap: 1.5rem;
 		padding: 1.25rem 1.5rem;
-		background: #fff;
+		background: var(--faf-surface);
 		border: 1px solid #e5e5e5;
 		border-radius: 10px;
 		text-decoration: none;

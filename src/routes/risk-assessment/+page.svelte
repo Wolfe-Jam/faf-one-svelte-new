@@ -403,7 +403,7 @@
 	}
 
 	.white-pill {
-		background: white;
+		background: var(--faf-surface);
 		color: #1a1a1a;
 		border-radius: 0 30px 30px 0;
 	}
@@ -534,7 +534,7 @@
 
 	/* Input Section */
 	.risk-inputs {
-		background: white;
+		background: var(--faf-surface);
 		padding: 2rem;
 		border-radius: 12px;
 		box-shadow: 0 2px 10px rgba(0,0,0,0.05);

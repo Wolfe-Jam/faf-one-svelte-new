@@ -371,7 +371,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark) 0%, #1a1a1a 100%);
 		z-index: 9999;
 		display: flex;
 		align-items: center;
@@ -495,7 +495,7 @@
 
 	.daaft-page {
 		min-height: 100vh;
-		background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(180deg, var(--faf-locked-dark) 0%, #1a1a1a 100%);
 		color: white;
 		padding: 2rem;
 	}
@@ -1091,7 +1091,7 @@
 	}
 
 	.terminal {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 8px;
 		overflow: hidden;

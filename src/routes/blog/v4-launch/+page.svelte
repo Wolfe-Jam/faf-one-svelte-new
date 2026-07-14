@@ -293,7 +293,7 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -649,7 +649,7 @@ Context: FAF-Voice browser-to-xAI integration"`}</pre>
 	}
 
 	.quote-card {
-		background: #fff;
+		background: var(--faf-surface);
 		border: 2px solid #eee;
 		border-radius: 12px;
 		padding: 1.25rem;

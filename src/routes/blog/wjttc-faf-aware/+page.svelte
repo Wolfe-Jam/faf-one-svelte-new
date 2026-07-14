@@ -344,7 +344,7 @@ ai_scoring_details:
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -453,12 +453,12 @@ ai_scoring_details:
 	}
 
 	.category.wjttc {
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 	}
 
 	.intro {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		padding: 1.5rem;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
@@ -500,7 +500,7 @@ ai_scoring_details:
 	}
 
 	.highlight {
-		background: #fffaf0;
+		background: var(--faf-surface)af0;
 		border-left: 4px solid #FF6B35;
 		padding: 1rem;
 		margin: 1rem 0;
@@ -631,7 +631,7 @@ ai_scoring_details:
 	}
 
 	.big-quote {
-		background: #fffaf0;
+		background: var(--faf-surface)af0;
 		border-left: 4px solid #FF6B35;
 		padding: 1.5rem 2rem;
 		margin: 2rem 0;

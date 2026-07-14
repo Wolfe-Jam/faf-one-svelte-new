@@ -413,11 +413,11 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 	.comparison h3 {
 		margin-top: 0;
 		font-size: 1.1rem;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 	}
 
 	pre {
-		background: white;
+		background: var(--faf-surface);
 		padding: 1rem;
 		border-radius: 4px;
 		overflow-x: auto;
@@ -426,7 +426,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 
 	code {
 		font-family: 'Monaco', 'Courier New', monospace;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 	}
 
 	table {
@@ -448,7 +448,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 
 	th {
 		font-weight: 600;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 	}
 
 	tbody tr:hover {

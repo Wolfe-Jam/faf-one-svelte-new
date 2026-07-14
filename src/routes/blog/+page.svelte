@@ -1118,7 +1118,7 @@
 		'Press Release': '#666',
 		'Milestone': '#FFD700',
 		'WJTTC': '#E74C3C',
-		'Grok': '#111',
+		'Grok': 'var(--faf-locked-dark-hover)',
 		'Story': '#8B5A2B',
 		'Interop': '#7D3C98',
 		'Engineering': '#4A5568'
@@ -1182,7 +1182,7 @@
 					<span class="list-emoji">{post.emoji}</span>
 					<span class="list-title">{post.title}</span>
 					{#if post.version}<span class="list-version">{post.version}</span>{/if}
-					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: #111' : ''}">{post.category}</span>
+					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: var(--faf-locked-dark-hover)' : ''}">{post.category}</span>
 				</a>
 			{/each}
 		</div>
@@ -1290,7 +1290,7 @@
 	.post-card[data-category="Press Release"] { border-color: #666; }
 	.post-card[data-category="Milestone"] { border-color: #FFD700; }
 	.post-card[data-category="WJTTC"] { border-color: #E74C3C; }
-	.post-card[data-category="Grok"] { border-color: #111; }
+	.post-card[data-category="Grok"] { border-color: var(--faf-locked-dark-hover); }
 	.post-card[data-category="Story"] { border-color: #8B5A2B; }
 	.post-card[data-category="Interop"] { border-color: #7D3C98; }
 	.post-card[data-category="Engineering"] { border-color: #4A5568; }
@@ -1497,7 +1497,7 @@
 	}
 
 	.dark-row {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-bottom: 2px solid #383838;
 	}
 
@@ -1510,7 +1510,7 @@
 	}
 
 	.dark-row:hover {
-		background: #111;
+		background: var(--faf-locked-dark-hover);
 	}
 
 	.dark-row:hover .list-title {
@@ -1525,7 +1525,7 @@
 	}
 
 	.dark-card {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-color: #333;
 		color: #e5e5e5;
 	}

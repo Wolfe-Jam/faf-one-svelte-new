@@ -62,7 +62,7 @@
 	.og-image {
 		width: 1200px;
 		height: 630px;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark) 0%, #1a1a1a 100%);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

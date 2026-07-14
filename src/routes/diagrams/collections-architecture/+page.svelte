@@ -150,7 +150,7 @@
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 		display: flex;
@@ -196,7 +196,7 @@
 		font-size: 1.5rem;
 		color: #16a34a;
 		font-weight: 700;
-		background: white;
+		background: var(--faf-surface);
 		padding: 0.5rem 1rem;
 		border-radius: 6px;
 		display: inline-block;
@@ -233,7 +233,7 @@
 
 	.file-badge {
 		background: var(--faf-green-light);
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
 		font-size: 0.8rem;
@@ -266,7 +266,7 @@
 
 	.upload-box {
 		width: 100%;
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #00D4D4;
 		border-radius: 12px;
 		overflow: hidden;
@@ -324,7 +324,7 @@
 
 	.grok-box {
 		width: 100%;
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid var(--faf-green-light);
 		border-radius: 12px;
 		overflow: hidden;
@@ -381,7 +381,7 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 0.75rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 6px;
 	}
 

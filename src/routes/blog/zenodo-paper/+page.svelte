@@ -133,7 +133,7 @@ DOI: 10.5281/zenodo.18251362`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -158,7 +158,7 @@ DOI: 10.5281/zenodo.18251362`;
 	}
 
 	.breadcrumb a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
@@ -209,7 +209,7 @@ DOI: 10.5281/zenodo.18251362`;
 		background: linear-gradient(135deg, rgba(0, 191, 99, 0.05) 0%, rgba(0, 191, 99, 0.1) 100%);
 		padding: 2rem;
 		border-radius: 12px;
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 		margin: 2rem 0;
 	}
 
@@ -250,13 +250,13 @@ DOI: 10.5281/zenodo.18251362`;
 	}
 
 	.meta-value.link {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
 	.paper-button {
 		display: inline-block;
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 		padding: 0.75rem 1.5rem;
 		border-radius: 8px;
@@ -282,7 +282,7 @@ DOI: 10.5281/zenodo.18251362`;
 	.finding-number {
 		font-size: 2rem;
 		font-weight: 800;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	.finding-label {
@@ -333,7 +333,7 @@ DOI: 10.5281/zenodo.18251362`;
 	}
 
 	.zenodo-button { background: #024B7A; }
-	.foundation-button { background: #00bf63; }
+	.foundation-button { background: var(--faf-foundation-green); }
 	.github-button { background: #1a1a1a; }
 
 	.post-footer {
@@ -345,7 +345,7 @@ DOI: 10.5281/zenodo.18251362`;
 	}
 
 	.post-footer a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	@media (max-width: 768px) {

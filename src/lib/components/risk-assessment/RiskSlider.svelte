@@ -76,7 +76,7 @@
 		appearance: none;
 		width: 20px;
 		height: 20px;
-		background: white;
+		background: var(--faf-surface);
 		border: 3px solid var(--slider-color, var(--faf-black));
 		cursor: pointer;
 		border-radius: 50%;
@@ -86,7 +86,7 @@
 	input[type="range"]::-moz-range-thumb {
 		width: 20px;
 		height: 20px;
-		background: white;
+		background: var(--faf-surface);
 		border: 3px solid var(--slider-color, var(--faf-black));
 		cursor: pointer;
 		border-radius: 50%;

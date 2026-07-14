@@ -183,7 +183,7 @@
 	}
 
 	.breadcrumb a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
@@ -202,7 +202,7 @@
 		font-size: 4rem;
 		font-weight: 900;
 		margin: 0;
-		background: linear-gradient(135deg, #FF6B35 0%, #00bf63 100%);
+		background: linear-gradient(135deg, #FF6B35 0%, var(--faf-foundation-green) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -230,7 +230,7 @@
 
 	.definition-card {
 		background: linear-gradient(135deg, rgba(0, 191, 99, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 		border-radius: 12px;
 		padding: 2rem;
 	}
@@ -266,7 +266,7 @@
 
 	.comparison-card.mcpaas {
 		background: linear-gradient(135deg, rgba(0, 191, 99, 0.1) 0%, rgba(0, 191, 99, 0.05) 100%);
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 	}
 
 	.comparison-card h3 {
@@ -303,7 +303,7 @@
 	}
 
 	.proof-tagline {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		font-weight: 600;
 		margin: 0.5rem 0 1rem;
 	}
@@ -339,7 +339,7 @@
 	}
 
 	.btn.secondary {
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 	}
 
@@ -495,7 +495,7 @@
 	}
 
 	.coined a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	@media (max-width: 768px) {

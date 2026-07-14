@@ -151,7 +151,7 @@
 	.run { margin: 3.5rem 0; }
 	h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; }
 	.term {
-		background: #0a0a0a; border-radius: 10px; padding: 1rem 1.25rem;
+		background: var(--faf-locked-dark); border-radius: 10px; padding: 1rem 1.25rem;
 		width: fit-content; font-family: Menlo, monospace; font-size: 1.15rem;
 	}
 	.term .p { color: var(--faf-orange); }

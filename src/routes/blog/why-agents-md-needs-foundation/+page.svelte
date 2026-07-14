@@ -188,7 +188,7 @@ context:
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -253,7 +253,7 @@ context:
 	}
 
 	.category.foundation {
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 	}
 
@@ -266,7 +266,7 @@ context:
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -351,7 +351,7 @@ context:
 	}
 
 	.layer-mid {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-left: 2px solid #ddd;
 		border-right: 2px solid #ddd;
 		border-bottom: 1px dashed #ccc;
@@ -364,11 +364,11 @@ context:
 	.layer-bottom {
 		background: #f0fff0;
 		border-radius: 0 0 8px 8px;
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 	}
 
 	.layer-bottom strong {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	.layer-bottom span {
@@ -377,7 +377,7 @@ context:
 
 	.insight-box {
 		background: #f0fff0;
-		border: 2px solid #00bf63;
+		border: 2px solid var(--faf-foundation-green);
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -385,7 +385,7 @@ context:
 	}
 
 	.insight-box h3 {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		margin: 0 0 0.75rem 0;
 		font-size: 1.4rem;
 	}

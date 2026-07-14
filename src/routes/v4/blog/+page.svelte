@@ -105,7 +105,7 @@
 	}
 
 	.post-card {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid var(--faf-light-gray);
 		border-radius: 8px;
 		padding: 2rem;

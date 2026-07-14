@@ -84,7 +84,7 @@
 <style>
 	.error-container {
 		min-height: 100vh;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark) 0%, var(--faf-locked-dark-elevated) 100%);
 		display: flex;
 		align-items: center;
 		justify-content: center;

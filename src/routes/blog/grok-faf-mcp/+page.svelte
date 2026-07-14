@@ -182,7 +182,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -207,7 +207,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 	}
 
 	.breadcrumb a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		text-decoration: none;
 	}
 
@@ -313,7 +313,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 	}
 
 	.first-card a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	.growth-card {
@@ -373,7 +373,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 	}
 
 	.platform-card.universal {
-		background: linear-gradient(135deg, #00bf63 0%, #00a855 100%);
+		background: linear-gradient(135deg, var(--faf-foundation-green) 0%, var(--faf-foundation-green-dark) 100%);
 		color: white;
 	}
 
@@ -404,7 +404,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 
 	.try-button {
 		display: inline-block;
-		background: white;
+		background: var(--faf-surface);
 		color: #FF6B35;
 		padding: 1rem 2.5rem;
 		border-radius: 8px;
@@ -465,7 +465,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 	.grok-button { background: #1a1a1a; }
 	.npm-button { background: #cb3837; }
 	.github-button { background: #6e5494; }
-	.foundation-button { background: #00bf63; }
+	.foundation-button { background: var(--faf-foundation-green); }
 
 	.post-footer {
 		margin-top: 4rem;
@@ -482,7 +482,7 @@ First MCP for xAI Grok. First web-based MCP. Fastest growing FAF package.`;
 	}
 
 	.post-footer a {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	@media (max-width: 768px) {

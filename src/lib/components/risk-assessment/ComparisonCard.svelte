@@ -39,7 +39,7 @@
 	.comparison-card {
 		flex: 1;
 		padding: 1.5rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 8px;
 		border: 2px solid #e0e0e0;
 	}

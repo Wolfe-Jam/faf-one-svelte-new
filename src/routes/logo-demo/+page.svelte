@@ -186,7 +186,7 @@
 	}
 	
 	.demo-box.dark {
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark) 0%, #1a1a1a 100%);
 	}
 	
 	.demo-box.dark h3 {

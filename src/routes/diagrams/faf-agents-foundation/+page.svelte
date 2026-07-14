@@ -114,7 +114,7 @@
 <style>
 	.diagram-page {
 		min-height: 100vh;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		padding: 2rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	}
@@ -382,7 +382,7 @@
 
 	.foundation-badge {
 		display: inline-block;
-		background: #fff;
+		background: var(--faf-surface);
 		color: #166534;
 		padding: 0.35rem 1rem;
 		border-radius: 20px;

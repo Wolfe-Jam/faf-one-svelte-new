@@ -130,7 +130,7 @@ You can't fake or buy your way in.`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {

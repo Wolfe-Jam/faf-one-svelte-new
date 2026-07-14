@@ -317,7 +317,7 @@ jobs:
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -382,12 +382,12 @@ jobs:
 	}
 
 	.category.wjttc {
-		background: #00bf63;
+		background: var(--faf-foundation-green);
 		color: white;
 	}
 
 	.intro {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		padding: 1.5rem;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
@@ -433,7 +433,7 @@ jobs:
 	}
 
 	.highlight {
-		background: #fffaf0;
+		background: var(--faf-surface)af0;
 		border-left: 4px solid #FF6B35;
 		padding: 1rem 1.25rem;
 		margin: 1.5rem 0;
@@ -484,14 +484,14 @@ jobs:
 
 	.tier {
 		background: #f9f9f9;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 		padding: 1rem;
 		border-radius: 4px;
 	}
 
 	.tier h4 {
 		margin: 0 0 0.5rem 0;
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 	}
 
 	.tier p {
@@ -569,7 +569,7 @@ jobs:
 	}
 
 	.score-row.trophy {
-		background: #fffaf0;
+		background: var(--faf-surface)af0;
 	}
 
 	/* Paths grid */
@@ -644,7 +644,7 @@ jobs:
 	}
 
 	.big-quote {
-		background: #fffaf0;
+		background: var(--faf-surface)af0;
 		border-left: 4px solid #FF6B35;
 		padding: 1.5rem 2rem;
 		margin: 2rem 0;
@@ -715,7 +715,7 @@ jobs:
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 8px;
 		margin: 1rem 0;
@@ -739,7 +739,7 @@ jobs:
 	}
 
 	.terminal-output {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		padding: 1.25rem;
 		border-radius: 8px;
 		margin: 0.5rem 0 1.5rem;
@@ -804,7 +804,7 @@ jobs:
 
 	.dev-note {
 		background: #f0f7f0;
-		border-left: 4px solid #00bf63;
+		border-left: 4px solid var(--faf-foundation-green);
 		padding: 0.75rem 1rem;
 		border-radius: 4px;
 		font-size: 0.95rem;

@@ -113,7 +113,7 @@
 <style>
 	.diagram-page {
 		min-height: 100vh;
-		background: #fff;
+		background: var(--faf-surface);
 		padding: 2rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	}
@@ -149,7 +149,7 @@
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: #fff;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		border: 1px solid #e5e7eb;
 	}
@@ -183,7 +183,7 @@
 		text-align: center;
 		min-width: 140px;
 		border: 2px solid;
-		background: #fff;
+		background: var(--faf-surface);
 	}
 
 	.agents-md {
@@ -245,7 +245,7 @@
 		text-align: center;
 		min-width: 130px;
 		border: 2px solid;
-		background: #fff;
+		background: var(--faf-surface);
 	}
 
 	.claude-box {
@@ -365,7 +365,7 @@
 
 	.foundation-badge {
 		display: inline-block;
-		background: #fff;
+		background: var(--faf-surface);
 		color: #16a34a;
 		padding: 0.35rem 1rem;
 		border-radius: 20px;

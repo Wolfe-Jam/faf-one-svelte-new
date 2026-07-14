@@ -367,7 +367,7 @@ Two ETH Zurich papers. One CERN paper. One solution. Semantic drift doesn't care
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	/* ======================================== */

@@ -1,7 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
-
 	const RELEASES_URL =
 		'https://raw.githubusercontent.com/Wolfe-Jam/faf-cli/main/website/releases.json';
 
@@ -35,8 +33,6 @@
 	<title>Updates - FAF CLI Releases</title>
 	<meta name="description" content="Latest FAF CLI releases and updates" />
 </svelte:head>
-
-<Navigation />
 
 <main class="updates-page">
 	<div class="container">
@@ -123,7 +119,7 @@
 	.page-header {
 		text-align: center;
 		margin-bottom: 4rem;
-		padding-top: 6rem;
+		padding-top: 3.5rem;
 	}
 
 	.page-header h1 {

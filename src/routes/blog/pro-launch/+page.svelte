@@ -230,7 +230,7 @@ tri-sync = ROM ↔ CLAUDE.md ↔ RAM (Claude's session memory)</code></pre>
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -459,7 +459,7 @@ tri-sync = ROM ↔ CLAUDE.md ↔ RAM (Claude's session memory)</code></pre>
 
 	/* CLI quote */
 	.cli-quote {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border-left: 4px solid #4682B4;
 		border-radius: 8px;
 		padding: 1.5rem 2rem;
@@ -481,7 +481,7 @@ tri-sync = ROM ↔ CLAUDE.md ↔ RAM (Claude's session memory)</code></pre>
 	}
 
 	.cli-quote pre {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		margin: 1rem 0;
 		padding: 1rem;
 		border-radius: 4px;
@@ -507,7 +507,7 @@ tri-sync = ROM ↔ CLAUDE.md ↔ RAM (Claude's session memory)</code></pre>
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 8px;
 		margin: 1rem 0;

@@ -151,7 +151,7 @@
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 	}
@@ -304,7 +304,7 @@
 		align-items: center;
 		gap: 0.75rem;
 		padding: 0.75rem 1rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 8px;
 		box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 	}

@@ -458,7 +458,7 @@
 
 	/* Inputs Section */
 	.risk-inputs {
-		background: white;
+		background: var(--faf-surface);
 		padding: 2rem;
 		border-radius: 12px;
 		box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -496,7 +496,7 @@
 	}
 
 	.warning-box {
-		background: #fff5f5;
+		background: var(--faf-surface)5f5;
 		border: 2px solid #dc2626;
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -548,7 +548,7 @@
 	}
 
 	.cost-card {
-		background: white;
+		background: var(--faf-surface);
 		border: 3px solid;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -713,7 +713,7 @@
 	}
 
 	.roi-section {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid var(--faf-gray-light);
 		border-radius: 12px;
 		padding: 2rem;
@@ -864,7 +864,7 @@
 	.reality-check {
 		margin: 3rem 0;
 		padding: 3rem 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 12px;
 		border: 2px solid var(--faf-gray-light);
 	}

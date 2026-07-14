@@ -392,7 +392,7 @@ faf auto → 80%</code></pre>
     :global(body) {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
         line-height: 1.6;
-        color: #1a1a1a;
+        color: var(--faf-locked-dark-elevated);
         background: #f8f9fa;
         padding: 2rem 1rem;
     }
@@ -400,7 +400,7 @@ faf auto → 80%</code></pre>
     .container {
         max-width: 900px;
         margin: 0 auto;
-        background: white;
+        background: var(--faf-surface);
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         padding: 3rem;
@@ -415,7 +415,7 @@ faf auto → 80%</code></pre>
 
     h1 {
         font-size: 2.5rem;
-        color: #1a1a1a;
+        color: var(--faf-locked-dark-elevated);
         margin-bottom: 0.5rem;
     }
 
@@ -465,7 +465,7 @@ faf auto → 80%</code></pre>
     }
 
     h3 {
-        color: #1a1a1a;
+        color: var(--faf-locked-dark-elevated);
         font-size: 1.3rem;
         margin: 2rem 0 1rem 0;
     }
@@ -502,11 +502,11 @@ faf auto → 80%</code></pre>
     }
 
     .step-meta-value {
-        color: #1a1a1a;
+        color: var(--faf-locked-dark-elevated);
     }
 
     pre {
-        background: #1a1a1a;
+        background: var(--faf-locked-dark-elevated);
         color: #f5f5f5;
         padding: 1.5rem;
         border-radius: 8px;
@@ -593,7 +593,7 @@ faf auto → 80%</code></pre>
     }
 
     .key-takeaways {
-        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #2a2a2a 100%);
         color: white;
         padding: 2rem;
         border-radius: 12px;

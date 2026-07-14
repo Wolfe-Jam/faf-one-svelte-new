@@ -510,7 +510,7 @@
 
 <style>
 	.n8n-page {
-		background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+		background: linear-gradient(180deg, #000000 0%, var(--faf-locked-dark) 100%);
 		color: white;
 		min-height: 100vh;
 	}
@@ -810,7 +810,7 @@
 	.json-mess {
 		width: 100%;
 		padding: 2rem;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-radius: 8px;
 		position: relative;
 		min-height: 200px;

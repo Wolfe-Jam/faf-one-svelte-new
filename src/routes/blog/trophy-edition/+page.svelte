@@ -211,7 +211,7 @@ Layer 1   .faf (FCL)          ← 🏆 Trophy = complete = foundation`}</code></
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -315,7 +315,7 @@ Layer 1   .faf (FCL)          ← 🏆 Trophy = complete = foundation`}</code></
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}

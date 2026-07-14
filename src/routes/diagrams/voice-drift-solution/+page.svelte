@@ -143,7 +143,7 @@
 		max-width: 1000px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 	}
@@ -182,7 +182,7 @@
 	}
 
 	.session-box {
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -215,7 +215,7 @@
 		font-family: 'SF Mono', monospace;
 		font-size: 0.85rem;
 		color: #666;
-		background: white;
+		background: var(--faf-surface);
 		padding: 0.25rem 0.5rem;
 		border-radius: 4px;
 	}

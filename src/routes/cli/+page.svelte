@@ -89,7 +89,7 @@
 </main>
 
 <style>
-	:global(body) { background: #0a0a0a; color: #eee; }
+	:global(body) { background: var(--faf-locked-dark); color: var(--faf-locked-dark-text); }
 
 	main {
 		max-width: 640px;

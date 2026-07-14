@@ -312,7 +312,7 @@ FAF now speaks Gemini. Full interoperability with GEMINI.md, Antigravity, and Co
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {

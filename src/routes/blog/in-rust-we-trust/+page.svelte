@@ -291,7 +291,7 @@ One install: cargo add faf`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	/* Hero Banner */

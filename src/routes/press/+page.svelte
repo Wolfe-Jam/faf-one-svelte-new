@@ -355,7 +355,7 @@
 	
 	.press-intro {
 		padding: 4rem 0;
-		background: white;
+		background: var(--faf-surface);
 	}
 	
 	.intro-box {
@@ -401,7 +401,7 @@
 	}
 	
 	.fact-card {
-		background: white;
+		background: var(--faf-surface);
 		padding: 2rem;
 		border-radius: 8px;
 		text-align: center;
@@ -426,7 +426,7 @@
 	
 	.press-achievements {
 		padding: 4rem 0;
-		background: white;
+		background: var(--faf-surface);
 	}
 	
 	.press-achievements h2 {
@@ -511,7 +511,7 @@
 	
 	.press-assets {
 		padding: 4rem 0;
-		background: white;
+		background: var(--faf-surface);
 	}
 	
 	.press-assets h2 {
@@ -570,7 +570,7 @@
 	}
 	
 	.color-swatch.white {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e0e0e0;
 	}
 	
@@ -657,7 +657,7 @@
 	}
 	
 	.timeline-event {
-		background: white;
+		background: var(--faf-surface);
 		padding: 1.5rem;
 		border-radius: 8px;
 		flex: 1;
@@ -676,7 +676,7 @@
 	
 	.press-contact {
 		padding: 4rem 0;
-		background: white;
+		background: var(--faf-surface);
 	}
 	
 	.contact-box {

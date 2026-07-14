@@ -9,6 +9,19 @@
 	--faf-green: #00aa55;        /* FAF-Green — canonical (wolfejam 2026-06-28) */
 	--faf-green-hover: #008040;  /* FAF-Green dark — hover/active, AA-small on white */
 	--faf-green-light: #4ade80;  /* FAF-Green light — accents on dark (diagrams, callouts) */
+
+	/* Locked chrome — NEVER flip in [data-theme="dark"] */
+	--faf-locked-dark: #0a0a0a;           /* Footer, banner, theme-locked pages */
+	--faf-locked-dark-elevated: #1a1a1a;  /* Gradients, code blocks on locked pages */
+	--faf-locked-dark-text: #e5e5e5;      /* Body text on locked-dark surfaces */
+	--faf-chrome-bg: #000000;             /* Home/Map/Blog/Skills badges */
+	--faf-chrome-fg: #ffffff;             /* Badge borders, tooltips, share outlines */
+	--faf-foundation-green: #00bf63;      /* foundation.faf.one badge + membership */
+	--faf-foundation-green-dark: #00a855; /* Foundation gradients / hover */
+	--faf-surface-border: #e0e0e0;        /* Card borders on creme canvas */
+	--faf-section-alt: #f9f6f1;          /* Alternating section wash (membership, etc.) */
+	--faf-orange-tint: #fff5f0;          /* Orange callout wash (blog, ecosystem) */
+	--faf-locked-dark-hover: #111111;    /* Hover on locked-dark rows/cards */
 	
 	/* Page canvas — soft creme / almost-black (not pure #fff / #000) */
 	--faf-page-bg: #FEFCF8;
@@ -165,7 +178,7 @@ pre code {
 .share-btn,
 .x-share,
 .share-x {
-	border: 2px solid #fff;
+	border: 2px solid var(--faf-chrome-fg);
 }
 
 /* Buttons */
@@ -413,6 +426,70 @@ section {
 @keyframes spin {
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+/* Foundation badge — top-right; lives in app.html, styled here */
+.foundation-badge {
+	position: fixed;
+	top: 5px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background: var(--faf-foundation-green);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 3px 10px rgba(0, 191, 99, 0.35);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 1000;
+	text-decoration: none;
+}
+
+.foundation-badge:hover {
+	transform: scale(1.1);
+	box-shadow: 0 5px 16px rgba(0, 191, 99, 0.55);
+}
+
+.foundation-badge svg {
+	width: 22px;
+	height: 22px;
+}
+
+.foundation-badge::after {
+	content: "FAF Foundation";
+	position: absolute;
+	top: calc(100% + 6px);
+	right: 0;
+	background: var(--faf-chrome-bg);
+	color: var(--faf-chrome-fg);
+	font: 600 12px/1 var(--font-sans);
+	padding: 5px 8px;
+	border-radius: 6px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.08s ease;
+	z-index: 1001;
+}
+
+.foundation-badge:hover::after {
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.foundation-badge {
+		width: 36px;
+		height: 36px;
+		top: 5px;
+		right: 15px;
+	}
+
+	.foundation-badge svg {
+		width: 20px;
+		height: 20px;
 	}
 }
 

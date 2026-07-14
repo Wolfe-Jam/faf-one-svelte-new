@@ -375,7 +375,7 @@ faf go
 <style>
 	.guide-page {
 		min-height: 100vh;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: LOCKED_GRAD;
 		color: #f5f5dc;
 	}
 
@@ -427,7 +427,7 @@ faf go
 		display: inline-flex;
 		align-items: center;
 		gap: 1rem;
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, var(--faf-locked-dark) 100%);
 		border: 2px solid #ff6b35;
 		border-radius: 12px;
 		padding: 1.5rem 2rem;
@@ -467,7 +467,7 @@ faf go
 	}
 
 	.philosophy-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 2rem;
@@ -503,7 +503,7 @@ faf go
 	}
 
 	.tool-card {
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a2a2a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #0a2a2a 100%);
 		border: 2px solid #00d4d4;
 		border-radius: 12px;
 		padding: 2rem;
@@ -548,7 +548,7 @@ faf go
 	}
 
 	.tool-command {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 6px;
 		padding: 1rem;
@@ -635,7 +635,7 @@ faf go
 	}
 
 	.step-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 2rem;
@@ -644,7 +644,7 @@ faf go
 
 	.step-card.highlight {
 		border: 2px solid #00d4d4;
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a2a2a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #0a2a2a 100%);
 	}
 
 	.step-card:hover {
@@ -662,7 +662,7 @@ faf go
 		width: 48px;
 		height: 48px;
 		background: #ff6b35;
-		color: #0a0a0a;
+		color: var(--faf-locked-dark);
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -718,7 +718,7 @@ faf go
 	}
 
 	.code-example {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -843,7 +843,7 @@ faf go
 	}
 
 	.ai-file-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -871,7 +871,7 @@ faf go
 
 	.ai-file-card code {
 		color: #ff6b35;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		padding: 0.5rem 1rem;
 		border-radius: 6px;
 		display: inline-block;
@@ -901,14 +901,14 @@ faf go
 	.timeline-table table {
 		width: 100%;
 		border-collapse: collapse;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		overflow: hidden;
 	}
 
 	.timeline-table th {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		color: #ff6b35;
 		padding: 1rem;
 		text-align: left;
@@ -946,7 +946,7 @@ faf go
 	}
 
 	.mistake-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 2px solid #333;
 		border-radius: 12px;
 		padding: 2rem;
@@ -954,12 +954,12 @@ faf go
 
 	.mistake-card.wrong {
 		border-color: #ff3333;
-		background: linear-gradient(135deg, #1a1a1a 0%, #2a1010 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #2a1010 100%);
 	}
 
 	.mistake-card.right {
 		border-color: #00aa55;
-		background: linear-gradient(135deg, #1a1a1a 0%, #102a10 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #102a10 100%);
 	}
 
 	.mistake-header {
@@ -982,7 +982,7 @@ faf go
 	}
 
 	.mistake-card pre {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 8px;
 		padding: 1rem;
@@ -1013,7 +1013,7 @@ faf go
 	}
 
 	.ref-box {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 2rem;
@@ -1026,7 +1026,7 @@ faf go
 
 	.ref-box.caveat {
 		border: 2px solid #00d4d4;
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a2a2a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #0a2a2a 100%);
 	}
 
 	.ref-box.caveat h3 {
@@ -1059,7 +1059,7 @@ faf go
 
 	.decision-list code {
 		color: #00d4d4;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		padding: 0.25rem 0.5rem;
 		border-radius: 4px;
 		font-family: 'Courier New', monospace;
@@ -1092,7 +1092,7 @@ faf go
 	}
 
 	.next-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 2px solid #333;
 		border-radius: 12px;
 		padding: 2rem;

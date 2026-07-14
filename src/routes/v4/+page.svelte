@@ -346,7 +346,7 @@ faf status --oneline
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark) 0%, #1a1a1a 100%);
 		text-align: center;
 		padding: 4rem 2rem;
 	}
@@ -390,7 +390,7 @@ faf status --oneline
 	}
 
 	.badge.iana { background: #FF6B35; color: white; }
-	.badge.anthropic { background: #00D4D4; color: #0a0a0a; }
+	.badge.anthropic { background: #00D4D4; color: var(--faf-locked-dark); }
 	.badge.downloads { background: #333; color: white; border: 1px solid #555; }
 
 	/* Sections */
@@ -477,7 +477,7 @@ faf status --oneline
 
 	/* Code blocks */
 	.code-block {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 1.5rem;
@@ -652,7 +652,7 @@ faf status --oneline
 	}
 
 	.feature {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		padding: 1.5rem;
 		border-radius: 12px;
 		border: 1px solid #333;
@@ -737,7 +737,7 @@ faf status --oneline
 
 	.skill {
 		padding: 1rem;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-radius: 8px;
 		margin-bottom: 0.5rem;
 	}
@@ -748,7 +748,7 @@ faf status --oneline
 	}
 
 	.status-display {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		padding: 1.5rem 2rem;
 		border-radius: 12px;
 		text-align: center;
@@ -815,7 +815,7 @@ faf status --oneline
 
 	/* CTA section */
 	.section.cta {
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+		background: linear-gradient(135deg, #1a1a1a 0%, var(--faf-locked-dark) 100%);
 	}
 
 	.code-block.install {
@@ -929,7 +929,7 @@ faf status --oneline
 	.when-box {
 		padding: 1.5rem;
 		border-radius: 12px;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 	}
 
 	.when-box.use {
@@ -977,7 +977,7 @@ faf status --oneline
 	.section.footer {
 		text-align: center;
 		padding: 4rem 2rem;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 	}
 
 	.closing {

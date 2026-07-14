@@ -397,7 +397,7 @@ for (const exchange of conversation) {
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -411,7 +411,7 @@ for (const exchange of conversation) {
 
 	.post-header {
 		margin-bottom: 3rem;
-		border-bottom: 3px solid #1a1a1a;
+		border-bottom: 3px solid var(--faf-locked-dark-elevated);
 		padding-bottom: 2rem;
 	}
 
@@ -422,7 +422,7 @@ for (const exchange of conversation) {
 	}
 
 	.breadcrumb a {
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 		text-decoration: none;
 	}
 
@@ -439,7 +439,7 @@ for (const exchange of conversation) {
 
 	.version-tag {
 		display: inline-block;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
@@ -468,7 +468,7 @@ for (const exchange of conversation) {
 	}
 
 	.category {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
@@ -476,7 +476,7 @@ for (const exchange of conversation) {
 	}
 
 	.category.research {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 	}
 
@@ -548,7 +548,7 @@ for (const exchange of conversation) {
 	}
 
 	.stat {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: center;
@@ -602,7 +602,7 @@ for (const exchange of conversation) {
 	}
 
 	.insight-box {
-		background: #fffbeb;
+		background: var(--faf-surface)beb;
 		border: 2px solid #f59e0b;
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -632,7 +632,7 @@ for (const exchange of conversation) {
 
 	.arch-icon {
 		font-size: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		padding: 0.75rem;
 		border-radius: 50%;
 		border: 2px solid #e5e7eb;
@@ -673,7 +673,7 @@ for (const exchange of conversation) {
 	}
 
 	.test-result {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -772,7 +772,7 @@ for (const exchange of conversation) {
 	}
 
 	.code-block {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border-radius: 8px;
 		padding: 1.25rem;
 		margin: 1.5rem 0;
@@ -848,7 +848,7 @@ for (const exchange of conversation) {
 	}
 
 	.proof-note {
-		background: #fffbeb;
+		background: var(--faf-surface)beb;
 		border: 1px solid #f59e0b;
 		border-radius: 8px;
 		padding: 1rem;
@@ -862,7 +862,7 @@ for (const exchange of conversation) {
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 8px;
 		margin: 1rem 0;
@@ -904,7 +904,7 @@ for (const exchange of conversation) {
 	}
 
 	.achievement {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -988,7 +988,7 @@ for (const exchange of conversation) {
 	}
 
 	a {
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 	}
 
 	a:hover {

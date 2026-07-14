@@ -299,7 +299,7 @@
 		appearance: none;
 		width: 20px;
 		height: 20px;
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid currentColor;
 		cursor: pointer;
 		border-radius: 50%;
@@ -308,7 +308,7 @@
 	input[type="range"]::-moz-range-thumb {
 		width: 20px;
 		height: 20px;
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid currentColor;
 		cursor: pointer;
 		border-radius: 50%;
@@ -329,7 +329,7 @@
 	}
 	
 	.result-card {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid var(--faf-black);
 		border-radius: 8px;
 		padding: 1.5rem;
@@ -466,7 +466,7 @@
 		grid-template-columns: repeat(4, 1fr);
 		gap: 2rem;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		margin-bottom: 2rem;

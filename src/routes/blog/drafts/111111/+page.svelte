@@ -165,7 +165,7 @@
 
 <style>
 	:global(body) {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		color: #e5e5e5;
 	}
 
@@ -279,7 +279,7 @@
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border-radius: 8px;
 		border-left: 4px solid #FFD700;
 		color: #e5e5e5;
@@ -321,7 +321,7 @@
 	}
 
 	.stat-card {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: white;
 		padding: 1.5rem;
 		border-radius: 12px;
@@ -370,7 +370,7 @@
 	}
 
 	.pkg-header {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		color: #999;
 		font-weight: 600;
 		font-size: 0.85rem;

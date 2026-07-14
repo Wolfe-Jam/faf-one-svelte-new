@@ -263,7 +263,7 @@ Next steps:
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -411,7 +411,7 @@ Next steps:
 		flex: 1;
 		min-width: 150px;
 		padding: 1rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 8px;
 		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 	}
@@ -476,7 +476,7 @@ Next steps:
 	}
 
 	.footer-note {
-		background: #fff8f0;
+		background: var(--faf-surface)8f0;
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: center;

@@ -138,7 +138,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -147,7 +147,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 	}
 
 	.post-header {
@@ -159,7 +159,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 	.breadcrumb {
 		font-size: 0.9rem;
 		margin-bottom: 1rem;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 	}
 
 	.breadcrumb a { color: #FF6B35; text-decoration: none; }
@@ -174,7 +174,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 		margin: 0.5rem 0 1rem 0;
 	}
 
@@ -183,7 +183,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		align-items: center;
 		gap: 0.5rem;
 		font-size: 0.9rem;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 	}
 
 	.separator { color: #ccc; }
@@ -209,10 +209,10 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 	}
 
 	h2 {
@@ -225,14 +225,14 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 
 	h3 { font-size: 1.3rem; margin: 0 0 0.5rem 0; color: #000; }
 
-	p { margin-bottom: 1.25rem; color: #1a1a1a; }
+	p { margin-bottom: 1.25rem; color: var(--faf-locked-dark-elevated); }
 	ul { margin: 1rem 0 1.5rem 1.5rem; }
-	li { margin-bottom: 0.5rem; color: #1a1a1a; }
+	li { margin-bottom: 0.5rem; color: var(--faf-locked-dark-elevated); }
 
 	code {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		background: #f0f0f0;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 		padding: 0.2rem 0.4rem;
 		border-radius: 4px;
 		font-size: 0.9em;
@@ -250,7 +250,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		align-items: center;
 		gap: 1.25rem;
 		padding: 1rem 1.25rem;
-		background: #fff;
+		background: var(--faf-surface);
 		border: 1px solid #e5e5e5;
 		border-radius: 10px;
 	}
@@ -268,7 +268,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 	.type-mt {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		background: none;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 		font-size: 0.9rem;
 		padding: 0;
 	}
@@ -294,7 +294,7 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 	}
 
-	.cta-box p { margin: 0 0 0.75rem 0; font-size: 0.9rem; color: #1a1a1a; }
+	.cta-box p { margin: 0 0 0.75rem 0; font-size: 0.9rem; color: var(--faf-locked-dark-elevated); }
 
 	.cta-link { color: #FF6B35; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 	.cta-link:hover { text-decoration: underline; }
@@ -320,13 +320,13 @@ The complete AI stack, now standardized. Verifiable in the IANA registry.`;
 		padding-top: 2rem;
 		border-top: 1px solid #eee;
 		font-size: 0.95rem;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 		text-align: center;
 	}
 
 	.signoff-lead {
 		font-size: 1.1rem;
-		color: #1a1a1a;
+		color: var(--faf-locked-dark-elevated);
 		margin-bottom: 0.75rem;
 	}
 

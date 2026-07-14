@@ -176,7 +176,7 @@ First MCP server for Grok gets a refresh. 21 tools, fresh landing page, 65% smal
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -267,7 +267,7 @@ First MCP server for Grok gets a refresh. 21 tools, fresh landing page, 65% smal
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -322,7 +322,7 @@ First MCP server for Grok gets a refresh. 21 tools, fresh landing page, 65% smal
 	}
 
 	.insight-box {
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border: 2px solid #FF6B35;
 		border-radius: 8px;
 		padding: 1.5rem;

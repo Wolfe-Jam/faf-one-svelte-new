@@ -481,7 +481,7 @@
     display: flex;
     gap: 0.75rem;
     padding: 0.75rem;
-    background: white;
+    background: var(--faf-surface);
     border: 2px solid #e8e8e8;
     border-radius: 10px;
     transition: all 0.3s;
@@ -645,7 +645,7 @@
 
   /* Output */
   .output {
-    background: white;
+    background: var(--faf-surface);
     border: 2px solid #00aa55;
     border-radius: 10px;
     overflow: hidden;

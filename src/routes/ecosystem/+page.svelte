@@ -327,7 +327,7 @@
 </main>
 
 <style>
-    .back-nav { padding: 1rem 2rem; background: var(--faf-white); border-bottom: 1px solid #e0e0e0; }
+    .back-nav { padding: 1rem 2rem; background: var(--faf-white); border-bottom: 1px solid var(--faf-surface-border); }
     .back-button { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--faf-dark); text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 8px; transition: all 0.3s ease; }
     .back-button:hover { background: var(--faf-cream); color: var(--faf-orange); transform: translateX(-2px); }
     .ecosystem-page { background: var(--faf-page-bg); min-height: 100vh; padding: 3rem 2rem; }
@@ -335,14 +335,14 @@
     .page-header h1 { font-size: 3rem; color: var(--faf-black); margin-bottom: 1rem; }
     .lead { font-size: 1.5rem; color: #666; margin: 0.5rem 0; }
     .subtitle { font-size: 1.125rem; color: #888; margin: 0.5rem 0 1.5rem 0; }
-    .turbo-cat-intro { background: linear-gradient(135deg, #fff5f0 0%, white 100%); border: 2px solid var(--faf-orange); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem auto 0; max-width: 800px; }
+    .turbo-cat-intro { background: linear-gradient(135deg, var(--faf-orange-tint) 0%, white 100%); border: 2px solid var(--faf-orange); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem auto 0; max-width: 800px; }
     .turbo-cat-intro p { font-size: 1.125rem; line-height: 1.7; color: #333; margin: 0 0 1rem 0; }
     .turbo-cat-intro p:last-child { margin-bottom: 0; }
     .turbo-cat-intro strong { color: var(--faf-orange); }
     .purr-line { font-size: 1.25rem; text-align: center; font-style: italic; background: rgba(255, 107, 53, 0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0 !important; }
     .pyramid-note { font-size: 1rem; color: #666; border-top: 1px solid rgba(255, 107, 53, 0.2); padding-top: 1rem; margin-top: 1rem !important; }
     .tools-grid { max-width: 1200px; margin: 0 auto 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-    .tool-card { background: white; border: 2px solid #e0e0e0; border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
+    .tool-card { background: var(--faf-surface); border: 2px solid var(--faf-surface-border); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
     .tool-card:hover { border-color: var(--faf-orange); box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15); transform: translateY(-4px); }
     .tool-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
     .tool-icon { font-size: 2.5rem; line-height: 1; }
@@ -358,10 +358,10 @@
     .link-primary { background: var(--faf-orange); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.925rem; transition: all 0.2s ease; }
     .link-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
     .link-secondary { background: #f0f0f0; color: #1a1a1a; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.925rem; transition: all 0.2s ease; }
-    .link-secondary:hover { background: #e0e0e0; }
+    .link-secondary:hover { background: var(--faf-surface-border); }
     .install-box { background: #1a1a1a; color: white; padding: 1rem; border-radius: 6px; margin-top: 0.5rem; }
     .install-box code { font-family: var(--font-mono); font-size: 0.875rem; color: white; }
-    .ecosystem-stats { max-width: 1200px; margin: 4rem auto; text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #fff5f0 0%, white 100%); border-radius: 12px; border: 2px solid var(--faf-orange); }
+    .ecosystem-stats { max-width: 1200px; margin: 4rem auto; text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, var(--faf-orange-tint) 0%, white 100%); border-radius: 12px; border: 2px solid var(--faf-orange); }
     .ecosystem-stats h2 { font-size: 2rem; color: var(--faf-black); margin-bottom: 0.5rem; }
     .stats-updated { font-size: 0.85rem; color: #999; margin-bottom: 2rem; }
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; }
@@ -371,14 +371,14 @@
     .get-started { max-width: 1200px; margin: 4rem auto; text-align: center; }
     .get-started h2 { font-size: 2rem; color: var(--faf-black); margin-bottom: 2rem; }
     .quick-start-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .option { background: white; border: 2px solid #e0e0e0; border-radius: 12px; padding: 2rem; }
+    .option { background: var(--faf-surface); border: 2px solid var(--faf-surface-border); border-radius: 12px; padding: 2rem; }
     .option h3 { font-size: 1.25rem; color: var(--faf-black); margin: 0 0 0.5rem 0; }
     .option p { color: #666; margin: 0 0 1rem 0; }
     .code-block { background: #1a1a1a; color: white; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
     .code-block code { font-family: var(--font-mono); font-size: 0.875rem; color: white; }
     .btn-primary { display: inline-block; background: var(--faf-orange); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.2s ease; margin-top: 1rem; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    .ecosystem-footer { max-width: 1200px; margin: 4rem auto 0; text-align: center; padding: 2rem 0; border-top: 1px solid #e0e0e0; color: #666; }
+    .ecosystem-footer { max-width: 1200px; margin: 4rem auto 0; text-align: center; padding: 2rem 0; border-top: 1px solid var(--faf-surface-border); color: #666; }
     .ecosystem-footer p { margin: 0.5rem 0; }
     .ecosystem-footer a { color: var(--faf-orange); text-decoration: none; font-weight: 600; }
     .ecosystem-footer a:hover { text-decoration: underline; }

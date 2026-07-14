@@ -192,7 +192,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 2rem;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 16px;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 	}
@@ -228,7 +228,7 @@
 	}
 
 	.step-box {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e7eb;
 		border-radius: 12px;
 		padding: 1.25rem;
@@ -350,7 +350,7 @@
 	}
 
 	.summary-item {
-		background: white;
+		background: var(--faf-surface);
 		padding: 0.75rem;
 		border-radius: 8px;
 	}
@@ -392,7 +392,7 @@
 	}
 
 	.metric-card {
-		background: white;
+		background: var(--faf-surface);
 		border: 2px solid #e5e7eb;
 		border-radius: 12px;
 		padding: 1.5rem;

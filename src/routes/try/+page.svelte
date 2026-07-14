@@ -73,7 +73,7 @@
 
 		<!-- React Example -->
 		<p class="instruction-line">facebook/react</p>
-		<div class="copy-box clickable" style="background: #1a1a1a !important;" onclick={copyReact}>
+		<div class="copy-box clickable" style="background: var(--faf-locked-dark-elevated) !important;" onclick={copyReact}>
 			<div class="code-display" style="color: #f5f5dc !important;">
 				<span class="cmd-text">npx faf-cli@latest git https://github.com/</span><span class="repo-highlight">facebook/react</span>
 			</div>
@@ -82,7 +82,7 @@
 
 		<!-- Vercel/Next.js Example -->
 		<p class="instruction-line" style="margin-top: 1rem;">vercel/next.js</p>
-		<div class="copy-box clickable" style="margin-top: 0.5rem; background: #1a1a1a !important;" onclick={copyVercel}>
+		<div class="copy-box clickable" style="margin-top: 0.5rem; background: var(--faf-locked-dark-elevated) !important;" onclick={copyVercel}>
 			<div class="code-display" style="color: #f5f5dc !important;">
 				<span class="cmd-text">npx faf-cli@latest git https://github.com/</span><span class="repo-highlight">vercel/next.js</span>
 			</div>
@@ -94,7 +94,7 @@
 
 		<!-- Try Your Own - Editable -->
 		<p class="instruction-line centered">Now try yours--it's easy!</p>
-		<div class="copy-box editable-box clickable" style="margin-top: 0.5rem; background: #1a1a1a !important;" onclick={copyUser}>
+		<div class="copy-box editable-box clickable" style="margin-top: 0.5rem; background: var(--faf-locked-dark-elevated) !important;" onclick={copyUser}>
 			<div class="editable-display">
 				<span class="cmd-prefix">npx faf-cli@latest git https://github.com/</span><input
 					type="text"
@@ -212,7 +212,7 @@
 						but it doesn't know the project structure.
 					</p>
 					<p class="insight-text">
-						<strong>Not anymore.</strong> Run <code style="background: #0a0a0a; color: #00d4d4; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.95rem;">faf git facebook/react</code>
+						<strong>Not anymore.</strong> Run <code style="background: var(--faf-locked-dark); color: #00d4d4; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.95rem;">faf git facebook/react</code>
 						once. AI instantly understands the entire codebase. Architecture, patterns,
 						conventions - everything. Ready to help from line one.
 					</p>
@@ -275,7 +275,7 @@
 <style>
 	.try-page {
 		min-height: 100vh;
-		background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+		background: LOCKED_GRAD;
 		color: #f5f5dc;
 	}
 
@@ -347,7 +347,7 @@
 	}
 
 	.terminal {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border-radius: 12px;
 		overflow: hidden;
 		border: 1px solid #333;
@@ -356,7 +356,7 @@
 	}
 
 	.terminal-header {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		padding: 0.75rem 1rem;
 		display: flex;
 		align-items: center;
@@ -448,7 +448,7 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem 1.5rem;
-		background: #1a1a1a !important;
+		background: var(--faf-locked-dark-elevated) !important;
 		border: 1px solid #333;
 		border-radius: 8px;
 	}
@@ -569,7 +569,7 @@
 		align-items: flex-start;
 		gap: 1.5rem;
 		padding: 1rem;
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		transition: all 0.3s;
@@ -603,7 +603,7 @@
 	}
 
 	.what-next-content {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border: 1px solid #333;
 		border-radius: 12px;
 		padding: 2rem;
@@ -649,7 +649,7 @@
 	}
 
 	.usage-step code {
-		background: #0a0a0a !important;
+		background: var(--faf-locked-dark) !important;
 		color: #00d4d4 !important;
 		padding: 0.75rem 1rem !important;
 		border-radius: 6px;
@@ -701,7 +701,7 @@
 	}
 
 	.insight-box {
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+		background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, var(--faf-locked-dark) 100%);
 		border: 2px solid #ff6b35;
 		border-radius: 12px;
 		padding: 2rem;
@@ -793,7 +793,7 @@
 	}
 
 	.github-btn:hover {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border-color: #555;
 		transform: translateY(-2px);
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -806,7 +806,7 @@
 	}
 
 	.x-btn:hover {
-		background: #1a1a1a;
+		background: var(--faf-locked-dark-elevated);
 		border-color: #555;
 		transform: translateY(-2px);
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);

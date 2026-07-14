@@ -612,7 +612,7 @@
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.2s;
-    background: white;
+    background: var(--faf-surface);
   }
 
   .input-with-copy input:focus {
@@ -750,12 +750,12 @@
   }
 
   .tab.active {
-    background: white;
+    background: var(--faf-surface);
     color: var(--faf-orange);
   }
 
   .preview-content {
-    background: white;
+    background: var(--faf-surface);
     border-radius: 0 8px 8px 8px;
     padding: 1.5rem;
     min-height: 400px;
@@ -817,7 +817,7 @@
   .actions button {
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--faf-orange);
-    background: white;
+    background: var(--faf-surface);
     color: var(--faf-orange);
     border-radius: 8px;
     font-weight: 600;
@@ -873,7 +873,7 @@
   .step {
     text-align: center;
     padding: 2rem;
-    background: white;
+    background: var(--faf-surface);
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }

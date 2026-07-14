@@ -458,7 +458,7 @@
 	.try-box {
 		display: flex;
 		align-items: center;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #1a1a1a;
 		border-radius: 6px;
 		padding: 0.75rem 1rem;
@@ -638,7 +638,7 @@
 	.install-box {
 		display: flex;
 		align-items: center;
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		border: 1px solid #1a1a1a;
 		border-radius: 6px;
 		padding: 0.5rem 0.75rem;
@@ -680,7 +680,7 @@
 
 	.copy-btn.copied {
 		background: rgba(0, 191, 99, 0.2);
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		border-color: rgba(0, 191, 99, 0.4);
 	}
 
@@ -827,7 +827,7 @@
 	}
 
 	.email-ok {
-		color: #00bf63;
+		color: var(--faf-foundation-green);
 		font-size: 0.8rem;
 		margin-top: 0.5rem;
 		font-weight: 600;

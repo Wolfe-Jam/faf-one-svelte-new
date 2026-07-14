@@ -192,7 +192,7 @@
 
 <style>
 	:global(body) {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 	}
 
 	.hero-image {

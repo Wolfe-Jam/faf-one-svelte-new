@@ -447,7 +447,7 @@ Dashboard application
 	.speed-selector button {
 		padding: 0.5rem 1rem;
 		border: 2px solid #e0e0e0;
-		background: white;
+		background: var(--faf-surface);
 		border-radius: 6px;
 		cursor: pointer;
 		font-weight: 600;
@@ -715,7 +715,7 @@ Dashboard application
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
 		padding: 1.5rem;
-		background: white;
+		background: var(--faf-surface);
 		border: 3px solid var(--faf-orange);
 		border-radius: 8px;
 		margin-bottom: 2rem;

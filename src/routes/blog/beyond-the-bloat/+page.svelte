@@ -392,7 +392,7 @@ ArXiv exposes the AGENTS.md bloat problem. FAF solves it with structured Project
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	/* ======================================== */

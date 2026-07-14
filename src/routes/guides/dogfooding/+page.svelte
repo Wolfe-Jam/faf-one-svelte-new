@@ -100,7 +100,7 @@
     }
 
     .guide-card {
-        background: white;
+        background: var(--faf-surface);
         border-radius: 16px;
         padding: 2rem;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);

@@ -134,7 +134,7 @@
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.hero-image {
@@ -214,7 +214,7 @@
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}
@@ -254,7 +254,7 @@
 	}
 
 	.discovery-card {
-		background: #fff;
+		background: var(--faf-surface);
 		border: 2px solid #eee;
 		border-radius: 10px;
 		padding: 1.5rem;

@@ -46,11 +46,11 @@
 		const bg = $page.data?.bg;
 		const s = document.body.style;
 		if (bg === 'dark') {
-			s.background = '#0a0a0a';
-			s.color = '#e5e5e5';
+			s.background = 'var(--faf-locked-dark)';
+			s.color = 'var(--faf-locked-dark-text)';
 		} else if (bg === 'light') {
 			s.background = 'var(--faf-page-bg)';
-			s.color = '#1a1a1a';
+			s.color = 'var(--faf-dark)';
 		} else if (bg === 'self') {
 			s.removeProperty('background');
 			s.removeProperty('color');
@@ -134,12 +134,11 @@
 </div>
 
 <style>
-	/* LOCKED-DARK by design (wolfejam 2026-05-22) — banner stays
-	   dark over any page below it, regardless of theme toggle. Do
-	   NOT convert these literals to brand vars. See CLAUDE.md
-	   "Theming Rules" §4 for the intent. */
+	/* LOCKED-DARK — banner stays dark over any page below it, regardless
+	   of theme toggle. Use --faf-locked-* / --faf-chrome-* (defined in
+	   :root only; they do NOT flip in [data-theme="dark"]). */
 	.official-banner {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		color: white;
@@ -211,7 +210,7 @@
 	}
 
 	.official-banner:hover {
-		background: #0a0a0a;
+		background: var(--faf-locked-dark);
 	}
 
 	.banner-content {
@@ -302,8 +301,8 @@
 		top: 5px;
 		width: 40px;
 		height: 40px;
-		background: #000;
-		border: 2px solid #fff;
+		background: var(--faf-chrome-bg);
+		border: 2px solid var(--faf-chrome-fg);
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -331,8 +330,8 @@
 		position: absolute;
 		top: calc(100% + 6px);
 		left: 0;
-		background: #000;
-		color: #fff;
+		background: var(--faf-chrome-bg);
+		color: var(--faf-chrome-fg);
 		font: 600 12px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		padding: 5px 8px;
 		border-radius: 6px;

@@ -200,7 +200,7 @@ async fn main() {
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -210,7 +210,7 @@ async fn main() {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
 		color: #333;
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.post-header {
@@ -292,7 +292,7 @@ async fn main() {
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}

@@ -360,7 +360,7 @@
 		font-size: 0.95rem;
 	}
 	.x-share:hover {
-		background: #ffffff;
+		background: var(--faf-surface)fff;
 		color: #000000;
 	}
 

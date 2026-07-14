@@ -329,7 +329,7 @@ foundation  central       global`}</code></pre>
 		<section>
 			<h2>The Slogan</h2>
 
-			<p style="font-size: 1.15rem; line-height: 1.6; padding: 1.5rem; background: #fff5f0; border-radius: 8px; border-left: 4px solid #FF6B35;">
+			<p style="font-size: 1.15rem; line-height: 1.6; padding: 1.5rem; background: var(--faf-surface)5f0; border-radius: 8px; border-left: 4px solid #FF6B35;">
 				<strong>We are the Open-Ended answer to Voice memory, and don't you Forget It.</strong>
 				<span style="color: #FF6B35; font-weight: 700;">We won't.</span>
 			</p>
@@ -356,7 +356,7 @@ foundation  central       global`}</code></pre>
 
 <style>
 	:global(body) {
-		background: #FEFCF8;
+		background: var(--faf-page-bg);
 	}
 
 	.blog-post {
@@ -478,7 +478,7 @@ foundation  central       global`}</code></pre>
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
 	}

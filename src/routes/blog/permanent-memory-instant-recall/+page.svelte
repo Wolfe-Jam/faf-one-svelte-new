@@ -231,7 +231,7 @@
 		line-height: 1.7;
 		margin-bottom: 2rem;
 		padding: 1.5rem;
-		background: #fff5f0;
+		background: var(--faf-surface)5f0;
 		color: #1a1a1a; /* bg is locked light (peach); text MUST also be locked dark, otherwise inherits var(--faf-dark) which flips to light text on light bg in dark theme */
 		border-radius: 8px;
 		border-left: 4px solid #FF6B35;
