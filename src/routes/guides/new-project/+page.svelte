@@ -9,6 +9,39 @@
 		setTimeout(() => (copiedCommand = ''), 2000);
 	}
 
+	const paths = [
+		{
+			id: 'fastest',
+			label: 'Fastest',
+			tag: 'Existing repo',
+			steps: [
+				{ cmd: 'faf git <url>', note: '~2s · no clone' },
+				{ cmd: 'faf auto', note: 'Turbo-Cat fills stack' },
+				{ cmd: '✪', note: 'Often 100% already — else faf go' }
+			]
+		},
+		{
+			id: 'popular',
+			label: 'Most popular',
+			tag: 'New / local',
+			steps: [
+				{ cmd: 'faf init', note: 'Extract from files' },
+				{ cmd: 'faf auto', note: '30% → 80%' },
+				{ cmd: 'faf go', note: '6 Ws if needed → 100% ✪' }
+			]
+		},
+		{
+			id: 'disciplined',
+			label: 'Most disciplined',
+			tag: 'Greenfield',
+			steps: [
+				{ cmd: 'faf readme', note: 'or /6ws · optional' },
+				{ cmd: 'faf init', note: 'Commit foundation' },
+				{ cmd: 'faf auto → go', note: 'Grow · polish' }
+			]
+		}
+	];
+
 	const steps = [
 		{
 			num: 1,
@@ -38,12 +71,12 @@
 	<title>New Project Guide — Start with AI-Ready Context | FAF</title>
 	<meta
 		name="description"
-		content="Step-by-step guide to starting a new project with AI-ready context from day one. README first, .faf second, code third."
+		content="Three paths to 100% AI context — fastest, most popular, or most disciplined. Run faf, answer what it asks."
 	/>
 	<meta property="og:title" content="New Project Guide" />
 	<meta
 		property="og:description"
-		content="Three commands from README to championship-grade AI context."
+		content="faf git · faf init · faf auto · faf go — pick your path to championship-grade context."
 	/>
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -52,33 +85,66 @@
 <main class="page">
 	<section class="hero">
 		<h1>New <span class="faf">Project</span> Guide</h1>
-		<p class="sub">Start with AI-ready context from day one</p>
+		<p class="sub">Run faf. Answer what it asks. Context grows.</p>
 		<div class="hero-receipts">
+			<span class="receipt">faf git</span>
 			<span class="receipt">faf init</span>
 			<span class="receipt">faf auto</span>
 			<span class="receipt">faf go</span>
 		</div>
-		<p class="golden-rule">README first, .faf second, code third.</p>
+		<p class="golden-rule">Context before code. README optional — <code>faf go</code> asks the 6 Ws.</p>
 	</section>
 
 	<section class="content">
-		<h2>Why this order matters</h2>
+		<h2>Ways to 100%</h2>
+		<p class="section-intro">Three paths. Same honest score. Pick your friction level.</p>
+		<div class="path-matrix" role="table" aria-label="Three paths to 100 percent AI context">
+			<div class="matrix-head" role="row">
+				<div class="matrix-corner" role="columnheader"></div>
+				<div class="matrix-col" role="columnheader">Start</div>
+				<div class="matrix-col" role="columnheader">Grow</div>
+				<div class="matrix-col" role="columnheader">Finish</div>
+			</div>
+			{#each paths as path}
+				<div class="matrix-row" class:highlight={path.id === 'popular'} role="row">
+					<div class="matrix-row-label" role="rowheader">
+						<span class="path-name">{path.label}</span>
+						<span class="path-tag">{path.tag}</span>
+					</div>
+					{#each path.steps as step}
+						<div class="matrix-cell" role="cell">
+							<code class="cell-cmd">{step.cmd}</code>
+							<span class="cell-note">{step.note}</span>
+						</div>
+					{/each}
+				</div>
+			{/each}
+		</div>
+		<p class="matrix-foot">
+			Great README is good discipline — not a gate. <code>faf go</code> fills missing 6 Ws when you're
+			stuck at 80–90%.
+		</p>
+	</section>
+
+	<section class="content">
+		<h2>What FAF needs</h2>
 		<div class="cards">
 			<div class="card">
-				<h3>README first</h3>
+				<h3>Sourced context</h3>
 				<p>
-					Forces you to articulate purpose before code. Human-readable definition that you can't fake.
+					Repo files, stack detection, or your answers — not a blank repo. FAF scores honestly; it
+					doesn't invent.
 				</p>
 			</div>
 			<div class="card">
-				<h3>project.faf second</h3>
-				<p>AI-readable version of your README context. Structured YAML that machines can parse.</p>
+				<h3>project.faf</h3>
+				<p>Structured YAML — machines read it, every AI reads it. The single source of truth.</p>
 			</div>
 			<div class="card">
-				<h3>Code third</h3>
+				<h3>README optional</h3>
 				<p>
-					Implementation follows definition. AI has context to help from the start. No documentation
-					debt.
+					Human prose helps, but <code>faf readme</code>, <code>/6ws</code>, or <code>faf go</code>
+					can author what you need without writer's block.
 				</p>
 			</div>
 		</div>
@@ -291,13 +357,12 @@ faf go
 			<div class="faq-item highlight">
 				<h3>What blocks 100%?</h3>
 				<p>
-					With a <strong>good README</strong>, <code>faf auto</code> can often reach 100% without
-					<code>faf go</code>. <code>faf git</code> on well-documented repos can score 100% on its own.
+					Stack detection is robust — <code>faf auto</code> handles most of it. Well-documented repos
+					via <code>faf git</code> can hit 100% without <code>faf go</code>.
 				</p>
 				<p>
-					<strong>When stuck at 80–90%:</strong> It's very often 1–2 missing 6 Ws. Tech stack detection
-					is robust — the blocker is almost always human context. <code>faf go</code> asks targeted
-					questions and you're at 100%.
+					<strong>When stuck at 80–90%:</strong> Almost always 1–2 missing 6 Ws (who/what/why). You
+					don't need a great README — <code>faf go</code> asks targeted questions and you're at 100%.
 				</p>
 			</div>
 			<div class="faq-item">
@@ -338,7 +403,7 @@ faf go
 				class="card link-card"
 			>
 				<h3>Dogfooding guides</h3>
-				<p>Full 8-step workflow for README-first foundation</p>
+				<p>Greenfield discipline path — README-first when you want the full ritual</p>
 				<span class="card-cta">→</span>
 			</a>
 			<a
@@ -355,9 +420,9 @@ faf go
 	</section>
 
 	<PageActions
-		headline="README first, .faf second, code third."
-		point1="Three commands: faf init → faf auto → faf go."
-		point2="Championship-grade AI context from day one."
+		headline="Run faf. Answer what it asks. Context grows."
+		point1="Fastest: faf git. Popular: faf init → auto → go. README optional."
+		point2="Three paths to 100% ✪ — pick your friction level."
 		url="https://faf.one/guides/new-project"
 		hashtags="AI,OpenSource,FAF"
 	/>
@@ -413,11 +478,130 @@ faf go
 	}
 
 	.golden-rule {
-		font-size: 1.05rem;
-		font-weight: 700;
-		font-style: italic;
-		color: var(--faf-orange);
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--faf-dark);
 		margin: 0;
+		line-height: 1.6;
+		max-width: 32rem;
+		margin-inline: auto;
+	}
+
+	.golden-rule code {
+		color: var(--faf-orange);
+	}
+
+	.path-matrix {
+		display: grid;
+		gap: 0;
+		border: 1px solid var(--faf-light-gray);
+		border-radius: 10px;
+		overflow: hidden;
+		background: var(--faf-surface);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	}
+
+	.matrix-head,
+	.matrix-row {
+		display: grid;
+		grid-template-columns: 7.5rem repeat(3, 1fr);
+	}
+
+	.matrix-head {
+		background: var(--faf-locked-dark-elevated);
+		border-bottom: 1px solid var(--faf-light-gray);
+	}
+
+	.matrix-corner {
+		background: var(--faf-locked-dark-elevated);
+	}
+
+	.matrix-col {
+		padding: 0.65rem 0.75rem;
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--faf-orange);
+		text-align: center;
+		border-left: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	.matrix-row {
+		border-bottom: 1px solid var(--faf-light-gray);
+	}
+
+	.matrix-row:last-child {
+		border-bottom: none;
+	}
+
+	.matrix-row.highlight {
+		background: var(--faf-orange-tint);
+	}
+
+	.matrix-row-label {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.2rem;
+		padding: 0.85rem 0.75rem;
+		background: var(--faf-section-alt);
+		border-right: 1px solid var(--faf-light-gray);
+	}
+
+	.path-name {
+		font-size: 0.82rem;
+		font-weight: 800;
+		color: var(--faf-black);
+		line-height: 1.2;
+	}
+
+	.path-tag {
+		font-size: 0.68rem;
+		font-weight: 600;
+		color: var(--faf-gray);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.matrix-cell {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.3rem;
+		padding: 0.85rem 0.75rem;
+		border-left: 1px solid var(--faf-light-gray);
+		min-height: 4.5rem;
+	}
+
+	.cell-cmd {
+		display: block;
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 700;
+		color: var(--faf-orange);
+		background: none;
+		padding: 0;
+		line-height: 1.3;
+		word-break: break-word;
+	}
+
+	.cell-note {
+		font-size: 0.72rem;
+		color: var(--faf-gray);
+		line-height: 1.4;
+	}
+
+	.matrix-foot {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--faf-gray);
+		margin: 1rem 0 0;
+		line-height: 1.6;
+	}
+
+	.matrix-foot code {
+		color: var(--faf-orange);
 	}
 
 	.content {
@@ -752,6 +936,49 @@ faf go
 	@media (max-width: 768px) {
 		.hero h1 {
 			font-size: 1.9rem;
+		}
+
+		.matrix-head {
+			display: none;
+		}
+
+		.matrix-row {
+			grid-template-columns: 1fr;
+		}
+
+		.matrix-row-label {
+			border-right: none;
+			border-bottom: 1px solid var(--faf-light-gray);
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.matrix-cell {
+			border-left: none;
+			border-bottom: 1px solid var(--faf-light-gray);
+			min-height: auto;
+		}
+
+		.matrix-cell::before {
+			content: attr(data-step);
+			font-size: 0.65rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.06em;
+			color: var(--faf-cyan-text);
+		}
+
+		.matrix-row .matrix-cell:nth-child(2)::before {
+			content: 'Start';
+		}
+
+		.matrix-row .matrix-cell:nth-child(3)::before {
+			content: 'Grow';
+		}
+
+		.matrix-row .matrix-cell:nth-child(4)::before {
+			content: 'Finish';
 		}
 
 		.command-row {
