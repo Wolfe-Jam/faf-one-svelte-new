@@ -287,12 +287,12 @@
 		margin-top: 3rem;
 	}
 
-	/* Theme gizmo — same left lock as .home-badge (fixed, left: 20px). In-flow
-	   placement drifted toward center on wide screens when ancestors centered. */
+	/* Theme gizmo — viewport bottom-left (same left as .home-badge). Raised above
+	   the locked-dark footer so it never reads as sitting on the footer bar. */
 	.theme-toggle {
 		position: fixed;
 		left: 20px;
-		bottom: 11rem;
+		bottom: 17rem;
 		z-index: 9998;
 	}
 
@@ -413,7 +413,7 @@
 
 		.theme-toggle {
 			left: 15px;
-			bottom: 10rem;
+			bottom: 15rem;
 		}
 	}
 </style>
