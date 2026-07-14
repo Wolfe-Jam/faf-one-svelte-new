@@ -78,20 +78,20 @@
 <!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
      homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
 {#if $page.url.pathname === '/'}
-	<span class="home-badge home-here" aria-label="Home" aria-current="page">
+	<span class="chrome-badge home-badge home-here" aria-label="Home" aria-current="page">
 		<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="white" /></svg>
 	</span>
 {:else}
-	<a href="/" class="home-badge" aria-label="Back">
+	<a href="/" class="chrome-badge home-badge" aria-label="Back">
 		<svg viewBox="0 0 100 100" fill="none">
 			<path d="M60 25 L35 50 L60 75" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
 		</svg>
 	</a>
 {/if}
 
-<!-- Site-map badge — opens the full page directory. Twin of the home badge,
-     flat white globe (not the colored emoji) to match the badge family. -->
-<a href="/map" class="map-badge" aria-label="Site map" title="Site map">
+<!-- Chrome badges — fixed top-left family (Home · Map · Blog · Skills).
+     Fast CSS tooltips on hover; no text pill (was mini-nav). -->
+<a href="/map" class="chrome-badge map-badge" aria-label="Site map">
 	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
 		<circle cx="50" cy="50" r="36" stroke="white" stroke-width="8" />
 		<ellipse cx="50" cy="50" rx="17" ry="36" stroke="white" stroke-width="6" />
@@ -99,11 +99,20 @@
 	</svg>
 </a>
 
-<!-- Minimal persistent nav: Home · Map · Blog · Skills. Black pill (white text)
-     so it reads on any page + over the dark banner. -->
-<nav class="mini-nav" aria-label="Primary">
-	<a href="/">Home</a><span class="sep">·</span><a href="/map">Map</a><span class="sep">·</span><a href="/blog">Blog</a><span class="sep">·</span><a href="https://skills.faf.one">Skills</a>
-</nav>
+<a href="/blog" class="chrome-badge blog-badge" aria-label="Blog">
+	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+		<rect x="22" y="20" width="56" height="60" rx="6" stroke="white" stroke-width="8" />
+		<line x1="32" y1="38" x2="68" y2="38" stroke="white" stroke-width="6" stroke-linecap="round" />
+		<line x1="32" y1="52" x2="68" y2="52" stroke="white" stroke-width="6" stroke-linecap="round" />
+		<line x1="32" y1="66" x2="54" y2="66" stroke="white" stroke-width="6" stroke-linecap="round" />
+	</svg>
+</a>
+
+<a href="https://skills.faf.one" class="chrome-badge skills-badge" aria-label="Skills" target="_blank" rel="noopener noreferrer">
+	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+		<path d="M50 12 L58 38 L86 38 L64 54 L72 80 L50 64 L28 80 L36 54 L14 38 L42 38 Z" stroke="white" stroke-width="7" stroke-linejoin="round" />
+	</svg>
+</a>
 
 <!-- Milestone banner -->
 <div class="official-banner" class:auto-hide={!$page.data?.pinBanner} class:revealed={nearTop}>
@@ -286,12 +295,11 @@
 		z-index: 9998;
 	}
 
-	/* Home badge — black circle, thick white outline, white back-arrow.
-	   On the homepage (.home-here) it's a filled white "you are home" dot. */
-	.home-badge {
+	/* Chrome badges — fixed top-left row (Home · Map · Blog · Skills).
+	   Fast CSS tooltips (0.08s); native title lags ~1s. */
+	.chrome-badge {
 		position: fixed;
 		top: 5px;
-		left: 20px;
 		width: 40px;
 		height: 40px;
 		background: #000;
@@ -300,19 +308,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		z-index: 1000;
 		text-decoration: none;
+		z-index: 1000;
+		transition: transform 0.3s ease;
+		cursor: pointer;
 	}
 
-	.home-badge svg {
+	.chrome-badge svg {
 		width: 20px;
 		height: 20px;
 	}
 
-	/* Black always — only the inner glyph changes (arrow vs you-are-home dot). */
-	.home-badge:not(.home-here):hover {
+	.chrome-badge:not(.home-here):hover {
 		transform: scale(1.1);
 	}
 
@@ -320,8 +327,7 @@
 		cursor: default;
 	}
 
-	/* Instant tooltip (native title lags ~1s) */
-	.home-badge::after {
+	.chrome-badge::after {
 		position: absolute;
 		top: calc(100% + 6px);
 		left: 0;
@@ -337,6 +343,14 @@
 		z-index: 1001;
 	}
 
+	.chrome-badge:hover::after {
+		opacity: 1;
+	}
+
+	.home-badge {
+		left: 20px;
+	}
+
 	.home-badge:not(.home-here)::after {
 		content: 'Back';
 	}
@@ -345,82 +359,55 @@
 		content: 'Home';
 	}
 
-	.home-badge:hover::after {
-		opacity: 1;
-	}
-
-	/* Site-map badge (🌐) — sits right of the home badge, opens /map. */
 	.map-badge {
-		position: fixed;
-		top: 5px;
 		left: 70px;
-		width: 40px;
-		height: 40px;
-		background: #000;
-		border: 2px solid #fff;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-		z-index: 1000;
-		transition: transform 0.3s ease;
-	}
-	.map-badge svg {
-		width: 22px;
-		height: 22px;
-	}
-	.map-badge:hover {
-		transform: scale(1.1);
 	}
 
-	/* Minimal persistent nav: black pill + white text → readable on any page
-	   and over the dark banner. Home · Map · Blog. */
-	.mini-nav {
-		position: fixed;
-		top: 10px;
+	.map-badge::after {
+		content: 'Site map';
+	}
+
+	.blog-badge {
 		left: 120px;
-		z-index: 1000;
-		display: inline-flex;
-		align-items: center;
-		gap: 0.55rem;
-		height: 30px;
-		padding: 0 14px;
-		background: #000;
-		border: 2px solid #fff;
-		border-radius: 16px;
-		box-sizing: border-box;
-	}
-	.mini-nav a {
-		color: #fff;
-		text-decoration: none;
-		font-weight: 700;
-		font-size: 0.85rem;
-	}
-	.mini-nav a:hover {
-		color: var(--faf-orange);
-	}
-	.mini-nav .sep {
-		color: #777;
 	}
 
-	@media (max-width: 640px) {
-		.mini-nav {
-			display: none;
-		}
+	.blog-badge::after {
+		content: 'Blog';
+	}
+
+	.skills-badge {
+		left: 170px;
+	}
+
+	.skills-badge::after {
+		content: 'Skills';
 	}
 
 	@media (max-width: 768px) {
-		.home-badge {
+		.chrome-badge {
 			width: 36px;
 			height: 36px;
-			top: 5px;
+		}
+
+		.chrome-badge svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.home-badge {
 			left: 15px;
 		}
 
-		.home-badge svg {
-			width: 18px;
-			height: 18px;
+		.map-badge {
+			left: 59px;
+		}
+
+		.blog-badge {
+			left: 103px;
+		}
+
+		.skills-badge {
+			left: 147px;
 		}
 
 		.theme-toggle {
