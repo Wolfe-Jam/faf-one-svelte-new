@@ -1,136 +1,121 @@
+<script>
+	import PageActions from '$lib/components/PageActions.svelte';
+</script>
+
 <svelte:head>
-    <title>FAF Dogfooding Guide - Standard Workflow</title>
-    <meta name="description" content="How to add project.faf to any project. README first, .faf second, code third.">
+	<title>FAF Dogfooding Guide — Standard Workflow | FAF</title>
+	<meta
+		name="description"
+		content="How to add project.faf to any project. README first, .faf second, code third."
+	/>
+	<meta property="og:title" content="FAF Dogfooding — Standard Workflow" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<div class="container">
-    <div class="header">
-        <h1>FAF Dogfooding Guide</h1>
-        <p class="subtitle">Standard Workflow for Any Project</p>
-        <p class="example">Works with TypeScript, Python, Rust, Go, and more</p>
-    </div>
+<main class="page">
+	<section class="hero">
+		<h1>Standard <span class="faf">Workflow</span></h1>
+		<p class="sub">Dogfooding guide for any project type</p>
+		<div class="hero-receipts">
+			<span class="receipt">TypeScript</span>
+			<span class="receipt">Python</span>
+			<span class="receipt">Rust</span>
+			<span class="receipt">Go</span>
+		</div>
+	</section>
 
-    <div class="philosophy">
-        <h2>Philosophy</h2>
-        <p class="quote">"README first, .faf second, code third."</p>
-        <p>You can't generate meaningful AI context from an empty repository. Start with what you're building, then add context, then code.</p>
-    </div>
+	<section class="content">
+		<div class="callout">
+			<p class="quote">"README first, .faf second, code third."</p>
+			<p>
+				You can't generate meaningful AI context from an empty repository. Start with what you're
+				building, then add context, then code.
+			</p>
+		</div>
+	</section>
 
-    <h2>Quick Start</h2>
+	<section class="content">
+		<h2>Quick start</h2>
+		<div class="faq">
+			<div class="faq-item">
+				<h3>Prerequisites</h3>
+				<pre><code>npm install -g faf-cli</code></pre>
+			</div>
+		</div>
+	</section>
 
-    <div class="info-box">
-        <p><strong>Prerequisites:</strong> Install faf-cli</p>
-        <pre><code>npm install -g faf-cli</code></pre>
-    </div>
+	<section class="content">
+		<h2>The 8-step workflow</h2>
+		<div class="cards">
+			<div class="card">
+				<h3>Step 1: Create your README</h3>
+				<div class="meta">
+					<span><strong>When:</strong> Day 1, before any code</span>
+					<span><strong>Time:</strong> 5–10 minutes</span>
+				</div>
+				<p>Write a README that answers:</p>
+				<ul>
+					<li><strong>WHAT</strong> — What does this project do?</li>
+					<li><strong>WHY</strong> — Why does it exist? What problem does it solve?</li>
+					<li><strong>WHO</strong> — Who is building it? Who is it for?</li>
+					<li><strong>HOW</strong> — How do you install/use it?</li>
+				</ul>
+				<pre><code># Example README.md
 
-    <h2>The 8-Step Workflow</h2>
-
-    <div class="step">
-        <h3>Step 1: Create Your README</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">When:</span>
-                <span class="step-meta-value">Day 1, before any code</span>
-            </div>
-            <div class="step-meta-item">
-                <span class="step-meta-label">Time:</span>
-                <span class="step-meta-value">5-10 minutes</span>
-            </div>
-        </div>
-
-        <p>Write a README that answers:</p>
-        <ul>
-            <li><strong>WHAT</strong> - What does this project do?</li>
-            <li><strong>WHY</strong> - Why does it exist? What problem does it solve?</li>
-            <li><strong>WHO</strong> - Who is building it? Who is it for?</li>
-            <li><strong>HOW</strong> - How do you install/use it?</li>
-        </ul>
-
-        <pre><code><span class="comment"># Example README.md</span>
-
-<span class="comment"># My Awesome CLI</span>
+# My Awesome CLI
 
 A command-line tool for managing project tasks efficiently.
 
-<span class="comment">## Why</span>
+## Why
 
 Tired of juggling multiple task managers? This CLI brings everything into your terminal.
 
-<span class="comment">## Installation</span>
+## Installation
 
-```bash
 npm install -g my-awesome-cli
-```
 
-<span class="comment">## Usage</span>
+## Usage
 
-```bash
 my-cli add "Write documentation"
-my-cli list
-```</code></pre>
+my-cli list</code></pre>
+				<p class="result"><strong>Result:</strong> Human-readable project definition</p>
+			</div>
 
-        <div class="result-box">
-            <strong>Result:</strong> Human-readable project definition
-        </div>
-    </div>
-
-    <div class="step">
-        <h3>Step 2: Add Basic Project Structure</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">When:</span>
-                <span class="step-meta-value">After README</span>
-            </div>
-        </div>
-
-        <p>Create your language-specific configuration:</p>
-
-        <pre><code><span class="comment"># For TypeScript/JavaScript:</span>
+			<div class="card">
+				<h3>Step 2: Add basic project structure</h3>
+				<div class="meta"><span><strong>When:</strong> After README</span></div>
+				<p>Create your language-specific configuration:</p>
+				<pre><code># For TypeScript/JavaScript:
 npm init -y
 
-<span class="comment"># For Python:</span>
-poetry init  <span class="comment"># or create pyproject.toml</span>
+# For Python:
+poetry init  # or create pyproject.toml
 
-<span class="comment"># For Rust:</span>
+# For Rust:
 cargo init
 
-<span class="comment"># For Go:</span>
+# For Go:
 go mod init github.com/user/project</code></pre>
+				<p>This gives faf-cli the context it needs to detect language, package manager, and project type.</p>
+			</div>
 
-        <p>This gives faf-cli the context it needs to detect:</p>
-        <ul>
-            <li>Language (TypeScript, Python, Rust, Go)</li>
-            <li>Package manager (npm, poetry, cargo, go modules)</li>
-            <li>Project type (CLI, library, web-app)</li>
-        </ul>
-    </div>
-
-    <div class="step">
-        <h3>Step 3: Generate project.faf</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">Command:</span>
-                <span class="step-meta-value">faf init</span>
-            </div>
-            <div class="step-meta-item">
-                <span class="step-meta-label">Expected Score:</span>
-                <span class="step-meta-value">30-50%</span>
-            </div>
-        </div>
-
-        <pre><code>cd your-project
+			<div class="card">
+				<h3>Step 3: Generate project.faf</h3>
+				<div class="meta">
+					<span><strong>Command:</strong> <code>faf init</code></span>
+					<span><strong>Expected score:</strong> 30–50%</span>
+				</div>
+				<pre><code>cd your-project
 faf init</code></pre>
-
-        <p><strong>What happens:</strong></p>
-        <ul>
-            <li>Reads your README (extracts WHO, WHAT, WHY, HOW)</li>
-            <li>Detects project type from files (CLI, web-app, library, etc.)</li>
-            <li>Detects stack from package.json/pyproject.toml/Cargo.toml</li>
-            <li>Generates project.faf with honest initial score</li>
-        </ul>
-
-        <p><strong>Output:</strong></p>
-        <pre><code>✓ Generated project.faf (42% - 9/21 slots filled)
+				<p><strong>What happens:</strong></p>
+				<ul>
+					<li>Reads your README (extracts WHO, WHAT, WHY, HOW)</li>
+					<li>Detects project type from files</li>
+					<li>Detects stack from package files</li>
+					<li>Generates <code>project.faf</code> with honest initial score</li>
+				</ul>
+				<pre><code>✓ Generated project.faf (42% - 9/21 slots filled)
 
 Missing context:
   - Database (if applicable)
@@ -138,116 +123,60 @@ Missing context:
   - Hosting platform
 
 Run `faf go` to improve your score!</code></pre>
+				<p class="result"><strong>Result:</strong> project.faf created with 30–50% score (honest baseline)</p>
+			</div>
 
-        <div class="result-box">
-            <strong>Result:</strong> project.faf created with 30-50% score (honest baseline)
-        </div>
-    </div>
-
-    <div class="step">
-        <h3>Step 4: Commit the Foundation</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">When:</span>
-                <span class="step-meta-value">Before writing implementation code</span>
-            </div>
-        </div>
-
-        <pre><code>git add README.md package.json project.faf
-git commit -m <span class="string">"Add project foundation
+			<div class="card">
+				<h3>Step 4: Commit the foundation</h3>
+				<div class="meta">
+					<span><strong>When:</strong> Before writing implementation code</span>
+				</div>
+				<pre><code>git add README.md package.json project.faf
+git commit -m "Add project foundation
 
 - README defines purpose and usage
 - package.json defines dependencies
 - project.faf provides AI context (42%)
 
-AI-ready before first line of code."</span></code></pre>
+AI-ready before first line of code."</code></pre>
+				<p>Records birth DNA, shows AI context is first-class, foundation committed before implementation.</p>
+			</div>
 
-        <p><strong>Why commit now:</strong></p>
-        <ul>
-            <li>Records "birth DNA" (starting score)</li>
-            <li>Shows AI context is first-class, not afterthought</li>
-            <li>Foundation committed before implementation</li>
-        </ul>
-    </div>
-
-    <div class="step">
-        <h3>Step 5: Build Your Project</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">When:</span>
-                <span class="step-meta-value">After foundation committed</span>
-            </div>
-        </div>
-
-        <p>Now write your actual implementation:</p>
-
-        <pre><code>src/
+			<div class="card">
+				<h3>Step 5: Build your project</h3>
+				<div class="meta"><span><strong>When:</strong> After foundation committed</span></div>
+				<pre><code>src/
   index.ts
   cli.ts
   commands/
 tests/
   cli.test.ts</code></pre>
+				<p>AI assistants have context from day 1. No "add docs later" technical debt.</p>
+			</div>
 
-        <p><strong>Benefits:</strong></p>
-        <ul>
-            <li>AI assistants (Claude, Copilot, etc.) have context from day 1</li>
-            <li>No "add docs later" technical debt</li>
-            <li>Clear definition before implementation</li>
-        </ul>
-    </div>
-
-    <div class="step">
-        <h3>Step 6: Auto-Detect New Context</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">Command:</span>
-                <span class="step-meta-value">faf auto</span>
-            </div>
-            <div class="step-meta-item">
-                <span class="step-meta-label">Expected Score:</span>
-                <span class="step-meta-value">70-85%</span>
-            </div>
-        </div>
-
-        <p>After significant development, let Turbo-Cat discover what you've built:</p>
-
-        <pre><code>faf auto</code></pre>
-
-        <p><strong>What it does:</strong></p>
-        <ul>
-            <li>Turbo-Cat scans your codebase (153 format types)</li>
-            <li>Detects test frameworks, build tools, config files</li>
-            <li>Updates project.faf with discovered context</li>
-            <li>Grows score from 42% → 78%</li>
-        </ul>
-
-        <p><strong>Example discoveries:</strong></p>
-        <pre><code>✓ Found: vitest.config.ts → Testing: Vitest
+			<div class="card">
+				<h3>Step 6: Auto-detect new context</h3>
+				<div class="meta">
+					<span><strong>Command:</strong> <code>faf auto</code></span>
+					<span><strong>Expected score:</strong> 70–85%</span>
+				</div>
+				<pre><code>faf auto</code></pre>
+				<p>Turbo-Cat scans your codebase (153 format types), detects frameworks and config, grows score 42% → 78%.</p>
+				<pre><code>✓ Found: vitest.config.ts → Testing: Vitest
 ✓ Found: .github/workflows → CI/CD: GitHub Actions
 ✓ Found: vercel.json → Hosting: Vercel
 
 Updated project.faf (78% - 16/21 slots filled)</code></pre>
-    </div>
+			</div>
 
-    <div class="step">
-        <h3>Step 7: Refine to 100%</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">Command:</span>
-                <span class="step-meta-value">faf go</span>
-            </div>
-            <div class="step-meta-item">
-                <span class="step-meta-label">Target Score:</span>
-                <span class="step-meta-value">85%+ (Bronze) or 100% (Trophy)</span>
-            </div>
-        </div>
-
-        <p>Before release, fill remaining gaps through interactive Q&A:</p>
-
-        <pre><code>faf go</code></pre>
-
-        <p><strong>Interactive questions:</strong></p>
-        <pre><code>? What database does this project use?
+			<div class="card">
+				<h3>Step 7: Refine to 100%</h3>
+				<div class="meta">
+					<span><strong>Command:</strong> <code>faf go</code></span>
+					<span><strong>Target:</strong> 85%+ (◇ Bronze) or 100% (✪ Trophy)</span>
+				</div>
+				<pre><code>faf go</code></pre>
+				<pre><code>? What database does this project use?
   › PostgreSQL
     MongoDB
     None
@@ -255,543 +184,503 @@ Updated project.faf (78% - 16/21 slots filled)</code></pre>
 ? Where is this deployed?
   › Vercel
     AWS
-    Self-hosted
+    Self-hosted</code></pre>
+				<p class="result"><strong>Result:</strong> 85%+ ◇ Bronze (production-ready) or 100% ✪ Trophy (perfect)</p>
+			</div>
 
-? Who is the primary audience?
-  › Developers
-    End users
-    Internal team</code></pre>
-
-        <div class="result-box">
-            <strong>Result:</strong> 85%+ 🥉 Bronze (production-ready) or 100% 🏆 Trophy (perfect)
-        </div>
-    </div>
-
-    <div class="step">
-        <h3>Step 8: Keep Context Fresh</h3>
-        <div class="step-meta">
-            <div class="step-meta-item">
-                <span class="step-meta-label">Frequency:</span>
-                <span class="step-meta-value">Before major releases</span>
-            </div>
-        </div>
-
-        <p>Periodically update as your project evolves:</p>
-
-        <pre><code><span class="comment"># After adding new features</span>
+			<div class="card">
+				<h3>Step 8: Keep context fresh</h3>
+				<div class="meta"><span><strong>Frequency:</strong> Before major releases</span></div>
+				<pre><code># After adding new features
 faf auto
 
-<span class="comment"># Before releases</span>
+# Before releases
 faf go</code></pre>
+				<p>Your <code>project.faf</code> stays synchronized with your codebase.</p>
+			</div>
+		</div>
+	</section>
 
-        <p>Your project.faf stays synchronized with your codebase.</p>
-    </div>
+	<section class="content">
+		<h2>Score progression</h2>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Stage</th>
+						<th>Score</th>
+						<th>Tier</th>
+						<th>Meaning</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>After <code>faf init</code></td>
+						<td>30–50%</td>
+						<td>● Yellow</td>
+						<td>Honest baseline</td>
+					</tr>
+					<tr>
+						<td>After <code>faf auto</code></td>
+						<td>70–85%</td>
+						<td>◇ Bronze</td>
+						<td>Production-ready</td>
+					</tr>
+					<tr>
+						<td>After <code>faf go</code></td>
+						<td>85–100%</td>
+						<td>★ Gold / ✪ Trophy</td>
+						<td>Excellent / Perfect</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
 
-    <h2>Score Progression</h2>
+	<section class="content">
+		<h2>Common mistakes</h2>
+		<div class="cards">
+			<div class="card bad">
+				<h3>✗ Code first, docs later</h3>
+				<pre><code># Write 1000 lines of code...
+git commit -m "Initial implementation"
 
-    <table>
-        <thead>
-            <tr>
-                <th>Stage</th>
-                <th>Score</th>
-                <th>Tier</th>
-                <th>Meaning</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>After <code>faf init</code></td>
-                <td>30-50%</td>
-                <td>🟡 Yellow</td>
-                <td>Honest baseline</td>
-            </tr>
-            <tr>
-                <td>After <code>faf auto</code></td>
-                <td>70-85%</td>
-                <td>🥉 Bronze</td>
-                <td>Production-ready</td>
-            </tr>
-            <tr>
-                <td>After <code>faf go</code></td>
-                <td>85-100%</td>
-                <td>🥇 Gold / 🏆 Trophy</td>
-                <td>Excellent / Perfect</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Common Mistakes</h2>
-
-    <div class="mistake">
-        <h4>❌ Mistake #1: Code First, Docs Later</h4>
-        <pre><code><span class="comment"># Write 1000 lines of code...</span>
-git commit -m <span class="string">"Initial implementation"</span>
-
-<span class="comment"># Then try to add docs</span>
-echo <span class="string">"# Project"</span> > README.md
-faf init  <span class="comment"># Score: 15% 😞</span></code></pre>
-        <p><strong>Problem:</strong> Low score, missed context during development</p>
-    </div>
-
-    <div class="mistake">
-        <h4>❌ Mistake #2: Empty Repo Init</h4>
-        <pre><code>mkdir new-project && cd new-project
+# Then try to add docs
+echo "# Project" > README.md
+faf init  # Score: 15%</code></pre>
+				<p><strong>Problem:</strong> Low score, missed context during development</p>
+			</div>
+			<div class="card bad">
+				<h3>✗ Empty repo init</h3>
+				<pre><code>mkdir new-project && cd new-project
 git init
-faf init  <span class="comment"># Score: 0% - Nothing to extract!</span></code></pre>
-        <p><strong>Problem:</strong> Can't extract WHO/WHAT/WHY from empty repo</p>
-    </div>
+faf init  # Score: 0% - Nothing to extract!</code></pre>
+				<p><strong>Problem:</strong> Can't extract WHO/WHAT/WHY from empty repo</p>
+			</div>
+			<div class="card bad">
+				<h3>✗ Never update</h3>
+				<pre><code>faf init  # 6 months ago...
+# Add Vite, Vitest, Vercel, tests...
+# Never run faf auto
+# project.faf still shows 42% (outdated!)</code></pre>
+				<p><strong>Problem:</strong> Stale context doesn't reflect current project</p>
+			</div>
+			<div class="card good">
+				<h3>✓ Correct workflow</h3>
+				<pre><code># 1. README (WHO/WHAT/WHY)
+# 2. Structure — npm init -y
+# 3. Generate .faf (42%) — faf init
+# 4. Commit foundation
+# 5. Build (weeks of work...)
+# 6. Update context (78%) — faf auto
+# 7. Refine before v1.0 (100%) — faf go</code></pre>
+				<p><strong>Result:</strong> Perfect context from day 1, grows with your project</p>
+			</div>
+		</div>
+	</section>
 
-    <div class="mistake">
-        <h4>❌ Mistake #3: Never Update</h4>
-        <pre><code>faf init  <span class="comment"># 6 months ago...</span>
-<span class="comment"># Add Vite, Vitest, Vercel, tests...</span>
-<span class="comment"># Never run faf auto</span>
-<span class="comment"># project.faf still shows 42% (outdated!)</span></code></pre>
-        <p><strong>Problem:</strong> Stale context doesn't reflect current project</p>
-    </div>
-
-    <div class="correct">
-        <h4>✅ Correct Workflow</h4>
-        <pre><code><span class="comment"># 1. README (WHO/WHAT/WHY)</span>
-echo <span class="string">"# My CLI Tool\n\nManages tasks efficiently..."</span> > README.md
-
-<span class="comment"># 2. Structure</span>
-npm init -y
-
-<span class="comment"># 3. Generate .faf (42%)</span>
-faf init
-
-<span class="comment"># 4. Commit foundation</span>
-git commit -m <span class="string">"Add project foundation"</span>
-
-<span class="comment"># 5. Build (weeks of work...)</span>
-<span class="comment"># ...code, tests, configs...</span>
-
-<span class="comment"># 6. Update context (78%)</span>
-faf auto
-
-<span class="comment"># 7. Refine before v1.0 (100%)</span>
-faf go</code></pre>
-        <p><strong>Result:</strong> Perfect context from day 1, grows with your project</p>
-    </div>
-
-    <h2>Language-Specific Examples</h2>
-
-    <div class="step">
-        <h3>TypeScript/Node.js</h3>
-        <pre><code><span class="comment"># Setup</span>
-npm init -y
+	<section class="content">
+		<h2>Language-specific examples</h2>
+		<div class="cards">
+			<div class="card">
+				<h3>TypeScript / Node.js</h3>
+				<pre><code>npm init -y
 npm install typescript @types/node
-
-<span class="comment"># Generate</span>
 faf init
-
-<span class="comment"># Detects: TypeScript, npm, Node.js</span></code></pre>
-    </div>
-
-    <div class="step">
-        <h3>Python</h3>
-        <pre><code><span class="comment"># Setup</span>
-poetry init
-
-<span class="comment"># Generate</span>
+# Detects: TypeScript, npm, Node.js</code></pre>
+			</div>
+			<div class="card">
+				<h3>Python</h3>
+				<pre><code>poetry init
 faf init
-
-<span class="comment"># Detects: Python, poetry</span></code></pre>
-    </div>
-
-    <div class="step">
-        <h3>Rust</h3>
-        <pre><code><span class="comment"># Setup</span>
-cargo init
-
-<span class="comment"># Generate</span>
+# Detects: Python, poetry</code></pre>
+			</div>
+			<div class="card">
+				<h3>Rust</h3>
+				<pre><code>cargo init
 faf init
-
-<span class="comment"># Detects: Rust, cargo, Native runtime</span></code></pre>
-    </div>
-
-    <div class="step">
-        <h3>Go</h3>
-        <pre><code><span class="comment"># Setup</span>
-go mod init github.com/user/project
-
-<span class="comment"># Generate</span>
+# Detects: Rust, cargo, Native runtime</code></pre>
+			</div>
+			<div class="card">
+				<h3>Go</h3>
+				<pre><code>go mod init github.com/user/project
 faf init
+# Detects: Go, go modules</code></pre>
+			</div>
+		</div>
+	</section>
 
-<span class="comment"># Detects: Go, go modules</span></code></pre>
-    </div>
+	<section class="content">
+		<h2>FAQ</h2>
+		<div class="faq">
+			<div class="faq-item">
+				<h3>When exactly should I run <code>faf init</code>?</h3>
+				<p>
+					After you have a README and basic structure (package.json, Cargo.toml, etc.), but before
+					writing implementation code. This gives you 30–50% initial context.
+				</p>
+			</div>
+			<div class="faq-item">
+				<h3>Can I edit project.faf manually?</h3>
+				<p>Yes. It's just YAML. But <code>faf go</code> provides a nicer interactive UI.</p>
+			</div>
+			<div class="faq-item">
+				<h3>Do I need CLAUDE.md?</h3>
+				<p>
+					No. <code>project.faf</code> works with all AIs. CLAUDE.md is optional for Claude-specific
+					prose.
+				</p>
+			</div>
+			<div class="faq-item">
+				<h3>How often should I run <code>faf auto</code>?</h3>
+				<p>
+					After significant changes — new frameworks, deployment setup, testing added. Usually once
+					mid-development and before releases.
+				</p>
+			</div>
+		</div>
+	</section>
 
-    <h2>FAQ</h2>
+	<section class="content">
+		<h2>Key takeaways</h2>
+		<div class="takeaways">
+			<ol>
+				<li><strong>README first</strong> — Define what you're building (WHO/WHAT/WHY)</li>
+				<li><strong>project.faf second</strong> — Generate AI context with <code>faf init</code></li>
+				<li><strong>Code third</strong> — Build with AI context from day 1</li>
+				<li><strong>Let it grow</strong> — Use <code>faf auto</code> to detect new context</li>
+				<li><strong>Refine before release</strong> — Use <code>faf go</code> to reach 85%+</li>
+				<li><strong>Honest scores</strong> — 30% → 70% → 100% is normal progression</li>
+				<li><strong>Keep it fresh</strong> — Update as your project evolves</li>
+			</ol>
+		</div>
+	</section>
 
-    <div class="info-box">
-        <p><strong>Q: When exactly should I run <code>faf init</code>?</strong></p>
-        <p>A: After you have a README and basic structure (package.json, Cargo.toml, etc.), but before writing implementation code. This gives you 30-50% initial context.</p>
-    </div>
+	<section class="content">
+		<h2>Quick reference</h2>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Command</th>
+						<th>When</th>
+						<th>Purpose</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>faf init</code></td>
+						<td>After README + structure</td>
+						<td>Generate initial project.faf (30–50%)</td>
+					</tr>
+					<tr>
+						<td><code>faf auto</code></td>
+						<td>Mid-development</td>
+						<td>Auto-detect new context (→ 70–85%)</td>
+					</tr>
+					<tr>
+						<td><code>faf go</code></td>
+						<td>Before release</td>
+						<td>Interactive refinement (→ 100%)</td>
+					</tr>
+					<tr>
+						<td><code>faf score</code></td>
+						<td>Anytime</td>
+						<td>Check current score</td>
+					</tr>
+					<tr>
+						<td><code>faf bi-sync</code></td>
+						<td>Optional</td>
+						<td>Generate CLAUDE.md</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
 
-    <div class="info-box">
-        <p><strong>Q: Can I edit project.faf manually?</strong></p>
-        <p>A: Yes! It's just YAML. But <code>faf go</code> provides a nicer interactive UI.</p>
-    </div>
+	<section class="content footer-section">
+		<p><strong>Install:</strong> <code>npm install -g faf-cli</code></p>
+		<p><strong>Docs:</strong> <a href="https://faf.one">faf.one</a></p>
+		<p class="tagline">"README first, .faf second, code third."</p>
+	</section>
 
-    <div class="info-box">
-        <p><strong>Q: Do I need CLAUDE.md?</strong></p>
-        <p>A: No. project.faf works with ALL AIs. CLAUDE.md is optional for Claude-specific prose.</p>
-    </div>
-
-    <div class="info-box">
-        <p><strong>Q: How often should I run <code>faf auto</code>?</strong></p>
-        <p>A: After significant changes (new frameworks, deployment setup, testing added). Usually once mid-development and before releases.</p>
-    </div>
-
-    <div class="key-takeaways">
-        <h2>Key Takeaways</h2>
-        <ol>
-            <li><strong>README first</strong> - Define what you're building (WHO/WHAT/WHY)</li>
-            <li><strong>project.faf second</strong> - Generate AI context with <code>faf init</code></li>
-            <li><strong>Code third</strong> - Build with AI context from day 1</li>
-            <li><strong>Let it grow</strong> - Use <code>faf auto</code> to detect new context</li>
-            <li><strong>Refine before release</strong> - Use <code>faf go</code> to reach 85%+</li>
-            <li><strong>Honest scores</strong> - 30% → 70% → 100% is normal progression</li>
-            <li><strong>Keep it fresh</strong> - Update as your project evolves</li>
-        </ol>
-    </div>
-
-    <h2>Quick Reference</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Command</th>
-                <th>When</th>
-                <th>Purpose</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>faf init</code></td>
-                <td>After README + structure</td>
-                <td>Generate initial project.faf (30-50%)</td>
-            </tr>
-            <tr>
-                <td><code>faf auto</code></td>
-                <td>Mid-development</td>
-                <td>Auto-detect new context (→ 70-85%)</td>
-            </tr>
-            <tr>
-                <td><code>faf go</code></td>
-                <td>Before release</td>
-                <td>Interactive refinement (→ 100%)</td>
-            </tr>
-            <tr>
-                <td><code>faf score</code></td>
-                <td>Anytime</td>
-                <td>Check current score</td>
-            </tr>
-            <tr>
-                <td><code>faf bi-sync</code></td>
-                <td>Optional</td>
-                <td>Generate CLAUDE.md</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="footer">
-        <p><strong>Install:</strong> <code>npm install -g faf-cli</code></p>
-        <p><strong>Docs:</strong> <a href="https://faf.one" style="color: #FF6B35; text-decoration: none;">faf.one</a></p>
-        <p style="margin-top: 1rem; font-style: italic; color: #FF6B35;">"README first, .faf second, code third."</p>
-    </div>
-</div>
+	<PageActions
+		headline="README first, .faf second, code third."
+		point1="8-step workflow for any stack — honest scores from day one."
+		point2="Dogfood the standard before you ship."
+		url="https://faf.one/guides/dogfooding/standard"
+		hashtags="AI,OpenSource,FAF"
+	/>
+</main>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+	.page {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 0 1.5rem 2rem;
+	}
 
-    :global(body) {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-        line-height: 1.6;
-        color: var(--faf-locked-dark-elevated);
-        background: #f8f9fa;
-        padding: 2rem 1rem;
-    }
+	.hero {
+		text-align: center;
+		padding: 3.5rem 0 2.5rem;
+		border-bottom: 1px solid var(--faf-light-gray);
+		margin-bottom: 0.5rem;
+	}
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        background: var(--faf-surface);
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        padding: 3rem;
-    }
+	.hero h1 {
+		font-size: 2.4rem;
+		font-weight: 800;
+		color: var(--faf-black);
+		margin: 0 0 0.5rem;
+	}
 
-    .header {
-        text-align: center;
-        margin-bottom: 3rem;
-        padding-bottom: 2rem;
-        border-bottom: 3px solid #FF6B35;
-    }
+	.faf {
+		color: var(--faf-orange);
+	}
 
-    h1 {
-        font-size: 2.5rem;
-        color: var(--faf-locked-dark-elevated);
-        margin-bottom: 0.5rem;
-    }
+	.sub {
+		font-size: 1.1rem;
+		color: var(--faf-gray);
+		margin: 0 0 1.25rem;
+		font-weight: 600;
+	}
 
-    .subtitle {
-        font-size: 1.25rem;
-        color: #666;
-        margin-bottom: 0.5rem;
-    }
+	.hero-receipts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+	}
 
-    .example {
-        font-style: italic;
-        color: #888;
-        font-size: 0.95rem;
-    }
+	.receipt {
+		font-size: 0.8rem;
+		font-family: var(--font-mono);
+		color: var(--faf-dark);
+		background: var(--faf-gray-light);
+		padding: 0.35rem 0.65rem;
+		border-radius: 6px;
+	}
 
-    .philosophy {
-        background: linear-gradient(135deg, #FF6B35 0%, #ff8555 100%);
-        color: white;
-        padding: 2rem;
-        border-radius: 12px;
-        margin: 2rem 0;
-        text-align: center;
-    }
+	.content {
+		padding: 2rem 0;
+	}
 
-    .philosophy h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
+	.content h2 {
+		font-size: 1.35rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin: 0 0 1.25rem;
+		text-align: center;
+	}
 
-    .philosophy p {
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
+	.callout {
+		background: var(--faf-orange-tint);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 8px;
+		padding: 1.25rem 1.5rem;
+		text-align: center;
+	}
 
-    .philosophy .quote {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin: 1rem 0;
-    }
+	.callout .quote {
+		font-size: 1.2rem;
+		font-weight: 700;
+		font-style: italic;
+		color: var(--faf-orange);
+		margin: 0 0 0.75rem;
+	}
 
-    h2 {
-        color: #FF6B35;
-        font-size: 1.8rem;
-        margin: 2.5rem 0 1rem 0;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid #FFE5DC;
-    }
+	.callout p {
+		font-size: 0.95rem;
+		color: var(--faf-dark);
+		line-height: 1.65;
+		margin: 0;
+	}
 
-    h3 {
-        color: var(--faf-locked-dark-elevated);
-        font-size: 1.3rem;
-        margin: 2rem 0 1rem 0;
-    }
+	.cards {
+		display: grid;
+		gap: 1rem;
+	}
 
-    .step {
-        background: #f8f9fa;
-        border-left: 4px solid #FF6B35;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        border-radius: 0 8px 8px 0;
-    }
+	.card {
+		background: var(--faf-white);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 8px;
+		padding: 1.25rem 1.5rem;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	}
 
-    .step h3 {
-        margin-top: 0;
-        color: #FF6B35;
-    }
+	.card.bad {
+		border-left-color: #dc2626;
+		background: #fef2f2;
+	}
 
-    .step-meta {
-        display: flex;
-        gap: 2rem;
-        margin: 1rem 0;
-        flex-wrap: wrap;
-    }
+	.card.good {
+		border-left-color: #16a34a;
+		background: #f0fdf4;
+	}
 
-    .step-meta-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+	.card h3 {
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin: 0 0 0.5rem;
+	}
 
-    .step-meta-label {
-        font-weight: 600;
-        color: #666;
-    }
+	.card p,
+	.card li {
+		font-size: 0.95rem;
+		color: var(--faf-dark);
+		line-height: 1.65;
+	}
 
-    .step-meta-value {
-        color: var(--faf-locked-dark-elevated);
-    }
+	.card p {
+		margin: 0.5rem 0 0;
+	}
 
-    pre {
-        background: var(--faf-locked-dark-elevated);
-        color: #f5f5f5;
-        padding: 1.5rem;
-        border-radius: 8px;
-        overflow-x: auto;
-        margin: 1rem 0;
-        font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
+	.card ul {
+		margin: 0.5rem 0 0 1.25rem;
+	}
 
-    code {
-        background: #f0f0f0;
-        padding: 0.2rem 0.4rem;
-        border-radius: 4px;
-        font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-        font-size: 0.9em;
-        color: #FF6B35;
-    }
+	.meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem 1.5rem;
+		font-size: 0.85rem;
+		color: var(--faf-gray);
+		margin-bottom: 0.5rem;
+	}
 
-    pre code {
-        background: none;
-        padding: 0;
-        color: #f5f5f5;
-    }
+	.result {
+		margin-top: 0.75rem !important;
+		padding: 0.65rem 0.85rem;
+		background: #f0fdf4;
+		border: 1px solid #bbf7d0;
+		border-radius: 6px;
+	}
 
-    .result-box {
-        background: #f0fdf4;
-        border: 2px solid #bbf7d0;
-        border-radius: 8px;
-        padding: 1rem;
-        margin: 1rem 0;
-    }
+	.faq {
+		display: grid;
+		gap: 0.85rem;
+	}
 
-    .result-box strong {
-        color: #16a34a;
-    }
+	.faq-item {
+		background: var(--faf-white);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 8px;
+		padding: 1.25rem 1.5rem;
+	}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5rem 0;
-    }
+	.faq-item h3 {
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin: 0 0 0.5rem;
+	}
 
-    th, td {
-        padding: 0.75rem;
-        text-align: left;
-        border-bottom: 1px solid #e5e7eb;
-    }
+	.faq-item p {
+		font-size: 0.95rem;
+		color: var(--faf-dark);
+		line-height: 1.65;
+		margin: 0;
+	}
 
-    th {
-        background: #FF6B35;
-        color: white;
-        font-weight: 600;
-    }
+	.takeaways {
+		background: var(--faf-locked-dark-elevated);
+		color: var(--faf-locked-dark-text);
+		border-radius: 8px;
+		padding: 1.25rem 1.5rem;
+	}
 
-    tr:hover {
-        background: #f9fafb;
-    }
+	.takeaways ol {
+		margin: 0 0 0 1.25rem;
+	}
 
-    .mistake {
-        background: #fef2f2;
-        border-left: 4px solid #dc2626;
-        padding: 1.5rem;
-        margin: 1rem 0;
-        border-radius: 0 8px 8px 0;
-    }
+	.takeaways li {
+		margin: 0.5rem 0;
+		line-height: 1.65;
+		font-size: 0.95rem;
+	}
 
-    .mistake h4 {
-        color: #dc2626;
-        margin-bottom: 0.5rem;
-    }
+	.table-wrap {
+		overflow-x: auto;
+	}
 
-    .correct {
-        background: #f0fdf4;
-        border-left: 4px solid #16a34a;
-        padding: 1.5rem;
-        margin: 1rem 0;
-        border-radius: 0 8px 8px 0;
-    }
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.9rem;
+	}
 
-    .correct h4 {
-        color: #16a34a;
-        margin-bottom: 0.5rem;
-    }
+	th,
+	td {
+		padding: 0.65rem 0.75rem;
+		text-align: left;
+		border-bottom: 1px solid var(--faf-light-gray);
+		color: var(--faf-dark);
+	}
 
-    .key-takeaways {
-        background: linear-gradient(135deg, var(--faf-locked-dark-elevated) 0%, #2a2a2a 100%);
-        color: white;
-        padding: 2rem;
-        border-radius: 12px;
-        margin: 2rem 0;
-    }
+	th {
+		background: var(--faf-orange);
+		color: #fff;
+		font-weight: 600;
+	}
 
-    .key-takeaways h2 {
-        color: #FF6B35;
-        border-bottom: 2px solid #FF6B35;
-        margin-top: 0;
-    }
+	pre {
+		background: var(--faf-locked-dark-elevated);
+		color: var(--faf-locked-dark-text);
+		padding: 0.85rem 1rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		margin: 0.5rem 0;
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
 
-    .key-takeaways ol {
-        margin-left: 1.5rem;
-        margin-top: 1rem;
-    }
+	pre code {
+		background: none;
+		padding: 0;
+		color: inherit;
+	}
 
-    .key-takeaways li {
-        margin: 0.75rem 0;
-        line-height: 1.8;
-    }
+	code {
+		font-family: var(--font-mono);
+		font-size: 0.9em;
+		color: var(--faf-orange);
+	}
 
-    .footer {
-        text-align: center;
-        margin-top: 3rem;
-        padding-top: 2rem;
-        border-top: 2px solid #e5e7eb;
-        color: #666;
-    }
+	.footer-section {
+		text-align: center;
+		border-top: 1px solid var(--faf-light-gray);
+		padding-top: 2rem;
+	}
 
-    .footer strong {
-        color: #FF6B35;
-    }
+	.footer-section p {
+		font-size: 0.95rem;
+		color: var(--faf-gray);
+		margin: 0.35rem 0;
+	}
 
-    .badge {
-        display: inline-block;
-        background: #FF6B35;
-        color: white;
-        padding: 0.25rem 0.75rem;
-        border-radius: 12px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        margin-left: 0.5rem;
-    }
+	.footer-section a {
+		color: var(--faf-orange);
+		text-decoration: none;
+	}
 
-    .info-box {
-        background: #eff6ff;
-        border-left: 4px solid #3b82f6;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 0 8px 8px 0;
-    }
+	.tagline {
+		font-style: italic;
+		color: var(--faf-orange) !important;
+		margin-top: 1rem !important;
+	}
 
-    .info-box strong {
-        color: #1e40af;
-    }
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 1.9rem;
+		}
 
-    @media (max-width: 768px) {
-        .container {
-            padding: 1.5rem;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        .step-meta {
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-    }
-
-    .comment {
-        color: #10b981;
-    }
-
-    .string {
-        color: #fbbf24;
-    }
+		.meta {
+			flex-direction: column;
+			gap: 0.35rem;
+		}
+	}
 </style>
