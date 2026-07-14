@@ -17,7 +17,7 @@
 	/* Foundation Colors */
 	--faf-cream: #FEFCF8;        /* Alias of page bg in light mode */
 	--faf-dark: #1a1a1a;         /* Text/Terminal */
-	--faf-gray: #666666;         /* Secondary text */
+	--faf-gray: #555555;         /* Secondary text — nudged darker on creme canvas */
 	--faf-light-gray: #e5e5e5;   /* Borders */
 	
 	/* Legacy mappings for compatibility */
