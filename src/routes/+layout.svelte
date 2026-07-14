@@ -75,12 +75,6 @@
 </svelte:head>
 
 
-{#if !$page.data?.hideThemeToggle}
-	<div class="theme-toggle">
-		<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
-	</div>
-{/if}
-
 <!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
      homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
 {#if $page.url.pathname === '/'}
@@ -119,6 +113,12 @@
 </div>
 
 {@render children?.()}
+
+{#if !$page.data?.hideThemeToggle}
+	<div class="theme-toggle">
+		<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
+	</div>
+{/if}
 
 <Footer />
 
@@ -271,11 +271,14 @@
 		}
 	}
 
+	/* Theme gizmo — sits just above the footer, bottom-left of the page flow
+	   (not fixed over content mid-scroll). */
 	.theme-toggle {
-		position: fixed;
-		bottom: 1.5rem;
-		left: 1.5rem;
-		z-index: 9998;
+		max-width: 700px;
+		margin: 2rem auto 0;
+		padding: 0 1.5rem;
+		display: flex;
+		justify-content: flex-start;
 	}
 
 	/* Home badge — black circle, thick white outline, white back-arrow.
