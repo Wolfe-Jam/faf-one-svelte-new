@@ -298,7 +298,7 @@
 		<p class="section-intro">
 			Prose for each AI. <code>project.faf</code> sits under all of them — ever-present.
 		</p>
-		<div class="cards three-up">
+		<div class="cards four-up">
 			<div class="card accent-bw">
 				<span class="ai-rank" aria-hidden="true">1</span>
 				<h3>AGENTS.md</h3>
@@ -316,6 +316,12 @@
 				<h3>GEMINI.md</h3>
 				<p>For Google Gemini</p>
 				<code>faf gemini</code>
+			</div>
+			<div class="card accent-cursor">
+				<span class="ai-rank" aria-hidden="true">4</span>
+				<h3>.cursorrules</h3>
+				<p>For Cursor IDE</p>
+				<code>faf bi-sync</code>
 			</div>
 		</div>
 		<div class="card card-faf">
@@ -628,6 +634,10 @@ faf go
 		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	}
 
+	.four-up {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+
 	.card {
 		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
@@ -636,7 +646,7 @@ faf go
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
-	/* AI lane accents — rank 1 B&W, 2 Claude orange, 3 Gemini purple-blue */
+	/* AI lane accents — 1 B&W, 2 Claude orange, 3 Gemini purple-blue, 4 Cursor dark */
 	.card.accent-bw {
 		border-left-color: var(--faf-chrome-bg);
 		border: 1px solid var(--faf-light-gray);
@@ -649,6 +659,12 @@ faf go
 
 	.card.accent-gemini {
 		border-left-color: #5b6ef5;
+	}
+
+	.card.accent-cursor {
+		border-left-color: #111111;
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid #111111;
 	}
 
 	.card.accent-gemini .ai-rank {
@@ -666,6 +682,11 @@ faf go
 		color: #fff;
 	}
 
+	.card.accent-cursor .ai-rank {
+		background: #111111;
+		color: #fff;
+	}
+
 	.ai-rank {
 		display: inline-flex;
 		align-items: center;
@@ -679,7 +700,7 @@ faf go
 		border-radius: 3px;
 	}
 
-	/* Ever-present foundation under the AI prose trio */
+	/* Ever-present foundation under the AI prose files */
 	.card-faf {
 		margin-top: 1rem;
 		display: flex;
