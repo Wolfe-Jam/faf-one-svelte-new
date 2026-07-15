@@ -84,7 +84,7 @@
 
 <main class="page">
 	<section class="hero">
-		<h1>New <span class="faf">Project</span> Guide</h1>
+		<h1>New Project Guide</h1>
 		<p class="sub">Run faf. Answer what it asks. Context grows.</p>
 		<div class="hero-receipts">
 			<span class="receipt">faf git</span>
@@ -444,10 +444,6 @@ faf go
 		font-weight: 800;
 		color: var(--faf-black);
 		margin: 0 0 0.5rem;
-	}
-
-	.faf {
-		color: var(--faf-orange);
 	}
 
 	.sub {
