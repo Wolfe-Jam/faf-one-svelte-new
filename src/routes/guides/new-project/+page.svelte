@@ -168,8 +168,8 @@
 	</section>
 
 	<section class="content">
-		<h2>The 3 magic tools</h2>
-		<p class="section-intro">Simple, powerful, championship-grade workflow.</p>
+		<h2>The core loop</h2>
+		<p class="section-intro">init → auto → go. Same loop every time.</p>
 		<div class="cards">
 			{#each steps as step}
 				<div class="card step-card">
@@ -324,7 +324,7 @@
 		<h2>Common mistakes</h2>
 		<div class="cards">
 			<div class="card bad">
-				<h3>✗ Skipping the magic tools</h3>
+				<h3>✗ Skipping the core loop</h3>
 				<pre><code>faf init
 # Stop here, start coding
 # Score: 30% (incomplete)</code></pre>
@@ -338,7 +338,7 @@ faf init  # Slow! Wrong tool!</code></pre>
 				<p><strong>Problem:</strong> Use <code>faf git</code> instead — no clone needed, 2 seconds.</p>
 			</div>
 			<div class="card good">
-				<h3>✓ All 3 magic tools</h3>
+				<h3>✓ Full core loop</h3>
 				<pre><code>faf init  # or: faf git &lt;url&gt;
 faf auto
 faf go
