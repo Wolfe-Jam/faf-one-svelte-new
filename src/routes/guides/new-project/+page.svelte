@@ -151,14 +151,14 @@
 		<h2>README generation tools</h2>
 		<p class="section-intro">Don't have a README yet? Two easy options:</p>
 		<div class="cards">
-			<div class="card accent-cyan">
+			<div class="card">
 				<h3>Web tool: The 6 Ws</h3>
 				<p>Fill out a simple form answering who/what/why/where/when/how. Copy the generated README.</p>
 				<a href="https://www.faf.one/6ws" class="inline-link" target="_blank" rel="noopener noreferrer">
 					faf.one/6ws →
 				</a>
 			</div>
-			<div class="card accent-cyan">
+			<div class="card">
 				<h3>CLI tool</h3>
 				<p>Interactive command-line tool that asks the 6 Ws and generates a README for you.</p>
 				<pre><code>faf readme</code></pre>
@@ -299,12 +299,12 @@
 			<code>project.faf</code> works with all AIs. Each AI also has its own prose version:
 		</p>
 		<div class="cards three-up">
-			<div class="card">
+			<div class="card accent-cyan">
 				<h3>CLAUDE.md</h3>
 				<p>For Anthropic Claude</p>
 				<code>faf bi-sync</code>
 			</div>
-			<div class="card">
+			<div class="card accent-cyan">
 				<h3>GEMINI.md</h3>
 				<p>For Google Gemini</p>
 				<code>faf gemini</code>
@@ -507,9 +507,9 @@ faf go
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
+	/* Priority path — orange wash only (never cyan for "recommended") */
 	.path-row.highlight {
 		background: var(--faf-orange-tint);
-		border-left-color: var(--faf-cyan-dark);
 	}
 
 	.path-label {
@@ -630,6 +630,7 @@ faf go
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
+	/* Cyan rail = AI/tech surface only (never priority/recommended) */
 	.card.accent-cyan {
 		border-left-color: var(--faf-cyan-dark);
 	}
@@ -941,8 +942,9 @@ faf go
 		padding: 1.25rem 1.5rem;
 	}
 
+	/* Priority FAQ — orange wash, same human rail (not cyan) */
 	.faq-item.highlight {
-		border-left-color: var(--faf-cyan-dark);
+		background: var(--faf-orange-tint);
 	}
 
 	.faq-item h3 {
