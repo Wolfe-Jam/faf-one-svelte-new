@@ -861,7 +861,7 @@ npm i -g faf-cli`;
 	}
 
 	.layer-foundation {
-		background: linear-gradient(135deg, #fff5f0, #ffe8d6);
+		background: var(--faf-surface);
 		border: 2px solid #FF6B35;
 	}
 

@@ -521,7 +521,7 @@ faf auto</code></pre>
 	}
 
 	.problem-box {
-		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
+		background: var(--faf-surface);
 		border: 2px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -548,7 +548,7 @@ faf auto</code></pre>
 		color: var(--faf-orange) !important;
 		text-align: center;
 		padding: 1.5rem;
-		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
+		background: var(--faf-surface);
 		border-radius: 8px;
 		border-left: 5px solid var(--faf-orange);
 		margin: 2rem 0 !important;
@@ -861,7 +861,7 @@ faf auto</code></pre>
 	}
 
 	.time-to-value {
-		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
+		background: var(--faf-surface);
 		border: 3px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;

@@ -20,7 +20,8 @@
 	--faf-foundation-green-dark: #00a855; /* Foundation gradients / hover */
 	--faf-surface-border: #e0e0e0;        /* Card borders on creme canvas */
 	--faf-section-alt: #f9f6f1;          /* Alternating section wash (membership, etc.) */
-	--faf-orange-tint: #fff5f0;          /* Orange callout wash (blog, ecosystem) */
+	/* Was pastel #fff5f0 — removed sitewide. Highlight via orange rail/border, not wash. */
+	--faf-orange-tint: #FFFFFF;
 	--faf-card-success-bg: #f0fdf4;
 	--faf-card-success-border: #bbf7d0;
 	--faf-card-error-bg: #fef2f2;
@@ -84,7 +85,7 @@
 	--faf-light-gray: #222222;
 	--faf-cyan-text: #00d4d4;
 	--faf-section-alt: #1e1e1e;
-	--faf-orange-tint: #2a2018;
+	--faf-orange-tint: #1a1a1a;          /* Match surface — no warm pastel wash */
 	--faf-card-success-bg: #0f2318;
 	--faf-card-success-border: #1e4a30;
 	--faf-card-error-bg: #2a1414;

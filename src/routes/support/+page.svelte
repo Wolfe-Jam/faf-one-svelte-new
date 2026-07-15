@@ -314,7 +314,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 	.priority-note {
 		margin-top: 1rem;
 		padding: 0.5rem;
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-surface);
 		border-radius: 8px;
 		color: var(--faf-orange);
 		font-weight: 600;

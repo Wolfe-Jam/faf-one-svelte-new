@@ -656,7 +656,7 @@
 	}
 
 	.achievement-box {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-surface);
 		border: 2px solid var(--faf-orange);
 		border-radius: 12px;
 		padding: 2rem;
@@ -852,7 +852,7 @@
 	}
 
 	.matrix-table .highlight-row {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-surface);
 		border-left: 6px solid var(--faf-orange);
 		font-weight: 700;
 	}
@@ -901,7 +901,7 @@
 	}
 
 	.timeline-event.highlight {
-		background: linear-gradient(135deg, #fff5f0 0%, white 100%);
+		background: var(--faf-surface);
 		border-left: 6px solid var(--faf-orange);
 		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
 	}

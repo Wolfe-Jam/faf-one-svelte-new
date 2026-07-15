@@ -289,7 +289,8 @@ faf auto → 80%</code></pre>
 	}
 
 	.callout {
-		background: var(--faf-orange-tint);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-light-gray);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;

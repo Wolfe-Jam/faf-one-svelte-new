@@ -358,7 +358,7 @@
 	}
 
 	.callout {
-		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
+		background: var(--faf-surface);
 		border-left: 4px solid var(--faf-orange);
 		padding: 1.5rem;
 		margin: 2rem 0 !important;
@@ -475,7 +475,7 @@
 		color: var(--faf-dark) !important;
 		text-align: center;
 		padding: 2rem;
-		background: linear-gradient(135deg, var(--faf-orange-tint) 0%, #ffe8dc 100%);
+		background: var(--faf-surface);
 		border-radius: 12px;
 		border: 3px solid var(--faf-orange);
 		margin: 2rem 0 !important;

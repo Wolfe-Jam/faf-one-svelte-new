@@ -503,9 +503,11 @@ faf go
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
-	/* Priority path — orange wash only (never cyan for "recommended") */
+	/* Priority path — white surface + stronger orange rail (no pastel wash) */
 	.path-row.highlight {
-		background: var(--faf-orange-tint);
+		background: var(--faf-surface);
+		border-left-width: 6px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	.path-label {
@@ -858,7 +860,8 @@ faf go
 
 	.callout {
 		margin-top: 1rem;
-		background: var(--faf-orange-tint);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-light-gray);
 		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1rem 1.25rem;
@@ -938,9 +941,11 @@ faf go
 		padding: 1.25rem 1.5rem;
 	}
 
-	/* Priority FAQ — orange wash, same human rail (not cyan) */
+	/* Priority FAQ — stronger orange rail (no pastel wash) */
 	.faq-item.highlight {
-		background: var(--faf-orange-tint);
+		background: var(--faf-surface);
+		border-left-width: 6px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 	}
 
 	.faq-item h3 {
