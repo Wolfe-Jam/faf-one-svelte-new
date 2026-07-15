@@ -324,21 +324,21 @@
 		<h2>Common mistakes</h2>
 		<div class="cards">
 			<div class="card bad">
-				<h3>✗ Skipping the core loop</h3>
+				<h3><span class="mark" aria-hidden="true">✗</span> Skipping the core loop</h3>
 				<pre><code>faf init
 # Stop here, start coding
 # Score: 30% (incomplete)</code></pre>
 				<p><strong>Problem:</strong> Missing 70% of potential context. <code>faf auto</code> and <code>faf go</code> are free wins.</p>
 			</div>
 			<div class="card bad">
-				<h3>✗ Using faf init on GitHub repos</h3>
+				<h3><span class="mark" aria-hidden="true">✗</span> Using faf init on GitHub repos</h3>
 				<pre><code>git clone https://github.com/facebook/react
 cd react
 faf init  # Slow! Wrong tool!</code></pre>
 				<p><strong>Problem:</strong> Use <code>faf git</code> instead — no clone needed, 2 seconds.</p>
 			</div>
 			<div class="card good">
-				<h3>✓ Full core loop</h3>
+				<h3><span class="mark" aria-hidden="true">✓</span> Full core loop</h3>
 				<pre><code>faf init  # or: faf git &lt;url&gt;
 faf auto
 faf go
@@ -634,14 +634,61 @@ faf go
 		border-left-color: var(--faf-cyan-dark);
 	}
 
+	/* Common mistakes — black + white only; reverse-out marks (no red/green) */
 	.card.bad {
-		border-left-color: #dc2626;
-		background: var(--faf-card-error-bg);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-chrome-bg);
 	}
 
 	.card.good {
-		border-left-color: #16a34a;
-		background: var(--faf-card-success-bg);
+		background: var(--faf-chrome-bg);
+		border: 1px solid var(--faf-chrome-bg);
+		border-left: 4px solid var(--faf-chrome-bg);
+		box-shadow: none;
+	}
+
+	.card.good h3,
+	.card.good p,
+	.card.good strong {
+		color: var(--faf-chrome-fg);
+	}
+
+	.card.good code {
+		background: #1a1a1a;
+		color: var(--faf-chrome-fg);
+	}
+
+	.card.good pre {
+		background: #1a1a1a;
+		color: var(--faf-chrome-fg);
+		border-color: #333;
+	}
+
+	.mark {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.35rem;
+		height: 1.35rem;
+		margin-right: 0.35rem;
+		font-size: 0.8rem;
+		font-weight: 800;
+		line-height: 1;
+		border-radius: 3px;
+		vertical-align: -0.1em;
+	}
+
+	/* Reverse-out: white mark on black (✗ on light card) */
+	.card.bad .mark {
+		background: var(--faf-chrome-bg);
+		color: var(--faf-chrome-fg);
+	}
+
+	/* Reverse of reverse: black mark on white (✓ on black card) */
+	.card.good .mark {
+		background: var(--faf-chrome-fg);
+		color: var(--faf-chrome-bg);
 	}
 
 	.link-card {
