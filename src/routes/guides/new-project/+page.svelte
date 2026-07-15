@@ -296,27 +296,35 @@
 	<section class="content">
 		<h2>AI-specific context files</h2>
 		<p class="section-intro">
-			<code>project.faf</code> works with all AIs. Each AI also has its own prose version:
+			Prose for each AI. <code>project.faf</code> sits under all of them — ever-present.
 		</p>
 		<div class="cards three-up">
-			<div class="card accent-cyan">
+			<div class="card accent-bw">
+				<span class="ai-rank" aria-hidden="true">1</span>
+				<h3>AGENTS.md</h3>
+				<p>Universal agents format</p>
+				<code>faf bi-sync</code>
+			</div>
+			<div class="card accent-orange">
+				<span class="ai-rank" aria-hidden="true">2</span>
 				<h3>CLAUDE.md</h3>
 				<p>For Anthropic Claude</p>
 				<code>faf bi-sync</code>
 			</div>
-			<div class="card accent-cyan">
+			<div class="card accent-gemini">
+				<span class="ai-rank" aria-hidden="true">3</span>
 				<h3>GEMINI.md</h3>
 				<p>For Google Gemini</p>
 				<code>faf gemini</code>
 			</div>
-			<div class="card">
-				<h3>project.faf</h3>
-				<p>Universal (all AIs)</p>
-				<code>Always authored</code>
-			</div>
 		</div>
-		<div class="callout">
-			<p><strong>Tip:</strong> <code>project.faf</code> is the source of truth. AI-specific files are authored from it.</p>
+		<div class="card card-faf">
+			<span class="faf-ever" aria-hidden="true">ever-present</span>
+			<div class="faf-body">
+				<h3>project.faf</h3>
+				<p>Source of truth — machines and every AI read it. AI-specific files are authored from it.</p>
+			</div>
+			<code>Always authored</code>
 		</div>
 	</section>
 
@@ -628,9 +636,88 @@ faf go
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
-	/* Cyan rail = AI/tech surface only (never priority/recommended) */
-	.card.accent-cyan {
-		border-left-color: var(--faf-cyan-dark);
+	/* AI lane accents — rank 1 B&W, 2 Claude orange, 3 Gemini purple-blue */
+	.card.accent-bw {
+		border-left-color: var(--faf-chrome-bg);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-chrome-bg);
+	}
+
+	.card.accent-orange {
+		border-left-color: var(--faf-orange);
+	}
+
+	.card.accent-gemini {
+		border-left-color: #5b6ef5;
+	}
+
+	.card.accent-gemini .ai-rank {
+		background: #5b6ef5;
+		color: #fff;
+	}
+
+	.card.accent-bw .ai-rank {
+		background: var(--faf-chrome-bg);
+		color: var(--faf-chrome-fg);
+	}
+
+	.card.accent-orange .ai-rank {
+		background: var(--faf-orange);
+		color: #fff;
+	}
+
+	.ai-rank {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.35rem;
+		height: 1.35rem;
+		margin-bottom: 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 800;
+		line-height: 1;
+		border-radius: 3px;
+	}
+
+	/* Ever-present foundation under the AI prose trio */
+	.card-faf {
+		margin-top: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1.25rem;
+		border-left: 4px solid var(--faf-orange);
+	}
+
+	.card-faf .faf-body {
+		flex: 1 1 12rem;
+		min-width: 0;
+	}
+
+	.card-faf h3 {
+		margin: 0 0 0.25rem;
+	}
+
+	.card-faf p {
+		margin: 0;
+	}
+
+	.card-faf code {
+		margin-top: 0;
+		flex-shrink: 0;
+	}
+
+	.faf-ever {
+		display: inline-block;
+		font-size: 0.65rem;
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--faf-orange);
+		background: var(--faf-gray-light);
+		padding: 0.3rem 0.55rem;
+		border-radius: 4px;
+		flex-shrink: 0;
 	}
 
 	/* Common mistakes — black + white only; reverse-out marks (no red/green) */
