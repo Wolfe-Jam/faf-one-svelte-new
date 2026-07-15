@@ -36,6 +36,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/111111-hero.png" />
 	<meta name="twitter:image" content="https://faf.one/blog/111111-hero.png" />
+	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <div class="blog-post">

@@ -4,6 +4,13 @@
 User-agent: *
 Allow: /
 
+# Internal / unpublished — do not index
+Disallow: /blog/drafts/
+Disallow: /logo-demo
+Disallow: /api/test
+Disallow: /api/test-email
+Disallow: /og/
+
 # AI Search Crawlers — explicitly welcome
 User-agent: OAI-SearchBot
 Allow: /

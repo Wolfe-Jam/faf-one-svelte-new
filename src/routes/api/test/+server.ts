@@ -1,18 +1,17 @@
 /**
- * 🧪 Test Endpoint - Verify Setup
- *
- * Tests:
- * - API routes working
- * - Supabase connection
- * - Environment variables
+ * Dev-only setup probe.
+ * Production: 404 — never expose env flags or license counts publicly.
  */
 
-import { json } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
+import { dev } from '$app/environment';
 import type { RequestHandler } from './$types';
 import { getSupabase } from '$lib/supabase';
 import { env } from '$env/dynamic/private';
 
 export const GET: RequestHandler = async () => {
+    if (!dev) error(404, 'Not found');
+
     const checks: Record<string, any> = {};
 
     // Check 1: Environment variables

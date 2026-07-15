@@ -6,14 +6,14 @@
     const tools = [
         {
             name: 'FAF CLI',
-            tagline: 'Championship Edition with TURBO-CAT 😽',
-            description: 'The original. FREE FOREVER. Powered by TURBO-CAT - The Catalytic Converter for your projects.',
+            tagline: 'CLI · TURBO-CAT stack detection',
+            description: 'Open source faf-cli. Detects stack, fills project.faf, scores context.',
             features: [
-                'TURBO-CAT 😽 - The .faf Representative',
-                'Catalytic Converter: Raw files → AI context',
-                'Validates a pyramid of formats',
-                'Championship command suite',
-                '100% Strict TypeScript'
+                'TURBO-CAT format detection',
+                'Raw project files → structured context',
+                'Multi-format stack fill',
+                'Core loop: init · auto · go',
+                'Strict TypeScript'
             ],
             github: 'https://github.com/Wolfe-Jam/faf-cli',
             npm: 'https://www.npmjs.com/package/faf-cli',
@@ -57,13 +57,13 @@
         {
             name: 'Claude FAF MCP',
             tagline: 'Anthropic-Merged #2759',
-            description: 'Seamless FAF integration for Claude Desktop. Official Anthropic MCP registry.',
+            description: 'FAF MCP server for Claude Desktop. Anthropic MCP registry #2759.',
             features: [
-                'Claude Desktop integration',
-                'Auto-context loading',
+                'Claude Desktop MCP',
+                'Loads project.faf context',
                 `${(data.packageStats['claude-faf-mcp'] || 0).toLocaleString()}+ downloads last month`,
-                'MCP protocol compliant',
-                'Reads your project context'
+                'MCP protocol',
+                'Reads project context'
             ],
             github: 'https://github.com/Wolfe-Jam/claude-faf-mcp',
             npm: 'https://www.npmjs.com/package/claude-faf-mcp',
@@ -140,13 +140,13 @@
         {
             name: 'WJTTC',
             tagline: 'MCP Testing Certification',
-            description: 'Championship-grade MCP testing framework. If it passes WJTTC, it works.',
+            description: 'MCP testing certification. Pass WJTTC, ship with receipts.',
             features: [
-                'Championship-grade test suite',
-                'GitHub Action included',
+                'MCP test suite',
+                'GitHub Action',
                 'MCP registry listed',
                 'Homebrew installable',
-                'Beacon test suite'
+                'Beacon tests'
             ],
             github: 'https://github.com/Wolfe-Jam/wjttc',
             npm: 'https://www.npmjs.com/package/wjttc',
@@ -311,7 +311,7 @@
     </section>
 
     <footer class="ecosystem-footer">
-        <p>All tools are <strong>FREE FOREVER</strong> and <strong>open source</strong> (MIT License)</p>
+        <p>All tools listed here are <strong>open source</strong> (MIT)</p>
         <p>Built with 🧡 by <a href="https://github.com/Wolfe-Jam" target="_blank" rel="noopener">WolfeJam</a></p>
         <p class="topics-link">
             <a href="https://github.com/topics/faf" target="_blank" rel="noopener">View all FAF projects on GitHub →</a>

@@ -11,7 +11,7 @@
 
 <svelte:head>
 	<title>FAF — The Context Standard for AI</title>
-	<meta name="description" content="project.faf — persistent AI context for any tool. One YAML file. Every AI tool. Zero drift. IANA registered. 47k+ downloads." />
+	<meta name="description" content="project.faf — persistent AI context for any tool. One YAML file. Every AI. IANA registered." />
 	<meta property="og:title" content="FAF — The Context Standard for AI" />
 	<meta property="og:description" content="Context that persists." />
 	<meta property="og:type" content="website" />
@@ -87,7 +87,7 @@
 		</div>
 		<div class="card neutral">
 			<h3>AI consumes</h3>
-			<p>Any AI reads your .faf. Context in milliseconds. Zero drift.</p>
+			<p>Any AI reads your .faf. Context loads with the project.</p>
 		</div>
 	</section>
 

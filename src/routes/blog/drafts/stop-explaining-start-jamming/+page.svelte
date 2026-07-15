@@ -17,6 +17,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Stop Explaining. Start Jamming." />
 	<meta name="twitter:description" content="I'm not using AI to code. I'm jamming with AI. 🎸" />
+	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <article class="blog-post">

@@ -17,6 +17,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Context-Rot is Real, and It's Costing You... A LOT!" />
 	<meta name="twitter:description" content="Context-Rot is silently killing productivity. Here's how to fix it." />
+	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <article class="blog-post">

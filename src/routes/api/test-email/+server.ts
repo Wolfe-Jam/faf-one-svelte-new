@@ -1,18 +1,17 @@
 /**
- * 🧪 Test Email Endpoint
- *
- * Send a test license email to verify:
- * - Resend DNS is verified
- * - team@faf.one sender works
- * - Email template renders correctly
+ * Dev-only license-email probe.
+ * Production: 404 — never allow arbitrary email send from a public GET.
  */
 
-import { json } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
+import { dev } from '$app/environment';
 import type { RequestHandler } from './$types';
 import { sendLicenseEmail } from '$lib/emails/send-license-email';
 import type { License } from '$lib/license-generator';
 
 export const GET: RequestHandler = async ({ url }) => {
+    if (!dev) error(404, 'Not found');
+
     // Get test email from query param, or use default
     const testEmail = url.searchParams.get('email') || 'test@example.com';
 

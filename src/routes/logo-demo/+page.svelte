@@ -4,6 +4,7 @@
 
 <svelte:head>
 	<title>FAF Logo Component Demo</title>
+	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <div class="demo-container">

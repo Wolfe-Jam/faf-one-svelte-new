@@ -17,6 +17,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="It's Not AI, It's You!" />
 	<meta name="twitter:description" content="Stop blaming AI for failures when you never gave it a chance." />
+	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <article class="blog-post">

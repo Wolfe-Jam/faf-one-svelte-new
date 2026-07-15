@@ -510,14 +510,30 @@ faf init
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 	}
 
+	/* Common mistakes — B&W reverse-out (match new-project) */
 	.card.bad {
-		border-left-color: #dc2626;
-		background: var(--faf-card-error-bg);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-chrome-bg);
 	}
 
 	.card.good {
-		border-left-color: #16a34a;
-		background: var(--faf-card-success-bg);
+		background: var(--faf-chrome-bg);
+		border: 1px solid var(--faf-chrome-bg);
+		border-left: 4px solid var(--faf-chrome-bg);
+		box-shadow: none;
+	}
+
+	.card.good h3,
+	.card.good p,
+	.card.good strong {
+		color: var(--faf-chrome-fg);
+	}
+
+	.card.good pre {
+		background: #1a1a1a;
+		color: var(--faf-chrome-fg);
+		border-color: #333;
 	}
 
 	.card h3 {
