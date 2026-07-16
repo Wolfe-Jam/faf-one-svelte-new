@@ -19,7 +19,7 @@
             npm: 'https://www.npmjs.com/package/faf-cli',
             install: 'npm install -g faf-cli',
             brewInstall: 'brew install wolfe-jam/faf/faf-cli',
-            status: 'v7.1.2',
+            status: data.versions?.['faf-cli'] || 'npm',
             icon: '🏎️'
         },
         {
@@ -68,7 +68,7 @@
             github: 'https://github.com/Wolfe-Jam/claude-faf-mcp',
             npm: 'https://www.npmjs.com/package/claude-faf-mcp',
             install: 'npx claude-faf-mcp',
-            status: 'v5.20.0',
+            status: data.versions?.['claude-faf-mcp'] || 'npm',
             icon: '🤖'
         },
         {
@@ -85,7 +85,7 @@
             github: 'https://github.com/Wolfe-Jam/faf-mcp',
             npm: 'https://www.npmjs.com/package/faf-mcp',
             install: 'npx faf-mcp',
-            status: 'v2.3.1',
+            status: data.versions?.['faf-mcp'] || 'npm',
             icon: '🔌'
         },
         {
@@ -102,7 +102,7 @@
             npm: 'https://www.npmjs.com/package/grok-faf-mcp',
             live: 'https://grok.faf.one',
             install: 'npx grok-faf-mcp',
-            status: 'v1.9.1',
+            status: data.versions?.['grok-faf-mcp'] || 'npm',
             icon: '🛰️'
         },
         {
@@ -118,7 +118,7 @@
             github: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
             pypi: 'https://pypi.org/project/gemini-faf-mcp/',
             install: 'pip install gemini-faf-mcp',
-            status: 'v2.5.1',
+            status: 'PyPI',
             icon: '♊'
         },
         {
@@ -134,7 +134,7 @@
             github: 'https://github.com/Wolfe-Jam/rust-faf-mcp',
             crates: 'https://crates.io/crates/rust-faf-mcp',
             install: 'cargo install rust-faf-mcp',
-            status: 'v0.3.1',
+            status: 'crates.io',
             icon: '🦀'
         },
         {
@@ -151,7 +151,7 @@
             github: 'https://github.com/Wolfe-Jam/wjttc',
             npm: 'https://www.npmjs.com/package/wjttc',
             install: 'npx wjttc',
-            status: 'v1.4.0',
+            status: data.versions?.['wjttc'] || 'npm',
             icon: '🍊'
         },
         {
@@ -264,7 +264,7 @@
 
     <section class="ecosystem-stats">
         <h2>☑️ Real Numbers, Real Impact</h2>
-        <p class="stats-updated">Live npm data · Built {builtDate}</p>
+        <p class="stats-updated">Live npm downloads + versions · Built {builtDate}</p>
         <div class="stats-grid">
             <div class="stat">
                 <div class="stat-value">{data.totalDownloads.toLocaleString()}+</div>

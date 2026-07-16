@@ -9,20 +9,26 @@
 </script>
 
 <svelte:head>
-	<title>Proof: .faf is the World's First and Only IANA-Registered Format with Official Anthropic MCP Server | FAF</title>
-	<meta name="description" content="Comprehensive research proof that .faf is unprecedented - the only format combining both IANA registration and official Anthropic MCP server status." />
-	<meta property="og:title" content="Proof: .faf is the World's First and Only IANA-Registered Format with MCP Server" />
-	<meta property="og:description" content="After comprehensive research across IANA registries and the Anthropic MCP ecosystem, .faf is definitively the only format with both achievements." />
+	<title>Research archive: IANA + MCP registry | FAF</title>
+	<meta name="description" content="Archived research notes on IANA registration and Anthropic MCP registry status for .faf. Canonical facts live on the Spec page." />
+	<meta property="og:title" content="Research archive: IANA + MCP registry | FAF" />
+	<meta property="og:description" content="Archived research notes. Canonical facts: /spec." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="robots" content="noindex, follow" />
 </svelte:head>
 
 <div class="proof-page">
 	<header class="proof-header">
+		<p class="archive-banner">
+			Archive · Receipts and format authority: <a href="/spec">Spec</a>
+			· <a href="/blog/iana-registration">IANA post</a>
+			· <a href="/mcp">MCP</a>
+		</p>
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Uniqueness Proof
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / Uniqueness (archive)
 		</div>
-		<h1>🏆 PROOF: .faf is the World's First and Only IANA-Registered Format with Official Anthropic MCP Server</h1>
+		<h1>Research notes: IANA registration + Anthropic MCP registry</h1>
 		<div class="meta">
 			<time datetime="2025-11-02">Research Date: November 2, 2025</time>
 			<span class="separator">•</span>
@@ -550,6 +556,24 @@
 		margin-bottom: 3rem;
 		border-bottom: 3px solid var(--faf-orange);
 		padding-bottom: 2rem;
+	}
+
+	.archive-banner {
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 8px;
+		padding: 0.85rem 1rem;
+		margin: 0 0 1.25rem;
+		line-height: 1.5;
+	}
+
+	.archive-banner a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
 	}
 
 	.breadcrumb {

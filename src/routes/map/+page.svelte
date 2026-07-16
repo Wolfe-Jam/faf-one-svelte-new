@@ -1,78 +1,122 @@
 <script>
 	import Directory from '$lib/components/Directory.svelte';
 
-	// Curated metadata for the known pages (label · group · emoji · one-liner).
-	// Any route NOT listed here is still auto-discovered below and dropped into
-	// "More" — so a new page can never silently hide. Re-bucket by editing META.
+	// Curated metadata. Spine first. Strays → Legacy (not peer to Home).
+	// Routes not listed still appear in More — except HIDE.
 	const META = {
-		'/': { title: 'Home', category: 'Core', emoji: '🏠', description: 'The Context Standard for AI' },
+		// ── Core spine ──────────────────────────────────────────
+		'/': { title: 'Home', category: 'Core', emoji: '🏠', description: 'The Context Standard for AI', order: 0 },
 		'/about': { title: 'About', category: 'Core', emoji: '📖', description: 'What .faf is and why it exists', order: 1 },
-		'/pro': { title: 'FAF Pro', category: 'Core', emoji: '⭐', description: 'Full access. Every tool.' },
-		'/cli': { title: 'faf-cli', category: 'Core', emoji: '⌨️', description: 'The CLI for the .faf format' },
-		'/rust': { title: 'Rust SDK', category: 'Core', emoji: '🦀', description: 'Rust-native FAF compiler' },
-		'/docs': { title: 'Docs', category: 'Core', emoji: '📚', description: 'Redirects to docs.faf.one' },
-		'/downloads': { title: 'Downloads', category: 'Core', emoji: '⬇️', description: 'Get the tools' },
-		'/memory': { title: 'Memory', category: 'Core', emoji: '🐘', description: '.fafm persistent memory' },
-		'/try': { title: 'Try It', category: 'Core', emoji: '🚀', description: 'Try .faf right now' },
-		'/loop': { title: 'faf loop', category: 'Core', emoji: '🔁', description: '100% or the honest human wall' },
-		'/ecosystem': { title: 'Ecosystem', category: 'Core', emoji: '🌍', description: 'The FAF ecosystem' },
-		'/context': { title: 'Context', category: 'Core', emoji: '🧬', description: 'Context intelligence' },
-		'/guides': { title: 'Guides', category: 'Core', emoji: '🧭', description: 'How-to guides' },
-		'/6ws': { title: '6Ws', category: 'Core', emoji: '❓', description: 'The six Ws of context', order: 2 },
+		'/guides': { title: 'Guides', category: 'Core', emoji: '🧭', description: 'New project · dogfooding', order: 2 },
+		'/guides/new-project': { title: 'New Project', category: 'Core', emoji: '🚀', description: 'init → auto → go', order: 3 },
+		'/try': { title: 'Try It', category: 'Core', emoji: '⚡', description: 'Try .faf right now', order: 4 },
+		'/cli': { title: 'faf-cli', category: 'Core', emoji: '⌨️', description: 'The CLI for the .faf format', order: 5 },
+		'/docs': { title: 'Docs', category: 'Core', emoji: '📚', description: 'Redirects to docs.faf.one', order: 6 },
+		'/downloads': { title: 'Downloads', category: 'Core', emoji: '⬇️', description: 'Get the tools', order: 7 },
+		'/spec': { title: 'Spec', category: 'Core', emoji: '📐', description: 'The .faf specification', order: 8 },
+		'/ecosystem': { title: 'Ecosystem', category: 'Core', emoji: '🌍', description: 'Tools catalog', order: 9 },
+		'/6ws': { title: '6Ws', category: 'Core', emoji: '❓', description: 'Author README / context', order: 10 },
+		'/agent': { title: 'Agent', category: 'Core', emoji: '🎙️', description: 'Talk to the FAF agent', order: 11 },
+		'/pro': { title: 'FAF Pro', category: 'Core', emoji: '⭐', description: 'Full access. Every tool.', order: 12 },
 
-		'/calculator': { title: 'Calculator', category: 'Tools', emoji: '🧮', description: 'Context cost calculator' },
-		'/automation-calculator': { title: 'Automation Calculator', category: 'Tools', emoji: '⚙️', description: 'Automation ROI' },
-		'/incident-calculator': { title: 'Incident Calculator', category: 'Tools', emoji: '🚨', description: 'Incident cost' },
-		'/risk-assessment': { title: 'Risk Assessment', category: 'Tools', emoji: '📊', description: 'Project risk' },
-		'/bench': { title: 'Bench', category: 'Tools', emoji: '🏁', description: 'AI-grounding benchmark' },
-		'/demos': { title: 'Demos', category: 'Tools', emoji: '🎬', description: 'Live demos' },
-		'/sync': { title: 'Sync', category: 'Tools', emoji: '🔄', description: 'bi-sync / tri-sync' },
-		'/trinity': { title: 'Trinity', category: 'Tools', emoji: '🔺', description: 'Context · Memory · Agents — interactive' },
+		// ── Tools ───────────────────────────────────────────────
+		'/calculators': { title: 'Calculators', category: 'Tools', emoji: '🧮', description: 'ROI · automation · incident · risk', order: 1 },
+		'/calculator': { title: 'ROI Calculator', category: 'Tools', emoji: '📊', description: 'Context cost ROI', order: 2 },
+		'/bench': { title: 'Bench', category: 'Tools', emoji: '🏁', description: 'AI-grounding benchmark', order: 3 },
+		'/sync': { title: 'Sync demo', category: 'Tools', emoji: '🔄', description: 'bi-sync demo → try the CLI', order: 4 },
 
-		'/mcp': { title: 'MCP', category: 'Ecosystem', emoji: '🔌', description: 'Model Context Protocol' },
-		'/mcpaas': { title: 'MCPaaS', category: 'Ecosystem', emoji: '📡', description: 'MCP as a Service' },
-		'/grok': { title: 'Grok', category: 'Ecosystem', emoji: '🤖', description: 'xAI / Grok' },
-		'/claude': { title: 'Claude', category: 'Ecosystem', emoji: '🧠', description: 'Anthropic Claude' },
-		'/codex': { title: 'Codex', category: 'Ecosystem', emoji: '💻', description: 'OpenAI Codex' },
-		'/voice': { title: 'Voice', category: 'Ecosystem', emoji: '🎙️', description: 'FAF Voice' },
-		'/chrome': { title: 'Chrome', category: 'Ecosystem', emoji: '🧩', description: 'Chrome extension' },
-		'/n8n': { title: 'n8n', category: 'Ecosystem', emoji: '🔗', description: 'n8n automation' },
-		'/pypi': { title: 'PyPI', category: 'Ecosystem', emoji: '🐍', description: 'Python packages' },
-		'/zeph': { title: 'ZEPH', category: 'Ecosystem', emoji: '⚡', description: 'ZEPH fast path' },
+		// ── Ecosystem (AI on-ramps) ──────────────────────────────
+		'/mcp': { title: 'MCP', category: 'Ecosystem', emoji: '🔌', description: 'Model Context Protocol', order: 1 },
+		'/claude': { title: 'Claude', category: 'Ecosystem', emoji: '🧠', description: 'Anthropic Claude', order: 2 },
+		'/grok': { title: 'Grok', category: 'Ecosystem', emoji: '🤖', description: 'xAI / Grok', order: 3 },
+		'/codex': { title: 'Codex', category: 'Ecosystem', emoji: '💻', description: 'OpenAI Codex', order: 4 },
+		'/agents': { title: 'AGENTS.md', category: 'Ecosystem', emoji: '📋', description: 'Field guide', order: 5 },
+		'/chrome': { title: 'Chrome', category: 'Ecosystem', emoji: '🧩', description: 'Chrome extension', order: 6 },
+		'/git': { title: 'Git', category: 'Ecosystem', emoji: '🌿', description: 'faf git', order: 7 },
+		'/rust': { title: 'Rust SDK', category: 'Ecosystem', emoji: '🦀', description: 'Rust-native compiler', order: 8 },
+		'/pypi': { title: 'PyPI', category: 'Ecosystem', emoji: '🐍', description: 'Python packages', order: 9 },
+		'/mcpaas': { title: 'MCPaaS', category: 'Ecosystem', emoji: '📡', description: 'MCP as a Service', order: 10 },
+		'/voice': { title: 'Voice', category: 'Ecosystem', emoji: '🎙️', description: 'FAF Voice', order: 11 },
+		'/memory': { title: 'Memory', category: 'Ecosystem', emoji: '🐘', description: '.fafm permanent memory', order: 12 },
+		'/zeph': { title: 'ZEPH', category: 'Ecosystem', emoji: '⚡', description: 'ZEPH fast path', order: 13 },
+		'/n8n': { title: 'n8n', category: 'Ecosystem', emoji: '🔗', description: 'n8n automation', order: 14 },
+		'/migrate': { title: 'Migrate', category: 'Ecosystem', emoji: '➡️', description: 'Keep context when moving tools', order: 15 },
 
-		'/spec': { title: 'Spec', category: 'Standards', emoji: '📐', description: 'The .faf specification' },
-		'/wjttc': { title: 'WJTTC', category: 'Standards', emoji: '🏆', description: 'Championship testing' },
-		'/uniqueness': { title: 'Uniqueness', category: 'Standards', emoji: '🎯', description: 'What makes .faf unique' },
-		'/ideas': { title: 'Ideas', category: 'Standards', emoji: '💡', description: 'Concepts & proposals' },
-		'/drift': { title: 'Drift', category: 'Standards', emoji: '🌊', description: 'Context drift' },
+		// ── Standards ───────────────────────────────────────────
+		'/wjttc': { title: 'WJTTC', category: 'Standards', emoji: '🏆', description: 'MCP testing certification', order: 1 },
 
-		'/sponsors': { title: 'Sponsors', category: 'Community', emoji: '💛', description: 'Support the project' },
-		'/membership': { title: 'Foundation', category: 'Community', emoji: '🏛️', description: 'Stewardship → foundation.faf.one' },
-		'/support': { title: 'Support', category: 'Community', emoji: '🆘', description: 'Get help' },
-		'/press': { title: 'Press', category: 'Community', emoji: '📰', description: 'Press resources' },
-		'/press-center': { title: 'Press Center', category: 'Community', emoji: '📰', description: 'Media kit' },
-		'/press-release': { title: 'Press Release', category: 'Community', emoji: '📣', description: 'Announcements' },
-		'/68-minutes': { title: '68 Minutes', category: 'Community', emoji: '⏱️', description: 'B&W to Technicolor' },
+		// ── Community ───────────────────────────────────────────
+		'/sponsors': { title: 'Sponsors', category: 'Community', emoji: '💛', description: 'Support the project', order: 1 },
+		'/membership': { title: 'Foundation', category: 'Community', emoji: '🏛️', description: 'Stewardship → foundation.faf.one', order: 2 },
+		'/support': { title: 'Support', category: 'Community', emoji: '🆘', description: 'Get help', order: 3 },
+		'/press': { title: 'Press', category: 'Community', emoji: '📰', description: 'Press kit · releases · media', order: 4 },
+		'/updates': { title: 'Updates', category: 'Community', emoji: '📝', description: 'Release notes', order: 5 },
 
-		'/privacy': { title: 'Privacy', category: 'Legal', emoji: '🔒', description: 'Privacy policy' },
-		'/terms': { title: 'Terms', category: 'Legal', emoji: '📜', description: 'Terms of use' }
+		// ── Legal ───────────────────────────────────────────────
+		'/privacy': { title: 'Privacy', category: 'Legal', emoji: '🔒', description: 'Privacy policy', order: 1 },
+		'/terms': { title: 'Terms', category: 'Legal', emoji: '📜', description: 'Terms of use', order: 2 },
+
+		// ── Legacy (demoted — still live, not spine peers) ───────
+		'/loop': { title: 'Loop', category: 'Legacy', emoji: '🔁', description: 'Loop essay → see New Project', order: 1 },
+		'/context': { title: 'Context', category: 'Legacy', emoji: '🧬', description: 'Context layer → see Guides', order: 2 },
+		'/uniqueness': { title: 'Uniqueness', category: 'Legacy', emoji: '🎯', description: 'Research archive → Spec', order: 3 },
+		'/press-center': { title: 'Press Center', category: 'Legacy', emoji: '📰', description: '→ /press', order: 4 },
+		'/press-release': { title: 'Press Release', category: 'Legacy', emoji: '📣', description: '→ /press', order: 5 },
+		'/68-minutes': { title: '68 Minutes', category: 'Legacy', emoji: '⏱️', description: 'Story → /press', order: 6 },
+		'/automation-calculator': { title: 'Automation Calculator', category: 'Legacy', emoji: '⚙️', description: '→ /calculators', order: 7 },
+		'/incident-calculator': { title: 'Incident Calculator', category: 'Legacy', emoji: '🚨', description: '→ /calculators', order: 8 },
+		'/risk-assessment': { title: 'Risk Assessment', category: 'Legacy', emoji: '📊', description: '→ /calculators', order: 9 },
+		'/daaft': { title: 'DAAFT', category: 'Legacy', emoji: '📉', description: 'Context cost narrative', order: 10 },
+		'/drift': { title: 'Drift', category: 'Legacy', emoji: '🌊', description: 'Context-drift teaching', order: 11 },
+		'/apps': { title: 'Apps', category: 'Legacy', emoji: '📦', description: '→ /ecosystem', order: 12 },
+		'/demos': { title: 'Demos', category: 'Legacy', emoji: '🎬', description: 'GIF gallery', order: 13 },
+		'/glory': { title: 'Glory', category: 'Legacy', emoji: '🏅', description: 'Merit wall', order: 14 },
+		'/ideas': { title: 'Ideas', category: 'Legacy', emoji: '💡', description: 'App-idea form', order: 15 },
+		'/survival': { title: 'Survival', category: 'Legacy', emoji: '🛟', description: 'Thin → daaft', order: 16 },
+		'/trinity': { title: 'Trinity', category: 'Legacy', emoji: '🔺', description: 'Shell page', order: 17 },
+		'/3ws': { title: '3Ws', category: 'Legacy', emoji: '3️⃣', description: 'Superseded by 6Ws', order: 18 },
+		'/v4': { title: 'v4 site', category: 'Legacy', emoji: '🕰️', description: 'Historical mini-site', order: 19 },
+		'/guides/dogfooding': { title: 'Dogfooding', category: 'Core', emoji: '🐕', description: 'Greenfield discipline', order: 3.5 }
 	};
 
-	const CATEGORY_ORDER = ['Core', 'Tools', 'Ecosystem', 'Standards', 'Community', 'Directories', 'Legal', 'More'];
+	// Never list on the map (internal / render / drafts already excluded by EXCLUDE)
+	const HIDE = new Set([
+		'/logo-demo',
+		'/og/agent',
+		'/og/daaft',
+		'/diagrams/og-agent',
+		'/diagrams/voice-api-banner'
+	]);
+
+	const CATEGORY_ORDER = [
+		'Core',
+		'Tools',
+		'Ecosystem',
+		'Standards',
+		'Community',
+		'Directories',
+		'Legal',
+		'Legacy',
+		'More'
+	];
 	const CATEGORY_EMOJI = {
-		Core: '🏎️', Tools: '🛠️', Ecosystem: '🌐', Standards: '📋',
-		Community: '🤝', Directories: '📚', Legal: '⚖️', More: '📂'
+		Core: '🏎️',
+		Tools: '🛠️',
+		Ecosystem: '🌐',
+		Standards: '📋',
+		Community: '🤝',
+		Directories: '📚',
+		Legal: '⚖️',
+		Legacy: '🗄️',
+		More: '📂'
 	};
 
-	// Directory pointers — the big indexes link to their own pages, not 100s of entries.
 	const POINTERS = [
 		{ url: '/blog', title: 'Blog', category: 'Directories', emoji: '📝', description: 'Articles & release editions' },
 		{ url: '/diagrams', title: 'Diagrams', category: 'Directories', emoji: '📊', description: 'Architecture diagrams' },
 		{ url: '/links', title: 'External Links', category: 'Directories', emoji: '🔗', description: 'Off-site resources', external: false }
 	];
 
-	// Auto-discovery: every +page.svelte route. Excludes blog/diagrams/og subpages,
-	// api, this map, and the pointer indexes (added curated above).
 	const PAGES = import.meta.glob('/src/routes/**/+page.svelte');
 	const PRESET = new Set(['/blog', '/diagrams', '/links', '/map']);
 	const toPath = (k) => {
@@ -80,14 +124,24 @@
 		return p === '' ? '/' : p;
 	};
 	const pretty = (p) =>
-		p.replace(/^\//, '').split('/').pop().split('-')
-			.map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join(' ');
-	const EXCLUDE = /^\/(blog|diagrams|og)\/.|^\/api(\/|$)/;
+		p
+			.replace(/^\//, '')
+			.split('/')
+			.pop()
+			.split('-')
+			.map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+			.join(' ');
+	// Exclude blog/diagrams/og leaves, api, drafts, calculators children listed as Legacy when nested
+	const EXCLUDE = /^\/(blog|diagrams|og)\/.|^\/api(\/|$)|^\/v4\//;
 
 	const discovered = Object.keys(PAGES)
 		.map(toPath)
-		.filter((p) => !EXCLUDE.test(p) && !PRESET.has(p))
-		.map((p) => (META[p] ? { url: p, ...META[p] } : { url: p, title: pretty(p), category: 'More', emoji: '📄' }));
+		.filter((p) => !EXCLUDE.test(p) && !PRESET.has(p) && !HIDE.has(p))
+		.map((p) =>
+			META[p]
+				? { url: p, ...META[p] }
+				: { url: p, title: pretty(p), category: 'More', emoji: '📄' }
+		);
 
 	const entries = [...discovered, ...POINTERS];
 </script>
@@ -97,29 +151,35 @@
 	<meta name="description" content="Every page on faf.one — the full site directory." />
 </svelte:head>
 
-<!-- Scoped full-height wrapper paints the page bg on an ELEMENT, not :global(body).
-     Immune to leaked :global(body){dark} from other visited routes (SvelteKit keeps
-     their CSS in the document). var(--faf-cream) flips, so it's correct both themes. -->
 <div class="map-root">
 	<div class="back-nav"><a href="/" class="back-button">←</a></div>
 
 	<main class="map-page">
-	<header class="map-header">
-		<h1>
-			<svg class="title-globe" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-				<circle cx="50" cy="50" r="36" stroke="currentColor" stroke-width="8" />
-				<ellipse cx="50" cy="50" rx="17" ry="36" stroke="currentColor" stroke-width="6" />
-				<line x1="14" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="6" />
-			</svg>Site Map
-		</h1>
-		<p class="map-sub">Every page on faf.one. <a href="/links">External links →</a> · <a href="/blog">Blog →</a></p>
-	</header>
+		<header class="map-header">
+			<h1>
+				<svg class="title-globe" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+					<circle cx="50" cy="50" r="36" stroke="currentColor" stroke-width="8" />
+					<ellipse cx="50" cy="50" rx="17" ry="36" stroke="currentColor" stroke-width="6" />
+					<line x1="14" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="6" />
+				</svg>Site Map
+			</h1>
+			<p class="map-sub">
+				Spine first. Legacy is still live — not the main path.
+				<a href="/links">External links →</a> · <a href="/blog">Blog →</a> ·
+				<a href="/guides">Guides →</a>
+			</p>
+		</header>
 
-	<Directory
-		{entries}
-		config={{ defaultView: 'section', categoryOrder: CATEGORY_ORDER, categoryEmoji: CATEGORY_EMOJI, unit: 'pages' }}
-	/>
-</main>
+		<Directory
+			{entries}
+			config={{
+				defaultView: 'section',
+				categoryOrder: CATEGORY_ORDER,
+				categoryEmoji: CATEGORY_EMOJI,
+				unit: 'pages'
+			}}
+		/>
+	</main>
 </div>
 
 <style>

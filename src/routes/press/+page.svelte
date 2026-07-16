@@ -19,7 +19,9 @@
 		<h1>📣 Press Kit</h1>
 		<p class="subtitle">Everything you need to cover .faf - Project DNA ✨ for ANY AI</p>
 		<div class="press-release-link">
-			<a href="/press-release" class="btn-press-release">📄 View Latest Press Release →</a>
+			<a href="/press-release" class="btn-press-release">Latest press release →</a>
+			<a href="/68-minutes" class="btn-press-release secondary">68 Minutes story →</a>
+			<a href="/blog" class="btn-press-release secondary">Blog →</a>
 		</div>
 	</div>
 </div>
@@ -335,16 +337,29 @@
 		margin-top: 2rem;
 	}
 
+	.press-release-link {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		justify-content: center;
+	}
+
 	.btn-press-release {
 		display: inline-block;
-		padding: 0.75rem 2rem;
+		padding: 0.75rem 1.5rem;
 		background: var(--faf-orange);
 		color: white;
 		text-decoration: none;
 		font-weight: 700;
 		border-radius: 8px;
 		transition: all 0.3s ease;
-		font-size: 1.125rem;
+		font-size: 1rem;
+	}
+
+	.btn-press-release.secondary {
+		background: transparent;
+		color: var(--faf-orange);
+		border: 2px solid var(--faf-orange);
 	}
 	
 	.subtitle {

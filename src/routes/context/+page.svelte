@@ -23,6 +23,12 @@
 
 <main class="page">
 
+	<p class="fold">
+		Primary path: <a href="/guides/new-project">New Project guide</a>
+		· <a href="/try">Try it</a>
+		· <a href="/cli">CLI</a>
+	</p>
+
 	<section class="hero">
 		<img class="smiley" src="/orange-smiley.svg" alt=".faf — the FAF smiley" width="72" height="72" />
 		<h1>.faf</h1>
@@ -105,6 +111,20 @@
 		max-width: 700px;
 		margin: 0 auto;
 		padding: 0 1.5rem;
+	}
+
+	.fold {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+		padding: 1.25rem 0 0;
+		margin: 0;
+	}
+
+	.fold a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
 	}
 
 	.hero {

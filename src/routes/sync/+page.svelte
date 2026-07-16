@@ -228,6 +228,12 @@ Dashboard application
 	<meta property="og:description" content="See how .faf and CLAUDE.md stay perfectly synchronized. 8ms sync time. Zero conflicts." />
 </svelte:head>
 
+<p class="fold">
+	Product path: <a href="/guides/new-project">New Project guide</a>
+	· <a href="/try">Try it</a>
+	· <a href="/cli">CLI</a>
+</p>
+
 <div class="sync-hero">
 	<h1>Bi-Sync Demo</h1>
 	<p class="subtitle">.faf ↔ CLAUDE.md</p>
@@ -397,6 +403,21 @@ Dashboard application
 </div>
 
 <style>
+	.fold {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+		padding: 1rem 1.5rem 0.5rem;
+		margin: 0;
+		background: var(--faf-page-bg);
+	}
+
+	.fold a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
 	.sync-hero {
 		background: var(--faf-black);
 		color: var(--faf-white);

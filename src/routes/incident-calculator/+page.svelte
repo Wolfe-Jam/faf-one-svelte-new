@@ -57,9 +57,14 @@
 	<meta name="description" content="Calculate the cost of production incidents and workflow failures without AI context">
 </svelte:head>
 
+<p class="family-nav">
+	<a href="/calculators">All calculators</a>
+	· models, not guarantees
+</p>
+
 <div class="risk-hero">
 	<div class="container">
-		<h1>🚨 Incident Response 🔥 Calculator</h1>
+		<h1>Incident Response Calculator</h1>
 		<p class="subtitle">The REAL Cost of Production Fires</p>
 		<p class="tagline">
 			It's 2AM. Your automation broke. Customer-facing.<br/>
@@ -326,6 +331,21 @@
 </div>
 
 <style>
+	.family-nav {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+		padding: 1rem 1.5rem 0.5rem;
+		margin: 0;
+		background: var(--faf-page-bg);
+	}
+
+	.family-nav a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
 	/* Hero Section */
 	.risk-hero {
 		background: #1a0000;

@@ -18,6 +18,11 @@
 
 <main class="page">
 
+	<p class="fold">
+		Core loop (product): <a href="/guides/new-project">New Project guide</a>
+		· <a href="/try">Try it</a>
+	</p>
+
 	<section class="hero">
 		<p class="eyebrow">Loop engineering · for context</p>
 		<h1>Context is a loop.</h1>
@@ -97,6 +102,20 @@
 		max-width: 720px;
 		margin: 0 auto;
 		padding: 0 1.5rem;
+	}
+
+	.fold {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+		padding: 1.25rem 0 0;
+		margin: 0;
+	}
+
+	.fold a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
 	}
 
 	.hero {

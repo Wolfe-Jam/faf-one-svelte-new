@@ -109,9 +109,14 @@
 	<meta name="description" content="See how AI context quality impacts project success, timeline, and costs">
 </svelte:head>
 
+<p class="family-nav">
+	<a href="/calculators">All calculators</a>
+	· models, not guarantees
+</p>
+
 <div class="risk-hero">
 	<div class="container">
-		<h1>☑️  Project Risk Assessment</h1>
+		<h1>Project Risk Assessment</h1>
 		<p class="subtitle">The REAL Cost of Inferior Context</p>
 		<p class="tagline">If you're responsible for a software project and not using .faf...<br>how responsible are you being?</p>
 	</div>
@@ -336,6 +341,21 @@
 </div>
 
 <style>
+	.family-nav {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+		padding: 1rem 1.5rem 0.5rem;
+		margin: 0;
+		background: var(--faf-page-bg);
+	}
+
+	.family-nav a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
 	/* Hero Section */
 	.risk-hero {
 		background: var(--faf-black);
