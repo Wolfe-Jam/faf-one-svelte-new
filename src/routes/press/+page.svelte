@@ -17,7 +17,7 @@
 <div class="press-hero">
 	<div class="container">
 		<h1>📣 Press Kit</h1>
-		<p class="subtitle">Everything you need to cover .faf - Project DNA ✨ for ANY AI</p>
+		<p class="subtitle">Press kit — logos, facts, and links for media</p>
 		<div class="press-release-link">
 			<a href="/press-release" class="btn-press-release">Latest press release →</a>
 			<a href="/68-minutes" class="btn-press-release secondary">68 Minutes story →</a>
@@ -31,12 +31,10 @@
 		<div class="intro-box">
 			<h2>About .faf</h2>
 			<p class="lead">
-				.faf (Foundational AI-context Format) - transforming how developers 
-				communicate project context to AI tools.
+				.faf (Foundational AI-context Format) — structured project context AIs and tools can read.
 			</p>
 			<p>
-				Just as JPEG became the standard for images, .faf is becoming the standard for 
-				AI context. It reduces context loading from 20 minutes to 3 minutes - a 6.7x improvement.
+				IANA-registered media type. Open-source CLI and MCP servers. One file, versioned with the repo.
 			</p>
 		</div>
 	</div>
@@ -55,20 +53,20 @@
 				<p>Atlanta, GA</p>
 			</div>
 			<div class="fact-card">
-				<h3>Projects Tested</h3>
-				<p>10,000+</p>
+				<h3>Format</h3>
+				<p>application/vnd.faf+yaml</p>
 			</div>
 			<div class="fact-card">
-				<h3>Performance</h3>
-				<p>&lt;50ms processing</p>
+				<h3>Registry</h3>
+				<p>Anthropic MCP #2759</p>
 			</div>
 			<div class="fact-card">
-				<h3>AI Rating</h3>
-				<p>9.3/10 average</p>
+				<h3>License</h3>
+				<p>MIT (tools listed on site)</p>
 			</div>
 			<div class="fact-card">
-				<h3>Setup Time</h3>
-				<p>20 min → 3 min</p>
+				<h3>Install</h3>
+				<p>npm · brew · crates · PyPI</p>
 			</div>
 		</div>
 	</div>
@@ -89,32 +87,32 @@
 			<div class="achievement">
 				<div class="achievement-icon">☑️</div>
 				<div class="achievement-content">
-					<h3>.faf-Engine-Mk1 & Mk2</h3>
-					<p>The REAL Engineering - that powers it all (&lt;50ms performance)</p>
+					<h3>CLI + scoring engines</h3>
+					<p>faf-cli and WASM scoring kernel — open source, registry-published</p>
 				</div>
 			</div>
 			
 			<div class="achievement">
 				<div class="achievement-icon">☑️</div>
 				<div class="achievement-content">
-					<h3>DevOps: fafdev.tools</h3>
-					<p>Lightning fast Setup Utilities and origin of .faf tools | became Gamified web platform with balance tracking and instant validation in V.2.0</p>
+					<h3>fafdev.tools</h3>
+					<p>Browser-side authoring tools for .faf</p>
 				</div>
 			</div>
 			
 			<div class="achievement">
 				<div class="achievement-icon">☑️</div>
 				<div class="achievement-content">
-					<h3>MCP Integration</h3>
-					<p>Model Context Protocol with 800+ weekly downloads for Claude Desktop</p>
+					<h3>MCP servers</h3>
+					<p>Claude, Grok, Gemini, universal faf-mcp — Anthropic registry #2759</p>
 				</div>
 			</div>
 			
 			<div class="achievement">
 				<div class="achievement-icon">☑️</div>
 				<div class="achievement-content">
-					<h3>CLI Tool</h3>
-					<p>Universal command-line interface: npm install -g claude-faf-mcp</p>
+					<h3>CLI install</h3>
+					<p><code>npm i -g faf-cli</code> · brew · crates · PyPI family</p>
 				</div>
 			</div>
 			
@@ -122,15 +120,15 @@
 				<div class="achievement-icon">☑️</div>
 				<div class="achievement-content">
 					<h3>Chrome Extension</h3>
-					<p>Google-approved and live in Chrome Web Store - Intelligent code base scanner with Report and Intro to .faf</p>
+					<p>Chrome Web Store — extract context from pages into .faf</p>
 				</div>
 			</div>
 			
 			<div class="achievement">
 				<div class="achievement-icon">🏁</div>
 				<div class="achievement-content">
-					<h3>Wolfejam Testing Center</h3>
-					<p>F1-inspired Software Engineering Testing Center for championship performance, bulletproof security, and enterprise-scale validation</p>
+					<h3>WJTTC</h3>
+					<p>MCP testing certification — open suite + GitHub Action</p>
 				</div>
 			</div>
 		</div>

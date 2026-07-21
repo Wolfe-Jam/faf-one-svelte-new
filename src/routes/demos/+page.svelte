@@ -3,22 +3,22 @@
 		{
 			file: 'hope-vs-trust.gif',
 			title: 'Hope vs Trust',
-			description: 'The Token Tax - 91% fewer tokens, zero drift'
+			description: 'Structured .faf vs re-explaining every session'
 		},
 		{
 			file: 'faf-go-showcase.gif',
 			title: 'faf go',
-			description: 'Guided path to Gold Code (100%)'
+			description: 'Interactive polish toward 100%'
 		},
 		{
 			file: 'crate-binary.gif',
 			title: 'Rust FAFB',
-			description: '288x faster with binary .fafb format'
+			description: 'Binary .fafb format in Rust'
 		},
 		{
 			file: 'boris-flow.gif',
 			title: 'Boris Flow',
-			description: 'Engineering workflow validation'
+			description: 'Workflow validation loop'
 		},
 		{
 			file: 'faf-quick-demo.gif',

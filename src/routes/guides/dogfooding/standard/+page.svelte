@@ -602,8 +602,10 @@ faf init
 	}
 
 	.takeaways {
-		background: var(--faf-locked-dark-elevated);
-		color: var(--faf-locked-dark-text);
+		background: var(--faf-surface);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-orange);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
 	}
@@ -643,8 +645,9 @@ faf init
 	}
 
 	pre {
-		background: var(--faf-locked-dark-elevated);
-		color: var(--faf-locked-dark-text);
+		background: var(--faf-gray-light);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
 		padding: 0.85rem 1rem;
 		border-radius: 8px;
 		overflow-x: auto;
@@ -655,10 +658,14 @@ faf init
 		white-space: pre-wrap;
 	}
 
+	.card pre code,
 	pre code {
+		display: inline;
+		margin-top: 0;
 		background: none;
 		padding: 0;
 		color: inherit;
+		border-radius: 0;
 	}
 
 	code {
