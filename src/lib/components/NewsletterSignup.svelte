@@ -15,16 +15,21 @@
 		try {
 			const res = await fetch('/api/subscribe', {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ email, source: `faf.one/${variant}` })
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+				body: JSON.stringify({ email: email.trim(), source: `faf.one/${variant}` })
 			});
 
-			if (!res.ok) throw new Error('Failed');
+			const data = await res.json().catch(() => ({}));
+			if (!res.ok || data?.subscribed === false) {
+				throw new Error(data?.error || 'Failed');
+			}
 			status = 'success';
 			email = '';
 		} catch {
 			status = 'error';
-			setTimeout(() => { status = 'idle'; }, 3000);
+			setTimeout(() => {
+				status = 'idle';
+			}, 4000);
 		}
 	}
 </script>
