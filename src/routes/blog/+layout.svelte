@@ -35,6 +35,6 @@
 {@render children()}
 
 <!-- After post body / index list — elephant posts included -->
-<div style="padding:0 1rem 3rem;background:#FEFCF8;">
+<div style="padding:0 1rem 2rem;background:#FEFCF8;">
 	<BlogSubscribe />
 </div>

@@ -1,7 +1,6 @@
 <script>
 	/**
-	 * Blog email capture — used on index and every post page.
-	 * Inline colors so theme tokens cannot hide it.
+	 * Quiet blog email capture — index + every post (via blog layout).
 	 */
 	let email = $state('');
 	/** @type {'idle' | 'loading' | 'success' | 'error'} */
@@ -31,43 +30,92 @@
 	}
 </script>
 
-<div
-	class="blog-subscribe"
-	id="blog-subscribe"
-	style="margin:2rem auto;max-width:760px;padding:1.5rem 1.25rem;border:2px solid #FF6B35;border-radius:10px;background:#ffffff;text-align:center;box-shadow:0 4px 16px rgba(255,107,53,0.15);"
->
+<div class="sub">
 	{#if status === 'success'}
-		<p style="margin:0;color:#1a1a1a;font-size:1rem;font-weight:600;">
-			You're on the list. New posts land in your inbox.
-		</p>
+		<p class="ok">You're on the list.</p>
 	{:else}
-		<p style="margin:0 0 1rem;color:#1a1a1a;font-size:1.05rem;font-weight:700;">
-			Never miss a post.
-		</p>
-		<form
-			onsubmit={handleSubmit}
-			style="display:flex;gap:0.5rem;justify-content:center;max-width:420px;margin:0 auto;flex-wrap:wrap;"
-		>
+		<p class="label">Never miss a post.</p>
+		<form class="row" onsubmit={handleSubmit}>
 			<input
 				type="email"
 				bind:value={email}
 				placeholder="your@email.com"
 				required
 				disabled={status === 'loading'}
-				style="flex:1;min-width:200px;padding:0.75rem 1rem;font-size:0.95rem;background:#FEFCF8;color:#1a1a1a;border:2px solid #ccc;border-radius:6px;"
+				class="input"
 			/>
-			<button
-				type="submit"
-				disabled={!email || status === 'loading'}
-				style="padding:0.75rem 1.5rem;background:#FF6B35;color:#ffffff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.95rem;"
-			>
+			<button type="submit" disabled={!email || status === 'loading'} class="btn">
 				{status === 'loading' ? '…' : 'Subscribe'}
 			</button>
 		</form>
 		{#if status === 'error'}
-			<p style="margin:0.75rem 0 0;color:#c53030;font-size:0.9rem;">
-				Something went wrong — try again.
-			</p>
+			<p class="err">Something went wrong — try again.</p>
 		{/if}
 	{/if}
 </div>
+
+<style>
+	/* Hard light colors — no theme tokens (avoids dark-mode wipe) */
+	.sub {
+		max-width: 400px;
+		margin: 1.5rem auto;
+		padding: 0;
+		text-align: center;
+	}
+	.label {
+		margin: 0 0 0.6rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: #1a1a1a;
+	}
+	.row {
+		display: flex;
+		gap: 0.4rem;
+		justify-content: center;
+	}
+	.input {
+		flex: 1;
+		min-width: 0;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.875rem;
+		background: #fff;
+		color: #1a1a1a;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+	}
+	.input::placeholder {
+		color: #888;
+	}
+	.input:focus {
+		outline: none;
+		border-color: #ff6b35;
+	}
+	.btn {
+		padding: 0.5rem 1rem;
+		background: #ff6b35;
+		color: #fff;
+		border: none;
+		border-radius: 6px;
+		font-weight: 600;
+		font-size: 0.875rem;
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.btn:hover:not(:disabled) {
+		background: #ff5722;
+	}
+	.btn:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+	.ok {
+		margin: 0;
+		font-size: 0.9rem;
+		color: #1a1a1a;
+	}
+	.err {
+		margin: 0.4rem 0 0;
+		font-size: 0.8rem;
+		color: #c53030;
+	}
+</style>
