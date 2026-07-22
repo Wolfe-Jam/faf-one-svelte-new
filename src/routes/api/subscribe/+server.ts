@@ -1,11 +1,10 @@
 /**
  * 📧 Email Subscribe Endpoint
  *
- * Primary: Formspree (same form as /downloads — proven live).
- * Optional: Resend Audience when RESEND_API_KEY + RESEND_AUDIENCE_ID are valid.
+ * Simple model (no Resend Audience): notify team@ via Resend send,
+ * optional short auto-reply to the subscriber. Formspree is backup only.
  *
- * 2026-07-22: Resend key on CF was invalid (contact + subscribe both 500
- * "API key is invalid"). Formspree restores the blog/footer capture.
+ * Same spine as contact: RESEND_API_KEY + team@faf.one inbox.
  */
 
 import { json } from '@sveltejs/kit';
@@ -13,9 +12,9 @@ import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
 import { env } from '$env/dynamic/private';
 
-/** Same Formspree form as downloads/+page.svelte — do not invent a second form. */
+/** Same Formspree form as downloads — backup if Resend send fails. */
 const FORMSPREE_URL = 'https://formspree.io/f/xnngaegg';
-
+const TEAM = 'team@faf.one';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 let resend: Resend | null = null;
@@ -48,39 +47,63 @@ async function subscribeFormspree(email: string, source: string): Promise<{ ok: 
 	return { ok: true };
 }
 
-async function subscribeResend(email: string): Promise<{ ok: boolean; skip?: boolean; error?: string }> {
-	const client = getResend();
-	const audienceId = env.RESEND_AUDIENCE_ID;
-	if (!client || !audienceId) {
-		return { ok: false, skip: true };
-	}
-
-	const { error } = await client.contacts.create({
-		audienceId,
-		email,
-		unsubscribed: false
+/** Notify team@ — one email per signup. Search Gmail for [Subscribe]. */
+async function notifyTeam(client: Resend, email: string, source: string): Promise<{ ok: boolean; error?: string }> {
+	const { error } = await client.emails.send({
+		from: 'FAF Subscribe <team@faf.one>',
+		replyTo: email,
+		to: TEAM,
+		subject: `[Subscribe] ${email}`,
+		text: [
+			'New signup',
+			'',
+			`Email: ${email}`,
+			`Source: ${source}`,
+			`When: ${new Date().toISOString()}`,
+			'',
+			'Reply-To is the subscriber.'
+		].join('\n'),
+		html: `
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#333;max-width:560px;margin:0 auto;padding:20px;">
+  <h2 style="color:#FF6B35;margin:0 0 16px;">New signup</h2>
+  <p style="margin:0 0 8px;"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+  <p style="margin:0 0 8px;"><strong>Source:</strong> ${source}</p>
+  <p style="margin:0;color:#888;font-size:13px;">${new Date().toISOString()}</p>
+</body></html>`.trim()
 	});
 
-	if (error) {
-		// Duplicate → success
-		if (
-			(error as { statusCode?: number }).statusCode === 409 ||
-			error.message?.includes('already exists')
-		) {
-			return { ok: true };
-		}
-		// Invalid/expired key → fall through to Formspree (don't 500 the user)
-		if (
-			error.message?.toLowerCase().includes('api key') ||
-			error.message?.toLowerCase().includes('invalid') ||
-			(error as { statusCode?: number }).statusCode === 401
-		) {
-			console.error('❌ Resend key unusable, falling back to Formspree:', error.message);
-			return { ok: false, skip: true, error: error.message };
-		}
-		return { ok: false, error: error.message };
-	}
+	if (error) return { ok: false, error: error.message };
 	return { ok: true };
+}
+
+function sendAutoReply(client: Resend, email: string): void {
+	client.emails
+		.send({
+			from: 'James @ FAF <team@faf.one>',
+			to: email,
+			subject: "You're on the list",
+			html: `<!DOCTYPE html><html><body style="margin:0;padding:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 20px;">
+  <tr><td align="center">
+    <table width="560" cellpadding="0" cellspacing="0">
+      <tr><td style="padding-bottom:24px;">
+        <img src="https://faf.one/orange-smiley.svg" width="48" height="48" alt="FAF" style="display:block;" />
+      </td></tr>
+      <tr><td style="font-size:18px;font-weight:700;color:#111;padding-bottom:12px;">Hey,</td></tr>
+      <tr><td style="font-size:15px;color:#444;line-height:1.6;padding-bottom:20px;">
+        You're on the list. New posts land when they ship — no spam.<br><br>
+        Latest always at <a href="https://faf.one/blog" style="color:#FF6B35;text-decoration:none;">faf.one/blog</a>.
+      </td></tr>
+      <tr><td style="font-size:14px;color:#888;border-top:1px solid #eee;padding-top:16px;">
+        — James<br>
+        <span style="color:#bbb;font-size:12px;">faf.one</span>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body></html>`
+		})
+		.catch((err: Error) => console.warn('⚠️ Subscribe auto-reply failed (non-critical):', err.message));
 }
 
 export const POST: RequestHandler = async ({ request }) => {
@@ -93,17 +116,18 @@ export const POST: RequestHandler = async ({ request }) => {
 			return json({ error: 'Invalid email address' }, { status: 400 });
 		}
 
-		// Prefer Resend Audience when it works; Formspree is the reliable path.
-		const resendResult = await subscribeResend(email);
-		if (resendResult.ok) {
-			console.log(`✅ New subscriber (Resend): ${email} from ${source}`);
-			return json({ message: 'Subscribed!', subscribed: true, via: 'resend' });
-		}
-		if (!resendResult.skip && resendResult.error) {
-			console.error('❌ Resend subscribe error:', resendResult.error);
-			// still try Formspree rather than hard-fail
+		const client = getResend();
+		if (client) {
+			const team = await notifyTeam(client, email, source);
+			if (team.ok) {
+				sendAutoReply(client, email);
+				console.log(`✅ New subscriber (Resend → team@): ${email} from ${source}`);
+				return json({ message: 'Subscribed!', subscribed: true, via: 'resend' });
+			}
+			console.error('❌ Resend subscribe notify failed:', team.error);
 		}
 
+		// Backup
 		const fs = await subscribeFormspree(email, source);
 		if (!fs.ok) {
 			console.error('❌ Formspree subscribe error:', fs.error);

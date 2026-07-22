@@ -225,13 +225,6 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		console.log(`✅ Contact form email sent from ${data.email}, ID: ${emailData?.id}`);
 
-		// Add to Resend Audience (fire-and-forget — don't block the response)
-		const audienceId = env.RESEND_AUDIENCE_ID;
-		if (audienceId) {
-			client.contacts.create({ audienceId, email: data.email, unsubscribed: false })
-				.catch((err: Error) => console.warn('⚠️ Audience add failed (non-critical):', err.message));
-		}
-
 		// Send auto-reply to submitter
 		const firstName = data.name ? data.name.split(' ')[0] : null;
 		const greeting = firstName ? `Hey ${firstName}` : 'Hey';
