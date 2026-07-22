@@ -1,7 +1,33 @@
 <script>
-	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	let view = $state('list');
 	let sortBy = $state('newest');
+
+	// Subscribe box state (inline — must stay visible regardless of theme tokens)
+	let subEmail = $state('');
+	/** @type {'idle' | 'loading' | 'success' | 'error'} */
+	let subStatus = $state('idle');
+
+	async function handleSubscribe(e) {
+		e.preventDefault();
+		if (!subEmail || subStatus === 'loading') return;
+		subStatus = 'loading';
+		try {
+			const res = await fetch('/api/subscribe', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+				body: JSON.stringify({ email: subEmail.trim(), source: 'faf.one/blog' })
+			});
+			const data = await res.json().catch(() => ({}));
+			if (!res.ok || data?.subscribed === false) throw new Error(data?.error || 'fail');
+			subStatus = 'success';
+			subEmail = '';
+		} catch {
+			subStatus = 'error';
+			setTimeout(() => {
+				subStatus = 'idle';
+			}, 4000);
+		}
+	}
 
 	const posts = [
 		{
@@ -1157,9 +1183,40 @@
 		<h1><span class="blog-text">Blog</span> <span class="ampersand">&</span> <span class="press-text">Press</span></h1>
 		<div class="subtitle">Stories, press releases, and updates from the FAF team</div>
 
-		<!-- Above the fold — 100+ posts bury a bottom-only box -->
-		<div class="signup-top">
-			<NewsletterSignup variant="blog" />
+		<!-- Subscribe — top (visible) + bottom (after list). Inline styles so theme tokens cannot hide it. -->
+		<div
+			class="blog-email-capture"
+			id="blog-subscribe"
+			style="margin:1.25rem 0 1.75rem;padding:1.5rem 1.25rem;border:2px solid #FF6B35;border-radius:10px;background:#ffffff;text-align:center;box-shadow:0 4px 16px rgba(255,107,53,0.15);"
+		>
+			{#if subStatus === 'success'}
+				<p style="margin:0;color:#1a1a1a;font-size:1rem;font-weight:600;">You're on the list. New posts land in your inbox.</p>
+			{:else}
+				<p style="margin:0 0 1rem;color:#1a1a1a;font-size:1.05rem;font-weight:700;">Never miss a post.</p>
+				<form
+					onsubmit={handleSubscribe}
+					style="display:flex;gap:0.5rem;justify-content:center;max-width:420px;margin:0 auto;flex-wrap:wrap;"
+				>
+					<input
+						type="email"
+						bind:value={subEmail}
+						placeholder="your@email.com"
+						required
+						disabled={subStatus === 'loading'}
+						style="flex:1;min-width:200px;padding:0.75rem 1rem;font-size:0.95rem;background:#FEFCF8;color:#1a1a1a;border:2px solid #ccc;border-radius:6px;"
+					/>
+					<button
+						type="submit"
+						disabled={!subEmail || subStatus === 'loading'}
+						style="padding:0.75rem 1.5rem;background:#FF6B35;color:#ffffff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.95rem;"
+					>
+						{subStatus === 'loading' ? '…' : 'Subscribe'}
+					</button>
+				</form>
+				{#if subStatus === 'error'}
+					<p style="margin:0.75rem 0 0;color:#c53030;font-size:0.9rem;">Something went wrong — try again.</p>
+				{/if}
+			{/if}
 		</div>
 
 		<div class="toolbar">
@@ -1203,17 +1260,44 @@
 		</div>
 		{/if}
 
-		<div class="archive-note">
-			<NewsletterSignup variant="blog" />
+		<!-- Bottom capture — same form, after the archive -->
+		<div
+			class="blog-email-capture"
+			style="margin:2rem 0 1rem;padding:1.5rem 1.25rem;border:2px solid #FF6B35;border-radius:10px;background:#ffffff;text-align:center;box-shadow:0 4px 16px rgba(255,107,53,0.15);"
+		>
+			{#if subStatus === 'success'}
+				<p style="margin:0;color:#1a1a1a;font-size:1rem;font-weight:600;">You're on the list. New posts land in your inbox.</p>
+			{:else}
+				<p style="margin:0 0 1rem;color:#1a1a1a;font-size:1.05rem;font-weight:700;">Never miss a post.</p>
+				<form
+					onsubmit={handleSubscribe}
+					style="display:flex;gap:0.5rem;justify-content:center;max-width:420px;margin:0 auto;flex-wrap:wrap;"
+				>
+					<input
+						type="email"
+						bind:value={subEmail}
+						placeholder="your@email.com"
+						required
+						disabled={subStatus === 'loading'}
+						style="flex:1;min-width:200px;padding:0.75rem 1rem;font-size:0.95rem;background:#FEFCF8;color:#1a1a1a;border:2px solid #ccc;border-radius:6px;"
+					/>
+					<button
+						type="submit"
+						disabled={!subEmail || subStatus === 'loading'}
+						style="padding:0.75rem 1.5rem;background:#FF6B35;color:#ffffff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.95rem;"
+					>
+						{subStatus === 'loading' ? '…' : 'Subscribe'}
+					</button>
+				</form>
+				{#if subStatus === 'error'}
+					<p style="margin:0.75rem 0 0;color:#c53030;font-size:0.9rem;">Something went wrong — try again.</p>
+				{/if}
+			{/if}
 		</div>
 	</div>
 </article>
 
 <style>
-	.signup-top {
-		margin: 1.25rem 0 1.5rem;
-	}
-
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
