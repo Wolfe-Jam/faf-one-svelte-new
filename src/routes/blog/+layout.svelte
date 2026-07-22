@@ -1,10 +1,11 @@
 <script>
 	/**
-	 * Blog is light-by-design. Force light theme for this tree so OS-dark
-	 * never paints black-on-black. Restore on leave.
+	 * Blog is light-by-design. Force light theme for this tree.
+	 * Subscribe box on EVERY blog page (index + posts like Memory Edition).
 	 */
 	import { browser } from '$app/environment';
 	import { onDestroy } from 'svelte';
+	import BlogSubscribe from '$lib/components/BlogSubscribe.svelte';
 
 	let { children } = $props();
 
@@ -32,3 +33,8 @@
 </script>
 
 {@render children()}
+
+<!-- After post body / index list — elephant posts included -->
+<div style="padding:0 1rem 3rem;background:#FEFCF8;">
+	<BlogSubscribe />
+</div>
