@@ -1,6 +1,7 @@
 <script>
 	/**
-	 * Quiet one-line blog email capture — index + every post (via layout).
+	 * Sitewide one-line capture — above footer on every page.
+	 * "Stay in the loop: [email] [Subscribe]"
 	 */
 	let email = $state('');
 	/** @type {'idle' | 'loading' | 'success' | 'error'} */
@@ -15,7 +16,7 @@
 			const res = await fetch('/api/subscribe', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-				body: JSON.stringify({ email: email.trim(), source: 'faf.one/blog' })
+				body: JSON.stringify({ email: email.trim(), source: 'faf.one/site' })
 			});
 			const data = await res.json().catch(() => ({}));
 			if (!res.ok || data?.subscribed === false) throw new Error(data?.error || 'fail');
@@ -30,20 +31,20 @@
 	}
 </script>
 
-<div class="sub">
+<div class="loop">
 	{#if status === 'success'}
 		<p class="ok">You're on the list.</p>
 	{:else}
 		<form class="row" onsubmit={handleSubmit}>
-			<span class="label">Never miss a post.</span>
+			<label class="label" for="site-loop-email">Stay in the loop:</label>
 			<input
+				id="site-loop-email"
 				type="email"
 				bind:value={email}
 				placeholder="your@email.com"
 				required
 				disabled={status === 'loading'}
 				class="input"
-				aria-label="Email"
 			/>
 			<button type="submit" disabled={!email || status === 'loading'} class="btn">
 				{status === 'loading' ? '…' : 'Subscribe'}
@@ -56,11 +57,12 @@
 </div>
 
 <style>
-	/* Hard light colors — no theme tokens */
-	.sub {
-		max-width: 760px;
-		margin: 1.25rem auto 0;
-		padding: 0 0.25rem;
+	/* Sits above locked-dark footer — muted chrome, left-aligned one line */
+	.loop {
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 0.85rem 1.5rem 0.25rem;
+		text-align: left;
 	}
 	.row {
 		display: flex;
@@ -69,56 +71,56 @@
 		flex-wrap: wrap;
 	}
 	.label {
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		font-weight: 500;
-		color: #444;
+		color: #999;
 		white-space: nowrap;
 		flex-shrink: 0;
 	}
 	.input {
-		width: 11rem;
+		width: 10.5rem;
 		max-width: 100%;
-		padding: 0.4rem 0.65rem;
-		font-size: 0.85rem;
-		background: #fff;
-		color: #1a1a1a;
-		border: 1px solid #ddd;
-		border-radius: 5px;
+		padding: 0.35rem 0.6rem;
+		font-size: 0.8rem;
+		background: #1a1a1a;
+		color: #e5e5e5;
+		border: 1px solid #333;
+		border-radius: 4px;
 	}
 	.input::placeholder {
-		color: #999;
+		color: #666;
 	}
 	.input:focus {
 		outline: none;
 		border-color: #ff6b35;
 	}
 	.btn {
-		padding: 0.4rem 0.85rem;
+		padding: 0.35rem 0.75rem;
 		background: transparent;
-		color: #ff6b35;
-		border: 1px solid #ff6b35;
-		border-radius: 5px;
+		color: #bbb;
+		border: 1px solid #444;
+		border-radius: 4px;
 		font-weight: 600;
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		cursor: pointer;
 		white-space: nowrap;
 	}
 	.btn:hover:not(:disabled) {
-		background: #ff6b35;
-		color: #fff;
+		color: #ff6b35;
+		border-color: #ff6b35;
 	}
 	.btn:disabled {
-		opacity: 0.45;
+		opacity: 0.4;
 		cursor: not-allowed;
 	}
 	.ok {
 		margin: 0;
-		font-size: 0.85rem;
-		color: #444;
+		font-size: 0.8rem;
+		color: #999;
 	}
 	.err {
-		margin: 0.35rem 0 0;
-		font-size: 0.8rem;
-		color: #c53030;
+		margin: 0.3rem 0 0;
+		font-size: 0.75rem;
+		color: #e53e3e;
 	}
 </style>

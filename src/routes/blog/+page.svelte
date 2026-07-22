@@ -1,5 +1,4 @@
 <script>
-	import BlogSubscribe from '$lib/components/BlogSubscribe.svelte';
 	let view = $state('list');
 	let sortBy = $state('newest');
 
@@ -1156,9 +1155,6 @@
 	<div class="container">
 		<h1><span class="blog-text">Blog</span> <span class="ampersand">&</span> <span class="press-text">Press</span></h1>
 		<div class="subtitle">Stories, press releases, and updates from the FAF team</div>
-
-		<!-- Top of index (layout also adds one at bottom of every blog page) -->
-		<BlogSubscribe />
 
 		<div class="toolbar">
 			<div class="toggle-group">

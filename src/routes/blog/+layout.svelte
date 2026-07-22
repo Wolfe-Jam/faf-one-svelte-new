@@ -1,11 +1,10 @@
 <script>
 	/**
 	 * Blog is light-by-design. Force light theme for this tree.
-	 * Subscribe box on EVERY blog page (index + posts like Memory Edition).
+	 * Sitewide subscribe lives in root layout (above footer) — not duplicated here.
 	 */
 	import { browser } from '$app/environment';
 	import { onDestroy } from 'svelte';
-	import BlogSubscribe from '$lib/components/BlogSubscribe.svelte';
 
 	let { children } = $props();
 
@@ -33,8 +32,3 @@
 </script>
 
 {@render children()}
-
-<!-- After post body / index list — elephant posts included -->
-<div style="padding:0 1rem 1.5rem;background:#FEFCF8;">
-	<BlogSubscribe />
-</div>

@@ -4,6 +4,7 @@
 	import { browser } from '$app/environment';
 	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import BlogSubscribe from '$lib/components/BlogSubscribe.svelte';
 	import { page } from '$app/stores';
 
 	let { children, data } = $props();
@@ -130,6 +131,8 @@
 {/if}
 
 <div class="footer-chrome">
+	<!-- Sitewide: Stay in the loop — above footer on every page -->
+	<BlogSubscribe />
 	<Footer />
 </div>
 
