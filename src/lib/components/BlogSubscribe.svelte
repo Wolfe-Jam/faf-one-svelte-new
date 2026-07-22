@@ -1,6 +1,6 @@
 <script>
 	/**
-	 * Quiet blog email capture — index + every post (via blog layout).
+	 * Quiet one-line blog email capture — index + every post (via layout).
 	 */
 	let email = $state('');
 	/** @type {'idle' | 'loading' | 'success' | 'error'} */
@@ -34,8 +34,8 @@
 	{#if status === 'success'}
 		<p class="ok">You're on the list.</p>
 	{:else}
-		<p class="label">Never miss a post.</p>
 		<form class="row" onsubmit={handleSubmit}>
+			<span class="label">Never miss a post.</span>
 			<input
 				type="email"
 				bind:value={email}
@@ -43,6 +43,7 @@
 				required
 				disabled={status === 'loading'}
 				class="input"
+				aria-label="Email"
 			/>
 			<button type="submit" disabled={!email || status === 'loading'} class="btn">
 				{status === 'loading' ? '…' : 'Subscribe'}
@@ -55,66 +56,68 @@
 </div>
 
 <style>
-	/* Hard light colors — no theme tokens (avoids dark-mode wipe) */
+	/* Hard light colors — no theme tokens */
 	.sub {
-		max-width: 400px;
-		margin: 1.5rem auto;
-		padding: 0;
-		text-align: center;
-	}
-	.label {
-		margin: 0 0 0.6rem;
-		font-size: 0.9rem;
-		font-weight: 600;
-		color: #1a1a1a;
+		max-width: 760px;
+		margin: 1.25rem auto 0;
+		padding: 0 0.25rem;
 	}
 	.row {
 		display: flex;
-		gap: 0.4rem;
-		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+	.label {
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: #444;
+		white-space: nowrap;
+		flex-shrink: 0;
 	}
 	.input {
-		flex: 1;
-		min-width: 0;
-		padding: 0.5rem 0.75rem;
-		font-size: 0.875rem;
+		width: 11rem;
+		max-width: 100%;
+		padding: 0.4rem 0.65rem;
+		font-size: 0.85rem;
 		background: #fff;
 		color: #1a1a1a;
-		border: 1px solid #ccc;
-		border-radius: 6px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
 	}
 	.input::placeholder {
-		color: #888;
+		color: #999;
 	}
 	.input:focus {
 		outline: none;
 		border-color: #ff6b35;
 	}
 	.btn {
-		padding: 0.5rem 1rem;
-		background: #ff6b35;
-		color: #fff;
-		border: none;
-		border-radius: 6px;
+		padding: 0.4rem 0.85rem;
+		background: transparent;
+		color: #ff6b35;
+		border: 1px solid #ff6b35;
+		border-radius: 5px;
 		font-weight: 600;
-		font-size: 0.875rem;
+		font-size: 0.85rem;
 		cursor: pointer;
 		white-space: nowrap;
 	}
 	.btn:hover:not(:disabled) {
-		background: #ff5722;
+		background: #ff6b35;
+		color: #fff;
 	}
 	.btn:disabled {
-		opacity: 0.5;
+		opacity: 0.45;
 		cursor: not-allowed;
 	}
 	.ok {
 		margin: 0;
-		font-size: 0.9rem;
-		color: #1a1a1a;
+		font-size: 0.85rem;
+		color: #444;
 	}
 	.err {
-		margin: 0.4rem 0 0;
+		margin: 0.35rem 0 0;
 		font-size: 0.8rem;
 		color: #c53030;
 	}
