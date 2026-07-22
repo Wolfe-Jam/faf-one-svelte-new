@@ -150,27 +150,81 @@ Conventional commits (feat: / fix: / test:). Branch off main; never commit to ma
 		<p>
 			Getting the file right is an afternoon. Keeping it true — across every repo, on every change, forever —
 			is the part that breaks. There are two failure modes, and they're opposite: hand-write it and leave it,
-			and it <strong>rots</strong>; ask an AI to write it, and it <strong>bloats</strong>. And they both drift
-			without care and attention — which is rarely sustained.
+			and it <strong>rots</strong>; ask an AI to write the whole thing, and it <strong>bloats</strong>. Both
+			drift without care. The fix is the same either way: every line traces to a fact — a real command, a real
+			file, a real constraint — and the file changes in the same PR as the code.
 		</p>
-		<p>The rule that fixes both is simple: every line traces to a fact — a real command, a real file, a real constraint — and the file changes in the same PR as the code. Simple, and rarely kept.</p>
-		<p>You have two options. A dedicated, effective human maintainer can do this — sustaining the discipline on every change, in every repo. Or FAF can do it for you, with minimal human checks as required, per repo.</p>
-		<p><code>faf export --agents</code> reads your repo, discerns what matters, and authors the definitions from the intel it finds — your real build and test commands, the key files, the conventions your linters enforce, the guardrails. Every line is verified and true — sourced from the repo, not invented — which is exactly why it sidesteps the bloat trap above. Change the code, re-run it, it's current. It keeps anything you hand-added.</p>
+		<p>
+			AGENTS.md quality sits on a short ladder. <strong>We work the top two rungs: BETTER and BEST.</strong>
+		</p>
+		<div class="ladder-wrap">
+			<table class="ladder-table">
+				<thead>
+					<tr>
+						<th>State</th>
+						<th>Meaning</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>NONE</strong></td>
+						<td>No agent instruction file</td>
+					</tr>
+					<tr>
+						<td><strong>GOOD</strong></td>
+						<td>Some <code>AGENTS.md</code> (or peer file) exists — quality varies</td>
+					</tr>
+					<tr class="rung-focus">
+						<td><strong>BETTER</strong></td>
+						<td>A short, current, <strong>facts-based</strong> <code>AGENTS.md</code> an agent can trust</td>
+					</tr>
+					<tr class="rung-focus">
+						<td><strong>BEST</strong></td>
+						<td>BETTER <strong>plus</strong> durable project DNA (<code>.faf</code>) that authors and refreshes instruction files from verified facts</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p class="muted-note ladder-path">
+			<code>NONE</code> → <code>GOOD</code> → <strong><code>BETTER</code></strong> → <strong><code>BEST</code></strong>
+		</p>
+
+		<h3>BETTER — author from repo facts</h3>
+		<p>
+			A dedicated human maintainer can keep a hand-written file honest. When that gets old, author the
+			managed lines from what the tree already declares — real build and test commands, entry points,
+			toolchain conventions. Nothing invented. Nothing padded. Hand-written judgment stays
+			<strong>outside</strong> the managed markers; re-runs refresh only the facts block.
+		</p>
+		<pre><code>npx agents-md-facts            # author / refresh AGENTS.md
+npx agents-md-facts --check    # fail if missing or stale</code></pre>
+		<p class="muted-note">
+			Open-source, stack-agnostic — no FAF required.
+			<a href="https://github.com/Wolfe-Jam/agents-md-facts" target="_blank" rel="noopener">agents-md-facts on GitHub</a>.
+		</p>
+
+		<h3>BEST — durable DNA, then export</h3>
+		<p>
+			When you want project DNA that scores, records, and authors instruction surfaces from verified facts —
+			including <code>AGENTS.md</code> — use FAF. Change the code, re-run export; the managed block stays
+			current. Content you add outside the managed block is preserved.
+		</p>
 		<pre><code>npx faf-cli export --agents</code></pre>
 		<p class="muted-note">
-			Works with or without — a follow-on, not a religion. Write a great AGENTS.md by hand today. When keeping
-			it true gets old, hand it to FAF: it reads the repo, discerns, and authors the definitions from intel.
-			<strong>Verified and true. Scored and recorded. Done For You.</strong>
+			Follow-on, not a religion. Write a great AGENTS.md by hand, or author BETTER from facts today.
+			When you want DNA underneath the file — scored and re-exportable — hand it to FAF.
 		</p>
 	</article>
 
 	<article class="content">
 		<h2>Further reading</h2>
 		<ul>
+			<li><strong>The series</strong> — <a href="https://dev.to/wolfejam/series/41937" target="_blank" rel="noopener">AGENTS.md on DEV</a> (field guide → hands-on → staleness → discipline → from facts).</li>
 			<li><strong>The standard</strong> — <a href="https://agents.md" target="_blank" rel="noopener">agents.md</a> (the spec itself).</li>
+			<li><strong>BETTER tooling</strong> — <a href="https://github.com/Wolfe-Jam/agents-md-facts" target="_blank" rel="noopener">agents-md-facts</a> (<code>npx agents-md-facts</code>).</li>
 			<li><strong>The research</strong> — <a href="/blog/beyond-the-bloat">Beyond the Bloat</a> and <a href="/blog/recovered-in-translation">Recovered in Translation</a>: why context built from a repo's own signals — real commands, real paths, no prose — is exactly the "minimal requirements" ETH Zürich's SRI Lab pointed to.</li>
-			<li><strong>The format underneath</strong> — <a href="/spec">the <code>.faf</code> format</a> and <a href="/">faf.one</a>.</li>
-			<li><strong>faf-cli</strong> — <a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener">on npm</a> (<code>npx faf-cli export --agents</code>).</li>
+			<li><strong>The format underneath</strong> — <a href="/spec">the <code>.faf</code> format</a> and <a href="/">faf.one</a> (BEST rung).</li>
+			<li><strong>BEST tooling</strong> — <a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener">faf-cli on npm</a> (<code>npx faf-cli export --agents</code>).</li>
 		</ul>
 	</article>
 
@@ -221,6 +275,53 @@ Conventional commits (feat: / fix: / test:). Branch off main; never commit to ma
 		margin-bottom: 1rem;
 		border-bottom: 1px solid var(--faf-light-gray);
 		padding-bottom: 0.4rem;
+	}
+
+	.content h3 {
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin: 1.5rem 0 0.75rem;
+	}
+
+	.ladder-wrap {
+		overflow-x: auto;
+		margin: 1.25rem 0 0.75rem;
+	}
+
+	.ladder-table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.95rem;
+	}
+
+	.ladder-table th,
+	.ladder-table td {
+		text-align: left;
+		padding: 0.65rem 0.85rem;
+		border: 1px solid var(--faf-light-gray);
+		color: var(--faf-dark);
+		line-height: 1.5;
+		vertical-align: top;
+	}
+
+	.ladder-table th {
+		background: var(--faf-gray-light);
+		color: var(--faf-black);
+		font-weight: 700;
+	}
+
+	.ladder-table tr.rung-focus td {
+		background: color-mix(in srgb, #00d4d4 10%, transparent);
+	}
+
+	.ladder-table tr.rung-focus td:first-child {
+		color: var(--faf-black);
+	}
+
+	.ladder-path {
+		margin-bottom: 0.5rem;
+		letter-spacing: 0.02em;
 	}
 
 	.content p {
