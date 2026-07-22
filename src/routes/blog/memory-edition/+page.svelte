@@ -195,7 +195,7 @@ npm i -g faf-cli@7.2.0`;
 	}
 
 	.version-tag {
-		color: #FF6B35;
+		color: #1a1a1a;
 		font-weight: 700;
 		font-size: 1rem;
 		margin: 0 0 0.5rem;
@@ -203,7 +203,7 @@ npm i -g faf-cli@7.2.0`;
 
 	.subtitle {
 		font-size: 1.25rem;
-		color: #333;
+		color: #FF6B35;
 		font-weight: 500;
 		margin: 0 0 1rem;
 	}

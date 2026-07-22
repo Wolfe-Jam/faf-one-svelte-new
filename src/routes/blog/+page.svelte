@@ -1331,13 +1331,13 @@
 		margin-bottom: 0.5rem;
 	}
 
-	/* Version stamp — orange mono, shown on cards/list when post.version is set */
+	/* Version stamp — black mono, shown on cards/list when post.version is set */
 	.post-version {
 		display: inline-block;
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.72rem;
 		font-weight: 700;
-		color: var(--faf-orange);
+		color: var(--faf-black);
 		margin: -0.1rem 0 0.55rem;
 		letter-spacing: 0.02em;
 	}
@@ -1346,7 +1346,7 @@
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.72rem;
 		font-weight: 700;
-		color: var(--faf-orange);
+		color: var(--faf-black);
 		flex-shrink: 0;
 		letter-spacing: 0.02em;
 	}
