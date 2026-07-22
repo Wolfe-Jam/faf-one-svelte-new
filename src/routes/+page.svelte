@@ -54,12 +54,12 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/memory-edition" class="ticker-item"><b>faf-cli 7.2</b> The Memory Edition — .faf is context, .fafm is memory</a>
 				<a href="/blog/agents-md-edition" class="ticker-item"><b>faf-cli 7.1</b> The AGENTS.md Edition — complete AGENTS.md, non-destructive</a>
 				<a href="/blog/git-version" class="ticker-item"><b>faf-cli 7.0</b> The GIT Version — diff, log, hooks for your context</a>
-				<a href="/blog/zeph-edition" class="ticker-item"><b>grok-faf-mcp 1.9.1</b> The ZEPH Edition — re-grounding, microsecond-cheap</a>
+				<a href="/blog/memory-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.2</b> The Memory Edition — .faf is context, .fafm is memory</a>
 				<a href="/blog/agents-md-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.1</b> The AGENTS.md Edition — complete AGENTS.md, non-destructive</a>
 				<a href="/blog/git-version" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.0</b> The GIT Version — diff, log, hooks for your context</a>
-				<a href="/blog/zeph-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>grok-faf-mcp 1.9.1</b> The ZEPH Edition — re-grounding, microsecond-cheap</a>
 			</div>
 		</div>
 	</section>
