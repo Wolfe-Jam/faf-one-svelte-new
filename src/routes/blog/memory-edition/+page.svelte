@@ -4,7 +4,7 @@
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
-	// Rich X share — pre-fill the crafted post (formula-based, never bare URL).
+	// Rich X share — formula body; URL becomes its own final line (see shareIntent.js).
 	const shareText = `🏁 Just shipped: faf-cli v7.2.0 — The Memory Edition
 
 .faf is context. .fafm is memory.

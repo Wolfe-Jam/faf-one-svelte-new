@@ -37,9 +37,17 @@ export function buildShareIntent({
 		tweet = lines.join('\n');
 	}
 
+	// X's web intent appends `url=` onto the *last line* of `text=` with a space
+	// (so "npm i -g foo@1.0.0" + url becomes "npm i -g foo@1.0.0 https://…").
+	// Put the link on its own final line inside `text` and skip the `url=` param —
+	// unfurl/OG still works from a full URL in the body; no double-append, no glue.
+	tweet = tweet.replace(/\s+$/, '');
+	if (url) {
+		tweet = `${tweet}\n\n${url}`;
+	}
+
 	return (
 		'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet) +
-		(url ? '&url=' + encodeURIComponent(url) : '') +
 		(hashtags ? '&hashtags=' + encodeURIComponent(hashtags) : '')
 	);
 }
