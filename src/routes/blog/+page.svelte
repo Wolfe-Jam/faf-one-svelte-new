@@ -5,6 +5,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/memory-edition',
+			title: 'The Memory Edition',
+			version: 'faf-cli v7.2.0',
+			date: 'July 22, 2026',
+			timestamp: '2026-07-22',
+			excerpt: '.faf is context. .fafm is memory. faf-cli v7.2.0 ships portable agent memory — convert Claude Code memory to soul.fafm, etch, recall — INTEROP with claude-fafm-sdk 1.0. One CLI, both IANA formats.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/authored-not-generated',
 			title: 'Authored, Not Generated',
 			version: 'faf-cli v7.1.3',
