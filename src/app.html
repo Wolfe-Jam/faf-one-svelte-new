@@ -14,6 +14,13 @@
 		<script>
 			(function () {
 				try {
+					// Blog is light-by-design (hardcoded dark text on posts). Never start
+					// /blog/* in OS-dark tokens or first paint is black-on-black.
+					var path = location.pathname || '';
+					if (path === '/blog' || path.indexOf('/blog/') === 0) {
+						document.documentElement.setAttribute('data-theme', 'light');
+						return;
+					}
 					var saved = localStorage.getItem('faf-theme');
 					var dark = saved
 						? saved === 'dark'

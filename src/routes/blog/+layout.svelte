@@ -1,24 +1,23 @@
 <script>
 	/**
-	 * Blog chrome: hide theme flip for this section (see +layout.ts).
-	 * Light-authored posts hardcode dark text (#1a1a1a). If data-theme stays
-	 * "dark" (incognito + OS dark, or saved preference), --faf-page-bg goes
-	 * near-black while text stays #1a1a1a → unreadable. Freeze light tokens
-	 * for the whole /blog tree; dark posts lock body with !important + light text.
+	 * Blog is light-by-design (posts hardcode #1a1a1a). OS/saved dark theme
+	 * must not flip tokens here or text vanishes. Force light ASAP + on nav.
 	 */
 	import { browser } from '$app/environment';
 	import { onDestroy } from 'svelte';
 
 	let { children } = $props();
 
-	$effect(() => {
+	function forceBlogLight() {
 		if (!browser) return;
 		document.documentElement.setAttribute('data-theme', 'light');
-		// Match central body guard so bg:'self' pages still get a cream canvas
-		// even when a prior route left inline styles or leaked :global(body).
 		const s = document.body.style;
 		s.background = '#FEFCF8';
 		s.color = '#1a1a1a';
+	}
+
+	$effect(() => {
+		forceBlogLight();
 	});
 
 	onDestroy(() => {
@@ -32,10 +31,14 @@
 		} catch {
 			document.documentElement.removeAttribute('data-theme');
 		}
-		// Let root layout $effect re-apply body on next navigation
 		document.body.style.removeProperty('background');
 		document.body.style.removeProperty('color');
 	});
 </script>
+
+<!-- Runs before paint when this layout hydrates; pairs with app.html FOUC override below -->
+<svelte:head>
+	{@html `<script>(function(){try{document.documentElement.setAttribute('data-theme','light');}catch(e){}})();</script>`}
+</svelte:head>
 
 {@render children()}

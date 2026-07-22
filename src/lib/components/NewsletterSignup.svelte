@@ -85,41 +85,47 @@
 {/if}
 
 <style>
-	/* Blog variant */
+	/* Blog variant — hard light palette (never depend on data-theme tokens) */
 	.blog-signup {
-		margin: 3rem 0 1rem;
-		padding: 2rem;
-		border: 1px solid var(--faf-light-gray);
+		margin: 1rem 0;
+		padding: 1.5rem 2rem;
+		border: 2px solid #FF6B35;
 		border-radius: 10px;
 		text-align: center;
-		background: var(--faf-white);
+		background: #ffffff;
+		box-shadow: 0 4px 16px rgba(255, 107, 53, 0.12);
 	}
 
 	.blog-label {
 		margin: 0 0 1rem;
-		font-size: 1rem;
-		color: var(--faf-dark);
-		font-weight: 600;
+		font-size: 1.05rem;
+		color: #1a1a1a;
+		font-weight: 700;
 	}
 
 	.blog-form {
 		display: flex;
 		gap: 0.5rem;
 		justify-content: center;
-		max-width: 400px;
+		max-width: 420px;
 		margin: 0 auto;
 	}
 
 	.blog-input {
 		flex: 1;
 		padding: 0.75rem 1rem;
-		font-size: 0.9rem;
-		background: var(--faf-cream);
-		color: var(--faf-dark);
-		border: 2px solid var(--faf-light-gray);
+		font-size: 0.95rem;
+		background: #FEFCF8;
+		color: #1a1a1a;
+		border: 2px solid #ccc;
 		border-radius: 6px;
 		outline: none;
 		transition: border-color 0.2s;
+		min-width: 0;
+	}
+
+	.blog-input::placeholder {
+		color: #666;
 	}
 
 	.blog-input:focus {
@@ -143,13 +149,13 @@
 	}
 
 	.blog-btn:disabled {
-		opacity: 0.5;
+		opacity: 0.55;
 		cursor: not-allowed;
 	}
 
 	.blog-success {
 		margin: 0;
-		color: var(--faf-dark);
+		color: #1a1a1a;
 		font-size: 0.95rem;
 	}
 

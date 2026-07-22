@@ -1238,9 +1238,11 @@
 		transform: translateX(-2px);
 	}
 
+	/* Hard cream canvas — index must stay readable even if data-theme is wrong */
 	.blog {
 		padding: 3rem 0;
-		background: var(--faf-page-bg);
+		background: #FEFCF8;
+		color: #1a1a1a;
 		min-height: 80vh;
 	}
 
