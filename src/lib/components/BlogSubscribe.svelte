@@ -57,11 +57,11 @@
 </div>
 
 <style>
-	/* Sits above locked-dark footer — muted chrome, left-aligned one line */
+	/* Above footer on page canvas — light-readable, B&W + orange accent */
 	.loop {
 		max-width: 700px;
 		margin: 0 auto;
-		padding: 0.85rem 1.5rem 0.25rem;
+		padding: 0.85rem 1.5rem 0.5rem;
 		text-align: center;
 	}
 	.row {
@@ -72,56 +72,56 @@
 		flex-wrap: wrap;
 	}
 	.label {
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: #999;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #1a1a1a;
 		white-space: nowrap;
 		flex-shrink: 0;
 	}
 	.input {
-		width: 10.5rem;
+		width: 11rem;
 		max-width: 100%;
-		padding: 0.35rem 0.6rem;
-		font-size: 0.8rem;
-		background: #1a1a1a;
-		color: #e5e5e5;
-		border: 1px solid #333;
+		padding: 0.4rem 0.65rem;
+		font-size: 0.85rem;
+		background: #ffffff;
+		color: #1a1a1a;
+		border: 1px solid #bbb;
 		border-radius: 4px;
 	}
 	.input::placeholder {
-		color: #666;
+		color: #888;
 	}
 	.input:focus {
 		outline: none;
-		border-color: #ff6b35;
+		border-color: #1a1a1a;
 	}
 	.btn {
-		padding: 0.35rem 0.75rem;
-		background: transparent;
-		color: #bbb;
-		border: 1px solid #444;
+		padding: 0.4rem 0.85rem;
+		background: #1a1a1a;
+		color: #ffffff;
+		border: 1px solid #1a1a1a;
 		border-radius: 4px;
 		font-weight: 600;
-		font-size: 0.8rem;
+		font-size: 0.85rem;
 		cursor: pointer;
 		white-space: nowrap;
 	}
 	.btn:hover:not(:disabled) {
-		color: #ff6b35;
-		border-color: #ff6b35;
+		background: #000;
+		border-color: #000;
 	}
 	.btn:disabled {
-		opacity: 0.4;
+		opacity: 0.45;
 		cursor: not-allowed;
 	}
 	.ok {
 		margin: 0;
-		font-size: 0.8rem;
-		color: #999;
+		font-size: 0.85rem;
+		color: #1a1a1a;
 	}
 	.err {
 		margin: 0.3rem 0 0;
 		font-size: 0.75rem;
-		color: #e53e3e;
+		color: #c53030;
 	}
 </style>
