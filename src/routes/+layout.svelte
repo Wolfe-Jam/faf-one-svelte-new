@@ -148,8 +148,10 @@
 {/if}
 
 <div class="footer-chrome">
-	<!-- Sitewide: Stay in the loop — above footer on every page -->
-	<BlogSubscribe />
+	<!-- Sitewide above footer — except /blog index (long list; hero form there instead) -->
+	{#if $page.url.pathname !== '/blog' && $page.url.pathname !== '/blog/'}
+		<BlogSubscribe />
+	{/if}
 	<Footer />
 </div>
 

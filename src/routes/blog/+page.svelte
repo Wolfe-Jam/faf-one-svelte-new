@@ -2,6 +2,33 @@
 	let view = $state('list');
 	let sortBy = $state('newest');
 
+	// Compact hero subscribe — list page is too long for footer-only capture
+	let subEmail = $state('');
+	/** @type {'idle' | 'loading' | 'success' | 'error'} */
+	let subStatus = $state('idle');
+
+	async function handleBlogSub(e) {
+		e.preventDefault();
+		if (!subEmail || subStatus === 'loading') return;
+		subStatus = 'loading';
+		try {
+			const res = await fetch('/api/subscribe', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+				body: JSON.stringify({ email: subEmail.trim(), source: 'faf.one/blog' })
+			});
+			const data = await res.json().catch(() => ({}));
+			if (!res.ok || data?.subscribed === false) throw new Error(data?.error || 'fail');
+			subStatus = 'success';
+			subEmail = '';
+		} catch {
+			subStatus = 'error';
+			setTimeout(() => {
+				subStatus = 'idle';
+			}, 4000);
+		}
+	}
+
 	const posts = [
 		{
 			slug: 'blog/memory-edition',
@@ -1156,6 +1183,31 @@
 		<h1><span class="blog-text">Blog</span> <span class="ampersand">&</span> <span class="press-text">Press</span></h1>
 		<div class="subtitle">Stories, press releases, and updates from the FAF team</div>
 
+		<!-- Hero subscribe: long page — footer strip is wrong place for /blog index -->
+		<div class="blog-hero-sub">
+			{#if subStatus === 'success'}
+				<p class="blog-hero-ok">You're on the list.</p>
+			{:else}
+				<form class="blog-hero-row" onsubmit={handleBlogSub}>
+					<input
+						type="email"
+						bind:value={subEmail}
+						placeholder="your@email.com"
+						required
+						disabled={subStatus === 'loading'}
+						class="blog-hero-input"
+						aria-label="Email for newsletter"
+					/>
+					<button type="submit" disabled={!subEmail || subStatus === 'loading'} class="blog-hero-btn">
+						{subStatus === 'loading' ? '…' : 'Subscribe'}
+					</button>
+				</form>
+				{#if subStatus === 'error'}
+					<p class="blog-hero-err">Something went wrong — try again.</p>
+				{/if}
+			{/if}
+		</div>
+
 		<div class="toolbar">
 			<div class="toggle-group">
 				<button class="toggle-btn" class:active={sortBy === 'newest'} onclick={() => sortBy = 'newest'}>Newest</button>
@@ -1230,6 +1282,62 @@
 		background: #FEFCF8;
 		color: #1a1a1a;
 		min-height: 80vh;
+	}
+
+	/* Compact left-aligned hero subscribe (no label) */
+	.blog-hero-sub {
+		margin: 0 0 1.25rem;
+		text-align: left;
+	}
+	.blog-hero-row {
+		display: flex;
+		align-items: center;
+		gap: 0.45rem;
+		flex-wrap: wrap;
+	}
+	.blog-hero-input {
+		width: 12rem;
+		max-width: 100%;
+		padding: 0.4rem 0.65rem;
+		font-size: 0.85rem;
+		background: #fff;
+		color: #1a1a1a;
+		border: 1px solid #bbb;
+		border-radius: 4px;
+	}
+	.blog-hero-input::placeholder {
+		color: #888;
+	}
+	.blog-hero-input:focus {
+		outline: none;
+		border-color: #1a1a1a;
+	}
+	.blog-hero-btn {
+		padding: 0.4rem 0.85rem;
+		background: #1a1a1a;
+		color: #fff;
+		border: 1px solid #1a1a1a;
+		border-radius: 4px;
+		font-weight: 600;
+		font-size: 0.85rem;
+		cursor: pointer;
+	}
+	.blog-hero-btn:hover:not(:disabled) {
+		background: #000;
+	}
+	.blog-hero-btn:disabled {
+		opacity: 0.45;
+		cursor: not-allowed;
+	}
+	.blog-hero-ok {
+		margin: 0;
+		font-size: 0.85rem;
+		color: #1a1a1a;
+	}
+	.blog-hero-err {
+		margin: 0.35rem 0 0;
+		font-size: 0.8rem;
+		color: #c53030;
 	}
 
 	.container {
