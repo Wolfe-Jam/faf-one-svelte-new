@@ -33,8 +33,11 @@ npm i -g faf-cli@7.2.0`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Memory Edition
 		</div>
 		<h1>The Memory Edition</h1>
-		<p class="version-tag">faf-cli v7.2.0 · 🏆</p>
-		<p class="subtitle">.faf is context. .fafm is memory.</p>
+		<p class="version-tag">faf-cli v7.2.0 · The Memory Edition · 🏆</p>
+		<p class="subtitle">
+			<span class="phrase-context">.faf is context.</span>
+			<span class="phrase-memory">.fafm is memory.</span>
+		</p>
 		<div class="meta">
 			<time datetime="2026-07-22">July 22, 2026</time>
 			<span class="separator">•</span>
@@ -60,7 +63,10 @@ npm i -g faf-cli@7.2.0`;
 		</section>
 
 		<section>
-			<p class="thesis">.faf is context. .fafm is memory.</p>
+			<p class="thesis">
+				<span class="phrase-context">.faf is context.</span>
+				<span class="phrase-memory">.fafm is memory.</span>
+			</p>
 			<p>
 				For a year, faf-cli authored the context layer: one scored <code>project.faf</code> →
 				<code>AGENTS.md</code> · <code>CLAUDE.md</code> · the whole vendor surface. That's the foundation AI needs
@@ -203,9 +209,16 @@ npm i -g faf-cli@7.2.0`;
 
 	.subtitle {
 		font-size: 1.25rem;
-		color: #FF6B35;
 		font-weight: 500;
 		margin: 0 0 1rem;
+	}
+
+	/* Dual claim: context = cyan, memory = orange */
+	.phrase-context {
+		color: #00D4D4;
+	}
+	.phrase-memory {
+		color: #FF6B35;
 	}
 
 	.meta {
@@ -266,7 +279,6 @@ npm i -g faf-cli@7.2.0`;
 	.thesis {
 		font-size: 1.5rem;
 		font-weight: 800;
-		color: #FF6B35;
 		letter-spacing: -0.01em;
 		line-height: 1.3;
 		margin: 0 0 1.25rem;
