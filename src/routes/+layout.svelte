@@ -8,8 +8,34 @@
 	import { page } from '$app/stores';
 
 	let { children, data } = $props();
-	let isDark = $state(true);
+	// Start light until mount — avoids SSR/hydration black-on-black flash.
+	// app.html FOUC script still sets data-theme before first paint.
+	let isDark = $state(false);
 	let nearTop = $state(false);
+
+	/** Always set BOTH background and color — never leave color unset on a dark canvas. */
+	function applyBodyTheme() {
+		if (!browser) return;
+		const bg = $page.data?.bg;
+		const s = document.body.style;
+		const theme = document.documentElement.getAttribute('data-theme');
+		if (bg === 'dark') {
+			s.background = 'var(--faf-locked-dark)';
+			s.color = 'var(--faf-locked-dark-text)';
+		} else if (bg === 'self') {
+			// Page owns canvas (blog freezes light in its layout). Don't clear to "nothing"
+			// on dark preference mid-navigation — re-apply only if blog didn't set.
+			// Leave as-is when blog set cream; for other self pages force token pair.
+			if (theme === 'dark' && !s.background) {
+				s.background = 'var(--faf-page-bg)';
+				s.color = 'var(--faf-dark)';
+			}
+		} else {
+			// 'light' | default flip — tokens follow data-theme (both sides readable)
+			s.background = 'var(--faf-page-bg)';
+			s.color = 'var(--faf-dark)';
+		}
+	}
 
 	onMount(() => {
 		const saved = localStorage.getItem('faf-theme');
@@ -19,6 +45,7 @@
 			isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		}
 		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+		applyBodyTheme();
 	});
 
 	// Auto-hide banner: reveal when the cursor nears the top of the viewport.
@@ -33,6 +60,7 @@
 		isDark = e.isDark;
 		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
 		localStorage.setItem('faf-theme', isDark ? 'dark' : 'light');
+		applyBodyTheme();
 	}
 
 	// Central body-theme guard. SvelteKit keeps every visited route's CSS in the
@@ -42,23 +70,12 @@
 	// any stylesheet rule, so leaks can never win. Each page declares intent via
 	// load → `data.bg`:  'dark' | 'light' (locked) · 'self' (page paints its own
 	// body) · anything else / undefined (flip — the immune default).
+	// Re-runs when route OR theme (isDark) changes so toggle never leaves black-on-black.
 	$effect(() => {
 		if (!browser) return;
-		const bg = $page.data?.bg;
-		const s = document.body.style;
-		if (bg === 'dark') {
-			s.background = 'var(--faf-locked-dark)';
-			s.color = 'var(--faf-locked-dark-text)';
-		} else if (bg === 'light') {
-			s.background = 'var(--faf-page-bg)';
-			s.color = 'var(--faf-dark)';
-		} else if (bg === 'self') {
-			s.removeProperty('background');
-			s.removeProperty('color');
-		} else {
-			s.background = 'var(--faf-page-bg)';
-			s.color = 'var(--faf-dark)';
-		}
+		void isDark;
+		void $page.url.pathname;
+		applyBodyTheme();
 	});
 </script>
 

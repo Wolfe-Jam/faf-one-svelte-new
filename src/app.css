@@ -118,6 +118,17 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Contrast floor — dark canvas always gets light body type.
+   Child pages that hardcode #1a1a1a are a separate debt; body/chrome stay readable. */
+[data-theme='dark'] body {
+	background: var(--faf-page-bg);
+	color: var(--faf-dark);
+	color-scheme: dark;
+}
+[data-theme='light'] body {
+	color-scheme: light;
+}
+
 /* Typography */
 h1 {
 	font-size: clamp(2.5rem, 8vw, 5rem);
