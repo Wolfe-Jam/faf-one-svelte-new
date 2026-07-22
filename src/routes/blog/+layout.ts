@@ -3,4 +3,8 @@
 // whole /blog section. (Home + app pages keep the spinner and flip — Rule 1.)
 // bg:'self' — each blog paints its own body (101 light, 10 dark, by design); the
 // central layout guard leaves their :global(body) alone instead of forcing flip.
+//
+// +layout.svelte freezes data-theme=light for this tree so light posts (hardcoded
+// #1a1a1a text) stay readable when the OS/saved preference is dark. Dark posts
+// still force locked-dark body via their own :global(body) !important.
 export const load = () => ({ hideThemeToggle: true, bg: 'self' });
