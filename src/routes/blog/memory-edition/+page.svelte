@@ -43,7 +43,7 @@ npm i -g faf-cli@7.2.0`;
 	</header>
 
 	<div class="hero-image">
-		<img src="/blog/memory-edition-hero.png" alt="faf-cli v7.2.0 The Memory Edition — .faf is context, .fafm is memory" />
+		<img src="/blog/memory-edition-hero.png" alt="FAF dual mark: context (orange DotFaf smiley, .faf) and memory (orange Nelly the elephant, .fafm). faf-cli v7.2.0 The Memory Edition — .faf is context. .fafm is memory." />
 	</div>
 
 	<article class="post-content">
