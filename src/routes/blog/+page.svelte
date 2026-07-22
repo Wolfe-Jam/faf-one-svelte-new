@@ -1157,6 +1157,11 @@
 		<h1><span class="blog-text">Blog</span> <span class="ampersand">&</span> <span class="press-text">Press</span></h1>
 		<div class="subtitle">Stories, press releases, and updates from the FAF team</div>
 
+		<!-- Above the fold — 100+ posts bury a bottom-only box -->
+		<div class="signup-top">
+			<NewsletterSignup variant="blog" />
+		</div>
+
 		<div class="toolbar">
 			<div class="toggle-group">
 				<button class="toggle-btn" class:active={sortBy === 'newest'} onclick={() => sortBy = 'newest'}>Newest</button>
@@ -1205,6 +1210,10 @@
 </article>
 
 <style>
+	.signup-top {
+		margin: 1.25rem 0 1.5rem;
+	}
+
 	.back-nav {
 		padding: 1rem 2rem;
 		background: var(--faf-white);
