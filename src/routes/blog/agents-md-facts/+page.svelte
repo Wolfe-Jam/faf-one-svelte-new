@@ -161,8 +161,10 @@ npx agents-md-facts`;
 		background: var(--faf-page-bg, #fefcf8);
 	}
 
-	/* Bright #00D4D4 = fills / bars / pills. Darker --faf-cyan-text (#006e6e) = text on cream. */
+	/* Bright #00D4D4 = fills / bars / pills.
+	   Link/kicker text: mid cyan #00a8a8 (brighter than site --faf-cyan-text #006e6e on cream). */
 	.blog-post {
+		--agents-cyan-text: #00a8a8;
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
@@ -184,7 +186,7 @@ npx agents-md-facts`;
 	}
 
 	.breadcrumb a {
-		color: var(--faf-cyan-text, #006e6e);
+		color: var(--agents-cyan-text);
 		text-decoration: none;
 	}
 	.breadcrumb a:hover {
@@ -196,7 +198,7 @@ npx agents-md-facts`;
 		font-size: 0.9rem;
 		font-weight: 700;
 		letter-spacing: 0.02em;
-		color: var(--faf-cyan-text, #006e6e);
+		color: var(--agents-cyan-text);
 		margin: 0 0 0.25rem 0;
 		text-transform: uppercase;
 	}
@@ -236,7 +238,7 @@ npx agents-md-facts`;
 	}
 
 	.separator {
-		color: var(--faf-cyan-text, #006e6e);
+		color: var(--agents-cyan-text);
 	}
 
 	.category {
@@ -397,7 +399,7 @@ npx agents-md-facts`;
 	}
 
 	a {
-		color: var(--faf-cyan-text, #006e6e);
+		color: var(--agents-cyan-text);
 	}
 	a:hover {
 		text-decoration: none;
