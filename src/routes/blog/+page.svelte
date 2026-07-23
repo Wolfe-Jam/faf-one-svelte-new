@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/agents-md-facts',
+			title: 'agents-md-facts',
+			version: 'v0.1.0',
+			date: 'July 23, 2026',
+			timestamp: '2026-07-23',
+			excerpt:
+				"Author a minimal AGENTS.md from your repo's facts. Never guessed. Four commands, MIT, zero runtime deps — npx agents-md-facts.",
+			emoji: '☑️',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/memory-edition',
 			title: 'The Memory Edition',
 			version: 'faf-cli v7.2.0',
