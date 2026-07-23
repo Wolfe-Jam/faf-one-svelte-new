@@ -16,8 +16,8 @@
 		'/spec': { title: 'Spec', category: 'Core', emoji: '📐', description: 'The .faf specification', order: 8 },
 		'/ecosystem': { title: 'Ecosystem', category: 'Core', emoji: '🌍', description: 'Tools catalog', order: 9 },
 		'/6ws': { title: '6Ws', category: 'Core', emoji: '❓', description: 'Author README / context', order: 10 },
-		'/agent': { title: 'Agent', category: 'Core', emoji: '🎙️', description: 'Talk to the FAF agent', order: 11 },
-		'/agents': { title: 'Agents', category: 'Core', emoji: '📋', description: 'AGENTS.md — field guide for agents', order: 12 },
+		'/agent': { title: 'FAFA', category: 'Core', emoji: '🎙️', description: 'Agent — FAF Agent (always FAFA)', order: 11 },
+		'/agents': { title: 'AGENTS.md', category: 'Core', emoji: '📋', description: 'Agents — the AGENTS.md field guide', order: 12 },
 		'/pro': { title: 'FAF Pro', category: 'Core', emoji: '⭐', description: 'Full access. Every tool.', order: 13 },
 
 		// ── Tools ───────────────────────────────────────────────
