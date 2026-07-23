@@ -149,7 +149,7 @@ npx agents-md-facts`;
 			<p>
 				Built for the open <a href="https://agents.md" target="_blank" rel="noopener">AGENTS.md</a> standard.
 				<br />
-				Optional depth on the quality ladder:
+				Add persistent project context:
 				<a href="/agents">faf.one/agents</a>
 			</p>
 		</section>
