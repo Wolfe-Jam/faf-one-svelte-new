@@ -162,9 +162,9 @@ npx agents-md-facts`;
 	}
 
 	/* Bright #00D4D4 = fills / bars / pills.
-	   Link/kicker text: mid cyan #00a8a8 (brighter than site --faf-cyan-text #006e6e on cream). */
+	   Link/kicker text: punchy #00b8b8 (Release cyan; brighter than #006e6e / #00a8a8). */
 	.blog-post {
-		--agents-cyan-text: #00a8a8;
+		--agents-cyan-text: #00b8b8;
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
