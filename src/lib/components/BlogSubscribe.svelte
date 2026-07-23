@@ -61,7 +61,8 @@
 	.loop {
 		max-width: 700px;
 		margin: 0 auto;
-		padding: 0.85rem 1.5rem 0.5rem;
+		/* +1rem vertical breathing room above footer (was 0.85 / 0.5) */
+		padding: 1.85rem 1.5rem 1.5rem;
 		text-align: center;
 	}
 	.row {
