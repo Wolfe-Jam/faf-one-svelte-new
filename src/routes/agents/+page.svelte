@@ -180,7 +180,7 @@ Conventional commits (feat: / fix: / test:). Branch off main; never commit to ma
 					</tr>
 					<tr class="rung-focus">
 						<td><strong>BEST</strong></td>
-						<td>BETTER <strong>plus</strong> durable project DNA (<code>.faf</code>) that authors and refreshes instruction files from verified facts</td>
+						<td>BETTER <strong>plus</strong> durable project DNA — a <code>project.faf</code> at the repo root (the <code>package.json</code> for context) that authors and syncs instruction files from verified facts for <strong>persistent project context</strong></td>
 					</tr>
 				</tbody>
 			</table>
@@ -205,14 +205,16 @@ npx agents-md-facts --check    # fail if missing or stale</code></pre>
 
 		<h3>BEST — durable DNA, then export</h3>
 		<p>
-			When you want project DNA that scores, records, and authors instruction surfaces from verified facts —
-			including <code>AGENTS.md</code> — use FAF. Change the code, re-run export; the managed block stays
-			current. Content you add outside the managed block is preserved.
+			When you want <strong>persistent project context</strong>, put durable DNA at the root as
+			<code>project.faf</code> — the <code>package.json</code> for context. FAF scores and records that DNA,
+			then authors and syncs instruction surfaces from verified facts (including <code>AGENTS.md</code>).
+			Change the code, re-run export; the managed block stays current. Content you add outside the managed
+			block is preserved.
 		</p>
 		<pre><code>npx faf-cli export --agents</code></pre>
 		<p class="muted-note">
 			Follow-on, not a religion. Write a great AGENTS.md by hand, or author BETTER from facts today.
-			When you want DNA underneath the file — scored and re-exportable — hand it to FAF.
+			When you want root DNA underneath the file — scored, re-exportable, persistent — hand it to FAF.
 		</p>
 	</article>
 
