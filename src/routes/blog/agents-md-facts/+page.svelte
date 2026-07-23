@@ -13,7 +13,7 @@
 
 Author a minimal AGENTS.md from your repo's facts. Never guessed.
 
-4 commands. MIT. Zero FAF required.
+4 commands. MIT. No FAF.
 
 npx agents-md-facts`;
 	const shareUrl = 'https://faf.one/blog/agents-md-facts';
