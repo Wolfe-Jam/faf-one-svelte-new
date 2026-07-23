@@ -57,7 +57,7 @@ npx agents-md-facts`;
 	<div class="hero-image">
 		<img
 			src="/blog/agents-md-facts-hero.png"
-			alt="agents-md-facts v0.1.0 — Author a minimal AGENTS.md from repo facts. Never guessed."
+			alt="agents-md-facts v0.1.0 — FAFA agent mark. Author a minimal AGENTS.md from repo facts. Never guessed."
 		/>
 	</div>
 
