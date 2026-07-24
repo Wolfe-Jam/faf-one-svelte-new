@@ -70,11 +70,8 @@ pip install claude-fafm-sdk==1.1.1`;
 				converge.
 			</p>
 			<div class="terminal-block">
-				<code>pip install claude-fafm-sdk==1.1.1</code>
-				<code
-					>python -c "from claude_fafm_sdk import merge_souls, __version__; print(__version__,
-					merge_souls)"</code
-				>
+				<code># 30-second wow, zero install:</code>
+				<code>uvx claude-fafm-sdk quickstart</code>
 			</div>
 		</section>
 
@@ -155,19 +152,25 @@ pip install claude-fafm-sdk==1.1.1`;
 		<section>
 			<h2>Try It</h2>
 			<div class="terminal-block">
-				<code>pip install claude-fafm-sdk==1.1.1</code>
+				<code># 30-second wow, zero install:</code>
+				<code>uvx claude-fafm-sdk quickstart</code>
+			</div>
+			<div class="terminal-block">
+				<code># try the merge, ephemeral (no install):</code>
 				<code
-					>python -c "from claude_fafm_sdk import merge_souls, Soul; a=Soul('@demo');
-					b=Soul('@demo'); b.etch('ships mergeable memory', id='why'); m=merge_souls(a,b);
-					print(m.facts[0].text)"</code
+					>uv run --with claude-fafm-sdk python -c "from claude_fafm_sdk import merge_souls, Soul; a=Soul('@demo'); b=Soul('@demo'); b.etch('ships mergeable memory', id='why'); print(merge_souls(a,b).facts[0].text)"</code
 				>
+			</div>
+			<div class="terminal-block">
+				<code># or classic:</code>
+				<code>pip install claude-fafm-sdk==1.1.1</code>
 			</div>
 			<p>
 				Full property suite (from source — tests are not inside the wheel):
 			</p>
 			<div class="terminal-block">
 				<code>git clone https://github.com/Wolfe-Jam/claude-fafm-sdk && cd claude-fafm-sdk</code>
-				<code>git checkout v1.1.1 && pip install -e ".[dev]"</code>
+				<code>git checkout v1.1.1 && uv pip install -e ".[dev]"</code>
 				<code
 					>pytest tests/test_wjttc_merge_crdt.py tests/test_nversion_differential.py</code
 				>
