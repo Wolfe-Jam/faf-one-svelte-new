@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/mergeable-memory',
+			title: 'Mergeable Memory',
+			version: 'claude-fafm-sdk v1.1.1',
+			date: 'July 24, 2026',
+			timestamp: '2026-07-24',
+			excerpt:
+				'Two offline souls merge and converge — state-based CvRDT, dual-implementation verified. Grow/update-only. Stranger-runnable receipt on PyPI.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/agents-md-facts',
 			title: 'agents-md-facts',
 			version: 'v0.1.0',
