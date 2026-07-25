@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/sendable-memory',
+			title: 'Sendable Memory',
+			version: 'claude-fafm-sdk v1.2.0',
+			date: 'July 25, 2026',
+			timestamp: '2026-07-25',
+			excerpt:
+				'1.1 made souls mergeable; 1.2 makes them sendable — seal a .fafm into a CRC-integrity .fafmp, send the file, merge on arrival. Tier-2 stranger receipt.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/mergeable-memory',
 			title: 'Mergeable Memory',
 			version: 'claude-fafm-sdk v1.1.1',

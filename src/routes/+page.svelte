@@ -54,12 +54,12 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/sendable-memory" class="ticker-item"><b>claude-fafm-sdk 1.2</b> Sendable Memory — seal · send · merge</a>
 				<a href="/blog/mergeable-memory" class="ticker-item"><b>claude-fafm-sdk 1.1</b> Mergeable Memory — CvRDT souls, dual-impl verified</a>
 				<a href="/blog/memory-edition" class="ticker-item"><b>faf-cli 7.2</b> The Memory Edition — .faf is context, .fafm is memory</a>
-				<a href="/blog/agents-md-edition" class="ticker-item"><b>faf-cli 7.1</b> The AGENTS.md Edition — complete AGENTS.md, non-destructive</a>
+				<a href="/blog/sendable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.2</b> Sendable Memory — seal · send · merge</a>
 				<a href="/blog/mergeable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.1</b> Mergeable Memory — CvRDT souls, dual-impl verified</a>
 				<a href="/blog/memory-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.2</b> The Memory Edition — .faf is context, .fafm is memory</a>
-				<a href="/blog/agents-md-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.1</b> The AGENTS.md Edition — complete AGENTS.md, non-destructive</a>
 			</div>
 		</div>
 	</section>
