@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/verifiable-provenance',
+			title: 'Verifiable Provenance',
+			version: 'claude-fafm-sdk v1.4.0',
+			date: 'July 27, 2026',
+			timestamp: '2026-07-27',
+			excerpt:
+				'1.3 proved a packet travels intact; 1.4 proves which key sealed it — optional Ed25519 [sign]. CRC + signature separate. Receipt stays zero-crypto.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/provable-receipt',
 			title: 'Provable Receipt',
 			version: 'claude-fafm-sdk v1.3.0',

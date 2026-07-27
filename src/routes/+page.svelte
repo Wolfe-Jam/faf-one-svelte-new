@@ -54,9 +54,11 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/verifiable-provenance" class="ticker-item"><b>claude-fafm-sdk 1.4</b> Verifiable Provenance — which key sealed it</a>
 				<a href="/blog/provable-receipt" class="ticker-item"><b>claude-fafm-sdk 1.3</b> Provable Receipt — one command, no clone</a>
 				<a href="/blog/sendable-memory" class="ticker-item"><b>claude-fafm-sdk 1.2</b> Sendable Memory — seal · send · merge</a>
 				<a href="/blog/mergeable-memory" class="ticker-item"><b>claude-fafm-sdk 1.1</b> Mergeable Memory — CvRDT souls, dual-impl verified</a>
+				<a href="/blog/verifiable-provenance" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.4</b> Verifiable Provenance — which key sealed it</a>
 				<a href="/blog/provable-receipt" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.3</b> Provable Receipt — one command, no clone</a>
 				<a href="/blog/sendable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.2</b> Sendable Memory — seal · send · merge</a>
 				<a href="/blog/mergeable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.1</b> Mergeable Memory — CvRDT souls, dual-impl verified</a>
