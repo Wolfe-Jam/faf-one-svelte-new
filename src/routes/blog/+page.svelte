@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/provable-receipt',
+			title: 'Provable Receipt',
+			version: 'claude-fafm-sdk v1.3.0',
+			date: 'July 26, 2026',
+			timestamp: '2026-07-26',
+			excerpt:
+				'1.2 made memory sendable; 1.3 makes the proof one command — uvx claude-fafm-sdk receipt. No git clone. Three falsifiers. Don\'t take our word. Run it.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/sendable-memory',
 			title: 'Sendable Memory',
 			version: 'claude-fafm-sdk v1.2.0',
