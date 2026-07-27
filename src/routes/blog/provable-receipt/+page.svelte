@@ -29,9 +29,9 @@ Don't take our word. Run it.`;
 		content="1.2 made memory sendable; 1.3 makes the proof one command — uvx claude-fafm-sdk receipt."
 	/>
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content="https://faf.one/blog-assets/provable-receipt-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=2" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="https://faf.one/blog-assets/provable-receipt-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=2" />
 </svelte:head>
 
 <div class="blog-post">
@@ -54,8 +54,12 @@ Don't take our word. Run it.`;
 
 	<div class="hero-image">
 		<img
-			src="/blog-assets/provable-receipt-hero.png"
-			alt="Provable Receipt — claude-fafm-sdk v1.3.0. The 60-second proof as one command."
+			src="https://faf.one/blog-assets/provable-receipt-hero.png?v=2"
+			alt="Provable Receipt — claude-fafm-sdk v1.3.0 hero card"
+			width="1200"
+			height="630"
+			loading="eager"
+			decoding="async"
 		/>
 	</div>
 
@@ -148,8 +152,12 @@ Don't take our word. Run it.`;
 			</ul>
 			<div class="diagram-image">
 				<img
-					src="/blog-assets/provable-receipt-flow.png"
-					alt="One command, three falsifiers: etch → seal → send → merge → recall; CRC reject, double-merge, both-ways"
+					src="https://faf.one/blog-assets/provable-receipt-flow.png?v=2"
+					alt="One command, three falsifiers: etch → seal → send → merge → recall"
+					width="1200"
+					height="480"
+					loading="lazy"
+					decoding="async"
 				/>
 			</div>
 			<p>Green, or it doesn't ship. <code>--json</code> gives you the same result machine-readable, for CI or a paper.</p>
