@@ -29,9 +29,31 @@ Don't take our word. Run it.`;
 		content="1.2 made memory sendable; 1.3 makes the proof one command — uvx claude-fafm-sdk receipt."
 	/>
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=2" />
+	<meta property="og:url" content="https://faf.one/blog/provable-receipt" />
+	<meta property="og:site_name" content=".faf Format Authority" />
+	<!-- Cache-bust v=3: force X/Twitter + CF to re-fetch card image after 404 crawl -->
+	<meta property="og:image" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=3" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=3" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta
+		property="og:image:alt"
+		content="Provable Receipt — claude-fafm-sdk v1.3.0 · one command proof"
+	/>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=2" />
+	<meta name="twitter:site" content="@fafformat" />
+	<meta name="twitter:creator" content="@wolfe_jam" />
+	<meta name="twitter:title" content="Provable Receipt - claude-fafm-sdk v1.3.0" />
+	<meta
+		name="twitter:description"
+		content="1.2 made memory sendable; 1.3 makes the proof one command — uvx claude-fafm-sdk receipt."
+	/>
+	<meta name="twitter:image" content="https://faf.one/blog-assets/provable-receipt-hero.png?v=3" />
+	<meta
+		name="twitter:image:alt"
+		content="Provable Receipt — claude-fafm-sdk v1.3.0 · one command proof"
+	/>
 </svelte:head>
 
 <div class="blog-post">
@@ -55,7 +77,7 @@ Don't take our word. Run it.`;
 
 	<div class="hero-image">
 		<img
-			src="https://faf.one/blog-assets/provable-receipt-hero.png?v=2"
+			src="https://faf.one/blog-assets/provable-receipt-hero.png?v=3"
 			alt="Provable Receipt — claude-fafm-sdk v1.3.0 hero card"
 			width="1200"
 			height="630"
