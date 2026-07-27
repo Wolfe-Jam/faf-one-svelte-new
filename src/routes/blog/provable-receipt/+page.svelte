@@ -41,6 +41,11 @@ Don't take our word. Run it.`;
 		</div>
 		<h1>Provable Receipt</h1>
 		<p class="version-tag">claude-fafm-sdk v1.3.0 · Provable Receipt · 🏆</p>
+		<p class="subtitle">
+			Don't take our word — run it.
+			<code>uvx claude-fafm-sdk receipt</code> proves seal → send → merge from the published
+			package, then tries to break it.
+		</p>
 		<div class="meta">
 			<time datetime="2026-07-26">July 26, 2026</time>
 			<span class="separator">•</span>
