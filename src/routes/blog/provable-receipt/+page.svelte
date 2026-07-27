@@ -40,11 +40,7 @@ Don't take our word. Run it.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Provable Receipt
 		</div>
 		<h1>Provable Receipt</h1>
-		<p class="version-tag">claude-fafm-sdk v1.3.0 · Provable Receipt · 🏆</p>
-		<p class="subtitle">
-			1.2 made memory <strong>sendable</strong>; 1.3 makes the proof <strong>one command</strong> —
-			the 60-second receipt runs straight from the published package, no git clone.
-		</p>
+		<p class="version-tag">claude-fafm-sdk v1.3.0 · 🏆</p>
 		<div class="meta">
 			<time datetime="2026-07-26">July 26, 2026</time>
 			<span class="separator">•</span>
