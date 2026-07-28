@@ -34,11 +34,11 @@ Optional Ed25519. Not a PKI. Receipt still zero-crypto.`;
 	<meta property="og:site_name" content=".faf Format Authority" />
 	<meta
 		property="og:image"
-		content="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=4"
+		content="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=5"
 	/>
 	<meta
 		property="og:image:secure_url"
-		content="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=4"
+		content="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=5"
 	/>
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
@@ -57,7 +57,7 @@ Optional Ed25519. Not a PKI. Receipt still zero-crypto.`;
 	/>
 	<meta
 		name="twitter:image"
-		content="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=4"
+		content="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=5"
 	/>
 	<meta
 		name="twitter:image:alt"
@@ -85,7 +85,7 @@ Optional Ed25519. Not a PKI. Receipt still zero-crypto.`;
 
 	<div class="hero-image">
 		<img
-			src="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=4"
+			src="https://faf.one/blog-assets/verifiable-provenance-hero.png?v=5"
 			alt="Verifiable Provenance — claude-fafm-sdk v1.4.0 hero card"
 			width="1200"
 			height="630"
