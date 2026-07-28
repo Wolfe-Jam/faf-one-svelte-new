@@ -4,30 +4,33 @@
  *
  * RULE: ONLY approved Fam marks. Never invent / redraw / AI-generate logos.
  *
- * Templates (for now):
- *   dark  — series release card (VP / Provable Receipt style)
+ * Templates:
+ *   dark  — series release card (Provable Receipt / VP style)
+ *           hero mark from Fam-Marks; badges/star/footer from locked chrome
  *   light — clean light card (Memory Edition style)
  *
- * Marks:
- *   DotFaf  → context (.faf)     --mark faf
- *   Nelly   → memory  (.fafm)   --mark fafm
- *   FAFA    → agent   (.fafa)   --mark fafa
- *   Trophy  → 100% / social     --mark trophy
+ * Marks (Fam-Marks only):
+ *   faf / dotfaf  → DotFaf (context)
+ *   fafm / nelly  → Nelly (memory)
+ *   fafa / agent  → FAFA (agent)
+ *   trophy        → Trophy (100%)
  *
- * Source of truth: ~/FAF-GOLD/Fam-Marks/ (override with FAF_MARKS_DIR)
+ * Chrome (dark only): scripts/brand-card-chrome/
+ *   dark-badges-nelly-python.png  — full Nelly + Python (from proven 1.3 card)
+ *   dark-star.png                 — full star seal
+ *   dark-footer.png               — .faf faf.one wordmark
  *
- * Dark:
+ * Source of truth for faces: ~/FAF-GOLD/Fam-Marks/ (FAF_MARKS_DIR override)
+ *
+ * Examples:
  *   node scripts/gen-brand-card.mjs --template dark --mark faf \
- *     --title "Verifiable Provenance" --subtitle "..." --pill "..." --terminal "..." \
- *     --out static/blog-assets/foo-hero.png
+ *     --title "Verifiable Provenance" \
+ *     --subtitle "1.3 proved a packet travels intact; 1.4 proves which key sealed it." \
+ *     --pill "claude-fafm-sdk v1.4.0" \
+ *     --terminal "pip install 'claude-fafm-sdk[sign]'  ·  verify -k → signature OK" \
+ *     --badge both \
+ *     --out static/blog-assets/verifiable-provenance-hero.png
  *
- * Light (single mark):
- *   node scripts/gen-brand-card.mjs --template light --mark fafm \
- *     --title "faf-cli v7.2.0 · The Memory Edition" \
- *     --subtitle ".faf is context. .fafm is memory." \
- *     --out static/blog/memory-edition-hero.png
- *
- * Light (dual marks — Memory Edition pair):
  *   node scripts/gen-brand-card.mjs --template light --pair faf,fafm \
  *     --title "faf-cli v7.2.0 · The Memory Edition" \
  *     --subtitle ".faf is context. .fafm is memory." \
@@ -42,6 +45,7 @@ import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
+const CHROME_DIR = path.join(__dirname, 'brand-card-chrome');
 
 const W = 1200;
 const H = 630;
@@ -55,22 +59,43 @@ const C = {
 	white: '#ffffff',
 	green: '#3ddc84',
 	ink: '#1a1a1a',
-	muted: '#666666',
-	black: '#0a0a0a'
+	muted: '#666666'
 };
 
 /** Approved marks only */
 const MARKS = {
-	faf: { file: 'dotfaf.png', label: 'DotFaf', role: 'context', ext: '.faf' },
-	dotfaf: { file: 'dotfaf.png', label: 'DotFaf', role: 'context', ext: '.faf' },
-	fafm: { file: 'nelly.png', label: 'Nelly', role: 'memory', ext: '.fafm' },
-	nelly: { file: 'nelly.png', label: 'Nelly', role: 'memory', ext: '.fafm' },
-	fafa: { file: 'fafa.png', label: 'FAFA', role: 'agent', ext: '.fafa' },
-	agent: { file: 'fafa.png', label: 'FAFA', role: 'agent', ext: '.fafa' },
-	trophy: { file: 'trophy.png', label: 'Trophy', role: '100%', ext: '' }
+	faf: { file: 'dotfaf.png', label: 'DotFaf', role: 'context' },
+	dotfaf: { file: 'dotfaf.png', label: 'DotFaf', role: 'context' },
+	fafm: { file: 'nelly.png', label: 'Nelly', role: 'memory' },
+	nelly: { file: 'nelly.png', label: 'Nelly', role: 'memory' },
+	fafa: { file: 'fafa.png', label: 'FAFA', role: 'agent' },
+	agent: { file: 'fafa.png', label: 'FAFA', role: 'agent' },
+	trophy: { file: 'trophy.png', label: 'Trophy', role: '100%' }
 };
 
 const TEMPLATES = new Set(['dark', 'light']);
+
+/** Dark layout — locked to match Provable Receipt / fixed VP card */
+const DARK = {
+	markSize: 280,
+	markX: 56,
+	markY: 160,
+	textLeft: 410,
+	pillTop: 144,
+	pillH: 36,
+	titleY: 250,
+	titleSize: 54,
+	subY0: 312,
+	subLine: 32,
+	subSize: 23,
+	termX: 410,
+	termY: 390,
+	termW: 700,
+	termH: 100,
+	badge: { left: 1020, top: 12 },
+	star: { left: 1065, top: 508 },
+	footer: { left: 0, top: 560 }
+};
 
 function marksDir() {
 	if (process.env.FAF_MARKS_DIR) return path.resolve(process.env.FAF_MARKS_DIR);
@@ -114,6 +139,17 @@ function resolveMarkFile(key) {
 	);
 }
 
+function requireChrome(name) {
+	const p = path.join(CHROME_DIR, name);
+	if (!fs.existsSync(p)) {
+		throw new Error(
+			`Dark chrome missing: ${p}\n` +
+				`Restore scripts/brand-card-chrome/ from the proven series card (see BRAND-CARDS.md).`
+		);
+	}
+	return p;
+}
+
 function parseArgs(argv) {
 	const out = {
 		template: 'dark',
@@ -124,7 +160,7 @@ function parseArgs(argv) {
 		pill: '',
 		terminal: '',
 		badge: 'none',
-		footer: '.faf  faf.one',
+		footer: true, // use chrome footer when true
 		out: null,
 		dryRun: false,
 		help: false
@@ -158,8 +194,8 @@ function parseArgs(argv) {
 			case '--badge':
 				out.badge = (next() || 'none').toLowerCase();
 				break;
-			case '--footer':
-				out.footer = next() || '';
+			case '--no-footer':
+				out.footer = false;
 				break;
 			case '--out':
 				out.out = next();
@@ -207,29 +243,22 @@ function help() {
 	return `Usage: node scripts/gen-brand-card.mjs --template dark|light --title "..." --out path.png
 
 TEMPLATES
-  dark   Series release card (dark ground, left mark, pill, terminal)
-  light  Clean light card (Memory Edition style; single or dual marks)
+  dark   Series release (1.3 chrome + Fam mark + text) — Provable Receipt / VP
+  light  Clean light (Memory Edition); --pair faf,fafm for dual marks
 
-MARKS (Fam-Marks only — never invented)
-  faf / dotfaf  → DotFaf (context)
-  fafm / nelly  → Nelly (memory)
-  fafa / agent  → FAFA (agent)
-  trophy        → Trophy (100%)
+MARKS (Fam-Marks only)
+  faf|dotfaf  DotFaf   fafm|nelly  Nelly   fafa|agent  FAFA   trophy  Trophy
 
-  --mark faf                 single hero mark
-  --pair faf,fafm            light dual-mark layout (context <|> memory)
-
-OPTIONS
-  --title --subtitle --pill --terminal --badge none|nelly|python|both
-  --footer ".faf  faf.one"   --dry-run
+DARK chrome (locked PNGs in scripts/brand-card-chrome/)
+  --badge both|nelly|none   corner Nelly+Python from proven crop (default none)
+  star + footer always placed on dark
 
 Examples
-  # Dark (VP-style)
   node scripts/gen-brand-card.mjs --template dark --mark faf \\
     --title "Verifiable Provenance" --pill "claude-fafm-sdk v1.4.0" \\
-    --subtitle "..." --terminal "..." --out static/blog-assets/vp-hero.png
+    --subtitle "..." --terminal "..." --badge both \\
+    --out static/blog-assets/verifiable-provenance-hero.png
 
-  # Light dual (Memory Edition-style)
   node scripts/gen-brand-card.mjs --template light --pair faf,fafm \\
     --title "faf-cli v7.2.0 · The Memory Edition" \\
     --subtitle ".faf is context. .fafm is memory." \\
@@ -237,72 +266,115 @@ Examples
 `;
 }
 
-// ─── DARK template (series release) ─────────────────────────────────────────
+async function resizeMark(markPath, size) {
+	return sharp(markPath)
+		.resize(size, size, {
+			fit: 'contain',
+			background: { r: 0, g: 0, b: 0, alpha: 0 }
+		})
+		.png()
+		.toBuffer();
+}
 
-function buildDarkSvg({ title, subtitle, pill, terminal, footer, markSize, markX }) {
-	const textLeft = markX + markSize + 36;
-	const pillTop = 130;
-	const pillH = 36;
-	let y = pill ? pillTop + pillH + 52 : 210;
+// ─── DARK: canvas text + Fam hero + locked chrome ───────────────────────────
 
+function buildDarkTextSvg({ title, subtitle, pill, terminal }) {
+	const L = DARK;
 	const titleLines = wrapText(title, 28);
 	const subLines = wrapText(subtitle, 48);
 	const termLines = terminal ? wrapText(terminal, 52) : [];
 
+	// Title baseline
+	const titleY = L.titleY;
 	const titleTs = titleLines
-		.map((line, i) => `<tspan x="${textLeft}" y="${y + i * 58}">${escapeXml(line)}</tspan>`)
+		.map((line, i) => `<tspan x="${L.textLeft}" y="${titleY + i * 58}">${escapeXml(line)}</tspan>`)
 		.join('');
-	y += titleLines.length * 58 + 16;
 
+	const subY0 = L.subY0 + (titleLines.length > 1 ? (titleLines.length - 1) * 20 : 0);
 	const subTs = subLines
-		.map((line, i) => `<tspan x="${textLeft}" y="${y + i * 34}">${escapeXml(line)}</tspan>`)
+		.map((line, i) => `<tspan x="${L.textLeft}" y="${subY0 + i * L.subLine}">${escapeXml(line)}</tspan>`)
 		.join('');
-	y += Math.max(subLines.length, 1) * 34 + 28;
-
-	const termBlockH = termLines.length ? 28 + termLines.length * 28 + 20 : 0;
-	const termY = Math.min(Math.max(y, 400), H - 80 - termBlockH);
-	const termW = W - textLeft - 48;
 
 	const pillW = pill ? Math.min(20 + pill.length * 10.5, 440) : 0;
 	const pillSvg = pill
-		? `<rect x="${textLeft}" y="${pillTop}" rx="8" ry="8" width="${pillW}" height="${pillH}" fill="${C.orange}"/>
-       <text x="${textLeft + 14}" y="${pillTop + 24}" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="${C.white}">${escapeXml(pill)}</text>`
+		? `<rect x="${L.textLeft}" y="${L.pillTop}" rx="8" ry="8" width="${pillW}" height="${L.pillH}" fill="${C.orange}"/>
+       <text x="${L.textLeft + 14}" y="${L.pillTop + 24}" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="${C.white}">${escapeXml(pill)}</text>`
 		: '';
 
 	const termSvg = termLines.length
-		? `<rect x="${textLeft}" y="${termY}" rx="12" ry="12" width="${termW}" height="${termBlockH}" fill="${C.terminalBg}"/>
-       <circle cx="${textLeft + 22}" cy="${termY + 22}" r="5" fill="#ff5f57"/>
-       <circle cx="${textLeft + 42}" cy="${termY + 22}" r="5" fill="#febc2e"/>
-       <circle cx="${textLeft + 62}" cy="${termY + 22}" r="5" fill="#28c840"/>
-       <text font-family="SF Mono, Menlo, Monaco, Consolas, monospace" font-size="18" fill="${C.green}">
-         ${termLines.map((line, i) => `<tspan x="${textLeft + 24}" y="${termY + 52 + i * 28}">${escapeXml(line)}</tspan>`).join('')}
+		? `<rect x="${L.termX}" y="${L.termY}" rx="12" ry="12" width="${L.termW}" height="${L.termH}" fill="${C.terminalBg}"/>
+       <circle cx="${L.termX + 30}" cy="${L.termY + 28}" r="5" fill="#ff5f57"/>
+       <circle cx="${L.termX + 50}" cy="${L.termY + 28}" r="5" fill="#febc2e"/>
+       <circle cx="${L.termX + 70}" cy="${L.termY + 28}" r="5" fill="#28c840"/>
+       <text font-family="SF Mono, Menlo, Monaco, Consolas, monospace" font-size="19" fill="${C.green}">
+         ${termLines
+						.map(
+							(line, i) =>
+								`<tspan x="${L.termX + 90}" y="${L.termY + 35 + i * 30}">${escapeXml(line)}</tspan>`
+						)
+						.join('')}
        </text>`
 		: '';
 
 	return `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${W}" height="${H}" fill="${C.darkBg}"/>
   <rect width="${W}" height="8" fill="${C.orange}"/>
   ${pillSvg}
-  <text font-family="SF Pro Display, -apple-system, Helvetica Neue, Arial Black, sans-serif" font-size="52" font-weight="800" fill="${C.white}">
+  <text font-family="SF Pro Display, -apple-system, Helvetica Neue, Arial Black, sans-serif" font-size="${L.titleSize}" font-weight="800" fill="${C.white}">
     ${titleTs}
   </text>
-  <text font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="500" fill="${C.cyan}">
+  <text font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="${L.subSize}" font-weight="500" fill="${C.cyan}">
     ${subTs}
   </text>
   ${termSvg}
-  <text x="36" y="${H - 28}" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="600" fill="${C.orange}">${escapeXml(footer)}</text>
 </svg>`;
 }
 
-// ─── LIGHT template (Memory Edition style) ──────────────────────────────────
+async function renderDark(args, mark) {
+	const L = DARK;
+	const svg = buildDarkTextSvg(args);
+	const canvas = await sharp(Buffer.from(svg)).png().toBuffer();
+
+	const markBuf = await resizeMark(mark.path, L.markSize);
+	const composites = [{ input: markBuf, left: L.markX, top: L.markY }];
+
+	// Corner badges — locked full crop (never regenerate)
+	if (args.badge === 'both' || args.badge === 'nelly' || args.badge === 'python') {
+		const badgePath = requireChrome('dark-badges-nelly-python.png');
+		composites.push({
+			input: await sharp(badgePath).png().toBuffer(),
+			left: L.badge.left,
+			top: L.badge.top
+		});
+	}
+
+	// Star seal — locked full crop
+	const starPath = requireChrome('dark-star.png');
+	composites.push({
+		input: await sharp(starPath).png().toBuffer(),
+		left: L.star.left,
+		top: L.star.top
+	});
+
+	// Footer wordmark — locked crop
+	if (args.footer !== false) {
+		const footerPath = requireChrome('dark-footer.png');
+		composites.push({
+			input: await sharp(footerPath).png().toBuffer(),
+			left: L.footer.left,
+			top: L.footer.top
+		});
+	}
+
+	return sharp(canvas).composite(composites).png().toBuffer();
+}
+
+// ─── LIGHT (Memory Edition) ─────────────────────────────────────────────────
 
 function buildLightSvg({ title, subtitle, dual }) {
-	// Centered composition on light ground
 	const titleLines = wrapText(title, 42);
 	const subLines = wrapText(subtitle, 50);
-
-	// Title / subtitle sit below the mark zone
 	const textBlockTop = dual ? 430 : 400;
 	const titleTs = titleLines
 		.map((line, i) => `<tspan x="${W / 2}" y="${textBlockTop + i * 32}">${escapeXml(line)}</tspan>`)
@@ -312,7 +384,6 @@ function buildLightSvg({ title, subtitle, dual }) {
 		.map((line, i) => `<tspan x="${W / 2}" y="${subY0 + i * 36}">${escapeXml(line)}</tspan>`)
 		.join('');
 
-	// Dual labels live near marks (drawn in SVG; marks composited later)
 	const dualLabels = dual
 		? `<text x="360" y="168" text-anchor="middle" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="18" fill="${C.muted}">context</text>
        <text x="840" y="168" text-anchor="middle" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="18" fill="${C.muted}">memory</text>
@@ -321,13 +392,6 @@ function buildLightSvg({ title, subtitle, dual }) {
        <text x="${W / 2}" y="300" text-anchor="middle" font-family="SF Mono, Menlo, Monaco, monospace" font-size="28" fill="${C.muted}">&lt;|&gt;</text>`
 		: '';
 
-	// Single-mark ext label under mark
-	const singleLabel = !dual
-		? '' // role/ext can be in subtitle; keep clean
-		: '';
-
-	// Subtitle coloring: if contains ".faf is context" pattern, use multi-color spans
-	// Keep simple: full subtitle in ink, or split cyan/orange if " . " separates two claims
 	let subSvg;
 	if (subtitle.includes('.faf is context') && subtitle.includes('.fafm is memory')) {
 		subSvg = `<text text-anchor="middle" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="700">
@@ -344,71 +408,11 @@ function buildLightSvg({ title, subtitle, dual }) {
 <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${W}" height="${H}" fill="${C.lightBg}"/>
   ${dualLabels}
-  ${singleLabel}
   <text text-anchor="middle" font-family="SF Pro Text, -apple-system, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="600" fill="${C.ink}">
     ${titleTs}
   </text>
   ${subSvg}
 </svg>`;
-}
-
-async function resizeMark(markPath, size) {
-	return sharp(markPath)
-		.resize(size, size, {
-			fit: 'contain',
-			background: { r: 0, g: 0, b: 0, alpha: 0 }
-		})
-		.png()
-		.toBuffer();
-}
-
-async function loadCornerBadge(kind) {
-	const dir = marksDir();
-	if (kind === 'nelly' || kind === 'both') {
-		const p = path.join(dir, 'nelly.png');
-		if (fs.existsSync(p)) {
-			return sharp(p)
-				.resize(48, 48, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-				.png()
-				.toBuffer();
-		}
-	}
-	return null;
-}
-
-async function renderDark(args, mark) {
-	const markSize = 280;
-	const markX = 56;
-	const markY = 160;
-
-	const svg = buildDarkSvg({
-		title: args.title,
-		subtitle: args.subtitle,
-		pill: args.pill,
-		terminal: args.terminal,
-		footer: args.footer,
-		markSize,
-		markX
-	});
-
-	const base = await sharp(Buffer.from(svg)).png().toBuffer();
-	const markBuf = await resizeMark(mark.path, markSize);
-	const composites = [{ input: markBuf, left: markX, top: markY }];
-
-	if (args.badge === 'nelly' || args.badge === 'both') {
-		const b = await loadCornerBadge('nelly');
-		if (b) composites.push({ input: b, left: W - 120, top: 28 });
-	}
-	if (args.badge === 'python' || args.badge === 'both') {
-		const pySvg = Buffer.from(`<?xml version="1.0"?>
-<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" rx="10" fill="#3776AB"/>
-  <text x="24" y="32" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="800" fill="#FFD43B">Py</text>
-</svg>`);
-		composites.push({ input: await sharp(pySvg).png().toBuffer(), left: W - 64, top: 28 });
-	}
-
-	return sharp(base).composite(composites).png().toBuffer();
 }
 
 async function renderLight(args, marks) {
@@ -422,18 +426,16 @@ async function renderLight(args, marks) {
 	const composites = [];
 
 	if (dual) {
-		// Memory Edition geometry: left DotFaf, right Nelly
 		const size = 200;
-		const leftX = 260;
-		const rightX = 740;
-		const top = 190;
-		composites.push({ input: await resizeMark(marks[0].path, size), left: leftX, top });
-		composites.push({ input: await resizeMark(marks[1].path, size), left: rightX, top });
+		composites.push({ input: await resizeMark(marks[0].path, size), left: 260, top: 190 });
+		composites.push({ input: await resizeMark(marks[1].path, size), left: 740, top: 190 });
 	} else {
 		const size = 220;
-		const left = Math.round((W - size) / 2);
-		const top = 140;
-		composites.push({ input: await resizeMark(marks[0].path, size), left, top });
+		composites.push({
+			input: await resizeMark(marks[0].path, size),
+			left: Math.round((W - size) / 2),
+			top: 140
+		});
 	}
 
 	return sharp(base).composite(composites).png().toBuffer();
@@ -453,14 +455,16 @@ async function main() {
 		throw new Error(`Unknown --template "${args.template}". Use: dark | light`);
 	}
 
-	// Resolve marks
 	let marks = [];
 	if (args.pair) {
-		const parts = args.pair.split(',').map((s) => s.trim()).filter(Boolean);
+		const parts = args.pair
+			.split(',')
+			.map((s) => s.trim())
+			.filter(Boolean);
 		if (parts.length !== 2) throw new Error('--pair needs two marks: e.g. faf,fafm');
 		marks = parts.map(resolveMarkFile);
 		if (args.template !== 'light') {
-			console.warn('note: --pair is designed for --template light (dual layout)');
+			console.warn('note: --pair is designed for --template light');
 		}
 	} else if (args.mark) {
 		marks = [resolveMarkFile(args.mark)];
@@ -471,14 +475,24 @@ async function main() {
 	const outPath = path.isAbsolute(args.out) ? args.out : path.join(ROOT, args.out);
 
 	if (args.dryRun) {
-		console.log(JSON.stringify({ template: args.template, marks, outPath, args }, null, 2));
+		console.log(
+			JSON.stringify(
+				{
+					template: args.template,
+					marks: marks.map((m) => ({ label: m.label, path: m.path })),
+					chrome: CHROME_DIR,
+					outPath,
+					layout: args.template === 'dark' ? DARK : 'light'
+				},
+				null,
+				2
+			)
+		);
 		return;
 	}
 
 	const png =
-		args.template === 'light'
-			? await renderLight(args, marks)
-			: await renderDark(args, marks[0]);
+		args.template === 'light' ? await renderLight(args, marks) : await renderDark(args, marks[0]);
 
 	fs.mkdirSync(path.dirname(outPath), { recursive: true });
 	fs.writeFileSync(outPath, png);
@@ -486,6 +500,9 @@ async function main() {
 	console.log(`✓ ${args.template} card → ${outPath}`);
 	for (const m of marks) {
 		console.log(`  mark: ${m.label} (${m.role}) ← ${m.path}`);
+	}
+	if (args.template === 'dark') {
+		console.log(`  chrome: ${CHROME_DIR}`);
 	}
 	console.log(`  size: ${W}×${H}  bytes: ${png.length}`);
 }
