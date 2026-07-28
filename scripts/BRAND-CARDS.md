@@ -2,26 +2,36 @@
 
 **Never invent logos.** Every OG / series card uses **approved Fam marks** only.
 
+## Templates (now)
+
+| Template | Look | Reference |
+|----------|------|-----------|
+| **`dark`** | Dark ground · left mark · pill · terminal · orange top bar | Provable Receipt / Verifiable Provenance |
+| **`light`** | Light ground · centered mark(s) · clean type | [Memory Edition](https://faf.one/blog/memory-edition) |
+
+More templates later. These two cover release + edition cards.
+
 ## Marks (locked)
 
-| `--mark` | Asset | Role | Format |
-|----------|--------|------|--------|
-| `faf` / `dotfaf` | `FAF-GOLD/Fam-Marks/dotfaf.png` | context · knows | `.faf` |
-| `fafm` / `nelly` | `FAF-GOLD/Fam-Marks/nelly.png` | memory · remembers | `.fafm` |
-| `fafa` / `agent` | `FAF-GOLD/Fam-Marks/fafa.png` | agent · acts | `.fafa` |
-| `trophy` | `FAF-GOLD/Fam-Marks/trophy.png` | 100% / social seal | Trophy / ✪ |
+| `--mark` | Asset | Role |
+|----------|--------|------|
+| `faf` / `dotfaf` | `Fam-Marks/dotfaf.png` | context |
+| `fafm` / `nelly` | `Fam-Marks/nelly.png` | memory |
+| `fafa` / `agent` | `Fam-Marks/fafa.png` | agent |
+| `trophy` | `Fam-Marks/trophy.png` | 100% / seal |
 
-Source of truth: `~/FAF-GOLD/Fam-Marks/README.md`  
-Doctrine: `PLANET-FAF/memory/fafa-agent-mark-doctrine.md`
-
-If a file is missing, **`gen-brand-card.mjs` fails** — it will not draw a lookalike smiley.
+Source: `~/FAF-GOLD/Fam-Marks/`  
+If missing → **script fails** (no lookalike).
 
 ## Generate
+
+### Dark (series release)
 
 ```bash
 cd ~/FAF/faf-one-svelte-new
 
 node scripts/gen-brand-card.mjs \
+  --template dark \
   --mark faf \
   --title "Verifiable Provenance" \
   --subtitle "1.3 proved a packet travels intact; 1.4 proves which key sealed it." \
@@ -31,19 +41,41 @@ node scripts/gen-brand-card.mjs \
   --out static/blog-assets/verifiable-provenance-hero.png
 ```
 
-**Memory posts** → prefer `--mark fafm` (Nelly).  
-**Context / CLI / format** → `--mark faf` (DotFaf).  
-**Agent / FAFA** → `--mark fafa`.  
-**100% / celebration** → `--mark trophy` (or DotFaf hero + trophy badge later).
+### Light — single mark
+
+```bash
+node scripts/gen-brand-card.mjs \
+  --template light \
+  --mark fafm \
+  --title "Product line · Edition name" \
+  --subtitle "One clear claim." \
+  --out static/blog/example-light-hero.png
+```
+
+### Light — dual marks (Memory Edition)
+
+```bash
+node scripts/gen-brand-card.mjs \
+  --template light \
+  --pair faf,fafm \
+  --title "faf-cli v7.2.0 · The Memory Edition" \
+  --subtitle ".faf is context. .fafm is memory." \
+  --out static/blog/memory-edition-hero.png
+```
+
+`--pair faf,fafm` places DotFaf (context) + Nelly (memory) with labels — same structure as the live Memory Edition card.
 
 ## After generate
 
-1. Copy to `static/blog/` if the post uses `/blog/...-hero.png`
-2. Bump `?v=N` on `og:image` / hero `src` in the post `+page.svelte`
-3. Commit PNG + page together
+1. Copy to `static/blog/` if needed  
+2. Bump `?v=N` on OG/hero URLs  
+3. Commit PNG + page  
 
-## What went wrong (1.4 lesson)
+## Rule of thumb
 
-`verifiable-provenance` shipped a **redrawn** smiley. Series card 4 drifted from Fam-Marks. Fix: recompose with real `dotfaf.png` + this generator so it never happens again.
-
-Archive of the bad asset: `static/blog-assets/verifiable-provenance-hero.FAKE-SMILEY-ARCHIVE.png`
+| Content | Template | Mark |
+|---------|----------|------|
+| SDK / release ladder | `dark` | `faf` or `fafm` |
+| Memory edition / dual format | `light` + `--pair` | `faf,fafm` |
+| Agent / FAFA | `dark` or `light` | `fafa` |
+| Trophy / 100% | either | `trophy` |
