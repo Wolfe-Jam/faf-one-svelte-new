@@ -31,10 +31,10 @@ uvx claude-fafm-sdk --version`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/forgettable-memory" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/forgettable-memory-hero.png?v=2" />
+	<meta property="og:image" content="https://faf.one/blog/forgettable-memory-hero.png?v=3" />
 	<meta
 		property="og:image:secure_url"
-		content="https://faf.one/blog/forgettable-memory-hero.png?v=2"
+		content="https://faf.one/blog/forgettable-memory-hero.png?v=3"
 	/>
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
@@ -51,7 +51,7 @@ uvx claude-fafm-sdk --version`;
 		name="twitter:description"
 		content="A delete is state. Tombstones travel. Forget converges on both transports."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/forgettable-memory-hero.png?v=2" />
+	<meta name="twitter:image" content="https://faf.one/blog/forgettable-memory-hero.png?v=3" />
 	<meta
 		name="twitter:image:alt"
 		content="Forgettable Memory — claude-fafm-sdk v1.5.1 · convergent delete via tombstones"
@@ -79,7 +79,7 @@ uvx claude-fafm-sdk --version`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/forgettable-memory-hero.png?v=2"
+			src="/blog/forgettable-memory-hero.png?v=3"
 			alt="Forgettable Memory — claude-fafm-sdk v1.5.1. A delete is state; tombstones travel; forget converges."
 			width="1200"
 			height="630"

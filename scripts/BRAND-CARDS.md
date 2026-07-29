@@ -81,6 +81,8 @@ node scripts/gen-brand-card.mjs \
 
 ### Forgettable Memory (1.5.1)
 
+Series card: full Py chrome (elephant + Python) + Proof Seal ✪ — never X, never half-badge.
+
 ```bash
 node scripts/gen-brand-card.mjs \
   --template dark \
@@ -89,7 +91,7 @@ node scripts/gen-brand-card.mjs \
   --subtitle "A delete is state. Tombstones travel. Forget converges." \
   --pill "claude-fafm-sdk v1.5.1" \
   --terminal "forget  ·  tombstone wins  ·  both transports" \
-  --badge none \
+  --badge both \
   --seal proof \
   --out static/blog/forgettable-memory-hero.png
 cp static/blog/forgettable-memory-hero.png static/blog-assets/forgettable-memory-hero.png
