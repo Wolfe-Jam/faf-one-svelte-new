@@ -69,7 +69,35 @@ node scripts/gen-brand-card.mjs \
 2. Commit PNG + page  
 3. Push / deploy  
 
+## Dark seals
+
+| `--seal` | Asset | Use |
+|----------|--------|-----|
+| `star` (default) | `dark-star.png` | series chrome (filled star in circle) |
+| `proof` | rendered **✪** | Proof Seal / work-surface 100% |
+| `none` | — | no BR seal |
+
+**Never** place an X / close glyph as a seal. **Never** default PyPI elephant unless the release is explicitly Py-registry marketing (`--badge both`).
+
+### Forgettable Memory (1.5.1)
+
+```bash
+node scripts/gen-brand-card.mjs \
+  --template dark \
+  --mark faf \
+  --title "Forgettable Memory" \
+  --subtitle "A delete is state. Tombstones travel. Forget converges." \
+  --pill "claude-fafm-sdk v1.5.1" \
+  --terminal "forget  ·  tombstone wins  ·  both transports" \
+  --badge none \
+  --seal proof \
+  --out static/blog/forgettable-memory-hero.png
+cp static/blog/forgettable-memory-hero.png static/blog-assets/forgettable-memory-hero.png
+# bump ?v=N on the page
+```
+
 ## Lesson (1.4)
 
 Do **not** redraw smileys or invent Py badges.  
-Dark = **Fam mark** + **locked chrome**. Text is the only thing you rewrite.
+Dark = **Fam mark** + **locked chrome**. Text is the only thing you rewrite.  
+No PyPI chrome unless intentional. Seal is star or **✪** — never X.

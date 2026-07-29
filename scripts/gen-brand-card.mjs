@@ -160,6 +160,8 @@ function parseArgs(argv) {
 		pill: '',
 		terminal: '',
 		badge: 'none',
+		// dark corner seal: star (locked chrome) | proof (✪ Proof Seal) | none
+		seal: 'star',
 		footer: true, // use chrome footer when true
 		out: null,
 		dryRun: false,
@@ -193,6 +195,9 @@ function parseArgs(argv) {
 				break;
 			case '--badge':
 				out.badge = (next() || 'none').toLowerCase();
+				break;
+			case '--seal':
+				out.seal = (next() || 'star').toLowerCase();
 				break;
 			case '--no-footer':
 				out.footer = false;
@@ -250,8 +255,9 @@ MARKS (Fam-Marks only)
   faf|dotfaf  DotFaf   fafm|nelly  Nelly   fafa|agent  FAFA   trophy  Trophy
 
 DARK chrome (locked PNGs in scripts/brand-card-chrome/)
-  --badge both|nelly|none   corner Nelly+Python from proven crop (default none)
-  star + footer always placed on dark
+  --badge both|nelly|none   corner PyPI elephant+Python crop (default none — prefer none)
+  --seal star|proof|none    BR seal: locked star · ✪ Proof Seal · none (default star)
+  footer always placed on dark unless --no-footer
 
 Examples
   node scripts/gen-brand-card.mjs --template dark --mark faf \\
@@ -259,11 +265,45 @@ Examples
     --subtitle "..." --terminal "..." --badge both \\
     --out static/blog-assets/verifiable-provenance-hero.png
 
+  # Forgettable Memory — no PyPI chrome; Proof Seal ✪ not X/star
+  node scripts/gen-brand-card.mjs --template dark --mark faf \\
+    --title "Forgettable Memory" --pill "claude-fafm-sdk v1.5.1" \\
+    --subtitle "A delete is state. Tombstones travel. Forget converges." \\
+    --terminal "forget  ·  tombstone wins  ·  both transports" \\
+    --badge none --seal proof \\
+    --out static/blog/forgettable-memory-hero.png
+
   node scripts/gen-brand-card.mjs --template light --pair faf,fafm \\
     --title "faf-cli v7.2.0 · The Memory Edition" \\
     --subtitle ".faf is context. .fafm is memory." \\
     --out static/blog/memory-edition-hero.png
 `;
+}
+
+/**
+ * Proof Seal ✪ (U+272A CIRCLED WHITE STAR) — geometric, no font.
+ * Work-surface 100% mark. Never an X / close glyph.
+ */
+async function renderProofSeal(size = 100) {
+	const cx = size / 2;
+	const cy = size / 2;
+	const outerR = size * 0.42;
+	const ring = size * 0.045;
+	// 5-point star (circled white star geometry)
+	const outer = size * 0.28;
+	const inner = size * 0.12;
+	const pts = [];
+	for (let i = 0; i < 10; i++) {
+		const r = i % 2 === 0 ? outer : inner;
+		const a = -Math.PI / 2 + (i * Math.PI) / 5;
+		pts.push(`${(cx + r * Math.cos(a)).toFixed(2)},${(cy + r * Math.sin(a)).toFixed(2)}`);
+	}
+	const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="${cx}" cy="${cy}" r="${outerR}" fill="none" stroke="${C.white}" stroke-width="${ring}"/>
+  <polygon points="${pts.join(' ')}" fill="${C.white}"/>
+</svg>`;
+	return sharp(Buffer.from(svg)).png().toBuffer();
 }
 
 async function resizeMark(markPath, size) {
@@ -339,7 +379,7 @@ async function renderDark(args, mark) {
 	const markBuf = await resizeMark(mark.path, L.markSize);
 	const composites = [{ input: markBuf, left: L.markX, top: L.markY }];
 
-	// Corner badges — locked full crop (never regenerate)
+	// Corner badges — locked full crop (never regenerate). Prefer --badge none (no PyPI).
 	if (args.badge === 'both' || args.badge === 'nelly' || args.badge === 'python') {
 		const badgePath = requireChrome('dark-badges-nelly-python.png');
 		composites.push({
@@ -349,13 +389,25 @@ async function renderDark(args, mark) {
 		});
 	}
 
-	// Star seal — locked full crop
-	const starPath = requireChrome('dark-star.png');
-	composites.push({
-		input: await sharp(starPath).png().toBuffer(),
-		left: L.star.left,
-		top: L.star.top
-	});
+	// BR seal: star (locked chrome) | proof (✪) | none — never an X / close glyph
+	const seal = args.seal || 'star';
+	if (seal === 'star') {
+		const starPath = requireChrome('dark-star.png');
+		composites.push({
+			input: await sharp(starPath).png().toBuffer(),
+			left: L.star.left,
+			top: L.star.top
+		});
+	} else if (seal === 'proof' || seal === 'trophy' || seal === 'paz') {
+		// ✪ Proof Seal — work surface 100% mark (doctrine: not 🏆 on work surfaces)
+		composites.push({
+			input: await renderProofSeal(100),
+			left: L.star.left,
+			top: L.star.top
+		});
+	} else if (seal !== 'none') {
+		throw new Error(`Unknown --seal "${seal}". Use: star | proof | none`);
+	}
 
 	// Footer wordmark — locked crop
 	if (args.footer !== false) {
