@@ -238,7 +238,10 @@ Optional Ed25519. Not a PKI. Receipt still zero-crypto.`;
 				<li>1.2 Sendable Memory — SPK1 + CRC travel</li>
 				<li>1.3 Provable Receipt — one-command stranger proof</li>
 				<li><strong>1.4 Verifiable Provenance</strong> — which key sealed it</li>
-				<li>1.5 Forgettable Memory — tombstones (next)</li>
+				<li>
+					1.5 Forgettable Memory — tombstones (shipped —
+					<a href="/blog/forgettable-memory">read the post</a>)
+				</li>
 			</ul>
 		</section>
 

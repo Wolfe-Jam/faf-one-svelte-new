@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/forgettable-memory',
+			title: 'Forgettable Memory',
+			version: 'claude-fafm-sdk v1.5.1',
+			date: 'July 29, 2026',
+			timestamp: '2026-07-29',
+			excerpt:
+				'A delete is state. Tombstones travel the CvRDT; forget converges on packet + hosted. Rare lattice work — could have been 2.0; we shipped 1.5. Full arc closed.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/verifiable-provenance',
 			title: 'Verifiable Provenance',
 			version: 'claude-fafm-sdk v1.4.0',
