@@ -12,6 +12,30 @@
 
 <main class="page">
 
+	<!-- MCP section (interim) — crates README BEST → /agents; 7/28 textbook lives elsewhere. Do not clobber /mcp. -->
+	<section class="mcp-section" id="mcp" aria-labelledby="mcp-heading">
+		<h2 id="mcp-heading">Looking for MCP / 7/28?</h2>
+		<p>
+			This page is the <strong>AGENTS.md</strong> field guide and the <strong>BEST</strong> hop
+			(persistent project DNA). <strong>MCP is a different job</strong> — the open protocol that
+			connects tools to agents.
+		</p>
+		<p>
+			<strong>mcp-better</strong> is the live <strong>7/28</strong> textbook server (protocol
+			<code>2026-07-28</code>): Rust · stdio foundation · Discover · stamped list cache.
+			On crates.io and the MCP Registry as <code>io.github.Wolfe-Jam/mcp-better</code>.
+		</p>
+		<ul class="mcp-links">
+			<li><a href="https://github.com/Wolfe-Jam/mcp-better" target="_blank" rel="noopener">GitHub — mcp-better</a></li>
+			<li><a href="https://crates.io/crates/mcp-better" target="_blank" rel="noopener">crates.io — mcp-better</a></li>
+			<li><a href="https://github.com/Wolfe-Jam/mcp-better/releases/tag/v0.1.0" target="_blank" rel="noopener">Release v0.1.0</a></li>
+		</ul>
+		<p class="mcp-note">
+			FAF + MCP context (existing site page): <a href="/mcp">faf.one/mcp</a> —
+			unchanged. A dedicated 7/28 MCP home may land later; this section is the jump for now.
+		</p>
+	</section>
+
 	<header class="hero">
 		<h1>AGENTS.md</h1>
 		<p class="sub">The field guide — what earns a line, what to cut, and the shape agents actually read.</p>
@@ -245,8 +269,64 @@ npx agents-md-facts --check    # fail if missing or stale</code></pre>
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	}
 
+	/* MCP interim section — crates/BEST hop; AGENTS body stays pure; /mcp not rewritten */
+	.mcp-section {
+		margin: 1.5rem 0 0;
+		padding: 1.15rem 1.15rem 1.05rem;
+		border: 1px solid color-mix(in srgb, #00d4d4 45%, var(--faf-light-gray));
+		border-radius: 10px;
+		background: color-mix(in srgb, #00d4d4 8%, transparent);
+	}
+
+	.mcp-section h2 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: var(--faf-black);
+		margin: 0 0 0.65rem;
+		border: none;
+		padding: 0;
+	}
+
+	.mcp-section p {
+		margin: 0 0 0.75rem;
+		font-size: 0.98rem;
+		line-height: 1.6;
+		color: var(--faf-dark);
+	}
+
+	.mcp-section p:last-child {
+		margin-bottom: 0;
+	}
+
+	.mcp-section code {
+		font-size: 0.9em;
+	}
+
+	.mcp-links {
+		margin: 0.25rem 0 0.85rem 1.15rem;
+		padding: 0;
+		font-size: 0.98rem;
+		font-weight: 600;
+		line-height: 1.7;
+	}
+
+	.mcp-links a {
+		color: var(--faf-black);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.mcp-links a:hover {
+		color: #00a8a8;
+	}
+
+	.mcp-note {
+		font-size: 0.9rem !important;
+		opacity: 0.92;
+	}
+
 	.hero {
-		padding: 4rem 0 2rem;
+		padding: 2.5rem 0 2rem;
 		border-bottom: 1px solid var(--faf-light-gray);
 		margin-bottom: 1rem;
 	}
