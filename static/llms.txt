@@ -110,6 +110,9 @@ Also: https://github.com/travisvn/awesome-claude-skills/pull/35
 ## Key URLs
 
 - Website: https://faf.one
+- AAIF: https://faf.one/aaif (Founding Ambassador · scoreboard · AAIF-verified explained)
+- AGENTS.md guide: https://faf.one/agents
+- MCP + .faf: https://faf.one/mcp
 - Links: https://faf.one/links
 - Ecosystem: https://faf.one/ecosystem
 - Docs: https://faf.one/docs

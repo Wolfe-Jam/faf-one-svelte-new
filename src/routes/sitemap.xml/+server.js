@@ -37,7 +37,7 @@ function meta(route) {
 	if (route === '/updates') return ['weekly', '0.8'];
 	if (
 		['/voice', '/zeph', '/grok', '/cli', '/rust', '/pro', '/mcp', '/mcpaas',
-			'/ecosystem', '/v4', '/wjttc', '/demos'].includes(route)
+			'/ecosystem', '/v4', '/wjttc', '/demos', '/aaif', '/agents', '/memory'].includes(route)
 	) return ['monthly', '0.85'];
 	if (route === '/diagrams') return ['monthly', '0.8'];
 	if (route.startsWith('/diagrams/')) return ['monthly', '0.6'];
