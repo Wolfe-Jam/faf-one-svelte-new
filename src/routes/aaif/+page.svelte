@@ -15,14 +15,14 @@
 		content="Linux Foundation home for open agent standards. Founding AAIF Ambassador · contributions · what AAIF-verified means."
 	/>
 	<meta property="og:url" content="https://faf.one/aaif" />
-	<meta property="og:image" content="https://faf.one/aaif/aaif-og.png" />
+	<meta property="og:image" content="https://faf.one/images/aaif/aaif-og.png" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="AAIF — Agentic AI Foundation" />
 	<meta
 		name="twitter:description"
 		content="Open agent standards at the Linux Foundation. Founding Ambassador · scorecard · AAIF-verified explained."
 	/>
-	<meta name="twitter:image" content="https://faf.one/aaif/aaif-og.png" />
+	<meta name="twitter:image" content="https://faf.one/images/aaif/aaif-og.png" />
 	<link rel="canonical" href="https://faf.one/aaif" />
 </svelte:head>
 
@@ -30,7 +30,7 @@
 	<header class="hero">
 		<img
 			class="aaif-logo"
-			src="/aaif/aaif-primary-black.svg"
+			src="/images/aaif/aaif-primary-black.svg"
 			alt="Agentic AI Foundation"
 			width="280"
 			height="72"
@@ -102,7 +102,7 @@
 			</div>
 			<img
 				class="badge"
-				src="/aaif/aaif-ambassador-badge.png"
+				src="/images/aaif/aaif-ambassador-badge.png"
 				alt="AAIF Ambassador badge 2026 — Agentic AI Foundation, hosted by the Linux Foundation"
 				width="160"
 				height="160"
@@ -222,7 +222,7 @@
 	<section class="content footer-section">
 		<img
 			class="symbol"
-			src="/aaif/aaif-symbol-black.svg"
+			src="/images/aaif/aaif-symbol-black.svg"
 			alt=""
 			width="40"
 			height="40"
