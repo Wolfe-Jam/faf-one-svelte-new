@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/mcp-better',
+			title: 'mcp-better',
+			version: 'v0.2.0 · BETTER textbook · 7/28',
+			date: 'July 30, 2026',
+			timestamp: '2026-07-30',
+			excerpt:
+				'Built for MCP 2026-07-28. Rust · rmcp 3 · Discover · stamped list. stdio + Streamable HTTP. First cargo install compiles deps once — one-time wait.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/forgettable-memory',
 			title: 'Forgettable Memory',
 			version: 'claude-fafm-sdk v1.5.1',
