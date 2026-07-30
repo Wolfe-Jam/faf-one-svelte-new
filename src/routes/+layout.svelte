@@ -13,6 +13,11 @@
 	let isDark = $state(false);
 	let nearTop = $state(false);
 
+	/** Blog freezes light tokens — path check shared by FOUC (app.html), onMount, $effect. */
+	function isBlogPath(path) {
+		return path === '/blog' || path.startsWith('/blog/');
+	}
+
 	/** Always set BOTH background and color — never leave color unset on a dark canvas. */
 	function applyBodyTheme() {
 		if (!browser) return;
@@ -44,7 +49,15 @@
 		} else {
 			isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		}
-		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+		// CRITICAL: never re-apply saved dark preference on /blog/*.
+		// Race: FOUC + blog layout force light; root onMount used to overwrite with
+		// localStorage dark → --faf-dark/--faf-black flip to near-white while the
+		// blog canvas stays cream = classic white-text-on-light (stubborn for years).
+		if (isBlogPath($page.url.pathname)) {
+			document.documentElement.setAttribute('data-theme', 'light');
+		} else {
+			document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+		}
 		applyBodyTheme();
 	});
 
@@ -71,10 +84,15 @@
 	// load → `data.bg`:  'dark' | 'light' (locked) · 'self' (page paints its own
 	// body) · anything else / undefined (flip — the immune default).
 	// Re-runs when route OR theme (isDark) changes so toggle never leaves black-on-black.
+	// On /blog/* also re-assert data-theme=light (client nav into blog while isDark
+	// was true would otherwise leave dark tokens on a cream canvas).
 	$effect(() => {
 		if (!browser) return;
 		void isDark;
-		void $page.url.pathname;
+		const path = $page.url.pathname;
+		if (isBlogPath(path)) {
+			document.documentElement.setAttribute('data-theme', 'light');
+		}
 		applyBodyTheme();
 	});
 </script>

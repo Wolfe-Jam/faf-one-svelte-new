@@ -1318,17 +1318,20 @@
 </article>
 
 <style>
+	/* Blog index is light-locked. Prefer #1a1a1a / #FEFCF8 / #e5e5e5 LITERALS over
+	   --faf-dark / --faf-black / --faf-cream — those flip under [data-theme=dark] and
+	   were the white-text-on-cream failure when root onMount raced the light freeze. */
 	.back-nav {
 		padding: 1rem 2rem;
-		background: var(--faf-white);
-		border-bottom: 1px solid var(--faf-light-gray);
+		background: #FFFFFF;
+		border-bottom: 1px solid #e5e5e5;
 	}
 
 	.back-button {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.5rem;
-		color: var(--faf-dark);
+		color: #1a1a1a;
 		text-decoration: none;
 		font-weight: 600;
 		padding: 0.5rem 1rem;
@@ -1337,7 +1340,7 @@
 	}
 
 	.back-button:hover {
-		background: var(--faf-cream);
+		background: #FEFCF8;
 		color: var(--faf-orange);
 		transform: translateX(-2px);
 	}
@@ -1415,7 +1418,7 @@
 	h1 {
 		font-size: 2.5rem;
 		margin-bottom: 0.5rem;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		font-weight: 900;
 	}
 
@@ -1424,16 +1427,16 @@
 	}
 
 	.ampersand {
-		color: var(--faf-black);
+		color: #1a1a1a;
 	}
 
 	.press-text {
-		color: var(--faf-black);
+		color: #1a1a1a;
 	}
 
 	.subtitle {
 		font-size: 1.2rem;
-		color: var(--faf-dark);
+		color: #555555;
 		margin-bottom: 3rem;
 		font-weight: 500;
 	}
@@ -1445,13 +1448,13 @@
 	}
 
 	.post-card {
-		background: var(--faf-light-gray);
+		background: #e5e5e5;
 		padding: 1.25rem 1.5rem;
 		border-radius: 12px;
-		border: 1px solid var(--faf-light-gray);
+		border: 1px solid #e5e5e5;
 		border-left: 4px solid var(--faf-orange);
 		text-decoration: none;
-		color: inherit;
+		color: #1a1a1a;
 		transition: all 0.3s ease;
 		display: block;
 	}
@@ -1499,7 +1502,7 @@
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.72rem;
 		font-weight: 700;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		margin: -0.1rem 0 0.55rem;
 		letter-spacing: 0.02em;
 	}
@@ -1508,7 +1511,7 @@
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.72rem;
 		font-weight: 700;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		flex-shrink: 0;
 		letter-spacing: 0.02em;
 	}
@@ -1540,25 +1543,25 @@
 	}
 
 	.post-card[href*="press-release"] .post-category {
-		background: var(--faf-black);
+		background: #1a1a1a;
 	}
 
 	.post-card h2 {
 		font-size: 1.25rem;
 		margin: 0 0 0.5rem;
-		color: var(--faf-black);
+		color: #1a1a1a;
 		font-weight: 700;
 	}
 
 	.post-excerpt {
-		color: var(--faf-dark);
+		color: #333333;
 		line-height: 1.5;
 		margin: 0 0 0.75rem;
 		font-size: 0.9rem;
 	}
 
 	.post-date {
-		color: var(--faf-dark);
+		color: #555555;
 		font-size: 0.9rem;
 		font-style: italic;
 	}
@@ -1583,7 +1586,7 @@
 		border-radius: 6px;
 		font-size: 0.8rem;
 		font-weight: 600;
-		color: var(--faf-dark);
+		color: #555555;
 		cursor: pointer;
 		transition: all 0.2s;
 		text-transform: uppercase;
@@ -1597,7 +1600,7 @@
 
 	.post-count {
 		font-size: 0.8rem;
-		color: var(--faf-dark);
+		color: #555555;
 		margin-left: auto;
 	}
 
@@ -1614,17 +1617,17 @@
 		gap: 1rem;
 		padding: 0.75rem 1rem;
 		text-decoration: none;
-		color: inherit;
-		border-bottom: 2px solid var(--faf-light-gray);
+		color: #1a1a1a;
+		border-bottom: 2px solid #e5e5e5;
 		transition: background 0.15s;
 	}
 
 	.list-row:first-child {
-		border-top: 2px solid var(--faf-light-gray);
+		border-top: 2px solid #e5e5e5;
 	}
 
 	.list-row:hover {
-		background: var(--faf-cream);
+		background: #f5f2ed;
 	}
 
 	.list-dot {
@@ -1638,7 +1641,7 @@
 	.list-date {
 		font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
 		font-size: 0.8rem;
-		color: var(--faf-dark);
+		color: #555555;
 		flex-shrink: 0;
 		width: 6.5rem;
 	}
@@ -1653,7 +1656,7 @@
 	.list-title {
 		flex: 1;
 		font-weight: 600;
-		color: var(--faf-dark);
+		color: #1a1a1a;
 		font-size: 0.95rem;
 		white-space: nowrap;
 		overflow: hidden;
@@ -1701,7 +1704,7 @@
 	.archive-note {
 		text-align: center;
 		padding: 2rem;
-		color: var(--faf-dark);
+		color: #555555;
 		font-style: italic;
 	}
 

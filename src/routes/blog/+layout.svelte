@@ -2,17 +2,29 @@
 	/**
 	 * Blog is light-by-design. Force light theme for this tree.
 	 * Sitewide subscribe lives in root layout (above footer) — not duplicated here.
+	 *
+	 * Defense in depth (with root +layout + app.html FOUC):
+	 * - onMount AND $effect both force light (parent onMount used to race $effect alone)
+	 * - cream body inline so canvas never inherits dark page-bg mid-nav
 	 */
 	import { browser } from '$app/environment';
-	import { onDestroy } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
 	let { children } = $props();
 
-	$effect(() => {
+	function freezeLight() {
 		if (!browser) return;
 		document.documentElement.setAttribute('data-theme', 'light');
 		document.body.style.background = '#FEFCF8';
 		document.body.style.color = '#1a1a1a';
+	}
+
+	onMount(() => {
+		freezeLight();
+	});
+
+	$effect(() => {
+		freezeLight();
 	});
 
 	onDestroy(() => {
