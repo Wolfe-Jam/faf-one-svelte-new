@@ -37,7 +37,7 @@
 			date: 'July 30, 2026',
 			timestamp: '2026-07-30',
 			excerpt:
-				'Built for MCP 2026-07-28. Rust · rmcp 3 · Discover · stamped list. stdio + Streamable HTTP. First cargo install compiles deps once — one-time wait.',
+				'What 7/28 is, why we built a real textbook server, what BETTER means, who it’s for, what’s next. Rust · rmcp 3 · crates + Registry. First cargo install: deps once.',
 			emoji: '⚡',
 			category: 'Release'
 		},
