@@ -30,7 +30,7 @@
 	<header class="hero">
 		<img
 			class="aaif-logo"
-			src="/images/aaif/aaif-primary-black.svg"
+			src="/images/aaif/aaif-primary-black.png"
 			alt="Agentic AI Foundation"
 			width="280"
 			height="72"
