@@ -306,7 +306,7 @@ uvx claude-fafm-sdk --version`;
 		</section>
 
 		<section>
-			<h2>The arc — complete</h2>
+			<h2>The arc — through Forgettable</h2>
 			<p>
 				<strong>Mergeable → Sendable → Provable → Verifiable → Forgettable.</strong>
 			</p>
@@ -327,6 +327,11 @@ uvx claude-fafm-sdk --version`;
 			</p>
 			<p>
 				Nelly never forgets… unless you ask her to. And then the whole fleet agrees.
+			</p>
+			<p>
+				<strong>Next:</strong>
+				<a href="/blog/compactable-memory">Compactable (2.0)</a> — epoch compact pays tombstone
+				debt; cross-epoch merge refuses — no silent zombies.
 			</p>
 		</section>
 

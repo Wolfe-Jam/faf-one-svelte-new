@@ -52,7 +52,7 @@
 		<h2>Receipts</h2>
 		<ul class="receipts">
 			<li><strong>IANA-registered</strong> — <code>application/vnd.fafm+yaml</code> (May 13, 2026)</li>
-			<li><strong><a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">claude-fafm-sdk on PyPI</a></strong> — v0.1.0, MIT, offline-first</li>
+			<li><strong><a href="https://pypi.org/project/claude-fafm-sdk/2.0.0/" target="_blank" rel="noopener">claude-fafm-sdk on PyPI</a></strong> — v2.0.0 Compactable, MIT, offline-first · <a href="/blog/compactable-memory">blog</a></li>
 			<li><strong>Cross-vendor verified</strong> — one client read grok / claude / gemini souls live over the same protocol</li>
 			<li><strong>Hosted backend live</strong> — <code>memory.faf.one/mcp</code> (<code>get_soul</code> / <code>write_soul</code>)</li>
 			<li><strong>Companion paper</strong> — the .faf Context paper on Zenodo (DOI 10.5281/zenodo.18251362)</li>

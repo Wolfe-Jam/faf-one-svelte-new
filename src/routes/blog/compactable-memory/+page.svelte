@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { buildShareIntent } from '$lib/shareIntent.js';
+	import PageActions from '$lib/components/PageActions.svelte';
 	let mounted = false;
 	onMount(() => {
 		mounted = true;
@@ -9,6 +10,8 @@
 	const shareText = `🏁 Just shipped: claude-fafm-sdk v2.0.0 — Compactable
 
 Compactable Forgettable Memory. Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies.
+
+Archive-first. Dual-impl. Live on PyPI.
 
 uvx claude-fafm-sdk --version`;
 	const shareUrl = 'https://faf.one/blog/compactable-memory';
@@ -29,10 +32,10 @@ uvx claude-fafm-sdk --version`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/compactable-memory" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/compactable-memory-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog/compactable-memory-hero.png?v=2" />
 	<meta
 		property="og:image:secure_url"
-		content="https://faf.one/blog/compactable-memory-hero.png"
+		content="https://faf.one/blog/compactable-memory-hero.png?v=2"
 	/>
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
@@ -49,7 +52,7 @@ uvx claude-fafm-sdk --version`;
 		name="twitter:description"
 		content="Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/compactable-memory-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/compactable-memory-hero.png?v=2" />
 	<meta
 		name="twitter:image:alt"
 		content="Compactable — claude-fafm-sdk v2.0.0 · epoch compact · no silent zombies"
@@ -77,7 +80,7 @@ uvx claude-fafm-sdk --version`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/compactable-memory-hero.png"
+			src="/blog/compactable-memory-hero.png?v=2"
 			alt="Compactable — claude-fafm-sdk v2.0.0. Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies."
 			width="1200"
 			height="630"
@@ -102,7 +105,24 @@ uvx claude-fafm-sdk --version`;
 					>uvx claude-fafm-sdk compact --epoch --at 2026-07-31T12:00:00Z --archive soul.e0.fafm</code
 				>
 			</div>
+			<aside class="north-star" aria-label="North-star invariant">
+				<p>
+					<strong>North-star (every cut, especially 2.0):</strong><br />
+					Lagging peer + pre-forget packet + post-compact soul → forgotten stays forgotten
+					<strong>or</strong> merge <strong>explicitly refuses</strong> → never silent
+					resurrection.
+				</p>
+			</aside>
 		</section>
+
+		<nav class="series-nav" aria-label="Memory arc series">
+			<a href="/blog/mergeable-memory">1.1 Mergeable</a>
+			<a href="/blog/sendable-memory">1.2 Sendable</a>
+			<a href="/blog/provable-receipt">1.3 Provable</a>
+			<a href="/blog/verifiable-provenance">1.4 Verifiable</a>
+			<a href="/blog/forgettable-memory">1.5 Forgettable</a>
+			<span class="series-current" aria-current="page">2.0 Compactable</span>
+		</nav>
 
 		<section>
 			<h2>Why 2.0 this time</h2>
@@ -125,19 +145,90 @@ uvx claude-fafm-sdk --version`;
 		</section>
 
 		<section>
+			<h2>The zombie case (why epoch exists)</h2>
+			<p>
+				Hand-authored goldens beat vibes. The case that must never ship red:
+			</p>
+			<div class="compare">
+				<div class="compare-col bad">
+					<h3>Silent GC (wrong)</h3>
+					<ol>
+						<li>Forget fact <code>secret</code> → tombstone</li>
+						<li>“Compact” drops the tombstone, same epoch</li>
+						<li>Lagging packet still holds <code>secret</code></li>
+						<li>Merge → <strong>resurrection</strong></li>
+					</ol>
+				</div>
+				<div class="compare-col good">
+					<h3>Epoch compact (2.0)</h3>
+					<ol>
+						<li>Archive prior soul (ARCHIVE-DEFAULT)</li>
+						<li><code>compact --epoch</code> → epoch+1, empty graveyard</li>
+						<li>Lagging packet at epoch 0 meets local epoch 1</li>
+						<li>Merge → <strong>EpochMismatch refuse</strong></li>
+					</ol>
+				</div>
+			</div>
+			<p>
+				That refuse is not a bug — it is the product. Explicit
+				<code>migrate --mode project-live</code> is the operator path when you
+				<em>mean</em> to reproject; it never runs inside merge.
+			</p>
+		</section>
+
+		<section>
+			<h2>How compact works (product law)</h2>
+			<ol class="steps">
+				<li>
+					<strong>Archive first</strong> — CLI requires <code>--archive PATH</code> or
+					<code>--i-archived</code>. Library documents the duty; product enforces it.
+				</li>
+				<li>
+					<strong>Clock pin</strong> — <code>--at</code> RFC3339-Z (same discipline as policy
+					apply).
+				</li>
+				<li>
+					<strong>Project live facts</strong> — tombstone suppression applied; forgotten facts
+					absent; graveyard empty in the new lineage.
+				</li>
+				<li>
+					<strong>Epoch + receipt</strong> — <code>e → e+1</code>;
+					<code>CompactionReceipt</code> rides the soul for audit (not a second lattice).
+				</li>
+			</ol>
+		</section>
+
+		<section>
 			<h2>The arc — through Compactable</h2>
-			<ul>
-				<li><strong>1.1</strong> Mergeable — join without a coordinator</li>
-				<li><strong>1.2</strong> Sendable — seal · send · merge</li>
-				<li><strong>1.3</strong> Provable — stranger receipt, one command</li>
-				<li><strong>1.4</strong> Verifiable — which key sealed it</li>
-				<li><strong>1.5</strong> Forgettable — delete is state (both roads)</li>
-				<li><strong>1.6–1.7</strong> Policy → tombstone · debt · residual risk (folded into the 1.7 install line)</li>
+			<ul class="arc-list">
+				<li>
+					<a href="/blog/mergeable-memory"><strong>1.1 Mergeable</strong></a> — join without a
+					coordinator
+				</li>
+				<li>
+					<a href="/blog/sendable-memory"><strong>1.2 Sendable</strong></a> — seal · send · merge
+				</li>
+				<li>
+					<a href="/blog/provable-receipt"><strong>1.3 Provable</strong></a> — stranger receipt,
+					one command
+				</li>
+				<li>
+					<a href="/blog/verifiable-provenance"><strong>1.4 Verifiable</strong></a> — which key
+					sealed it
+				</li>
+				<li>
+					<a href="/blog/forgettable-memory"><strong>1.5 Forgettable</strong></a> — delete is
+					state (both roads)
+				</li>
+				<li>
+					<strong>1.6–1.7</strong> Policy → tombstone · debt · residual risk — folded into the
+					<strong>1.7</strong> install line (git tags document both steps)
+				</li>
 				<li>
 					<strong>2.0 Compactable</strong> — epoch compact · refuse · migrate · dual-impl
 				</li>
 			</ul>
-			<p>
+			<p class="arc-line">
 				<strong
 					>Mergeable → Sendable → Provable → Verifiable → Forgettable → Compactable.</strong
 				>
@@ -172,6 +263,29 @@ uvx claude-fafm-sdk --version`;
 				Watermark / peer-frontier GC is <strong>2.0.1+</strong> — not this cut. Needs membership
 				+ frontier exchange. Packet-only topologies stay epoch-only.
 			</p>
+		</section>
+
+		<section>
+			<h2>If you ship on 1.5.x</h2>
+			<ul>
+				<li>
+					<strong>Pin deliberately</strong> —
+					<code>claude-fafm-sdk==2.0.0</code> or stay on
+					<code>==1.5.1</code> / <code>==1.7.0</code> until you want the barrier.
+				</li>
+				<li>
+					<strong>Epoch defaults to 0</strong> — existing souls load cleanly; writers ≥2.0 emit
+					<code>epoch</code> on seal.
+				</li>
+				<li>
+					<strong>Cross-epoch is the behavior change</strong> — after compact, lagging peers at
+					the old epoch refuse until archive + explicit migrate (or they compact too).
+				</li>
+				<li>
+					<strong>Production-adjacent:</strong> run the zombie suite / full
+					<code>pytest</code> + acid path before flipping the pin.
+				</li>
+			</ul>
 		</section>
 
 		<section>
@@ -272,8 +386,16 @@ uvx claude-fafm-sdk --version`;
 			<p class="review-meta">
 				<strong>Mode:</strong> SuperGrok · Expert · HEAVY &nbsp;·&nbsp;
 				<strong>Blind:</strong> independent product read after 2.0.0 shipped — not a commissioned
-				marketing pass. Reproduced here as external mirror of the cut.
+				marketing pass. We did not brief the angle; we shipped, then asked for a hard external
+				read. Reproduced here as mirror of the cut — including maturity notes we agree with.
 			</p>
+
+			<blockquote class="pull-quote">
+				“This is a high-quality, opinionated, correctly scoped SDK for a real problem… The
+				progression from mergeable → forgettable → compactable shows thoughtful iteration
+				rather than feature sprawl.”
+				<footer>— SuperGrok Expert · HEAVY (blind)</footer>
+			</blockquote>
 
 			<p>
 				<strong>claude-fafm-sdk</strong> is the reference Python SDK for the IANA-registered
@@ -418,6 +540,16 @@ uvx claude-fafm-sdk --version`;
 			</p>
 		</section>
 
+		<nav class="series-nav series-nav-foot" aria-label="Continue the arc">
+			<span class="series-label">Arc</span>
+			<a href="/blog/mergeable-memory">Mergeable</a>
+			<a href="/blog/sendable-memory">Sendable</a>
+			<a href="/blog/provable-receipt">Provable</a>
+			<a href="/blog/verifiable-provenance">Verifiable</a>
+			<a href="/blog/forgettable-memory">Forgettable</a>
+			<span class="series-current" aria-current="page">Compactable</span>
+		</nav>
+
 		<section class="share-section">
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
@@ -443,6 +575,16 @@ uvx claude-fafm-sdk --version`;
 				Star claude-fafm-sdk
 			</a>
 		</section>
+
+		<PageActions
+			headline="🏁 claude-fafm-sdk v2.0.0 — Compactable"
+			point1="Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies."
+			point2="Archive-first · dual-impl · live on PyPI."
+			cta="uvx claude-fafm-sdk --version"
+			ctaPrefix="Try it →"
+			url="https://faf.one/blog/compactable-memory"
+			hashtags="AI,Memory,fafm,FAF"
+		/>
 
 		<section class="footer-note">
 			<p>
@@ -540,6 +682,117 @@ uvx claude-fafm-sdk --version`;
 		display: block;
 	}
 
+	.north-star {
+		margin: 1.5rem 0 0;
+		padding: 1rem 1.15rem;
+		border-radius: 8px;
+		border: 1px solid #ffd0b8;
+		background: #fff8f4;
+	}
+	.north-star p {
+		margin: 0;
+		font-size: 1.02rem;
+		line-height: 1.55;
+		color: #1a1a1a;
+	}
+
+	.series-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+		align-items: center;
+		margin: 0 0 2.25rem;
+		padding: 0.65rem 0;
+	}
+	.series-nav a,
+	.series-nav .series-current {
+		font-size: 0.78rem;
+		font-weight: 700;
+		padding: 0.28rem 0.65rem;
+		border-radius: 999px;
+		text-decoration: none;
+		border: 1px solid #d0d0d0;
+		color: #1a1a1a;
+		background: #fff;
+	}
+	.series-nav a:hover {
+		border-color: #00d4d4;
+		color: #008b8b;
+	}
+	.series-nav .series-current {
+		background: #00b8b8;
+		border-color: #00b8b8;
+		color: #fff;
+	}
+	.series-nav-foot {
+		margin: 2rem 0 0;
+		padding-top: 1.25rem;
+		border-top: 1px solid #e5e5e5;
+	}
+	.series-label {
+		font-size: 0.75rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: #666;
+		margin-right: 0.25rem;
+	}
+
+	.compare {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.85rem;
+		margin: 1.25rem 0;
+	}
+	@media (max-width: 640px) {
+		.compare {
+			grid-template-columns: 1fr;
+		}
+	}
+	.compare-col {
+		border-radius: 10px;
+		padding: 1rem 1.1rem;
+		border: 1px solid #e0e0e0;
+		background: #fafafa;
+	}
+	.compare-col h3 {
+		margin: 0 0 0.65rem;
+		font-size: 1rem;
+	}
+	.compare-col ol {
+		margin: 0;
+		padding-left: 1.15rem;
+	}
+	.compare-col li {
+		margin-bottom: 0.35rem;
+		font-size: 0.95rem;
+	}
+	.compare-col.bad {
+		border-color: #f0c0c0;
+		background: #fff6f6;
+	}
+	.compare-col.good {
+		border-color: #b8e0d8;
+		background: #f3fbf9;
+	}
+
+	.steps {
+		margin: 0 0 1rem;
+		padding-left: 1.25rem;
+	}
+	.steps li {
+		margin-bottom: 0.65rem;
+	}
+
+	.arc-list a {
+		color: #008b8b;
+		text-decoration: none;
+		font-weight: 700;
+	}
+	.arc-list a:hover {
+		text-decoration: underline;
+	}
+
 	.post-content section {
 		margin-bottom: 2.5rem;
 	}
@@ -624,6 +877,24 @@ uvx claude-fafm-sdk --version`;
 		border-radius: 6px;
 		padding: 0.65rem 0.85rem;
 		margin-bottom: 1.25rem;
+	}
+	.pull-quote {
+		margin: 0 0 1.5rem;
+		padding: 1rem 1.15rem 1rem 1.25rem;
+		border-left: 3px solid #ff6b35;
+		background: #fff;
+		border-radius: 0 8px 8px 0;
+		font-size: 1.08rem;
+		line-height: 1.55;
+		color: #1a1a1a;
+		font-style: italic;
+	}
+	.pull-quote footer {
+		margin-top: 0.65rem;
+		font-size: 0.85rem;
+		font-style: normal;
+		font-weight: 700;
+		color: #666;
 	}
 	.arc-line {
 		text-align: center;
