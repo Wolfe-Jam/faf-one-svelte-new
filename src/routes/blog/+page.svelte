@@ -37,7 +37,7 @@
 			date: 'July 31, 2026',
 			timestamp: '2026-07-31',
 			excerpt:
-				'Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies. Archive-first · dual-impl · blind SuperGrok Expert HEAVY review.',
+				'Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies. Archive-first · dual-impl. Blind SuperGrok Expert HEAVY review in-post.',
 			emoji: '🧡',
 			category: 'Release'
 		},

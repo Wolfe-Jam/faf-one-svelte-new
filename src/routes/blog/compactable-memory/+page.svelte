@@ -22,7 +22,7 @@ uvx claude-fafm-sdk --version`;
 	<title>Compactable - claude-fafm-sdk v2.0.0 | FAF</title>
 	<meta
 		name="description"
-		content="claude-fafm-sdk 2.0.0 ships Compactable Forgettable Memory: epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies. Plus a blind SuperGrok Expert HEAVY review."
+		content="claude-fafm-sdk 2.0.0 ships Compactable Forgettable Memory: epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies. Blind SuperGrok Expert HEAVY review included."
 	/>
 	<meta property="og:title" content="Compactable - claude-fafm-sdk v2.0.0" />
 	<meta
@@ -96,6 +96,10 @@ uvx claude-fafm-sdk --version`;
 				<strong>Compactable Forgettable Memory</strong>. Epoch compact pays tombstone debt;
 				cross-epoch merge refuses — no silent zombies. Second deliberate lattice re-open after
 				1.5 tombstones. Archive-first. Receipt on the wire. Dual-impl held. Live on PyPI.
+				<span class="tldr-review">
+					·
+					<a href="#expert-review">Blind SuperGrok Expert HEAVY review</a>
+				</span>
 			</p>
 			<div class="terminal-block">
 				<code># zero install:</code>
@@ -378,16 +382,24 @@ uvx claude-fafm-sdk --version`;
 			</ul>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════
-		     Blind SuperGrok Expert HEAVY review (independent, post-ship)
-		     ═══════════════════════════════════════════════════════════ -->
-		<section class="expert-review">
+		<nav class="series-nav series-nav-foot" aria-label="Continue the arc">
+			<span class="series-label">Arc</span>
+			<a href="/blog/mergeable-memory">Mergeable</a>
+			<a href="/blog/sendable-memory">Sendable</a>
+			<a href="/blog/provable-receipt">Provable</a>
+			<a href="/blog/verifiable-provenance">Verifiable</a>
+			<a href="/blog/forgettable-memory">Forgettable</a>
+			<span class="series-current" aria-current="page">Compactable</span>
+		</nav>
+
+		<!-- Full SuperGrok HEAVY — linked from TL;DR; after our release write-up -->
+		<section id="expert-review" class="expert-review">
 			<h2>Blind SuperGrok Expert Review</h2>
 			<p class="review-meta">
 				<strong>Mode:</strong> SuperGrok · Expert · HEAVY &nbsp;·&nbsp;
 				<strong>Blind:</strong> independent product read after 2.0.0 shipped — not a commissioned
 				marketing pass. We did not brief the angle; we shipped, then asked for a hard external
-				read. Reproduced here as mirror of the cut — including maturity notes we agree with.
+				read. Full text below — including maturity notes we agree with.
 			</p>
 
 			<blockquote class="pull-quote">
@@ -539,16 +551,6 @@ uvx claude-fafm-sdk --version`;
 				and running the receipt / zombie suite if you’re shipping anything production-adjacent.
 			</p>
 		</section>
-
-		<nav class="series-nav series-nav-foot" aria-label="Continue the arc">
-			<span class="series-label">Arc</span>
-			<a href="/blog/mergeable-memory">Mergeable</a>
-			<a href="/blog/sendable-memory">Sendable</a>
-			<a href="/blog/provable-receipt">Provable</a>
-			<a href="/blog/verifiable-provenance">Verifiable</a>
-			<a href="/blog/forgettable-memory">Forgettable</a>
-			<span class="series-current" aria-current="page">Compactable</span>
-		</nav>
 
 		<section class="share-section">
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
@@ -858,7 +860,18 @@ uvx claude-fafm-sdk --version`;
 		word-break: break-word;
 	}
 
-	/* Expert review callout */
+	.tldr-review a {
+		color: #008b8b;
+		font-weight: 700;
+		text-decoration: none;
+		border-bottom: 1px solid #00d4d4;
+	}
+	.tldr-review a:hover {
+		color: #006666;
+		border-bottom-color: #006666;
+	}
+
+	/* Expert review callout — full text after release write-up; anchor from TL;DR */
 	.expert-review {
 		background: #f7f9fa;
 		border: 1px solid #e0e8ea;
@@ -866,6 +879,7 @@ uvx claude-fafm-sdk --version`;
 		border-radius: 10px;
 		padding: 1.5rem 1.5rem 1.25rem;
 		margin: 2.5rem 0;
+		scroll-margin-top: 5rem;
 	}
 	.expert-review h2 {
 		margin-top: 0;
