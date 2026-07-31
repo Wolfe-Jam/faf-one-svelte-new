@@ -136,6 +136,13 @@ uvx claude-fafm-sdk --version`;
 				<em>next</em> hard problem was different.
 			</p>
 			<p>
+				<strong>1.6</strong> and <strong>1.7</strong> were deliberate, significant steps — not
+				filler minors. Policy → tombstone (1.6) made forget <em>operable</em> without hand-writing
+				every stone; debt + residual-risk (1.7) made the graveyard <em>visible</em> before anyone
+				touched GC. Compactable 2.0 stands on that ladder: you don’t pay debt you can’t see or
+				rules you can’t apply.
+			</p>
+			<p>
 				Grow-only graveyards are honest… until the debt is the product. Pure CRDTs often ignore
 				that. Compacting without a lineage barrier resurrects forgotten facts when a lagging
 				peer or pre-forget packet arrives. That is the Cassandra zombie pattern — and it is
