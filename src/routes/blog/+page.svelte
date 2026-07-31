@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/compactable-memory',
+			title: 'Compactable',
+			version: 'claude-fafm-sdk v2.0.0',
+			date: 'July 31, 2026',
+			timestamp: '2026-07-31',
+			excerpt:
+				'Compactable Forgettable Memory. Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies. Plus a blind SuperGrok Expert HEAVY review.',
+			emoji: '🧡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/mcp-better',
 			title: 'mcp-better',
 			version: 'v0.2.0 · BETTER textbook · 7/28',
