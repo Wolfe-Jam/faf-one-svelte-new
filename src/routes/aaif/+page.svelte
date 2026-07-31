@@ -6,21 +6,21 @@
 	<title>AAIF — Agentic AI Foundation | FAF</title>
 	<meta
 		name="description"
-		content="AAIF is the Linux Foundation home for open agent standards (MCP · goose · AGENTS.md · agentgateway). James Harrison is a Founding AAIF Ambassador. What AAIF-verified means."
+		content="Founding AAIF Ambassador James Harrison — Agentic AI Foundation at the Linux Foundation. MCP · goose · AGENTS.md · agentgateway. AAIF-verified public work."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="AAIF — Agentic AI Foundation" />
+	<meta property="og:title" content="AAIF — Founding Ambassador | FAF" />
 	<meta
 		property="og:description"
-		content="Linux Foundation home for open agent standards. Founding AAIF Ambassador · contributions · what AAIF-verified means."
+		content="Celebrating selection as a Founding AAIF Ambassador. Open agent standards · public excellence · AAIF-verified work."
 	/>
 	<meta property="og:url" content="https://faf.one/aaif" />
 	<meta property="og:image" content="https://faf.one/images/aaif/aaif-og.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="AAIF — Agentic AI Foundation" />
+	<meta name="twitter:title" content="AAIF — Founding Ambassador | FAF" />
 	<meta
 		name="twitter:description"
-		content="Open agent standards at the Linux Foundation. Founding Ambassador · AAIF-verified explained."
+		content="Founding AAIF Ambassador · open agent standards at the Linux Foundation · AAIF-verified excellence."
 	/>
 	<meta name="twitter:image" content="https://faf.one/images/aaif/aaif-og.png" />
 	<link rel="canonical" href="https://faf.one/aaif" />
@@ -35,10 +35,10 @@
 			width="280"
 			height="72"
 		/>
-		<p class="kicker">Agentic AI Foundation</p>
-		<h1>Open agent standards, under the Linux Foundation</h1>
+		<p class="kicker">Agentic AI Foundation · Founding Ambassador</p>
+		<h1>Selected for excellence. Shipping open standards.</h1>
 		<p class="sub">
-			MCP · goose · AGENTS.md · agentgateway — and the public work that ships them.
+			MCP · goose · AGENTS.md · agentgateway — public work that advances the agent stack.
 		</p>
 		<div class="heritage">
 			<span class="pill">Hosted by the <a href="https://www.linuxfoundation.org/" target="_blank" rel="noopener">Linux Foundation</a></span>
@@ -58,14 +58,13 @@
 	<section class="content">
 		<h2>What AAIF is</h2>
 		<p>
-			The <strong>Agentic AI Foundation (AAIF)</strong> is the vendor-neutral home for the open projects that
-			shape agentic AI infrastructure. It is a
+			The <strong>Agentic AI Foundation (AAIF)</strong> is the
 			<a href="https://www.linuxfoundation.org/" target="_blank" rel="noopener">Linux Foundation</a>
-			project — not a product seal and not a single-vendor forum.
+			home for the open projects shaping agentic AI — neutral governance, shared infrastructure, real standards.
 		</p>
 		<ul class="projects">
 			<li>
-				<strong>MCP</strong> — Model Context Protocol (tool/context interface for agents)
+				<strong>MCP</strong> — Model Context Protocol (tools and context for agents)
 			</li>
 			<li><strong>goose</strong> — open agent runtime</li>
 			<li><strong>AGENTS.md</strong> — the agent instruction file for a repo</li>
@@ -84,16 +83,15 @@
 				<h2>Founding Ambassador</h2>
 				<p>
 					<strong>James Harrison</strong> (WolfeJam) is a
-					<strong>Founding AAIF Ambassador</strong> — inaugural cohort, 2026. Ambassadors ship
-					<strong>public, project-based contributions</strong> that help developers use AAIF projects:
-					guides, tutorials, tools, and code.
+					<strong>Founding AAIF Ambassador</strong> — inaugural cohort, 2026. Selected to help developers
+					adopt the open standards agentic AI is built on: public guides, tutorials, tools, and code.
 				</p>
 				<p>
-					Program norm: substance over promo. Public contributions are submitted through the Ambassador
-					process, reviewed, and scored.
+					Ambassadors earn standing through <strong>public, project-based excellence</strong> — work that
+					ships, teaches, and gets amplified by the foundation.
 				</p>
 				<p class="links-row">
-					<a href="/blog/aaif-ambassador">Announcement</a>
+					<a href="/blog/aaif-ambassador">Read the announcement</a>
 				</p>
 			</div>
 			<img
@@ -107,25 +105,23 @@
 	</section>
 
 	<section class="content">
-		<h2>What “AAIF-verified” means here</h2>
+		<h2>AAIF-verified</h2>
 		<p>
-			<strong>AAIF-verified</strong> means a public contribution to an AAIF project was submitted through the
-			Ambassador program, reviewed (including automated review), and scored by the program — including human
-			scoring by AAIF leadership when applicable.
+			<strong>AAIF-verified</strong> marks public work that completed the Ambassador excellence path:
 		</p>
 		<ol class="verified-steps">
-			<li>Public work on an AAIF project (MCP · goose · AGENTS.md · agentgateway · related education)</li>
-			<li>Submitted through the Ambassador process</li>
-			<li>Reviewed and scored — accepted on the program scorecard</li>
+			<li>Shipped on an AAIF project (MCP · goose · AGENTS.md · agentgateway · education)</li>
+			<li>Submitted through the Ambassador program</li>
+			<li>Reviewed (including automated review) and scored by the program — leadership-scored when it rises</li>
 		</ol>
-		<p class="note">
-			It is a <strong>program verification of a contribution</strong>, not a Linux Foundation product certification
-			or security audit of a company. The path is: appointed Ambassador → public work → submission → review → score.
+		<p>
+			Appointed Ambassador · public craft · formal review · scored. That is the bar — and the badge of work that
+			cleared it.
 		</p>
 	</section>
 
 	<section class="content">
-		<h2>Contributions (public)</h2>
+		<h2>Public work</h2>
 		<table class="contrib">
 			<thead>
 				<tr>
@@ -167,7 +163,7 @@
 			</tbody>
 		</table>
 		<p class="muted-note">
-			Official AAIF amplify of the hands-on tutorial:
+			Featured by AAIF:
 			<a href="https://x.com/AgenticAIFdn/status/2077377737258369345" target="_blank" rel="noopener">@AgenticAIFdn</a>
 			·
 			<a
@@ -204,15 +200,15 @@
 			height="40"
 			aria-hidden="true"
 		/>
-		<p class="footer-tagline">Open standards, in the open.</p>
+		<p class="footer-tagline">Open standards. Public excellence.</p>
 		<p class="footer-meta">
 			AAIF · Linux Foundation ·
 			<a href="https://aaif.io" target="_blank" rel="noopener">aaif.io</a>
 		</p>
 		<PageActions
-			headline="Open agent standards at the Linux Foundation."
-			point1="AAIF: MCP · goose · AGENTS.md · agentgateway."
-			point2="Founding Ambassador · public contributions · AAIF-verified path."
+			headline="Founding AAIF Ambassador — open agent standards."
+			point1="Selected for excellence. Shipping MCP · goose · AGENTS.md · agentgateway."
+			point2="Public work. AAIF-verified. Linux Foundation home."
 			url="https://faf.one/aaif"
 			hashtags="AAIF,MCP,AGENTS,opensource"
 		/>
@@ -361,13 +357,6 @@
 
 	.verified-steps li {
 		margin-bottom: 0.4rem;
-	}
-
-	.note {
-		padding: 0.85rem 1rem;
-		background: #f7f7f7;
-		border-left: 3px solid #000;
-		font-size: 0.95rem;
 	}
 
 	.muted-note {
