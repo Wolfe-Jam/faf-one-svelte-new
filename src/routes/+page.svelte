@@ -54,16 +54,16 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
 				<a href="/blog/mcp-better" class="ticker-item"><b>mcp-better 0.2</b> BETTER textbook for 7/28 — stdio + Streamable HTTP</a>
 				<a href="/blog/forgettable-memory" class="ticker-item"><b>claude-fafm-sdk 1.5</b> Forgettable Memory — tombstones, both transports</a>
 				<a href="/blog/verifiable-provenance" class="ticker-item"><b>claude-fafm-sdk 1.4</b> Verifiable Provenance — which key sealed it</a>
 				<a href="/blog/provable-receipt" class="ticker-item"><b>claude-fafm-sdk 1.3</b> Provable Receipt — one command, no clone</a>
-				<a href="/blog/sendable-memory" class="ticker-item"><b>claude-fafm-sdk 1.2</b> Sendable Memory — seal · send · merge</a>
+				<a href="/blog/compactable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
 				<a href="/blog/mcp-better" class="ticker-item" aria-hidden="true" tabindex="-1"><b>mcp-better 0.2</b> BETTER textbook for 7/28 — stdio + Streamable HTTP</a>
 				<a href="/blog/forgettable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.5</b> Forgettable Memory — tombstones, both transports</a>
 				<a href="/blog/verifiable-provenance" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.4</b> Verifiable Provenance — which key sealed it</a>
 				<a href="/blog/provable-receipt" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.3</b> Provable Receipt — one command, no clone</a>
-				<a href="/blog/sendable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.2</b> Sendable Memory — seal · send · merge</a>
 			</div>
 		</div>
 	</section>
