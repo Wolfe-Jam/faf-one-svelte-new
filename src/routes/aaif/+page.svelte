@@ -73,6 +73,8 @@
 		<p class="links-row">
 			<a href="https://aaif.io" target="_blank" rel="noopener">aaif.io</a>
 			·
+			<a href="https://aaif.io/brand" target="_blank" rel="noopener">Brand</a>
+			·
 			<a href="https://github.com/aaif" target="_blank" rel="noopener">github.com/aaif</a>
 		</p>
 	</section>
