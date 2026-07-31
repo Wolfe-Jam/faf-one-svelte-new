@@ -139,8 +139,9 @@ uvx claude-fafm-sdk --version`;
 				<strong>1.6</strong> and <strong>1.7</strong> were deliberate, significant steps — not
 				filler minors. Policy → tombstone (1.6) made forget <em>operable</em> without hand-writing
 				every stone; debt + residual-risk (1.7) made the graveyard <em>visible</em> before anyone
-				touched GC. Compactable 2.0 stands on that ladder: you don’t pay debt you can’t see or
-				rules you can’t apply.
+				touched GC. We never formally released them as standalone editions — git tags document the
+				steps; the public prize was always <strong>2.0</strong>. Compactable stands on that ladder:
+				you don’t pay debt you can’t see or rules you can’t apply.
 			</p>
 			<p>
 				Grow-only graveyards are honest… until the debt is the product. Pure CRDTs often ignore
