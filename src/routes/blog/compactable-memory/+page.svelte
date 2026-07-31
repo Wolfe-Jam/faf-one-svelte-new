@@ -7,11 +7,15 @@
 		mounted = true;
 	});
 
+	// Rich X intent — formula + cold open; OG card carries description/image (don't re-describe).
 	const shareText = `🏁 Just shipped: claude-fafm-sdk v2.0.0 — Compactable
 
-Compactable Forgettable Memory. Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies.
+AI memory that can forget — and compact without lying.
 
-Archive-first. Dual-impl. Live on PyPI.
+Epoch compact pays tombstone debt.
+Cross-epoch merge refuses — no silent zombies.
+
+Archive-first · dual-impl · live on PyPI
 
 uvx claude-fafm-sdk --version`;
 	const shareUrl = 'https://faf.one/blog/compactable-memory';
@@ -587,9 +591,10 @@ uvx claude-fafm-sdk --version`;
 		</section>
 
 		<PageActions
-			headline="🏁 claude-fafm-sdk v2.0.0 — Compactable"
-			point1="Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies."
-			point2="Archive-first · dual-impl · live on PyPI."
+			headline="🏁 Just shipped: claude-fafm-sdk v2.0.0 — Compactable"
+			point1="AI memory that can forget — and compact without lying."
+			point2="Epoch compact pays debt · cross-epoch refuses — no silent zombies."
+			point3="Archive-first · dual-impl · live on PyPI"
 			cta="uvx claude-fafm-sdk --version"
 			ctaPrefix="Try it →"
 			url="https://faf.one/blog/compactable-memory"
