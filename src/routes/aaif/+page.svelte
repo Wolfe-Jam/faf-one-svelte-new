@@ -20,7 +20,7 @@
 	<meta name="twitter:title" content="AAIF — Agentic AI Foundation" />
 	<meta
 		name="twitter:description"
-		content="Open agent standards at the Linux Foundation. Founding Ambassador · scorecard · AAIF-verified explained."
+		content="Open agent standards at the Linux Foundation. Founding Ambassador · AAIF-verified explained."
 	/>
 	<meta name="twitter:image" content="https://faf.one/images/aaif/aaif-og.png" />
 	<link rel="canonical" href="https://faf.one/aaif" />
@@ -89,15 +89,11 @@
 					guides, tutorials, tools, and code.
 				</p>
 				<p>
-					Program norm: substance over promo. Work is submitted through the Ambassador process, scored,
-					and tracked on the public scoreboard.
+					Program norm: substance over promo. Public contributions are submitted through the Ambassador
+					process, reviewed, and scored.
 				</p>
 				<p class="links-row">
 					<a href="/blog/aaif-ambassador">Announcement</a>
-					·
-					<a href="https://github.com/aaif/ambassadors" target="_blank" rel="noopener"
-						>aaif/ambassadors</a
-					>
 				</p>
 			</div>
 			<img
@@ -113,33 +109,18 @@
 	<section class="content">
 		<h2>What “AAIF-verified” means here</h2>
 		<p>
-			On FAF surfaces, <strong>AAIF-verified</strong> is a shorthand for work that has gone through the
-			<strong>Ambassador scorecard path</strong>:
+			<strong>AAIF-verified</strong> means a public contribution to an AAIF project was submitted through the
+			Ambassador program, reviewed (including automated review), and scored by the program — including human
+			scoring by AAIF leadership when applicable.
 		</p>
 		<ol class="verified-steps">
-			<li>Public contribution to an AAIF project (MCP · goose · AGENTS.md · agentgateway · related education)</li>
-			<li>Submitted via the <a href="https://github.com/aaif/ambassadors" target="_blank" rel="noopener">Ambassador submissions</a> process</li>
-			<li>Scored and recorded on the Ambassador scoreboard / scorecard</li>
+			<li>Public work on an AAIF project (MCP · goose · AGENTS.md · agentgateway · related education)</li>
+			<li>Submitted through the Ambassador process</li>
+			<li>Reviewed and scored — accepted on the program scorecard</li>
 		</ol>
 		<p class="note">
-			It is <strong>not</strong> a formal foundation product certification, security audit, or LF endorsement of
-			a company. It means: the contribution was real, public, and accepted through the Ambassador program.
-		</p>
-	</section>
-
-	<section class="content">
-		<h2>Scoreboard snapshot</h2>
-		<p class="scoreline">
-			<strong>165 pts</strong> · rank <strong>#4</strong> · <strong>10</strong> contributions
-			<span class="as-of">as of 2026-07-30 UTC</span>
-		</p>
-		<p class="by-project">
-			By project: AGENTS.md <strong>135</strong> · goose <strong>15</strong> · MCP <strong>15</strong>
-		</p>
-		<p class="links-row muted">
-			Live board:
-			<a href="https://github.com/aaif/ambassadors" target="_blank" rel="noopener">aaif/ambassadors</a>
-			(scoreboard in-repo)
+			It is a <strong>program verification of a contribution</strong>, not a Linux Foundation product certification
+			or security audit of a company. The path is: appointed Ambassador → public work → submission → review → score.
 		</p>
 	</section>
 
@@ -150,7 +131,6 @@
 				<tr>
 					<th>Work</th>
 					<th>Project</th>
-					<th>Pts</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -165,7 +145,6 @@
 						>
 					</td>
 					<td>AGENTS.md</td>
-					<td>135</td>
 				</tr>
 				<tr>
 					<td>
@@ -175,7 +154,6 @@
 						— Cursor composer-2.5 models
 					</td>
 					<td>goose</td>
-					<td>15</td>
 				</tr>
 				<tr>
 					<td>
@@ -185,20 +163,18 @@
 						— 7/28 textbook MCP (Rust)
 					</td>
 					<td>MCP</td>
-					<td>15</td>
 				</tr>
 			</tbody>
 		</table>
 		<p class="muted-note">
-			Totals follow the Ambassador scoreboard (2026-07-30). Official AAIF amplify of the hands-on tutorial:
+			Official AAIF amplify of the hands-on tutorial:
 			<a href="https://x.com/AgenticAIFdn/status/2077377737258369345" target="_blank" rel="noopener">@AgenticAIFdn</a>
 			·
 			<a
 				href="https://www.linkedin.com/posts/agentic-ai-foundation_mcp728-activity-7483143434686476288-qTV3"
 				target="_blank"
 				rel="noopener">LinkedIn</a
-			>
-			(recognition, not extra points).
+			>.
 		</p>
 	</section>
 
@@ -236,7 +212,7 @@
 		<PageActions
 			headline="Open agent standards at the Linux Foundation."
 			point1="AAIF: MCP · goose · AGENTS.md · agentgateway."
-			point2="Founding Ambassador work is public and scorecarded."
+			point2="Founding Ambassador · public contributions · AAIF-verified path."
 			url="https://faf.one/aaif"
 			hashtags="AAIF,MCP,AGENTS,opensource"
 		/>
@@ -394,28 +370,6 @@
 		font-size: 0.95rem;
 	}
 
-	.scoreline {
-		font-size: 1.15rem;
-		margin-bottom: 0.35rem !important;
-	}
-
-	.as-of {
-		display: inline-block;
-		margin-left: 0.35rem;
-		font-size: 0.85rem;
-		font-weight: 500;
-		color: #666;
-	}
-
-	.by-project {
-		color: #333;
-	}
-
-	.muted {
-		color: #555;
-		font-size: 0.9rem;
-	}
-
 	.muted-note {
 		font-size: 0.88rem;
 		color: #555;
@@ -446,15 +400,8 @@
 	}
 
 	.contrib td:nth-child(2),
-	.contrib td:nth-child(3),
-	.contrib th:nth-child(2),
-	.contrib th:nth-child(3) {
+	.contrib th:nth-child(2) {
 		white-space: nowrap;
-	}
-
-	.contrib td:nth-child(3) {
-		font-variant-numeric: tabular-nums;
-		font-weight: 700;
 	}
 
 	.further {
@@ -507,12 +454,5 @@
 			height: 120px;
 		}
 
-		.contrib td:nth-child(2) {
-			display: none;
-		}
-
-		.contrib th:nth-child(2) {
-			display: none;
-		}
 	}
 </style>
