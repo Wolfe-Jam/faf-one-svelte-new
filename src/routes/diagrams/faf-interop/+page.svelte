@@ -164,12 +164,12 @@
 	}
 
 	.faf-core {
-		background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%);
+		background: linear-gradient(135deg, #FF6B35 0%, #FF5722 100%);
 		color: white;
 		padding: 1.5rem 2.5rem;
 		border-radius: 16px;
 		text-align: center;
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	.faf-icon {

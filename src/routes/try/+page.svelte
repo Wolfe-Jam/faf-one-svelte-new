@@ -519,14 +519,14 @@
 
 	.editable-box:focus-within {
 		border-color: #ff6b35;
-		box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+		box-shadow: 0 0 0 2px var(--faf-border-strong);
 	}
 
 	.copy-btn {
 		padding: 0.6rem 1.25rem;
-		background: rgba(255, 107, 53, 0.2);
-		border: 1px solid rgba(255, 107, 53, 0.4);
-		color: #ff6b35;
+		background: var(--faf-orange);
+		border: 1.5px solid var(--faf-border-strong);
+		color: var(--faf-on-accent);
 		border-radius: 6px;
 		font-weight: 600;
 		font-size: 0.85rem;
@@ -538,7 +538,7 @@
 	}
 
 	.copy-btn:hover {
-		background: rgba(255, 107, 53, 0.3);
+		background: var(--faf-orange); color: var(--faf-on-accent);
 		border-color: #ff6b35;
 	}
 
@@ -856,9 +856,9 @@
 		align-items: center;
 		gap: 0.5rem;
 		padding: 1rem 2rem;
-		background: rgba(255, 107, 53, 0.2);
+		background: var(--faf-orange);
 		border: 2px solid #ff6b35;
-		color: #ff6b35;
+		color: var(--faf-on-accent);
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 1.1rem;
@@ -867,9 +867,9 @@
 	}
 
 	.deep-dive-btn:hover {
-		background: rgba(255, 107, 53, 0.3);
+		background: var(--faf-orange);
 		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	/* Mobile */

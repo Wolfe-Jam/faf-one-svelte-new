@@ -271,7 +271,7 @@
 		border-radius: 16px;
 		padding: 2rem;
 		margin: 2rem 0;
-		box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 	}
 
 	.questionnaire-header {

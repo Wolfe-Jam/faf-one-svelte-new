@@ -512,7 +512,7 @@
 	}
 
 	.cta-box code {
-		background: rgba(255, 107, 53, 0.2);
+		background: var(--faf-orange);
 		color: var(--faf-orange);
 	}
 

@@ -83,7 +83,7 @@
 	}
 
 	.diagram-header p code {
-		background: rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
 		color: #FF6B35;
 		padding: 0.15rem 0.4rem;
 		border-radius: 4px;

@@ -796,7 +796,7 @@ Claude: [Direct function call, 63ms execution]
 	.recognition-item:hover {
 		border-color: var(--faf-orange);
 		transform: translateY(-4px);
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	.recognition-icon {
@@ -833,7 +833,7 @@ Claude: [Direct function call, 63ms execution]
 		border-left: 4px solid var(--faf-orange);
 		padding: 1.5rem;
 		border-radius: 0 8px 8px 0;
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.comparison h3 {
@@ -861,7 +861,7 @@ Claude: [Direct function call, 63ms execution]
 	.evolution-event.highlighted {
 		background: var(--faf-gray-light);
 		border-left: 6px solid var(--faf-orange);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.version {
@@ -1017,9 +1017,9 @@ Claude: [Direct function call, 63ms execution]
 	.code-comment { color: #666; font-weight: 400; }
 	.copy-btn {
 		padding: 0.5rem 1rem;
-		background: rgba(255, 107, 53, 0.2);
-		border: 1px solid rgba(255, 107, 53, 0.4);
-		color: #ff6b35;
+		background: var(--faf-orange);
+		border: 1.5px solid var(--faf-border-strong);
+		color: var(--faf-on-accent);
 		border-radius: 6px;
 		font-weight: 600;
 		font-size: 0.8rem;
@@ -1029,7 +1029,7 @@ Claude: [Direct function call, 63ms execution]
 		letter-spacing: 0.05em;
 		white-space: nowrap;
 	}
-	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:hover { background: var(--faf-orange); color: var(--faf-on-accent); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {

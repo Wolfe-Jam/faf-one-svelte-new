@@ -595,7 +595,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	.timeline-event.highlighted {
 		background: var(--faf-gray-light);
 		border-left-width: 6px;
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.timeline-date {
@@ -679,7 +679,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	.validation-box:hover {
 		border-color: var(--faf-orange);
 		transform: translateY(-4px);
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	.validation-icon {
@@ -822,7 +822,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 		border-radius: 12px;
 		overflow: hidden;
 		border: 3px solid var(--faf-orange);
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	.full-screenshot img {
@@ -889,7 +889,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	.expertise-event.highlighted {
 		background: var(--faf-gray-light);
 		border-left: 6px solid var(--faf-orange);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.expertise-year {
@@ -963,13 +963,13 @@ From grassroots format to official Internet standard — the same status as PDF,
 		font-size: 1.1rem;
 		font-weight: 700;
 		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.proof-link:hover {
 		background: var(--faf-black);
 		transform: translateY(-2px);
-		box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	@media (max-width: 768px) {

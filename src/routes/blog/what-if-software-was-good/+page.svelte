@@ -375,7 +375,7 @@ Imagine how the world would run if software was good. If all code gets better, t
 	}
 
 	.highlight {
-		background: rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
 		border-left: 4px solid #ff6b35;
 		padding: 1rem 1.5rem;
 		margin: 1.5rem 0;
@@ -441,7 +441,7 @@ Imagine how the world would run if software was good. If all code gets better, t
 	}
 
 	.cta {
-		background: rgba(255, 107, 53, 0.05);
+		background: var(--faf-surface);
 		border: 2px solid rgba(255, 107, 53, 0.2);
 		border-radius: 8px;
 		padding: 2rem;

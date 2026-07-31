@@ -754,9 +754,9 @@ npm i -g faf-cli`;
 	}
 	.copy-btn {
 		padding: 0.5rem 1rem;
-		background: rgba(255, 107, 53, 0.2);
-		border: 1px solid rgba(255, 107, 53, 0.4);
-		color: #ff6b35;
+		background: var(--faf-orange);
+		border: 1.5px solid var(--faf-border-strong);
+		color: var(--faf-on-accent);
 		border-radius: 6px;
 		font-weight: 600;
 		font-size: 0.8rem;
@@ -766,7 +766,7 @@ npm i -g faf-cli`;
 		letter-spacing: 0.05em;
 		white-space: nowrap;
 	}
-	.copy-btn:hover { background: rgba(255, 107, 53, 0.3); border-color: #ff6b35; }
+	.copy-btn:hover { background: var(--faf-orange); color: var(--faf-on-accent); border-color: #ff6b35; }
 	.copy-btn:active { transform: scale(0.95); }
 
 	@media (max-width: 768px) {

@@ -829,7 +829,7 @@
 
 	.discount {
 		display: inline-block;
-		background: rgba(255, 107, 53, 0.15);
+		background: var(--faf-surface);
 		color: #FF6B35;
 		padding: 0.2rem 0.6rem;
 		border-radius: 4px;

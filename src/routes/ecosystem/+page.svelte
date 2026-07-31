@@ -343,7 +343,7 @@
     .pyramid-note { font-size: 1rem; color: #666; border-top: 1px solid rgba(255, 107, 53, 0.2); padding-top: 1rem; margin-top: 1rem !important; }
     .tools-grid { max-width: 1200px; margin: 0 auto 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
     .tool-card { background: var(--faf-surface); border: 2px solid var(--faf-surface-border); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
-    .tool-card:hover { border-color: var(--faf-orange); box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15); transform: translateY(-4px); }
+    .tool-card:hover { border-color: var(--faf-orange); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transform: translateY(-4px); }
     .tool-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
     .tool-icon { font-size: 2.5rem; line-height: 1; }
     .tool-title { flex: 1; }

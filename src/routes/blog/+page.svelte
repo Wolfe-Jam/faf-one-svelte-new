@@ -1472,7 +1472,7 @@
 
 	.post-card:hover {
 		transform: translateY(-4px);
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 		border-color: var(--faf-orange);
 		border-left-width: 4px;
 	}
@@ -1738,7 +1738,7 @@
 	}
 
 	.dark-card:hover {
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 		border-color: var(--faf-orange);
 	}
 

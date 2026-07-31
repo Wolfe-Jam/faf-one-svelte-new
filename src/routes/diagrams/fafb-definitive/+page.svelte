@@ -375,7 +375,7 @@
 	.context-chunk .chunk-items { color: #66dddd; }
 
 	.pointer-chunk {
-		background: rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
 		border: 1px solid rgba(255, 107, 53, 0.25);
 	}
 	.pointer-chunk .chunk-class { color: #FF6B35; }

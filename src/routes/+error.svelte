@@ -117,7 +117,7 @@
 		font-weight: 900;
 		color: var(--faf-orange);
 		line-height: 1;
-		text-shadow: 0 0 40px rgba(255, 107, 53, 0.5);
+		text-shadow: none;
 		display: block;
 		letter-spacing: -0.05em;
 	}
@@ -317,7 +317,7 @@
 	
 	.tech-info {
 		background: rgba(0, 0, 0, 0.5);
-		border: 1px solid rgba(255, 107, 53, 0.2);
+		border: 1.5px solid var(--faf-border-strong);
 		border-radius: 8px;
 		padding: 1rem;
 		margin-top: 1rem;

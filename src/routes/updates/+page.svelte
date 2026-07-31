@@ -156,7 +156,7 @@
 
 	.release {
 		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 107, 53, 0.2);
+		border: 1.5px solid var(--faf-border-strong);
 		border-radius: 12px;
 		padding: 2rem;
 		transition: all 0.3s ease;
@@ -165,7 +165,7 @@
 	.release:hover {
 		transform: translateY(-4px);
 		border-color: rgba(255, 107, 53, 0.5);
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	.release-header {
@@ -252,7 +252,7 @@
 
 	.command {
 		background: rgba(0, 0, 0, 0.5);
-		border: 1px solid rgba(255, 107, 53, 0.3);
+		border: 1.5px solid var(--faf-border-strong);
 		padding: 1rem 1.5rem;
 		border-radius: 6px;
 		font-family: 'Courier New', monospace;
@@ -286,7 +286,7 @@
 		background: var(--faf-orange);
 		color: var(--faf-chrome-fg);
 		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	@media (max-width: 768px) {

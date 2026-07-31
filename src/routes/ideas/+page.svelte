@@ -489,7 +489,7 @@
 
   .question.active {
     border-color: #FF6B35;
-    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    box-shadow: 0 0 0 2px var(--faf-border-strong);
   }
 
   .question.done {

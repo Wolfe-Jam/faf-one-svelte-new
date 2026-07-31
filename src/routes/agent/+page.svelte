@@ -628,7 +628,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 
 	.chat-cta:hover {
 		transform: translateY(-1px);
-		box-shadow: 0 6px 16px rgba(255, 107, 53, 0.35);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	.hero-cta {

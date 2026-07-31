@@ -519,7 +519,7 @@
 	}
 
 	.timeline-row.highlight {
-		background: rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
 		font-weight: 600;
 	}
 

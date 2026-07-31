@@ -1,27 +1,56 @@
-/* FAF Brand Colors - Official Style Guide */
+/* FAF Brand Colors — Light system: creme · white · black · full orange.
+   Orange = signal only (full #FF6B35). Never pastel wash. Gray = muted text only. */
 :root {
-	/* The FAF Core Colors - NEVER Change These */
-	--faf-orange: #ff6b35;       /* Human Trust/Manual 🧡 */
-	--faf-orange-dark: #FF5722;  /* Darker orange for hover states */
+	/* Core brand — NEVER pastel these */
+	--faf-orange: #ff6b35;       /* Human Trust / signal 🧡 FULL strength only */
+	--faf-orange-dark: #FF5722;  /* Hover on solid orange */
 	--faf-cyan: #00ffff;         /* AI-Happy/Tech 🩵 */
-	--faf-cyan-dark: #00d4d4;    /* Darker cyan for dark backgrounds */
-	--faf-cyan-text: #006e6e;    /* Darker cyan on creme page canvas — not bright #00d4d4 */
-	--faf-green: #00aa55;        /* FAF-Green — canonical (wolfejam 2026-06-28) */
-	--faf-green-hover: #008040;  /* FAF-Green dark — hover/active, AA-small on white */
-	--faf-green-light: #4ade80;  /* FAF-Green light — accents on dark (diagrams, callouts) */
+	--faf-cyan-dark: #00d4d4;    /* Cyan on dark surfaces */
+	--faf-cyan-text: #006e6e;    /* Cyan on creme (readable) */
+	--faf-green: #00aa55;
+	--faf-green-hover: #008040;
+	--faf-green-light: #4ade80;
 
 	/* Locked chrome — NEVER flip in [data-theme="dark"] */
-	--faf-locked-dark: #0a0a0a;           /* Footer, banner, theme-locked pages */
-	--faf-locked-dark-elevated: #1a1a1a;  /* Gradients, code blocks on locked pages */
-	--faf-locked-dark-text: #e5e5e5;      /* Body text on locked-dark surfaces */
-	--faf-chrome-bg: #000000;             /* Home/Map/Blog/Skills badges */
-	--faf-chrome-fg: #ffffff;             /* Badge borders, tooltips, share outlines */
-	--faf-foundation-green: #00bf63;      /* foundation.faf.one badge + membership */
-	--faf-foundation-green-dark: #00a855; /* Foundation gradients / hover */
-	--faf-surface-border: #e0e0e0;        /* Card borders on creme canvas */
-	--faf-section-alt: #f9f6f1;          /* Alternating section wash (membership, etc.) */
-	/* Was pastel #fff5f0 — removed sitewide. Highlight via orange rail/border, not wash. */
-	--faf-orange-tint: #FFFFFF;
+	--faf-locked-dark: #0a0a0a;
+	--faf-locked-dark-elevated: #1a1a1a;
+	--faf-locked-dark-text: #e5e5e5;
+	--faf-chrome-bg: #000000;
+	--faf-chrome-fg: #ffffff;
+	--faf-foundation-green: #00bf63;
+	--faf-foundation-green-dark: #00a855;
+	--faf-locked-dark-hover: #111111;
+	--faf-locked-dark-muted: #2d2d2d;
+
+	/* Light canvas hierarchy: creme page → white boxes → black structure → orange signal */
+	--faf-page-bg: #FEFCF8;           /* Creme page */
+	--faf-cream: #FEFCF8;
+	--faf-surface: #FFFFFF;           /* Cards / boxes — pure white on creme */
+	--faf-surface-elevated: #FFFFFF;
+	--faf-row: #FFFFFF;               /* Interactive rows (was gray fill) */
+	--faf-code-bg: #F3F1EB;           /* Inline code — warm off-white, not cold gray */
+	--faf-section-alt: #F7F4EE;       /* Quiet section alt — still creme family */
+	--faf-orange-tint: #FFFFFF;       /* No pastel peach — ever */
+
+	/* Structure + type */
+	--faf-dark: #1a1a1a;              /* Body / structure black */
+	--faf-ink: #1a1a1a;
+	--faf-gray: #5a5a5a;              /* Muted text ONLY — not a brand block */
+	--faf-hairline: #E8E4DC;          /* Quiet creme-native border (lighter weight than orange) */
+	--faf-border: #E8E4DC;
+	--faf-border-strong: #1a1a1a;     /* Buttons, chips, CTAs */
+	--faf-surface-border: #E8E4DC;
+	/* Legacy names → new roles (so pages using old tokens get the light fix) */
+	--faf-light-gray: var(--faf-hairline);
+	--faf-gray-light: var(--faf-row); /* was #e5e5e5 fill; now white row/surface */
+	--faf-gray-medium: var(--faf-hairline);
+	--faf-gray-dark: var(--faf-gray);
+	--faf-black: var(--faf-dark);
+	--faf-white: var(--faf-surface);
+	/* Pure white for text on orange/solid buttons (does not flip with surface) */
+	--faf-on-accent: #ffffff;
+
+	/* Status chips — keep readable; no orange pastel */
 	--faf-card-success-bg: #f0fdf4;
 	--faf-card-success-border: #bbf7d0;
 	--faf-card-error-bg: #fef2f2;
@@ -32,31 +61,12 @@
 	--faf-pill-info-bg: #eff6ff;
 	--faf-pill-info-fg: #2563eb;
 	--faf-pill-info-border: #bfdbfe;
-	--faf-locked-dark-hover: #111111;    /* Hover on locked-dark rows/cards */
-	--faf-locked-dark-muted: #2d2d2d;   /* Dark page gradients (updates, etc.) */
-	
-	/* Page canvas — soft creme / almost-black (not pure #fff / #000) */
-	--faf-page-bg: #FEFCF8;
-	--faf-surface: #FFFFFF;      /* Cards/boxes on the page — strong white on creme */
 
-	/* Foundation Colors */
-	--faf-cream: #FEFCF8;        /* Alias of page bg in light mode */
-	--faf-dark: #1a1a1a;         /* Text/Terminal */
-	--faf-gray: #555555;         /* Secondary text — nudged darker on creme canvas */
-	--faf-light-gray: #e5e5e5;   /* Borders */
-	
-	/* Legacy mappings for compatibility */
-	--faf-black: var(--faf-dark);
-	--faf-white: var(--faf-surface);
-	--faf-gray-light: var(--faf-light-gray);
-	--faf-gray-medium: var(--faf-light-gray);
-	--faf-gray-dark: var(--faf-gray);
-	
 	/* Typography */
 	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	--font-condensed: 'Roboto Condensed', sans-serif;
 	--font-mono: 'Roboto Mono', monospace;
-	
+
 	/* Spacing */
 	--space-xs: 0.5rem;
 	--space-sm: 1rem;
@@ -64,28 +74,37 @@
 	--space-lg: 3rem;
 	--space-xl: 4rem;
 	--space-2xl: 6rem;
-	
+
 	/* Animation */
 	--transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 	--transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode — page canvas almost-black; surfaces/boxes stay darker for contrast */
+/* Dark Mode — almost-black canvas; surfaces elevated; orange stays full signal */
 [data-theme="dark"] {
 	--faf-page-bg: #121212;
 	--faf-surface: #1a1a1a;
+	--faf-surface-elevated: #222222;
+	--faf-row: #1a1a1a;
+	--faf-code-bg: #222222;
 	--faf-cream: #121212;
 	--faf-dark: #e5e5e5;
+	--faf-ink: #e5e5e5;
 	--faf-black: #ffffff;
 	--faf-white: #1a1a1a;
+	--faf-on-accent: #ffffff;
 	--faf-gray: #999999;
 	--faf-gray-dark: #aaaaaa;
+	--faf-hairline: #2a2a2a;
+	--faf-border: #2a2a2a;
+	--faf-border-strong: #e5e5e5;
+	--faf-surface-border: #2a2a2a;
 	--faf-gray-medium: #333333;
-	--faf-gray-light: #222222;
-	--faf-light-gray: #222222;
+	--faf-gray-light: #1a1a1a;
+	--faf-light-gray: #2a2a2a;
 	--faf-cyan-text: #00d4d4;
 	--faf-section-alt: #1e1e1e;
-	--faf-orange-tint: #1a1a1a;          /* Match surface — no warm pastel wash */
+	--faf-orange-tint: #1a1a1a;
 	--faf-card-success-bg: #0f2318;
 	--faf-card-success-border: #1e4a30;
 	--faf-card-error-bg: #2a1414;
@@ -155,14 +174,15 @@ p {
 	line-height: 1.7;
 }
 
-/* Code styling */
+/* Code styling — warm off-white pill (not cold gray competing with orange) */
 code {
 	font-family: var(--font-mono);
-	background: var(--faf-gray-light);
-	color: var(--faf-black); /* MUST pair with bg from the same token set — both flip together, so the pill always contrasts (light theme, dark theme, AND theme-locked posts). Without this, text is inherited and goes invisible on locked-dark pages. */
+	background: var(--faf-code-bg);
+	color: var(--faf-black);
 	padding: 0.2em 0.4em;
 	border-radius: 4px;
 	font-size: 0.9em;
+	border: 1px solid var(--faf-hairline);
 }
 
 pre {
@@ -180,20 +200,15 @@ pre code {
 	background: none;
 	padding: 0;
 	color: inherit;
+	border: none;
 }
 
-/* Inline prose code (bare, unclassed <code>) — AUTHORITATIVE single source of truth.
-   Gray box + text, BOTH from the same token set so they flip together →
-   HIGH contrast in BOTH themes (light: #1a1a1a on #e5e5e5; dark: #fff on #222).
-   `!important` is required: Svelte scoped per-post `code{}` rules outrank a plain
-   global selector, so ~96 posts that hardcode literals (e.g. `background:#f0f0f0`
-   + `color:#fff` → white-on-white) were silently winning. This is the cascade fix.
-   Scope is deliberately narrow — only `<code>` with NO class and NOT inside <pre>:
-   classed pills (.copy-code, .terminal-block code, green command text) and block
-   code keep their own styling. */
+/* Inline prose code (bare, unclassed <code>) — AUTHORITATIVE.
+   Warm code pill + ink; flips with theme. !important beats per-post hardcodes. */
 :not(pre) > code:not([class]) {
-	background: var(--faf-gray-light) !important;
+	background: var(--faf-code-bg) !important;
 	color: var(--faf-black) !important;
+	border: 1px solid var(--faf-hairline) !important;
 }
 
 /* Blog breadcrumb (Home / Blog / edition) sits under the auto-hide banner's
@@ -216,7 +231,8 @@ pre code {
 	border: 2px solid var(--faf-chrome-fg);
 }
 
-/* Buttons */
+/* Buttons — light: orange+white primary · white+black-outline secondary.
+   --faf-on-accent is pure #fff so text never flips to surface-black on orange. */
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -232,73 +248,102 @@ pre code {
 	white-space: nowrap;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-orange {
 	background: var(--faf-orange);
-	color: var(--faf-white);
-	border-color: var(--faf-orange);
+	color: var(--faf-on-accent);
+	border-color: var(--faf-border-strong);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-orange:hover {
 	background: var(--faf-orange-dark);
-	border-color: var(--faf-orange-dark);
+	border-color: var(--faf-border-strong);
+	color: var(--faf-on-accent);
 	transform: translateY(-1px);
 }
 
 .btn-secondary {
-	background: transparent;
-	color: var(--faf-black);
-	border-color: var(--faf-black);
+	background: var(--faf-surface);
+	color: var(--faf-ink);
+	border-color: var(--faf-border-strong);
 }
 
 .btn-secondary:hover {
-	background: var(--faf-black);
-	color: var(--faf-white);
+	background: var(--faf-ink);
+	color: var(--faf-on-accent);
+	border-color: var(--faf-border-strong);
 }
 
 .btn-ghost {
 	background: transparent;
-	color: var(--faf-black);
+	color: var(--faf-ink);
 	border-color: transparent;
 }
 
 .btn-ghost:hover {
-	background: var(--faf-gray-light);
+	background: var(--faf-surface);
+	border-color: var(--faf-hairline);
 }
 
 .btn-cyan {
 	background: var(--faf-cyan-dark);
-	color: var(--faf-white);
-	border-color: var(--faf-cyan-dark);
+	color: var(--faf-on-accent);
+	border-color: var(--faf-border-strong);
 }
 
 .btn-cyan:hover {
 	background: #00ACC1;
-	border-color: #00ACC1;
-	transform: translateY(-1px);
-}
-
-.btn-orange {
-	background: var(--faf-orange);
-	color: var(--faf-white);
-	border-color: var(--faf-orange);
-}
-
-.btn-orange:hover {
-	background: var(--faf-orange-dark);
-	border-color: var(--faf-orange-dark);
+	border-color: var(--faf-border-strong);
+	color: var(--faf-on-accent);
 	transform: translateY(-1px);
 }
 
 .btn-dark {
-	background: #2C2C2C;
-	color: var(--faf-white);
-	border-color: #2C2C2C;
+	background: #1a1a1a;
+	color: var(--faf-on-accent);
+	border-color: #1a1a1a;
 }
 
 .btn-dark:hover {
-	background: #1A1A1A;
-	border-color: #1A1A1A;
+	background: #000000;
+	border-color: #000000;
+	color: var(--faf-on-accent);
 	transform: translateY(-1px);
+}
+
+/* Chip / nav-pill primitive — black outline, solid orange on hover (no pastel) */
+.faf-chip,
+.nav-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	background: var(--faf-surface);
+	border: 1.5px solid var(--faf-border-strong);
+	border-radius: 999px;
+	color: var(--faf-ink);
+	text-decoration: none;
+	font-size: 0.85rem;
+	font-weight: 600;
+	transition: all var(--transition-fast);
+	cursor: pointer;
+}
+
+.faf-chip:hover,
+.nav-pill:hover {
+	background: var(--faf-orange);
+	color: var(--faf-on-accent);
+	border-color: var(--faf-border-strong);
+	box-shadow: none;
+}
+
+/* Kill residual pastel orange washes if any page still sets them on these classes */
+[data-theme='light'] .nav-pill,
+:root:not([data-theme='dark']) .nav-pill {
+	background: var(--faf-surface);
+	border-color: var(--faf-border-strong);
+	color: var(--faf-ink);
 }
 
 /* Container */

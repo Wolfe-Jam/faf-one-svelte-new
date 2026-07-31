@@ -86,8 +86,8 @@
 	}
 
 	.features {
-		background: rgba(255, 107, 53, 0.1);
-		border: 1px solid rgba(255, 107, 53, 0.3);
+		background: var(--faf-surface);
+		border: 1.5px solid var(--faf-border-strong);
 		border-radius: 12px;
 		padding: 1.5rem;
 		margin: 2rem 0;

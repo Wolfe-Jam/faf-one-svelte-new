@@ -100,7 +100,7 @@
 
 	.daaft {
 		color: #FF6B35;
-		text-shadow: 0 0 40px rgba(255, 107, 53, 0.5);
+		text-shadow: none;
 	}
 
 	.stats-row {

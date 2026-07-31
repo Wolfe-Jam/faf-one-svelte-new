@@ -687,20 +687,19 @@
 <style>
 	.back-nav {
 		padding: 1rem 2rem;
-		background: var(--faf-white);
-		border-bottom: 1px solid var(--faf-light-gray);
+		background: var(--faf-surface);
+		border-bottom: 1px solid var(--faf-hairline);
 	}
 
 	.back-button {
-		color: #FF6B35;
+		color: var(--faf-orange);
 		text-decoration: none;
 		font-weight: 600;
-		transition: all 0.2s;
+		transition: color 0.2s;
 	}
 
 	.back-button:hover {
-		color: #ff8c5a;
-		text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+		color: var(--faf-orange-dark);
 	}
 
 	.links-container {
@@ -726,22 +725,22 @@
 		font-size: 2.5rem;
 		font-weight: 700;
 		margin-bottom: 0.5rem;
-		color: var(--faf-black);
+		color: var(--faf-ink);
 	}
 
 	.faf-highlight {
-		color: #FF6B35;
+		color: var(--faf-orange);
 	}
 
 	.tagline {
 		font-size: 1.2rem;
-		color: var(--faf-black);
+		color: var(--faf-ink);
 		margin-bottom: 0.5rem;
 	}
 
 	.last-updated {
 		font-size: 0.9rem;
-		color: var(--faf-dark);
+		color: var(--faf-gray);
 	}
 
 	.quick-nav {
@@ -752,12 +751,13 @@
 		flex-wrap: wrap;
 	}
 
+	/* Black outline chips → solid orange on hover (no pastel) */
 	.nav-pill {
 		padding: 0.5rem 1rem;
-		background: rgba(255, 107, 53, 0.1);
-		border: 1px solid rgba(255, 107, 53, 0.3);
-		border-radius: 20px;
-		color: #FF6B35;
+		background: var(--faf-surface);
+		border: 1.5px solid var(--faf-border-strong);
+		border-radius: 999px;
+		color: var(--faf-ink);
 		text-decoration: none;
 		font-size: 0.85rem;
 		font-weight: 600;
@@ -765,10 +765,11 @@
 	}
 
 	.nav-pill:hover {
-		background: rgba(255, 107, 53, 0.2);
-		border-color: #FF6B35;
-		box-shadow: 0 0 12px rgba(255, 107, 53, 0.3);
-		transform: translateY(-2px);
+		background: var(--faf-orange);
+		border-color: var(--faf-border-strong);
+		color: var(--faf-on-accent);
+		box-shadow: none;
+		transform: translateY(-1px);
 	}
 
 	.container {
@@ -782,29 +783,30 @@
 	}
 
 	.card {
-		background: var(--faf-white);
-		border: 1px solid var(--faf-light-gray);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-hairline);
 		border-radius: 12px;
 		padding: 1.5rem;
 		margin-bottom: 1rem;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 	}
 
 	.highlight-card {
-		background: var(--faf-gray-light);
-		border-color: rgba(255, 107, 53, 0.4);
-		box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
+		border: 1.5px solid var(--faf-border-strong);
+		border-left: 4px solid var(--faf-orange);
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 	}
 
 	.card h2 {
 		font-size: 1.3rem;
 		margin-bottom: 1rem;
-		color: var(--faf-black);
+		color: var(--faf-ink);
 	}
 
 	.section-note {
 		font-size: 0.85rem;
-		color: var(--faf-dark);
+		color: var(--faf-gray);
 		margin-bottom: 1rem;
 	}
 
@@ -819,51 +821,53 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 0.75rem 1rem;
-		background: var(--faf-gray-light);
-		border: 1px solid var(--faf-light-gray);
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-hairline);
+		border-left: 3px solid transparent;
 		border-radius: 8px;
 		text-decoration: none;
 		transition: all 0.2s;
 	}
 
 	.link-item:hover {
-		background: var(--faf-gray-light);
-		border-color: #FF6B35;
-		transform: translateX(4px);
-		box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
+		background: var(--faf-surface);
+		border-color: var(--faf-border-strong);
+		border-left-color: var(--faf-orange);
+		transform: translateX(3px);
+		box-shadow: none;
 	}
 
 	.link-name {
 		font-weight: 600;
-		color: #FF6B35;
+		color: var(--faf-orange);
 		min-width: 180px;
 	}
 
 	.link-desc {
 		flex: 1;
-		color: var(--faf-black);
+		color: var(--faf-ink);
 		font-size: 0.9rem;
 	}
 
 	.link-stat {
 		font-size: 0.8rem;
-		color: var(--faf-dark);
+		color: var(--faf-gray);
 		white-space: nowrap;
 	}
 
 	.status-live {
-		color: var(--faf-black);
+		color: var(--faf-ink);
 		font-weight: 600;
 	}
 
 	.status-pending {
-		color: var(--faf-black);
+		color: var(--faf-ink);
 		font-weight: 600;
 	}
 
 	.iana-link {
-		background: var(--faf-gray-light);
-		border-color: var(--faf-light-gray) !important;
+		background: var(--faf-surface);
+		border-color: var(--faf-hairline) !important;
 	}
 
 	@media (max-width: 768px) {

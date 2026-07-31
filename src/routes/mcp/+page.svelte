@@ -517,7 +517,7 @@
 
 	.hero-section {
 		padding: 4rem 0 3rem;
-		background: rgba(255, 107, 53, 0.05);
+		background: var(--faf-surface);
 		color: var(--faf-black);
 		border-bottom: 1px solid var(--faf-light-gray);
 	}
@@ -624,7 +624,7 @@
 	}
 
 	.intro-block code {
-		background: rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
 		padding: 0.2rem 0.5rem;
 		border-radius: 4px;
 		font-size: 1.1rem;
@@ -689,7 +689,7 @@
 	}
 
 	.breakdown-row.final-row {
-		background: rgba(255, 107, 53, 0.05);
+		background: var(--faf-surface);
 		color: var(--faf-dark);
 		font-weight: 600;
 	}
@@ -822,7 +822,7 @@
 
 	.package-card.featured {
 		border: 3px solid var(--faf-orange);
-		background: rgba(255, 107, 53, 0.02);
+		background: var(--faf-surface);
 	}
 
 	.package-header {
@@ -967,7 +967,7 @@
 	}
 
 	.platform-note {
-		background: rgba(255, 107, 53, 0.1);
+		background: var(--faf-surface);
 		color: var(--faf-dark);
 		padding: 1rem;
 		border-radius: 8px;

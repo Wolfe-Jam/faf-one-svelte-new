@@ -927,7 +927,7 @@
 	.timeline-event.highlight {
 		background: var(--faf-surface);
 		border-left: 6px solid var(--faf-orange);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.timeline-date {

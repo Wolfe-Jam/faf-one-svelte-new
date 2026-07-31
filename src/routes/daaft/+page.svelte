@@ -419,7 +419,7 @@
 
 	.splash-daaft {
 		color: #FF6B35;
-		text-shadow: 0 0 40px rgba(255, 107, 53, 0.5);
+		text-shadow: none;
 	}
 
 	.splash-stats {
@@ -536,7 +536,7 @@
 
 	.daaft-text {
 		color: #FF6B35;
-		text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+		text-shadow: none;
 	}
 
 	.subhead {
@@ -991,8 +991,8 @@
 	}
 
 	.reality-point code {
-		background: rgba(255, 107, 53, 0.2);
-		color: #FF6B35;
+		background: var(--faf-orange);
+		color: var(--faf-on-accent);
 		padding: 0.2rem 0.5rem;
 		border-radius: 4px;
 	}

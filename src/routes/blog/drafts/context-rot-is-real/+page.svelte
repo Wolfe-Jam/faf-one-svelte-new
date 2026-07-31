@@ -573,7 +573,7 @@ faf auto</code></pre>
 	.cost-item:hover {
 		border-color: var(--faf-orange);
 		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.cost-icon {
@@ -703,7 +703,7 @@ faf auto</code></pre>
 	}
 
 	.solution-promise code {
-		background: rgba(255, 107, 53, 0.2);
+		background: var(--faf-orange);
 		color: var(--faf-orange);
 	}
 
@@ -929,7 +929,7 @@ faf auto</code></pre>
 	}
 
 	.cta-box code {
-		background: rgba(255, 107, 53, 0.2);
+		background: var(--faf-orange);
 		color: var(--faf-orange);
 	}
 

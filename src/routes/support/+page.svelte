@@ -473,7 +473,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 	.btn-submit:hover {
 		background: #ff5a20;
 		transform: translateY(-2px);
-		box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	.emergency-banner {
@@ -512,7 +512,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 
 	.contact-button-primary:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	.success-message-inline {

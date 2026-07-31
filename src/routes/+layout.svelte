@@ -230,7 +230,7 @@
 	.banner-count {
 		color: var(--faf-orange);
 		font-weight: 800;
-		text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+		text-shadow: none;
 	}
 
 	.banner-receipt,
@@ -282,7 +282,7 @@
 	.faf-text {
 		color: var(--faf-orange);
 		font-weight: 700;
-		text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+		text-shadow: none;
 	}
 
 	.banner-cta {

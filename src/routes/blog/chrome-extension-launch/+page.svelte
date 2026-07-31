@@ -372,7 +372,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 	.cta-button:hover {
 		background: #ff5520;
 		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.cta-button.large {

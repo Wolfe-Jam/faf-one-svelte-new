@@ -319,8 +319,8 @@
 	}
 
 	.back-button:hover {
-		color: #ff8c5a;
-		text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+		color: #FF5722;
+		text-shadow: none;
 	}
 
 	.dl-page {
@@ -441,11 +441,11 @@
 
 	.try-card {
 		background: var(--faf-gray-light);
-		border: 1px solid rgba(255, 107, 53, 0.4);
+		border: 1.5px solid var(--faf-border-strong);
 		border-radius: 12px;
 		padding: 1.25rem 1.5rem;
 		text-align: center;
-		box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 	}
 
 	.try-label {
@@ -507,10 +507,10 @@
 
 	.nav-pill {
 		padding: 0.5rem 1rem;
-		background: rgba(255, 107, 53, 0.1);
-		border: 1px solid rgba(255, 107, 53, 0.3);
-		border-radius: 20px;
-		color: #FF6B35;
+		background: var(--faf-surface);
+		border: 1.5px solid var(--faf-border-strong);
+		border-radius: 999px;
+		color: var(--faf-ink);
 		text-decoration: none;
 		font-size: 0.85rem;
 		font-weight: 600;
@@ -518,10 +518,11 @@
 	}
 
 	.nav-pill:hover {
-		background: rgba(255, 107, 53, 0.2);
-		border-color: #FF6B35;
-		box-shadow: 0 0 12px rgba(255, 107, 53, 0.3);
-		transform: translateY(-2px);
+		background: var(--faf-orange);
+		border-color: var(--faf-border-strong);
+		color: var(--faf-on-accent);
+		box-shadow: none;
+		transform: translateY(-1px);
 	}
 
 	.notify-pill {
@@ -597,7 +598,7 @@
 	.pkg-card:hover {
 		transform: translateY(-4px);
 		border-color: #FF6B35;
-		box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	.card-top {
@@ -796,7 +797,7 @@
 	.email-input:focus {
 		outline: none;
 		border-color: #FF6B35;
-		box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+		box-shadow: 0 0 0 2px var(--faf-border-strong);
 	}
 
 	.email-input:disabled {
@@ -885,15 +886,17 @@
 	}
 
 	.tip-cta {
-		background: rgba(255, 107, 53, 0.15);
-		color: #FF6B35;
-		border: 1px solid rgba(255, 107, 53, 0.3);
+		background: var(--faf-surface);
+		color: var(--faf-ink);
+		border: 1.5px solid var(--faf-border-strong);
 	}
 
 	.tip-cta:hover {
-		background: rgba(255, 107, 53, 0.25);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+		background: var(--faf-orange);
+		color: var(--faf-on-accent);
+		border-color: var(--faf-border-strong);
+		transform: translateY(-1px);
+		box-shadow: none;
 	}
 
 	.support-btns {

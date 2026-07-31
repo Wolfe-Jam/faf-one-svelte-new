@@ -639,7 +639,7 @@
 
 	.tier-card.pro {
 		border-color: var(--faf-orange);
-		box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	}
 
 	.tier-badge {
