@@ -2,17 +2,29 @@
 // Doctrine: every share is a distribution surface, not a courtesy link.
 // Pre-fills a crafted post via web intent (text + url), never a bare URL.
 //
-// The page URL auto-renders as an OG card on X (title + description + image),
-// so DON'T repeat the page description here — that's the card's job.
+// DEFAULT CRAFT (locked 2026-07-31 — Compactable reference):
+//   1. Ship line     🏁 Just shipped: <pkg> vX — <Edition>
+//   2. Cold open     one true stranger line (why care)
+//   3. Receipts      1–2 scannable kill lines (split long leads)
+//   4. Short row     Archive-first · dual-impl · live on PyPI
+//   5. Install CTA   uvx / bunx / npm one-liner
+//   6. URL           own final line (this helper appends it)
 //
-//   {headline}            ← hook: attention, but TRUE (not hype)
-//                            (blank line)
-//   {point1..3}           ← 2–3 scannable receipts/benefits
-//                            (blank line)
-//   {ctaPrefix} {cta}     ← e.g. "Try it → bunx faf" (omit by passing cta: '')
+// Full doctrine: ~/.claude/skills/pubblog/SKILL.md § Step 4.6
+// Reference post: src/routes/blog/compactable-memory/+page.svelte
 //
-// Used by <ShareX> (standalone pill) AND directly by pages that keep their own
-// button styling: `<a href={buildShareIntent({...})} class="...">`.
+// The page URL unfurls as an OG card on X (title + description + image),
+// so DON'T repeat the full page description here — that's the card's job.
+//
+// Parts mode (when `text` is empty):
+//   {headline}            ← ship line
+//                            (blank line)
+//   {point1..3}           ← cold open + receipts (scannable)
+//                            (blank line)
+//   {ctaPrefix} {cta}     ← e.g. "Try it → uvx claude-fafm-sdk --version"
+//
+// Used by <ShareX> (standalone pill) AND blog posts:
+//   buildShareIntent({ text: shareText, url: shareUrl })
 
 export function buildShareIntent({
 	text = '',
@@ -26,7 +38,7 @@ export function buildShareIntent({
 	hashtags = ''
 } = {}) {
 	// `text` = a pre-assembled tweet body (blog posts craft their own shareText).
-	// Otherwise, assemble from parts.
+	// Otherwise, assemble from parts (PageActions / ShareX).
 	let tweet = text;
 	if (!tweet) {
 		const lines = [];
@@ -37,10 +49,9 @@ export function buildShareIntent({
 		tweet = lines.join('\n');
 	}
 
-	// X's web intent appends `url=` onto the *last line* of `text=` with a space
-	// (so "npm i -g foo@1.0.0" + url becomes "npm i -g foo@1.0.0 https://…").
-	// Put the link on its own final line inside `text` and skip the `url=` param —
-	// unfurl/OG still works from a full URL in the body; no double-append, no glue.
+	// Put the link on its own final line inside `text` — do NOT also pass url=
+	// to X's intent (X would append url onto the last line with a space and glue
+	// it to the install command). Unfurl/OG still works from a full URL in body.
 	tweet = tweet.replace(/\s+$/, '');
 	if (url) {
 		tweet = `${tweet}\n\n${url}`;
