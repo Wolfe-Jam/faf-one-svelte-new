@@ -32,10 +32,10 @@ uvx claude-fafm-sdk --version`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/compactable-memory" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/compactable-memory-hero.png?v=2" />
+	<meta property="og:image" content="https://faf.one/blog/compactable-memory-hero.png?v=3" />
 	<meta
 		property="og:image:secure_url"
-		content="https://faf.one/blog/compactable-memory-hero.png?v=2"
+		content="https://faf.one/blog/compactable-memory-hero.png?v=3"
 	/>
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
@@ -52,7 +52,7 @@ uvx claude-fafm-sdk --version`;
 		name="twitter:description"
 		content="Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/compactable-memory-hero.png?v=2" />
+	<meta name="twitter:image" content="https://faf.one/blog/compactable-memory-hero.png?v=3" />
 	<meta
 		name="twitter:image:alt"
 		content="Compactable — claude-fafm-sdk v2.0.0 · epoch compact · no silent zombies"
@@ -80,7 +80,7 @@ uvx claude-fafm-sdk --version`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/compactable-memory-hero.png?v=2"
+			src="/blog/compactable-memory-hero.png?v=3"
 			alt="Compactable — claude-fafm-sdk v2.0.0. Epoch compact pays tombstone debt; cross-epoch merge refuses — no silent zombies."
 			width="1200"
 			height="630"
