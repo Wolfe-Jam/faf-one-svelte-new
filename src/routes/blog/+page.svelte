@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/memory-is-vast',
+			title: 'Memory is vast',
+			version: '.fafm · knowledge + voice',
+			date: 'July 31, 2026',
+			timestamp: '2026-07-31',
+			excerpt:
+				'Remember and forget — often at a cost. AI does not erode like we do… or does it? .fafm is double-edged: knowledge and voice. Past, present, future.',
+			emoji: '🧡',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/compactable-memory',
 			title: 'Compactable',
 			version: 'claude-fafm-sdk v2.0.0',
