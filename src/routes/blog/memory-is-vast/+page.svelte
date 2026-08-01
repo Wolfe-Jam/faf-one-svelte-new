@@ -81,7 +81,7 @@ One format. Two edges. One soul.`;
 				remembered and what must be forgotten — often with a cost either way. AI does not erode
 				like flesh… until we build systems that can forget on purpose. <code>.fafm</code> is
 				double-edged by design: <strong>knowledge</strong> and <strong>voice</strong>. Our job is a
-				format that has already shown it can navigate both sides — to aid human and machine in the
+				format that has already shown it can map both sides — to aid human and machine in the
 				AI era, with unerring consideration for past, present, and future.
 			</p>
 		</section>
@@ -260,18 +260,17 @@ One format. Two edges. One soul.`;
 		</section>
 
 		<PageActions
-			headline="🏁 Memory is vast."
-			point1="One format. Two edges. Remember and forget."
-			point2=".fafm — knowledge + voice. Past, present, future."
-			cta="faf.one/blog/memory-is-vast"
-			ctaPrefix="Read →"
+			headline="🏁 Memory is vast. .fafm maps it."
+			point1="One format. Two edges. One soul."
+			point2=""
+			cta=""
 			url="https://faf.one/blog/memory-is-vast"
-			hashtags="AI,Memory,fafm,FAF"
+			hashtags=""
 		/>
 
 		<section class="footer-note">
 			<p>
-				Built with .faf + .fafm ☑️ Context defines. Memory holds — and sometimes lets go. 🏎️
+				Built with .faf + .fafm ☑️ Context defines. Memory maps — and sometimes lets go. 🏎️
 			</p>
 		</section>
 	</article>
