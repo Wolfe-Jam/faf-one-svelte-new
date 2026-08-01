@@ -39,7 +39,7 @@
 			excerpt:
 				'Remember and forget — often at a cost. AI does not erode like we do… or does it? .fafm is double-edged: knowledge and voice. Past, present, future.',
 			emoji: '☯',
-			category: 'Foundation'
+			category: 'Memory'
 		},
 		{
 			slug: 'blog/compactable-memory',
@@ -1243,11 +1243,12 @@
 		}
 	];
 
-	const categoryOrder = ['Release', 'Launch', 'Foundation', 'Research', 'Milestone', 'Interop', 'Story', 'Grok', 'WJTTC', 'Engineering', 'Press Release'];
+	const categoryOrder = ['Release', 'Launch', 'Memory', 'Foundation', 'Research', 'Milestone', 'Interop', 'Story', 'Grok', 'WJTTC', 'Engineering', 'Press Release'];
 
 	const categoryColor = {
 		'Release': '#00B8B8',
 		'Launch': 'var(--faf-orange)',
+		'Memory': '#1a1a1a',
 		'Foundation': '#1D8348',
 		'Research': '#4A90E2',
 		'Press Release': '#666',
@@ -1331,7 +1332,7 @@
 							{post.emoji}
 						{/if}
 					</div>
-					<div class="post-category">{post.category}</div>
+					<div class="post-category" style="background: {categoryColor[post.category] ?? '#1a1a1a'}; color: {post.category === 'Milestone' ? 'var(--faf-locked-dark-hover)' : '#fff'}">{post.category === 'Memory' ? 'MEMORY' : post.category}</div>
 					<h2>{post.title}</h2>
 					{#if post.version}<div class="post-version">{post.version}</div>{/if}
 					<p class="post-excerpt">{post.excerpt}</p>
@@ -1354,7 +1355,7 @@
 					</span>
 					<span class="list-title">{post.title}</span>
 					{#if post.version}<span class="list-version">{post.version}</span>{/if}
-					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: var(--faf-locked-dark-hover)' : ''}">{post.category}</span>
+					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: var(--faf-locked-dark-hover)' : post.category === 'Memory' ? '; color: #fff' : ''}">{post.category === 'Memory' ? 'MEMORY' : post.category}</span>
 				</a>
 			{/each}
 		</div>
@@ -1514,6 +1515,7 @@
 	/* Category border colours (11 consolidated) */
 	.post-card[data-category="Release"] { border-color: #00B8B8; }
 	.post-card[data-category="Launch"] { border-color: var(--faf-orange); }
+	.post-card[data-category="Memory"] { border-color: #1a1a1a; }
 	.post-card[data-category="Foundation"] { border-color: #1D8348; }
 	.post-card[data-category="Research"] { border-color: #4A90E2; }
 	.post-card[data-category="Press Release"] { border-color: #666; }
@@ -1598,6 +1600,11 @@
 
 	.post-card[href*="press-release"] .post-category {
 		background: #1a1a1a;
+	}
+
+	.post-card[data-category="Memory"] .post-category {
+		background: #1a1a1a;
+		color: #fff;
 	}
 
 	.post-card h2 {

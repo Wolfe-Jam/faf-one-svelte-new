@@ -63,7 +63,7 @@ One format. Two edges. Things we need to remember — and things we need to forg
 		<div class="meta">
 			<time datetime="2026-07-31">July 31, 2026</time>
 			<span class="separator">•</span>
-			<span class="category foundation">Foundation</span>
+			<span class="category memory">MEMORY</span>
 		</div>
 	</header>
 
@@ -352,8 +352,9 @@ One format. Two edges. Things we need to remember — and things we need to forg
 		font-weight: 700;
 		color: #fff;
 	}
-	.category.foundation {
-		background: #1d8348;
+	.category.memory {
+		background: #1a1a1a;
+		color: #fff;
 	}
 
 	.hero-image {
