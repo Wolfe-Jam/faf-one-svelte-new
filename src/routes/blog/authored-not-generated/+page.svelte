@@ -107,7 +107,10 @@ bunx faf export --agents`;
 				<li><strong>v7.1.3 — The AGENTS.md Edition</strong></li>
 				<li><strong>1,146 / 1,146</strong> — tests passing</li>
 				<li><strong>100%</strong> — Trophy score</li>
-				<li><strong>115,000+</strong> — downloads across the FAF ecosystem</li>
+				<li>
+					<strong>Ecosystem downloads</strong> —
+					<a href="/downloads">live hard floor at faf.one/downloads</a>
+				</li>
 				<li><strong>IANA-registered</strong> · Anthropic-merged (#2759)</li>
 			</ul>
 		</section>

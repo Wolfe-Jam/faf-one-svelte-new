@@ -72,7 +72,10 @@
 
 		<section class="celebration">
 			<div class="big-number">{fmt(grandTotal)}</div>
-			<div class="big-label">downloads across the entire ecosystem &mdash; live count, fed daily</div>
+			<div class="big-label">
+				downloads hard floor &mdash; live count, fed daily ·
+				<a href="/downloads">faf.one/downloads</a>
+			</div>
 		</section>
 
 		<section>
@@ -96,7 +99,12 @@
 				</div>
 			</div>
 
-			<p class="fed-note">These numbers are live &mdash; the same daily-refreshed source that feeds the site banner. No hand-typed stats on this page.</p>
+			<p class="fed-note">
+				These numbers are live hard floor (npm + crates + PyPI
+				<code>without_mirrors</code>) &mdash; the same daily-refreshed source that feeds the site
+				banner. Truth page:
+				<a href="/downloads">faf.one/downloads</a>.
+			</p>
 		</section>
 
 		<section>

@@ -137,7 +137,10 @@ npm i -g faf-cli@7.2.0`;
 				<li><strong>100%</strong> — Trophy FAF score</li>
 				<li><strong>INTEROP</strong> — aligned with claude-fafm-sdk 1.0</li>
 				<li><strong>IANA</strong> — <code>.faf</code> + <code>.fafm</code> both registered</li>
-				<li><strong>115,000+</strong> — ecosystem downloads</li>
+				<li>
+					<strong>Ecosystem downloads</strong> —
+					<a href="/downloads">live hard floor at faf.one/downloads</a>
+				</li>
 			</ul>
 		</section>
 
