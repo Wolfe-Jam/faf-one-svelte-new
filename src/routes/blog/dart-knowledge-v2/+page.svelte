@@ -33,8 +33,8 @@ npm i -g faf-cli@7.2.1`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/dart-knowledge-v2" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/dart-knowledge-v2-hero.png" />
-	<meta property="og:image:secure_url" content="https://faf.one/blog/dart-knowledge-v2-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog/dart-knowledge-v2-hero.png?v=1" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog/dart-knowledge-v2-hero.png?v=1" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -50,7 +50,7 @@ npm i -g faf-cli@7.2.1`;
 		name="twitter:description"
 		content="pubspec ≠ Flutter. Content-aware Dart AI can trust."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/dart-knowledge-v2-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/dart-knowledge-v2-hero.png?v=1" />
 	<meta
 		name="twitter:image:alt"
 		content="Dart/Flutter knowledge v2 — faf-cli v7.2.1 · pubspec ≠ Flutter"
@@ -77,7 +77,7 @@ npm i -g faf-cli@7.2.1`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/dart-knowledge-v2-hero.png"
+			src="/blog/dart-knowledge-v2-hero.png?v=1"
 			alt="Dart/Flutter knowledge v2 — faf-cli v7.2.1. pubspec ≠ Flutter. Content-aware Dart AI can trust."
 			width="1200"
 			height="630"
