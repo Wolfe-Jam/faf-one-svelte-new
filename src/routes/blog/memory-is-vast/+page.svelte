@@ -85,8 +85,8 @@ One format. Two edges. Things we need to remember — and things we need to forg
 				remembered and what must be forgotten — often with a cost either way. AI does not erode
 				like flesh… until we build systems that can forget on purpose. <code>.fafm</code> is
 				double-edged by design: <strong>knowledge</strong> and <strong>voice</strong>. Our job is a
-				format that has already shown it can navigate both sides — to aid human and AI in the AI
-				era, with unerring consideration for past, present, and future.
+				format that has already shown it can navigate both sides — to aid human and machine in the
+				AI era, with unerring consideration for past, present, and future.
 			</p>
 		</section>
 
