@@ -333,6 +333,11 @@ uvx claude-fafm-sdk --version`;
 				<a href="/blog/compactable-memory">Compactable (2.0)</a> — epoch compact pays tombstone
 				debt; cross-epoch merge refuses — no silent zombies.
 			</p>
+			<p>
+				<strong>Dual edge:</strong>
+				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
+				One soul.
+			</p>
 		</section>
 
 		<section class="share-section">

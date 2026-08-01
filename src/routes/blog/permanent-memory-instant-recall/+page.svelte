@@ -130,6 +130,14 @@
 			</ul>
 		</section>
 
+		<section>
+			<h2>Read more</h2>
+			<p>
+				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
+				One soul. The dual-edge thesis after Permanent Memory · Instant Recall.
+			</p>
+		</section>
+
 		<section class="share-section">
 			<a class="share-btn" href={shareHref} target="_blank" rel="noopener">Share on X</a>
 		</section>

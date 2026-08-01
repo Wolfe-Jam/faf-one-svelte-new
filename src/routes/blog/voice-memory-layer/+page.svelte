@@ -343,6 +343,14 @@ foundation  central       global`}</code></pre>
 			</p>
 		</section>
 
+		<section>
+			<h2>Read more</h2>
+			<p>
+				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
+				One soul. Voice is one edge of the same dual.
+			</p>
+		</section>
+
 		<section class="footer-note">
 			<p>
 				<strong>FAF defines. MD instructs. AI codes.</strong>

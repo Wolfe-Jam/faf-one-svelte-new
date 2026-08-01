@@ -404,6 +404,14 @@ uvx claude-fafm-sdk --version`;
 			<span class="series-current" aria-current="page">Compactable</span>
 		</nav>
 
+		<section>
+			<p>
+				<strong>Knowledge cut closed. Dual still open.</strong>
+				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
+				One soul.
+			</p>
+		</section>
+
 		<!-- Full SuperGrok HEAVY — linked from TL;DR; after our release write-up -->
 		<section id="expert-review" class="expert-review">
 			<h2>Blind SuperGrok Expert Review</h2>
