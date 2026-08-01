@@ -220,8 +220,23 @@ cd your-module && faf auto`;
 			</ul>
 		</section>
 
-		<section class="share-section">
-			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		<section class="feedback-invite">
+			<h2>Feedback welcome</h2>
+			<p>
+				Missed a framework you ship with? Wrong shape on a real module? Tell us — we will build more.
+				Open an issue or say so in public; the detection map grows from what Gophers actually use.
+			</p>
+			<div class="feedback-actions">
+				<a
+					href="https://github.com/Wolfe-Jam/faf-cli/issues/new?title=Go%20detection%3A%20&amp;body=Module%20shape%20%2F%20go.mod%20snippet%20%28redact%20secrets%29%3A%0A%0AExpected%3A%0A%0AGot%3A%0A"
+					target="_blank"
+					rel="noopener"
+					class="feedback-btn"
+				>
+					Open a GitHub issue
+				</a>
+				<a href={xIntent} target="_blank" rel="noopener" class="feedback-btn secondary">Post on X</a>
+			</div>
 		</section>
 
 		<section class="star-cta">
@@ -460,23 +475,47 @@ cd your-module && faf auto`;
 		font-size: 0.95rem;
 	}
 
-	.share-section {
-		margin-top: 3rem;
-		text-align: center;
+	.feedback-invite {
+		margin-top: 1rem;
+		padding: 1.5rem 1.35rem;
+		background: #f7f5f0;
+		border-radius: 10px;
+		border-left: 4px solid #00d4d4;
 	}
-	.share-btn {
+	.feedback-invite h2 {
+		margin-top: 0;
+	}
+	.feedback-invite p {
+		margin-bottom: 1.15rem;
+	}
+	.feedback-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+	}
+	.feedback-btn {
 		display: inline-flex;
 		align-items: center;
-		padding: 0.7rem 1.5rem;
+		padding: 0.65rem 1.2rem;
 		border-radius: 6px;
-		font-size: 0.95rem;
+		font-size: 0.92rem;
 		font-weight: 700;
 		text-decoration: none;
 		background: #1a1a1a;
-		color: #fff;
+		color: #fff !important;
 	}
-	.share-btn:hover {
+	.feedback-btn:hover {
 		background: #000;
+		text-decoration: none !important;
+	}
+	.feedback-btn.secondary {
+		background: transparent;
+		color: #1a1a1a !important;
+		border: 2px solid #1a1a1a;
+	}
+	.feedback-btn.secondary:hover {
+		background: #1a1a1a;
+		color: #fff !important;
 	}
 
 	.star-cta {
