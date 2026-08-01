@@ -39,6 +39,7 @@
 			excerpt:
 				'Remember and forget — often at a cost. AI does not erode like we do… or does it? .fafm is double-edged: knowledge and voice. Past, present, future.',
 			emoji: '☯️',
+			icon: '/blog/yin-yang.svg',
 			category: 'Foundation'
 		},
 		{
@@ -1324,7 +1325,13 @@
 		<div class="posts-grid">
 			{#each sortedPosts as post}
 				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'} class:academic-card={post.theme === 'academic'} data-category={post.category}>
-					<div class="post-emoji">{post.emoji}</div>
+					<div class="post-emoji">
+						{#if post.icon}
+							<img src={post.icon} alt="" class="post-emoji-icon" width="28" height="28" />
+						{:else}
+							{post.emoji}
+						{/if}
+					</div>
 					<div class="post-category">{post.category}</div>
 					<h2>{post.title}</h2>
 					{#if post.version}<div class="post-version">{post.version}</div>{/if}
@@ -1339,7 +1346,13 @@
 				<a href="/{post.slug}" class="list-row" class:dark-row={post.theme === 'dark'} data-category={post.category}>
 					<span class="list-dot"></span>
 					<span class="list-date">{post.timestamp}</span>
-					<span class="list-emoji">{post.emoji}</span>
+					<span class="list-emoji">
+						{#if post.icon}
+							<img src={post.icon} alt="" class="list-emoji-icon" width="20" height="20" />
+						{:else}
+							{post.emoji}
+						{/if}
+					</span>
 					<span class="list-title">{post.title}</span>
 					{#if post.version}<span class="list-version">{post.version}</span>{/if}
 					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: var(--faf-locked-dark-hover)' : ''}">{post.category}</span>
@@ -1515,6 +1528,15 @@
 	.post-emoji {
 		font-size: 1.5rem;
 		margin-bottom: 0.5rem;
+		line-height: 1;
+		min-height: 1.5rem;
+	}
+	.post-emoji-icon {
+		display: block;
+		width: 1.75rem;
+		height: 1.75rem;
+		border-radius: 50%;
+		background: transparent;
 	}
 
 	.post-category {
@@ -1683,7 +1705,19 @@
 		font-size: 1.2rem;
 		flex-shrink: 0;
 		width: 1.5rem;
+		height: 1.5rem;
 		text-align: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
+	}
+	.list-emoji-icon {
+		display: block;
+		width: 1.25rem;
+		height: 1.25rem;
+		border-radius: 50%;
+		background: transparent;
 	}
 
 	.list-title {
