@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/dart-knowledge-v2',
+			title: 'Dart/Flutter knowledge v2',
+			version: 'faf-cli v7.2.1',
+			date: 'August 1, 2026',
+			timestamp: '2026-08-01',
+			excerpt:
+				'pubspec ≠ Flutter. Content-aware Dart AI can trust — same Dart Edition architecture, fresher knowledge map. Pure Dart stays Dart · one JSON, CLI + SDKs compose.',
+			emoji: '🎯',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/memory-is-vast',
 			title: 'Memory is vast',
 			version: '.fafm · knowledge + voice',
