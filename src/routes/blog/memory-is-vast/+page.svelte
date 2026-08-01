@@ -28,8 +28,8 @@ One format. Two edges. One soul.`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/memory-is-vast" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=8" />
-	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=8" />
+	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=9" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=9" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -45,7 +45,7 @@ One format. Two edges. One soul.`;
 		name="twitter:description"
 		content="One format. Two edges. One soul."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=8" />
+	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=9" />
 </svelte:head>
 
 <div class="blog-post">
@@ -65,7 +65,7 @@ One format. Two edges. One soul.`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/memory-is-vast-hero.png?v=8"
+			src="/blog/memory-is-vast-hero.png?v=9"
 			alt="Memory is vast. .fafm maps it — split dual · yin-yang · orange Nelly · One format. Two edges. One soul."
 			width="1200"
 			height="630"
