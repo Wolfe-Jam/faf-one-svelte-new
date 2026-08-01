@@ -38,8 +38,7 @@
 			timestamp: '2026-07-31',
 			excerpt:
 				'Remember and forget — often at a cost. AI does not erode like we do… or does it? .fafm is double-edged: knowledge and voice. Past, present, future.',
-			emoji: '☯️',
-			icon: '/blog/yin-yang.svg',
+			emoji: '☯',
 			category: 'Foundation'
 		},
 		{
