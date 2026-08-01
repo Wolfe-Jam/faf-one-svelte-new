@@ -6,14 +6,14 @@
 		mounted = true;
 	});
 
-	// Rich X share — formula; OG card carries description/image.
-	// Edition + short description VERBATIM from CHANGELOG 7.3.0 Doc Gate identity.
+	// Rich X share — Go-native voice (no cross-language twin talk).
+	// Core claim matches CHANGELOG kill line: go.mod alone ≠ backend.
 	const shareText = `🏁 Just shipped: faf-cli v7.3.0 — The Go Edition
 
 Content-aware Go — go.mod alone ≠ backend.
 
 MCP · Gin/Echo · Cobra/cmd · library
-Same pattern as Dart · one JSON, compose
+Pure modules stay pure
 
 npm i -g faf-cli@7.3.0`;
 	const shareUrl = 'https://faf.one/blog/go-edition';
@@ -24,12 +24,12 @@ npm i -g faf-cli@7.3.0`;
 	<title>The Go Edition - faf-cli v7.3.0 | FAF</title>
 	<meta
 		name="description"
-		content="Content-aware Go — go.mod alone ≠ backend. faf-cli v7.3.0 classifies MCP · server · CLI · library from requires + layout. Same composition pattern as the Dart Edition."
+		content="Content-aware Go — go.mod alone ≠ backend. faf-cli v7.3.0 classifies MCP · Gin/Echo/Fiber/Chi · Cobra/cmd · library from requires + layout."
 	/>
 	<meta property="og:title" content="The Go Edition - faf-cli v7.3.0" />
 	<meta
 		property="og:description"
-		content="Content-aware Go — go.mod alone ≠ backend. Same composition pattern as the Dart Edition."
+		content="Content-aware Go — go.mod alone ≠ backend. Pure modules stay pure."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/go-edition" />
@@ -60,8 +60,7 @@ npm i -g faf-cli@7.3.0`;
 		<h1>The Go Edition</h1>
 		<p class="version-tag">faf-cli v7.3.0 · ✪</p>
 		<p class="subtitle">
-			<strong>Content-aware Go</strong> — <code>go.mod</code> alone ≠ backend. Same composition
-			pattern as the <a href="/blog/dart-edition">Dart Edition</a>.
+			<strong>Content-aware Go</strong> — <code>go.mod</code> alone ≠ backend.
 		</p>
 		<div class="meta">
 			<time datetime="2026-08-01">August 1, 2026</time>
@@ -84,11 +83,9 @@ npm i -g faf-cli@7.3.0`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> <code>faf-cli</code> <strong>7.3.0</strong> ships
-				<strong>The Go Edition</strong>.
-				<strong>Content-aware Go</strong> — <code>go.mod</code> alone ≠ backend. Same composition
-				pattern as the Dart Edition: single-source knowledge JSON + classifier; scanner and Turbo-Cat
-				compose.
+				<strong>TL;DR:</strong> <code>faf-cli</code> <strong>7.3.0</strong> — <strong>The Go Edition</strong>.
+				<strong>Content-aware Go</strong> — <code>go.mod</code> alone ≠ backend. Reads
+				<code>require</code> paths and light layout, then classifies MCP · server · CLI · library.
 			</p>
 			<div class="terminal-block">
 				<code>npm install -g faf-cli@7.3.0</code>
@@ -100,13 +97,13 @@ npm i -g faf-cli@7.3.0`;
 			<p class="thesis">go.mod is not a type</p>
 			<p>
 				Most tools see <code>go.mod</code> and assume a service. Libraries, CLIs, HTTP servers, and
-				MCP servers all ship a module file — and none of them are “backend” just because the filename
-				is <code>go.mod</code>.
+				MCP servers all ship a module file — none of them are “backend” because the file is named
+				<code>go.mod</code>.
 			</p>
 			<p>
-				Wrong project shape at the root means wrong <code>.faf</code>, wrong agent brief, wrong export.
-				The Go Edition classifies from <strong>requires + light layout</strong> — so AI gets the module
-				you actually built.
+				Wrong shape at the root means wrong AI context: the <code>.faf</code>, the agent brief, the
+				export. The Go Edition classifies from <strong>requires + light layout</strong> — so the context
+				matches the module you built.
 			</p>
 		</section>
 
@@ -114,8 +111,8 @@ npm i -g faf-cli@7.3.0`;
 			<h2>What it classifies</h2>
 			<ul>
 				<li>
-					<strong>MCP</strong> — <code>mcp-go</code>, official go-sdk, and related module paths →
-					<code>app_type: mcp</code>
+					<strong>MCP</strong> — e.g. <code>github.com/mark3labs/mcp-go</code>,
+					<code>github.com/modelcontextprotocol/go-sdk</code> → <code>app_type: mcp</code>
 				</li>
 				<li>
 					<strong>Backend</strong> — Gin, Echo, Fiber, Chi, gRPC, Connect, and peers →
@@ -130,29 +127,20 @@ npm i -g faf-cli@7.3.0`;
 				</li>
 			</ul>
 			<p>
-				Priority is intentional: MCP wins over Gin when both are present; server wins over Cobra;
-				layout only fills in when deps don’t already decide.
+				Priority: MCP over Gin when both are present; server over Cobra; layout only when deps don’t
+				already decide.
 			</p>
 		</section>
 
 		<section>
-			<h2>Same pattern as Dart</h2>
+			<h2>How it works</h2>
 			<p>
-				One knowledge file (<code>go-detection.json</code>), one classifier (<code>go.ts</code>).
-				faf-cli imports it; Turbo-Cat and the project-type scanner compose it. No forked greps per
-				surface. Dart proved the shape with <code>pubspec ≠ Flutter</code>; Go is the twin for modules.
+				One knowledge map of high-signal module paths, one classifier. Edit the map once; detection
+				stays consistent. No “every <code>go.mod</code> is a service” shortcut.
 			</p>
 			<p>
-				Evidence: sixteen parity fixtures + WJTTC Go suite — brake (never blindly backend), engine
-				(classification), aero (priority + Turbo-Cat slots).
-			</p>
-		</section>
-
-		<section>
-			<h2>Also in 7.3.0</h2>
-			<p>
-				Work-surface Trophy glyph is <strong>✪</strong> (Proof Seal) on CLI · docs · receipts. Social
-				still uses 🏆. Same meaning: 100%. Scoring math unchanged.
+				Proven by sixteen classification fixtures plus a brake suite that fails if a pure module is
+				forced to backend.
 			</p>
 		</section>
 
@@ -160,13 +148,13 @@ npm i -g faf-cli@7.3.0`;
 			<h2>Try It</h2>
 			<div class="terminal-block">
 				<code>npm install -g faf-cli@7.3.0</code>
-				<code># dual publish:</code>
 				<code>npm install -g faf@7.3.0</code>
 				<code>faf auto && faf score</code>
 			</div>
 			<p>
 				Point it at a Gin API, a Cobra tool, an MCP server, or a plain library —
-				<code>project.faf</code> should say what the module actually is.
+				<code>project.faf</code> should say what the module actually is (e.g.
+				<code>type: backend</code>, <code>backend: Gin</code>).
 			</p>
 		</section>
 
@@ -174,8 +162,7 @@ npm i -g faf-cli@7.3.0`;
 			<h2>The Numbers</h2>
 			<ul>
 				<li><strong>v7.3.0</strong> — The Go Edition · August 1, 2026</li>
-				<li><strong>16 parity fixtures</strong> — TS Truth for Go classification</li>
-				<li><strong>WJTTC Go suite</strong> — brake / engine / aero</li>
+				<li><strong>16 fixtures</strong> — classification contract</li>
 				<li><strong>npm</strong> — <code>faf-cli@7.3.0</code> · <code>faf@7.3.0</code></li>
 			</ul>
 		</section>
@@ -184,8 +171,8 @@ npm i -g faf-cli@7.3.0`;
 			<h2>Non-claims</h2>
 			<p>
 				We claim content-aware project-type classification from <code>go.mod</code> (+ light layout),
-				proven by the fixture suite. We do <strong>not</strong> claim a full Go SDK rewrite, byte-identical
-				parity with a Go implementation yet, or that every module path in the ecosystem is known.
+				proven by the fixture suite. We do <strong>not</strong> claim every module path in the ecosystem
+				is known, or that <code>package main</code> alone proves a production service.
 			</p>
 		</section>
 
@@ -206,7 +193,7 @@ npm i -g faf-cli@7.3.0`;
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ go.mod alone ≠ backend. Pure modules stay pure. 🏎️</p>
+			<p>Built with .faf ☑️ go.mod alone ≠ backend. 🏎️</p>
 		</section>
 	</article>
 </div>
