@@ -359,7 +359,7 @@
 	.big-number {
 		font-size: 5rem;
 		font-weight: 900;
-		color: #FF6B35;
+		color: var(--faf-ink); /* black structure — not orange signal */
 		line-height: 1;
 		margin-bottom: 0.25rem;
 		letter-spacing: -0.03em;
