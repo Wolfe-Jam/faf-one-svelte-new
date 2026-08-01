@@ -3,59 +3,111 @@
 </script>
 
 <svelte:head>
-	<title>etch and forget · memory.faf.one</title>
-	<meta name="description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Cross-vendor — Claude, Cursor, Grok, Gemini all read the same memory. Nelly Never Forgets (so you can!)." />
+	<title>PM.IR. · etch and forget · .fafm discovery</title>
+	<meta
+		name="description"
+		content="PM.IR. — Permanent Memory. Instant Recall. .fafm maps it. One format. Two edges. One Soul. etch and forget. Nelly Never Forgets (so you can!)."
+	/>
 	<link rel="icon" type="image/svg+xml" href="/nelly.svg" />
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="etch and forget · memory.faf.one" />
-	<meta property="og:description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Cross-vendor — Claude, Cursor, Grok, Gemini. Nelly Never Forgets (so you can!)." />
-	<meta property="og:url" content="https://www.faf.one/memory" />
+	<meta property="og:title" content="PM.IR. · etch and forget · .fafm discovery" />
+	<meta
+		property="og:description"
+		content="Permanent Memory. Instant Recall. .fafm maps it. Knowledge + voice. Nelly Never Forgets (so you can!)."
+	/>
+	<meta property="og:url" content="https://faf.one/memory" />
 	<meta property="og:image" content="https://memory.faf.one/nelly-og.png" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="etch and forget · memory.faf.one" />
-	<meta name="twitter:description" content="etch and forget. Persistent AI memory in IANA-registered .fafm. Nelly Never Forgets (so you can!)." />
+	<meta name="twitter:title" content="PM.IR. · etch and forget · .fafm discovery" />
+	<meta
+		name="twitter:description"
+		content="Permanent Memory. Instant Recall. .fafm maps it. One format. Two edges. One Soul."
+	/>
 	<meta name="twitter:image" content="https://memory.faf.one/nelly-og.png" />
 </svelte:head>
 
 <main class="page">
 
 	<section class="hero">
-		<img class="nelly" src="/nelly.svg" alt="Nelly — the FAF memory elephant" width="72" height="72" />
+		<img class="nelly" src="/nelly.svg" alt="Nelly — pixel origin, early faf-cli" width="72" height="72" />
 		<h1>memory.faf.one</h1>
 		<p class="tagline"><span class="etched">etch</span> and forget</p>
-		<p class="kicker"><span class="etched">etched</span> in stone… becomes <span class="etched">etched</span> in memory <span class="pml-mark">(PML)</span></p>
-		<p class="sub">Nelly Never Forgets <span class="so-you-can">(so you can!)</span> — portable, cross-vendor AI memory</p>
+		<p class="kicker">
+			<strong>PM.IR.</strong> — Permanent Memory. Instant Recall.
+		</p>
+		<p class="sub">
+			<code>.fafm</code> maps it. One format. Two edges. One Soul.
+			<br />
+			Nelly Never Forgets <span class="so-you-can">(so you can!)</span>
+		</p>
 	</section>
 
 	<section class="content">
 		<h2>What it is</h2>
-		<p>The home of <code>.fafm</code> — the IANA-registered memory format — and <code>claude-fafm-sdk</code>, the open Python SDK for giving an AI agent memory that versions with your project and moves between models instead of being locked to one vendor.</p>
-		<p>The local <code>Soul</code> works offline with no account. Connect a <strong>free namepoint</strong> when you want hosted, full-intel recall at personal scale.</p>
+		<p>
+			Discovery home for <code>.fafm</code> — the IANA-registered memory format — on
+			<strong>faf.one</strong>. Portable AI memory that versions with your project and moves between
+			models instead of being locked to one vendor.
+		</p>
+		<p>
+			The local <code>Soul</code> works offline with no account. Connect a
+			<strong>free namepoint</strong> when you want hosted, full-intel recall at personal scale.
+			<strong>Technical home for devs:</strong>
+			<a href="https://memory.faf.one" target="_blank" rel="noopener">memory.faf.one</a>.
+		</p>
 	</section>
 
 	<section class="content">
 		<h2>Two profiles, one format</h2>
-		<p><strong>Voice — the Voice Memory Layer (VML).</strong> The original <code>.fafm</code> profile: durable memory for voice agents, so the assistant remembers you across calls. Reference: <a href="https://pypi.org/project/grok-faf-voice/" target="_blank" rel="noopener">grok-faf-voice</a>.</p>
-		<p><strong>Knowledge.</strong> Typed, cross-linked memory for agent runtimes like Claude Code. Reference: <a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">claude-fafm-sdk</a>.</p>
+		<p>
+			Same soul file. Two edges — knowledge and voice.
+		</p>
+		<p><strong>Voice — the Voice Memory Layer (VML).</strong> Durable memory for voice agents, so the assistant remembers you across calls. Reference: <a href="https://pypi.org/project/grok-faf-voice/" target="_blank" rel="noopener">grok-faf-voice</a>.</p>
+		<p><strong>Knowledge.</strong> Typed, cross-linked memory for agent runtimes like Claude Code. Reference: <a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">claude-fafm-sdk</a> · Compactable 2.0.</p>
 	</section>
 
 	<section class="content">
 		<h2>Why it exists</h2>
-		<p>Every AI session starts from zero, and what memory exists is trapped in one vendor's walled garden. <code>.fafm</code> is a plain, open, versionable file your agent's memory lives in — readable by Grok, Claude, and Gemini alike. One format, never a fork.</p>
+		<p>
+			Every AI session starts from zero, and what memory exists is often trapped in one vendor's
+			walled garden. Memory is vast — humans need to remember and forget. <code>.fafm</code> maps
+			both: a plain, open, versionable soul readable by Grok, Claude, and Gemini. One format. Never
+			a fork.
+		</p>
 	</section>
 
 	<section class="content">
 		<h2>Receipts</h2>
 		<ul class="receipts">
 			<li><strong>IANA-registered</strong> — <code>application/vnd.fafm+yaml</code> (May 13, 2026)</li>
-			<li><strong><a href="https://pypi.org/project/claude-fafm-sdk/2.0.0/" target="_blank" rel="noopener">claude-fafm-sdk on PyPI</a></strong> — v2.0.0 Compactable, MIT, offline-first · <a href="/blog/compactable-memory">blog</a></li>
+			<li>
+				<strong
+					><a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener"
+						>claude-fafm-sdk on PyPI</a
+					></strong
+				>
+				— Compactable 2.0, MIT, offline-first ·
+				<a href="/blog/compactable-memory">Compactable</a> ·
+				<a href="/blog/forgettable-memory">Forgettable</a>
+			</li>
 			<li><strong>Cross-vendor verified</strong> — one client read grok / claude / gemini souls live over the same protocol</li>
 			<li><strong>Hosted backend live</strong> — <code>memory.faf.one/mcp</code> (<code>get_soul</code> / <code>write_soul</code>)</li>
-			<li><strong>Companion paper</strong> — the .faf Context paper on Zenodo (DOI 10.5281/zenodo.18251362)</li>
+			<li>
+				<strong>Thesis</strong> —
+				<a href="/blog/memory-is-vast">Memory is vast</a> ·
+				<a href="/blog/permanent-memory-instant-recall">PM.IR.</a> —
+				Permanent Memory. Instant Recall.
+			</li>
+			<li>
+				<strong>Memory paper</strong> — Zenodo
+				<a href="https://doi.org/10.5281/zenodo.20348942" target="_blank" rel="noopener"
+					>10.5281/zenodo.20348942</a
+				>
+			</li>
 		</ul>
 	</section>
 
@@ -65,21 +117,27 @@
 		<a class="cta" href="https://memory.faf.one" target="_blank" rel="noopener">Open memory.faf.one →</a>
 		<p class="links">
 			<a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">PyPI</a> ·
-			<a href="https://github.com/Wolfe-Jam/claude-fafm-sdk" target="_blank" rel="noopener">GitHub</a>
+			<a href="https://github.com/Wolfe-Jam/claude-fafm-sdk" target="_blank" rel="noopener">GitHub</a> ·
+			<a href="/blog/memory-is-vast">Memory is vast</a>
 		</p>
 		<PageActions
-			headline="Your AI forgets everything between sessions."
-			point1="Etch it once in .fafm — persistent, portable memory."
-			point2="Cross-vendor: Claude, Cursor, Grok, Gemini, one memory."
-			url="https://www.faf.one/memory"
-			hashtags="AI,Memory,fafm"
+			headline="🏁 PM.IR. — Permanent Memory. Instant Recall."
+			point1=".fafm maps it. One format. Two edges. One Soul."
+			point2="etch and forget · Nelly Never Forgets (so you can!)"
+			cta=""
+			url="https://faf.one/memory"
+			hashtags=""
 		/>
 	</section>
 
 	<section class="content footer-section">
-		<img class="nelly-mark" src="/nelly-mark.png" alt="Nelly — the .fafm orange-elephant mark" width="96" height="84" />
+		<!-- History: pixel hero above → landed mark here (early faf-cli → brand now) -->
+		<img class="nelly-mark" src="/nelly-mark.png" alt="Nelly — landed .fafm mark" width="96" height="84" />
 		<p class="footer-tagline">Nelly Never Forgets.</p>
 		<p class="footer-iana">PM.IR. — Permanent Memory. Instant Recall. · application/vnd.fafm+yaml</p>
+		<p class="footer-iana" style="margin-top: 0.35rem">
+			Technical home: <a href="https://memory.faf.one" target="_blank" rel="noopener">memory.faf.one</a>
+		</p>
 	</section>
 
 </main>
