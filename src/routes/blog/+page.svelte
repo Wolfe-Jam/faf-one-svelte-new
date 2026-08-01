@@ -37,7 +37,7 @@
 			date: 'August 1, 2026',
 			timestamp: '2026-08-01',
 			excerpt:
-				'Content-aware Go — go.mod alone ≠ backend. MCP · Gin/Echo · Cobra/cmd · library. Pure modules stay pure.',
+				'go.mod alone ≠ backend. Reads require + cmd/ — classifies MCP, Gin/Echo/Fiber/Chi, Cobra CLI, or pure library. Agents get the module you built.',
 			emoji: '🐹',
 			category: 'Release'
 		},

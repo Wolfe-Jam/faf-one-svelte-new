@@ -6,16 +6,16 @@
 		mounted = true;
 	});
 
-	// Rich X share — Go-native voice (no cross-language twin talk).
-	// Core claim matches CHANGELOG kill line: go.mod alone ≠ backend.
-	const shareText = `🏁 Just shipped: faf-cli v7.3.0 — The Go Edition
+	// Go-native share — kill line + shapes a Gopher actually ships.
+	const shareText = `🏁 faf-cli v7.3.0 — The Go Edition
 
-Content-aware Go — go.mod alone ≠ backend.
+go.mod alone ≠ backend.
 
-MCP · Gin/Echo · Cobra/cmd · library
-Pure modules stay pure
+Reads require + cmd/ · classifies:
+MCP · Gin/Echo/Fiber/Chi · Cobra · library
 
-npm i -g faf-cli@7.3.0`;
+npm i -g faf-cli@7.3.0
+cd your-module && faf auto`;
 	const shareUrl = 'https://faf.one/blog/go-edition';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
@@ -24,12 +24,12 @@ npm i -g faf-cli@7.3.0`;
 	<title>The Go Edition - faf-cli v7.3.0 | FAF</title>
 	<meta
 		name="description"
-		content="Content-aware Go — go.mod alone ≠ backend. faf-cli v7.3.0 classifies MCP · Gin/Echo/Fiber/Chi · Cobra/cmd · library from requires + layout."
+		content="go.mod alone ≠ backend. faf-cli 7.3.0 reads require paths + cmd/ layout and classifies MCP, Gin/Echo/Fiber/Chi/gRPC, Cobra CLI, or pure library for AI context."
 	/>
 	<meta property="og:title" content="The Go Edition - faf-cli v7.3.0" />
 	<meta
 		property="og:description"
-		content="Content-aware Go — go.mod alone ≠ backend. Pure modules stay pure."
+		content="go.mod alone ≠ backend. Gin stays Gin. Pure modules stay library. Agents get the module you built."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/go-edition" />
@@ -46,7 +46,7 @@ npm i -g faf-cli@7.3.0`;
 	<meta name="twitter:title" content="The Go Edition - faf-cli v7.3.0" />
 	<meta
 		name="twitter:description"
-		content="Content-aware Go — go.mod alone ≠ backend."
+		content="go.mod alone ≠ backend. Require paths + cmd/ → MCP · server · CLI · library."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/go-edition-hero.png?v=1" />
 	<meta name="twitter:image:alt" content="The Go Edition — faf-cli v7.3.0 · go.mod alone ≠ backend" />
@@ -58,9 +58,9 @@ npm i -g faf-cli@7.3.0`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Go Edition
 		</div>
 		<h1>The Go Edition</h1>
-		<p class="version-tag">faf-cli v7.3.0 · ✪</p>
+		<p class="version-tag">faf-cli v7.3.0</p>
 		<p class="subtitle">
-			<strong>Content-aware Go</strong> — <code>go.mod</code> alone ≠ backend.
+			<strong><code>go.mod</code> alone ≠ backend.</strong> AI gets the module you actually built.
 		</p>
 		<div class="meta">
 			<time datetime="2026-08-01">August 1, 2026</time>
@@ -72,7 +72,7 @@ npm i -g faf-cli@7.3.0`;
 	<div class="hero-image">
 		<img
 			src="/blog/go-edition-hero.png?v=1"
-			alt="The Go Edition — faf-cli v7.3.0. Content-aware Go — go.mod alone ≠ backend."
+			alt="The Go Edition — faf-cli v7.3.0. go.mod alone ≠ backend."
 			width="1200"
 			height="630"
 			loading="eager"
@@ -83,97 +83,147 @@ npm i -g faf-cli@7.3.0`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> <code>faf-cli</code> <strong>7.3.0</strong> — <strong>The Go Edition</strong>.
-				<strong>Content-aware Go</strong> — <code>go.mod</code> alone ≠ backend. Reads
-				<code>require</code> paths and light layout, then classifies MCP · server · CLI · library.
+				<strong>TL;DR:</strong> Point <code>faf auto</code> at a Go module. It reads your
+				<code>go.mod</code> <code>require</code> block and light layout
+				(<code>cmd/</code>, root <code>main.go</code>), then writes the right shape into
+				<code>project.faf</code> — MCP server, HTTP/RPC backend, CLI, or library. Not “some Go
+				service” because a module file exists.
 			</p>
 			<div class="terminal-block">
 				<code>npm install -g faf-cli@7.3.0</code>
-				<code>cd your-go-module && faf auto</code>
+				<code>cd your-module && faf auto && faf score</code>
 			</div>
 		</section>
 
 		<section>
-			<p class="thesis">go.mod is not a type</p>
+			<p class="thesis">Every Go project has a go.mod. Not every Go project is a backend.</p>
 			<p>
-				Most tools see <code>go.mod</code> and assume a service. Libraries, CLIs, HTTP servers, and
-				MCP servers all ship a module file — none of them are “backend” because the file is named
-				<code>go.mod</code>.
+				Libraries, CLIs, Gin APIs, gRPC services, and MCP servers all start the same way:
+				<code>module …</code> and a <code>require</code> block. If tooling only sees the filename, your
+				reusable package gets treated like a service — and the agent brief goes wrong from the first
+				line.
 			</p>
 			<p>
-				Wrong shape at the root means wrong AI context: the <code>.faf</code>, the agent brief, the
-				export. The Go Edition classifies from <strong>requires + light layout</strong> — so the context
-				matches the module you built.
-			</p>
-		</section>
-
-		<section>
-			<h2>What it classifies</h2>
-			<ul>
-				<li>
-					<strong>MCP</strong> — e.g. <code>github.com/mark3labs/mcp-go</code>,
-					<code>github.com/modelcontextprotocol/go-sdk</code> → <code>app_type: mcp</code>
-				</li>
-				<li>
-					<strong>Backend</strong> — Gin, Echo, Fiber, Chi, gRPC, Connect, and peers →
-					<code>backend</code> + framework name
-				</li>
-				<li>
-					<strong>CLI</strong> — Cobra, urfave/cli, <code>cmd/</code> layout, root
-					<code>package main</code>
-				</li>
-				<li>
-					<strong>Library</strong> — pure module, no server/CLI/MCP signal. Pure modules stay pure.
-				</li>
-			</ul>
-			<p>
-				Priority: MCP over Gin when both are present; server over Cobra; layout only when deps don’t
-				already decide.
+				<strong>The Go Edition</strong> classifies from what you already declare: module paths in
+				<code>require</code>, plus idiomatic layout when deps don’t decide.
 			</p>
 		</section>
 
 		<section>
-			<h2>How it works</h2>
-			<p>
-				One knowledge map of high-signal module paths, one classifier. Edit the map once; detection
-				stays consistent. No “every <code>go.mod</code> is a service” shortcut.
-			</p>
-			<p>
-				Proven by sixteen classification fixtures plus a brake suite that fails if a pure module is
-				forced to backend.
-			</p>
-		</section>
-
-		<section>
-			<h2>Try It</h2>
-			<div class="terminal-block">
-				<code>npm install -g faf-cli@7.3.0</code>
-				<code>npm install -g faf@7.3.0</code>
-				<code>faf auto && faf score</code>
+			<h2>What you get in project.faf</h2>
+			<div class="table-wrap">
+				<table>
+					<thead>
+						<tr>
+							<th>Your module looks like…</th>
+							<th>Classification</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<code>github.com/gin-gonic/gin</code> (or Echo / Fiber / Chi / gRPC / Connect…)
+							</td>
+							<td><code>backend</code> + framework name (e.g. Gin)</td>
+						</tr>
+						<tr>
+							<td>
+								<code>github.com/spf13/cobra</code> or <code>urfave/cli</code>
+							</td>
+							<td><code>cli</code></td>
+						</tr>
+						<tr>
+							<td><code>cmd/…/*.go</code> layout, or root <code>package main</code></td>
+							<td><code>cli</code> (layout when no server dep)</td>
+						</tr>
+						<tr>
+							<td>
+								<code>github.com/mark3labs/mcp-go</code> or
+								<code>modelcontextprotocol/go-sdk</code>
+							</td>
+							<td><code>mcp</code></td>
+						</tr>
+						<tr>
+							<td>Module only — deps like <code>golang.org/x/…</code>, no server/CLI/MCP signal</td>
+							<td><code>library</code> — pure modules stay pure</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<p>
-				Point it at a Gin API, a Cobra tool, an MCP server, or a plain library —
-				<code>project.faf</code> should say what the module actually is (e.g.
-				<code>type: backend</code>, <code>backend: Gin</code>).
+				Also recorded: your <code>module</code> path, and a short found-line (e.g.
+				<code>go.mod + github.com/gin-gonic/gin (Go backend)</code>) so the receipt is inspectable,
+				not magic.
 			</p>
 		</section>
 
 		<section>
-			<h2>The Numbers</h2>
+			<h2>Signals it reads</h2>
 			<ul>
-				<li><strong>v7.3.0</strong> — The Go Edition · August 1, 2026</li>
-				<li><strong>16 fixtures</strong> — classification contract</li>
-				<li><strong>npm</strong> — <code>faf-cli@7.3.0</code> · <code>faf@7.3.0</code></li>
+				<li>
+					<strong>require paths</strong> — single-line and parenthesized blocks; longest match wins
+					(<code>echo/v4</code> beats bare <code>echo</code>).
+				</li>
+				<li>
+					<strong>Servers known today</strong> — Gin, Echo, Fiber, Chi, Gorilla Mux, gRPC, Connect,
+					Kratos, go-zero, Hertz.
+				</li>
+				<li>
+					<strong>CLI known today</strong> — Cobra, urfave/cli, Kingpin, Kong; else
+					<code>cmd/</code> with <code>.go</code> files; else root <code>main.go</code> with
+					<code>package main</code>.
+				</li>
+				<li>
+					<strong>MCP known today</strong> — mark3labs/mcp-go, official go-sdk, and a few peers.
+				</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>Non-claims</h2>
+			<h2>When signals conflict</h2>
+			<p>Priority is fixed and intentional:</p>
+			<ol>
+				<li><strong>MCP</strong> over HTTP framework (mcp-go + Gin → <code>mcp</code>)</li>
+				<li><strong>Server</strong> over Cobra (Gin + Cobra → <code>backend</code>, framework Gin)</li>
+				<li><strong>CLI deps</strong> over layout</li>
+				<li><strong>Layout</strong> only when requires don’t already decide</li>
+				<li>Otherwise <strong>library</strong> — <code>go.mod</code> alone never means backend</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Try it on a real module</h2>
+			<div class="terminal-block">
+				<code>npm install -g faf-cli@7.3.0</code>
+				<code>cd path/to/your/module</code>
+				<code>faf auto</code>
+				<code>faf score</code>
+			</div>
 			<p>
-				We claim content-aware project-type classification from <code>go.mod</code> (+ light layout),
-				proven by the fixture suite. We do <strong>not</strong> claim every module path in the ecosystem
-				is known, or that <code>package main</code> alone proves a production service.
+				Open <code>project.faf</code>. For a Gin service you should see backend + Gin — not a
+				generic “Go project.” For a package with no server/CLI/MCP signal, you should see library.
 			</p>
+			<p class="muted-note">
+				Same binary also publishes as <code>faf@7.3.0</code> if you prefer the short package name.
+			</p>
+		</section>
+
+		<section>
+			<h2>Bounds</h2>
+			<ul>
+				<li>
+					<strong>Does:</strong> content-aware type from <code>go.mod</code> + light layout, covered by
+					a 16-fixture classification suite.
+				</li>
+				<li>
+					<strong>Does not:</strong> know every module path in the ecosystem. Unknown frameworks fall
+					through to layout or library — not a fake “backend.”
+				</li>
+				<li>
+					<strong>Does not:</strong> treat bare <code>package main</code> as proof of a production
+					HTTP service (that’s why bare main without a server dep classifies as CLI/tool).
+				</li>
+			</ul>
 		</section>
 
 		<section class="share-section">
@@ -181,7 +231,7 @@ npm i -g faf-cli@7.3.0`;
 		</section>
 
 		<section class="star-cta">
-			<p>If you like our work, consider a star on the repo — it helps others find us too.</p>
+			<p>If this saves you a wrong agent brief, a star helps the next Go module find it.</p>
 			<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="star-btn">
 				<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"
 					><path
@@ -193,7 +243,7 @@ npm i -g faf-cli@7.3.0`;
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ go.mod alone ≠ backend. 🏎️</p>
+			<p>Built with .faf ☑️ go.mod alone ≠ backend.</p>
 		</section>
 	</article>
 </div>
@@ -341,7 +391,8 @@ npm i -g faf-cli@7.3.0`;
 		color: #1a1a1a;
 	}
 
-	.post-content ul {
+	.post-content ul,
+	.post-content ol {
 		padding-left: 1.2rem;
 		margin: 0 0 1rem;
 	}
@@ -357,6 +408,45 @@ npm i -g faf-cli@7.3.0`;
 		border-radius: 4px;
 		font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
 		font-size: 0.9em;
+	}
+
+	.table-wrap {
+		overflow-x: auto;
+		margin: 0 0 1.25rem;
+		border-radius: 8px;
+		border: 1px solid #e5e5e5;
+	}
+	.post-content table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.95rem;
+	}
+	.post-content th,
+	.post-content td {
+		text-align: left;
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid #e5e5e5;
+		vertical-align: top;
+		color: #1a1a1a;
+	}
+	.post-content th {
+		background: #f7f5f0;
+		font-weight: 700;
+		font-size: 0.82rem;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+	}
+	.post-content tr:last-child td {
+		border-bottom: none;
+	}
+	.post-content td code {
+		font-size: 0.85em;
+		word-break: break-word;
+	}
+
+	.muted-note {
+		font-size: 0.9rem;
+		color: #555;
 	}
 
 	.terminal-block {
