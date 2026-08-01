@@ -228,7 +228,7 @@ One format. Two edges. One soul.`;
 				<li>Honesty bounds: lattice marker ≠ secure erase; compact ≠ wipe</li>
 			</ul>
 			<p>
-				That is navigation on both sides of the blade — remember and forget, knowledge and voice
+				That maps both sides of the blade — remember and forget, knowledge and voice
 				— not a feature checklist pretending to be a philosophy.
 			</p>
 		</section>
