@@ -54,7 +54,7 @@ One format. Two edges. One soul.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Memory is vast
 		</div>
 		<h1>Memory is vast</h1>
-		<p class="version-tag">.fafm maps it · knowledge + voice · Permanent Memory · Instant Recall</p>
+		<p class="version-tag">.fafm maps it · knowledge + voice · PM.IR.</p>
 		<p class="subtitle">One format. Two edges. One soul.</p>
 		<div class="meta">
 			<time datetime="2026-07-31">July 31, 2026</time>
@@ -165,8 +165,8 @@ One format. Two edges. One soul.`;
 			<p>
 				That is the yin-yang. Same soul file. Same verbs at the core. Different surfaces for how
 				humans meet the machine — keyboard and runtime on one edge; spoken presence on the other.
-				<a href="/blog/permanent-memory-instant-recall">Permanent Memory. Instant Recall.</a>
-				was never a single-SDK slogan. It was the thesis of a <em>vast</em> medium.
+				<a href="/blog/permanent-memory-instant-recall">PM.IR.</a> — Permanent Memory. Instant
+				Recall. — was never a single-SDK slogan. It was the thesis of a <em>vast</em> medium.
 			</p>
 		</section>
 
@@ -237,8 +237,8 @@ One format. Two edges. One soul.`;
 			<h2>Read more</h2>
 			<ul>
 				<li>
-					<a href="/blog/permanent-memory-instant-recall">Permanent Memory. Instant Recall.</a>
-					— the dual-profile launch thesis
+					<a href="/blog/permanent-memory-instant-recall">PM.IR.</a> — Permanent Memory. Instant
+					Recall. — the dual-profile launch thesis
 				</li>
 				<li>
 					<a href="/blog/voice-memory-layer">The Voice Memory Layer</a> — voice edge

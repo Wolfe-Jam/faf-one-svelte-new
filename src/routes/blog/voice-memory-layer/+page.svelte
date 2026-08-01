@@ -347,7 +347,9 @@ foundation  central       global`}</code></pre>
 			<h2>Read more</h2>
 			<p>
 				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
-				One soul. Voice is one edge of the same dual.
+				One soul. Voice is one edge of the same dual. ·
+				<a href="/blog/permanent-memory-instant-recall">PM.IR.</a> — Permanent Memory. Instant
+				Recall.
 			</p>
 		</section>
 

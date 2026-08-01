@@ -79,7 +79,7 @@
 	<section class="content footer-section">
 		<img class="nelly-mark" src="/nelly-mark.png" alt="Nelly — the .fafm orange-elephant mark" width="96" height="84" />
 		<p class="footer-tagline">Nelly Never Forgets.</p>
-		<p class="footer-iana">Permanent Memory. Instant Recall. · application/vnd.fafm+yaml</p>
+		<p class="footer-iana">PM.IR. — Permanent Memory. Instant Recall. · application/vnd.fafm+yaml</p>
 	</section>
 
 </main>

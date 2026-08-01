@@ -11,30 +11,33 @@
 		setTimeout(() => copiedId = '', 2000);
 	}
 
-	const shareText = "Permanent Memory. Instant Recall. .fafm — portable, cross-vendor AI memory in one IANA-registered format — is live. Two profiles: voice (grok-faf-voice) + knowledge (claude-fafm-sdk).";
+	const shareText = `🏁 PM.IR. — Permanent Memory. Instant Recall.
+
+.fafm — portable, cross-vendor AI memory. Two profiles: voice + knowledge.`;
 	const shareUrl = "https://faf.one/blog/permanent-memory-instant-recall";
 	const shareHref = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>
-	<title>Permanent Memory. Instant Recall. — .fafm is live | FAF</title>
-	<meta name="description" content="Portable, cross-vendor AI memory in one IANA-registered format. Two profiles — voice (grok-faf-voice) and knowledge (claude-fafm-sdk) — both live on PyPI. memory.faf.one is up." />
-	<meta property="og:title" content="Permanent Memory. Instant Recall. — .fafm is live" />
-	<meta property="og:description" content="Portable, cross-vendor AI memory in .fafm. Two profiles, one IANA-registered format. claude-fafm-sdk + grok-faf-voice on PyPI; memory.faf.one live." />
+	<title>PM.IR. — Permanent Memory. Instant Recall. | FAF</title>
+	<meta name="description" content="PM.IR. — Permanent Memory. Instant Recall. Portable, cross-vendor AI memory in one IANA-registered format. Voice + knowledge on PyPI. memory.faf.one is up." />
+	<meta property="og:title" content="PM.IR. — Permanent Memory. Instant Recall." />
+	<meta property="og:description" content="Permanent Memory. Instant Recall. Portable, cross-vendor AI memory in .fafm. Two profiles, one IANA format." />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/permanent-memory-instant-recall" />
 	<meta property="og:image" content="https://memory.faf.one/nelly-og.png" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="PM.IR. — Permanent Memory. Instant Recall." />
 	<meta name="twitter:image" content="https://memory.faf.one/nelly-og.png" />
 </svelte:head>
 
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Permanent Memory. Instant Recall.
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / PM.IR.
 		</div>
-		<h1>Permanent Memory. Instant Recall.</h1>
-		<p class="version-tag">claude-fafm-sdk v0.1.1 · grok-faf-voice v0.3.2</p>
+		<h1>PM.IR.</h1>
+		<p class="version-tag">Permanent Memory. Instant Recall.</p>
 		<p class="subtitle"><code>.fafm</code> — portable, cross-vendor AI memory — is live.</p>
 		<div class="meta">
 			<time datetime="2026-05-22">May 22, 2026</time>
@@ -46,10 +49,11 @@
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> Every AI session starts from zero, and what memory exists
-				is locked to one vendor. <code>.fafm</code> fixes both — one open, IANA-registered
-				format your agent's memory lives in, readable by Grok, Claude, and Gemini alike.
-				Two reference implementations ship today.
+				<strong>TL;DR:</strong> <strong>PM.IR.</strong> — Permanent Memory. Instant Recall.
+				Every AI session starts from zero, and what memory exists is locked to one vendor.
+				<code>.fafm</code> fixes both — one open, IANA-registered format your agent's memory
+				lives in, readable by Grok, Claude, and Gemini alike. Two reference implementations
+				ship today.
 			</p>
 		</section>
 
@@ -134,7 +138,7 @@
 			<h2>Read more</h2>
 			<p>
 				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
-				One soul. The dual-edge thesis after Permanent Memory · Instant Recall.
+				One soul. The dual-edge thesis after <strong>PM.IR.</strong>
 			</p>
 		</section>
 

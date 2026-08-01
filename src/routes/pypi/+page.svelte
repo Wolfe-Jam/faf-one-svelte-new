@@ -144,7 +144,7 @@
 	</section>
 
 	<section class="footer-section">
-		<p>Built with .faf + .fafm &#9745; Permanent Memory. Instant Recall. 🏎️</p>
+		<p>Built with .faf + .fafm &#9745; PM.IR. — Permanent Memory. Instant Recall. 🏎️</p>
 	</section>
 
 </main>

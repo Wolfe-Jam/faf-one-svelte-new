@@ -408,7 +408,9 @@ uvx claude-fafm-sdk --version`;
 			<p>
 				<strong>Knowledge cut closed. Dual still open.</strong>
 				<a href="/blog/memory-is-vast">Memory is vast</a> — .fafm maps it. One format. Two edges.
-				One soul.
+				One soul. After
+				<a href="/blog/permanent-memory-instant-recall">PM.IR.</a> — Permanent Memory. Instant
+				Recall.
 			</p>
 		</section>
 

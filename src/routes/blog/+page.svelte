@@ -398,10 +398,12 @@
 		},
 		{
 			slug: 'blog/permanent-memory-instant-recall',
-			title: 'Permanent Memory. Instant Recall.',
+			title: 'PM.IR.',
+			version: 'Permanent Memory. Instant Recall.',
 			date: 'May 22, 2026',
 			timestamp: '2026-05-22',
-			excerpt: '.fafm — portable, cross-vendor AI memory in one IANA-registered format — is live. Two profiles: voice (grok-faf-voice v0.3.2) + knowledge (claude-fafm-sdk v0.1.1), both on PyPI and cross-linked. memory.faf.one is up. Companion paper on Zenodo (10.5281/zenodo.20348942).',
+			excerpt:
+				'PM.IR. — Permanent Memory. Instant Recall. .fafm portable, cross-vendor AI memory — live. Two profiles: voice + knowledge. memory.faf.one · Zenodo 10.5281/zenodo.20348942.',
 			emoji: '🐘',
 			category: 'Launch'
 		},
