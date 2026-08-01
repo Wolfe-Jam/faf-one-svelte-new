@@ -461,11 +461,13 @@
 		margin-bottom: 0.75rem;
 	}
 
+	/* Soft code strip — light mode: warm code-bg, not locked-black voids.
+	   Dark mode: --faf-code-bg elevates to #222 (still quieter than #0a0a0a). */
 	.try-box {
 		display: flex;
 		align-items: center;
-		background: var(--faf-locked-dark);
-		border: 1px solid #1a1a1a;
+		background: var(--faf-code-bg);
+		border: 1px solid var(--faf-hairline);
 		border-radius: 6px;
 		padding: 0.75rem 1rem;
 		gap: 0.75rem;
@@ -477,7 +479,7 @@
 		flex: 1;
 		font-family: var(--font-mono);
 		font-size: 0.85rem;
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		background: none;
 		padding: 0;
 		white-space: nowrap;
@@ -641,12 +643,13 @@
 	}
 
 	/* ── Install Box ─────────────────────────────────── */
+	/* Soft code strip (not locked-dark). Light: warm #F3F1EB. Dark: #222. */
 
 	.install-box {
 		display: flex;
 		align-items: center;
-		background: var(--faf-locked-dark);
-		border: 1px solid #1a1a1a;
+		background: var(--faf-code-bg);
+		border: 1px solid var(--faf-hairline);
 		border-radius: 6px;
 		padding: 0.5rem 0.75rem;
 		margin-bottom: 0.75rem;
@@ -657,7 +660,7 @@
 		flex: 1;
 		font-family: var(--font-mono);
 		font-size: 0.8rem;
-		color: #00D4D4;
+		color: var(--faf-cyan-text);
 		background: none;
 		padding: 0;
 		white-space: nowrap;
@@ -666,9 +669,9 @@
 	}
 
 	.copy-btn {
-		background: #222;
-		color: rgba(255, 255, 255, 0.7);
-		border: 1px solid #333;
+		background: var(--faf-surface);
+		color: var(--faf-gray);
+		border: 1px solid var(--faf-hairline);
 		border-radius: 4px;
 		padding: 0.25rem 0.6rem;
 		font-size: 0.75rem;
@@ -680,15 +683,15 @@
 	}
 
 	.copy-btn:hover {
-		background: #333;
-		color: white;
-		border-color: #555;
+		background: var(--faf-section-alt);
+		color: var(--faf-ink);
+		border-color: var(--faf-border-strong);
 	}
 
 	.copy-btn.copied {
-		background: rgba(0, 191, 99, 0.2);
+		background: rgba(0, 191, 99, 0.12);
 		color: var(--faf-foundation-green);
-		border-color: rgba(0, 191, 99, 0.4);
+		border-color: rgba(0, 191, 99, 0.35);
 	}
 
 	/* ── Card Links ──────────────────────────────────── */
