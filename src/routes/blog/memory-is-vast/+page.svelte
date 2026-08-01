@@ -30,14 +30,14 @@ One format. Two edges. Things we need to remember — and things we need to forg
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/memory-is-vast" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png" />
-	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=2" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=2" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="Memory is vast — .fafm · one format, two edges · knowledge + voice"
+		content="Memory is vast — yin-yang of knowledge and voice · remember and forget · .fafm"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
@@ -47,7 +47,7 @@ One format. Two edges. Things we need to remember — and things we need to forg
 		name="twitter:description"
 		content="Remember and forget. Knowledge and voice. One format for the AI era."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=2" />
 </svelte:head>
 
 <div class="blog-post">
@@ -69,8 +69,8 @@ One format. Two edges. Things we need to remember — and things we need to forg
 
 	<div class="hero-image">
 		<img
-			src="/blog/memory-is-vast-hero.png"
-			alt="Memory is vast — .fafm · one format, two edges · knowledge and voice"
+			src="/blog/memory-is-vast-hero.png?v=2"
+			alt="Memory is vast — yin-yang dual · knowledge and voice · remember and forget · .fafm"
 			width="1200"
 			height="630"
 			loading="eager"
