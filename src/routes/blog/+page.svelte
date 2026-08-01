@@ -39,7 +39,9 @@
 			excerpt:
 				'Remember and forget — often at a cost. AI does not erode like we do… or does it? .fafm is double-edged: knowledge and voice. Past, present, future.',
 			emoji: '☯',
-			category: 'Memory'
+			// Custom = one-off black/white single-word pill (not a permanent category ladder)
+			category: 'Custom',
+			label: 'MEMORY'
 		},
 		{
 			slug: 'blog/compactable-memory',
@@ -1243,12 +1245,14 @@
 		}
 	];
 
-	const categoryOrder = ['Release', 'Launch', 'Memory', 'Foundation', 'Research', 'Milestone', 'Interop', 'Story', 'Grok', 'WJTTC', 'Engineering', 'Press Release'];
+	// Custom = rare one-off black pill + white single word via post.label (e.g. MEMORY).
+	// Not part of the permanent 11-category ladder — use when the post needs a bespoke tag.
+	const categoryOrder = ['Release', 'Launch', 'Custom', 'Foundation', 'Research', 'Milestone', 'Interop', 'Story', 'Grok', 'WJTTC', 'Engineering', 'Press Release'];
 
 	const categoryColor = {
 		'Release': '#00B8B8',
 		'Launch': 'var(--faf-orange)',
-		'Memory': '#1a1a1a',
+		'Custom': '#1a1a1a',
 		'Foundation': '#1D8348',
 		'Research': '#4A90E2',
 		'Press Release': '#666',
@@ -1259,6 +1263,18 @@
 		'Interop': '#7D3C98',
 		'Engineering': '#4A5568'
 	};
+
+	function categoryStyle(post) {
+		const bg = categoryColor[post.category] ?? '#1a1a1a';
+		if (post.category === 'Milestone') return `background: ${bg}; color: var(--faf-locked-dark-hover)`;
+		if (post.category === 'Custom') return `background: #1a1a1a; color: #fff`;
+		return `background: ${bg}; color: #fff`;
+	}
+
+	function categoryText(post) {
+		if (post.category === 'Custom' && post.label) return post.label;
+		return post.category;
+	}
 
 	let sortedPosts = $derived(
 		sortBy === 'oldest'
@@ -1332,7 +1348,7 @@
 							{post.emoji}
 						{/if}
 					</div>
-					<div class="post-category" style="background: {categoryColor[post.category] ?? '#1a1a1a'}; color: {post.category === 'Milestone' ? 'var(--faf-locked-dark-hover)' : '#fff'}">{post.category === 'Memory' ? 'MEMORY' : post.category}</div>
+					<div class="post-category" style={categoryStyle(post)}>{categoryText(post)}</div>
 					<h2>{post.title}</h2>
 					{#if post.version}<div class="post-version">{post.version}</div>{/if}
 					<p class="post-excerpt">{post.excerpt}</p>
@@ -1355,7 +1371,7 @@
 					</span>
 					<span class="list-title">{post.title}</span>
 					{#if post.version}<span class="list-version">{post.version}</span>{/if}
-					<span class="list-category" style="background: {categoryColor[post.category]}{post.category === 'Milestone' ? '; color: var(--faf-locked-dark-hover)' : post.category === 'Memory' ? '; color: #fff' : ''}">{post.category === 'Memory' ? 'MEMORY' : post.category}</span>
+					<span class="list-category" style={categoryStyle(post)}>{categoryText(post)}</span>
 				</a>
 			{/each}
 		</div>
@@ -1515,7 +1531,7 @@
 	/* Category border colours (11 consolidated) */
 	.post-card[data-category="Release"] { border-color: #00B8B8; }
 	.post-card[data-category="Launch"] { border-color: var(--faf-orange); }
-	.post-card[data-category="Memory"] { border-color: #1a1a1a; }
+	.post-card[data-category="Custom"] { border-color: #1a1a1a; }
 	.post-card[data-category="Foundation"] { border-color: #1D8348; }
 	.post-card[data-category="Research"] { border-color: #4A90E2; }
 	.post-card[data-category="Press Release"] { border-color: #666; }
@@ -1602,7 +1618,7 @@
 		background: #1a1a1a;
 	}
 
-	.post-card[data-category="Memory"] .post-category {
+	.post-card[data-category="Custom"] .post-category {
 		background: #1a1a1a;
 		color: #fff;
 	}
