@@ -7,47 +7,45 @@
 		mounted = true;
 	});
 
-	const shareText = `🏁 Memory is vast.
+	const shareText = `🏁 Memory is vast. .fafm maps it.
 
-One format. Two edges. Things we need to remember — and things we need to forget.
-
-.fafm navigates both: knowledge + voice. Past, present, future.`;
+One format. Two edges. Knowledge + voice. Remember and forget.`;
 	const shareUrl = 'https://faf.one/blog/memory-is-vast';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>
-	<title>Memory is vast — .fafm · knowledge + voice | FAF</title>
+	<title>Memory is vast · .fafm maps it | FAF</title>
 	<meta
 		name="description"
-		content="Memory is vast. Humans need to remember and forget — often at a cost. AI does not erode like we do… or does it? .fafm is double-edged: knowledge and voice. One format navigating both sides."
+		content="Memory is vast. .fafm maps it — knowledge and voice, remember and forget. One IANA format for the AI era."
 	/>
-	<meta property="og:title" content="Memory is vast — .fafm · knowledge + voice" />
+	<meta property="og:title" content="Memory is vast · .fafm maps it" />
 	<meta
 		property="og:description"
-		content="Remember and forget. Knowledge and voice. One IANA format for the AI era — with unerring consideration for past, present, and future."
+		content="One format. Two edges. Knowledge and voice. Remember and forget."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/memory-is-vast" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=3" />
-	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=3" />
+	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=4" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=4" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="Memory is vast — yin-yang dual · orange Nelly · knowledge + voice · .fafm"
+		content="Memory is vast · .fafm maps it — orange Nelly · knowledge + voice"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
-	<meta name="twitter:title" content="Memory is vast — .fafm · knowledge + voice" />
+	<meta name="twitter:title" content="Memory is vast · .fafm maps it" />
 	<meta
 		name="twitter:description"
-		content="Remember and forget. Knowledge and voice. One format for the AI era."
+		content="One format. Two edges. Knowledge and voice. Remember and forget."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=3" />
+	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=4" />
 </svelte:head>
 
 <div class="blog-post">
@@ -56,7 +54,7 @@ One format. Two edges. Things we need to remember — and things we need to forg
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Memory is vast
 		</div>
 		<h1>Memory is vast</h1>
-		<p class="version-tag">.fafm · knowledge + voice · Permanent Memory · Instant Recall</p>
+		<p class="version-tag">.fafm maps it · knowledge + voice · Permanent Memory · Instant Recall</p>
 		<p class="subtitle">
 			One format. Two edges. The things we need to hold — and the things we need to let go.
 		</p>
@@ -69,8 +67,8 @@ One format. Two edges. Things we need to remember — and things we need to forg
 
 	<div class="hero-image">
 		<img
-			src="/blog/memory-is-vast-hero.png?v=3"
-			alt="Memory is vast — yin-yang dual · orange Nelly · knowledge and voice · .fafm"
+			src="/blog/memory-is-vast-hero.png?v=4"
+			alt="Memory is vast · .fafm maps it — orange Nelly · knowledge and voice"
 			width="1200"
 			height="630"
 			loading="eager"
