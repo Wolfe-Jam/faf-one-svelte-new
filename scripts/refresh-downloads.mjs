@@ -8,6 +8,11 @@
  * file structure (descriptions, install commands, URLs, icons) stays
  * hand-curated.
  *
+ * HARD FLOOR METER (locked 2026-08-01 — FAF don't lie):
+ *   • npm / crates.io — registry totals as reported
+ *   • PyPI — pypistats `without_mirrors` ONLY (no bot/mirror inflation)
+ * Banner + /downloads grand total = this meter. No soft dual-clock.
+ *
  * Package list mirrors the /downloads skill. To add a package to the
  * auto-refresh: add it here AND to packages.ts (with initial downloads
  * value); next run will start updating it.
@@ -26,11 +31,11 @@ const NPM = [
 	'faf-wasm-core', 'faf-wasm-sdk', 'faf-wasm'
 ];
 const PYPI = [
-	'gemini-faf-mcp', 'faf-python-sdk', 'faf-agent-mcp',
+	'gemini-faf-mcp', 'claude-fafm-sdk', 'faf-python-sdk', 'faf-agent-mcp',
 	'grok-faf-voice', 'slash-tokens'
 ];
 const CRATES = [
-	'faf-rust-sdk', 'rust-faf-mcp', 'faf', 'faf-radio-rust', 'mcpaas'
+	'faf-rust-sdk', 'rust-faf-mcp', 'faf', 'faf-radio-rust', 'mcpaas', 'slash-tokens'
 ];
 
 async function fetchNpm(name) {
@@ -42,11 +47,16 @@ async function fetchNpm(name) {
 }
 
 async function fetchPypi(name) {
+	// HARD FLOOR: without_mirrors only. Summing all rows (with_mirrors +
+	// without_mirrors) double-counts and includes mirror/bot traffic.
+	// Matches /downloads skill + /pypi page doctrine. FAF don't lie.
 	try {
 		const r = await fetch(`https://pypistats.org/api/packages/${name}/overall`);
 		const d = await r.json();
 		if (!Array.isArray(d.data)) return null;
-		return d.data.reduce((s, x) => s + (x.downloads || 0), 0);
+		const rows = d.data.filter((x) => x.category === 'without_mirrors');
+		if (rows.length === 0) return null;
+		return rows.reduce((s, x) => s + (x.downloads || 0), 0);
 	} catch { return null; }
 }
 
@@ -122,7 +132,7 @@ if (successes === 0) {
 	process.exit(1);
 }
 
-console.log(`Live grand total (auto-tracked packages only): ${runningTotal.toLocaleString()}`);
+console.log(`Live grand total HARD FLOOR (npm + PyPI without_mirrors + crates): ${runningTotal.toLocaleString()}`);
 console.log(`(Manually-tracked packages in packages.ts contribute additional counts.)\n`);
 
 // ── Patch packages.ts in place ────────────────────────────────────

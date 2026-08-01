@@ -71,8 +71,11 @@
 </script>
 
 <svelte:head>
-	<title>Downloads - FAF Ecosystem | 16 Packages, 3 Registries</title>
-	<meta name="description" content="43k+ downloads across npm, PyPI, and crates.io. Install FAF CLI, MCP servers, SDKs, and more." />
+	<title>Downloads - FAF Ecosystem | 3 Registries · Hard Floor</title>
+	<meta
+		name="description"
+		content="Ecosystem downloads hard floor: npm + crates.io + PyPI without_mirrors only. No mirror inflation. Install FAF CLI, MCP servers, SDKs."
+	/>
 </svelte:head>
 
 <div class="back-nav">
@@ -84,8 +87,11 @@
 	<section class="hero">
 		<div class="container">
 			<h1 class="big-number">{formatTotal(grandTotal)}</h1>
-			<p class="hero-sub">Ecosystem Downloads</p>
-			<p class="hero-detail">{allPackages.length} packages &middot; 3 registries &middot; All open source</p>
+			<p class="hero-sub">Ecosystem Downloads · Hard Floor</p>
+			<p class="hero-detail">
+				{allPackages.length} packages &middot; 3 registries &middot; PyPI without_mirrors only &middot; All
+				open source
+			</p>
 
 			<div class="registry-badges">
 				<a href="#npm" class="registry-badge npm-badge">

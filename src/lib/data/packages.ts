@@ -5,6 +5,10 @@
  *   • /routes/+layout.server.ts (header banner — formatTotal(grandTotal))
  *   • /routes/downloads/+page.svelte (full table)
  *
+ * HARD FLOOR METER (locked 2026-08-01):
+ *   npm + crates.io as reported · PyPI = pypistats without_mirrors only.
+ *   Banner and public totals use this meter only — no mirror inflation.
+ *
  * Verified: 2026-08-01 (refreshed via /downloads skill — all 3 registries live)
  * Auto-refresh: scripts/refresh-downloads.mjs (run daily via GH Actions)
  *
@@ -161,13 +165,13 @@ export const npmPackages: Package[] = [
 	}
 ];
 
-// ── PyPI packages (5) ─────────────────────────────────────────────
+// ── PyPI packages (6) ─────────────────────────────────────────────
 
 export const pypiPackages: Package[] = [
 	{
 		name: 'gemini-faf-mcp',
 		description: 'Google Gemini MCP server',
-		downloads: 15_089,
+		downloads: 3_538,
 		install: 'pip install gemini-faf-mcp',
 		registryUrl: 'https://pypi.org/project/gemini-faf-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
@@ -175,9 +179,19 @@ export const pypiPackages: Package[] = [
 		icon: '💎'
 	},
 	{
+		name: 'claude-fafm-sdk',
+		description: 'Claude .fafm Memory SDK — portable agent memory',
+		downloads: 1_914,
+		install: 'pip install claude-fafm-sdk',
+		registryUrl: 'https://pypi.org/project/claude-fafm-sdk/',
+		githubUrl: 'https://github.com/Wolfe-Jam/claude-fafm-sdk',
+		registry: 'pypi',
+		icon: '🧡'
+	},
+	{
 		name: 'faf-python-sdk',
 		description: 'Python SDK for .faf files',
-		downloads: 6_636,
+		downloads: 1_977,
 		install: 'pip install faf-python-sdk',
 		registryUrl: 'https://pypi.org/project/faf-python-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-python-sdk',
@@ -187,7 +201,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-agent-mcp',
 		description: 'Voice of FAF — MCP server',
-		downloads: 3_746,
+		downloads: 820,
 		install: 'uvx faf-agent-mcp',
 		registryUrl: 'https://pypi.org/project/faf-agent-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-agent',
@@ -197,7 +211,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'grok-faf-voice',
 		description: 'Voice Memory Layer — LiveKit + xAI Grok',
-		downloads: 4_265,
+		downloads: 1_085,
 		install: 'pip install grok-faf-voice',
 		registryUrl: 'https://pypi.org/project/grok-faf-voice/',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-voice',
@@ -207,7 +221,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization (Python placeholder)',
-		downloads: 2_033,
+		downloads: 431,
 		install: 'pip install slash-tokens',
 		registryUrl: 'https://pypi.org/project/slash-tokens/',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
@@ -222,7 +236,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-rust-sdk',
 		description: 'Rust SDK for .faf files',
-		downloads: 656,
+		downloads: 663,
 		install: 'cargo add faf-rust-sdk',
 		registryUrl: 'https://crates.io/crates/faf-rust-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
@@ -272,7 +286,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization (Rust)',
-		downloads: 22,
+		downloads: 38,
 		install: 'cargo add slash-tokens',
 		registryUrl: 'https://crates.io/crates/slash-tokens',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
