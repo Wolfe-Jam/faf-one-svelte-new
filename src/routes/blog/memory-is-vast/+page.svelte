@@ -28,14 +28,14 @@ One format. Two edges. One soul.`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/memory-is-vast" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=5" />
-	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=5" />
+	<meta property="og:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=6" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog/memory-is-vast-hero.png?v=6" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="Memory is vast. .fafm maps it — One format. Two edges. One soul. — orange Nelly"
+		content="Memory is vast. .fafm maps it — split dual · yin-yang · orange Nelly · One format. Two edges. One soul."
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
@@ -45,7 +45,7 @@ One format. Two edges. One soul.`;
 		name="twitter:description"
 		content="One format. Two edges. One soul."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=5" />
+	<meta name="twitter:image" content="https://faf.one/blog/memory-is-vast-hero.png?v=6" />
 </svelte:head>
 
 <div class="blog-post">
@@ -65,8 +65,8 @@ One format. Two edges. One soul.`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/memory-is-vast-hero.png?v=5"
-			alt="Memory is vast. .fafm maps it — One format. Two edges. One soul. — orange Nelly"
+			src="/blog/memory-is-vast-hero.png?v=6"
+			alt="Memory is vast. .fafm maps it — split dual · yin-yang · orange Nelly · One format. Two edges. One soul."
 			width="1200"
 			height="630"
 			loading="eager"
