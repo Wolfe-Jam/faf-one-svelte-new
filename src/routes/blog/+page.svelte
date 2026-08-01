@@ -37,7 +37,7 @@
 			date: 'August 1, 2026',
 			timestamp: '2026-08-01',
 			excerpt:
-				'go.mod alone ≠ backend. Reads require + cmd/ — classifies MCP, Gin/Echo/Fiber/Chi, Cobra CLI, or pure library. Agents get the module you built.',
+				'What it is · why it exists · what’s in it for Go devs. go.mod alone ≠ backend — agents get Gin, Cobra, MCP, or library, not a generic service.',
 			emoji: '🐹',
 			category: 'Release'
 		},
