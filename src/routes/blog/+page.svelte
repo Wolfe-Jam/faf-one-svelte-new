@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/go-edition',
+			title: 'The Go Edition',
+			version: 'faf-cli v7.3.0',
+			date: 'August 1, 2026',
+			timestamp: '2026-08-01',
+			excerpt:
+				'Content-aware Go — go.mod alone ≠ backend. MCP · Gin/Echo · Cobra/cmd · library. Same composition pattern as the Dart Edition.',
+			emoji: '🐹',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/dart-knowledge-v2',
 			title: 'Dart/Flutter knowledge v2',
 			version: 'faf-cli v7.2.1',
