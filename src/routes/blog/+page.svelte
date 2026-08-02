@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/csharp-edition',
+			title: 'The C# Edition',
+			version: 'faf-cli v7.4.0',
+			date: 'August 2, 2026',
+			timestamp: '2026-08-02',
+			excerpt:
+				'What it is · why it exists · what’s in it for .NET devs. .csproj alone ≠ type — ASP.NET Core, Worker, MCP, CLI, or class library. Classlibs stay classlibs.',
+			emoji: '💠',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/go-edition',
 			title: 'The Go Edition',
 			version: 'faf-cli v7.3.0',
