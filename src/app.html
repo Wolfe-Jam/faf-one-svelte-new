@@ -110,6 +110,11 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
+		<!-- Cloudflare Scrape Shield "Email Address Obfuscation" false-positives on
+		     npm package@version (e.g. faf-cli@7.4.0 → broken email-protection links).
+		     Developer site: install commands must copy-paste clean. CF official escape:
+		     https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+		<!--email_off-->
 		<div style="display: contents">%sveltekit.body%</div>
 
 		<!-- Floating Foundation Badge (top-right). HOME twin lives in +layout.svelte
@@ -119,5 +124,6 @@
 				<path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
 		</a>
+		<!--email_on-->
 	</body>
 </html>
