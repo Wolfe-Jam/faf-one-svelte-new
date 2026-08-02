@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { buildShareIntent } from '$lib/shareIntent.js';
+	import NpmPkg from '$lib/NpmPkg.svelte';
 	let mounted = false;
 	onMount(() => {
 		mounted = true;
@@ -87,7 +88,7 @@ cd your-module && faf auto`;
 				<code>go.mod</code> exists. Kill line: <strong><code>go.mod</code> alone ≠ backend.</strong>
 			</p>
 			<div class="terminal-block">
-				<code>npm install -g faf-cli@7.3.0</code>
+				<code>npm install -g <NpmPkg name="faf-cli" version="7.3.0" /></code>
 				<code>cd your-module && faf auto && faf score</code>
 			</div>
 		</section>
@@ -193,7 +194,7 @@ cd your-module && faf auto`;
 		<section>
 			<h2>Try it</h2>
 			<div class="terminal-block">
-				<code>npm install -g faf-cli@7.3.0</code>
+				<code>npm install -g <NpmPkg name="faf-cli" version="7.3.0" /></code>
 				<code>cd path/to/your/module</code>
 				<code>faf auto</code>
 				<code>faf score</code>
@@ -203,7 +204,8 @@ cd your-module && faf auto`;
 				server/CLI/MCP signal should show library.
 			</p>
 			<p class="muted-note">
-				Same binary also on npm as <code>faf@7.3.0</code> if you want the short name.
+				Same binary also on npm as <code><NpmPkg name="faf" version="7.3.0" /></code> if you want the
+				short name.
 			</p>
 		</section>
 
