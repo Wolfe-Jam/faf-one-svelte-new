@@ -48,7 +48,7 @@
 			date: 'August 1, 2026',
 			timestamp: '2026-08-01',
 			excerpt:
-				'pubspec ≠ Flutter. Content-aware Dart AI can trust — same Dart Edition architecture, fresher knowledge map. Pure Dart stays Dart · one JSON, CLI + SDKs compose.',
+				'What it is · why it exists · what’s in it for Dart & Flutter devs. pubspec ≠ Flutter — fresher knowledge map, pure Dart stays Dart. Feedback welcome.',
 			emoji: '🎯',
 			category: 'Release'
 		},

@@ -6,15 +6,15 @@
 		mounted = true;
 	});
 
-	// Rich X share — formula + cold open; OG card carries description/image.
-	const shareText = `🏁 Just shipped: faf-cli v7.2.1 — Dart/Flutter knowledge v2
+	// Dart/Flutter audience share — kill line + wins, no internal composition talk.
+	const shareText = `🏁 faf-cli v7.2.1 — Dart/Flutter knowledge v2
 
-pubspec ≠ Flutter. Content-aware Dart AI can trust.
+What: content-aware Dart for AI context
+Why: pubspec ≠ Flutter
+For you: pure Dart stays Dart · Flutter only when Flutter
 
-Pure Dart stays Dart · one JSON, CLI + SDKs compose
-Community receipt · Riverpod · Beamer · Jaspr · MCP
-
-npm i -g faf-cli@7.2.1`;
+npm i -g faf-cli@7.2.1
+cd your-repo && faf auto`;
 	const shareUrl = 'https://faf.one/blog/dart-knowledge-v2';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
@@ -63,10 +63,10 @@ npm i -g faf-cli@7.2.1`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Dart/Flutter knowledge v2
 		</div>
 		<h1>Dart/Flutter knowledge v2</h1>
-		<p class="version-tag">faf-cli v7.2.1 · community receipt · ✪</p>
+		<p class="version-tag">faf-cli v7.2.1 · community receipt</p>
 		<p class="subtitle">
-			<strong>pubspec ≠ Flutter.</strong> Content-aware Dart AI can trust — same architecture as
-			<a href="/blog/dart-edition">The Dart Edition</a>, fresher knowledge map.
+			What it is · why it exists · what’s in it for Dart &amp; Flutter devs —
+			<strong>pubspec ≠ Flutter.</strong>
 		</p>
 		<div class="meta">
 			<time datetime="2026-08-01">August 1, 2026</time>
@@ -102,119 +102,119 @@ npm i -g faf-cli@7.2.1`;
 		</section>
 
 		<section>
-			<p class="thesis">Why the Dart Edition exists</p>
+			<h2>What it is</h2>
 			<p>
-				Most tools see <code>pubspec.yaml</code> and shout “Flutter.” That’s a lie often enough to
-				matter. Pure Dart packages, CLIs, Shelf servers, Serverpod backends, Dart Frog apps, and
-				MCP servers all ship a pubspec — and none of them are Flutter just because the file is named
-				that way.
+				Content-aware Dart &amp; Flutter detection in <code>faf-cli</code>. You run
+				<code>faf auto</code> on a repo with <code>pubspec.yaml</code>; it classifies from what the
+				pubspec <em>contains</em> — not from the filename — and writes that shape into
+				<code>project.faf</code> so agents know whether they’re in a Flutter app, a pure Dart
+				package, a server, a CLI, or an MCP.
 			</p>
 			<p>
-				When AI context is wrong at the root, everything downstream is wrong: the
-				<code>.faf</code>, the agent brief, the export. The Dart Edition fixed the root —
-				<strong>content-aware classification</strong> — so AI gets the project you actually built.
+				<strong>Knowledge v2</strong> (this release) is a fresher dependency map on that same
+				architecture — not a rewrite. Origin receipt:
+				<a href="/blog/dart-edition">Run It, Don't Grep It — The Dart Edition</a>.
 			</p>
 		</section>
 
 		<section>
-			<h2>The benefits (still the point)</h2>
+			<h2>Why it exists</h2>
+			<p class="thesis">Every Dart project has a pubspec. Not every Dart project is Flutter.</p>
+			<p>
+				Most tools see <code>pubspec.yaml</code> and shout “Flutter.” Pure Dart packages, CLIs, Shelf
+				servers, Serverpod backends, Dart Frog apps, and MCP servers all ship a pubspec — none of them
+				are Flutter just because the file is named that way.
+			</p>
+			<p>
+				Wrong shape at the root means wrong AI context: the agent brief, the export, the next edit.
+				Kill line: <strong>pubspec ≠ Flutter.</strong>
+			</p>
+		</section>
+
+		<section>
+			<h2>What’s in it for Dart &amp; Flutter devs</h2>
 			<ul>
 				<li>
 					<strong>Flutter only when it’s Flutter.</strong> The <code>flutter</code> SDK dep is the
 					signal — not the filename. Pure Dart stays Dart.
 				</li>
 				<li>
-					<strong>Real project shape, not a single bucket.</strong> Flutter app vs reusable package ·
-					Dart server · CLI · MCP · library — so the <code>.faf</code> reads like an engineer who
-					opened the repo.
+					<strong>Real project shape.</strong> Flutter app vs package · Dart server · CLI · MCP ·
+					library — so the <code>.faf</code> reads like an engineer who opened the repo.
 				</li>
 				<li>
 					<strong>Stack signals that matter.</strong> State (Riverpod, Bloc, Hooks…), routing
-					(go_router, Beamer…), server frameworks (Serverpod, Dart Frog, Shelf, Jaspr…) — written
-					into context the agent can use.
+					(go_router, Beamer…), servers (Serverpod, Dart Frog, Shelf, Jaspr…) — written into context
+					the agent can use.
 				</li>
 				<li>
-					<strong>One knowledge file, many surfaces.</strong>
-					<code>src/detect/dart-detection.json</code> is the single source. Logic lives in
-					<code>dart.ts</code>. faf-cli imports it; SDKs and MCPs compose it. No forked parsers
-					drifting apart.
-				</li>
-				<li>
-					<strong>Parity, not vibes.</strong> Twenty shared fixtures —
-					<code>faf-cli</code> ↔ <code>faf-python-sdk</code> — same pubspecs, same answers. If the
-					engines diverge, a suite goes red.
+					<strong>Zero new config.</strong> Uses the pubspec you already ship. No tags, no extra
+					manifest.
 				</li>
 			</ul>
-			<p>
-				That’s the beef. Knowledge v2 doesn’t replace it — it keeps the map honest as the ecosystem
-				moves.
-			</p>
 		</section>
 
 		<section>
 			<h2>What’s new in v2</h2>
-			<p>
-				Same architecture. Fresher detection knowledge. High-signal deps the community actually
-				ships with:
-			</p>
+			<p>Fresher high-signal deps the community actually ships with:</p>
 			<ul>
 				<li><strong>State:</strong> <code>riverpod_annotation</code>, <code>flutter_hooks</code></li>
 				<li><strong>Routing:</strong> <code>beamer</code>, <code>routemaster</code></li>
 				<li><strong>Servers:</strong> <code>jaspr</code>, <code>relic</code></li>
 				<li><strong>MCP:</strong> <code>dart_mcpserver</code></li>
 			</ul>
-			<p>
-				Edit the JSON once — composed surfaces inherit. No new detector fork. No “this MCP knows
-				Beamer but that one doesn’t.”
-			</p>
 		</section>
 
 		<section>
-			<h2>Composition pattern</h2>
-			<p>
-				This is how FAF bolsters a language without rewriting kernels: a
-				<strong>content-aware detector</strong> + a <strong>single-source knowledge map</strong> +
-				<strong>parity fixtures</strong>. Dart was the proof. The same shape is how the next host
-				languages get honest detection — not five hand-maintained greps.
-			</p>
-			<p>
-				Origin story (the public grep that found the gap):
-				<a href="/blog/dart-edition">Run It, Don't Grep It — The Dart Edition</a>.
-			</p>
-		</section>
-
-		<section>
-			<h2>Try It</h2>
+			<h2>Try it</h2>
 			<div class="terminal-block">
 				<code>npm install -g faf-cli@7.2.1</code>
-				<code># dual publish works too:</code>
-				<code>npm install -g faf@7.2.1</code>
-				<code>faf auto</code>
-				<code>faf score</code>
+				<code>cd your-dart-or-flutter-repo</code>
+				<code>faf auto && faf score</code>
 			</div>
 			<p>
 				Point it at a Flutter app, a pure Dart package, a Shelf server, or a Dart MCP — the
 				<code>.faf</code> should say what the pubspec actually describes.
 			</p>
+			<p class="muted-note">
+				Same binary also on npm as <code>faf@7.2.1</code> if you want the short name.
+			</p>
 		</section>
 
 		<section>
-			<h2>The Numbers</h2>
+			<h2>Bounds</h2>
 			<ul>
-				<li><strong>v7.2.1</strong> — released August 1, 2026</li>
-				<li><strong>Dart/Flutter knowledge v2</strong> — community receipt on 6.13.0 architecture</li>
-				<li><strong>20 shared fixtures</strong> — CLI ↔ Python SDK parity</li>
-				<li><strong>Single-source JSON</strong> — edit once, compose everywhere</li>
-				<li><strong>npm</strong> — <code>faf-cli@7.2.1</code> · <code>faf@7.2.1</code></li>
+				<li>
+					<strong>Does:</strong> content-aware Dart/Flutter classification from pubspec content
+					(parity suite: 20 shared fixtures).
+				</li>
+				<li>
+					<strong>Does not:</strong> know every package on pub.dev, or treat every pubspec as Flutter.
+				</li>
 			</ul>
 		</section>
 
-		<section class="share-section">
-			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
+		<section class="feedback-invite">
+			<h2>Feedback welcome</h2>
+			<p>
+				Missed a package you ship with? Wrong shape on a real pubspec? Tell us — we will build more.
+				The detection map grows from what Dart &amp; Flutter developers actually use.
+			</p>
+			<div class="feedback-actions">
+				<a
+					href="https://github.com/Wolfe-Jam/faf-cli/issues/new?title=Dart%2FFlutter%20detection%3A%20&amp;body=pubspec%20shape%20%2F%20snippet%20%28redact%20secrets%29%3A%0A%0AExpected%3A%0A%0AGot%3A%0A"
+					target="_blank"
+					rel="noopener"
+					class="feedback-btn"
+				>
+					Open a GitHub issue
+				</a>
+				<a href={xIntent} target="_blank" rel="noopener" class="feedback-btn secondary">Post on X</a>
+			</div>
 		</section>
 
 		<section class="star-cta">
-			<p>If you like our work, consider a star on the repo — it helps others find us too.</p>
+			<p>If this saves you a wrong agent brief, a star helps the next package find it.</p>
 			<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="star-btn">
 				<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"
 					><path
@@ -401,6 +401,54 @@ npm i -g faf-cli@7.2.1`;
 		padding: 0;
 		font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
 		font-size: 0.95rem;
+	}
+
+	.muted-note {
+		font-size: 0.9rem;
+		color: #555;
+	}
+
+	.feedback-invite {
+		margin-top: 1rem;
+		padding: 1.5rem 1.35rem;
+		background: #f7f5f0;
+		border-radius: 10px;
+		border-left: 4px solid #00d4d4;
+	}
+	.feedback-invite h2 {
+		margin-top: 0;
+	}
+	.feedback-invite p {
+		margin-bottom: 1.15rem;
+	}
+	.feedback-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+	}
+	.feedback-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.65rem 1.2rem;
+		border-radius: 6px;
+		font-size: 0.92rem;
+		font-weight: 700;
+		text-decoration: none;
+		background: #1a1a1a;
+		color: #fff !important;
+	}
+	.feedback-btn:hover {
+		background: #000;
+		text-decoration: none !important;
+	}
+	.feedback-btn.secondary {
+		background: transparent;
+		color: #1a1a1a !important;
+		border: 2px solid #1a1a1a;
+	}
+	.feedback-btn.secondary:hover {
+		background: #1a1a1a;
+		color: #fff !important;
 	}
 
 	.share-section {
