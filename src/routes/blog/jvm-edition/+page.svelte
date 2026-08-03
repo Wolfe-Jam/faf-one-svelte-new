@@ -25,12 +25,12 @@ cd your-project && faf auto`;
 	<title>The JVM Edition - faf-cli v7.5.1 | FAF</title>
 	<meta
 		name="description"
-		content="The JVM Edition: what it is, why it exists, what’s in it for Java & Kotlin/JVM devs. pom / gradle alone ≠ type — agents get Spring Boot, Quarkus, MCP, CLI, library, or Android."
+		content="Content-aware JVM — pom / gradle alone ≠ type. One brand JVM (Java + Kotlin/JVM). Agents get Spring Boot, Quarkus, MCP, CLI, library, or Android — not a guess from the build file alone."
 	/>
 	<meta property="og:title" content="The JVM Edition - faf-cli v7.5.1" />
 	<meta
 		property="og:description"
-		content="What it is · why it exists · what’s in it for JVM devs. pom / gradle alone ≠ type."
+		content="Content-aware JVM — pom / gradle alone ≠ type. One brand JVM."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/jvm-edition" />
@@ -47,7 +47,7 @@ cd your-project && faf auto`;
 	<meta name="twitter:title" content="The JVM Edition - faf-cli v7.5.1" />
 	<meta
 		name="twitter:description"
-		content="What it is · why it exists · what’s in it for JVM devs. pom / gradle alone ≠ type."
+		content="Content-aware JVM — pom / gradle alone ≠ type. One brand JVM."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/jvm-edition-hero.png?v=2" />
 	<meta name="twitter:image:alt" content="The JVM Edition — faf-cli v7.5.1 · pom / gradle alone ≠ type" />
@@ -60,7 +60,9 @@ cd your-project && faf auto`;
 		</div>
 		<h1>The JVM Edition</h1>
 		<p class="version-tag">faf-cli v7.5.1</p>
-		<p class="subtitle">What it is · why it exists · what’s in it for JVM devs</p>
+		<p class="subtitle">
+			Content-aware JVM — <code>pom</code> / <code>gradle</code> alone ≠ type
+		</p>
 		<div class="meta">
 			<time datetime="2026-08-03">August 3, 2026</time>
 			<span class="separator">•</span>

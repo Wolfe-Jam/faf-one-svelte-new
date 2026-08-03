@@ -37,7 +37,7 @@
 			date: 'August 3, 2026',
 			timestamp: '2026-08-03',
 			excerpt:
-				'What it is · why it exists · what’s in it for JVM devs. pom / gradle alone ≠ type — and bare files ≠ Spring on tech_stack (7.5.1). One brand JVM.',
+				'Content-aware JVM — pom / gradle alone ≠ type. One brand JVM · bare files ≠ Spring on tech_stack (7.5.1).',
 			emoji: '☕',
 			category: 'Release'
 		},
@@ -48,7 +48,7 @@
 			date: 'August 2, 2026',
 			timestamp: '2026-08-02',
 			excerpt:
-				'What it is · why it exists · what’s in it for .NET devs. .csproj alone ≠ type — ASP.NET Core, Worker, MCP, CLI, or class library. Classlibs stay classlibs.',
+				'Content-aware C# — .csproj alone ≠ type. ASP.NET Core, Worker, MCP, CLI, or class library. Classlibs stay classlibs.',
 			emoji: '💠',
 			category: 'Release'
 		},
