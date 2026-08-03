@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/ruby-edition',
+			title: 'The Ruby Edition',
+			version: 'faf-cli v7.6.0',
+			date: 'August 3, 2026',
+			timestamp: '2026-08-03',
+			excerpt:
+				'Content-aware Ruby — Gemfile alone ≠ Rails. Pure gems stay pure gems. MCP · Rails · Sinatra · CLI · library.',
+			emoji: '💎',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/jvm-edition',
 			title: 'The JVM Edition',
 			version: 'faf-cli v7.5.1',
