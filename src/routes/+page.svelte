@@ -54,18 +54,18 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/jvm-edition" class="ticker-item"><b>faf-cli 7.5.1</b> The JVM Edition — pom / gradle alone ≠ type</a>
+				<a href="/blog/csharp-edition" class="ticker-item"><b>faf-cli 7.4</b> The C# Edition — .csproj alone ≠ type</a>
+				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
 				<a href="/blog/mcp-better" class="ticker-item"><b>mcp-better 0.2</b> BETTER textbook for 7/28 — stdio + Streamable HTTP</a>
-				<a href="/blog/forgettable-memory" class="ticker-item"><b>claude-fafm-sdk 1.5</b> Forgettable Memory — tombstones, both transports</a>
-				<a href="/blog/verifiable-provenance" class="ticker-item"><b>claude-fafm-sdk 1.4</b> Verifiable Provenance — which key sealed it</a>
-				<a href="/blog/provable-receipt" class="ticker-item"><b>claude-fafm-sdk 1.3</b> Provable Receipt — one command, no clone</a>
+				<a href="/blog/jvm-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.5.1</b> The JVM Edition — pom / gradle alone ≠ type</a>
+				<a href="/blog/csharp-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.4</b> The C# Edition — .csproj alone ≠ type</a>
+				<a href="/blog/go-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item" aria-hidden="true" tabindex="-1"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
 				<a href="/blog/mcp-better" class="ticker-item" aria-hidden="true" tabindex="-1"><b>mcp-better 0.2</b> BETTER textbook for 7/28 — stdio + Streamable HTTP</a>
-				<a href="/blog/forgettable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.5</b> Forgettable Memory — tombstones, both transports</a>
-				<a href="/blog/verifiable-provenance" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.4</b> Verifiable Provenance — which key sealed it</a>
-				<a href="/blog/provable-receipt" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 1.3</b> Provable Receipt — one command, no clone</a>
 			</div>
 		</div>
 	</section>

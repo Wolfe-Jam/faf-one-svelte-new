@@ -97,7 +97,7 @@ cd your-repo && faf auto`;
 				<em>contains</em>, not by the filename alone.
 			</p>
 			<div class="terminal-block">
-				<code>npm install -g faf-cli@7.2.1</code>
+				<code>npm install -g <NpmPkg name="faf-cli" version="7.2.1" /></code>
 				<code>cd your-dart-or-flutter-repo && faf auto</code>
 			</div>
 		</section>
@@ -169,7 +169,7 @@ cd your-repo && faf auto`;
 		<section>
 			<h2>Try it</h2>
 			<div class="terminal-block">
-				<code>npm install -g faf-cli@7.2.1</code>
+				<code>npm install -g <NpmPkg name="faf-cli" version="7.2.1" /></code>
 				<code>cd your-dart-or-flutter-repo</code>
 				<code>faf auto && faf score</code>
 			</div>
@@ -178,7 +178,8 @@ cd your-repo && faf auto`;
 				<code>.faf</code> should say what the pubspec actually describes.
 			</p>
 			<p class="muted-note">
-				Same binary also on npm as <code>faf@7.2.1</code> if you want the short name.
+				Same binary also on npm as <code><NpmPkg name="faf" version="7.2.1" /></code> if you want the
+				short name.
 			</p>
 		</section>
 

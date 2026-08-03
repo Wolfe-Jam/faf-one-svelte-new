@@ -259,14 +259,8 @@ One format. Two edges. One soul.`;
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
 
-		<PageActions
-			headline="🏁 Memory is vast. .fafm maps it."
-			point1="One format. Two edges. One soul."
-			point2=""
-			cta=""
-			url="https://faf.one/blog/memory-is-vast"
-			hashtags=""
-		/>
+		<!-- RULE: one X per page. Article share-section owns X; PageActions = Sponsor only. -->
+		<PageActions />
 
 		<section class="footer-note">
 			<p>

@@ -600,16 +600,8 @@ uvx claude-fafm-sdk --version`;
 			</a>
 		</section>
 
-		<PageActions
-			headline="🏁 Just shipped: claude-fafm-sdk v2.0.0 — Compactable"
-			point1="AI memory that can forget — and compact without lying."
-			point2="Epoch compact pays debt · cross-epoch refuses — no silent zombies."
-			point3="Archive-first · dual-impl · live on PyPI"
-			cta="uvx claude-fafm-sdk --version"
-			ctaPrefix="Try it →"
-			url="https://faf.one/blog/compactable-memory"
-			hashtags="AI,Memory,fafm,FAF"
-		/>
+		<!-- RULE: one X per page. Article share-section owns X; PageActions = Sponsor only. -->
+		<PageActions />
 
 		<section class="footer-note">
 			<p>

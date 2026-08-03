@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/jvm-edition',
+			title: 'The JVM Edition',
+			version: 'faf-cli v7.5.1',
+			date: 'August 3, 2026',
+			timestamp: '2026-08-03',
+			excerpt:
+				'What it is · why it exists · what’s in it for JVM devs. pom / gradle alone ≠ type — and bare files ≠ Spring on tech_stack (7.5.1). One brand JVM.',
+			emoji: '☕',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/csharp-edition',
 			title: 'The C# Edition',
 			version: 'faf-cli v7.4.0',

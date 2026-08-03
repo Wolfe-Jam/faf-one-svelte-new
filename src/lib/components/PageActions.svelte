@@ -1,13 +1,22 @@
 <script>
 	// Bottom-of-page actions row.
-	// - Sponsor button ALWAYS shows — fits any page (even legal/pricing: a B2B reader may convert).
-	// - Share-on-𝕏 shows ONLY when `headline` is passed — keep it to genuine pages of interest
-	//   (wolfejam: "if in doubt, don't"). The share tweet is built from headline + points + CTA.
+	//
+	// SITE DEFAULT (product / marketing pages): Sponsor | X POST
+	//   Pass headline (+ points + cta + url) so Share on 𝕏 shows next to Sponsor.
+	//   That pair IS the default chrome — one X, owned here. No second in-body X.
+	//
+	// BLOG: in-article owns X (prime — share-section / Feedback "Post on X").
+	//   Use <PageActions /> with NO headline → Sponsor only. Never two X controls.
+	//
+	// RULE (locked 2026-08-03): ONE X control per page. Who owns it:
+	//   site pages → this component  |  blog → in-article craft
+	//
+	// Share tweet = headline + points + CTA via buildShareIntent (when headline set).
 	// Usage:
-	//   <PageActions />                                              → sponsor only
-	//   <PageActions headline=".." point1=".." point2=".." url=".." hashtags=".." /> → sponsor + share
-	//   <PageActions headline=".." ... cta="uvx faf" />              → override the CTA
-	//   <PageActions headline=".." ... sponsor={false} />            → share only
+	//   <PageActions headline=".." point1=".." url=".." />  → site default: Sponsor | X
+	//   <PageActions />                                      → Sponsor only (blog when article owns X)
+	//   <PageActions headline=".." ... cta="uvx faf" />      → override CTA
+	//   <PageActions headline=".." ... sponsor={false} />    → X only
 	import ShareX from '$lib/components/ShareX.svelte';
 	let {
 		headline = '',
