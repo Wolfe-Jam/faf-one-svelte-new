@@ -200,7 +200,7 @@ A README claim was false 29 minutes after it was written.
 		</section>
 
 		<section>
-			<h2>Where it stands</h2>
+			<h2>Where it stands <span class="as-of">(as of 2026-08-04)</span></h2>
 			<p>
 				The measurement window was real. What happened after it is the receipt that the fix held:
 			</p>
@@ -311,6 +311,13 @@ A README claim was false 29 minutes after it was written.
 	.hero-image img { width: 100%; height: auto; display: block; }
 
 	.post-content section { margin-bottom: 2.5rem; }
+
+	.as-of {
+		font-size: 0.7em;
+		font-weight: 400;
+		color: #333;
+		letter-spacing: 0;
+	}
 
 	.post-content h2 {
 		font-size: 1.6rem;
