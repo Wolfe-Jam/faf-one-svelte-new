@@ -36,7 +36,7 @@
 			date: 'August 4, 2026',
 			timestamp: '2026-08-04',
 			excerpt:
-				'We pointed .faf at our own newest repo. It was 19 hours old and already lying about itself — one README claim was false 29 minutes after it was written.',
+				'19 hours old, already lying about itself — a README claim died in 29 minutes. .faf + a gate fixed the shape; the bar still holds at 26/26.',
 			emoji: '⏱️',
 			category: 'Story'
 		},

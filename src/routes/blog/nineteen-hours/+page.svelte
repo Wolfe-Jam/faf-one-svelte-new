@@ -7,19 +7,19 @@
 
 	const shareText = `Documentation rot isn't neglect. It's a function of how fast you ship.
 
-We measured it on our own newest repo — 19 hours old, 44 commits.
+We measured it on our newest repo — 19 hours old, 44 commits.
 
 A README claim was false 29 minutes after it was written.
 57% of new docs added a fresh copy of an existing fact.
 
-Every stale line was written by someone trying to keep it accurate.`;
+.faf + a gate fixed the shape. The bar still holds.`;
 	const shareUrl = 'https://faf.one/blog/nineteen-hours';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>
 	<title>Nineteen Hours - Measuring Documentation Rot | FAF</title>
-	<meta name="description" content="We pointed .faf at our own newest repo. It was 19 hours old and already lying about itself. A README claim died in 29 minutes. Rot rate isn't neglect — it's a function of productivity." />
+	<meta name="description" content="We pointed .faf at our own newest repo. It was 19 hours old and already lying about itself. A README claim died in 29 minutes. Rot rate isn't neglect — it's productivity. Canonical file + gate fixed the shape." />
 	<meta property="og:title" content="Nineteen Hours - Measuring Documentation Rot" />
 	<meta property="og:description" content="A 19-hour-old repo was already lying about itself. One claim was false 29 minutes after it was written — by someone actively trying to keep it accurate." />
 	<meta property="og:type" content="article" />
@@ -59,13 +59,16 @@ Every stale line was written by someone trying to keep it accurate.`;
 		<section>
 			<h2>The setup</h2>
 			<p>
-				pc-ai is our newest project — an agent card validator, live at
-				<a href="https://validate.platinumcard.ai">validate.platinumcard.ai</a>. It is not a FAF
-				product. It's the thing we pointed FAF <em>at</em>.
+				pc-ai is our newest project — agent card intelligence (Declare · Enforce · Optimize), with a
+				public validate API at
+				<a href="https://validate.platinumcard.ai">validate.platinumcard.ai</a> and brand at
+				<a href="https://platinumcard.ai">platinumcard.ai</a>. It is not a FAF product. It's the
+				thing we pointed FAF <em>at</em>.
 			</p>
 			<p>
-				It had every advantage: a 26-case test suite, a documented review, gates on the rules
-				themselves. Nineteen hours old. Forty-four commits. One person, paying attention.
+				At the measurement window it had every advantage: a growing WJTTC suite, a documented review,
+				gates on the rules themselves. <strong>Nineteen hours old. Forty-four commits.</strong> One
+				person, paying attention.
 			</p>
 			<p>And it was already lying about itself.</p>
 		</section>
@@ -194,6 +197,35 @@ Every stale line was written by someone trying to keep it accurate.`;
 					half-life.
 				</p>
 			</div>
+		</section>
+
+		<section>
+			<h2>Where it stands</h2>
+			<p>
+				The measurement window was real. What happened after it is the receipt that the fix held:
+			</p>
+			<ul>
+				<li>
+					<strong><code>project.faf</code> + <code>project.fafm</code></strong> — facts and
+					decisions in one place each; FAF score at Trophy on the context file.
+				</li>
+				<li>
+					<strong>WJTTC FAF-01</strong> — claims checked against filesystem and code, not against
+					other docs. Live bar: <strong>26/26</strong>.
+				</li>
+				<li>
+					<strong>Phase 1 closed</strong> — pure validate, true WASM from core, public validate API,
+					brand site. Rank stays private (product decision, not a docs bug).
+				</li>
+				<li>
+					<strong>~50 commits</strong> on the subject repo as of the last edit of this post — still
+					one bar, still one canonical facts file. The surface compounds; the check does not.
+				</li>
+			</ul>
+			<p>
+				Division of labour, stated plainly:
+				<strong>FAF defines. MD instructs. AI codes.</strong>
+			</p>
 		</section>
 
 		<section>
