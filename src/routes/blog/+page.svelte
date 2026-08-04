@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/nineteen-hours',
+			title: 'Nineteen Hours',
+			date: 'August 4, 2026',
+			timestamp: '2026-08-04',
+			excerpt:
+				'We pointed .faf at our own newest repo. It was 19 hours old and already lying about itself — one README claim was false 29 minutes after it was written.',
+			emoji: '⏱️',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/swift-edition',
 			title: 'The Swift Edition',
 			version: 'faf-cli v7.7.0',
