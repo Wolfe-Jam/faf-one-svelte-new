@@ -151,6 +151,7 @@ Use this palette for warning/solution flows throughout faf.one.
 1. Blog posts follow the 11 rules above (especially #2 contrast, #6 no mid-gray text, #10 no gradients).
 2. Every blog post MUST have OG meta tags (`og:title`, `og:description`, `twitter:card`) in `<svelte:head>` for proper X card previews.
 3. Every blog post MUST have an X share button (web intent format).
+4. **npm `package@version` — NEVER bare in HTML.** Cloudflare Scrape Shield rewrites strings like `faf-cli@7.4.0` into `/cdn-cgi/l/email-protection` (install lines unusable). Always `import NpmPkg from '$lib/NpmPkg.svelte'` then `<NpmPkg name="faf-cli" version="X.Y.Z" />`. `<!--email_off-->` alone is not enough. X shareText bare `pkg@ver` is fine (not HTML). Post-deploy: live HTML must have zero `__cf_email__` on install lines. See `/pubblog` Step 2.1 · `PLANET-FAF/memory/gotcha-cloudflare-email-obfuscation-npm-at-version.md`.
 
 ## Development Rules - TRUST IS EVERYTHING
 1. NEVER add fake statistics or claims
