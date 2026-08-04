@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/swift-edition',
+			title: 'The Swift Edition',
+			version: 'faf-cli v7.7.0',
+			date: 'August 4, 2026',
+			timestamp: '2026-08-04',
+			excerpt:
+				'Content-aware Swift — Package.swift alone ≠ app. Bare packages stay libraries. MCP · Vapor · CLI · app · library.',
+			emoji: '🐦',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/ruby-edition',
 			title: 'The Ruby Edition',
 			version: 'faf-cli v7.6.0',
