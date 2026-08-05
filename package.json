@@ -14,10 +14,11 @@
   "devDependencies": {
     "@sveltejs/adapter-cloudflare": "^7.2.8",
     "@sveltejs/adapter-static": "^3.0.0",
-    "@sveltejs/kit": "^2.0.0",
-    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@sveltejs/kit": "^2.70.2",
+    "@sveltejs/vite-plugin-svelte": "^5.1.1",
     "svelte": "^5.0.0",
-    "vite": "^5.0.0"
+    "vite": "^6.4.3",
+    "wrangler": "^4.119.0"
   },
   "description": "FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management",
   "keywords": [
@@ -33,5 +34,11 @@
     "marked": "^17.0.0",
     "resend": "^6.1.2",
     "yaml": "^2.8.1"
+  },
+  "overrides": {
+    "postcss": ">=8.5.23",
+    "sharp": ">=0.35.0",
+    "undici": ">=8.8.1",
+    "cookie": "0.7.2"
   }
 }
