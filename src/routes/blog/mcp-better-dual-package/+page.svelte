@@ -93,9 +93,9 @@ Comments · suggestions · shares welcome.`;
 			<p class="lead">
 				<strong>TL;DR:</strong> Catch-up since the
 				<a href="/blog/mcp-better">v0.2.0 post</a>. <code>mcp-better</code> is
-				<strong>0.4.2</strong> — still the small BETTER textbook for modern MCP
-				(<strong>AGENTS.md</strong> · <strong>NONE | GOOD | [BETTER] | BEST</strong>).
-				<strong>Cargo first · npx now available option</strong> — same Rust binary either way.
+				0.4.2 — still the small BETTER textbook for modern MCP
+				(<strong>AGENTS.md</strong> · NONE | GOOD | <strong>[BETTER]</strong> | BEST).
+				Cargo first · <strong>npx now available option</strong> — same Rust binary either way.
 			</p>
 			<div class="terminal-block">
 				<code>cargo install mcp-better --version 0.4.2</code>
