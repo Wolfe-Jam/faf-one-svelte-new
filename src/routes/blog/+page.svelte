@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/mcp-better-dual-package',
+			title: 'Dual Package Edition',
+			version: 'mcp-better v0.4.2',
+			date: 'August 8, 2026',
+			timestamp: '2026-08-08',
+			excerpt:
+				'Cargo first · npx now available option. Catch-up since v0.2.0 — same Rust binary either way. Friendly walkthrough + technical details.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/nineteen-hours',
 			title: 'Nineteen Hours',
 			date: 'August 4, 2026',
