@@ -19,7 +19,6 @@ npm run dev    # dev
 - `README.md`
 - `tsconfig.json`
 - `wrangler.toml`
-- `vercel.json`
 
 ## Conventions
 
