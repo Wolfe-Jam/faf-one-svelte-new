@@ -1,7 +1,6 @@
 <script lang="ts">
 	const FRIENDS_TOTAL = 100;
 	let friendsClaimed = $state(0);
-	let activeTab = $state('cli');
 
 	async function loadFriendsCount() {
 		try {
@@ -25,8 +24,8 @@
 </script>
 
 <svelte:head>
-	<title>FAF Pro - Full access. Every tool. | FAF</title>
-	<meta name="description" content="FAF Pro: tri-sync for faf-cli, Glass Hood diagnostics for Rust compiler. Persistent project context across every AI. From $3/mo." />
+	<title>FAF Pro - The Rust compiler suite | FAF</title>
+	<meta name="description" content="FAF Pro: the Rust .fafb compiler suite &mdash; Glass Hood diagnostics, binary compile, benchmarking. From $3/mo." />
 </svelte:head>
 
 <div class="pro-page">
@@ -38,39 +37,18 @@
 		<!-- Hero -->
 		<section class="hero">
 			<h1 class="title">FAF Pro</h1>
-			<p class="subtitle">Full access. Every tool.</p>
+			<p class="subtitle">The Rust compiler suite.</p>
 		</section>
 
-		<!-- Tab Bar -->
-		<div class="tab-bar">
-			<a
-				href="#cli"
-				class="tab tab-cli"
-				class:active={activeTab === 'cli'}
-				onclick={() => activeTab = 'cli'}
-			>
-				FAF-CLI &mdash; The Original
-			</a>
-			<a
-				href="#rust"
-				class="tab tab-rust"
-				class:active={activeTab === 'rust'}
-				onclick={() => activeTab = 'rust'}
-			>
-				Rust CLI &mdash; The Binary Beast
-			</a>
-		</div>
+		<!-- ============ FREE SECTION ============ -->
+		<section class="product-section">
+			<div class="badge cli-badge">faf-cli</div>
 
-		<!-- ============ CLI SECTION ============ -->
-		<section id="cli" class="product-section">
-			<div class="badge cli-badge">faf-cli v5</div>
-
-			<!-- bi-sync: free -->
 			<div class="free-block">
-				<h2 class="section-title">bi-sync &mdash; free forever</h2>
+				<h2 class="section-title">Free forever</h2>
 				<p class="free-statement">
-					faf-cli is free. Full version. Always maintained. Always core.<br/>
-					<code>faf init</code>, <code>faf go</code>, <code>faf score</code>, <code>faf git</code>, bi-sync &mdash; all of it. No trial. No expiry. No catch.
+					Every command. Unlimited projects. No trial, no expiry.<br/>
+					<code>faf init</code>, <code>faf go</code>, <code>faf score</code>, <code>faf git</code>, bi-sync, tri-sync &mdash; all of it.
 				</p>
 				<div class="sync-flow">
 					<div class="sync-node">
@@ -82,27 +60,8 @@
 						<span class="sync-label">BUS</span>
 						<span class="sync-desc">CLAUDE.md</span>
 					</div>
-				</div>
-			</div>
-
-			<!-- tri-sync: pro -->
-			<div class="pro-block">
-				<h2 class="section-title">tri-sync &mdash; Pro</h2>
-				<p class="pro-statement">
-					Advanced memory syncing for serious builders. tri-sync adds RAM &mdash; persistent session memory that survives across every AI session. No re-explaining. Ever.
-				</p>
-				<div class="sync-flow">
+					<div class="sync-arrow">&harr;</div>
 					<div class="sync-node">
-						<span class="sync-label">ROM</span>
-						<span class="sync-desc">.faf</span>
-					</div>
-					<div class="sync-arrow">&rarr;</div>
-					<div class="sync-node">
-						<span class="sync-label">BUS</span>
-						<span class="sync-desc">CLAUDE.md</span>
-					</div>
-					<div class="sync-arrow">&rarr;</div>
-					<div class="sync-node sync-node-pro">
 						<span class="sync-label">RAM</span>
 						<span class="sync-desc">MEMORY.md</span>
 					</div>
@@ -118,13 +77,13 @@
 			</div>
 		</section>
 
-		<!-- ============ RUST SECTION ============ -->
-		<section id="rust" class="product-section rust-section">
+		<!-- ============ PRO SECTION (Rust) ============ -->
+		<section class="product-section rust-section">
 			<div class="badge rust-badge">rust-faf-cli</div>
 
-			<h2 class="section-title">The Binary Beast</h2>
+			<h2 class="section-title">Pro &mdash; the Rust compiler suite</h2>
 			<p class="rust-intro">
-				A new Rust-native compiler, built for xAI and now available to everyone. 288x faster than YAML parsing. Included with Pro Global &mdash; All Areas ($29/yr).
+				For CI-scale and power-user workflows the free CLI isn't built for. 288x faster parsing, built for xAI, now available to everyone.
 			</p>
 			<div class="free-pro-grid">
 				<div class="tier-card free-card">
@@ -160,6 +119,17 @@
 			</div>
 		</section>
 
+		<!-- ============ TEAM SECTION ============ -->
+		<section class="team-section">
+			<h2 class="section-title">Team</h2>
+			<p class="team-intro">
+				Everything in Pro, plus multi-seat licensing, shared config across repos, and priority support.
+			</p>
+			<p class="team-contact">
+				Contact <a href="mailto:james@wolfejames.com" class="team-link">james@wolfejames.com</a>
+			</p>
+		</section>
+
 		<!-- ============ SHARED: Pricing ============ -->
 		<section class="pricing">
 			<h2 class="section-title">Early-Adopter Pricing</h2>
@@ -171,16 +141,13 @@
 					<div class="card-header">
 						<h3>Monthly</h3>
 						<div class="price">
-							<span class="price-strike">$10</span>
 							<span class="price-current">$3</span>
 							<span class="price-period">/mo</span>
 						</div>
-						<div class="discount">70% off</div>
 						<p class="price-tagline">A dime a day.</p>
 					</div>
 					<ul class="features">
-						<li>tri-sync: .faf &rarr; CLAUDE.md + AGENTS.md + .cursorrules</li>
-						<li>All Rust Pro compiler features</li>
+						<li>Rust compiler suite &mdash; all Pro features</li>
 						<li>Unlimited projects</li>
 						<li>Cancel anytime</li>
 					</ul>
@@ -195,16 +162,13 @@
 					<div class="card-header">
 						<h3>Annual</h3>
 						<div class="price">
-							<span class="price-strike">$120</span>
 							<span class="price-current">$19</span>
 							<span class="price-period">/yr</span>
 						</div>
-						<div class="discount">84% off</div>
 						<p class="price-tagline">A nickel a day.</p>
 					</div>
 					<ul class="features">
 						<li>Everything in Monthly</li>
-						<li>Unlimited projects</li>
 						<li>Lock in the lowest rate</li>
 						<li>Annual billing</li>
 					</ul>
@@ -213,25 +177,21 @@
 					</button>
 				</div>
 
-				<!-- Global Bundle — Friends of FAF -->
+				<!-- Founding Member — Friends of FAF -->
 				<div class="pricing-card global">
 					<div class="global-badge">Friends of FAF</div>
 					<div class="card-header">
-						<h3>FAF Pro &mdash; All Areas</h3>
+						<h3>Founding Member</h3>
 						<div class="price">
-							<span class="price-strike">$240</span>
 							<span class="price-current">$29</span>
 							<span class="price-period">/yr</span>
 						</div>
-						<div class="discount">88% off</div>
-						<p class="price-tagline">Full access. Every tool.</p>
+						<p class="price-tagline">Locked in, forever.</p>
 					</div>
 					<ul class="features">
-						<li>CLI tri-sync &mdash; everything above</li>
-						<li>Rust compiler Pro (included)</li>
-						<li>MCP server Pro included</li>
-						<li>Multi-version license &mdash; one key, all CLIs</li>
-						<li>Early-adopters get rewarded &mdash; rate locked forever</li>
+						<li>Everything in Annual</li>
+						<li>Friends of FAF &mdash; numbered founding badge</li>
+						<li>Rate locked forever, even as prices rise</li>
 					</ul>
 					<div class="friends-counter">
 						<span class="friends-text"><span class="friends-claimed">{friendsClaimed}</span> of {FRIENDS_TOTAL} claimed</span>
@@ -240,7 +200,7 @@
 						</div>
 					</div>
 					<button class="cta-btn cta-global" onclick={() => selectPlan('global')}>
-						Get Full Access &mdash; $29/yr
+						Get Founding Access &mdash; $29/yr
 					</button>
 				</div>
 			</div>
@@ -262,15 +222,15 @@
 					<div class="step-content">
 						<h4>Activate</h4>
 						<div class="code-box">faf pro activate FAF-XXXX-XXXX-XXXX-XXXX</div>
-						<p>Same key works in both CLIs. One key, one <code>~/.faf/license.json</code>.</p>
+						<p>One key, one <code>~/.faf/license.json</code>.</p>
 					</div>
 				</div>
 				<div class="step">
 					<div class="step-number">3</div>
 					<div class="step-content">
 						<h4>Use</h4>
-						<div class="code-box">faf tri-sync</div>
-						<p>Persistent context that survives across every session. Works in both CLIs.</p>
+						<div class="code-box">faf compile</div>
+						<p>Full Rust compiler suite &mdash; Glass Hood, binary compile, benchmarking.</p>
 					</div>
 				</div>
 			</div>
@@ -282,17 +242,12 @@
 
 			<div class="faq-item">
 				<h4>What stays free?</h4>
-				<p>Full FAF-CLI &mdash; The Original &mdash; with bi-sync. 51 versions strong, loved and maintained. Free forever.</p>
-			</div>
-
-			<div class="faq-item">
-				<h4>One key for everything?</h4>
-				<p>Yes. One key unlocks both CLIs. Activate once, works everywhere.</p>
+				<p>Full faf-cli &mdash; bi-sync and tri-sync, all of it. 51 versions strong, loved and maintained. Free forever.</p>
 			</div>
 
 			<div class="faq-item">
 				<h4>What if I don't subscribe?</h4>
-				<p>The free CLI keeps working. Pro features lock, but your files stay. Nothing breaks.</p>
+				<p>The free CLI keeps working. Rust Pro features lock, but your files stay. Nothing breaks.</p>
 			</div>
 
 			<div class="faq-item">
@@ -697,6 +652,38 @@
 	}
 
 	.rust-link:hover {
+		text-decoration: underline;
+	}
+
+	/* Team */
+	.team-section {
+		text-align: center;
+		margin-bottom: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid #333;
+	}
+
+	.team-intro {
+		color: #aaa;
+		font-size: 1.05rem;
+		line-height: 1.7;
+		margin: 0 auto 1rem;
+		max-width: 560px;
+	}
+
+	.team-contact {
+		color: #aaa;
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.team-link {
+		color: #4682B4;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.team-link:hover {
 		text-decoration: underline;
 	}
 
