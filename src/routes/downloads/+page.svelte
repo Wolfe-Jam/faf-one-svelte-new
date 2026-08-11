@@ -125,7 +125,7 @@
 						{copiedIndex === 99 ? 'Copied' : 'Copy'}
 					</button>
 				</div>
-				<p class="try-note">Instant Project DNA for React — works with any GitHub URL. <a href="/try" class="try-link">See more examples</a></p>
+				<p class="try-note">Zero-friction — no clone, no config, no auth. Works with any GitHub URL. <a href="/try" class="try-link">See more examples</a></p>
 			</div>
 		</div>
 	</section>
