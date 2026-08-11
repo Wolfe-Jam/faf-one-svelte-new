@@ -405,7 +405,7 @@ faf go
 				<span class="card-cta">→</span>
 			</a>
 			<a href="/try" class="card link-card">
-				<h3>Try it now</h3>
+				<h3>Zero install</h3>
 				<p>Author context for any GitHub repo in 2 seconds</p>
 				<span class="card-cta">→</span>
 			</a>

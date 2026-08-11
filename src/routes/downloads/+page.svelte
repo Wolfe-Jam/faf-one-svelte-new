@@ -114,7 +114,7 @@
 	<section class="try-section">
 		<div class="container">
 			<div class="try-card">
-				<p class="try-label">Try it now — zero install, any public repo</p>
+				<p class="try-label">Zero install, zero config — any public repo</p>
 				<div class="try-box">
 					<code class="try-cmd">$ npx faf-cli@latest git https://github.com/facebook/react</code>
 					<button
