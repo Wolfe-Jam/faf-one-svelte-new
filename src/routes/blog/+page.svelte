@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/compose-edition',
+			title: 'The Compose Edition',
+			version: 'claude-faf-mcp v5.21.0',
+			date: 'August 11, 2026',
+			timestamp: '2026-08-11',
+			excerpt:
+				'Six language Editions, inherited — not reinvented. Pin faf-cli ^7.7.0 and Core faf_auto composes the CLI rail: Dart, Go, C#, JVM, Ruby, Swift. faf_enhance retired.',
+			emoji: '🧩',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/mcp-better-dual-package',
 			title: 'Dual Package Edition',
 			version: 'mcp-better v0.4.2',
