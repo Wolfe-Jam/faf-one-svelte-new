@@ -11,4 +11,11 @@
 // Index styles use #1a1a1a literals (not --faf-dark/--faf-black) so a one-frame
 // token flip cannot wash out list titles/versions. Dark posts still force
 // locked-dark body via their own :global(body) !important.
+// Blog posts are static once published — no live data fetch, safe to prerender
+// to real HTML at build time. Cuts Worker invocations to zero for every post
+// read (vs. one SSR execution per request today). /blog/drafts overrides this
+// back to false — drafts are unlisted/unfinished and must stay dynamic-only,
+// never baked into the static build output.
+export const prerender = true;
+
 export const load = () => ({ hideThemeToggle: true, bg: 'self' });
