@@ -106,7 +106,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 				<div class="timeline-event">
 					<div class="timeline-date">September 1, 2025</div>
 					<h3>Developer Platform Launch</h3>
-					<p><a href="https://fafdev.tools" target="_blank" rel="noopener">fafdev.tools</a> and faf-engine-mk1 launched. Developer tools and engine testing platform go live. Built with Svelte 5 runes.</p>
+					<p><a href="https://devtools.faf.one" target="_blank" rel="noopener">fafdev.tools</a> and faf-engine-mk1 launched. Developer tools and engine testing platform go live. Built with Svelte 5 runes.</p>
 				</div>
 
 				<div class="timeline-event">

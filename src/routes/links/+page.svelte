@@ -388,8 +388,8 @@
 						<span class="link-desc">Multi-AI voice crews (Grok + Claude + Gemini)</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://fafdev.tools" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">fafdev.tools</span>
+					<a href="https://devtools.faf.one" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">devtools.faf.one</span>
 						<span class="link-desc">FAF file generator</span>
 					</a>
 					<a href="https://foundation.faf.one" target="_blank" rel="noopener" class="link-item">
@@ -666,11 +666,11 @@
 			<div class="card highlight-card">
 				<h2>∞ 8-Eternal-Cs</h2>
 				<div class="links-grid">
-					<a href="https://fafdev.tools/8-eternal-cs" target="_blank" rel="noopener" class="link-item">
+					<a href="https://devtools.faf.one/8-eternal-cs" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">8-eternal-cs</span>
 						<span class="link-desc">FAF Zig-WASM Template</span>
 					</a>
-					<a href="https://fafdev.tools/8cs" target="_blank" rel="noopener" class="link-item">
+					<a href="https://devtools.faf.one/8cs" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">8Cs Paper</span>
 						<span class="link-desc">The 8 Cs methodology</span>
 					</a>

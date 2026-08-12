@@ -34,7 +34,7 @@
                 'Built with Svelte'
             ],
             github: 'https://github.com/Wolfe-Jam/faf-dev-tools',
-            live: 'https://fafdev.tools',
+            live: 'https://devtools.faf.one',
             status: 'Beta',
             icon: '🛠️'
         },
@@ -305,7 +305,7 @@
             <div class="option">
                 <h3>Try Online</h3>
                 <p>No install required, works in browser</p>
-                <a href="https://fafdev.tools" class="btn-primary" target="_blank" rel="noopener">Open Dev Tools →</a>
+                <a href="https://devtools.faf.one" class="btn-primary" target="_blank" rel="noopener">Open Dev Tools →</a>
             </div>
         </div>
     </section>
