@@ -21,6 +21,11 @@ THEME_TOKENS = {
     '--faf-cream', '--faf-dark', '--faf-black', '--faf-white',
     '--faf-gray', '--faf-gray-dark', '--faf-gray-medium',
     '--faf-gray-light', '--faf-light-gray', '--faf-cyan-text',
+    '--faf-ink', '--faf-code-bg',
+}
+# These invert AND look like "black"/"white" — never pair with a literal #fff.
+INVERTING_FILL = {
+    '--faf-ink', '--faf-black', '--faf-white', '--faf-dark',
 }
 # Brand tokens that do NOT flip (same both themes)
 STATIC_TOKENS = {
@@ -30,8 +35,7 @@ STATIC_TOKENS = {
     '--faf-locked-dark-hover', '--faf-locked-dark-muted',
     '--faf-chrome-bg', '--faf-chrome-fg',
     '--faf-foundation-green', '--faf-foundation-green-dark',
-    '--faf-surface-border', '--faf-section-alt', '--faf-orange-tint',
-    '--faf-page-bg', '--faf-surface',
+    '--faf-solid-bg', '--faf-solid-fg',
 }
 
 DARK_LITERALS = re.compile(
@@ -93,8 +97,16 @@ def parse_rules(css, fname):
         if not bg and not color: continue
         bgc = classify(bg) if bg else None
         cc = classify(color) if color else None
+        bg_tok = None
+        if bg:
+            tm = re.search(r'var\((--[a-z0-9-]+)', bg, re.I)
+            if tm:
+                bg_tok = tm.group(1)
         verdict = None
-        if bgc == 'THEME' and cc == 'LIT_DARK':
+        # Trap: inverting "black" fill + literal white text (dark mode → light-on-light).
+        if bg_tok in INVERTING_FILL and cc == 'LIT_LIGHT':
+            verdict = 'BREAKS-DARK (inverting fill + #fff — use --faf-solid-bg/fg)'
+        elif bgc == 'THEME' and cc == 'LIT_DARK':
             verdict = 'BREAKS-DARK (theme bg + dark literal text)'
         elif bgc == 'THEME' and cc == 'LIT_LIGHT':
             verdict = 'BREAKS-LIGHT (theme bg + light literal text)'
@@ -102,6 +114,10 @@ def parse_rules(css, fname):
             verdict = 'BREAKS-LIGHT (dark literal bg + theme text)'
         elif bgc == 'LIT_LIGHT' and cc == 'THEME':
             verdict = 'BREAKS-DARK (light literal bg + theme text)'
+        elif re.search(r'\bpre\b', selector) and bg and not color and bg_tok in (
+            '--faf-code-bg', '--faf-white', '--faf-black'
+        ):
+            verdict = 'BREAKS-BOTH (pre bg without color — inherits inverted --faf-white)'
         elif bgc is None and cc == 'LIT_DARK':
             verdict = 'SUSPECT-DARK (dark literal text, bg inherited)'
         elif bgc is None and cc == 'LIT_LIGHT':
@@ -118,9 +134,13 @@ def main():
     all_issues = []
     for dirpath, _, files in os.walk(ROOT):
         for f in files:
-            if not f.endswith('.svelte'): continue
             path = os.path.join(dirpath, f)
             rel = os.path.relpath(path, ROOT)
+            if f.endswith('.css'):
+                all_issues += parse_rules(open(path, encoding='utf-8').read(), rel)
+                continue
+            if not f.endswith('.svelte'):
+                continue
             src = open(path, encoding='utf-8').read()
             for sm in re.finditer(r'<style[^>]*>(.*?)</style>', src, re.S):
                 all_issues += parse_rules(sm.group(1), rel)

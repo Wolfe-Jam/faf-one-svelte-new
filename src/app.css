@@ -17,6 +17,10 @@
 	--faf-locked-dark-text: #e5e5e5;
 	--faf-chrome-bg: #000000;
 	--faf-chrome-fg: #ffffff;
+	/* Solid fill (terminals, primary buttons). NEVER --faf-black/#fff —
+	   those tokens invert and go light-on-light / dark-on-dark. */
+	--faf-solid-bg: var(--faf-locked-dark);
+	--faf-solid-fg: var(--faf-locked-dark-text);
 	--faf-foundation-green: #00bf63;
 	--faf-foundation-green-dark: #00a855;
 	--faf-locked-dark-hover: #111111;
@@ -187,8 +191,8 @@ code {
 
 pre {
 	font-family: var(--font-mono);
-	background: var(--faf-black);
-	color: var(--faf-white);
+	background: var(--faf-solid-bg);
+	color: var(--faf-solid-fg);
 	padding: var(--space-md);
 	border-radius: 8px;
 	overflow-x: auto;
@@ -201,6 +205,14 @@ pre code {
 	padding: 0;
 	color: inherit;
 	border: none;
+}
+
+/* Filled control. Use this, not --faf-ink + #fff. */
+button.faf-solid,
+.faf-solid {
+	background: var(--faf-solid-bg);
+	color: var(--faf-solid-fg);
+	border: 1px solid var(--faf-solid-bg);
 }
 
 /* Inline prose code (bare, unclassed <code>) — AUTHORITATIVE.

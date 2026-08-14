@@ -236,7 +236,7 @@
 				<input type="text" bind:value={gatePassword} required autocomplete="one-time-code" />
 			{/if}
 			<div class="actions">
-				<button type="submit" disabled={gateBusy}>
+				<button type="submit" class="faf-solid" disabled={gateBusy}>
 					{gateBusy ? 'Working…' : sentPw ? 'Enter' : 'Send password'}
 				</button>
 				{#if sentPw}
@@ -403,7 +403,7 @@ cargo build --release
 		<textarea bind:value={Q22}></textarea>
 
 		<div class="actions">
-			<button type="submit" disabled={sending || sent}>{sent ? 'Sent' : sending ? 'Sending…' : 'Submit to James'}</button>
+			<button type="submit" class="faf-solid" disabled={sending || sent}>{sent ? 'Sent' : sending ? 'Sending…' : 'Submit to James'}</button>
 			<button type="button" class="secondary" onclick={download}>Download answers.md</button>
 			<button type="button" class="secondary" onclick={copy}>Copy answers</button>
 		</div>
