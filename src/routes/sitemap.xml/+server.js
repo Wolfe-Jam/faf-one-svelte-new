@@ -20,7 +20,8 @@ const EXCLUDE = [
 	/^\/uniqueness$/, // research archive — noindex; receipts on /spec
 	/^\/v4(\/|$)/, // legacy mini-site
 	/^\/survival$/, // thin wrapper
-	/^\/trinity$/ // shell
+	/^\/trinity$/, // shell
+	/^\/fafb-drive$/ // private 0.9 test-drive — noindex
 ];
 
 function routeFor(file) {
