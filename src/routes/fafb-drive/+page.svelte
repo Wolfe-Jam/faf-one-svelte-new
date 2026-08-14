@@ -364,14 +364,24 @@ cargo build --release
 		font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 		font-size: 0.86rem;
 	}
+	/* Locked chrome — do not use --faf-black/--faf-white (they invert). */
 	pre {
-		background: var(--faf-code-bg);
+		background: var(--faf-locked-dark);
+		color: var(--faf-locked-dark-text);
+		border: 1px solid var(--faf-locked-dark-muted);
 		padding: 0.9rem 1rem;
 		border-radius: 8px;
 		overflow-x: auto;
 	}
-	code {
+	pre code {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+	}
+	:not(pre) > code {
 		background: var(--faf-code-bg);
+		color: var(--faf-ink);
 		padding: 0.1em 0.35em;
 		border-radius: 4px;
 	}
