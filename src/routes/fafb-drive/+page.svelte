@@ -1,4 +1,11 @@
 <script>
+	let { data } = $props();
+	let authed = $state(data.authed);
+	let gateEmail = $state(data.email || '');
+	let gatePassword = $state('');
+	let gateStatus = $state('');
+	let gateBusy = $state(false);
+	let sentPw = $state(false);
 	const scales = [
 		['Q11', 'In the first 10 minutes I knew what to do'],
 		['Q12', 'faf status made the score feel honest'],
@@ -51,6 +58,53 @@
 	let status = $state('');
 	let sending = $state(false);
 	let sent = $state(false);
+
+	async function requestPassword() {
+		gateBusy = true;
+		gateStatus = '';
+		try {
+			const res = await fetch('/api/fafb-drive/request', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email: gateEmail, website: '' })
+			});
+			const result = await res.json();
+			if (!res.ok) throw new Error(result.error || 'Could not send.');
+			sentPw = true;
+			gateStatus = 'Check your inbox. Password is on its way.';
+		} catch (e) {
+			gateStatus = e instanceof Error ? e.message : 'Could not send.';
+		} finally {
+			gateBusy = false;
+		}
+	}
+
+	async function login() {
+		gateBusy = true;
+		gateStatus = '';
+		try {
+			const res = await fetch('/api/fafb-drive/login', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email: gateEmail, password: gatePassword })
+			});
+			const result = await res.json();
+			if (!res.ok) throw new Error(result.error || 'That did not match.');
+			authed = true;
+		} catch (e) {
+			gateStatus = e instanceof Error ? e.message : 'That did not match.';
+		} finally {
+			gateBusy = false;
+		}
+	}
+
+	async function logout() {
+		await fetch('/api/fafb-drive/logout', { method: 'POST' });
+		authed = false;
+		gatePassword = '';
+		sentPw = false;
+		gateStatus = '';
+	}
 
 	function payload() {
 		return {
@@ -161,6 +215,39 @@
 		<p>A handful of seats. Same form. Answers can be compared.</p>
 		<p>About 30–60 minutes. Cargo first.</p>
 	</div>
+
+	{#if !authed}
+		<div class="card lines">
+			<p>Email in. Password sent out.</p>
+			<p>Then you can drive.</p>
+		</div>
+		<form
+			class="gate"
+			onsubmit={(e) => {
+				e.preventDefault();
+				if (sentPw) login();
+				else requestPassword();
+			}}
+		>
+			<label>Email</label>
+			<input type="email" bind:value={gateEmail} required autocomplete="email" />
+			{#if sentPw}
+				<label>Password</label>
+				<input type="text" bind:value={gatePassword} required autocomplete="one-time-code" />
+			{/if}
+			<div class="actions">
+				<button type="submit" disabled={gateBusy}>
+					{gateBusy ? 'Working…' : sentPw ? 'Enter' : 'Send password'}
+				</button>
+				{#if sentPw}
+					<button type="button" class="secondary" disabled={gateBusy} onclick={requestPassword}>
+						Send again
+					</button>
+				{/if}
+			</div>
+			<p class="ok">{gateStatus}</p>
+		</form>
+	{:else}
 
 	<div class="card lines">
 		<p>What this is. FAF is context. FAFb is context, compiled.</p>
@@ -329,7 +416,9 @@ cargo build --release
 		<p>Questions locked for this cohort.</p>
 		<p>Help to guide what we build.</p>
 		<p>Comments · suggestions welcome.</p>
+		<p><button type="button" class="secondary" onclick={logout}>Sign out</button></p>
 	</footer>
+	{/if}
 </main>
 
 <style>
@@ -448,6 +537,7 @@ cargo build --release
 	}
 	button:disabled { opacity: 0.5; cursor: not-allowed; }
 	.ok { color: var(--faf-cyan-text); font-size: 0.9rem; min-height: 1.2rem; }
+	.gate { margin-top: 0.5rem; }
 	footer { margin-top: 3rem; color: var(--faf-gray); font-size: 0.85rem; }
 	.id { color: var(--faf-gray); font-weight: 500; font-size: 0.8rem; margin-right: 0.35rem; }
 	hr { border: 0; border-top: 1px solid var(--faf-hairline); margin: 2rem 0; }

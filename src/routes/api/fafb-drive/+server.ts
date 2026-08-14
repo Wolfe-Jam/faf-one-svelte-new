@@ -6,6 +6,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
 import { env } from '$env/dynamic/private';
+import { cookieName, readSession } from '$lib/fafb-drive-auth';
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
@@ -33,7 +34,12 @@ function asText(v: unknown): string {
 	return String(v).trim();
 }
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, cookies }) => {
+	const who = await readSession(cookies.get(cookieName()));
+	if (!who) {
+		return json({ success: false, error: 'Sign in first.' }, { status: 401 });
+	}
+
 	if (!env.RESEND_API_KEY) {
 		return json({ success: false, error: 'Email service not configured' }, { status: 500 });
 	}
@@ -68,6 +74,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		`- date: ${date}`,
 		`- set: QUESTIONS.md (locked cohort)`,
 		`- via: faf.one/fafb-drive`,
+		`- signed-in: ${who}`,
 		'',
 		...IDS.flatMap((id) => [`## ${id}`, '', answers[id] || '_(blank)_', ''])
 	].join('\n');
