@@ -522,9 +522,9 @@ cargo build --release
 	.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
 	button {
 		appearance: none;
-		border: 1px solid var(--faf-ink);
-		background: var(--faf-ink);
-		color: #fff;
+		border: 1px solid var(--faf-locked-dark);
+		background: var(--faf-locked-dark);
+		color: var(--faf-locked-dark-text);
 		border-radius: 8px;
 		padding: 0.6rem 1rem;
 		font: inherit;
@@ -533,6 +533,7 @@ cargo build --release
 	}
 	button.secondary {
 		background: transparent;
+		border-color: var(--faf-ink);
 		color: var(--faf-ink);
 	}
 	button:disabled { opacity: 0.5; cursor: not-allowed; }
