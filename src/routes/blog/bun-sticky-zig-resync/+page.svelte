@@ -286,6 +286,7 @@ Comments · suggestions welcome.`;
 		font-family: 'Monaco', 'Courier New', monospace;
 		font-size: 0.9em;
 		color: var(--faf-cyan-dark);
+		white-space: nowrap;
 	}
 
 	.copy-box {
