@@ -261,16 +261,21 @@
 
 	<h2>1. Setup</h2>
 	<div class="lines">
-		<p>James grants the private repo. Or he hands a <code>v0.9.0</code> archive.</p>
-		<p>Then:</p>
+		<p>James grants the private repo <code>xai-faf-rust</code>.</p>
+		<p>That is the compiler. You do not drive inside it.</p>
+		<p>One script builds FAFb and makes a folder for you: <code>~/fafb-drive</code>.</p>
+		<p>Need Rust? The script says so. <a href="https://rustup.rs">rustup.rs</a>.</p>
 	</div>
 	<pre>cd xai-faf-rust
-cargo build --release
-./target/release/faf --help
-./target/release/fafm list
-./target/release/fafa "does context cover the build stack?"</pre>
+./scripts/testdrive.sh</pre>
 	<div class="lines">
-		<p>On Windows, same bins with <code>.exe</code>.</p>
+		<p>Windows: <code>.\scripts\testdrive.ps1</code>.</p>
+		<p>Then:</p>
+	</div>
+	<pre>cd ~/fafb-drive
+source env.sh
+faf --help</pre>
+	<div class="lines">
 		<p>First gated Pro use starts a 14-day trial.</p>
 		<p>That is <code>compile</code>, <code>sync</code>, <code>gaps</code>, <code>bench</code>, <code>embed</code>, <code>status -v</code>.</p>
 		<p>No card.</p>
@@ -278,13 +283,12 @@ cargo build --release
 
 	<h2>2. Drive</h2>
 	<div class="lines">
-		<p>Run these on a throwaway folder. Or a real repo you own.</p>
+		<p>Stay in <code>~/fafb-drive</code>. Already inited.</p>
 		<p>Context first. Then memory. Then ask.</p>
 	</div>
 	<ol class="steps">
 		<li><code>faf --help</code></li>
-		<li><code>faf init my-drive</code>. Or <code>faf auto</code> in an existing tree.</li>
-		<li><code>faf status</code></li>
+		<li><code>faf status</code>. Then <code>faf auto</code> if you want the tree to fill.</li>
 		<li><code>faf check</code></li>
 		<li><code>faf export</code>. Look at <code>AGENTS.md</code>.</li>
 		<li><code>faf compile</code>. Starts trial. Writes <code>.fafb</code>.</li>
