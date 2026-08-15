@@ -31,14 +31,14 @@ Comments · suggestions · shares welcome.`;
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/memory-in-chat" />
-	<meta property="og:image" content="https://faf.one/blog/memory-in-chat-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog/memory-in-chat-hero.png?v=2" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Memory in chat — faf-memory-mcp v0.1.1" />
 	<meta
 		name="twitter:description"
 		content="etch writes the file so memory survives the process. Plugin install matches live faf-memory on claude-community."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/memory-in-chat-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/memory-in-chat-hero.png?v=2" />
 </svelte:head>
 
 <div class="blog-post">
@@ -58,7 +58,7 @@ Comments · suggestions · shares welcome.`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/memory-in-chat-hero.png"
+			src="/blog/memory-in-chat-hero.png?v=2"
 			alt="faf-memory-mcp v0.1.1 — etch writes the file so memory survives the process"
 			width="1200"
 			height="630"
