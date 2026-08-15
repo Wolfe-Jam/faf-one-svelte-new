@@ -212,7 +212,7 @@
 	<h1>Drive it. Same questions for everyone.</h1>
 	<div class="lede lines">
 		<p>Not 1.0. Not public.</p>
-		<p>A handful of seats. Same form. Answers will be compared.</p>
+		<p>A handful of seats. Same form.</p>
 		<p>About 30–60 minutes. Cargo first.</p>
 	</div>
 
