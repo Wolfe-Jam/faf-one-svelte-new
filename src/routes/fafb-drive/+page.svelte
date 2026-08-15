@@ -263,11 +263,10 @@
 	<div class="lines">
 		<p>James grants the private repo <code>xai-faf-rust</code>.</p>
 		<p>That is the compiler. You do not drive inside it.</p>
-		<p>One script builds FAFb and makes a folder for you: <code>~/fafb-drive</code>.</p>
+		<p>Clone it. Open that folder. One script builds FAFb and makes a folder for you: <code>~/fafb-drive</code>.</p>
 		<p>Need Rust? The script says so. <a href="https://rustup.rs">rustup.rs</a>.</p>
 	</div>
-	<pre>cd xai-faf-rust
-./scripts/testdrive.sh</pre>
+	<pre>./scripts/testdrive.sh</pre>
 	<div class="lines">
 		<p>Windows: <code>.\scripts\testdrive.ps1</code>.</p>
 		<p>Then:</p>
