@@ -18,10 +18,12 @@
 		"alternateName": "FAF Agent",
 		"applicationCategory": "DeveloperApplication",
 		"operatingSystem": "Any (Python 3.10+)",
-		"softwareVersion": "0.1.1",
+		"softwareVersion": "0.1.4",
 		"description": "Format-grade MCP that cites the FAF spec on every answer or refuses out of scope. Six tools, the size of FAF.",
 		"url": "https://faf.one/agent",
 		"downloadUrl": "https://pypi.org/project/faf-agent-mcp/",
+		"codeRepository": "https://github.com/Wolfe-Jam/faf-agent-public",
+		"citation": "https://doi.org/10.5281/zenodo.21951641",
 		"license": "https://opensource.org/licenses/MIT",
 		"offers": {
 			"@type": "Offer",
@@ -35,7 +37,8 @@
 		},
 		"sameAs": [
 			"https://pypi.org/project/faf-agent-mcp/",
-			"https://github.com/Wolfe-Jam/faf-agent",
+			"https://github.com/Wolfe-Jam/faf-agent-public",
+			"https://doi.org/10.5281/zenodo.21951641",
 			"https://gravatar.com/fafagent"
 		]
 	};
@@ -50,8 +53,9 @@
 		"logo": "https://faf.one/orange-smiley.svg",
 		"sameAs": [
 			"https://gravatar.com/fafagent",
-			"https://github.com/Wolfe-Jam/faf-agent",
-			"https://pypi.org/project/faf-agent-mcp/"
+			"https://github.com/Wolfe-Jam/faf-agent-public",
+			"https://pypi.org/project/faf-agent-mcp/",
+			"https://doi.org/10.5281/zenodo.21951641"
 		]
 	};
 </script>
@@ -288,18 +292,23 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 
 	<section class="family">
 		<h2>The FAF Family</h2>
-		<p class="section-sub">One substrate. Four formats. Two architectural layers.</p>
+		<p class="section-sub">Context, Memory, Agents — plus binary and GRID.</p>
 		<div class="family-grid">
 			<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.faf</div>
 				<div class="family-layer">FCL — Foundational Context Layer</div>
 				<div class="family-status">✅ IANA registered</div>
 			</a>
-			<div class="family-card">
+			<a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.fafm</div>
 				<div class="family-layer">VML — Voice Memory Layer</div>
-				<div class="family-status">⌚ IANA DE review</div>
-			</div>
+				<div class="family-status">✅ IANA registered</div>
+			</a>
+			<a href="https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
+				<div class="family-name">.fafa</div>
+				<div class="family-layer">Agent Card</div>
+				<div class="family-status">✅ IANA registered</div>
+			</a>
 			<div class="family-card">
 				<div class="family-name">.fafb</div>
 				<div class="family-layer">Binary wire format</div>
@@ -316,10 +325,13 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 	<section class="resources">
 		<h2>Resources</h2>
 		<ul class="resource-list">
-			<li><a href="https://github.com/Wolfe-Jam/faf-agent" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+			<li><a href="https://github.com/Wolfe-Jam/faf-agent-public" target="_blank" rel="noopener noreferrer">GitHub (public About repo)</a></li>
 			<li><a href="https://pypi.org/project/faf-agent-mcp/" target="_blank" rel="noopener noreferrer">PyPI package</a></li>
-			<li><a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener noreferrer">IANA: application/vnd.faf+yaml</a></li>
-			<li><a href="https://github.com/Wolfe-Jam/faf-agent/blob/main/Soul.md" target="_blank" rel="noopener noreferrer">Soul.md — the voice contract</a></li>
+			<li><a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener noreferrer">Paper — Why Agents Need a Passport (DOI 10.5281/zenodo.21951641)</a></li>
+			<li><a href="https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml" target="_blank" rel="noopener noreferrer">IANA: application/vnd.fafa+yaml</a></li>
+			<li><a href="https://github.com/Wolfe-Jam/faf/blob/main/AGENT-FORMAT.md" target="_blank" rel="noopener noreferrer">AGENT-FORMAT.md — living spec</a></li>
+			<li><a href="https://github.com/Wolfe-Jam/faf-agent-public/blob/main/Soul.md" target="_blank" rel="noopener noreferrer">Soul.md — the voice contract</a></li>
+			<li><a href="https://faf.one/.well-known/fafa" target="_blank" rel="noopener noreferrer">Live passport — /.well-known/fafa</a></li>
 			<li><a href="https://gravatar.com/fafagent" target="_blank" rel="noopener noreferrer">Gravatar profile</a></li>
 			<li><a href="/skills">FAF Skills</a></li>
 			<li><a href="/">faf.one</a></li>

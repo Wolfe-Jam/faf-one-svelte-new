@@ -90,6 +90,11 @@
 						<span class="link-desc">Permanent Memory and Instant Recall</span>
 						<span class="link-stat status-live">☑️ DOI: 10.5281/zenodo.20348942</span>
 					</a>
+					<a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener" class="link-item iana-link">
+						<span class="link-name">CERN/Zenodo Paper</span>
+						<span class="link-desc">Why Agents Need a Passport (.fafa)</span>
+						<span class="link-stat status-live">☑️ DOI: 10.5281/zenodo.21951641</span>
+					</a>
 				</div>
 			</div>
 		</div>

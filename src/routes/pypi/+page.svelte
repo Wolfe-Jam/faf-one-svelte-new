@@ -4,13 +4,13 @@
 
 <svelte:head>
 	<title>uvx and go · pypi.faf.one</title>
-	<meta name="description" content="FAF on PyPI — six packages, one IANA-registered family. Gemini MCP, Claude .fafm SDK, Grok Voice, Python SDK, Voice MCP, slash-tokens. Two implement Zenodo papers." />
+	<meta name="description" content="FAF on PyPI — six packages, one IANA-registered family. Gemini MCP, Claude .fafm SDK, Grok Voice, Python SDK, Voice MCP, slash-tokens. Three implement Zenodo papers." />
 	<link rel="icon" type="image/svg+xml" href="/orange-smiley.svg" />
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="uvx and go · pypi.faf.one" />
-	<meta property="og:description" content="FAF on PyPI — six packages, one IANA-registered family. Two implement Zenodo papers. uvx and go." />
+	<meta property="og:description" content="FAF on PyPI — six packages, one IANA-registered family. Three implement Zenodo papers. uvx and go." />
 	<meta property="og:url" content="https://www.faf.one/pypi" />
 	<meta property="og:image" content="https://www.faf.one/orange-smiley.svg" />
 
@@ -28,13 +28,13 @@
 		<h1>pypi.faf.one</h1>
 		<p class="tagline"><span class="brand">uvx</span> and go</p>
 		<p class="kicker">Six packages. One <span class="brand">IANA-registered</span> family.</p>
-		<p class="sub">The FAF Python ecosystem — <span class="so-you-can">two implement Zenodo papers, all share the same standard.</span></p>
+		<p class="sub">The FAF Python ecosystem — <span class="so-you-can">three implement Zenodo papers, all share the same standard.</span></p>
 		<p class="live-link"><a href="https://pypi.faf.one" target="_blank" rel="noopener">Live discovery → pypi.faf.one</a></p>
 	</section>
 
 	<section class="content">
 		<h2>What it is</h2>
-		<p>Six packages on PyPI built on the same IANA-registered <code>.faf</code> and <code>.fafm</code> formats. Two of them — <a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">claude-fafm-sdk</a> and <a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener">gemini-faf-mcp</a> — are reference implementations of <strong>Zenodo-published papers</strong>. The rest extend the family across voice, agents, and the Python SDK that ties them together.</p>
+		<p>Six packages on PyPI built on the same IANA-registered <code>.faf</code>, <code>.fafm</code>, and <code>.fafa</code> formats. Three of them — <a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener">gemini-faf-mcp</a>, <a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">claude-fafm-sdk</a>, and <a href="https://pypi.org/project/faf-agent-mcp/" target="_blank" rel="noopener">faf-agent-mcp</a> — are reference implementations of <strong>Zenodo-published papers</strong>. The rest extend the family across voice and the Python SDK that ties them together.</p>
 		<p>Every number on this page is real, dated, and from <code>pypistats.org</code> <code>without_mirrors</code> only — no bot inflation, no mirror double-counting.</p>
 	</section>
 
@@ -87,8 +87,8 @@
 				<code>faf-agent-mcp</code>
 				<span class="ver">latest</span>
 			</div>
-			<p class="pkg-role">Voice of FAF — MCP server for agent voice profiles.</p>
-			<p class="pkg-stats"><strong>632</strong> total · <strong>8 / wk</strong></p>
+			<p class="pkg-role">Voice of FAF — MCP server for the IANA-registered <code>.fafa</code> agent card.</p>
+			<p class="pkg-stats"><strong>632</strong> total · <strong>8 / wk</strong> · implements the <a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener">Agents paper</a></p>
 			<pre>uvx faf-agent-mcp</pre>
 		</div>
 
@@ -112,9 +112,10 @@
 	<section class="content">
 		<h2>Receipts</h2>
 		<ul class="receipts">
-			<li><strong>IANA</strong> — <code>application/vnd.faf+yaml</code> · <code>application/vnd.fafm+yaml</code></li>
+			<li><strong>IANA</strong> — <code>application/vnd.faf+yaml</code> · <code>application/vnd.fafm+yaml</code> · <code>application/vnd.fafa+yaml</code></li>
 			<li><strong>Context paper</strong> (.faf) — <a href="https://doi.org/10.5281/zenodo.18251362" target="_blank" rel="noopener">DOI 10.5281/zenodo.18251362</a> · CC BY 4.0 · CERN-hosted (Zenodo)</li>
 			<li><strong>Memory paper</strong> (.fafm) — <a href="https://doi.org/10.5281/zenodo.20348942" target="_blank" rel="noopener">DOI 10.5281/zenodo.20348942</a> · CC BY 4.0 · CERN-hosted (Zenodo)</li>
+			<li><strong>Agents paper</strong> (.fafa) — <a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener">DOI 10.5281/zenodo.21951641</a> · CC BY 4.0 · CERN-hosted (Zenodo)</li>
 			<li><strong>MCP Registry</strong> — FAF Ecosystem <strong>#2759</strong> (Anthropic-merged)</li>
 			<li><strong>Measured</strong> — 2026-05-30 · <code>pypistats.org</code> · <code>without_mirrors</code> only</li>
 		</ul>
@@ -144,7 +145,7 @@
 	</section>
 
 	<section class="footer-section">
-		<p>Built with .faf + .fafm &#9745; PM.IR. — Permanent Memory. Instant Recall. 🏎️</p>
+		<p>Built with .faf + .fafm + .fafa &#9745; Context · Memory · Agents 🏎️</p>
 	</section>
 
 </main>
