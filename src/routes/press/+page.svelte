@@ -267,11 +267,7 @@
 			<div class="contact-info">
 				<div class="contact-item">
 					<strong>Email:</strong>
-					<a href="mailto:press@faf.one">press@faf.one</a>
-				</div>
-				<div class="contact-item">
-					<strong>General Inquiries:</strong>
-					<a href="mailto:support@faf.one">support@faf.one</a>
+					<a href="mailto:team@faf.one">team@faf.one</a>
 				</div>
 				<div class="contact-item">
 					<strong>Website:</strong>

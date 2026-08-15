@@ -126,7 +126,7 @@
 				Everything in Pro, plus multi-seat licensing, shared config across repos, and priority support.
 			</p>
 			<p class="team-contact">
-				Contact <a href="mailto:james@wolfejames.com" class="team-link">james@wolfejames.com</a>
+				Contact <a href="mailto:team@faf.one" class="team-link">team@faf.one</a>
 			</p>
 		</section>
 

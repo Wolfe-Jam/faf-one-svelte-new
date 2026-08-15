@@ -141,7 +141,7 @@ human_context:
 		<h3>Contact</h3>
 		<ul class="contact-list">
 			<li>Website: <a href="https://faf.one">faf.one</a></li>
-			<li>Email: support@faf.one</li>
+			<li>Email: <a href="mailto:team@faf.one">team@faf.one</a></li>
 			<li>NPM: <code>claude-faf-mcp</code> | <code>faf-cli</code></li>
 			<li>GitHub: <a href="https://github.com/Wolfe-Jam/faf">⭐ Wolfe-Jam/faf</a></li>
 		</ul>

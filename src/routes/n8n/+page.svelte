@@ -482,7 +482,7 @@
 				<p class="partnership-description">
 					We're working to make .faf the standard AI-context format<br/>
 					for n8n workflows.<br/>
-					Interested in partnering? <a href="mailto:contact@faf.one">Let's talk.</a>
+					Interested in partnering? <a href="mailto:team@faf.one">Let's talk.</a>
 				</p>
 				<PageActions
 					headline="n8n workflows are powerful — but AI can't read them."
