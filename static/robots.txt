@@ -14,6 +14,8 @@ Disallow: /uniqueness
 Disallow: /v4
 Disallow: /v4/
 Disallow: /fafb-drive
+Disallow: /fafb
+Disallow: /fafb/
 
 # AI Search Crawlers — explicitly welcome
 User-agent: OAI-SearchBot

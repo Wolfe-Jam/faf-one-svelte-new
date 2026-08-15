@@ -261,14 +261,12 @@
 
 	<h2>1. Setup</h2>
 	<div class="lines">
-		<p>James grants the private repo <code>xai-faf-rust</code>.</p>
-		<p>That is the compiler. You do not drive inside it.</p>
-		<p>Clone it. Open that folder. One script builds FAFb and makes a folder for you: <code>~/fafb-drive</code>.</p>
-		<p>Need Rust? The script says so. <a href="https://rustup.rs">rustup.rs</a>.</p>
+		<p>One line. No Rust. No GitHub. No keys.</p>
+		<p>It puts FAFb on this machine and makes <code>~/fafb-drive</code>.</p>
 	</div>
-	<pre>./scripts/testdrive.sh</pre>
+	<pre>curl -fsSL https://faf.one/fafb/install.sh | bash</pre>
 	<div class="lines">
-		<p>Windows: <code>.\scripts\testdrive.ps1</code>.</p>
+		<p>Windows: <code>irm https://faf.one/fafb/install.ps1 | iex</code>.</p>
 		<p>Then:</p>
 	</div>
 	<pre>cd ~/fafb-drive
