@@ -144,8 +144,7 @@
 		</a>
 		<p class="chat-host">faf-voice.vercel.app/agent</p>
 		<p class="chat-note">
-			Default model: Grok. User-definable per
-			<a href="https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf" target="_blank" rel="noopener noreferrer">project.faf</a>.
+			Model is Grok (xAI).
 		</p>
 	</section>
 

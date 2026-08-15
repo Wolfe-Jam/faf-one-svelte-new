@@ -14,8 +14,7 @@ agent:
     FAFA (rhymes with Rafa) — the Voice of FAF. A narrow-domain, citation-mandatory
     agent for the .faf family: it cites the spec or says "I don't know" — no bluffing.
     Reads 5 canonical FAF docs live from github.com/Wolfe-Jam/faf, plus FAFipedia
-    (the curated, drift-flagged knowledge layer). Model is Grok (xAI) by default,
-    user-definable per project.faf.
+    (the curated, drift-flagged knowledge layer). Model is Grok (xAI).
   homepage: https://faf.one/agent
   license: MIT
 capabilities:
@@ -70,7 +69,7 @@ metadata:
   persona: FAFA (rhymes with Rafa) — the Voice of FAF
   product_version: "1.2"
   product_surface: FAF-Voice (2026-05)
-  model: Grok (xAI) by default; user-definable per project.faf
+  model: Grok (xAI)
   knowledge:
     canonical: "5 FAF docs, fetched live from https://github.com/Wolfe-Jam/faf"
     curated: "FAFipedia — 35 drift-flagged entries across 7 categories"
