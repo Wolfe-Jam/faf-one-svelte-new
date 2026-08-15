@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/bun-sticky-zig-resync',
+			title: 'bun-sticky-zig v1.4.2: Scoring, Verified',
+			version: 'bun-sticky-zig v1.4.2',
+			date: 'August 14, 2026',
+			timestamp: '2026-08-14',
+			excerpt: 'Same .faf file scored 100% here, 57% in the real faf-cli engine. Found the drift, resynced the model, consolidated a fractured tier system, fixed a destructive sync bug — verified live, 157/157 tests, 3 platforms.',
+			emoji: '⚡',
+			category: 'Release',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/compose-edition',
 			title: 'The Compose Edition',
 			version: 'claude-faf-mcp v5.21.0',
