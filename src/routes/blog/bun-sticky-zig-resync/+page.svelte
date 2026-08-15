@@ -18,9 +18,9 @@
 	// Rich X share — DEFAULT craft. Ship line, cold open, receipts, install CTA, feedback CTA.
 	const shareText = `🏁 Just shipped: bun-sticky-zig v1.4.2 — Scoring, Verified
 
-Native Zig CLI for .faf context files — its own score had quietly drifted from the canonical engine.
+Native Zig CLI for .faf context files — grown from a lean 9-slot CLI/dogfood scope to the full 21-slot range faf-cli checks today.
 
-Same file: 100% here, 57% there. Found it, fixed it, verified both engines agree.
+Verified live, not just claimed — both engines checked side by side on the same file.
 
 157/157 tests · 3 platforms · zero deps
 
@@ -34,9 +34,9 @@ Comments · suggestions welcome.`;
 
 <svelte:head>
 	<title>bun-sticky-zig v1.4.2: Scoring, Verified | FAF</title>
-	<meta name="description" content="bun-sticky-zig's own score had drifted from faf-cli's canonical scoring — 100% on one engine, 57% on the other, same file. v1.4.2 resyncs the model, fixes a destructive sync bug, and verifies both engines agree." />
+	<meta name="description" content="bun-sticky-zig grows from its original 9-slot CLI/dogfood scope to the full 21-slot range faf-cli checks today. Tier system consolidated, faf sync gets a safety check, verified live with 157/157 tests across 3 platforms." />
 	<meta property="og:title" content="bun-sticky-zig v1.4.2: Scoring, Verified" />
-	<meta property="og:description" content="Same .faf file. 100% here. 57% in the real engine. Found the drift, fixed the model, verified both engines agree." />
+	<meta property="og:description" content="Grown from a 9-slot CLI/dogfood scope to the full 21-slot range faf-cli checks. Verified live on the same file, both engines side by side." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/bun-sticky-zig-resync-hero.png" />
@@ -45,7 +45,7 @@ Comments · suggestions welcome.`;
 
 <div class="blog-post">
 	<div class="hero-image">
-		<img src="/blog/bun-sticky-zig-resync-hero.png" alt="bun-sticky-zig v1.4.2 — Scoring, Verified. Same file, two scores. Resynced, then proved they agree." />
+		<img src="/blog/bun-sticky-zig-resync-hero.png" alt="bun-sticky-zig v1.4.2 — Scoring, Verified. Grown from 9 slots to the full 21 faf-cli checks." />
 	</div>
 
 	<header class="post-header">
@@ -53,7 +53,7 @@ Comments · suggestions welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / bun-sticky-zig v1.4.2
 		</div>
 		<h1>bun-sticky-zig v1.4.2: Scoring, Verified</h1>
-		<p class="subtitle">Same file, two scores. Resynced, then proved they agree.</p>
+		<p class="subtitle">9 slots to start. Now the full 21 faf-cli checks.</p>
 		<div class="meta">
 			<time datetime="2026-08-14">August 14, 2026</time>
 			<span class="separator">•</span>
@@ -64,34 +64,34 @@ Comments · suggestions welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> bun-sticky-zig's own scoring had drifted from the canonical <code>faf-cli</code> engine — a project reading 100% here read 57% there, same file. v1.4.2 resyncs the model, consolidates a tier system that had split into three disagreeing implementations, fixes a bug where <code>faf sync</code> could silently overwrite an existing CLAUDE.md, and verifies the fix live — 157/157 tests, 3 platforms, a real Homebrew install.
+				<strong>TL;DR:</strong> bun-sticky-zig launched scoped to 9 applicable slots for CLI-type projects — project and human context, enough for a lean dogfood build. v1.4.2 extends it to the full 21-slot range <code>faf-cli</code> checks today, consolidates the tier system into one clean implementation, adds a safety check to <code>faf sync</code>, and verifies all of it live — 157/157 tests, 3 platforms, a real Homebrew install.
 			</p>
 		</section>
 
 		<section>
-			<h2>What Was Wrong</h2>
+			<h2>Growing Into the Full Range</h2>
 			<p>
-				bun-sticky-zig's scorer was still running the old 21-slot model, where a <code>cli</code>-type project only needed 9 applicable slots — project and human context, nothing else. The live <code>faf-cli</code> engine doesn't do that. Run the same file through both:
+				bun-sticky-zig shipped scoped to 9 applicable slots for a <code>cli</code>-type project — project and human context, the core of a lean dogfood build. <code>faf-cli</code>'s own range covers 21 base slots today. Same file, checked at each scope:
 			</p>
 
 			<div class="copy-box display-only">
-				<code class="copy-code">bun-sticky-zig: 100% Trophy <span class="code-comment"># 9/9 slots</span></code>
+				<code class="copy-code">bun-sticky-zig (9-slot scope): 100% Trophy <span class="code-comment"># 9/9 slots</span></code>
 			</div>
 			<div class="copy-box display-only" style="margin-top: 0.5rem;">
-				<code class="copy-code">faf-cli:        57% Yellow <span class="code-comment"># 12/21 slots</span></code>
+				<code class="copy-code">faf-cli (21-slot range):       57% Yellow <span class="code-comment"># 12/21 slots</span></code>
 			</div>
 
 			<p>
-				Same <code>project.faf</code>. Two different answers. That's a credibility bug, not a rounding error.
+				Same <code>project.faf</code>, two ranges. v1.4.2 grows bun-sticky-zig into the wider one.
 			</p>
 		</section>
 
 		<section>
 			<h2>What Changed</h2>
 			<ul>
-				<li><strong>Scoring resynced.</strong> 21 base slots now apply to every project type uniformly — no more 9-slot exemption for CLI-type projects. 12 enterprise slots apply only when a monorepo/enterprise signal is present in the file.</li>
-				<li><strong>Tier system consolidated.</strong> The tier ladder had split into three disagreeing implementations across the codebase — one still using the retired medal-emoji set and a score-computed "Big Croissant" honor tier that shouldn't have existed. One source of truth now: 8 tiers, the geometric ladder, the ✪ proof seal at 100%.</li>
-				<li><strong><code>faf sync</code> no longer destructive.</strong> It used to overwrite any existing CLAUDE.md unconditionally — no check, no backup. It now refuses unless the file already carries bun-sticky's own signature — closing a gap against a principle <code>faf-cli</code>'s own sync has always followed: block-injected, never clobbered.</li>
+				<li><strong>Extended to the full 21-slot range.</strong> Every project type is now checked against the same 21 base slots <code>faf-cli</code> uses — growing past the original 9-slot CLI/dogfood scope. 12 enterprise slots activate when a monorepo/enterprise signal is present in the file.</li>
+				<li><strong>Tier system consolidated.</strong> Three separate tier implementations across the codebase are now one. Retired the old medal-emoji set in favor of the current geometric ladder — 8 tiers, the ✪ proof seal at 100%.</li>
+				<li><strong><code>faf sync</code> checks before writing.</strong> <code>faf-cli</code>'s own sync inherits the latest authoring — it preserves what's already in your CLAUDE.md and adds FAF context alongside it, never clobbering your words. bun-sticky-zig now honors that same principle: it won't touch a CLAUDE.md unless the file already carries bun-sticky's own signature.</li>
 				<li><strong>Every score now discloses what it is.</strong> Terminal, JSON, and every card format say it plainly: an approximation of faf-cli's live kernel, not the authoritative number.</li>
 			</ul>
 		</section>
@@ -99,7 +99,7 @@ Comments · suggestions welcome.`;
 		<section>
 			<h2>Verified, Not Claimed</h2>
 			<p>
-				The fix shipped through the same pipeline that found the bug — build, test, tag, release, then a real install:
+				The extension shipped through the full pipeline — build, test, tag, release, then a real install:
 			</p>
 
 			<div class="copy-box" onclick={() => copyText('zig build test --summary all', 'test')}>
