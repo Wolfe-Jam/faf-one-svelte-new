@@ -444,7 +444,7 @@ cargo build --release
 	.lines p, .card p { margin: 0; }
 	.card {
 		background: var(--faf-surface);
-		border: 1px solid var(--faf-hairline);
+		border: 2px solid var(--faf-ink);
 		border-radius: 10px;
 		padding: 1rem 1.1rem;
 		margin: 0.8rem 0;
@@ -484,11 +484,12 @@ cargo build --release
 	.hint { font-weight: 400; color: var(--faf-gray); font-size: 0.9rem; }
 	.hint.line { margin: 0 0 0.35rem; }
 	input[type='text'],
+	input[type='email'],
 	input[type='number'],
 	textarea {
 		width: 100%;
 		padding: 0.55rem 0.65rem;
-		border: 1px solid var(--faf-hairline);
+		border: 2px solid var(--faf-ink);
 		border-radius: 8px;
 		background: var(--faf-surface);
 		font: inherit;
@@ -511,7 +512,7 @@ cargo build --release
 	.scale label {
 		font-weight: 400;
 		text-align: center;
-		border: 1px solid var(--faf-hairline);
+		border: 2px solid var(--faf-ink);
 		border-radius: 8px;
 		padding: 0.4rem 0;
 		cursor: pointer;
@@ -522,19 +523,23 @@ cargo build --release
 	.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
 	button {
 		appearance: none;
-		border: 1px solid var(--faf-locked-dark);
-		background: var(--faf-locked-dark);
-		color: var(--faf-locked-dark-text);
 		border-radius: 8px;
 		padding: 0.6rem 1rem;
 		font: inherit;
 		font-weight: 650;
 		cursor: pointer;
 	}
+	/* Suggested action — orange reads as a button on cream and on near-black. */
+	button.faf-solid {
+		background: var(--faf-orange);
+		color: #1a1a1a;
+		border: 2px solid var(--faf-orange);
+	}
 	button.secondary {
 		background: transparent;
-		border-color: var(--faf-ink);
+		border: 1px solid var(--faf-ink);
 		color: var(--faf-ink);
+		font-weight: 500;
 	}
 	button:disabled { opacity: 0.5; cursor: not-allowed; }
 	.ok { color: var(--faf-cyan-text); font-size: 0.9rem; min-height: 1.2rem; }
