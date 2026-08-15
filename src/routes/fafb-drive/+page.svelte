@@ -342,7 +342,7 @@ cargo build --release
 		<h3>Setup</h3>
 		<label><span class="id">Q07</span> Setup time. Minutes from invite to a working <code>faf</code>.</label>
 		<p class="hint line">The install. Clone, build, path. Until <code>faf</code> ran.</p>
-		<input type="number" min="0" step="1" placeholder="e.g. 20" bind:value={Q07} />
+		<input type="number" min="0" step="1" placeholder="e.g. 2" bind:value={Q07} />
 
 		<label><span class="id">Q08</span> What blocked the install?</label>
 		<div class="row">
