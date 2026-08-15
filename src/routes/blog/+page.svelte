@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/memory-in-chat',
+			title: 'Memory in chat',
+			version: 'faf-memory-mcp v0.1.1',
+			date: 'August 15, 2026',
+			timestamp: '2026-08-15',
+			excerpt:
+				'etch writes the file so memory survives the process. Plugin install matches live faf-memory on claude-community. Guide: memory.faf.one.',
+			emoji: '🏁',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/bun-sticky-zig-resync',
 			title: 'bun-sticky-zig v1.4.2: Scoring, Verified',
 			version: 'bun-sticky-zig v1.4.2',

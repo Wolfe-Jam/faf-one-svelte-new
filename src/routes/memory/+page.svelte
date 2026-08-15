@@ -95,6 +95,14 @@
 				<a href="/blog/forgettable-memory">Forgettable</a>
 			</li>
 			<li><strong>Cross-vendor verified</strong> — one client read grok / claude / gemini souls live over the same protocol</li>
+			<li>
+				<strong
+					><a href="https://pypi.org/project/faf-memory-mcp/" target="_blank" rel="noopener"
+						>faf-memory-mcp on PyPI</a
+					></strong
+				>
+				— v0.1.1, the local <code>.fafm</code> file over MCP · complementary to the hosted namepoint
+			</li>
 			<li><strong>Hosted backend live</strong> — <code>memory.faf.one/mcp</code> (<code>get_soul</code> / <code>write_soul</code>)</li>
 			<li>
 				<strong>Thesis</strong> —
@@ -111,13 +119,26 @@
 		</ul>
 	</section>
 
+	<section class="content">
+		<h2>In chat</h2>
+		<p><strong>A.</strong> Install — <code>claude plugin install faf-memory<span>@</span>claude-community</code><br />
+			or <code>uvx faf-memory-mcp</code></p>
+		<p><strong>B.</strong> Etch — etch writes the file so memory survives the process.</p>
+		<p><strong>C.</strong> Recall — next session, same <code>.fafm</code> file.</p>
+		<p>
+			The local file is this door. A free namepoint is the hosted path.
+			Guide: <a href="https://memory.faf.one" target="_blank" rel="noopener">memory.faf.one</a>.
+		</p>
+	</section>
+
 	<section class="content cta-section">
 		<h2>Try it</h2>
 		<pre>uvx claude-fafm-sdk init</pre>
 		<a class="cta" href="https://memory.faf.one" target="_blank" rel="noopener">Open memory.faf.one →</a>
 		<p class="links">
 			<a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener">PyPI</a> ·
-			<a href="https://github.com/Wolfe-Jam/claude-fafm-sdk" target="_blank" rel="noopener">GitHub</a> ·
+			<a href="https://pypi.org/project/faf-memory-mcp/" target="_blank" rel="noopener">faf-memory-mcp</a> ·
+			<a href="/blog/memory-in-chat">Memory in chat</a> ·
 			<a href="/blog/memory-is-vast">Memory is vast</a>
 		</p>
 		<PageActions

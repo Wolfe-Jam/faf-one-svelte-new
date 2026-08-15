@@ -54,6 +54,7 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/memory-in-chat" class="ticker-item"><b>faf-memory-mcp 0.1.1</b> etch writes the file — in chat → memory.faf.one</a>
 				<a href="/blog/swift-edition" class="ticker-item"><b>faf-cli 7.7</b> The Swift Edition — Package.swift alone ≠ app</a>
 				<a href="/blog/ruby-edition" class="ticker-item"><b>faf-cli 7.6</b> The Ruby Edition — Gemfile alone ≠ Rails</a>
 				<a href="/blog/jvm-edition" class="ticker-item"><b>faf-cli 7.5</b> The JVM Edition — pom / gradle alone ≠ type</a>
@@ -61,6 +62,7 @@
 				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
+				<a href="/blog/memory-in-chat" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-memory-mcp 0.1.1</b> etch writes the file — in chat → memory.faf.one</a>
 				<a href="/blog/swift-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.7</b> The Swift Edition — Package.swift alone ≠ app</a>
 				<a href="/blog/ruby-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.6</b> The Ruby Edition — Gemfile alone ≠ Rails</a>
 				<a href="/blog/jvm-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.5</b> The JVM Edition — pom / gradle alone ≠ type</a>
