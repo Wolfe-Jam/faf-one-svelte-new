@@ -72,13 +72,15 @@ metadata:
   model: Grok (xAI)
   knowledge:
     canonical: "5 FAF docs, fetched live from https://github.com/Wolfe-Jam/faf"
-    curated: "FAFipedia — 35 drift-flagged entries across 7 categories"
+    curated: "FAFipedia — 39 drift-flagged entries across 7 categories"
+    paper: "https://doi.org/10.5281/zenodo.21951641"
   memory:
     layer: application/vnd.fafm+yaml
     substrate: mcpaas.live
     namepoint: "fafa-d091d8ba"
   discipline: 'Cites the spec or says "I don''t know" — no bluffing (apophatic guard).'
   repository: https://github.com/Wolfe-Jam/faf-agent
+  public_repo: https://github.com/Wolfe-Jam/faf-agent-public
   pypi: faf-agent-mcp
   trinity:
     context: application/vnd.faf+yaml

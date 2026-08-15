@@ -43,7 +43,8 @@
 			<li><strong>First MCP for Grok</strong> — origin credential, falsifiable by publish timestamps</li>
 			<li><strong>First FAF MCP online</strong> — first of the five FAF vendor MCPs to ship via web URL</li>
 			<li><strong>137 µs / score · 7,279 ops/sec</strong> — Mk4 WASM kernel, p50, measured on a 2019 iMac</li>
-			<li><strong>IANA-registered</strong> — <code>application/vnd.faf+yaml</code> · <code>application/vnd.fafm+yaml</code></li>
+			<li><strong>IANA-registered</strong> — <code>application/vnd.faf+yaml</code> · <code>application/vnd.fafm+yaml</code> · <code>application/vnd.fafa+yaml</code></li>
+			<li><strong>Agents paper</strong> — <a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener">Why Agents Need a Passport (DOI 10.5281/zenodo.21951641)</a></li>
 			<li><strong>21 core + 34 advanced</strong> MCP tools, HTTP-SSE transport</li>
 		</ul>
 	</section>

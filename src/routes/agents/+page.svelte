@@ -250,6 +250,7 @@ npx agents-md-facts --check    # fail if missing or stale</code></pre>
 			<li><strong>BETTER tooling</strong> — <a href="https://github.com/Wolfe-Jam/agents-md-facts" target="_blank" rel="noopener">agents-md-facts</a> (<code>npx agents-md-facts</code>).</li>
 			<li><strong>The research</strong> — <a href="/blog/beyond-the-bloat">Beyond the Bloat</a> and <a href="/blog/recovered-in-translation">Recovered in Translation</a>: why context built from a repo's own signals — real commands, real paths, no prose — is exactly the "minimal requirements" ETH Zürich's SRI Lab pointed to.</li>
 			<li><strong>The format underneath</strong> — <a href="/spec">the <code>.faf</code> format</a> and <a href="/">faf.one</a> (BEST rung).</li>
+			<li><strong>Who the agent is</strong> — <code>AGENTS.md</code> is the ops briefing; <code>.fafa</code> is the passport. Wolfe, J. (2026). <a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener"><em>Why Agents Need a Passport: .fafa — Portable Identity for the Agentic Era</em></a>.</li>
 			<li><strong>BEST tooling</strong> — <a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener">faf-cli on npm</a> (<code>npx faf-cli export --agents</code>).</li>
 		</ul>
 	</article>

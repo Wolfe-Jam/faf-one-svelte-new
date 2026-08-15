@@ -193,6 +193,7 @@
 						<ul class="package-features">
 							<li>☑️ Python — <code>uvx gemini-faf-mcp</code> (PyPI)</li>
 							<li>☑️ Reference implementation of the Zenodo Context paper</li>
+							<li>☑️ Companion: <a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener">Agents paper (.fafa)</a></li>
 							<li>☑️ Same IANA <code>.faf</code> format</li>
 						</ul>
 						<div class="package-install">
