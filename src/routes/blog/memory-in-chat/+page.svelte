@@ -78,8 +78,9 @@ Comments · suggestions · shares welcome.`;
 		<section>
 			<h2>ABC</h2>
 			<p>
-				<strong>A.</strong> Install — <code>claude plugin install faf-memory<span>@</span>claude-community</code><br />
-				or <code>uvx faf-memory-mcp</code>
+				<strong>A.</strong> Install — Claude: <code>claude plugin install faf-memory<span>@</span>claude-community</code>.
+				Cursor · Grok · any host: same JSON on
+				<a href="https://memory.faf.one">memory.faf.one</a>.
 			</p>
 			<p><strong>B.</strong> Etch — etch writes the file so memory survives the process.</p>
 			<p><strong>C.</strong> Recall — next session, same <code>.fafm</code> file.</p>

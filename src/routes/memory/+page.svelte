@@ -121,8 +121,16 @@
 
 	<section class="content">
 		<h2>In chat</h2>
-		<p><strong>A.</strong> Install — <code>claude plugin install faf-memory<span>@</span>claude-community</code><br />
-			or <code>uvx faf-memory-mcp</code></p>
+		<p><strong>A.</strong> Install — Claude: <code>claude plugin install faf-memory<span>@</span>claude-community</code></p>
+		<p>Cursor · Grok · any host — same JSON. Cursor: <code>~/.cursor/mcp.json</code>. Grok: <code>.mcp.json</code> (Grok also reads Cursor’s file).</p>
+		<pre>{`{
+  "mcpServers": {
+    "faf-memory": {
+      "command": "uvx",
+      "args": ["faf-memory-mcp"]
+    }
+  }
+}`}</pre>
 		<p><strong>B.</strong> Etch — etch writes the file so memory survives the process.</p>
 		<p><strong>C.</strong> Recall — next session, same <code>.fafm</code> file.</p>
 		<p>
