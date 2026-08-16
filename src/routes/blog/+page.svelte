@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/lazyrag',
+			title: 'Lazy RAG is home',
+			date: 'August 16, 2026',
+			timestamp: '2026-08-16',
+			excerpt:
+				'The home for Lazy RAG. Built for Grok Collections. Works with any RAG. Latest path built with Grok-Build.',
+			emoji: '🏁',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/memory-in-chat',
 			title: 'Memory in chat',
 			version: 'faf-memory-mcp v0.1.1',
