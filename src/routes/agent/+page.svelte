@@ -286,7 +286,7 @@ bunx faf-cli score   # score`}</pre></div>
 			<div class="code-block"><pre>{`# find it in the catalog
 curl https://faf.one/.well-known/ai-catalog.json
 # read the A2A card -> supportedInterfaces[0].url
-curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
+curl https://faf.one/.well-known/agent-card.json`}</pre></div>
 		</div>
 	</section>
 
@@ -331,6 +331,7 @@ curl https://faf-voice.vercel.app/.well-known/agent-card.json`}</pre></div>
 			<li><a href="https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml" target="_blank" rel="noopener noreferrer">IANA: application/vnd.fafa+yaml</a></li>
 			<li><a href="https://github.com/Wolfe-Jam/faf/blob/main/AGENT-FORMAT.md" target="_blank" rel="noopener noreferrer">AGENT-FORMAT.md — living spec</a></li>
 			<li><a href="https://github.com/Wolfe-Jam/faf-agent-public/blob/main/Soul.md" target="_blank" rel="noopener noreferrer">Soul.md — the voice contract</a></li>
+			<li><a href="https://faf.one/.well-known/agent-card.json" target="_blank" rel="noopener noreferrer">A2A Agent Card — /.well-known/agent-card.json</a></li>
 			<li><a href="https://faf.one/.well-known/fafa" target="_blank" rel="noopener noreferrer">Live passport — /.well-known/fafa</a></li>
 			<li><a href="https://gravatar.com/fafagent" target="_blank" rel="noopener noreferrer">Gravatar profile</a></li>
 			<li><a href="/skills">FAF Skills</a></li>

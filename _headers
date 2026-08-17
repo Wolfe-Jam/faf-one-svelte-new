@@ -35,3 +35,8 @@
 
 /.well-known/claude.fafa
   Content-Type: application/vnd.fafa+yaml; charset=utf-8
+
+# A2A Agent Card (RFC 8615). Discovery on the apex; door URL is in supportedInterfaces.
+/.well-known/agent-card.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *

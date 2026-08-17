@@ -1,0 +1,100 @@
+{
+  "name": "FAFA — the Voice of FAF",
+  "description": "FAFA (rhymes with Rafa) — the Voice of FAF. A narrow-domain, citation-mandatory agent for the .faf family: it cites the spec or says \"I don't know\" — no bluffing. Reads 5 canonical FAF docs live from github.com/Wolfe-Jam/faf, plus FAFipedia (the curated, drift-flagged knowledge layer). Model is Grok (xAI).",
+  "supportedInterfaces": [
+    {
+      "url": "https://faf-voice.vercel.app/api/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "provider": {
+    "organization": "WolfeJAM",
+    "url": "https://faf.one/agent"
+  },
+  "version": "0.1.4",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false,
+    "extensions": [
+      {
+        "uri": "https://one.faf/context",
+        "description": "FAF context provenance — the durable context block (one context, every door).",
+        "required": false,
+        "params": {
+          "faf": "https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf",
+          "mediaType": "application/vnd.faf+yaml",
+          "version": "2.5.2"
+        }
+      }
+    ]
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "ask",
+      "name": "ask",
+      "description": "Answer a FAF question from the live corpus + FAFipedia — cite the spec or refuse. No bluffing.",
+      "tags": [
+        "faf",
+        "rag",
+        "cite-or-refuse"
+      ]
+    },
+    {
+      "id": "cite",
+      "name": "cite",
+      "description": "Return the exact specification citation for a FAF topic.",
+      "tags": [
+        "faf",
+        "citation"
+      ]
+    },
+    {
+      "id": "validate_faf",
+      "name": "validate_faf",
+      "description": "Validate a project.faf document against the .faf specification.",
+      "tags": [
+        "faf",
+        "validate"
+      ]
+    },
+    {
+      "id": "score_faf",
+      "name": "score_faf",
+      "description": "Score a project.faf's AI-readiness (0–100).",
+      "tags": [
+        "faf",
+        "score"
+      ]
+    },
+    {
+      "id": "etch_memory",
+      "name": "etch_memory",
+      "description": "Persist a memory across sessions (🐘) via mcpaas.live — the .fafm memory layer.",
+      "tags": [
+        "memory",
+        "fafm",
+        "mcpaas"
+      ]
+    },
+    {
+      "id": "recall_memory",
+      "name": "recall_memory",
+      "description": "Recall memories from the project soul (.fafm) via mcpaas.live.",
+      "tags": [
+        "memory",
+        "fafm",
+        "mcpaas"
+      ]
+    }
+  ]
+}
