@@ -7,6 +7,8 @@ A live Agent Card. A working JSON-RPC door.
 
 GET https://faf.one/.well-known/agent-card.json
 
+#AAIF #A2A
+
 Help guide what we build —
 Comments · suggestions welcome.`;
 	const shareUrl = 'https://faf.one/blog/fafa-speaks-a2a';
