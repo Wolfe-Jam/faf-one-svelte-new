@@ -90,6 +90,7 @@
 		<ul class="receipts">
 			<li><strong>AI Catalog</strong> &mdash; on the <code>.faf</code> entry in <a href="/.well-known/ai-catalog.json">faf.one/.well-known/ai-catalog.json</a></li>
 			<li><strong>MCP server card</strong> &mdash; <code>_meta</code> on <a href="https://context.faf.one/mcp/server-card" target="_blank" rel="noopener">context.faf.one/mcp/server-card</a></li>
+			<li><strong>A2A Agent Card</strong> &mdash; <code>capabilities.extensions[].uri</code> on <a href="/.well-known/agent-card.json">faf.one/.well-known/agent-card.json</a> (data-only; <code>required: false</code>)</li>
 		</ul>
 		<pre>{`"one.faf/context": {
   "faf": "https://context.faf.one/.well-known/project.faf",

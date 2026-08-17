@@ -19,7 +19,7 @@
     "extendedAgentCard": false,
     "extensions": [
       {
-        "uri": "https://one.faf/context",
+        "uri": "https://faf.one/context",
         "description": "FAF context provenance — the durable context block (one context, every door).",
         "required": false,
         "params": {

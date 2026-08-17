@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://faf.one/schemas/one.faf-context.schema.json",
   "title": "one.faf/context",
-  "description": "FAF's namespaced extension key. one.faf is reverse-DNS for faf.one, so the key dereferences to https://faf.one/context. It carries the FAF receipt — a thin, falsifiable pointer at a .faf artifact — wherever a host format offers a namespaced slot: an AI Catalog entry, an MCP server card _meta, or any equivalent extension surface. The payload never duplicates the artifact; the .faf stays the single source of truth. Forward-compatible: unknown keys are permitted.",
+  "description": "FAF's namespaced extension key. one.faf is reverse-DNS for faf.one, so the key dereferences to https://faf.one/context. It carries the FAF receipt — a thin, falsifiable pointer at a .faf artifact — wherever a host format offers a namespaced slot: an AI Catalog entry, an MCP server card _meta, an A2A Agent Card capabilities.extensions[].uri, or any equivalent extension surface. The payload never duplicates the artifact; the .faf stays the single source of truth. Forward-compatible: unknown keys are permitted.",
   "type": "object",
   "additionalProperties": true,
   "properties": {
