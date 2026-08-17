@@ -1,8 +1,8 @@
 <svelte:head>
 	<title>AGENTS.md — The Field Guide | FAF</title>
-	<meta name="description" content="AGENTS.md is the file your coding agent reads to learn how to work in your repo. Section-by-section definitions, length discipline, the anti-patterns, and a complete worked example." />
+	<meta name="description" content="AGENTS.md field guide, plus the FAF hop for MCP and A2A — persistent project DNA. What earns a line, what to cut, and the shape agents actually read." />
 	<meta property="og:title" content="AGENTS.md — The Field Guide" />
-	<meta property="og:description" content="What earns a line, what to cut, and the shape agents actually read. Section-by-section definitions, length discipline, anti-patterns, and a complete example." />
+	<meta property="og:description" content="AGENTS.md field guide. MCP and A2A are different jobs. FAF is persistent project DNA." />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/agents" />
 	<meta name="twitter:card" content="summary" />
@@ -12,27 +12,44 @@
 
 <main class="page">
 
-	<!-- MCP section (interim) — crates README BEST → /agents; 7/28 textbook lives elsewhere. Do not clobber /mcp. -->
-	<section class="mcp-section" id="mcp" aria-labelledby="mcp-heading">
-		<h2 id="mcp-heading">Looking for MCP / 7/28?</h2>
+	<!-- Hop for AAIF / MCP / A2A further-reading. Field guide body stays AGENTS.md. Do not clobber /mcp. -->
+	<section class="mcp-section" id="mcp" aria-labelledby="hop-heading">
+		<h2 id="hop-heading">Looking for MCP or A2A?</h2>
 		<p>
-			This page is the <strong>AGENTS.md</strong> field guide and the <strong>BEST</strong> hop
-			(persistent project DNA). <strong>MCP is a different job</strong> — the open protocol that
-			connects tools to agents.
+			This page is the <strong>AGENTS.md</strong> field guide and the <strong>FAF</strong> hop —
+			persistent project DNA. A <code>project.faf</code> at the repo root records verified facts
+			and keeps instruction surfaces true, including <code>AGENTS.md</code>.
 		</p>
+		<p>
+			<strong>MCP</strong> is how an agent uses tools.
+			<strong>A2A</strong> is how independent agents discover each other and run a task as peers.
+			<strong>AGENTS.md</strong> is how the agent works in this repo.
+			FAF is complementary — it does not replace the protocol, the card, or the task.
+		</p>
+
+		<h3 id="a2a">A2A</h3>
+		<p>
+			Today <strong>A2A</strong> is an AAIF-hosted project. The Agent Card
+			<strong>declares</strong> capabilities. The task is how you find out if the declaration holds.
+		</p>
+		<ul class="mcp-links">
+			<li><a href="https://a2a-protocol.org/latest/" target="_blank" rel="noopener">Spec — a2a-protocol.org</a></li>
+			<li><a href="https://aaif.io/projects/agent2agent" target="_blank" rel="noopener">Project — Agent2Agent at AAIF</a></li>
+			<li><a href="https://aaif.io/blog/a2a-joins-aaif" target="_blank" rel="noopener">Join — A2A joins AAIF</a></li>
+		</ul>
+
+		<h3>MCP / 7/28</h3>
 		<p>
 			<strong>mcp-better</strong> is the live <strong>7/28</strong> textbook server (protocol
 			<code>2026-07-28</code>): Rust · stdio foundation · Discover · stamped list cache.
-			On crates.io and the MCP Registry as <code>io.github.Wolfe-Jam/mcp-better</code>.
+			On crates.io and the MCP Registry.
 		</p>
 		<ul class="mcp-links">
 			<li><a href="https://github.com/Wolfe-Jam/mcp-better" target="_blank" rel="noopener">GitHub — mcp-better</a></li>
 			<li><a href="https://crates.io/crates/mcp-better" target="_blank" rel="noopener">crates.io — mcp-better</a></li>
-			<li><a href="https://github.com/Wolfe-Jam/mcp-better/releases/tag/v0.1.0" target="_blank" rel="noopener">Release v0.1.0</a></li>
 		</ul>
 		<p class="mcp-note">
-			FAF + MCP context (existing site page): <a href="/mcp">faf.one/mcp</a> —
-			unchanged. A dedicated 7/28 MCP home may land later; this section is the jump for now.
+			FAF + MCP: <a href="/mcp">faf.one/mcp</a> — unchanged.
 		</p>
 	</section>
 
@@ -252,6 +269,8 @@ npx agents-md-facts --check    # fail if missing or stale</code></pre>
 			<li><strong>The format underneath</strong> — <a href="/spec">the <code>.faf</code> format</a> and <a href="/">faf.one</a> (BEST rung).</li>
 			<li><strong>Who the agent is</strong> — <code>AGENTS.md</code> is the ops briefing; <code>.fafa</code> is the passport. Wolfe, J. (2026). <a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener"><em>Why Agents Need a Passport: .fafa — Portable Identity for the Agentic Era</em></a>.</li>
 			<li><strong>BEST tooling</strong> — <a href="https://www.npmjs.com/package/faf-cli" target="_blank" rel="noopener">faf-cli on npm</a> (<code>npx faf-cli export --agents</code>).</li>
+			<li><strong>A2A</strong> — <a href="https://a2a-protocol.org/latest/" target="_blank" rel="noopener">the spec</a> · <a href="https://aaif.io/blog/a2a-joins-aaif" target="_blank" rel="noopener">A2A joins AAIF</a>.</li>
+			<li><strong>MCP + .faf</strong> — <a href="/mcp">faf.one/mcp</a>.</li>
 		</ul>
 	</article>
 
@@ -270,7 +289,7 @@ npx agents-md-facts --check    # fail if missing or stale</code></pre>
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	}
 
-	/* MCP interim section — crates/BEST hop; AGENTS body stays pure; /mcp not rewritten */
+	/* Hop box — MCP + A2A further-reading; AGENTS body stays the field guide */
 	.mcp-section {
 		margin: 1.5rem 0 0;
 		padding: 1.15rem 1.15rem 1.05rem;
@@ -286,6 +305,14 @@ npx agents-md-facts --check    # fail if missing or stale</code></pre>
 		margin: 0 0 0.65rem;
 		border: none;
 		padding: 0;
+	}
+
+	.mcp-section h3 {
+		font-size: 1.02rem;
+		font-weight: 800;
+		letter-spacing: 0.02em;
+		color: var(--faf-black);
+		margin: 1.05rem 0 0.45rem;
 	}
 
 	.mcp-section p {

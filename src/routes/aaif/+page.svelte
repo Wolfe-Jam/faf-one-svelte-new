@@ -6,7 +6,7 @@
 	<title>AAIF — Agentic AI Foundation | FAF</title>
 	<meta
 		name="description"
-		content="Founding AAIF Ambassador James Harrison — Agentic AI Foundation at the Linux Foundation. MCP · goose · AGENTS.md · agentgateway. AAIF-verified public work."
+		content="Founding AAIF Ambassador James Harrison — Agentic AI Foundation at the Linux Foundation. MCP · A2A · goose · AGENTS.md · agentgateway. AAIF-verified public work."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="AAIF — Founding Ambassador | FAF" />
@@ -38,7 +38,7 @@
 		<p class="kicker">Agentic AI Foundation · Founding Ambassador</p>
 		<h1>Selected for excellence. Shipping open standards.</h1>
 		<p class="sub">
-			MCP · goose · AGENTS.md · agentgateway — public work that advances the agent stack.
+			MCP · A2A · goose · AGENTS.md · agentgateway — public work on the open projects.
 		</p>
 		<div class="heritage">
 			<span class="pill">Hosted by the <a href="https://www.linuxfoundation.org/" target="_blank" rel="noopener">Linux Foundation</a></span>
@@ -66,9 +66,12 @@
 			<li>
 				<strong>MCP</strong> — Model Context Protocol (tools and context for agents)
 			</li>
+			<li>
+				<strong>A2A</strong> — Agent2Agent (agent to agent; AAIF-hosted 2026-08-17)
+			</li>
 			<li><strong>goose</strong> — open agent runtime</li>
 			<li><strong>AGENTS.md</strong> — the agent instruction file for a repo</li>
-			<li><strong>agentgateway</strong> — gateway layer for agent traffic</li>
+			<li><strong>agentgateway</strong> — gateway for agent traffic</li>
 		</ul>
 		<p class="links-row">
 			<a href="https://aaif.io" target="_blank" rel="noopener">aaif.io</a>
@@ -112,7 +115,7 @@
 			<strong>AAIF-verified</strong> marks public work that completed the Ambassador excellence path:
 		</p>
 		<ol class="verified-steps">
-			<li>Shipped on an AAIF project (MCP · goose · AGENTS.md · agentgateway · education)</li>
+			<li>Shipped on an AAIF project (MCP · A2A · goose · AGENTS.md · agentgateway · education)</li>
 			<li>Submitted through the Ambassador program</li>
 			<li>Reviewed (including automated review) and scored by the program — leadership-scored when it rises</li>
 		</ol>
@@ -179,8 +182,13 @@
 	<section class="content">
 		<h2>Further reading</h2>
 		<ul class="further">
-			<li><a href="/agents">faf.one/agents</a> — AGENTS.md field guide (BETTER / BEST)</li>
+			<li><a href="/agents">faf.one/agents</a> — AGENTS.md field guide · MCP / A2A hop</li>
 			<li><a href="/mcp">faf.one/mcp</a> — MCP + .faf</li>
+			<li>
+				<a href="https://aaif.io/blog/a2a-joins-aaif" target="_blank" rel="noopener">A2A joins AAIF</a>
+				·
+				<a href="https://a2a-protocol.org/latest/" target="_blank" rel="noopener">A2A spec</a>
+			</li>
 			<li><a href="/blog/mcp-better">mcp-better release note</a></li>
 			<li><a href="/blog/aaif-ambassador">AAIF Ambassador announcement</a></li>
 			<li>
@@ -209,10 +217,10 @@
 		</p>
 		<PageActions
 			headline="Founding AAIF Ambassador — open agent standards."
-			point1="Selected for excellence. Shipping MCP · goose · AGENTS.md · agentgateway."
+			point1="Selected for excellence. Shipping MCP · A2A · goose · AGENTS.md · agentgateway."
 			point2="Public work. AAIF-verified. Linux Foundation home."
 			url="https://faf.one/aaif"
-			hashtags="AAIF,MCP,AGENTS,opensource"
+			hashtags="AAIF,MCP,A2A,AGENTS,opensource"
 		/>
 	</section>
 </main>
