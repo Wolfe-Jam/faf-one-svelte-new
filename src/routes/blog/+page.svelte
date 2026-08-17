@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/fafa-speaks-a2a',
+			title: 'FAFA speaks A2A',
+			date: 'August 17, 2026',
+			timestamp: '2026-08-17',
+			excerpt:
+				'FAFA is a live A2A peer. Agent Card on the apex. JSON-RPC message/send on the door. Complementary — we do not replace the card.',
+			emoji: '🔌',
+			category: 'Interop'
+		},
+		{
 			slug: 'blog/lazyrag',
 			title: 'Lazy RAG is home',
 			date: 'August 16, 2026',
