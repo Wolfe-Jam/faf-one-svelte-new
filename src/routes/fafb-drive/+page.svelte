@@ -269,9 +269,13 @@
 		<p>Windows: <code>irm https://faf.one/fafb/install.ps1 | iex</code>.</p>
 		<p>Then:</p>
 	</div>
-	<pre>cd ~/fafb-drive
-source env.sh
+	<pre>hash -r
+which faf
+cd ~/fafb-drive
 faf --help</pre>
+	<div class="lines">
+		<p><code>which faf</code> must be <code>~/.local/bin/faf</code>. Not bun. Not Homebrew.</p>
+	</div>
 	<div class="lines">
 		<p>First gated Pro use starts a 14-day trial.</p>
 		<p>That is <code>compile</code>, <code>sync</code>, <code>gaps</code>, <code>bench</code>, <code>embed</code>, <code>status -v</code>.</p>

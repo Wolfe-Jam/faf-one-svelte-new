@@ -32,10 +32,27 @@ if (-not (Test-Path $Faf)) {
     }
 }
 
+$Link = Join-Path $HOME ".local\bin"
+New-Item -ItemType Directory -Force -Path $Link | Out-Null
+$existing = Get-Command faf -ErrorAction SilentlyContinue
+if ($existing -and $existing.Source -ne (Join-Path $Link "faf.exe") -and $existing.Source -ne $Faf) {
+    Write-Host ""
+    Write-Host "Another faf is already here:"
+    Write-Host "  $($existing.Source)"
+    Write-Host "That is not FAFb. This install puts FAFb at:"
+    Write-Host "  $(Join-Path $Link 'faf.exe')"
+}
+foreach ($bin in @("faf.exe", "fafm.exe", "fafa.exe")) {
+    $src = Join-Path $Dir $bin
+    if (Test-Path $src) {
+        Copy-Item $src (Join-Path $Link $bin) -Force
+    }
+}
+
 New-Item -ItemType Directory -Force -Path $Dest | Out-Null
 @"
 # FAFb 0.9 testdrive — this machine (PowerShell)
-`$env:Path = "$Dir;" + `$env:Path
+`$env:Path = "$Link;$Dir;" + `$env:Path
 "@ | Set-Content -Path (Join-Path $Dest "env.ps1")
 
 if (-not (Test-Path (Join-Path $Dest "project.faf"))) {
@@ -48,9 +65,9 @@ Write-Host ""
 Write-Host "Ready. Your folder is $Dest"
 Write-Host "A clean project. Not the compiler."
 Write-Host ""
+Write-Host "  which faf"
+Write-Host "    must be $Link\faf.exe"
 Write-Host "  cd $Dest"
-Write-Host "  . .\env.ps1"
 Write-Host "  faf --help"
-Write-Host "  faf status"
 Write-Host ""
 Write-Host "Then the rest of the drive on https://faf.one/fafb-drive"

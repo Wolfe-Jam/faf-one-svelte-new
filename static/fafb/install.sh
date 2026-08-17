@@ -53,10 +53,30 @@ if [[ ! -x "${dir}/faf" ]]; then
   done
 fi
 
+# ~/.local/bin is already on most PATH (pipx). Beats bun's faf-cli.
+link="${HOME}/.local/bin"
+mkdir -p "$link"
+if command -v faf >/dev/null 2>&1; then
+  already="$(command -v faf)"
+  if [[ "$already" != "${link}/faf" && "$already" != "${dir}/faf" ]]; then
+    echo
+    echo "Another faf is already here:"
+    echo "  ${already}"
+    echo "That is not FAFb. This install puts FAFb at:"
+    echo "  ${link}/faf"
+  fi
+fi
+for bin in faf fafm fafa; do
+  if [[ -x "${dir}/${bin}" ]]; then
+    ln -sfn "${dir}/${bin}" "${link}/${bin}"
+  fi
+done
+
 mkdir -p "$DEST"
 cat > "${DEST}/env.sh" <<EOF
 # FAFb 0.9 testdrive — this machine
-export PATH="${dir}:\$PATH"
+export PATH="${link}:${dir}:\$PATH"
+hash -r 2>/dev/null || true
 EOF
 
 if [[ ! -f "${DEST}/project.faf" ]]; then
@@ -68,9 +88,10 @@ echo
 echo "Ready. Your folder is ${DEST}"
 echo "A clean project. Not the compiler."
 echo
+echo "  hash -r"
+echo "  which faf"
+echo "    must be ${link}/faf"
 echo "  cd ${DEST}"
-echo "  source env.sh"
 echo "  faf --help"
-echo "  faf status"
 echo
 echo "Then the rest of the drive on https://faf.one/fafb-drive"
