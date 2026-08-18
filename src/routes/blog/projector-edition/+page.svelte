@@ -87,6 +87,7 @@ Comments · suggestions welcome.`;
 				<strong>TL;DR:</strong>
 				<code>faf cards</code> projects <code>.faf</code> + <code>.fafa</code> onto A2A, MCP,
 				registry, and catalog — one context block, every door.
+				<a href="/blog/one-block">Why we built it.</a>
 			</p>
 			<div class="terminal-block">
 				<code>npx --yes <NpmPkg name="faf-cli" version="7.8.0" /> cards --help</code>

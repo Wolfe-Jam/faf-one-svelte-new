@@ -87,6 +87,7 @@ Comments · suggestions welcome.`;
 				<strong>TL;DR:</strong> A2A mapper uses faf cards —
 				<a href="https://faf.one/context">https://faf.one/context</a>, same
 				<code>fafContextBlock()</code> as MCP. Not raw provenance.
+				<a href="/blog/one-block">Why we built it.</a>
 			</p>
 			<div class="terminal-block">
 				<code>npm install -g <NpmPkg name="claude-faf-mcp" version="5.22.0" /></code>

@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/one-block',
+			title: 'One block',
+			date: 'August 18, 2026',
+			timestamp: '2026-08-18',
+			excerpt:
+				'We said the A2A extension was the same context as MCP. The wire said otherwise. That is why faf cards exists.',
+			emoji: '📽️',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/projector-floor',
 			title: 'The Projector Floor',
 			version: 'claude-faf-mcp v5.22.0',
