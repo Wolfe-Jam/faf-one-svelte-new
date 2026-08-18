@@ -115,7 +115,7 @@
     {
       "identifier": "urn:air:faf.one:a2a:fafa",
       "displayName": "FAFA — A2A Agent Card",
-      "type": "application/a2a-agent-card+json",
+      "type": "application/json",
       "description": "FAFA's A2A v1.0 AgentCard — the discovery card for its live message/send door. Projected from the .fafa (one context, every door).",
       "tags": [
         "a2a",
@@ -123,8 +123,8 @@
         "faf",
         "message-send"
       ],
-      "url": "https://faf-voice.vercel.app/.well-known/agent-card.json",
-      "updatedAt": "2026-07-05T00:00:00Z"
+      "url": "https://faf.one/.well-known/agent-card.json",
+      "updatedAt": "2026-08-17T00:00:00Z"
     }
   ]
 }
