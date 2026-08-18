@@ -118,6 +118,11 @@ Permanent Memory. Instant Recall.`;
 	</article>
 
 	<footer class="post-footer">
+		<div class="paper-trilogy">
+			<span class="trilogy-label">More FAF papers</span>
+			<a href="/blog/zenodo-paper">.faf — Context Architecture</a>
+			<a href="/blog/agent-passport">.fafa — Agent Passport</a>
+		</div>
 		<p>Published by <strong>wolfejam</strong> · <a href="https://foundation.faf.one">FAF Foundation</a></p>
 	</footer>
 </div>
@@ -345,6 +350,31 @@ Permanent Memory. Instant Recall.`;
 
 	.post-footer a {
 		color: #00aa55;
+	}
+
+	.paper-trilogy {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6rem 1rem;
+		margin-bottom: 1.25rem;
+		font-size: 0.9rem;
+	}
+
+	.trilogy-label {
+		color: #666;
+		font-weight: 600;
+	}
+
+	.paper-trilogy a {
+		color: #00aa55;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.paper-trilogy a:hover {
+		text-decoration: underline;
 	}
 
 	.share-section {

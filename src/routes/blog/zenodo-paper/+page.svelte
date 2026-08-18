@@ -127,6 +127,11 @@ DOI: 10.5281/zenodo.18251362`;
 	</article>
 
 	<footer class="post-footer">
+		<div class="paper-trilogy">
+			<span class="trilogy-label">More FAF papers</span>
+			<a href="/blog/permanent-memory">.fafm — Permanent Memory</a>
+			<a href="/blog/agent-passport">.fafa — Agent Passport</a>
+		</div>
 		<p>Published by <strong>wolfejam</strong> · <a href="https://foundation.faf.one">FAF Foundation</a></p>
 	</footer>
 </div>
@@ -346,6 +351,31 @@ DOI: 10.5281/zenodo.18251362`;
 
 	.post-footer a {
 		color: var(--faf-foundation-green);
+	}
+
+	.paper-trilogy {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6rem 1rem;
+		margin-bottom: 1.25rem;
+		font-size: 0.9rem;
+	}
+
+	.trilogy-label {
+		color: #666;
+		font-weight: 600;
+	}
+
+	.paper-trilogy a {
+		color: var(--faf-foundation-green);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.paper-trilogy a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 768px) {

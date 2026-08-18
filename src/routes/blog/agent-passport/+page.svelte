@@ -148,6 +148,11 @@ Comments · suggestions welcome.`;
 		</section>
 
 		<section class="footer-note">
+			<div class="paper-trilogy">
+				<span class="trilogy-label">More FAF papers</span>
+				<a href="/blog/zenodo-paper">.faf — Context Architecture</a>
+				<a href="/blog/permanent-memory">.fafm — Permanent Memory</a>
+			</div>
 			<p>Built with .faf + .fafa ☑️ Declaration is not authorization.</p>
 		</section>
 	</article>
@@ -331,6 +336,30 @@ Comments · suggestions welcome.`;
 		border-top: 1px solid #e5e5e5;
 		font-size: 0.95rem;
 		color: #555;
+	}
+
+	.paper-trilogy {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.6rem 1rem;
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+	}
+
+	.trilogy-label {
+		color: #555;
+		font-weight: 600;
+	}
+
+	.paper-trilogy a {
+		color: #ff6b35;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.paper-trilogy a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 768px) {
