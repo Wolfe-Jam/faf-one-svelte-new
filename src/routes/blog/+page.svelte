@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/projector-edition',
+			title: 'The Projector Edition',
+			version: 'faf-cli v7.8.0',
+			date: 'August 18, 2026',
+			timestamp: '2026-08-18',
+			excerpt:
+				'faf cards projects .faf + .fafa onto A2A, MCP, registry, and catalog — one context block, every door.',
+			emoji: '📽️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/agent-passport',
 			title: 'Agent Passport Paper',
 			date: 'August 17, 2026',
