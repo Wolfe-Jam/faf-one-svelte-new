@@ -84,12 +84,25 @@ Comments · suggestions welcome.`;
 
 	<article class="post-content">
 		<section class="intro">
-			<p class="lead">
-				<strong>TL;DR:</strong> A2A, MCP, the registry, and the catalog all ask for a card about
-				the same project. We answered A2A with a copy. The comment said one context, every door.
-				The wire said raw <code>.fafa</code> provenance at the wrong URI. That's why
-				<code>faf cards</code> exists.
-			</p>
+			<div class="lead">
+				<p class="plain-label">In Plain English</p>
+				<p>
+					<strong>Old state.</strong> A project speaks through several doors — MCP, A2A, a
+					registry, a catalog. Each one asks “who are you?” If every door writes its own answer,
+					those answers drift. Then the project is lying about itself. We used to do that. The
+					comment said the A2A card carried the same context as MCP. The wire said otherwise.
+				</p>
+				<p>
+					<strong>Fix.</strong> One projector. You write the project once (<code>.faf</code> is
+					what it is; <code>.fafa</code> is who the agent is). <code>faf cards</code> writes the
+					host cards. Same context block on every door. It will not invent a door or an agent.
+				</p>
+				<p>
+					<strong>New state.</strong> That is faf-cli 7.8.0. Claude FAF 5.22.0 now uses that
+					projector, as will all FAF apps. We do not replace MCP or A2A. We fill the slot they
+					already have.
+				</p>
+			</div>
 		</section>
 
 		<section>
@@ -329,6 +342,20 @@ Comments · suggestions welcome.`;
 		border-left: 4px solid #8b5a2b;
 		padding: 1.25rem 1.5rem;
 		border-radius: 0 8px 8px 0;
+	}
+	.lead .plain-label {
+		margin: 0 0 0.85rem;
+		font-size: 0.82rem;
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #8b5a2b;
+	}
+	.lead p {
+		margin: 0 0 0.85rem;
+	}
+	.lead p:last-child {
+		margin-bottom: 0;
 	}
 
 	.post-content ul {
