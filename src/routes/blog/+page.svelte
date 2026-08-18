@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/agent-passport',
+			title: 'Agent Passport Paper',
+			date: 'August 17, 2026',
+			timestamp: '2026-08-17',
+			excerpt:
+				'Why Agents Need a Passport: .fafa — Portable Identity for the Agentic Era is now on Zenodo. A declarative YAML passport for agent identity, complementary to A2A, MCP, and AGENTS.md.',
+			emoji: '🛂',
+			category: 'Research'
+		},
+		{
 			slug: 'blog/fafa-speaks-a2a',
 			title: 'FAFA speaks A2A',
 			date: 'August 17, 2026',
