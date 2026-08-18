@@ -84,7 +84,13 @@ Comments · suggestions welcome.`;
 
 	<article class="post-content">
 		<section class="intro">
-			<div class="lead">
+			<p class="lead">
+				<strong>TL;DR:</strong> A2A, MCP, the registry, and the catalog all ask for a card about
+				the same project. We answered A2A with a copy. The comment said one context, every door.
+				The wire said raw <code>.fafa</code> provenance at the wrong URI. That's why
+				<code>faf cards</code> exists.
+			</p>
+			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
 				<p>
 					<strong>Old state.</strong> A project speaks through several doors — MCP, A2A, a
@@ -343,6 +349,9 @@ Comments · suggestions welcome.`;
 		padding: 1.25rem 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
+	.intro .lead + .lead {
+		margin-top: 1rem;
+	}
 	.lead .plain-label {
 		margin: 0 0 0.85rem;
 		font-size: 0.82rem;
@@ -351,10 +360,10 @@ Comments · suggestions welcome.`;
 		text-transform: uppercase;
 		color: #8b5a2b;
 	}
-	.lead p {
+	.plain-english p {
 		margin: 0 0 0.85rem;
 	}
-	.lead p:last-child {
+	.plain-english p:last-child {
 		margin-bottom: 0;
 	}
 
