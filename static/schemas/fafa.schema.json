@@ -149,7 +149,22 @@
           "type": "string",
           "description": "Media type of the substrate, e.g. application/vnd.faf+yaml."
         },
-        "version": { "type": "string" }
+        "iana": {
+          "type": "string",
+          "description": "IANA assignment URL for the substrate media type."
+        },
+        "deterministic": {
+          "type": "boolean",
+          "description": "True when the pointed .faf scores deterministically. No baked score."
+        },
+        "generated": {
+          "type": "string",
+          "description": "ISO timestamp copied from the pointed .faf."
+        },
+        "version": {
+          "type": "string",
+          "description": "Lossy extra. Stays on the passport; not part of fafContextBlock()."
+        }
       }
     },
     "signature": {
