@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/projector-floor',
+			title: 'The Projector Floor',
+			version: 'claude-faf-mcp v5.22.0',
+			date: 'August 18, 2026',
+			timestamp: '2026-08-18',
+			excerpt:
+				'A2A mapper uses faf cards — https://faf.one/context, same fafContextBlock() as MCP. Not raw provenance.',
+			emoji: '🔌',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/projector-edition',
 			title: 'The Projector Edition',
 			version: 'faf-cli v7.8.0',
