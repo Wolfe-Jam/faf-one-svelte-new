@@ -227,15 +227,15 @@ Comments · suggestions · shares welcome.`;
 			<h2>Feedback welcome</h2>
 			<p>Questions, nits, suggestions — guide the next version. Tell us what you want to see.</p>
 			<div class="feedback-actions">
+				<a href={xIntent} target="_blank" rel="noopener" class="feedback-btn">Post on X</a>
 				<a
 					href="https://github.com/Wolfe-Jam/mcp-better/issues/new"
 					target="_blank"
 					rel="noopener"
-					class="feedback-btn"
+					class="feedback-btn secondary"
 				>
-					Open a GitHub issue
+					Tell us on GitHub
 				</a>
-				<a href={xIntent} target="_blank" rel="noopener" class="feedback-btn secondary">Post on X</a>
 			</div>
 		</section>
 
