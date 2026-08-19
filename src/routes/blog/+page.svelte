@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/mcp-better-matching-client',
+			title: 'Matching client completes MRTR',
+			version: 'mcp-better v0.5.0',
+			date: 'August 18, 2026',
+			timestamp: '2026-08-18',
+			excerpt:
+				'The peer is two-sided. 0.4.3 proved the server can pause; this cut is the client that resumes. Cargo is the install.',
+			emoji: '⚡',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/one-block',
 			title: 'One block',
 			date: 'August 18, 2026',
