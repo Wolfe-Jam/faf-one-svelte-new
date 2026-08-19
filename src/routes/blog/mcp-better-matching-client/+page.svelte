@@ -1,3 +1,5 @@
+<!-- pubblog GOLD — default Release model. Locked 2026-08-19. Copy this file.
+     ~/.claude/skills/pubblog/references/release-matching-client.md -->
 <script lang="ts">
 	import { buildShareIntent } from '$lib/shareIntent.js';
 
