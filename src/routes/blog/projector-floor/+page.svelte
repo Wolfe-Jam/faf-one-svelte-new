@@ -90,7 +90,7 @@ Comments · suggestions welcome.`;
 				<a href="/blog/one-block">Why we built it.</a>
 			</p>
 			<div class="terminal-block">
-				<code>npm install -g <NpmPkg name="claude-faf-mcp" version="5.22.0" /></code>
+				<code>npm install -g <NpmPkg name="claude-faf-mcp" version="5.22.1" /></code>
 			</div>
 		</section>
 
@@ -115,10 +115,10 @@ Comments · suggestions welcome.`;
 		<section>
 			<h2>Try It</h2>
 			<div class="terminal-block">
-				<code>npm install -g <NpmPkg name="claude-faf-mcp" version="5.22.0" /></code>
+				<code>npm install -g <NpmPkg name="claude-faf-mcp" version="5.22.1" /></code>
 			</div>
 			<p class="muted-note">
-				Desktop: <a href="https://github.com/Wolfe-Jam/claude-faf-mcp/releases/tag/v5.22.0">v5.22.0 mcpb</a>
+				Desktop: <a href="https://github.com/Wolfe-Jam/claude-faf-mcp/releases/tag/v5.22.1">v5.22.1 mcpb</a>
 			</p>
 		</section>
 
