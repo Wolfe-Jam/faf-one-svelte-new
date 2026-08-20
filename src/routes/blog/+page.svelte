@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/no-fluff-edition',
+			title: 'The No-Fluff Edition',
+			version: 'grok-faf-mcp v1.10.0',
+			date: 'August 21, 2026',
+			timestamp: '2026-08-21',
+			excerpt:
+				'No fluff in a project.faf. faf_enhance is gone. RAG default is grok-4.6.',
+			emoji: '✪',
+			category: 'Grok'
+		},
+		{
 			slug: 'blog/gemini-agent-card',
 			title: 'The Agent Card Edition',
 			version: 'gemini-faf-mcp v2.6.0',
