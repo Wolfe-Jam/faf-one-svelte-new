@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/gemini-agent-card',
+			title: 'The Agent Card Edition',
+			version: 'gemini-faf-mcp v2.6.0',
+			date: 'August 20, 2026',
+			timestamp: '2026-08-20',
+			excerpt:
+				'A real agent.fafa passport, MCP Server Card, and AI Catalog entry — gemini-faf-mcp joins the wider agent-discovery ecosystem.',
+			emoji: '🪪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/mcp-better-matching-client',
 			title: 'Matching client completes MRTR',
 			version: 'mcp-better v0.5.0',
