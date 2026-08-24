@@ -28,7 +28,23 @@
             "iana": "registered"
           }
         }
-      ]
+      ],
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "attestations": [
+          {
+            "type": "iana-media-type-registration",
+            "uri": "https://www.iana.org/assignments/media-types/application/vnd.faf+yaml",
+            "description": "application/vnd.faf+yaml is an IANA-registered media type"
+          }
+        ],
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/faf-one-svelte-new"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:memory:faf",
@@ -42,7 +58,23 @@
         "recall"
       ],
       "url": "https://faf.one/.well-known/project.fafm",
-      "updatedAt": "2026-06-19T00:00:00Z"
+      "updatedAt": "2026-06-19T00:00:00Z",
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "attestations": [
+          {
+            "type": "iana-media-type-registration",
+            "uri": "https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml",
+            "description": "application/vnd.fafm+yaml is an IANA-registered media type"
+          }
+        ],
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/faf-one-svelte-new"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:context:zeph",
@@ -59,7 +91,23 @@
         "xai"
       ],
       "url": "https://raw.githubusercontent.com/Wolfe-Jam/xai-faf-zeph/main/project.faf",
-      "updatedAt": "2026-06-19T00:00:00Z"
+      "updatedAt": "2026-06-19T00:00:00Z",
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "attestations": [
+          {
+            "type": "iana-media-type-registration",
+            "uri": "https://www.iana.org/assignments/media-types/application/vnd.faf+yaml",
+            "description": "application/vnd.faf+yaml is an IANA-registered media type"
+          }
+        ],
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/xai-faf-zeph"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:memory:grok",
@@ -74,7 +122,23 @@
         "xai"
       ],
       "url": "https://faf.one/.well-known/grok.fafm",
-      "updatedAt": "2026-06-19T00:00:00Z"
+      "updatedAt": "2026-06-19T00:00:00Z",
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "attestations": [
+          {
+            "type": "iana-media-type-registration",
+            "uri": "https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml",
+            "description": "application/vnd.fafm+yaml is an IANA-registered media type"
+          }
+        ],
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/faf-one-svelte-new"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:mcp:context-server",
@@ -86,7 +150,16 @@
         "context"
       ],
       "url": "https://context.faf.one/mcp/server-card",
-      "updatedAt": "2026-06-19T00:00:00Z"
+      "updatedAt": "2026-06-19T00:00:00Z",
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/faf-cli"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:catalog:mcpaas",
@@ -99,7 +172,16 @@
         "federation"
       ],
       "url": "https://mcpaas.live/.well-known/ai-catalog.json",
-      "updatedAt": "2026-08-24T00:00:00Z"
+      "updatedAt": "2026-08-24T00:00:00Z",
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/mcpaas-cf"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:agent:fafa",
@@ -123,7 +205,23 @@
             "trinity": "agent"
           }
         }
-      ]
+      ],
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "attestations": [
+          {
+            "type": "iana-media-type-registration",
+            "uri": "https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml",
+            "description": "application/vnd.fafa+yaml is an IANA-registered media type"
+          }
+        ],
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/faf-one-svelte-new"
+          }
+        ]
+      }
     },
     {
       "identifier": "urn:air:faf.one:a2a:fafa",
@@ -137,7 +235,16 @@
         "message-send"
       ],
       "url": "https://faf.one/.well-known/agent-card.json",
-      "updatedAt": "2026-08-17T00:00:00Z"
+      "updatedAt": "2026-08-17T00:00:00Z",
+      "trustManifest": {
+        "identity": "https://faf.one",
+        "provenance": [
+          {
+            "relation": "publishedFrom",
+            "sourceId": "https://github.com/Wolfe-Jam/faf-one-svelte-new"
+          }
+        ]
+      }
     }
   ]
 }
