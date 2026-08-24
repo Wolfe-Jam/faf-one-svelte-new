@@ -89,15 +89,16 @@
       "updatedAt": "2026-06-19T00:00:00Z"
     },
     {
-      "identifier": "urn:air:faf.one:mcp:mcpaas",
-      "type": "application/mcp-server-card+json",
-      "description": "Real-time MCP context delivery at the edge — the hosting layer behind the claude/grok/gemini FAF endpoints.",
+      "identifier": "urn:air:faf.one:catalog:mcpaas",
+      "type": "application/ai-catalog+json",
+      "displayName": "MCPaaS — Edge MCP Hosting",
+      "description": "Real-time MCP context delivery at the edge — the hosting layer behind the claude/grok/gemini FAF endpoints. Independently published sub-catalog.",
       "tags": [
         "mcp",
-        "server-card",
-        "mcpaas"
+        "mcpaas",
+        "federation"
       ],
-      "url": "https://mcpaas.live/mcp/server-card",
+      "url": "https://mcpaas.live/.well-known/ai-catalog.json",
       "updatedAt": "2026-08-24T00:00:00Z"
     },
     {
