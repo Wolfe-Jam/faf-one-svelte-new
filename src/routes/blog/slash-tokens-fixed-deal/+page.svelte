@@ -1,8 +1,20 @@
-<!-- pubblog — slash-tokens v1.6.5. Matching-client SPINE. Slash graphics/colors
-     (#0a0a0a · #FF4400 · #FFAA00 · Evaluator). Not the FAF cream card. -->
+<!-- pubblog — slash-tokens v1.6.5. Matching-client SPINE. Slash signal
+     (#FF4400 · Evaluator). Light canvas: white, not cream/peach. Own
+     full-bleed wrapper so blog cream freeze cannot wash the type. -->
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
+	import { browser } from '$app/environment';
 	import { buildShareIntent } from '$lib/shareIntent.js';
 	import NpmPkg from '$lib/NpmPkg.svelte';
+
+	onMount(() => {
+		if (!browser) return;
+		document.documentElement.classList.add('slash-white');
+	});
+	onDestroy(() => {
+		if (!browser) return;
+		document.documentElement.classList.remove('slash-white');
+	});
 
 	const shareText = `🏁 Just shipped: slash-tokens v1.6.5 — The Fixed Deal Edition
 
@@ -68,6 +80,7 @@ Comments · suggestions welcome.`;
 	/>
 </svelte:head>
 
+<div class="slash-canvas">
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
@@ -262,17 +275,31 @@ Comments · suggestions welcome.`;
 		</section>
 	</article>
 </div>
+</div>
 
 <style>
-	:global(body) {
-		background: #0a0a0a;
+	/* Class is added/removed with this route so !important cannot leak. */
+	:global(html.slash-white),
+	:global(html.slash-white body) {
+		background: #ffffff !important;
+		color: #1a1a1a !important;
+	}
+
+	.slash-canvas {
+		min-height: 100vh;
+		width: 100vw;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		background: #ffffff;
+		color: #1a1a1a;
 	}
 
 	.blog-post {
 		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem 4rem;
-		color: #f5f5f5;
+		color: #1a1a1a;
+		background: #ffffff;
 		font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		line-height: 1.7;
 	}
@@ -286,7 +313,7 @@ Comments · suggestions welcome.`;
 	.breadcrumb {
 		font-size: 0.85rem;
 		margin-bottom: 1.25rem;
-		color: #888;
+		color: #555;
 	}
 	.breadcrumb a {
 		color: #ff4400;
@@ -315,7 +342,7 @@ Comments · suggestions welcome.`;
 		font-size: 2.4rem;
 		font-weight: 900;
 		margin: 0 0 0.5rem;
-		color: #f5f5f5;
+		color: #1a1a1a;
 		letter-spacing: -0.03em;
 		line-height: 1.1;
 	}
@@ -336,18 +363,18 @@ Comments · suggestions welcome.`;
 		font-size: 1.2rem;
 		font-weight: 700;
 		margin: 0 0 1rem;
-		color: #ffaa00;
+		color: #ff4400;
 	}
 
 	.meta {
 		font-size: 0.9rem;
-		color: #888;
+		color: #555;
 		display: flex;
 		align-items: center;
 		gap: 0.6rem;
 	}
 	.separator {
-		color: #444;
+		color: #bbb;
 	}
 	.category {
 		padding: 0.2rem 0.7rem;
@@ -366,7 +393,7 @@ Comments · suggestions welcome.`;
 		margin: 0 0 2.5rem;
 		border-radius: 12px;
 		overflow: hidden;
-		border: 1px solid #222;
+		border: 1px solid #1a1a1a;
 	}
 	.hero-image img {
 		width: 100%;
@@ -382,13 +409,13 @@ Comments · suggestions welcome.`;
 		font-size: 1.7rem;
 		font-weight: 800;
 		margin: 0 0 1rem;
-		color: #f5f5f5;
+		color: #1a1a1a;
 		letter-spacing: -0.02em;
 	}
 
 	.post-content p {
 		margin: 0 0 1rem;
-		color: #ddd;
+		color: #1a1a1a;
 	}
 	.post-content a {
 		color: #ff4400;
@@ -402,10 +429,11 @@ Comments · suggestions welcome.`;
 	.lead {
 		font-size: 1.15rem;
 		padding: 1.25rem 1.35rem;
-		background: rgba(255, 68, 0, 0.08);
+		background: #ffffff;
 		border-radius: 8px;
+		border: 1px solid #1a1a1a;
 		border-left: 4px solid #ff4400;
-		color: #f5f5f5;
+		color: #1a1a1a;
 	}
 
 	.intro .lead + .lead {
@@ -417,11 +445,11 @@ Comments · suggestions welcome.`;
 		font-weight: 800;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
-		color: #ffaa00;
+		color: #ff4400;
 	}
 	.plain-english p {
 		margin: 0 0 0.85rem;
-		color: #ddd;
+		color: #1a1a1a;
 	}
 	.plain-english p:last-child {
 		margin-bottom: 0;
@@ -433,12 +461,12 @@ Comments · suggestions welcome.`;
 	}
 	.post-content li {
 		margin-bottom: 0.65rem;
-		color: #ddd;
+		color: #1a1a1a;
 	}
 
 	.post-content code {
 		background: #1a1a1a;
-		color: #ffaa00;
+		color: #fff;
 		padding: 0.12rem 0.4rem;
 		border-radius: 4px;
 		font-family: 'Roboto Mono', 'SF Mono', Menlo, monospace;
@@ -447,12 +475,12 @@ Comments · suggestions welcome.`;
 
 	.muted-note {
 		font-size: 0.9rem;
-		color: #888;
+		color: #555;
 	}
 
 	.terminal-block {
-		background: #111;
-		border: 1px solid #222;
+		background: #0a0a0a;
+		border: 1px solid #1a1a1a;
 		border-radius: 8px;
 		padding: 1rem 1.25rem;
 		margin: 1.25rem 0;
@@ -472,17 +500,18 @@ Comments · suggestions welcome.`;
 	.feedback-invite {
 		margin-top: 1rem;
 		padding: 1.5rem 1.35rem;
-		background: rgba(255, 68, 0, 0.08);
+		background: #ffffff;
 		border-radius: 10px;
-		border-left: 4px solid #ffaa00;
+		border: 1px solid #1a1a1a;
+		border-left: 4px solid #ff4400;
 	}
 	.feedback-invite h2 {
 		margin-top: 0;
-		color: #f5f5f5;
+		color: #1a1a1a;
 	}
 	.feedback-invite p {
 		margin-bottom: 1.15rem;
-		color: #ddd;
+		color: #1a1a1a;
 	}
 	.feedback-actions {
 		display: flex;
@@ -505,21 +534,21 @@ Comments · suggestions welcome.`;
 		text-decoration: none !important;
 	}
 	.feedback-btn.secondary {
-		background: transparent;
-		color: #ffaa00 !important;
-		border: 2px solid #ffaa00;
+		background: #ffffff;
+		color: #1a1a1a !important;
+		border: 2px solid #1a1a1a;
 	}
 	.feedback-btn.secondary:hover {
-		background: #ffaa00;
-		color: #0a0a0a !important;
+		background: #1a1a1a;
+		color: #fff !important;
 		text-decoration: none !important;
 	}
 
 	.footer-note {
 		margin-top: 2rem;
 		padding-top: 1.5rem;
-		border-top: 1px solid #222;
+		border-top: 1px solid #1a1a1a;
 		font-size: 0.95rem;
-		color: #888;
+		color: #555;
 	}
 </style>
