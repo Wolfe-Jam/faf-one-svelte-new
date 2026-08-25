@@ -54,6 +54,7 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/slash-tokens-fixed-deal" class="ticker-item"><b>slash-tokens 1.6.5</b> The Fixed Deal Edition — Solo $20 mailbox, 10% waived</a>
 				<a href="/blog/no-fluff-edition" class="ticker-item"><b>grok-faf-mcp 1.10.0</b> The No-Fluff Edition — No fluff in a project.faf</a>
 				<a href="/blog/mcp-better-matching-client" class="ticker-item"><b>mcp-better 0.5.0</b> Matching client completes MRTR — the peer is two-sided</a>
 				<a href="/blog/projector-floor" class="ticker-item"><b>claude-faf-mcp 5.22</b> The Projector Floor — same block as MCP</a>
@@ -66,6 +67,7 @@
 				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
+				<a href="/blog/slash-tokens-fixed-deal" class="ticker-item" aria-hidden="true" tabindex="-1"><b>slash-tokens 1.6.5</b> The Fixed Deal Edition — Solo $20 mailbox, 10% waived</a>
 				<a href="/blog/no-fluff-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>grok-faf-mcp 1.10.0</b> The No-Fluff Edition — No fluff in a project.faf</a>
 				<a href="/blog/mcp-better-matching-client" class="ticker-item" aria-hidden="true" tabindex="-1"><b>mcp-better 0.5.0</b> Matching client completes MRTR — the peer is two-sided</a>
 				<a href="/blog/projector-floor" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-faf-mcp 5.22</b> The Projector Floor — same block as MCP</a>

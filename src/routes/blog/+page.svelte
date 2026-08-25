@@ -31,6 +31,18 @@
 
 	const posts = [
 		{
+			slug: 'blog/slash-tokens-fixed-deal',
+			title: 'The Fixed Deal Edition',
+			version: 'slash-tokens v1.6.5',
+			date: 'August 25, 2026',
+			timestamp: '2026-08-25',
+			excerpt:
+				'Solo $20 mailbox, 10% waived. Team $39 for the data. Free forever is bunx — no account.',
+			emoji: '⚡',
+			category: 'Release',
+			theme: 'dark'
+		},
+		{
 			slug: 'blog/no-fluff-edition',
 			title: 'The No-Fluff Edition',
 			version: 'grok-faf-mcp v1.10.0',
