@@ -526,11 +526,11 @@ Comments · suggestions welcome.`;
 		font-size: 0.92rem;
 		font-weight: 700;
 		text-decoration: none;
-		background: #ff4400;
+		background: #1a1a1a;
 		color: #fff !important;
 	}
 	.feedback-btn:hover {
-		background: #e03d00;
+		background: #000;
 		text-decoration: none !important;
 	}
 	.feedback-btn.secondary {
