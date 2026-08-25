@@ -19,7 +19,7 @@
         "agent-context"
       ],
       "url": "https://faf.one/.well-known/project.faf",
-      "updatedAt": "2026-06-19T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "extensions": [
         {
           "type": "https://faf.one/context",
@@ -58,7 +58,7 @@
         "recall"
       ],
       "url": "https://faf.one/.well-known/project.fafm",
-      "updatedAt": "2026-06-19T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
         "attestations": [
@@ -91,7 +91,7 @@
         "xai"
       ],
       "url": "https://raw.githubusercontent.com/Wolfe-Jam/xai-faf-zeph/main/project.faf",
-      "updatedAt": "2026-06-19T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
         "attestations": [
@@ -122,7 +122,7 @@
         "xai"
       ],
       "url": "https://faf.one/.well-known/grok.fafm",
-      "updatedAt": "2026-06-19T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
         "attestations": [
@@ -150,7 +150,7 @@
         "context"
       ],
       "url": "https://context.faf.one/mcp/server-card",
-      "updatedAt": "2026-06-19T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
         "provenance": [
@@ -196,7 +196,7 @@
         "cite-or-refuse"
       ],
       "url": "https://faf.one/.well-known/fafa",
-      "updatedAt": "2026-07-05T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "extensions": [
         {
           "type": "https://faf.one/context",
@@ -235,7 +235,7 @@
         "message-send"
       ],
       "url": "https://faf.one/.well-known/agent-card.json",
-      "updatedAt": "2026-08-17T00:00:00Z",
+      "updatedAt": "2026-08-24T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
         "provenance": [
