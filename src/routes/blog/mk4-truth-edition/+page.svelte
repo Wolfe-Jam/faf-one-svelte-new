@@ -144,18 +144,6 @@ Comments · suggestions welcome.`;
 		</section>
 
 		<section>
-			<h2>Where the rest of the family stands</h2>
-			<p>
-				<code>faf-cli</code>'s own convergence onto this same always-33 kernel is separate,
-				deliberately-scheduled work — tracked as "FAF 6.0." (Verified live in
-				<code>cli/src/core/scorer.ts</code> at the time of this release: its default
-				<code>faf score</code> still runs an earlier 21-slot kernel.) One kernel across every
-				FAF surface is the direction the whole family is heading — rust-faf-mcp gets there
-				first.
-			</p>
-		</section>
-
-		<section>
 			<h2>Try it</h2>
 			<p><strong>Install</strong> (Cargo):</p>
 			<div class="terminal-block">
