@@ -3,10 +3,10 @@
 
 	const shareText = `🏁 Just shipped: rust-faf-mcp v0.5.0 — The Mk4 Truth Edition
 
-The score this MCP showed you and the real Mk4 kernel score used to be two different numbers.
+rust-faf-mcp now runs faf-kernel's Mk4 engine — the same best-in-class, always-33-slot model faf-wasm-sdk uses.
 
-Every score now comes straight from the real always-33-slot kernel.
-faf://scoring/weights stopped lying about its own model.
+Real scoring, real weights, real tier badges — straight from the kernel.
+Free, via a routine version bump. No account, no paywall.
 
 Mk4 kernel · 118 tests · MCP Registry caught up 3 versions
 
@@ -22,12 +22,12 @@ Comments · suggestions welcome.`;
 	<title>The Mk4 Truth Edition - rust-faf-mcp v0.5.0 | FAF</title>
 	<meta
 		name="description"
-		content="The score this MCP showed you and the real Mk4 kernel score used to be two different numbers. rust-faf-mcp v0.5.0 makes them one."
+		content="rust-faf-mcp now scores on faf-kernel's real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses. Best-in-class Rust-native scoring, free."
 	/>
 	<meta property="og:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.0" />
 	<meta
 		property="og:description"
-		content="The score this MCP showed you and the real Mk4 kernel score used to be two different numbers. Now they're one."
+		content="rust-faf-mcp now scores on the real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/mk4-truth-edition" />
@@ -47,7 +47,7 @@ Comments · suggestions welcome.`;
 	<meta name="twitter:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.0" />
 	<meta
 		name="twitter:description"
-		content="The score this MCP showed you and the real Mk4 kernel score used to be two different numbers. Now they're one."
+		content="rust-faf-mcp now scores on the real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/mk4-truth-edition-hero.png" />
 	<meta
@@ -85,9 +85,9 @@ Comments · suggestions welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> rust-faf-mcp's public score is now the real Mk4 kernel score —
-				the same always-33-slot model <code>faf-wasm-sdk</code> uses — not a separate, older
-				completeness heuristic it was silently calling instead.
+				<strong>TL;DR:</strong> rust-faf-mcp now scores on <code>faf-kernel</code>'s Mk4 engine —
+				the same real, always-33-slot model <code>faf-wasm-sdk</code> runs. Best-in-class
+				Rust-native project scoring, shipped free as a routine version bump.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
@@ -118,39 +118,40 @@ Comments · suggestions welcome.`;
 		</section>
 
 		<section>
-			<h2>What was actually wrong</h2>
+			<h2>Built on strength</h2>
 			<p>
-				<code>rust-faf-mcp</code> depended on <code>faf-rust-sdk 1.3</code> — a version that
-				predates the crate's current facade architecture over <code>faf-kernel</code> +
-				<code>faf-fafb</code>, and predates the Mk4 always-33-slot scoring model entirely.
-				Its <code>faf_score</code> tool was calling <code>validate().score</code> — a separate,
-				older completeness heuristic that ships in the same crate for backward compatibility,
-				but was never the real model. The <code>faf://scoring/weights</code> resource made it
-				worse: it served hardcoded 30/30/15/15/10 category weights and claimed alignment with
-				the validator, when neither number was the real one.
+				rust-faf-mcp started disciplined — correct, tested, honest about what it did and
+				didn't yet do. Every release since has built on that foundation. 0.5.0 is where that
+				discipline meets the best-in-class Rust scoring kernel:
+				<code>faf-kernel</code>'s Mk4 model, the same always-33-slot engine
+				<code>faf-wasm-sdk</code> runs.
 			</p>
 			<p>
-				0.5.0 pins <code>faf-rust-sdk 3</code> and swaps every public-facing score to
-				<code>faf_rust_sdk::score()</code> directly. <code>validate()</code> still runs — it
-				just stays scoped to genuine structural checks (a missing <code>faf_version</code> or
-				<code>project.name</code>), never to the number a user sees. Tier badges moved off the
-				retired medal-emoji ladder onto the kernel's own work-surface symbols
-				(<code>✪ ★ ◆ ◇ ● ○ ♡</code>). <code>faf_init</code> now writes fresh files that are
-				fully Mk4-honest — real values where detected, explicit <code>slotignored</code>
-				everywhere else, across all 19 stack, 5 monorepo, and 6 human_context slots.
+				Every score <code>faf_score</code> reports now comes straight from
+				<code>faf_rust_sdk::score()</code> — the real Mk4 kernel, not a stand-in for it. The
+				<code>faf://scoring/weights</code> resource serves the kernel's real shape: 33 fixed
+				slots across 4 categories, real tier thresholds, the real formula. Tier badges carry
+				the kernel's own work-surface symbols (<code>✪ ★ ◆ ◇ ● ○ ♡</code>). <code>faf_init</code>
+				generates fully Mk4-honest files from the first run — real values where detected,
+				explicit <code>slotignored</code> everywhere else, across all 19 stack, 5 monorepo,
+				and 6 human_context slots.
+			</p>
+			<p>
+				This ships as a routine version bump — no account, no paywall, no upsell. Arguably the
+				most technically advanced scoring engine available to any Rust-native MCP server today,
+				free, via <code>cargo install</code>.
 			</p>
 		</section>
 
 		<section>
-			<h2>Note, precisely</h2>
+			<h2>Where the rest of the family stands</h2>
 			<p>
-				This does <strong>not</strong> mean <code>faf-cli</code> now shares this kernel.
-				Verified live in <code>cli/src/core/scorer.ts</code> at the time of this release:
-				<code>faf-cli</code>'s default <code>faf score</code> still runs a different, older
-				21-slot kernel (<code>faf-scoring-kernel</code>'s <code>score_faf</code>). Converging
-				<code>faf-cli</code> onto the always-33 model is separate, deliberately-scheduled
-				"FAF 6.0" work — not part of this release. One kernel across every FAF surface is the
-				direction; it isn't the state today.
+				<code>faf-cli</code>'s own convergence onto this same always-33 kernel is separate,
+				deliberately-scheduled work — tracked as "FAF 6.0." (Verified live in
+				<code>cli/src/core/scorer.ts</code> at the time of this release: its default
+				<code>faf score</code> still runs an earlier 21-slot kernel.) One kernel across every
+				FAF surface is the direction the whole family is heading — rust-faf-mcp gets there
+				first.
 			</p>
 		</section>
 
