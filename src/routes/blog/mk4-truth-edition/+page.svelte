@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { buildShareIntent } from '$lib/shareIntent.js';
 
-	const shareText = `🏁 Just shipped: rust-faf-mcp v0.5.0 — The Mk4 Truth Edition
+	const shareText = `🏁 Just shipped: rust-faf-mcp v0.5.1 — The Mk4 Truth Edition
 
 rust-faf-mcp now runs faf-kernel's Mk4 engine — the same always-33-slot model faf-wasm-sdk uses.
 
@@ -10,7 +10,7 @@ Free, via a routine version bump. No account, no paywall.
 
 Mk4 kernel · 118 tests · MCP Registry caught up 3 versions
 
-cargo install rust-faf-mcp --version 0.5.0
+cargo install rust-faf-mcp --version 0.5.1
 
 Help guide what we build —
 Comments · suggestions welcome.`;
@@ -19,12 +19,12 @@ Comments · suggestions welcome.`;
 </script>
 
 <svelte:head>
-	<title>The Mk4 Truth Edition - rust-faf-mcp v0.5.0 | FAF</title>
+	<title>The Mk4 Truth Edition - rust-faf-mcp v0.5.1 | FAF</title>
 	<meta
 		name="description"
 		content="rust-faf-mcp now scores on faf-kernel's real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses. Free, via cargo install."
 	/>
-	<meta property="og:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.0" />
+	<meta property="og:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.1" />
 	<meta
 		property="og:description"
 		content="rust-faf-mcp now scores on the real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses."
@@ -39,12 +39,12 @@ Comments · suggestions welcome.`;
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="The Mk4 Truth Edition — rust-faf-mcp v0.5.0 · one kernel, one number"
+		content="The Mk4 Truth Edition — rust-faf-mcp v0.5.1 · one kernel, one number"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
-	<meta name="twitter:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.0" />
+	<meta name="twitter:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.1" />
 	<meta
 		name="twitter:description"
 		content="rust-faf-mcp now scores on the real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses."
@@ -52,7 +52,7 @@ Comments · suggestions welcome.`;
 	<meta name="twitter:image" content="https://faf.one/blog/mk4-truth-edition-hero.png" />
 	<meta
 		name="twitter:image:alt"
-		content="The Mk4 Truth Edition — rust-faf-mcp v0.5.0 · one kernel, one number"
+		content="The Mk4 Truth Edition — rust-faf-mcp v0.5.1 · one kernel, one number"
 	/>
 </svelte:head>
 
@@ -62,19 +62,23 @@ Comments · suggestions welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Mk4 Truth
 		</div>
 		<h1>The Mk4 Truth Edition</h1>
-		<p class="version-tag">rust-faf-mcp v0.5.0</p>
+		<p class="version-tag">rust-faf-mcp v0.5.1</p>
 		<p class="subtitle">One kernel. One number. No more drift.</p>
 		<div class="meta">
 			<time datetime="2026-08-26">August 26, 2026</time>
 			<span class="separator">•</span>
 			<span class="category release">Release</span>
 		</div>
+		<p class="muted-note update-note">
+			Patched same day to v0.5.1 — hardened (8 flagged security advisories cleared), no
+			behavior change.
+		</p>
 	</header>
 
 	<div class="hero-image">
 		<img
 			src="/blog/mk4-truth-edition-hero.png"
-			alt="The Mk4 Truth Edition — rust-faf-mcp v0.5.0 · one kernel, one number"
+			alt="The Mk4 Truth Edition — rust-faf-mcp v0.5.1 · one kernel, one number"
 			width="1200"
 			height="630"
 			loading="eager"
@@ -107,7 +111,7 @@ Comments · suggestions welcome.`;
 				</p>
 			</div>
 			<div class="terminal-block">
-				<code>cargo install rust-faf-mcp --version 0.5.0</code>
+				<code>cargo install rust-faf-mcp --version 0.5.1</code>
 			</div>
 			<p class="muted-note">
 				<strong>We are Cargo.</strong> That is the install — a single 4.3 MB stripped binary.
@@ -147,7 +151,7 @@ Comments · suggestions welcome.`;
 			<h2>Try it</h2>
 			<p><strong>Install</strong> (Cargo):</p>
 			<div class="terminal-block">
-				<code>cargo install rust-faf-mcp --version 0.5.0</code>
+				<code>cargo install rust-faf-mcp --version 0.5.1</code>
 				<code>rust-faf-mcp</code>
 			</div>
 			<p><strong>Try</strong> (no Rust toolchain — not the install):</p>
@@ -160,7 +164,7 @@ Comments · suggestions welcome.`;
 			</div>
 			<p class="muted-note">
 				More depth:
-				<a href="https://github.com/Wolfe-Jam/rust-faf-mcp/blob/v0.5.0/CHANGELOG.md#050---2026-08-26"
+				<a href="https://github.com/Wolfe-Jam/rust-faf-mcp/blob/v0.5.1/CHANGELOG.md#051---2026-08-26"
 					target="_blank"
 					rel="noopener">CHANGELOG</a
 				>
@@ -179,7 +183,7 @@ Comments · suggestions welcome.`;
 		<section>
 			<h2>Technical details</h2>
 			<ul>
-				<li><strong>Version:</strong> 0.5.0 (August 26, 2026)</li>
+				<li><strong>Version:</strong> 0.5.1 (August 26, 2026)</li>
 				<li>
 					<strong>Dependency:</strong> <code>faf-rust-sdk</code> 1.3 → 3.0 (facade over
 					<code>faf-kernel</code> + <code>faf-fafb</code>)
