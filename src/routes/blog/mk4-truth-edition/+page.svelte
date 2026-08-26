@@ -3,7 +3,7 @@
 
 	const shareText = `🏁 Just shipped: rust-faf-mcp v0.5.0 — The Mk4 Truth Edition
 
-rust-faf-mcp now runs faf-kernel's Mk4 engine — the same best-in-class, always-33-slot model faf-wasm-sdk uses.
+rust-faf-mcp now runs faf-kernel's Mk4 engine — the same always-33-slot model faf-wasm-sdk uses.
 
 Real scoring, real weights, real tier badges — straight from the kernel.
 Free, via a routine version bump. No account, no paywall.
@@ -22,7 +22,7 @@ Comments · suggestions welcome.`;
 	<title>The Mk4 Truth Edition - rust-faf-mcp v0.5.0 | FAF</title>
 	<meta
 		name="description"
-		content="rust-faf-mcp now scores on faf-kernel's real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses. Best-in-class Rust-native scoring, free."
+		content="rust-faf-mcp now scores on faf-kernel's real Mk4 engine — the same always-33-slot model faf-wasm-sdk uses. Free, via cargo install."
 	/>
 	<meta property="og:title" content="The Mk4 Truth Edition - rust-faf-mcp v0.5.0" />
 	<meta
@@ -86,7 +86,7 @@ Comments · suggestions welcome.`;
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> rust-faf-mcp now scores on <code>faf-kernel</code>'s Mk4 engine —
-				the same real, always-33-slot model <code>faf-wasm-sdk</code> runs. Best-in-class
+				the same real, always-33-slot model <code>faf-wasm-sdk</code> runs. Our most advanced
 				Rust-native project scoring, shipped free as a routine version bump.
 			</p>
 			<div class="lead plain-english">
@@ -122,7 +122,7 @@ Comments · suggestions welcome.`;
 			<p>
 				rust-faf-mcp started disciplined — correct, tested, honest about what it did and
 				didn't yet do. Every release since has built on that foundation. 0.5.0 is where that
-				discipline meets the best-in-class Rust scoring kernel:
+				discipline meets our most advanced Rust scoring kernel:
 				<code>faf-kernel</code>'s Mk4 model, the same always-33-slot engine
 				<code>faf-wasm-sdk</code> runs.
 			</p>
@@ -137,9 +137,9 @@ Comments · suggestions welcome.`;
 				and 6 human_context slots.
 			</p>
 			<p>
-				This ships as a routine version bump — no account, no paywall, no upsell. Arguably the
-				most technically advanced scoring engine available to any Rust-native MCP server today,
-				free, via <code>cargo install</code>.
+				This ships as a routine version bump — no account, no paywall, no upsell. Technically,
+				our most advanced scoring engine, now available for any Rust-native MCP server project,
+				via <code>cargo install</code>. MIT.
 			</p>
 		</section>
 
