@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/mk4-truth-edition',
+			title: 'The Mk4 Truth Edition',
+			version: 'rust-faf-mcp v0.5.0',
+			date: 'August 26, 2026',
+			timestamp: '2026-08-26',
+			excerpt:
+				'The score this MCP showed and the real Mk4 kernel score used to be two different numbers. Now they\'re one.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/slash-tokens-fixed-deal',
 			title: 'The Fixed Deal Edition',
 			version: 'slash-tokens v1.6.5',
