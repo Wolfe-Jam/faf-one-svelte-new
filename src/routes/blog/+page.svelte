@@ -448,6 +448,7 @@
 		{
 			slug: 'blog/heartbeat-edition',
 			title: 'The Heartbeat Edition',
+			version: 'claude-faf-mcp v5.13.0',
 			date: 'June 23, 2026',
 			timestamp: '2026-06-23',
 			excerpt: "Persistent Project Context with Memory, looped for you. The SessionStart heartbeat now carries the intent the code can't — the goal and 6Ws only you can give or confirm. Plus AAA on Glama.",
@@ -457,6 +458,7 @@
 		{
 			slug: 'blog/proof-edition',
 			title: 'The Proof Edition',
+			version: 'claude-faf-mcp v5.12.0',
 			date: 'June 22, 2026',
 			timestamp: '2026-06-22',
 			excerpt: "faf_bench proves FAF's grounding lift in-session — a cold-vs-.faf benchmark with a mechanical ✪ receipt — and faf_go now bootstraps from a cold repo (init → auto → 6Ws).",
@@ -511,6 +513,7 @@
 		{
 			slug: 'blog/claude-dart-edition',
 			title: 'The Dart Edition',
+			version: 'claude-faf-mcp v5.10.0',
 			date: 'June 17, 2026',
 			timestamp: '2026-06-17',
 			excerpt: 'claude-faf-mcp now reads Dart & Flutter — it knows a Flutter app from a pure-Dart CLI. By composition, not a fork. Zero-Config — one-click .mcpb.',
@@ -529,6 +532,7 @@
 		{
 			slug: 'blog/ledger-edition',
 			title: 'The Ledger Edition',
+			version: 'faf-cli v6.11.0',
 			date: 'June 14, 2026',
 			timestamp: '2026-06-14',
 			excerpt: 'faf bench --submit posts your cold-vs-grounded receipt to the public ledger — the context bench goes public, one command.',
@@ -649,6 +653,7 @@
 		{
 			slug: 'blog/html-edition',
 			title: 'The HTML Edition',
+			version: 'faf-cli v6.7.0',
 			date: 'May 17, 2026',
 			timestamp: '2026-05-17',
 			excerpt: 'We rendered a .faf. The day we saw FAF. faf show renders project.faf → project.html, on-demand, for human and team review. The 4th pillar: FAF defines. MD instructs. AI codes. HTML shows. FAF became a team event — with a Pit Crew.',
@@ -668,6 +673,7 @@
 		{
 			slug: 'blog/trophy-edition',
 			title: 'The Trophy Edition',
+			version: 'faf-cli v6.6.0',
 			date: 'May 11, 2026',
 			timestamp: '2026-05-11',
 			excerpt: 'Until now we had 85% as a recommended minimum. It\'s now 100. All or nothing. AI gets its best shot at assisting you. v6.6 adds the 20th app-type (about — owner-attested representation) and flips the recommendation: 🏆 Trophy only.',
@@ -677,6 +683,7 @@
 		{
 			slug: 'blog/glass-hood-edition',
 			title: 'The Glass-Hood Edition',
+			version: 'faf-cli v6.5.1',
 			date: 'May 9, 2026',
 			timestamp: '2026-05-09',
 			excerpt: 'When faf-cli classifies your project, it tells you why. A YAML comment next to type: reveals the evidence — package.json bin, build.zig, pyproject.toml. Read the rationale, agree or disagree. No opaque hood — you can see the engine bay.',
@@ -760,6 +767,7 @@
 		{
 			slug: 'blog/relentless',
 			title: 'The Relentless Edition',
+			version: 'claude-faf-mcp v5.4.0',
 			date: 'April 13, 2026',
 			timestamp: '2026-04-13',
 			excerpt: 'Type /faf in Claude Desktop. Your project goes to 100%. Relentlessly. FAF defines. MD instructs. AI codes.',
@@ -817,6 +825,7 @@
 		{
 			slug: 'blog/mk4-parity-edition',
 			title: 'The Mk4 Parity Edition',
+			version: 'faf-python-sdk v1.1.1',
 			date: 'March 29, 2026',
 			timestamp: '2026-03-29',
 			excerpt: 'Same engine, same scores, same truth. Mk4 Championship Scoring in Python — 100% parity with Rust and TypeScript. 396 tests. WJTTC championship suite caught 3 defects CI missed. Enterprise-ready.',
@@ -826,6 +835,7 @@
 		{
 			slug: 'blog/v6-new-era',
 			title: 'V6 New Era — The Standard for AI Context',
+			version: 'faf-cli v6.0.0',
 			date: 'March 28, 2026',
 			timestamp: '2026-03-28',
 			excerpt: 'Ground-up Bun-native rewrite. 94% smaller. MCP server detection for 10 frameworks. Python/Rust support. Format 3.0. Three letters to AI context.',
@@ -890,6 +900,7 @@
 		{
 			slug: 'blog/fafb-edition',
 			title: 'The FAFb Edition',
+			version: 'faf-cli v5.2.0',
 			date: 'March 19, 2026',
 			timestamp: '2026-03-19',
 			excerpt: 'faf compile turns your .faf into a sealed binary. Mk4 slot renames, tri-sync topic files, 684→164 line README. Solo dev to Fortune 500.',
@@ -917,6 +928,7 @@
 		{
 			slug: 'blog/bun-compiled-binaries',
 			title: 'Compiled Binaries Edition',
+			version: 'faf-cli v5.0.6',
 			date: 'March 14, 2026',
 			timestamp: '2026-03-14',
 			excerpt: 'faf-cli now ships as standalone binaries. macOS, Linux, Windows. Zero runtime dependencies. One download, it works. Same pattern as Claude Code. 1,143/1,143 tests.',
@@ -935,6 +947,7 @@
 		{
 			slug: 'blog/best-context-under-the-bun',
 			title: 'Best Context Under the Bun',
+			version: 'faf-cli v5.0.6',
 			date: 'March 13, 2026',
 			timestamp: '2026-03-13',
 			excerpt: 'bunx faf-cli auto — 0% to 100% AI context in 0.5s. Same toolchain Claude Code ships on. Zero code changes. 35 Bun compatibility tests. 1,143/1,143 tests passing.',
@@ -944,6 +957,7 @@
 		{
 			slug: 'blog/faf-auto-edition',
 			title: 'The faf auto Edition',
+			version: 'faf-cli v5.0.5',
 			date: 'March 12, 2026',
 			timestamp: '2026-03-12',
 			excerpt: 'One command. Zero to 100%. faf auto now pulls your project name, goal, and version from manifest files automatically. No questions, no prompts, no manual entry. 1,108/1,108 tests.',
@@ -1007,6 +1021,7 @@
 		{
 			slug: 'blog/axum-edition',
 			title: 'The Axum Edition',
+			version: 'faf-rust-sdk v1.3.0',
 			date: 'March 7, 2026',
 			timestamp: '2026-03-07',
 			excerpt: 'One line to inject FAF project context into any Axum server. Feature-gated, parse once, inject everywhere. ~240 lines because the foundation is solid.',
@@ -1025,6 +1040,7 @@
 		{
 			slug: 'blog/mcpaas-crates-io',
 			title: 'MCPaaS Hits crates.io',
+			version: 'mcpaas v0.1.0',
 			date: 'March 4, 2026',
 			timestamp: '2026-03-04',
 			excerpt: 'mcpaas is on crates.io — a Rust SDK for persistent AI context. Broadcast once, every AI receives. 46 tests, 3-tier WJTTC championship-grade coverage. Zero drift.',
@@ -1061,6 +1077,7 @@
 		{
 			slug: 'blog/ram-edition',
 			title: 'The RAM Edition',
+			version: 'faf-cli v5.0.0',
 			date: 'March 1, 2026',
 			timestamp: '2026-03-01',
 			excerpt: 'Bi-sync is core. Tri-sync adds more. What does it add? It adds RAM — auto-syncing with Claude\'s MEMORY.md. Pro Gate, 6Ws reorder, 1,100 tests. For builders, serious coders, and app-makers.',
@@ -1117,6 +1134,7 @@
 		{
 			slug: 'blog/agents-md-edition',
 			title: 'The AGENTS.md Edition',
+			version: 'faf-cli v4.5.0',
 			date: 'February 24, 2026',
 			timestamp: '2026-02-24',
 			excerpt: 'One project.faf, every format. Full AGENTS.md and .cursorrules interop. Define once, sync everywhere with faf bi-sync --all. 87 new championship tests. 3 cross-platform bugs caught before you ever would.',
@@ -1135,6 +1153,7 @@
 		{
 			slug: 'blog/enhanced-git-support',
 			title: 'Enhanced Git Support Edition',
+			version: 'faf-cli v4.4.4',
 			date: 'February 18, 2026',
 			timestamp: '2026-02-18',
 			excerpt: 'Complete rewrite of faf git output. Accurate language detection across 17 languages. Compact, PR-ready .faf files (~35 lines vs 130). The version that scored a Hundred Famous Repos.',
@@ -1144,6 +1163,7 @@
 		{
 			slug: 'blog/readme-evolution',
 			title: '"README evolution for AI era" -- we finally realized what Gemini meant!',
+			version: 'claude-faf-mcp v4.1.0',
 			date: 'February 9, 2026',
 			timestamp: '2026-02-09',
 			excerpt: 'Two new features make AI-readiness instant: 6Ws Builder integration and automatic README extraction. Zero manual work required.',
@@ -1153,6 +1173,7 @@
 		{
 			slug: 'blog/context-quality',
 			title: 'Context Quality Edition',
+			version: 'faf-cli v4.2.2',
 			date: 'February 8, 2026',
 			timestamp: '2026-02-08',
 			excerpt: 'Slot-ignore mechanism fully documented. Like .gitignore for files, slot-ignore for context slots. The perfect way to handle app types. Score improvement: 74% → 100%.',
@@ -1189,6 +1210,7 @@
 		{
 			slug: 'blog/wjttc-faf-aware',
 			title: 'WJTTC Goes FAF-Aware: Testing the Tester',
+			version: 'wjttc v1.1.0',
 			date: 'February 2, 2026',
 			timestamp: '2026-02-02',
 			excerpt: 'The McLaren standard gets smarter. WJTTC now validates project.faf during MCP certification. Tested itself. Earned 100% 🏆. Enterprise capabilities on the FAF Foundation.',
@@ -1198,6 +1220,7 @@
 		{
 			slug: 'blog/antigravity-edition',
 			title: 'AntiGravity Edition: One project.faf, Every AI, Zero Drift',
+			version: 'faf-cli v4.0.0',
 			date: 'January 25, 2026',
 			timestamp: '2026-01-25',
 			excerpt: 'Part 2 of the Gemini story. FAF v4.0 adds full Gemini CLI and Antigravity IDE support. One source of truth. Three ecosystems. Zero context drift.',
@@ -1207,6 +1230,7 @@
 		{
 			slug: 'blog/v4-launch',
 			title: 'FAF v4.0: The Format That Became a Standard',
+			version: 'faf-cli v4.0.0',
 			date: 'January 24, 2026',
 			timestamp: '2026-01-24',
 			excerpt: 'Foundation Layer release. IANA registered, Anthropic merged, 21,000+ downloads. Grok: "Game-changer for eternal AI context" (9.5/10). The tool became the standard.',
@@ -1243,6 +1267,7 @@
 		{
 			slug: 'blog/context-intelligence',
 			title: 'Context Intelligence Edition',
+			version: 'faf-cli v3.4.8',
 			date: 'January 18, 2026',
 			timestamp: '2026-01-18',
 			excerpt: 'Bi-sync got smart. Now detects custom CLAUDE.md content and preserves it - tables, code blocks, custom sections stay intact.',
@@ -1252,6 +1277,7 @@
 		{
 			slug: 'blog/grok-faf-mcp',
 			title: 'grok-faf-mcp: First MCP for Grok',
+			version: 'grok-faf-mcp v1.0.2',
 			date: 'January 15, 2026',
 			timestamp: '2026-01-15',
 			excerpt: 'First MCP for xAI Grok. URL-accessible. FAST AF Edition. Dedicated to @elonmusk and the #1 model on Earth.',
@@ -1279,6 +1305,7 @@
 		{
 			slug: 'blog/google-gemini-edition',
 			title: 'Google Gemini Edition: One .faf File, Every AI Platform',
+			version: 'faf-cli v3.4.7',
 			date: 'January 13, 2026',
 			timestamp: '2026-01-13',
 			excerpt: 'Full interoperability with the Google Gemini ecosystem. Import from GEMINI.md, export to Conductor format, sync with Antigravity IDE. Universal AI context portability.',
@@ -1324,6 +1351,7 @@
 		{
 			slug: 'blog/bun-sticky-zig-launch',
 			title: 'bun-sticky-zig: Native FAF Scoring in Bun\'s Language',
+			version: 'bun-sticky-zig v1.0.0',
 			date: 'December 23, 2025',
 			timestamp: '2025-12-23',
 			excerpt: '77KB binary. Zero runtime dependencies. Pure Zig. FAF scoring built in Bun\'s own language with 136 championship-grade tests.',
@@ -1334,6 +1362,7 @@
 		{
 			slug: 'blog/bun-sticky-launch',
 			title: 'bun-sticky: Zero-Dependency FAF Scoring for Bun',
+			version: 'bun-sticky-faf v1.0.0',
 			date: 'December 22, 2025',
 			timestamp: '2025-12-22',
 			excerpt: 'Fastest bun under the sum. bun-sticky-faf: Bun-native FAF scoring CLI with zero dependencies, pure Bun APIs, and 333 championship-grade tests.',
@@ -1361,6 +1390,7 @@
 		{
 			slug: 'blog/python-sdk-launch',
 			title: 'The Tale of Two Crowns and a Snake',
+			version: 'faf-python-sdk v1.0.0',
 			date: 'November 21, 2025',
 			timestamp: '2025-11-21',
 			excerpt: 'FAF Python SDK launches on PyPI. Single developer. Two crowns. One snake. Then Grok showed up. Tomorrow: Rust.',
@@ -1442,6 +1472,7 @@
 		{
 			slug: 'blog/mcp-registry-launch',
 			title: 'claude-faf-mcp Published to Official MCP Registry',
+			version: 'claude-faf-mcp v2.6.1',
 			date: 'October 16, 2025',
 			timestamp: '2025-10-16',
 			excerpt: 'Project DNA ✨ for AI-Context, On-Demand - Now in the official MCP Registry with 33+ tools for universal AI context across Claude Desktop, Claude Code, VS Code, and ANY terminal/CLI.',
