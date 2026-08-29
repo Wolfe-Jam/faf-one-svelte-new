@@ -223,22 +223,22 @@
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-cli.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-cli</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-cli</span>
-						<span class="link-stat">v4.5.0</span>
+						<span class="link-stat">v7.8.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/claude-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/claude-faf-mcp</span>
-						<span class="link-stat">v5.1.0</span>
+						<span class="link-stat">v5.22.1</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-mcp</span>
-						<span class="link-stat">v1.3.1</span>
+						<span class="link-stat">v2.3.1</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/grok-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">grok-faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/grok-faf-mcp</span>
-						<span class="link-stat">v1.1.1</span>
+						<span class="link-stat">v1.10.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/rust-faf-cli.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-cli</span>
@@ -248,17 +248,17 @@
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/wjttc.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">wjttc</span>
 						<span class="link-desc">brew install wolfe-jam/faf/wjttc</span>
-						<span class="link-stat">v1.3.0</span>
+						<span class="link-stat">v1.4.1</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-taf-git.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-taf-git</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-taf-git</span>
-						<span class="link-stat">v2.0.4</span>
+						<span class="link-stat">v2.2.2</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/rust-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/rust-faf-mcp</span>
-						<span class="link-stat">v0.1.0</span>
+						<span class="link-stat">v0.6.0</span>
 					</a>
 				</div>
 			</div>
@@ -415,7 +415,7 @@
 					<a href="https://npmjs.com/package/wjttc" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">wjttc</span>
 						<span class="link-desc">npm package</span>
-						<span class="link-stat">v1.1.0</span>
+						<span class="link-stat">v1.4.1</span>
 					</a>
 					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fwjttc/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">wjttc</span>
@@ -507,7 +507,7 @@
 					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-rust</span>
 						<span class="link-desc">Rust radio client (crates.io)</span>
-						<span class="link-stat">46/46 tests</span>
+						<span class="link-stat">v0.2.1</span>
 					</a>
 				</div>
 			</div>
@@ -523,17 +523,17 @@
 					<a href="https://pypi.org/project/faf-python-sdk/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>
 						<span class="link-desc">Python SDK (PyPI)</span>
-						<span class="link-stat">v1.0.2</span>
+						<span class="link-stat">v1.2.0</span>
 					</a>
 					<a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
 						<span class="link-desc">Gemini MCP server (PyPI)</span>
-						<span class="link-stat">v1.1.0</span>
+						<span class="link-stat">v2.6.0</span>
 					</a>
 					<a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-fafm-sdk</span>
 						<span class="link-desc">Portable .fafm AI memory (PyPI)</span>
-						<span class="link-stat status-live">☑️ v0.1.0</span>
+						<span class="link-stat status-live">☑️ v2.0.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-python-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>
@@ -553,22 +553,22 @@
 					<a href="https://crates.io/crates/faf" target="_blank" rel="noopener" class="link-item featured">
 						<span class="link-name">faf</span>
 						<span class="link-desc">Meta-crate — cargo add faf</span>
-						<span class="link-stat">v0.1.0</span>
+						<span class="link-stat">v0.3.0</span>
 					</a>
 					<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-rust-sdk</span>
 						<span class="link-desc">Parse, validate, compile .faf files</span>
-						<span class="link-stat">v1.2.0 · 108 downloads</span>
+						<span class="link-stat">v3.1.0</span>
 					</a>
 					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-rust</span>
 						<span class="link-desc">Radio Protocol client for MCPaaS</span>
-						<span class="link-stat">v0.1.0</span>
+						<span class="link-stat">v0.2.1</span>
 					</a>
 					<a href="https://crates.io/crates/rust-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-mcp</span>
 						<span class="link-desc">Rust MCP server for .faf</span>
-						<span class="link-stat">v0.1.0 · 10 downloads</span>
+						<span class="link-stat">v0.6.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/rust-faf-cli" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-cli</span>
