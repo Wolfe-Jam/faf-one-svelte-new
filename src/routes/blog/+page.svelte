@@ -786,6 +786,7 @@
 		{
 			slug: 'blog/slash-tokens-launch',
 			title: '/slash — Token Optimization for Context Engineers',
+			version: 'slash-tokens v1.0.0',
 			date: 'April 8, 2026',
 			timestamp: '2026-04-08',
 			excerpt: 'One import. Every LLM call optimized. 4.8 KB WASM. Sub-ms. Evaluates, routes, aborts. 90%+ tokens salvaged. From the FAF team.',
@@ -1031,6 +1032,7 @@
 		{
 			slug: 'blog/in-rust-we-trust',
 			title: 'In Rust We Trust — FAF Goes All-In',
+			version: 'faf (crate)',
 			date: 'March 7, 2026',
 			timestamp: '2026-03-07',
 			excerpt: '5 crates, 240 tests, Axum middleware, FAFb binary, Radio Protocol. FAF goes all-in on Rust. One install: cargo add faf.',
@@ -1258,6 +1260,7 @@
 		{
 			slug: 'blog/mcpaas-launch',
 			title: 'MCPaaS: The Endpoint for Context',
+			version: 'mcpaas',
 			date: 'January 20, 2026',
 			timestamp: '2026-01-20',
 			excerpt: 'Serverless AI context delivery. One endpoint. Any AI. Eternal memory. Built on Cloudflare Workers with a 2.7KB Zig-WASM engine at 300+ global edge locations.',
@@ -1463,6 +1466,7 @@
 		{
 			slug: 'blog/chrome-extension-launch',
 			title: 'FAF Chrome Extension: Instant AI Context',
+			version: 'faf-chrome-extension',
 			date: 'October 23, 2025',
 			timestamp: '2025-10-23',
 			excerpt: "One-click AI-readiness analysis for any dev environment. Download .txt reports instantly to your Downloads folder. Google-approved, privacy-first, works with any AI tool. Nine downloads at launch—but top-notch when you need it.",
