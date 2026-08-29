@@ -22,7 +22,7 @@
 		<div class="container">
 			<h1 class="page-title"><span class="faf-highlight">.faf</span> Links</h1>
 			<p class="tagline">Complete URL Registry</p>
-			<p class="last-updated">Last Updated: 2026-07-04</p>
+			<p class="last-updated">Last Updated: 2026-08-29</p>
 
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
@@ -59,7 +59,7 @@
 					<a href="https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IANA Registration</span>
 						<span class="link-desc">application/vnd.fafa+yaml — Agent Card / Agentic Layer</span>
-						<span class="link-stat status-live">☑️ LIVE</span>
+						<span class="link-stat status-live">☑️ Jun 26, 2026</span>
 					</a>
 					<a href="https://mailarchive.ietf.org/arch/msg/media-types/4m9epGYthb2NukVyWCFEYLEiLD0/" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IETF Mail Archive</span>
@@ -75,25 +75,20 @@
 						<span class="link-desc">draft-wolfe-faf-agent — Agent Card (.fafa)</span>
 						<span class="link-stat status-live">☑️ Submitted</span>
 					</a>
-					<a href="https://www.iana.org/form/media-types" target="_blank" rel="noopener" class="link-item iana-link">
-						<span class="link-name">IANA FAFb Submission</span>
-						<span class="link-desc">application/vnd.fafb (binary format)</span>
-						<span class="link-stat status-pending">Enterprise-Grade</span>
-					</a>
 					<a href="https://doi.org/10.5281/zenodo.18251362" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">CERN/Zenodo Paper</span>
 						<span class="link-desc">Format-Driven AI Context Architecture (.faf)</span>
-						<span class="link-stat">DOI: 10.5281/zenodo.18251362</span>
+						<span class="link-stat">Jan 15, 2026</span>
 					</a>
 					<a href="https://doi.org/10.5281/zenodo.20348942" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">CERN/Zenodo Paper</span>
 						<span class="link-desc">Permanent Memory and Instant Recall</span>
-						<span class="link-stat status-live">☑️ DOI: 10.5281/zenodo.20348942</span>
+						<span class="link-stat status-live">☑️ May 22, 2026</span>
 					</a>
 					<a href="https://doi.org/10.5281/zenodo.21951641" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">CERN/Zenodo Paper</span>
 						<span class="link-desc">Why Agents Need a Passport (.fafa)</span>
-						<span class="link-stat status-live">☑️ DOI: 10.5281/zenodo.21951641</span>
+						<span class="link-stat status-live">☑️ Aug 15, 2026</span>
 					</a>
 				</div>
 			</div>
@@ -147,7 +142,7 @@
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
-						<span class="link-desc">Universal MCP server</span>
+						<span class="link-desc">Cursor / VS Code / IDE MCP server</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
@@ -183,26 +178,23 @@
 		<div class="container">
 			<div class="card">
 				<h2>📦 NPM Packages</h2>
+				<p class="section-note">Live download counts: <a href="/downloads">faf.one/downloads</a></p>
 				<div class="links-grid">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-cli</span>
 						<span class="link-desc">CLI tool for .faf management</span>
-						<span class="link-stat">npm install</span>
 					</a>
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
 						<span class="link-desc">Anthropic-merged (#2759)</span>
-						<span class="link-stat">8,200+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">grok-faf-mcp</span>
 						<span class="link-desc">MCP server for Grok</span>
-						<span class="link-stat">500+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
-						<span class="link-desc">Universal MCP server</span>
-						<span class="link-stat">1,600+ downloads</span>
+						<span class="link-desc">Cursor / VS Code / IDE MCP server</span>
 					</a>
 					<a href="https://npmjs.com/package/faf-wasm" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-wasm</span>
@@ -228,22 +220,22 @@
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-cli.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-cli</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-cli</span>
-						<span class="link-stat">v4.5.0</span>
+						<span class="link-stat">v7.8.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/claude-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/claude-faf-mcp</span>
-						<span class="link-stat">v5.1.0</span>
+						<span class="link-stat">v5.22.1</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-mcp</span>
-						<span class="link-stat">v1.3.1</span>
+						<span class="link-stat">v2.3.1</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/grok-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">grok-faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/grok-faf-mcp</span>
-						<span class="link-stat">v1.1.1</span>
+						<span class="link-stat">v1.10.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/rust-faf-cli.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-cli</span>
@@ -253,17 +245,17 @@
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/wjttc.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">wjttc</span>
 						<span class="link-desc">brew install wolfe-jam/faf/wjttc</span>
-						<span class="link-stat">v1.3.0</span>
+						<span class="link-stat">v1.4.1</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/faf-taf-git.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-taf-git</span>
 						<span class="link-desc">brew install wolfe-jam/faf/faf-taf-git</span>
-						<span class="link-stat">v2.0.4</span>
+						<span class="link-stat">v2.2.2</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/homebrew-faf/blob/main/Formula/rust-faf-mcp.rb" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-mcp</span>
 						<span class="link-desc">brew install wolfe-jam/faf/rust-faf-mcp</span>
-						<span class="link-stat">v0.1.0</span>
+						<span class="link-stat">v0.6.0</span>
 					</a>
 				</div>
 			</div>
@@ -275,31 +267,31 @@
 		<div class="container">
 			<div class="card">
 				<h2>🔌 MCP Registry (Official)</h2>
-				<p class="section-note">Published 2025-12-31</p>
+				<p class="section-note">Namespace: one.faf</p>
 				<div class="links-grid">
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fclaude-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fclaude-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
-						<span class="link-desc">v3.3.7</span>
+						<span class="link-desc">v5.22.1</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Ffaf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Ffaf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
-						<span class="link-desc">v1.2.1</span>
+						<span class="link-desc">v2.3.1</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fgemini-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fgemini-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
-						<span class="link-desc">v2.1.2</span>
+						<span class="link-desc">v2.6.0</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fgrok-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fgrok-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">grok-faf-mcp</span>
-						<span class="link-desc">v1.3.1</span>
+						<span class="link-desc">v1.10.0</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Frust-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Frust-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-mcp</span>
-						<span class="link-desc">v0.2.2</span>
+						<span class="link-desc">v0.6.0</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 				</div>
@@ -347,6 +339,16 @@
 						<span class="link-name">rohitg00/awesome-devops</span>
 						<span class="link-desc">PR #20</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://github.com/modelcontextprotocol/registry/pull/1207" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcp/registry #1207</span>
+						<span class="link-desc">cargo (crates.io) registry type</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
+					</a>
+					<a href="https://github.com/modelcontextprotocol/registry/pull/1511" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcp/registry #1511</span>
+						<span class="link-desc">cargo + crates.io in schema examples</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
 					</a>
 					<a href="https://glama.ai/mcp/servers" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">Glama</span>
@@ -420,11 +422,12 @@
 					<a href="https://npmjs.com/package/wjttc" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">wjttc</span>
 						<span class="link-desc">npm package</span>
-						<span class="link-stat">v1.1.0</span>
+						<span class="link-stat">v1.4.1</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2FWJTTC/versions" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">WJTTC</span>
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fwjttc/versions" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">wjttc</span>
 						<span class="link-desc">MCP Registry</span>
+						<span class="link-stat">v1.4.1</span>
 					</a>
 				</div>
 			</div>
@@ -454,27 +457,22 @@
 	<section class="links-section" id="skills">
 		<div class="container">
 			<div class="card">
-				<h2>🎯 Skills Directories</h2>
+				<h2>Skills Directories</h2>
 				<div class="links-grid">
-					<a href="https://github.com/anthropics/skills/pull/190" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">anthropics/skills</span>
-						<span class="link-desc">4 skills: faf-expert, n8n-builder, n8n-debugger, wjttc-tester</span>
-						<span class="link-stat status-live">☑️ LIVE</span>
+					<a href="https://github.com/Wolfe-Jam/faf-skills" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-skills</span>
+						<span class="link-desc">Claude Code skills for .faf context — SKILL.md format</span>
+						<span class="link-stat">7 skills</span>
 					</a>
-					<a href="https://github.com/travisvn/awesome-claude-skills/pull/35" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">travisvn/awesome-claude-skills</span>
-						<span class="link-desc">4 skills</span>
-						<span class="link-stat status-live">☑️ LIVE</span>
+					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit/pull/64" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rohitg00/awesome-claude-code-toolkit</span>
+						<span class="link-desc">faf-skills listed — PR #64</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
 					</a>
-					<a href="https://github.com/sickn33/antigravity-awesome-skills" target="_blank" rel="noopener" class="link-item featured">
-						<span class="link-name">Antigravity Awesome Skills</span>
-						<span class="link-desc">1,344+ skills library — 30k+ GitHub stars</span>
-						<span class="link-stat">V9.5.1</span>
-					</a>
-					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit" target="_blank" rel="noopener" class="link-item featured">
-						<span class="link-name">Awesome Claude Code Toolkit</span>
-						<span class="link-desc">135 agents, 35 skills (+400k via SkillKit), 150+ plugins</span>
-						<span class="link-stat">Most comprehensive</span>
+					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit/pull/235" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rohitg00/awesome-claude-code-toolkit</span>
+						<span class="link-desc">faf-cli in Ecosystem — PR #235</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
 					</a>
 				</div>
 			</div>
@@ -511,7 +509,7 @@
 					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-rust</span>
 						<span class="link-desc">Rust radio client (crates.io)</span>
-						<span class="link-stat">46/46 tests</span>
+						<span class="link-stat">v0.2.1</span>
 					</a>
 				</div>
 			</div>
@@ -527,17 +525,17 @@
 					<a href="https://pypi.org/project/faf-python-sdk/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>
 						<span class="link-desc">Python SDK (PyPI)</span>
-						<span class="link-stat">v1.0.2</span>
+						<span class="link-stat">v1.2.0</span>
 					</a>
 					<a href="https://pypi.org/project/gemini-faf-mcp/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
 						<span class="link-desc">Gemini MCP server (PyPI)</span>
-						<span class="link-stat">v1.1.0</span>
+						<span class="link-stat">v2.6.0</span>
 					</a>
 					<a href="https://pypi.org/project/claude-fafm-sdk/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-fafm-sdk</span>
 						<span class="link-desc">Portable .fafm AI memory (PyPI)</span>
-						<span class="link-stat status-live">☑️ v0.1.0</span>
+						<span class="link-stat status-live">☑️ v2.0.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-python-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-python-sdk</span>
@@ -557,22 +555,22 @@
 					<a href="https://crates.io/crates/faf" target="_blank" rel="noopener" class="link-item featured">
 						<span class="link-name">faf</span>
 						<span class="link-desc">Meta-crate — cargo add faf</span>
-						<span class="link-stat">v0.1.0</span>
+						<span class="link-stat">v0.3.0</span>
 					</a>
 					<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-rust-sdk</span>
 						<span class="link-desc">Parse, validate, compile .faf files</span>
-						<span class="link-stat">v1.2.0 · 108 downloads</span>
+						<span class="link-stat">v3.1.0</span>
 					</a>
 					<a href="https://crates.io/crates/faf-radio-rust" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-radio-rust</span>
 						<span class="link-desc">Radio Protocol client for MCPaaS</span>
-						<span class="link-stat">v0.1.0</span>
+						<span class="link-stat">v0.2.1</span>
 					</a>
 					<a href="https://crates.io/crates/rust-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-mcp</span>
 						<span class="link-desc">Rust MCP server for .faf</span>
-						<span class="link-stat">v0.1.0 · 10 downloads</span>
+						<span class="link-stat">v0.6.0</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/rust-faf-cli" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-cli</span>
@@ -624,7 +622,7 @@
 			<div class="card">
 				<h2>🌐 Browser Extensions</h2>
 				<div class="links-grid">
-					<a href="https://chrome.google.com/webstore/detail/faf" target="_blank" rel="noopener" class="link-item">
+					<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">Chrome Extension</span>
 						<span class="link-desc">Google-approved — Chrome Web Store</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
@@ -656,6 +654,10 @@
 						<span class="link-name">ORCID</span>
 						<span class="link-desc">0009-0007-0801-3841</span>
 					</a>
+					<a href="https://github.com/aaif" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">AAIF Ambassador</span>
+						<span class="link-desc">Agentic AI Foundation (Linux Foundation) — inaugural 2026 cohort</span>
+					</a>
 						<a href="https://cursor.directory/u/wolfejam" target="_blank" rel="noopener" class="link-item">
 							<span class="link-name">cursor.directory</span>
 							<span class="link-desc">Dev profile (@wolfejam)</span>
@@ -679,7 +681,7 @@
 						<span class="link-name">8Cs Paper</span>
 						<span class="link-desc">The 8 Cs methodology</span>
 					</a>
-					<a href="https://88-eternal-dad.vercel.app/" target="_blank" rel="noopener" class="link-item">
+					<a href="https://8-eternal-cs.vercel.app/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">88-eternal-dad</span>
 						<span class="link-desc">Memorial app</span>
 					</a>
