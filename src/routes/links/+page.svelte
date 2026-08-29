@@ -59,7 +59,7 @@
 					<a href="https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IANA Registration</span>
 						<span class="link-desc">application/vnd.fafa+yaml — Agent Card / Agentic Layer</span>
-						<span class="link-stat status-live">☑️ LIVE</span>
+						<span class="link-stat status-live">☑️ Jun 26, 2026</span>
 					</a>
 					<a href="https://mailarchive.ietf.org/arch/msg/media-types/4m9epGYthb2NukVyWCFEYLEiLD0/" target="_blank" rel="noopener" class="link-item iana-link">
 						<span class="link-name">IETF Mail Archive</span>
