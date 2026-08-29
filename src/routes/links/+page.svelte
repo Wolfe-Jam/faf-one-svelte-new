@@ -275,31 +275,31 @@
 		<div class="container">
 			<div class="card">
 				<h2>🔌 MCP Registry (Official)</h2>
-				<p class="section-note">Published 2025-12-31</p>
+				<p class="section-note">Namespace: one.faf</p>
 				<div class="links-grid">
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fclaude-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fclaude-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
-						<span class="link-desc">v3.3.7</span>
+						<span class="link-desc">v5.22.1</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Ffaf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Ffaf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
-						<span class="link-desc">v1.2.1</span>
+						<span class="link-desc">v2.3.1</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fgemini-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fgemini-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
-						<span class="link-desc">v2.1.2</span>
+						<span class="link-desc">v2.6.0</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Fgrok-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fgrok-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">grok-faf-mcp</span>
-						<span class="link-desc">v1.3.1</span>
+						<span class="link-desc">v1.10.0</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2Frust-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Frust-faf-mcp/versions" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">rust-faf-mcp</span>
-						<span class="link-desc">v0.2.2</span>
+						<span class="link-desc">v0.6.0</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 				</div>
@@ -422,9 +422,10 @@
 						<span class="link-desc">npm package</span>
 						<span class="link-stat">v1.1.0</span>
 					</a>
-					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Wolfe-Jam%2FWJTTC/versions" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">WJTTC</span>
+					<a href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fwjttc/versions" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">wjttc</span>
 						<span class="link-desc">MCP Registry</span>
+						<span class="link-stat">v1.4.1</span>
 					</a>
 				</div>
 			</div>
