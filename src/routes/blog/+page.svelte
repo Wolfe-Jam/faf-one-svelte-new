@@ -1658,7 +1658,7 @@
 		{#if view === 'cards'}
 		<div class="posts-grid">
 			{#each sortedPosts as post}
-				<a href="/{post.slug}" class="post-card" class:dark-card={post.theme === 'dark'} class:academic-card={post.theme === 'academic'} data-category={post.category}>
+				<a href="/{post.slug}" class="post-card" class:academic-card={post.theme === 'academic'} data-category={post.category}>
 					<div class="post-emoji">
 						{#if post.icon}
 							<img src={post.icon} alt="" class="post-emoji-icon" width="28" height="28" />
@@ -1677,7 +1677,7 @@
 		{:else}
 		<div class="posts-list">
 			{#each sortedPosts as post}
-				<a href="/{post.slug}" class="list-row" class:dark-row={post.theme === 'dark'} data-category={post.category}>
+				<a href="/{post.slug}" class="list-row" data-category={post.category}>
 					<span class="list-dot"></span>
 					<span class="list-date">{post.timestamp}</span>
 					<span class="list-emoji">
@@ -2064,63 +2064,11 @@
 		text-align: center;
 	}
 
-	.dark-row {
-		background: var(--faf-locked-dark);
-		border-bottom: 2px solid #383838;
-	}
-
-	.dark-row .list-title {
-		color: #e5e5e5;
-	}
-
-	.dark-row .list-date {
-		color: #666;
-	}
-
-	.dark-row .list-version {
-		color: #e5e5e5;
-	}
-
-	.dark-row:hover {
-		background: var(--faf-locked-dark-hover);
-	}
-
-	.dark-row:hover .list-title {
-		color: var(--faf-orange);
-	}
-
 	.archive-note {
 		text-align: center;
 		padding: 2rem;
 		color: #555555;
 		font-style: italic;
-	}
-
-	.dark-card {
-		background: var(--faf-locked-dark);
-		border-color: #333;
-		color: #e5e5e5;
-	}
-
-	.dark-card h2 {
-		color: #fff;
-	}
-
-	.dark-card .post-excerpt {
-		color: #999;
-	}
-
-	.dark-card .post-date {
-		color: #777;
-	}
-
-	.dark-card .post-version {
-		color: #e5e5e5;
-	}
-
-	.dark-card:hover {
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-		border-color: var(--faf-orange);
 	}
 
 	.academic-card {
