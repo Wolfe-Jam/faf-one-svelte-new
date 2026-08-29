@@ -142,7 +142,7 @@
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
-						<span class="link-desc">Universal MCP server</span>
+						<span class="link-desc">Cursor / VS Code / IDE MCP server</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">gemini-faf-mcp</span>
@@ -196,7 +196,7 @@
 					</a>
 					<a href="https://npmjs.com/package/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
-						<span class="link-desc">Universal MCP server</span>
+						<span class="link-desc">Cursor / VS Code / IDE MCP server</span>
 						<span class="link-stat">1,600+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/faf-wasm" target="_blank" rel="noopener" class="link-item">
