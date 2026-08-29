@@ -459,25 +459,20 @@
 			<div class="card">
 				<h2>Skills Directories</h2>
 				<div class="links-grid">
-					<a href="https://github.com/anthropics/skills/pull/190" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">anthropics/skills</span>
-						<span class="link-desc">4 skills: faf-expert, n8n-builder, n8n-debugger, wjttc-tester</span>
-						<span class="link-stat status-live">☑️ LIVE</span>
+					<a href="https://github.com/Wolfe-Jam/faf-skills" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">faf-skills</span>
+						<span class="link-desc">Claude Code skills for .faf context — SKILL.md format</span>
+						<span class="link-stat">7 skills</span>
 					</a>
-					<a href="https://github.com/travisvn/awesome-claude-skills/pull/35" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">travisvn/awesome-claude-skills</span>
-						<span class="link-desc">4 skills</span>
-						<span class="link-stat status-live">☑️ LIVE</span>
+					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit/pull/64" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rohitg00/awesome-claude-code-toolkit</span>
+						<span class="link-desc">faf-skills listed — PR #64</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
 					</a>
-					<a href="https://github.com/sickn33/antigravity-awesome-skills" target="_blank" rel="noopener" class="link-item featured">
-						<span class="link-name">Antigravity Awesome Skills</span>
-						<span class="link-desc">1,344+ skills library — 30k+ GitHub stars</span>
-						<span class="link-stat">V9.5.1</span>
-					</a>
-					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit" target="_blank" rel="noopener" class="link-item featured">
-						<span class="link-name">Awesome Claude Code Toolkit</span>
-						<span class="link-desc">135 agents, 35 skills (+400k via SkillKit), 150+ plugins</span>
-						<span class="link-stat">Most comprehensive</span>
+					<a href="https://github.com/rohitg00/awesome-claude-code-toolkit/pull/235" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">rohitg00/awesome-claude-code-toolkit</span>
+						<span class="link-desc">faf-cli in Ecosystem — PR #235</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
 					</a>
 				</div>
 			</div>
