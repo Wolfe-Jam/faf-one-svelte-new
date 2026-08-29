@@ -178,26 +178,23 @@
 		<div class="container">
 			<div class="card">
 				<h2>📦 NPM Packages</h2>
+				<p class="section-note">Live download counts: <a href="/downloads">faf.one/downloads</a></p>
 				<div class="links-grid">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-cli</span>
 						<span class="link-desc">CLI tool for .faf management</span>
-						<span class="link-stat">npm install</span>
 					</a>
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">claude-faf-mcp</span>
 						<span class="link-desc">Anthropic-merged (#2759)</span>
-						<span class="link-stat">8,200+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">grok-faf-mcp</span>
 						<span class="link-desc">MCP server for Grok</span>
-						<span class="link-stat">500+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/faf-mcp" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-mcp</span>
 						<span class="link-desc">Cursor / VS Code / IDE MCP server</span>
-						<span class="link-stat">1,600+ downloads</span>
 					</a>
 					<a href="https://npmjs.com/package/faf-wasm" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">faf-wasm</span>
