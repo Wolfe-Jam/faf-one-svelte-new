@@ -681,7 +681,7 @@
 						<span class="link-name">8Cs Paper</span>
 						<span class="link-desc">The 8 Cs methodology</span>
 					</a>
-					<a href="https://88-eternal-dad.vercel.app/" target="_blank" rel="noopener" class="link-item">
+					<a href="https://8-eternal-cs.vercel.app/" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">88-eternal-dad</span>
 						<span class="link-desc">Memorial app</span>
 					</a>
