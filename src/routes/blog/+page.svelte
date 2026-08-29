@@ -141,6 +141,7 @@
 		{
 			slug: 'blog/lazyrag',
 			title: 'Lazy RAG is home',
+			version: 'lazyrag',
 			date: 'August 16, 2026',
 			timestamp: '2026-08-16',
 			excerpt:
@@ -1185,6 +1186,7 @@
 		{
 			slug: 'blog/voice-api-edition',
 			title: 'Voice API Edition: Save Our Souls 👻',
+			version: 'grok-faf-voice v4.2.0',
 			date: 'February 3, 2026',
 			timestamp: '2026-02-03',
 			excerpt: 'The answer is 4.2.0 = 42. Eternal voice memory for xAI Grok. One command fixes voice drift forever. 91% token reclaim. Zero re-explaining. For Elon Musk and the Grok team.',
