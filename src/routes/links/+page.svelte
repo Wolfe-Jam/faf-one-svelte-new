@@ -340,6 +340,16 @@
 						<span class="link-desc">PR #20</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
+					<a href="https://github.com/modelcontextprotocol/registry/pull/1207" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcp/registry #1207</span>
+						<span class="link-desc">cargo (crates.io) registry type</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
+					</a>
+					<a href="https://github.com/modelcontextprotocol/registry/pull/1511" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">mcp/registry #1511</span>
+						<span class="link-desc">cargo + crates.io in schema examples</span>
+						<span class="link-stat status-live">☑️ MERGED</span>
+					</a>
 					<a href="https://glama.ai/mcp/servers" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">Glama</span>
 						<span class="link-desc">Auto-syncs from punkpeye</span>
