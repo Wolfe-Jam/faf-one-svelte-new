@@ -450,7 +450,7 @@
 	<section class="links-section" id="skills">
 		<div class="container">
 			<div class="card">
-				<h2>🎯 Skills Directories</h2>
+				<h2>Skills Directories</h2>
 				<div class="links-grid">
 					<a href="https://github.com/anthropics/skills/pull/190" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">anthropics/skills</span>
