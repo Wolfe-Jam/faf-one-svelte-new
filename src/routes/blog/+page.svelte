@@ -1612,10 +1612,6 @@
 	<meta name="description" content="Latest stories, press releases, and updates from FAF - The JPEG for AI">
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">←</a>
-</div>
-
 <article class="blog">
 	<div class="container">
 		<h1><span class="blog-text">Blog</span> <span class="ampersand">&</span> <span class="press-text">Press</span></h1>
@@ -1705,29 +1701,6 @@
 	/* Blog index is light-locked. Prefer #1a1a1a / #FEFCF8 / #e5e5e5 LITERALS over
 	   --faf-dark / --faf-black / --faf-cream — those flip under [data-theme=dark] and
 	   were the white-text-on-cream failure when root onMount raced the light freeze. */
-	.back-nav {
-		padding: 1rem 2rem;
-		background: #FFFFFF;
-		border-bottom: 1px solid #e5e5e5;
-	}
-
-	.back-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: #1a1a1a;
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-	}
-
-	.back-button:hover {
-		background: #FEFCF8;
-		color: var(--faf-orange);
-		transform: translateX(-2px);
-	}
 
 	/* Hard cream canvas — index must stay readable even if data-theme is wrong */
 	.blog {
