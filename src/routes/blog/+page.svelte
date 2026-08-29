@@ -439,7 +439,7 @@
 		{
 			slug: 'blog/copilot-edition',
 			title: 'The Copilot Edition',
-			date: 'June 24, 2026',
+			version: 'faf-cli v6.15.0',date: 'June 24, 2026',
 			timestamp: '2026-06-24',
 			excerpt: "faf-cli v6.15.0 — faf export --copilot emits .github/copilot-instructions.md, the widest-surface Copilot file, straight from your scored .faf. Plus faf git hardened against URL injection, and all five WJTTC tiers.",
 			emoji: '🏁',
@@ -466,7 +466,7 @@
 		{
 			slug: 'blog/loop-edition',
 			title: 'The Loop Edition',
-			date: 'June 22, 2026',
+			version: 'faf-cli v6.14.0',date: 'June 22, 2026',
 			timestamp: '2026-06-22',
 			excerpt: 'faf-cli v6.14.0 — faf loop drives any repo to 100% or the honest human wall, sourcing every slot it can with provenance, asking only what only you know, never inventing. Three honest terminals: done / needs-human / stuck.',
 			emoji: '🏆',
@@ -475,7 +475,7 @@
 		{
 			slug: 'blog/grounded-memory',
 			title: 'The Grounded Memory Edition',
-			date: 'June 21, 2026',
+			version: 'grok-faf-mcp v1.7.0',date: 'June 21, 2026',
 			timestamp: '2026-06-21',
 			excerpt: 'grok-faf-mcp 1.7.0 — the FRC layer above Grok Collections: faf_gate (promote/hold), faf_section (exact structured retrieval), faf_memory (durable .fafm). Opt-in via USE_FRC; the 12-tool core surface stays unchanged.',
 			emoji: '🧡',
@@ -493,7 +493,7 @@
 		{
 			slug: 'blog/zeph-edition',
 			title: 'The ZEPH Edition',
-			date: 'June 20, 2026',
+			version: 'grok-faf-mcp v1.6.0',date: 'June 20, 2026',
 			timestamp: '2026-06-20',
 			excerpt: 'grok-faf-mcp 1.6.0 — the ZEPH fast path for re-grounding. Zig→WASM scoring (~12µs), flag-gated, faf-cli the canonical fallback, parity locked in CI. Same number, just faster.',
 			emoji: '⚡',
@@ -502,7 +502,7 @@
 		{
 			slug: 'blog/grok-core-tier',
 			title: 'Grok Core-tier',
-			date: 'June 18, 2026',
+			version: 'grok-faf-mcp v1.5.5',date: 'June 18, 2026',
 			timestamp: '2026-06-18',
 			excerpt: 'grok-faf-mcp 1.5.5 — the default tool surface is now the Grok value: re-grounding, RAG, memory. Inherited clutter retired; zero Grok-driven features trimmed.',
 			emoji: '⚡',
@@ -556,7 +556,7 @@
 		{
 			slug: 'blog/sourced-edition',
 			title: 'The Sourced Edition',
-			date: 'June 12, 2026',
+			version: 'claude-faf-mcp v5.9.0',date: 'June 12, 2026',
 			timestamp: '2026-06-12',
 			excerpt: "claude-faf-mcp v5.9.0 — composes faf-cli's single-source engines instead of carrying its own copies that drift. faf_go and Turbo-Cat now share one source; the guessing extractor is gone. Sourced, not guessed. 567 tests.",
 			emoji: '✪',
@@ -565,7 +565,7 @@
 		{
 			slug: 'blog/composed-edition',
 			title: 'The Composed Edition',
-			date: 'June 12, 2026',
+			version: 'faf-cli v6.10.0',date: 'June 12, 2026',
 			timestamp: '2026-06-12',
 			excerpt: 'faf-cli v6.10.x: every FAF MCP composes single-source engines, never reimplements them. Turbo-Cat (~200 formats) and the bench engine join the public API — plus the same-day no-guess patch that proves the doctrine polices itself. 843 tests.',
 			emoji: '✪',
@@ -574,6 +574,7 @@
 		{
 			slug: 'blog/grounded-edition',
 			title: "You're Grounded!",
+			version: 'faf-cli v6.9.0',
 			date: 'June 12, 2026',
 			timestamp: '2026-06-12',
 			excerpt: 'faf-cli v6.9.0 — The Grounded Edition. faf bench: your AI without context vs with it, graded by your own .faf (8/15 → 15/15 on our fleet). The 6Ws Interview goes public-API. faf refresh: drift → refresh → re-grounded. 820 tests.',
@@ -583,7 +584,7 @@
 		{
 			slug: 'blog/trust-edition',
 			title: 'The Trust Edition',
-			date: 'June 11, 2026',
+			version: 'claude-faf-mcp v5.8.0',date: 'June 11, 2026',
 			timestamp: '2026-06-11',
 			excerpt: 'claude-faf-mcp v5.8.0: Claude Code-native context that just works. Every session opens with faf: context ✪ 100% — fresh. Quiet output, typed results, a parity hash any engine can verify. 35 tools, 547 tests.',
 			emoji: '✪',
@@ -592,7 +593,7 @@
 		{
 			slug: 'blog/chameleon-edition',
 			title: 'The Chameleon Edition',
-			date: 'June 7, 2026',
+			version: 'gemini-faf-mcp v2.4.0',date: 'June 7, 2026',
 			timestamp: '2026-06-07',
 			excerpt: 'gemini-faf-mcp v2.4.0: one command, both modes. Auto-selects its transport — stdio locally, Streamable HTTP on Cloud Run. Same binary, 12 tools, zero config. Drops straight into Google Antigravity (stdio or serverUrl). 221 tests.',
 			emoji: '🦎',
@@ -610,7 +611,7 @@
 		{
 			slug: 'blog/relentless-edition',
 			title: 'The Relentless Edition',
-			date: 'May 30, 2026',
+			version: 'faf-cli v6.8.0',date: 'May 30, 2026',
 			timestamp: '2026-05-30',
 			excerpt: 'faf-cli v6.8.0: Birth DNA, 6-W extractor, format-finder — restored. Grok interop (faf export --grok), extension App-Type — added. One shared pipeline makes init, auto, git impossible to drift between. 762/762 tests, 🏆 Trophy 100%.',
 			emoji: '🏎️',
@@ -619,7 +620,7 @@
 		{
 			slug: 'blog/zero-config-memory',
 			title: 'Zero-Config Memory',
-			date: 'May 23, 2026',
+			version: 'claude-fafm-sdk v0.3.0',date: 'May 23, 2026',
 			timestamp: '2026-05-23',
 			excerpt: 'claude-fafm-sdk v0.3.0: just push — a namepoint auto-provisions and your .fafm soul goes live, cross-vendor, with no claim page and no key to copy. The whole document round-trips, so ids, types, and priorities survive intact.',
 			emoji: '🐘',
@@ -658,7 +659,7 @@
 		{
 			slug: 'blog/grok-grows-up',
 			title: 'Grok Grows Up',
-			date: 'May 14, 2026',
+			version: 'grok-faf-mcp v1.3.0',date: 'May 14, 2026',
 			timestamp: '2026-05-14',
 			excerpt: 'grok-faf-mcp v1.3.0 ships as the hallmark online MCP. Identity restored across the stdio path. Comparison framing scrubbed. Server-card enriched. The "3,800% faster" claim — invented, retired — replaced with measured 137 µs/score, methodology disclosed. Four production surfaces live.',
 			emoji: '🍊',
@@ -694,7 +695,7 @@
 		{
 			slug: 'blog/voice-memory-layer',
 			title: 'xAI gave Grok Voice. We gave Grok memory.',
-			date: 'April 30, 2026',
+			version: 'grok-faf-voice v0.1.3',date: 'April 30, 2026',
 			timestamp: '2026-04-30',
 			excerpt: 'The Voice Memory Layer (VML) ships today. grok-faf-voice 0.1.3 — the reference SDK on PyPI. Sibling grok-faf-mcp 1.2.2 also lands on npm as FAST⚡️AF Context. .faf for context. .fafm for memory. Two packages, two scopes, one family.',
 			emoji: '🎙️',
@@ -713,7 +714,7 @@
 		{
 			slug: 'blog/ghostty-inspired-edition',
 			title: 'The Ghostty-Inspired Edition',
-			date: 'April 27, 2026',
+			version: 'faf-cli v6.3.0',date: 'April 27, 2026',
 			timestamp: '2026-04-27',
 			excerpt: 'faf-cli v6.3.0 — desktop notifications via OSC 9. Trophy unlocks pop in macOS Notification Center. Long auto scans ping you when ready. Inspired by Ghostty\'s notification model. 10 lines of code, zero new dependencies, one env var to opt out.',
 			emoji: '🏆',
@@ -732,7 +733,7 @@
 		{
 			slug: 'blog/slash-tokens-10-1',
 			title: 'The 10:1 Edition',
-			date: 'April 19, 2026',
+			version: 'slash-tokens v1.4.0',date: 'April 19, 2026',
 			timestamp: '2026-04-19',
 			excerpt: '/slash v1.4.0 — Single-Source-of-Truth: new preflightRoute() matches proxy behavior exactly, PROVIDER_MODELS shared between SDK and proxy, 127 SDK tests. Builds on v1.3.0 Opus 4.7. Saved $477 in a day, took $47. 10:1.',
 			emoji: '⚡',
@@ -741,7 +742,7 @@
 		{
 			slug: 'blog/extension-edition',
 			title: 'The Extension Edition',
-			date: 'April 15, 2026',
+			version: 'claude-faf-mcp v5.5.0',date: 'April 15, 2026',
 			timestamp: '2026-04-15',
 			excerpt: 'claude-faf-mcp v5.5.0 — One-click install for Claude Desktop. No JSON, no terminal. Desktop Extension (.mcpb). 118 tests, zero failures.',
 			emoji: '🔌',
@@ -750,7 +751,7 @@
 		{
 			slug: 'blog/go-rusty-python',
 			title: 'The Go Rusty Python + One Sentence Editions',
-			date: 'April 14, 2026',
+			version: 'faf-cli v6.2.0',date: 'April 14, 2026',
 			timestamp: '2026-04-14',
 			excerpt: 'v6.1.0 + v6.2.0 back-to-back. Go/Rust/Python detection + faf go reimagined: one sentence in, AI thinks, 6Ws sign-off. 22% → 🏆 100%.',
 			emoji: '🦀',
@@ -768,7 +769,7 @@
 		{
 			slug: 'blog/nelly-never-forgets',
 			title: 'Nelly Never Forgets Edition',
-			date: 'April 10, 2026',
+			version: 'claude-faf-mcp v5.3.0',date: 'April 10, 2026',
 			timestamp: '2026-04-10',
 			excerpt: 'claude-faf-mcp v5.3.0 — now on Smithery and Glama, persistent analytics via Upstash Redis, 3 CVEs fixed. The MCP that gives your AI memory now has memory of its own.',
 			emoji: '🐘',
@@ -834,7 +835,7 @@
 		{
 			slug: 'blog/sunset-edition',
 			title: 'The Sunset Edition',
-			date: 'March 27, 2026',
+			version: 'faf-cli v5.2.5',date: 'March 27, 2026',
 			timestamp: '2026-03-27',
 			excerpt: 'faf-cli v5.2.5 — the final v5 release. 21 slots, 1,232 tests, 53K lines. Thank you, v5. v6 is here — 89% code reduction, WASM kernel, 33 Mk4 slots.',
 			emoji: '🌅',
@@ -862,7 +863,7 @@
 		{
 			slug: 'blog/wjttc-self-hosting',
 			title: 'Championship-Grade Testing You Can Self-Host',
-			date: 'March 21, 2026',
+			version: 'wjttc v1.4.0',date: 'March 21, 2026',
 			timestamp: '2026-03-21',
 			excerpt: 'WJTTC v1.4.0 — how I test every FAF app, and how you can too. Self-host locally or in CI/CD. Trophy 🏆 at 100%. Big Orange 🍊 curated by AI — no human gatekeeper.',
 			emoji: '🏎️',
@@ -871,7 +872,7 @@
 		{
 			slug: 'blog/kernel-router',
 			title: 'The Kernel Router',
-			date: 'March 20, 2026',
+			version: 'faf-wasm-core v1.0.0',date: 'March 20, 2026',
 			timestamp: '2026-03-20',
 			excerpt: 'faf-wasm-core v1.0.0 — one FafKernel interface, any WASM engine behind it. The shared kernel that bun-sticky, builder.faf.one, and faf-cli all embed. 322KB, 284μs, zero deps.',
 			emoji: '🔌',
@@ -880,7 +881,7 @@
 		{
 			slug: 'blog/wasm-edition',
 			title: 'The WASM Edition',
-			date: 'March 20, 2026',
+			version: 'bun-sticky v2.0.0',date: 'March 20, 2026',
 			timestamp: '2026-03-20',
 			excerpt: 'One interface, any kernel. bun-sticky v2.0.0 embeds the Mk4 WASM engine. Data-driven slotignore. 405 tests across 2 packages, 284μs per score.',
 			emoji: '🥐',
@@ -925,7 +926,7 @@
 		{
 			slug: 'blog/bun-sticky-bunx-edition',
 			title: 'Bunx Edition',
-			date: 'March 13, 2026',
+			version: 'bun-sticky v1.1.0',date: 'March 13, 2026',
 			timestamp: '2026-03-13',
 			excerpt: 'bun-sticky v1.1.0 — Bun-native FAF scorer. 1,100+ organic downloads, zero marketing. Two packages, two languages: TypeScript + Zig. Bun runs TS. Bun is built on Zig. We built both.',
 			emoji: '🥐',
@@ -970,7 +971,7 @@
 		{
 			slug: 'blog/gemini-mcp-server',
 			title: 'The MCP Server Edition',
-			date: 'March 8, 2026',
+			version: 'gemini-faf-mcp v2.1.1',date: 'March 8, 2026',
 			timestamp: '2026-03-08',
 			excerpt: 'gemini-faf-mcp v2.1.1: 12 MCP tools with faf_auto stack detection. Scans your project, detects your stack, generates a .faf. 183 tests. Python 3.10+.',
 			emoji: '🔷',
@@ -979,7 +980,7 @@
 		{
 			slug: 'blog/rmcp-edition',
 			title: 'The rmcp Edition',
-			date: 'March 7, 2026',
+			version: 'rust-faf-mcp v0.2.0',date: 'March 7, 2026',
 			timestamp: '2026-03-07',
 			excerpt: 'rust-faf-mcp v0.2.0: Migrates to rmcp SDK — main.rs drops from 253 lines to 20. Three new tools: compress, discover, tokens. 91 tests across 5 files. One binary, zero config.',
 			emoji: '🦀',
@@ -988,7 +989,7 @@
 		{
 			slug: 'blog/interop-mcp',
 			title: 'The Interop MCP for Context',
-			date: 'March 7, 2026',
+			version: 'faf-mcp v2.0.0',date: 'March 7, 2026',
 			timestamp: '2026-03-07',
 			excerpt: 'faf-mcp v2.0.0: Define once in .faf, sync to .cursorrules, AGENTS.md, GEMINI.md, and CLAUDE.md. 5 new interop tools, 7 bundled parsers, 61 tools, 309 tests. The dedicated MCP for Cursor, Windsurf, Cline, and VS Code.',
 			emoji: '🔄',
@@ -997,7 +998,7 @@
 		{
 			slug: 'blog/gemini-hardened',
 			title: 'The Hardened Edition',
-			date: 'March 7, 2026',
+			version: 'gemini-faf-mcp v1.1.0',date: 'March 7, 2026',
 			timestamp: '2026-03-07',
 			excerpt: 'gemini-faf-mcp v1.1.0 — input validation, YAML round-trip safety, 57/57 tests. 3k+ PyPI downloads earned a quality pass.',
 			emoji: '🔒',
@@ -1033,7 +1034,7 @@
 		{
 			slug: 'blog/nelly-edition',
 			title: 'The Nelly Edition',
-			date: 'March 4, 2026',
+			version: 'claude-faf-mcp v5.1.0',date: 'March 4, 2026',
 			timestamp: '2026-03-04',
 			excerpt: 'claude-faf-mcp v5.0 + v5.1: 33 annotated MCP tools. Tool #33 faf_tri_sync — Nelly makes your AI remember across sessions. Answer 3 questions (the 3Ws) and your AI stops guessing.',
 			emoji: '🐘',
@@ -1042,7 +1043,7 @@
 		{
 			slug: 'blog/big-orange-edition',
 			title: 'The Big Orange Edition',
-			date: 'March 4, 2026',
+			version: 'grok-faf-mcp v1.1.1',date: 'March 4, 2026',
 			timestamp: '2026-03-04',
 			excerpt: 'grok-faf-mcp v1.1.1: 21 MCP tools (was showing 17), fresh landing page, MCP SDK 1.27, 65% smaller tarball. The first MCP server for Grok gets its first real refresh.',
 			emoji: '🍊',
@@ -1098,7 +1099,7 @@
 		{
 			slug: 'blog/mcp-interop-edition',
 			title: 'MCP Interop Edition',
-			date: 'February 27, 2026',
+			version: 'claude-faf-mcp v4.5.0',date: 'February 27, 2026',
 			timestamp: '2026-02-27',
 			excerpt: 'claude-faf-mcp v4.5.0: 61 MCP tools. Define once in project.faf, generate CLAUDE.md, AGENTS.md, .cursorrules, and GEMINI.md. 5 new tools, 7 bundled parsers, 351 tests. Zero CLI dependency.',
 			emoji: '🔗',
@@ -1179,7 +1180,7 @@
 		{
 			slug: 'blog/wjttc-taf-aware',
 			title: 'WJTTC TAF-Aware Edition: Tier 9 Receipt Validation',
-			date: 'February 3, 2026',
+			version: 'wjttc v1.2.0',date: 'February 3, 2026',
 			timestamp: '2026-02-03',
 			excerpt: 'WJTTC v1.2.0 adds Tier 9: TAF Receipt Validation. Three checks validate .taf files. Receipts aren\'t scored - they\'re proof. 52 tests across 9 tiers.',
 			emoji: '🏎️',
@@ -1314,7 +1315,7 @@
 		{
 			slug: 'blog/v3-3-0-plugin-launch',
 			title: 'FAF CLI v3.3.0: Claude Code Plugin Support',
-			date: 'December 28, 2025',
+			version: 'faf-cli v3.3.0',date: 'December 28, 2025',
 			timestamp: '2025-12-28',
 			excerpt: 'Full Claude Code plugin support, SSH bug workaround, and automatic discovery in the 8,500+ plugin registry. 20k+ ecosystem downloads.',
 			emoji: '🔌',
@@ -1387,7 +1388,7 @@
 		{
 			slug: 'blog/grok-faf-mcp-launch',
 			title: 'grok-faf-mcp v1.0.0 - First MCP Server for Grok',
-			date: 'November 18, 2025',
+			version: 'grok-faf-mcp v1.0.0',date: 'November 18, 2025',
 			timestamp: '2025-11-18',
 			excerpt: 'First MCP server built specifically for Grok/xAI with URL-based access. Zero installation required. 17 MCP tools available instantly at grok-faf-mcp.vercel.app.',
 			emoji: '🍊',
@@ -1405,7 +1406,7 @@
 		{
 			slug: 'blog/mcp-v3-standalone',
 			title: 'claude-faf-mcp v3.0.4 - 100% Standalone Achievement',
-			date: 'November 6, 2025',
+			version: 'claude-faf-mcp v3.0.4',date: 'November 6, 2025',
 			timestamp: '2025-11-06',
 			excerpt: 'Zero CLI dependencies across all 50 MCP tools, delivering 16.2x performance improvement with championship-grade engineering.',
 			emoji: '🏎️',
@@ -1450,7 +1451,7 @@
 		{
 			slug: 'blog/v3-launch',
 			title: 'AI CLI/MCP About to Hit 10k Goes OPEN-SOURCE',
-			date: 'October 9, 2025',
+			version: 'faf-cli v3.0.0',date: 'October 9, 2025',
 			timestamp: '2025-10-09',
 			excerpt: 'FAF CLI v3.0.0 Championship Edition launches with TURBO-CAT discovery, C-Mirror sync, and universal AI compatibility. MIT licensed, free forever.',
 			emoji: '🏁',
