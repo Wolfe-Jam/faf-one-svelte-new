@@ -121,6 +121,7 @@
 		{
 			slug: 'blog/agent-passport',
 			title: 'Agent Passport Paper',
+			version: 'doi.org/10.5281/zenodo.21951641',
 			date: 'August 17, 2026',
 			timestamp: '2026-08-17',
 			excerpt:
@@ -487,6 +488,7 @@
 		{
 			slug: 'blog/hundred-thousand',
 			title: '100,000 Downloads',
+			version: 'faf.one/downloads',
 			date: 'June 20, 2026',
 			timestamp: '2026-06-20',
 			excerpt: 'The FAF ecosystem crosses 100,000 downloads across npm, PyPI and crates.io. Six figures, zero marketing budget — the format keeps spreading because the format keeps working.',
@@ -543,6 +545,7 @@
 		{
 			slug: 'blog/countdown-100k',
 			title: 'Countdown to 100k',
+			version: 'faf.one/downloads',
 			date: 'June 12, 2026',
 			timestamp: '2026-06-12',
 			excerpt: "91,565 downloads. 8,435 to go. The 100k milestone post is already written — and a robot checks every morning whether today's the day. Counts fed, pace derived, nothing typed by hand.",
@@ -634,6 +637,7 @@
 		{
 			slug: 'blog/permanent-memory',
 			title: 'Memory Paper Published on Zenodo',
+			version: 'doi.org/10.5281/zenodo.20348942',
 			date: 'May 22, 2026',
 			timestamp: '2026-05-22',
 			excerpt: 'The .fafm Memory paper is on CERN\'s Zenodo. Multi-profile AI agent memory, IANA-registered, CC BY 4.0. The first formal standard for how AI agents remember reliably, portably, and across vendors. Permanent Memory. Instant Recall.',
@@ -694,6 +698,7 @@
 		{
 			slug: 'blog/the-day-of-the-grid',
 			title: 'The Day of the GRID — Package.json got a UI',
+			version: 'mcpaas.live/grid',
 			date: 'May 4, 2026',
 			timestamp: '2026-05-04',
 			excerpt: 'May the 4th. The GRID at mcpaas.live/grid generalized today. Point it at any npm package or GitHub repo and the same renderer reads the structure. ?npm=react, ?gh=facebook/react. React showed 11/33 slots filled, 22 empty, 1 warn. We don\'t soften that. We print what we see.',
@@ -712,6 +717,7 @@
 		{
 			slug: 'blog/sixty-thousand',
 			title: '60,000 Downloads',
+			version: 'faf.one/downloads',
 			date: 'April 30, 2026',
 			timestamp: '2026-04-30',
 			excerpt: '60,000+ downloads. 16 packages. 27 days from 50k. The Mar → Apr jump alone is +24k — biggest calendar month on the chart. Same zero marketing budget. The format keeps spreading because the format keeps working.',
@@ -817,6 +823,7 @@
 		{
 			slug: 'blog/fifty-thousand',
 			title: '50,000 Downloads',
+			version: 'faf.one/downloads',
 			date: 'April 1, 2026',
 			timestamp: '2026-04-01',
 			excerpt: '16 packages. 3 registries. 3 languages. One format. The FAF ecosystem crosses 50,000 downloads. No ads. No growth hacks. Just good software finding its people.',
@@ -865,6 +872,7 @@
 		{
 			slug: 'blog/globe-edition',
 			title: 'The Globe Edition — Where Your Code Runs',
+			version: 'mcpaas.live/globe',
 			date: 'March 27, 2026',
 			timestamp: '2026-03-27',
 			excerpt: 'World-first live 3D edge execution globe. 2.7KB of Zig WASM executing at 300+ Cloudflare locations. 17 cities, 4 continents, real data. Put your city on the map.',
@@ -1109,6 +1117,7 @@
 		{
 			slug: 'blog/thirty-thousand',
 			title: '30,000 Downloads',
+			version: 'faf.one/downloads',
 			date: 'February 27, 2026',
 			timestamp: '2026-02-27',
 			excerpt: '9 npm packages. 3 registries. Zero marketing budget. From 20k to 30k in 2026. The FAF ecosystem crosses 30,000 downloads.',
@@ -1292,6 +1301,7 @@
 		{
 			slug: 'blog/zenodo-paper',
 			title: 'FAF Whitepaper Published on CERN/Zenodo',
+			version: 'doi.org/10.5281/zenodo.18251362',
 			date: 'January 14, 2026',
 			timestamp: '2026-01-14',
 			excerpt: 'Peer-citable academic paper published on CERN\'s Zenodo. DOI: 10.5281/zenodo.18251362. Repository used by NASA, NIH, and major universities.',
@@ -1301,6 +1311,7 @@
 		{
 			slug: 'blog/faf-hits-20k',
 			title: 'FAF Hits 20,000 Downloads',
+			version: 'faf.one/downloads',
 			date: 'January 14, 2026',
 			timestamp: '2026-01-14',
 			excerpt: '20,342 verified npm downloads across faf-cli, claude-faf-mcp, faf-mcp, and grok-faf-mcp. Real adoption, verified numbers.',
@@ -1459,6 +1470,7 @@
 		{
 			slug: 'blog/faf-hits-10k',
 			title: '.FAF: 10,500+ downloads: 5,800 CLI: 4,700 MCP - Persistent project context is Real',
+			version: 'faf.one/downloads',
 			date: 'October 29, 2025',
 			timestamp: '2025-10-29',
 			excerpt: 'From desktop frustration to Anthropic approval - .FAF reaches 10,500+ downloads (5,800 CLI + 4,700 MCP) as the Foundational AI context format gains ecosystem traction.',
