@@ -654,6 +654,10 @@
 						<span class="link-name">ORCID</span>
 						<span class="link-desc">0009-0007-0801-3841</span>
 					</a>
+					<a href="https://github.com/aaif" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">AAIF Ambassador</span>
+						<span class="link-desc">Agentic AI Foundation (Linux Foundation) — inaugural 2026 cohort</span>
+					</a>
 						<a href="https://cursor.directory/u/wolfejam" target="_blank" rel="noopener" class="link-item">
 							<span class="link-name">cursor.directory</span>
 							<span class="link-desc">Dev profile (@wolfejam)</span>
