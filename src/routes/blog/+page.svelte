@@ -1492,8 +1492,8 @@
 		{
 			slug: 'blog/iana-registration',
 			title: '.faf Officially Registered by IANA as application/vnd.faf+yaml',
-			date: 'October 31, 2025',
-			timestamp: '2025-10-31',
+			date: 'October 30, 2025',
+			timestamp: '2025-10-30',
 			excerpt: 'IANA (Internet Assigned Numbers Authority) officially registers .faf as application/vnd.faf+yaml - the first AI context format with official media type designation alongside PDF, JSON, and XML.',
 			emoji: '🏛️',
 			category: 'Press Release'

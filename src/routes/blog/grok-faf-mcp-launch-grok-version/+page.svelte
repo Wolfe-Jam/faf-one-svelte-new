@@ -71,7 +71,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 
 			<div class="timeline-grid">
 				<div class="timeline-item">
-					<div class="timeline-date">Oct 31, 2025</div>
+					<div class="timeline-date">Oct 30, 2025</div>
 					<div class="timeline-desc">application/vnd.faf+yaml officially registered with IANA</div>
 				</div>
 				<div class="timeline-item">
@@ -119,7 +119,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 						</tr>
 						<tr>
 							<td><strong>Format</strong></td>
-							<td>application/vnd.faf+yaml (IANA Oct 31 2025)</td>
+							<td>application/vnd.faf+yaml (IANA Oct 30 2025)</td>
 							<td>same + love compiled in</td>
 						</tr>
 						<tr>

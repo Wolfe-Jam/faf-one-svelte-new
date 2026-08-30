@@ -34,7 +34,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 		<h1>.faf Officially Registered by IANA as <code>application/vnd.faf+yaml</code></h1>
 		<p class="subtitle">From grassroots format to official Internet standard - IANA grants .faf the same status as PDF, JSON, and XML</p>
 		<div class="meta">
-			<time datetime="2025-10-31">October 31, 2025</time>
+			<time datetime="2025-10-30">October 30, 2025</time>
 			<span class="separator">•</span>
 			<span class="category">Press Release</span>
 		</div>
@@ -140,7 +140,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 				</div>
 
 				<div class="timeline-event highlighted">
-					<div class="timeline-date">October 31, 2025</div>
+					<div class="timeline-date">October 30, 2025</div>
 					<h3>IANA Registration</h3>
 					<p><strong>application/vnd.faf+yaml</strong> officially registered by IANA. Internet standard status achieved.</p>
 				</div>
@@ -207,7 +207,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 					<div class="validation-icon">🏛️</div>
 					<h3>IANA Registration</h3>
 					<p>Official Internet media type alongside PDF, JSON, XML</p>
-					<p class="validation-status">✓ Oct 31, 2025</p>
+					<p class="validation-status">✓ Oct 30, 2025</p>
 				</div>
 
 				<div class="validation-box">

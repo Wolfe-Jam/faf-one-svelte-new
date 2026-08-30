@@ -46,7 +46,7 @@
 				<div class="achievement-box">
 					<div class="achievement-icon">🏛️</div>
 					<h3>Official IANA Registration</h3>
-					<p>October 31, 2025</p>
+					<p>October 30, 2025</p>
 				</div>
 				<div class="achievement-box">
 					<div class="achievement-icon">🤖</div>
@@ -110,7 +110,7 @@
 
 			<div class="findings-box positive">
 				<h4>Only Exception:</h4>
-				<p class="highlight">☑️ <code>application/vnd.faf+yaml</code> - Registered October 31, 2025</p>
+				<p class="highlight">☑️ <code>application/vnd.faf+yaml</code> - Registered October 30, 2025</p>
 			</div>
 
 			<h3>Common Formats WITHOUT IANA Registration for AI Context</h3>
@@ -348,7 +348,7 @@
 					<p>Second Chrome extension</p>
 				</div>
 				<div class="timeline-event highlight">
-					<div class="timeline-date">Oct 31, 2025</div>
+					<div class="timeline-date">Oct 30, 2025</div>
 					<h4>IANA Registration</h4>
 					<p><strong>application/vnd.faf+yaml</strong> 🏆</p>
 				</div>
@@ -464,7 +464,7 @@
 				<div class="claim-box proven">
 					<h4>4. "Quadruple validation: IANA, Anthropic, Google (2x)"</h4>
 					<ul>
-						<li>IANA: Oct 31, 2025 ✅</li>
+						<li>IANA: Oct 30, 2025 ✅</li>
 						<li>Anthropic: Oct 17, 2025 ✅</li>
 						<li>Google: Sep 11 & Oct 29, 2025 ✅✅</li>
 					</ul>

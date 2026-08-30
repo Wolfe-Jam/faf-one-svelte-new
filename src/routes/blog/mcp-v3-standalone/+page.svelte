@@ -238,7 +238,7 @@ Zero CLI dependencies across all 50 MCP tools. 16.2x faster. Championship-grade 
 				<div class="recognition-item">
 					<div class="recognition-icon">🏛️</div>
 					<h3>IANA Registration</h3>
-					<p>October 31, 2025</p>
+					<p>October 30, 2025</p>
 				</div>
 
 				<div class="recognition-item">
@@ -462,7 +462,7 @@ Claude: [Direct function call, 63ms execution]
 		<section class="about">
 			<h2>About .faf</h2>
 			<p>
-				FAF (Foundational AI-context Format) is an IANA-registered Internet media type for persistent project context in AI development tools. Registered as <code>application/vnd.faf+yaml</code> on October 31, 2025, .faf provides the same foundational role for AI context that package.json provides for dependencies.
+				FAF (Foundational AI-context Format) is an IANA-registered Internet media type for persistent project context in AI development tools. Registered as <code>application/vnd.faf+yaml</code> on October 30, 2025, .faf provides the same foundational role for AI context that package.json provides for dependencies.
 			</p>
 
 			<div class="file-structure-screenshot">
