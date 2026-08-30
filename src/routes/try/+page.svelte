@@ -57,9 +57,6 @@
 </svelte:head>
 
 <div class="try-page">
-	<div class="back-nav">
-		<a href="/" class="back-link">←</a>
-	</div>
 
 	<main class="content">
 		<!-- Hero -->
@@ -277,23 +274,6 @@
 		min-height: 100vh;
 		background: LOCKED_GRAD;
 		color: #f5f5dc;
-	}
-
-	.back-nav {
-		padding: 1rem 2rem;
-		border-bottom: 1px solid #333;
-	}
-
-	.back-link {
-		color: #ff6b35;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 0.95rem;
-		transition: opacity 0.2s;
-	}
-
-	.back-link:hover {
-		opacity: 0.8;
 	}
 
 	.content {

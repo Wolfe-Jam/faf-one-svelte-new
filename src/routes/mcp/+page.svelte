@@ -11,10 +11,6 @@
 	<meta name="description" content="Official MCP documentation for the .faf format — persistent AI context for Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code. IANA-registered, in Anthropic's MCP Registry (#2759)." />
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">←</a>
-</div>
-
 <div class="mcp-page">
 	<!-- Hero Section -->
 	<section class="hero-section">
@@ -484,31 +480,6 @@
 	   opacity:0 on this page (its observer never fires on the tall sections). Force
 	   the revealed state here so nothing goes blank. */
 	.mcp-page :global(.scroll-reveal) { opacity: 1 !important; transform: none !important; }
-
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-white);
-		color: var(--faf-dark);
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.back-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: var(--faf-dark);
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-	}
-
-	.back-button:hover {
-		background: var(--faf-cream);
-		color: var(--faf-orange);
-		transform: translateX(-2px);
-	}
 
 	.mcp-page {
 		min-height: 100vh;

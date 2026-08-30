@@ -11,10 +11,6 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">←</a>
-</div>
-
 <article class="press-release">
 	<div class="container">
 		<h1>.faf - The JPEG for AI</h1>
@@ -149,29 +145,6 @@ human_context:
 </article>
 
 <style>
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-white);
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.back-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: var(--faf-dark);
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-	}
-
-	.back-button:hover {
-		background: var(--faf-cream);
-		color: var(--faf-orange);
-		transform: translateX(-2px);
-	}
 
 	.press-release {
 		padding: 3rem 0;

@@ -78,10 +78,6 @@
 	/>
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">&larr;</a>
-</div>
-
 <div class="dl-page" class:visible={isVisible}>
 	<!-- Hero -->
 	<section class="hero">
@@ -311,23 +307,6 @@
 </div>
 
 <style>
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-white);
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.back-button {
-		color: #FF6B35;
-		text-decoration: none;
-		font-weight: 600;
-		transition: all 0.2s;
-	}
-
-	.back-button:hover {
-		color: #FF5722;
-		text-shadow: none;
-	}
 
 	.dl-page {
 		opacity: 0;

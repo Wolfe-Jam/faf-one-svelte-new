@@ -152,7 +152,6 @@
 </svelte:head>
 
 <div class="map-root">
-	<div class="back-nav"><a href="/" class="back-button">←</a></div>
 
 	<main class="map-page">
 		<header class="map-header">
@@ -186,16 +185,6 @@
 	.map-root {
 		min-height: 100vh;
 		background: var(--faf-page-bg);
-	}
-	.back-nav {
-		padding: 1rem 2rem;
-	}
-	.back-button {
-		display: inline-flex;
-		color: var(--faf-black);
-		text-decoration: none;
-		font-size: 1.3rem;
-		font-weight: 700;
 	}
 	.map-page {
 		max-width: 1000px;

@@ -29,9 +29,6 @@
 </svelte:head>
 
 <div class="pro-page">
-	<div class="back-nav">
-		<a href="/" class="back-link">&larr;</a>
-	</div>
 
 	<main class="content">
 		<!-- Hero -->
@@ -282,23 +279,6 @@
 		background: LOCKED_GRAD;
 		color: #f5f5dc;
 		transition: background 0.4s ease;
-	}
-
-	.back-nav {
-		padding: 1rem 2rem;
-		border-bottom: 1px solid #333;
-	}
-
-	.back-link {
-		color: #4682B4;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 0.95rem;
-		transition: opacity 0.2s;
-	}
-
-	.back-link:hover {
-		opacity: 0.8;
 	}
 
 	.content {

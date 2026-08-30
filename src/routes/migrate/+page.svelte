@@ -17,9 +17,6 @@
 </svelte:head>
 
 <div class="migrate-page">
-	<div class="back-nav">
-		<a href="/" class="back-link">←</a>
-	</div>
 
 	<main class="content">
 		<!-- Hero -->
@@ -154,23 +151,6 @@
 		min-height: 100vh;
 		background: var(--faf-cream);
 		color: var(--faf-black);
-	}
-
-	.back-nav {
-		padding: 1rem 2rem;
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.back-link {
-		color: var(--faf-black);
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 0.95rem;
-		transition: opacity 0.2s;
-	}
-
-	.back-link:hover {
-		opacity: 0.8;
 	}
 
 	.content {

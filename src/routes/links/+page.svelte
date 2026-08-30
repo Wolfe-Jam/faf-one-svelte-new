@@ -13,10 +13,6 @@
 	<meta name="description" content="All official FAF links - npm packages, GitHub repos, MCP registry, directories, and more." />
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">←</a>
-</div>
-
 <div class="links-container" class:visible={isVisible}>
 	<section class="hero-section">
 		<div class="container">
@@ -692,22 +688,6 @@
 </div>
 
 <style>
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-surface);
-		border-bottom: 1px solid var(--faf-hairline);
-	}
-
-	.back-button {
-		color: var(--faf-orange);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.2s;
-	}
-
-	.back-button:hover {
-		color: var(--faf-orange-dark);
-	}
 
 	.links-container {
 		opacity: 0;

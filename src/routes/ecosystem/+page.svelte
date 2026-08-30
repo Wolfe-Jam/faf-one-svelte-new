@@ -198,10 +198,6 @@
     <meta name="description" content="Complete FAF ecosystem: CLI, MCP servers, Dev Tools, Chrome Extension, WJTTC testing. IANA registered. Universal AI context for developers.">
 </svelte:head>
 
-<div class="back-nav">
-    <a href="/" class="back-button">←</a>
-</div>
-
 <main class="ecosystem-page">
     <header class="page-header">
         <h1>🏎️ The FAF Ecosystem</h1>
@@ -327,9 +323,6 @@
 </main>
 
 <style>
-    .back-nav { padding: 1rem 2rem; background: var(--faf-white); border-bottom: 1px solid var(--faf-surface-border); }
-    .back-button { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--faf-dark); text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 8px; transition: all 0.3s ease; }
-    .back-button:hover { background: var(--faf-cream); color: var(--faf-orange); transform: translateX(-2px); }
     .ecosystem-page { background: var(--faf-page-bg); min-height: 100vh; padding: 3rem 2rem; }
     .page-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
     .page-header h1 { font-size: 3rem; color: var(--faf-black); margin-bottom: 1rem; }

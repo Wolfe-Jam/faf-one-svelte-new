@@ -232,10 +232,6 @@
 	<meta property="og:type" content="website" />
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">&larr;</a>
-</div>
-
 <article class="apps-page">
 	<div class="container">
 		<h1><span class="apps-text">Apps</span></h1>
@@ -445,29 +441,6 @@
 </article>
 
 <style>
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-white, #fff);
-		border-bottom: 1px solid var(--faf-light-gray, #eee);
-	}
-
-	.back-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: var(--faf-dark, #111);
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-	}
-
-	.back-button:hover {
-		background: var(--faf-cream, #FFF5EE);
-		color: var(--faf-orange, #FF6B35);
-		transform: translateX(-2px);
-	}
 
 	.apps-page {
 		padding: 3rem 0;

@@ -10,10 +10,6 @@
 	<meta name="description" content=".faf press kit - logos, brand assets, and information for media">
 </svelte:head>
 
-<div class="back-nav">
-	<a href="/" class="back-button">←</a>
-</div>
-
 <div class="press-hero">
 	<div class="container">
 		<h1>📣 Press Kit</h1>
@@ -289,29 +285,6 @@
 </section>
 
 <style>
-	.back-nav {
-		padding: 1rem 2rem;
-		background: var(--faf-white);
-		border-bottom: 1px solid var(--faf-light-gray);
-	}
-
-	.back-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: var(--faf-dark);
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		transition: all 0.3s ease;
-	}
-
-	.back-button:hover {
-		background: var(--faf-cream);
-		color: var(--faf-orange);
-		transform: translateX(-2px);
-	}
 
 	.press-hero {
 		background: var(--faf-black);
