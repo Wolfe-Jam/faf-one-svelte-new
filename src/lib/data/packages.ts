@@ -35,7 +35,7 @@ export interface Package {
 export const npmPackages: Package[] = [
 	{
 		name: 'faf-cli',
-		description: 'Universal CLI for .faf management',
+		description: 'CLI for .faf management',
 		downloads: 47_134,
 		install: 'npm i -g faf-cli',
 		registryUrl: 'https://npmjs.com/package/faf-cli',
@@ -55,7 +55,7 @@ export const npmPackages: Package[] = [
 	},
 	{
 		name: 'faf-mcp',
-		description: 'Universal MCP server',
+		description: 'Cursor / VS Code / IDE MCP server',
 		downloads: 8_552,
 		install: 'npx faf-mcp',
 		registryUrl: 'https://npmjs.com/package/faf-mcp',
@@ -125,7 +125,7 @@ export const npmPackages: Package[] = [
 	},
 	{
 		name: 'faf',
-		description: 'Universal CLI alias (bunx faf → faf-cli)',
+		description: 'CLI alias (bunx faf → faf-cli)',
 		downloads: 11_547,
 		install: 'bunx faf',
 		registryUrl: 'https://npmjs.com/package/faf',
