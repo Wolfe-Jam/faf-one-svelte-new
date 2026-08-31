@@ -92,6 +92,8 @@
 		<span class="dot">·</span>
 		<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener">Anthropic MCP #2759</a>
 		<span class="dot">·</span>
+		<a href="https://a2a-protocol.org/latest/partners/" target="_blank" rel="noopener">A2A Partner</a>
+		<span class="dot">·</span>
 		<span>{data.downloadCount} Downloads</span>
 		<span class="dot">·</span>
 		<span>5 MCP Servers</span>
