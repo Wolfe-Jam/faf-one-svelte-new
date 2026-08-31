@@ -276,7 +276,7 @@
 
 	.pro-page {
 		min-height: 100vh;
-		background: LOCKED_GRAD;
+		background: var(--faf-locked-dark);
 		color: #f5f5dc;
 		transition: background 0.4s ease;
 	}

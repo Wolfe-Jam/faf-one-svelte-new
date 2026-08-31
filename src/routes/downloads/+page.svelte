@@ -215,7 +215,7 @@
 			<h2 class="section-title">
 				<span class="section-icon crates-icon">crates</span>
 				<span>Rust Packages</span>
-				<span class="section-count">{cratesPackages.length} package &middot; {cratesTotal}</span>
+				<span class="section-count">{cratesPackages.length} packages &middot; {formatTotal(cratesTotal)}</span>
 			</h2>
 			<div class="cards-grid">
 				{#each cratesPackages as pkg, k}

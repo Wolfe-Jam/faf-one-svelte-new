@@ -4,7 +4,7 @@
 
 	let codeTyped = $state('');
 	let showOutput = $state(false);
-	let editableRepoName = $state('your-repo');
+	let editableRepoName = $state('your/repo');
 	let reactCopied = $state(false);
 	let vercelCopied = $state(false);
 	let userCopied = $state(false);
@@ -98,7 +98,7 @@
 					class="editable-part"
 					bind:value={editableRepoName}
 					onclick={(e) => { e.stopPropagation(); e.target.select(); }}
-					placeholder="your-repo"
+					placeholder="your/repo"
 				/>
 			</div>
 			<button class="copy-btn" onclick={copyUser}>{userCopied ? 'Copied!' : 'Copy'}</button>
@@ -126,7 +126,7 @@
 							<div class="output-line">📦 Analyzing: package.json, tsconfig.json, turbo.json...</div>
 							<div class="output-line">🎯 Detected: Monorepo, React, TypeScript, Next.js</div>
 							<div class="output-line">📝 Generated project.faf <strong>(1.8s)</strong></div>
-							<div class="output-line success">✅ AI-Readiness: <strong>99%</strong> 🏆</div>
+							<div class="output-line success">✅ AI-Readiness: <strong>99%</strong> ★</div>
 						</div>
 					{/if}
 				</div>
@@ -168,7 +168,7 @@
 				<div class="file-info">
 					<span class="file-icon">📁</span>
 					<div class="file-details">
-						<h3>react.faf</h3>
+						<h3>project.faf</h3>
 						<p class="file-location">Saved in your current directory</p>
 					</div>
 				</div>
@@ -176,7 +176,7 @@
 				<div class="usage-steps">
 					<div class="usage-step">
 						<h4>View it:</h4>
-						<code>cat react.faf</code>
+						<code>cat project.faf</code>
 					</div>
 
 					<div class="usage-step">
@@ -202,7 +202,7 @@
 				<div class="insight-content">
 					<h3 class="insight-title">Do you work on React? Next.js? Any major repo?</h3>
 					<p class="insight-text">
-						React has <strong>243K stars</strong> and <strong>50K+ forks</strong>.
+						React is one of the most-starred repos on GitHub — nearly 250K stars, 51K forks.
 						Thousands of developers work with it every day. You know the drill:
 						Clone the repo. Spend 20+ minutes (or hours) reading README, docs,
 						architecture guides just to orient yourself. Then ask AI for help...
@@ -272,7 +272,7 @@
 <style>
 	.try-page {
 		min-height: 100vh;
-		background: LOCKED_GRAD;
+		background: var(--faf-locked-dark);
 		color: #f5f5dc;
 	}
 
