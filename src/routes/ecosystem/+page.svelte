@@ -17,6 +17,7 @@
             ],
             github: 'https://github.com/Wolfe-Jam/faf-cli',
             npm: 'https://www.npmjs.com/package/faf-cli',
+            live: 'https://faf-cli.vercel.app',
             install: 'npm install -g faf-cli',
             brewInstall: 'brew install wolfe-jam/faf/faf-cli',
             status: data.versions?.['faf-cli'] || 'npm',
@@ -239,7 +240,7 @@
                         <a href={tool.pypi} class="link-secondary" target="_blank" rel="noopener">📦 PyPI</a>
                     {/if}
                     {#if tool.live}
-                        <a href={tool.live} class="link-secondary" target="_blank" rel="noopener">🚀 Live Demo</a>
+                        <a href={tool.live} class="link-secondary" target="_blank" rel="noopener">🚀 Live</a>
                     {/if}
                     {#if tool.store}
                         <a href={tool.store} class="link-secondary" target="_blank" rel="noopener">🌐 Chrome Store</a>
