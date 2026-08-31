@@ -469,7 +469,7 @@
     max-width: 600px;
     margin: 0 auto 1rem auto;
     padding: 0.75rem 1.25rem;
-    background: linear-gradient(135deg, #fff8f0 0%, #fff 100%);
+    background: var(--faf-surface);
     border: 1px solid var(--faf-orange);
     border-left: 4px solid var(--faf-orange);
     border-radius: 8px;
@@ -510,7 +510,7 @@
   }
 
   .description {
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     font-size: 1.1rem;
   }
 
@@ -544,14 +544,14 @@
   }
 
   .tip {
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     font-size: 0.9rem;
     margin: 0 0 1.5rem 0;
   }
 
   .tip kbd {
     background: var(--faf-light-gray);
-    border: 1px solid #ddd;
+    border: 1px solid var(--faf-border);
     border-radius: 4px;
     padding: 0.2rem 0.5rem;
     font-family: 'SF Mono', monospace;
@@ -595,7 +595,7 @@
   }
 
   .q-prompt {
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     font-weight: 400;
   }
 
@@ -608,11 +608,12 @@
   .input-with-copy input {
     flex: 1;
     padding: 0.75rem 1rem;
-    border: 2px solid #e5e5e5;
+    border: 2px solid var(--faf-border);
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.2s;
     background: var(--faf-surface);
+    color: var(--faf-dark);
   }
 
   .input-with-copy input:focus {
@@ -627,7 +628,7 @@
   .copy-field-btn {
     padding: 0.75rem 1rem;
     background: var(--faf-light-gray);
-    border: 2px solid #e5e5e5;
+    border: 2px solid var(--faf-border);
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
@@ -643,7 +644,7 @@
 
   /* Completion Button */
   .completion-button {
-    background: linear-gradient(135deg, var(--faf-green) 0%, #00aa55 100%);
+    background: var(--faf-green);
     color: white;
     padding: 1.5rem 2rem;
     border-radius: 12px;
@@ -665,7 +666,7 @@
   .completion-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 191, 99, 0.5);
-    background: linear-gradient(135deg, #00aa55 0%, var(--faf-green) 100%);
+    background: var(--faf-green-hover);
   }
 
   .completion-button:active {
@@ -707,7 +708,7 @@
   .download-link {
     background: none;
     border: none;
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     font-size: 0.9rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -720,7 +721,7 @@
   }
 
   .progress-hint {
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     text-align: center;
     padding: 1rem;
     margin-top: 1rem;
@@ -746,7 +747,7 @@
   }
 
   .tab:hover {
-    background: #d5d5d5;
+    background: var(--faf-border);
   }
 
   .tab.active {
@@ -768,8 +769,8 @@
   }
 
   .preview-box {
-    background: var(--faf-black);
-    border: 1px solid #333;
+    background: var(--faf-solid-bg);
+    border: 1px solid var(--faf-locked-dark-muted);
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1.5rem;
@@ -782,12 +783,12 @@
     font-family: 'SF Mono', monospace;
     font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--faf-cream);
+    color: var(--faf-solid-fg);
   }
 
   .code-display {
-    background: var(--faf-black);
-    border: 1px solid #333;
+    background: var(--faf-solid-bg);
+    border: 1px solid var(--faf-locked-dark-muted);
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -805,7 +806,7 @@
     font-family: 'SF Mono', monospace;
     font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--faf-cream);
+    color: var(--faf-solid-fg);
   }
 
   .actions {
@@ -880,7 +881,7 @@
 
   .step.primary-step {
     border: 3px solid var(--faf-green);
-    background: linear-gradient(135deg, #f0fff4 0%, white 100%);
+    background: var(--faf-surface);
     position: relative;
   }
 
@@ -910,7 +911,7 @@
   }
 
   .step p {
-    color: var(--faf-gray);
+    color: var(--faf-dark);
     margin: 0;
     font-size: 0.95rem;
   }
@@ -930,7 +931,7 @@
   }
 
   .yaml-preview :global(.yaml-punct) {
-    color: var(--faf-cream);
+    color: var(--faf-solid-fg);
     opacity: 0.7;
   }
 </style>
