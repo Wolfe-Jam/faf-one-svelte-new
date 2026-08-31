@@ -21,7 +21,7 @@
 	<title>133,000 Downloads | FAF</title>
 	<meta name="description" content="The FAF ecosystem crosses 133,000 downloads across npm, PyPI, and crates.io. An IANA-registered context format, zero marketing budget — the format keeps spreading because the format keeps working." />
 	<meta property="og:title" content="133,000 Downloads — FAF Ecosystem" />
-	<meta property="og:description" content="+32,000 in 72 days. Every registry. Zero marketing budget. The downloads followed the receipts." />
+	<meta property="og:description" content="+32,000 in 72 days. Every registry. Zero marketing budget. The downloads followed the work." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/hundred-thirty-three-thousand-hero.jpeg" />
@@ -53,7 +53,7 @@
 				<strong>TL;DR:</strong> The FAF ecosystem just crossed <strong>133,000 downloads</strong>
 				across npm, PyPI, and crates.io. From 100k to 133k in 72 days &mdash; +32,000. Same
 				packages. Same three registries. Same zero marketing budget. The downloads followed
-				the receipts.
+				the work.
 			</p>
 		</section>
 
@@ -179,7 +179,7 @@
 
 		<section class="share-section">
 			<a
-				href="https://twitter.com/intent/tweet?text=133%2C000%20downloads%20across%20npm%2C%20PyPI%20and%20crates.io.%20An%20IANA-registered%20context%20format%2C%20zero%20marketing%20budget.%20%2B32k%20in%2072%20days%20%E2%80%94%20the%20downloads%20followed%20the%20receipts.&url=https://faf.one/blog/hundred-thirty-three-thousand"
+				href="https://twitter.com/intent/tweet?text=133%2C000%20downloads%20across%20npm%2C%20PyPI%20and%20crates.io.%20An%20IANA-registered%20context%20format%2C%20zero%20marketing%20budget.%20%2B32k%20in%2072%20days%20%E2%80%94%20the%20downloads%20followed%20the%20work.&url=https://faf.one/blog/hundred-thirty-three-thousand"
 				target="_blank"
 				rel="noopener"
 				class="share-btn"

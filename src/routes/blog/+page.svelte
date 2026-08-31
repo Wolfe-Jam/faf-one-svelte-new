@@ -37,7 +37,7 @@
 			date: 'August 31, 2026',
 			timestamp: '2026-08-31',
 			excerpt:
-				'The FAF ecosystem crosses 133,000 downloads across npm, PyPI and crates.io. +32,000 in 72 days, same zero marketing budget — the downloads followed the receipts.',
+				'The FAF ecosystem crosses 133,000 downloads across npm, PyPI and crates.io. +32,000 in 72 days, same zero marketing budget — the downloads followed the work.',
 			emoji: '🏆',
 			category: 'Milestone'
 		},
