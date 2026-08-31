@@ -160,9 +160,9 @@
             tagline: 'The Standard',
             description: 'Official .faf format specification — IANA registered, IETF draft active.',
             features: [
-                'IANA registered: application/vnd.faf+yaml',
+                '3 IANA media types: .faf, .fafm, .fafa',
                 'IETF Internet-Draft active',
-                'CERN/Zenodo paper published',
+                'Zenodo papers published',
                 'Community contributions',
                 'Format authority'
             ],
@@ -203,7 +203,7 @@
     <header class="page-header">
         <h1>🏎️ The FAF Ecosystem</h1>
         <p class="lead">Powered by TURBO-CAT 😽 - The Catalytic Converter</p>
-        <p class="subtitle">11 tools, one mission: Transform raw projects into clean AI context</p>
+        <p class="subtitle">{tools.length} tools, one mission: Transform raw projects into clean AI context</p>
         <div class="turbo-cat-intro">
             <p><strong>Meet TURBO-CAT 😽</strong> - The .faf representative. Just like a catalytic converter transforms exhaust into clean emissions, TURBO-CAT transforms raw project files into clean, AI-ready context.</p>
             <p class="purr-line"><strong>CATs keep themselves clean.</strong> He can make your Stack positively <strong>PURR</strong>. 😽</p>
@@ -272,7 +272,7 @@
                 <div class="stat-label">Claude MCP Downloads</div>
             </div>
             <div class="stat">
-                <div class="stat-value">11</div>
+                <div class="stat-value">{tools.length}</div>
                 <div class="stat-label">Active Tools</div>
             </div>
             <div class="stat">
@@ -327,14 +327,14 @@
     .ecosystem-page { background: var(--faf-page-bg); min-height: 100vh; padding: 3rem 2rem; }
     .page-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
     .page-header h1 { font-size: 3rem; color: var(--faf-black); margin-bottom: 1rem; }
-    .lead { font-size: 1.5rem; color: #666; margin: 0.5rem 0; }
-    .subtitle { font-size: 1.125rem; color: #888; margin: 0.5rem 0 1.5rem 0; }
+    .lead { font-size: 1.5rem; color: var(--faf-dark); margin: 0.5rem 0; }
+    .subtitle { font-size: 1.125rem; color: var(--faf-dark); margin: 0.5rem 0 1.5rem 0; }
     .turbo-cat-intro { background: var(--faf-surface); border: 2px solid var(--faf-orange); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem auto 0; max-width: 800px; }
-    .turbo-cat-intro p { font-size: 1.125rem; line-height: 1.7; color: #333; margin: 0 0 1rem 0; }
+    .turbo-cat-intro p { font-size: 1.125rem; line-height: 1.7; color: var(--faf-dark); margin: 0 0 1rem 0; }
     .turbo-cat-intro p:last-child { margin-bottom: 0; }
     .turbo-cat-intro strong { color: var(--faf-orange); }
     .purr-line { font-size: 1.25rem; text-align: center; font-style: italic; background: var(--faf-surface); border: 1px solid var(--faf-light-gray); border-left: 4px solid var(--faf-orange); padding: 1rem; border-radius: 8px; margin: 1rem 0 !important; }
-    .pyramid-note { font-size: 1rem; color: #666; border-top: 1px solid rgba(255, 107, 53, 0.2); padding-top: 1rem; margin-top: 1rem !important; }
+    .pyramid-note { font-size: 1rem; color: var(--faf-dark); border-top: 1px solid rgba(255, 107, 53, 0.2); padding-top: 1rem; margin-top: 1rem !important; }
     .tools-grid { max-width: 1200px; margin: 0 auto 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
     .tool-card { background: var(--faf-surface); border: 2px solid var(--faf-surface-border); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
     .tool-card:hover { border-color: var(--faf-orange); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transform: translateY(-4px); }
@@ -342,11 +342,11 @@
     .tool-icon { font-size: 2.5rem; line-height: 1; }
     .tool-title { flex: 1; }
     .tool-title h2 { font-size: 1.5rem; color: var(--faf-black); margin: 0 0 0.25rem 0; }
-    .tool-tagline { font-size: 0.875rem; color: #666; margin: 0; font-weight: 600; }
+    .tool-tagline { font-size: 0.875rem; color: var(--faf-dark); margin: 0; font-weight: 600; }
     .tool-status { background: var(--faf-orange); color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
-    .tool-description { color: #444; line-height: 1.6; margin-bottom: 1.5rem; }
+    .tool-description { color: var(--faf-dark); line-height: 1.6; margin-bottom: 1.5rem; }
     .tool-features { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
-    .tool-features li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #666; font-size: 0.925rem; }
+    .tool-features li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: var(--faf-dark); font-size: 0.925rem; }
     .tool-features li:before { content: "☑️"; position: absolute; left: 0; }
     .tool-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
     .link-primary { background: var(--faf-orange); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.925rem; transition: all 0.2s ease; }
@@ -357,22 +357,22 @@
     .install-box code { font-family: var(--font-mono); font-size: 0.875rem; color: white; }
     .ecosystem-stats { max-width: 1200px; margin: 4rem auto; text-align: center; padding: 3rem 2rem; background: var(--faf-surface); border-radius: 12px; border: 2px solid var(--faf-orange); }
     .ecosystem-stats h2 { font-size: 2rem; color: var(--faf-black); margin-bottom: 0.5rem; }
-    .stats-updated { font-size: 0.85rem; color: #999; margin-bottom: 2rem; }
+    .stats-updated { font-size: 0.85rem; color: var(--faf-dark); margin-bottom: 2rem; }
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; }
     .stat { text-align: center; }
     .stat-value { font-size: 2.5rem; font-weight: 700; color: var(--faf-orange); margin-bottom: 0.5rem; }
-    .stat-label { font-size: 0.925rem; color: #666; font-weight: 600; }
+    .stat-label { font-size: 0.925rem; color: var(--faf-dark); font-weight: 600; }
     .get-started { max-width: 1200px; margin: 4rem auto; text-align: center; }
     .get-started h2 { font-size: 2rem; color: var(--faf-black); margin-bottom: 2rem; }
     .quick-start-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
     .option { background: var(--faf-surface); border: 2px solid var(--faf-surface-border); border-radius: 12px; padding: 2rem; }
     .option h3 { font-size: 1.25rem; color: var(--faf-black); margin: 0 0 0.5rem 0; }
-    .option p { color: #666; margin: 0 0 1rem 0; }
+    .option p { color: var(--faf-dark); margin: 0 0 1rem 0; }
     .code-block { background: #1a1a1a; color: white; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
     .code-block code { font-family: var(--font-mono); font-size: 0.875rem; color: white; }
     .btn-primary { display: inline-block; background: var(--faf-orange); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.2s ease; margin-top: 1rem; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    .ecosystem-footer { max-width: 1200px; margin: 4rem auto 0; text-align: center; padding: 2rem 0; border-top: 1px solid var(--faf-surface-border); color: #666; }
+    .ecosystem-footer { max-width: 1200px; margin: 4rem auto 0; text-align: center; padding: 2rem 0; border-top: 1px solid var(--faf-surface-border); color: var(--faf-dark); }
     .ecosystem-footer p { margin: 0.5rem 0; }
     .ecosystem-footer a { color: var(--faf-orange); text-decoration: none; font-weight: 600; }
     .ecosystem-footer a:hover { text-decoration: underline; }
