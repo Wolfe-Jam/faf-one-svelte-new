@@ -30,7 +30,7 @@ export interface Package {
 	icon: string;
 }
 
-// ── npm packages (13) ─────────────────────────────────────────────
+// ── npm packages (14) ─────────────────────────────────────────────
 
 export const npmPackages: Package[] = [
 	{
@@ -160,6 +160,16 @@ export const npmPackages: Package[] = [
 		install: 'npm i faf-wasm',
 		registryUrl: 'https://npmjs.com/package/faf-wasm',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm',
+		registry: 'npm',
+		icon: '⚡'
+	},
+	{
+		name: 'faf-wasm-gen',
+		description: 'Rust→WASM .faf generator — the generate sibling of faf-wasm-sdk',
+		downloads: 69,
+		install: 'npm i faf-wasm-gen',
+		registryUrl: 'https://npmjs.com/package/faf-wasm-gen',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-gen',
 		registry: 'npm',
 		icon: '⚡'
 	}

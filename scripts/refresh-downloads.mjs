@@ -28,7 +28,7 @@ const PACKAGES_TS = 'src/lib/data/packages.ts';
 const NPM = [
 	'faf-cli', 'faf', 'claude-faf-mcp', 'faf-mcp', 'faf-scoring-kernel',
 	'bun-sticky', 'slash-tokens', 'wjttc', 'grok-faf-mcp',
-	'faf-wasm-core', 'faf-wasm-sdk', 'faf-wasm'
+	'faf-wasm-core', 'faf-wasm-sdk', 'faf-wasm', 'faf-wasm-gen', 'bun-sticky-faf'
 ];
 const PYPI = [
 	'gemini-faf-mcp', 'claude-fafm-sdk', 'faf-python-sdk', 'faf-agent-mcp',
