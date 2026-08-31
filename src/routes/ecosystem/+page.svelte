@@ -139,6 +139,55 @@
             icon: '🦀'
         },
         {
+            name: 'faf-agent-mcp',
+            tagline: 'Voice of FAF',
+            description: 'FAF Agent — the Voice of FAF. MCP server and a live A2A peer.',
+            features: [
+                'MCP server (uvx / PyPI)',
+                'Live A2A peer — protocol 1.0',
+                'Discoverable from the Agent Card',
+                'Listed on the A2A partners page'
+            ],
+            github: 'https://github.com/Wolfe-Jam/faf-agent',
+            pypi: 'https://pypi.org/project/faf-agent-mcp/',
+            live: 'https://faf.one/agent',
+            install: 'uvx faf-agent-mcp',
+            status: 'PyPI',
+            icon: '🎤'
+        },
+        {
+            name: 'faf-python-sdk',
+            tagline: 'Python SDK',
+            description: 'Persistent project context for Python — parse, validate, and score .faf files.',
+            features: [
+                'Parse · validate · score .faf',
+                'Foundation for Python FAF tools',
+                'IANA-registered .faf format',
+                'PyPI published'
+            ],
+            github: 'https://github.com/Wolfe-Jam/faf-python-sdk',
+            pypi: 'https://pypi.org/project/faf-python-sdk/',
+            install: 'pip install faf-python-sdk',
+            status: 'PyPI',
+            icon: '🐍'
+        },
+        {
+            name: 'faf-rust-sdk',
+            tagline: 'Rust SDK',
+            description: 'Persistent project context for Rust — the facade over faf-kernel plus the FAFb binary format.',
+            features: [
+                'Parse · validate · score .faf',
+                'FAFb binary format (v2)',
+                'IANA-registered .faf format',
+                'crates.io published'
+            ],
+            github: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
+            crates: 'https://crates.io/crates/faf-rust-sdk',
+            install: 'cargo add faf-rust-sdk',
+            status: 'crates.io',
+            icon: '🦀'
+        },
+        {
             name: 'WJTTC',
             tagline: 'MCP Testing Certification',
             description: 'MCP testing certification. Pass WJTTC, ship with receipts.',
