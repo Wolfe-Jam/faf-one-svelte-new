@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/hundred-thirty-three-thousand',
+			title: '133,000 Downloads',
+			version: 'faf.one/downloads',
+			date: 'August 31, 2026',
+			timestamp: '2026-08-31',
+			excerpt:
+				'The FAF ecosystem crosses 133,000 downloads across npm, PyPI and crates.io. +32,000 in 72 days, same zero marketing budget — the downloads followed the receipts.',
+			emoji: '🏆',
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/mk4-truth-edition',
 			title: 'The Mk4 Truth Edition',
 			version: 'rust-faf-mcp v0.5.0',
