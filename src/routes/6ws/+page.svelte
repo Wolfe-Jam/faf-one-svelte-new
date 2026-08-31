@@ -172,7 +172,7 @@
 
   <!-- 3Ws Callout -->
   <div class="callout-3ws">
-    🆕 New to this? Start with just 3 questions → <a href="/ideas">faf.one/ideas</a>
+    New to this? Start with just 3 questions → <a href="/ideas">faf.one/ideas</a>
   </div>
 
   <!-- Main Content Grid -->
@@ -180,8 +180,8 @@
     <div class="content-grid">
       <!-- Left: Form -->
       <div class="form-section">
-        <h2>📋 Fill the 6 Ws</h2>
-        <p class="tip">💡 Tip: Press <kbd>Tab</kbd> to use suggestions</p>
+        <h2>Fill the 6 Ws</h2>
+        <p class="tip">Press <kbd>Tab</kbd> to use suggestions</p>
 
         <form class="questions-form">
           <div class="question-group">
@@ -203,7 +203,7 @@
                 onclick={() => copyField('who')}
                 title="Copy this answer"
               >
-                {copied.who ? '✓' : '📋'}
+                {copied.who ? 'Done' : 'Copy'}
               </button>
             </div>
           </div>
@@ -227,7 +227,7 @@
                 onclick={() => copyField('what')}
                 title="Copy this answer"
               >
-                {copied.what ? '✓' : '📋'}
+                {copied.what ? 'Done' : 'Copy'}
               </button>
             </div>
           </div>
@@ -251,7 +251,7 @@
                 onclick={() => copyField('why')}
                 title="Copy this answer"
               >
-                {copied.why ? '✓' : '📋'}
+                {copied.why ? 'Done' : 'Copy'}
               </button>
             </div>
           </div>
@@ -275,7 +275,7 @@
                 onclick={() => copyField('where')}
                 title="Copy this answer"
               >
-                {copied.where ? '✓' : '📋'}
+                {copied.where ? 'Done' : 'Copy'}
               </button>
             </div>
           </div>
@@ -299,7 +299,7 @@
                 onclick={() => copyField('when')}
                 title="Copy this answer"
               >
-                {copied.when ? '✓' : '📋'}
+                {copied.when ? 'Done' : 'Copy'}
               </button>
             </div>
           </div>
@@ -323,7 +323,7 @@
                 onclick={() => copyField('how')}
                 title="Copy this answer"
               >
-                {copied.how ? '✓' : '📋'}
+                {copied.how ? 'Done' : 'Copy'}
               </button>
             </div>
           </div>
@@ -331,15 +331,14 @@
 
         {#if isComplete}
           <button class="completion-button" transition:fade onclick={() => copyToClipboard('faf')}>
-            <span class="completion-icon">🎉</span>
             <span class="completion-text">
-              <strong>{copied.faf ? '✓ Copied!' : 'Copy human_context'}</strong>
+              <strong>{copied.faf ? 'Copied' : 'Copy human_context'}</strong>
               <small>Paste into Claude, Gemini, Grok, Cursor, Codex, WARP, any AI</small>
             </span>
           </button>
           <div class="secondary-action">
             <button class="download-link" onclick={downloadBothFiles}>
-              📥 Or download files (README-6ws.md + project.faf)
+              Or download files (README-6ws.md + project.faf)
             </button>
           </div>
         {:else}
@@ -351,7 +350,7 @@
 
       <!-- Right: Live Preview & Downloads -->
       <div class="preview-section">
-        <h2>📥 Your Files</h2>
+        <h2>Your Files</h2>
 
         <!-- Tab Switcher -->
         <div class="tabs">
@@ -382,12 +381,12 @@
         <div class="preview-content">
           {#if activeTab === 'preview'}
             <div class="preview-display">
-              <h3>📄 README Section</h3>
+              <h3>README Section</h3>
               <div class="preview-box">
                 <pre>{readmeContent}</pre>
               </div>
 
-              <h3>📦 project.faf</h3>
+              <h3>project.faf</h3>
               <div class="preview-box yaml-preview">
                 <pre>{@html generateFafYamlHighlighted(formData)}</pre>
               </div>
@@ -400,14 +399,14 @@
               <button
                 onclick={() => copyToClipboard('readme')}
               >
-                {copied.readme ? '✓ Copied!' : '📋 Copy'}
+                {copied.readme ? 'Copied' : 'Copy'}
               </button>
               <button
                 onclick={() => downloadFile('readme')}
                 disabled={!isComplete}
                 class="primary"
               >
-                📥 Download README-6ws.md
+                Download README-6ws.md
               </button>
             </div>
           {:else}
@@ -418,14 +417,14 @@
               <button
                 onclick={() => copyToClipboard('faf')}
               >
-                {copied.faf ? '✓ Copied!' : '📋 Copy'}
+                {copied.faf ? 'Copied' : 'Copy'}
               </button>
               <button
                 onclick={() => downloadFile('faf')}
                 disabled={!isComplete}
                 class="primary"
               >
-                📥 Download project.faf
+                Download project.faf
               </button>
             </div>
           {/if}
@@ -631,15 +630,17 @@
     border: 2px solid var(--faf-border);
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s;
-    min-width: 48px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--faf-dark);
+    transition: background 0.2s, border-color 0.2s;
+    min-width: 68px;
   }
 
   .copy-field-btn:hover {
     background: var(--faf-orange);
     border-color: var(--faf-orange);
-    transform: scale(1.05);
+    color: white;
   }
 
   /* Completion Button */
@@ -659,13 +660,13 @@
     justify-content: center;
     gap: 1rem;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 191, 99, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   }
 
   .completion-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(0, 191, 99, 0.5);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
     background: var(--faf-green-hover);
   }
 
@@ -673,21 +674,11 @@
     transform: translateY(0);
   }
 
-  .completion-icon {
-    font-size: 2rem;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-  }
-
   .completion-text {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .completion-text strong {
@@ -886,7 +877,7 @@
   }
 
   .step.primary-step::before {
-    content: '⭐ START HERE';
+    content: 'START HERE';
     position: absolute;
     top: -12px;
     left: 50%;
