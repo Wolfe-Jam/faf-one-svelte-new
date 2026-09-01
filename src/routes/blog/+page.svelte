@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/a2a-partner',
+			title: 'FAF is an A2A partner',
+			date: 'September 1, 2026',
+			timestamp: '2026-09-01',
+			excerpt:
+				'FAF is on the A2A partners list — checked by Google\'s A2A partnerships lead against the IANA registration and a live Agent Card. Listed alongside Adobe, AWS, Cisco, IBM, Microsoft. Complementary. We don\'t replace the card.',
+			emoji: '🤝',
+			category: 'Interop'
+		},
+		{
 			slug: 'blog/hundred-thirty-three-thousand',
 			title: '133,000 Downloads',
 			version: 'faf.one/downloads',
