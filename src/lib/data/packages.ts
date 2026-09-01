@@ -9,7 +9,7 @@
  *   npm + crates.io as reported · PyPI = pypistats without_mirrors only.
  *   Banner and public totals use this meter only — no mirror inflation.
  *
- * Verified: 2026-08-31 (refreshed via /downloads skill — all 3 registries live)
+ * Verified: 2026-09-01 (refreshed via /downloads skill — all 3 registries live)
  * Auto-refresh: scripts/refresh-downloads.mjs (run daily via GH Actions)
  *
  * To add a new package: edit this file manually, keeping descriptions/icons
@@ -36,7 +36,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-cli',
 		description: 'CLI for .faf management',
-		downloads: 47_279,
+		downloads: 47_397,
 		install: 'npm i -g faf-cli',
 		registryUrl: 'https://npmjs.com/package/faf-cli',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-cli',
@@ -46,7 +46,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'claude-faf-mcp',
 		description: 'Anthropic-merged MCP server (#2759)',
-		downloads: 22_409,
+		downloads: 22_474,
 		install: 'npx claude-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/claude-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/claude-faf-mcp',
@@ -56,7 +56,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-mcp',
 		description: 'Cursor / VS Code / IDE MCP server',
-		downloads: 8_609,
+		downloads: 8_643,
 		install: 'npx faf-mcp',
 		registryUrl: 'https://npmjs.com/package/faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-mcp',
@@ -66,7 +66,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-scoring-kernel',
 		description: 'Mk4 WASM scoring engine',
-		downloads: 9_371,
+		downloads: 9_424,
 		install: 'npm i faf-scoring-kernel',
 		registryUrl: 'https://npmjs.com/package/faf-scoring-kernel',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-sdk',
@@ -76,7 +76,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'grok-faf-mcp',
 		description: 'MCP server for xAI Grok',
-		downloads: 8_840,
+		downloads: 8_882,
 		install: 'npx grok-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/grok-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-mcp',
@@ -86,7 +86,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization for Context Engineers',
-		downloads: 5_031,
+		downloads: 5_054,
 		install: 'npm i slash-tokens',
 		registryUrl: 'https://npmjs.com/package/slash-tokens',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
@@ -96,7 +96,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'bun-sticky',
 		description: 'Bun-native FAF runtime',
-		downloads: 2_207,
+		downloads: 2_208,
 		install: 'bun add bun-sticky',
 		registryUrl: 'https://npmjs.com/package/bun-sticky',
 		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky',
@@ -106,7 +106,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'wjttc',
 		description: 'Championship-grade MCP testing',
-		downloads: 2_861,
+		downloads: 2_873,
 		install: 'npx wjttc',
 		registryUrl: 'https://npmjs.com/package/wjttc',
 		githubUrl: 'https://github.com/Wolfe-Jam/wjttc',
@@ -116,7 +116,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm-sdk',
 		description: 'Browser/Edge WASM runtime',
-		downloads: 830,
+		downloads: 831,
 		install: 'npm i faf-wasm-sdk',
 		registryUrl: 'https://npmjs.com/package/faf-wasm-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-sdk',
@@ -126,7 +126,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf',
 		description: 'CLI alias (bunx faf → faf-cli)',
-		downloads: 11_563,
+		downloads: 11_607,
 		install: 'bunx faf',
 		registryUrl: 'https://npmjs.com/package/faf',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-cli',
@@ -136,7 +136,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm-core',
 		description: 'Zig WASM kernel — foundational',
-		downloads: 510,
+		downloads: 511,
 		install: 'npm i faf-wasm-core',
 		registryUrl: 'https://npmjs.com/package/faf-wasm-core',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-core',
@@ -146,7 +146,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'bun-sticky-faf',
 		description: 'Fastest Bun FAF CLI',
-		downloads: 256,
+		downloads: 352,
 		install: 'bun add bun-sticky-faf',
 		registryUrl: 'https://npmjs.com/package/bun-sticky-faf',
 		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky-faf',
@@ -156,7 +156,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm',
 		description: 'WASM SDK for browser scoring',
-		downloads: 318,
+		downloads: 319,
 		install: 'npm i faf-wasm',
 		registryUrl: 'https://npmjs.com/package/faf-wasm',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm',
