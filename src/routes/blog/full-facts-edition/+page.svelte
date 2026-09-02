@@ -6,9 +6,9 @@
 
 	const shareText = `🏁 Just shipped: faf-cli v7.10.0 — The Full-Facts Edition
 
-faf git reads the tree it clones — not the README.
+faf git now grounds every slot in the repo's own files.
 
-Polyglot repo → fullstack + real languages, not library / JavaScript.
+Polyglot repo → fullstack + the real languages, not library / JavaScript.
 docker-compose services · Makefile targets · .env → real stack facts.
 
 bunx faf git <any-repo>
@@ -23,12 +23,12 @@ Comments · suggestions · shares welcome.`;
 	<title>The Full-Facts Edition - faf-cli v7.10.0 | FAF</title>
 	<meta
 		name="description"
-		content="faf git reads the tree it clones — docker-compose services, Makefile targets, sibling app dirs — instead of leaning on the README. A polyglot repo stops reporting library / JavaScript."
+		content="faf git grounds every slot in the repo's own files — docker-compose services, Makefile targets, the sibling app dirs where the real stack lives. A polyglot repo stops reporting library / JavaScript."
 	/>
 	<meta property="og:title" content="The Full-Facts Edition - faf-cli v7.10.0" />
 	<meta
 		property="og:description"
-		content="faf git reads the tree it clones — not the README. A polyglot repo stops reporting library / JavaScript."
+		content="faf git grounds every slot in the repo's own files. A polyglot repo stops reporting library / JavaScript."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/full-facts-edition" />
@@ -40,7 +40,7 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="The Full-Facts Edition — faf-cli v7.10.0 · faf git reads the tree it clones"
+		content="The Full-Facts Edition — faf-cli v7.10.0 · every slot grounded in the actual repo"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
@@ -48,12 +48,12 @@ Comments · suggestions · shares welcome.`;
 	<meta name="twitter:title" content="The Full-Facts Edition - faf-cli v7.10.0" />
 	<meta
 		name="twitter:description"
-		content="faf git reads the tree it clones — not the README. A polyglot repo stops reporting library / JavaScript."
+		content="faf git grounds every slot in the repo's own files. A polyglot repo stops reporting library / JavaScript."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/full-facts-edition-hero.png" />
 	<meta
 		name="twitter:image:alt"
-		content="The Full-Facts Edition — faf-cli v7.10.0 · faf git reads the tree it clones"
+		content="The Full-Facts Edition — faf-cli v7.10.0 · every slot grounded in the actual repo"
 	/>
 </svelte:head>
 
@@ -64,7 +64,7 @@ Comments · suggestions · shares welcome.`;
 		</div>
 		<h1>The Full-Facts Edition</h1>
 		<p class="version-tag">faf-cli v7.10.0 · faf v7.10.0</p>
-		<p class="subtitle">faf git reads the tree it clones — not the README.</p>
+		<p class="subtitle">Every slot, grounded in the repo's own files.</p>
 		<div class="meta">
 			<time datetime="2026-09-02">September 2, 2026</time>
 			<span class="separator">•</span>
@@ -75,7 +75,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/full-facts-edition-hero.png"
-			alt="The Full-Facts Edition — faf-cli v7.10.0 · faf git reads the tree it clones"
+			alt="The Full-Facts Edition — faf-cli v7.10.0 · every slot grounded in the actual repo"
 			width="1200"
 			height="630"
 			loading="eager"
@@ -86,18 +86,19 @@ Comments · suggestions · shares welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> <code>faf git &lt;url&gt;</code> now reads the tree it clones —
-				<code>docker-compose</code> services, <code>Makefile</code> targets, sibling app dirs —
-				instead of leaning on the README. A polyglot repo (Django + React + Go, no npm workspace)
-				stops reporting <code>type: library</code> / <code>main_language: JavaScript</code>.
+				<strong>TL;DR:</strong> <code>faf git &lt;url&gt;</code> now grounds every slot in the
+				repo's own files — <code>docker-compose</code> services, <code>Makefile</code> targets, the
+				sibling app dirs where the real stack lives. A polyglot repo (Django + React + Go, no npm
+				workspace) stops reporting <code>type: library</code> /
+				<code>main_language: JavaScript</code>.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
 				<p>
 					<strong>Old state.</strong> Point <code>faf git</code> at a repo whose real code lives
 					in folders — <code>backend/</code>, <code>frontend/</code>, <code>gateway/</code> — and
-					it only looked at the root. The root was a <code>package.json</code> with husky in it.
-					So: "it's a JavaScript library." On a Django + React + Go platform, every line was wrong.
+					it only read the root. The root was a <code>package.json</code> with husky in it. So:
+					"it's a JavaScript library." On a Django + React + Go platform, every line was wrong.
 				</p>
 				<p>
 					<strong>Fix.</strong> It walks one level in. Sibling dirs, each with their own manifest,
@@ -107,8 +108,8 @@ Comments · suggestions · shares welcome.`;
 					<code>Makefile</code> for the real test command.
 				</p>
 				<p>
-					<strong>New state.</strong> Point it at a real repo and the <code>.faf</code> is facts,
-					not a guess.
+					<strong>New state.</strong> Point it at a real repo and every slot is backed by a file
+					you can open — a checkable fact, not a guess.
 				</p>
 			</div>
 			<div class="terminal-block">
@@ -174,13 +175,13 @@ Comments · suggestions · shares welcome.`;
 					<code>security.example</code>.
 				</li>
 				<li>
-					<strong>README, better</strong> — HTML comment blocks (asset notes, TODO markers) are
-					stripped before extraction; a row of roadmap links no longer lands in a slot.
+					<strong>Cleaner prose extraction</strong> — HTML comment blocks (asset notes, TODO
+					markers) and rows of nav links no longer leak into a slot.
 				</li>
 			</ul>
 			<p>
-				File-facts win over prose and over presence-only guesses. The README is still read — for
-				the parts a file can't tell you.
+				File-facts lead. The README still fills the goal and the 6 Ws — the human story a manifest
+				doesn't hold.
 			</p>
 		</section>
 

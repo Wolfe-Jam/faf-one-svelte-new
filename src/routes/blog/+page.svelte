@@ -37,7 +37,7 @@
 			date: 'September 2, 2026',
 			timestamp: '2026-09-02',
 			excerpt:
-				'faf git reads the tree it clones — docker-compose services, Makefile targets, sibling app dirs — instead of leaning on the README. A polyglot repo stops reporting library / JavaScript.',
+				'faf git grounds every slot in the repo\'s own files — docker-compose services, Makefile targets, the sibling app dirs where the real stack lives. A polyglot repo stops reporting library / JavaScript.',
 			emoji: '✪',
 			category: 'Release'
 		},
