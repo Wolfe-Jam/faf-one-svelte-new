@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/full-facts-edition',
+			title: 'The Full-Facts Edition',
+			version: 'faf-cli v7.10.0',
+			date: 'September 2, 2026',
+			timestamp: '2026-09-02',
+			excerpt:
+				'faf git reads the tree it clones — docker-compose services, Makefile targets, sibling app dirs — instead of leaning on the README. A polyglot repo stops reporting library / JavaScript.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/a2a-partner',
 			title: 'FAF is an A2A partner',
 			date: 'September 1, 2026',
