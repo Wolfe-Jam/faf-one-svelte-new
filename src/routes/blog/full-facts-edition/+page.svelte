@@ -160,9 +160,9 @@ Comments · suggestions · shares welcome.`;
 				</li>
 				<li>
 					<strong><code>docker-compose*.yml</code></strong> — service images →
-					<code>stack.database</code> (postgres / clickhouse / mysql), <code>cache</code> (redis),
-					<code>storage</code> (minio), <code>search</code> (elasticsearch / qdrant / weaviate),
-					<code>runtime</code> (kafka / rabbitmq / temporal).
+					<code>stack.database</code> (postgres / clickhouse / mysql),
+					<code>stack.runtime</code> (kafka / rabbitmq / temporal),
+					<code>stack.hosting</code> (Docker Compose).
 				</li>
 				<li>
 					<strong><code>Makefile</code> / <code>justfile</code> / <code>Taskfile</code></strong> —
