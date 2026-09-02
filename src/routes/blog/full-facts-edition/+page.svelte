@@ -63,7 +63,7 @@ Comments · suggestions · shares welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Full-Facts Edition
 		</div>
 		<h1>The Full-Facts Edition</h1>
-		<p class="version-tag">faf-cli v7.10.0 · faf v7.10.0</p>
+		<p class="version-tag">faf-cli v7.10.0</p>
 		<p class="subtitle">Every slot, grounded in the repo's own files.</p>
 		<div class="meta">
 			<time datetime="2026-09-02">September 2, 2026</time>
