@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/table-of-8',
+			title: 'The Table-of-8 Edition',
+			version: 'rust-faf-mcp v0.7.0',
+			date: 'September 2, 2026',
+			timestamp: '2026-09-02',
+			excerpt:
+				"Setup and Sweep confirm AI's side of the bargain. The Table-of-8 is human approved.",
+			emoji: '☑',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/full-facts-edition',
 			title: 'The Full-Facts Edition',
 			version: 'faf-cli v7.10.0',

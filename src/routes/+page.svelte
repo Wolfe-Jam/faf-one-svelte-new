@@ -54,6 +54,7 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/table-of-8" class="ticker-item"><b>rust-faf-mcp 0.7.0</b> The Table-of-8 Edition — Setup and Sweep confirm AI's side of the bargain</a>
 				<a href="/blog/full-facts-edition" class="ticker-item"><b>faf-cli 7.10</b> The Full-Facts Edition — every slot grounded in the repo's own files</a>
 				<a href="/blog/mk4-truth-edition" class="ticker-item"><b>rust-faf-mcp 0.5.0</b> The Mk4 Truth Edition — one kernel, one number, no more drift</a>
 				<a href="/blog/slash-tokens-fixed-deal" class="ticker-item"><b>slash-tokens 1.6.5</b> The Fixed Deal Edition — Solo $20 mailbox, 10% waived</a>
@@ -69,6 +70,7 @@
 				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
+				<a href="/blog/table-of-8" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.7.0</b> The Table-of-8 Edition — Setup and Sweep confirm AI's side of the bargain</a>
 				<a href="/blog/full-facts-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.10</b> The Full-Facts Edition — every slot grounded in the repo's own files</a>
 				<a href="/blog/mk4-truth-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.5.0</b> The Mk4 Truth Edition — one kernel, one number, no more drift</a>
 				<a href="/blog/slash-tokens-fixed-deal" class="ticker-item" aria-hidden="true" tabindex="-1"><b>slash-tokens 1.6.5</b> The Fixed Deal Edition — Solo $20 mailbox, 10% waived</a>
