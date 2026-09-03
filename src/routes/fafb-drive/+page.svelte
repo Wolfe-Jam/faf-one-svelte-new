@@ -251,7 +251,7 @@
 
 	<div class="card lines">
 		<p>What this is. FAF is context. FAFb is context, compiled — 33 slots, sealed to a ROM your agent boots, with memory and an agent that reads from it.</p>
-		<p>The compiler for the FAF Trinity. Command <code>faf</code>.</p>
+		<p>The compiler for the FAF Trinity — Context · Memory · Agent. Command <code>faf</code>.</p>
 		<p>Not <a href="https://www.npmjs.com/package/faf-cli">FAF-CLI</a>'s 21 slots (MIT) — same DNA, your FAF-CLI work ports straight in.</p>
 		<p>Grok Build and Cursor load <code>AGENTS.md</code>. So does FAFb.</p>
 	</div>
