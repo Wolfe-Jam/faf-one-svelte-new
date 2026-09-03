@@ -10,7 +10,6 @@ Disallow: /logo-demo
 Disallow: /api/test
 Disallow: /api/test-email
 Disallow: /og/
-Disallow: /uniqueness
 Disallow: /v4
 Disallow: /v4/
 Disallow: /fafb-drive

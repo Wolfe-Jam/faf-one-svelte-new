@@ -15,7 +15,7 @@
 	/>
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="robots" content="noindex, follow" />
+	<link rel="canonical" href="https://faf.one/ai-catalog" />
 </svelte:head>
 
 <div class="proof-page">
@@ -26,7 +26,7 @@
 			· <a href="/mcp">MCP</a>
 		</p>
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Timeline
+			<a href="/">Home</a> / AI Catalog
 		</div>
 		<h1>FAF and the AI Catalog specification</h1>
 		<p class="lead">

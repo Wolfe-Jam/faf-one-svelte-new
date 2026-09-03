@@ -41,6 +41,7 @@
 		'/zeph': { title: 'ZEPH', category: 'Ecosystem', emoji: '⚡', description: 'ZEPH fast path', order: 12 },
 		'/n8n': { title: 'n8n', category: 'Ecosystem', emoji: '🔗', description: 'n8n automation', order: 13 },
 		'/migrate': { title: 'Migrate', category: 'Ecosystem', emoji: '➡️', description: 'Keep context when moving tools', order: 14 },
+		'/ai-catalog': { title: 'AI Catalog', category: 'Ecosystem', emoji: '🗂️', description: 'FAF ↔ AI Catalog spec — a timeline', order: 15 },
 
 		// ── Standards ───────────────────────────────────────────
 		'/wjttc': { title: 'WJTTC', category: 'Standards', emoji: '🏆', description: 'MCP testing certification', order: 1 },
@@ -59,7 +60,6 @@
 		// ── Legacy (demoted — still live, not spine peers) ───────
 		'/loop': { title: 'Loop', category: 'Legacy', emoji: '🔁', description: 'Loop essay → see New Project', order: 1 },
 		'/context': { title: 'Context', category: 'Legacy', emoji: '🧬', description: 'Context layer → see Guides', order: 2 },
-		'/uniqueness': { title: 'Uniqueness', category: 'Legacy', emoji: '🎯', description: 'Research archive → Spec', order: 3 },
 		'/press-center': { title: 'Press Center', category: 'Legacy', emoji: '📰', description: '→ /press', order: 4 },
 		'/press-release': { title: 'Press Release', category: 'Legacy', emoji: '📣', description: '→ /press', order: 5 },
 		'/68-minutes': { title: '68 Minutes', category: 'Legacy', emoji: '⏱️', description: 'Story → /press', order: 6 },

@@ -17,7 +17,6 @@ const EXCLUDE = [
 	/^\/diagrams\/og-/, // diagram OG render targets
 	/^\/diagrams\/.*-banner$/, // diagram banner render targets
 	/^\/logo-demo$/, // dev/demo page
-	/^\/uniqueness$/, // research archive — noindex; receipts on /spec
 	/^\/v4(\/|$)/, // legacy mini-site
 	/^\/survival$/, // thin wrapper
 	/^\/trinity$/, // shell
@@ -38,7 +37,7 @@ function meta(route) {
 	if (route === '/updates') return ['weekly', '0.8'];
 	if (
 		['/voice', '/zeph', '/grok', '/cli', '/rust', '/pro', '/mcp', '/mcpaas',
-			'/ecosystem', '/v4', '/wjttc', '/demos', '/aaif', '/agents', '/memory'].includes(route)
+			'/ecosystem', '/v4', '/wjttc', '/demos', '/aaif', '/agents', '/memory', '/ai-catalog'].includes(route)
 	) return ['monthly', '0.85'];
 	if (route === '/diagrams') return ['monthly', '0.8'];
 	if (route.startsWith('/diagrams/')) return ['monthly', '0.6'];

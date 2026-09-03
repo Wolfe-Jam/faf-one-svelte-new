@@ -61,12 +61,13 @@ From grassroots format to official Internet standard — the same status as PDF,
 		</section>
 
 		<div class="uniqueness-callout">
-			<h3>🏆 Unprecedented Achievement</h3>
+			<h3>FAF and the AI Catalog specification</h3>
 			<p>
-				.faf is the <strong>world's first and only</strong> format with both IANA registration AND an official Anthropic MCP server. After comprehensive research across both registries, no other format combines these achievements.
+				A timeline of the design decisions FAF shipped and the dates the AI Catalog
+				specification ratified them &mdash; each linked to a verifiable artifact.
 			</p>
-			<a href="/uniqueness" class="proof-link">
-				<strong>Read the Complete Research Proof →</strong>
+			<a href="/ai-catalog" class="proof-link">
+				<strong>See the timeline →</strong>
 			</a>
 		</div>
 
