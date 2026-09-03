@@ -63,7 +63,6 @@
 <svelte:head>
 	<title>FAF Agent — The Voice of FAF | faf.one</title>
 	<meta name="description" content="The Voice of FAF — format-grade MCP that cites the spec on every answer or refuses out of scope. Built for humans, agents, teams, and models. uvx faf-agent-mcp." />
-	<link rel="canonical" href="https://faf.one/agent" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="FAF Agent — The Voice of FAF" />

@@ -108,6 +108,12 @@
      own description in search snippets. Each route sets its own. -->
 <svelte:head>
 	<title>.faf = Project DNA ✨ for ANY AI | IANA-Registered Format</title>
+	<!-- One canonical per page, set here so it can't drift: the clean production
+	     URL for THIS path (query strings stripped; preview *.pages.dev deploys
+	     canonicalise to faf.one so they aren't indexed as themselves). A route
+	     that needs a different canonical (e.g. a cross-domain hub page) returns
+	     `canonical` from its load — see /membership. -->
+	<link rel="canonical" href={$page.data?.canonical ?? `https://faf.one${$page.url.pathname}`} />
 </svelte:head>
 
 

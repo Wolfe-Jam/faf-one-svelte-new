@@ -23,7 +23,6 @@
 		content="Founding AAIF Ambassador · open agent standards at the Linux Foundation · AAIF-verified excellence."
 	/>
 	<meta name="twitter:image" content="https://faf.one/images/aaif/aaif-og.png" />
-	<link rel="canonical" href="https://faf.one/aaif" />
 </svelte:head>
 
 <main class="page">

@@ -15,7 +15,7 @@
 	/>
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<link rel="canonical" href="https://foundation.faf.one" />
+	<!-- canonical → foundation.faf.one, set via +page.ts load (see +layout.svelte) -->
 </svelte:head>
 
 <main class="page">

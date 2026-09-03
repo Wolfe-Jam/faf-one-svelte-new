@@ -54,7 +54,9 @@
 		<meta name="author" content="Wolfejam" />
 		<meta name="robots" content="index, follow" />
 		<meta name="theme-color" content="#FF6B35" />
-		<link rel="canonical" href="https://faf.one/" />
+		<!-- rel=canonical is set per-route in src/routes/+layout.svelte from the
+		     current pathname. A hardcoded one here pointed every page at the
+		     homepage, telling Google every page was a duplicate of "/". -->
 
 		<!-- JSON-LD Structured Data -->
 		<script type="application/ld+json">
