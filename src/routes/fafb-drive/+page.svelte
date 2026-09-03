@@ -250,8 +250,9 @@
 	{:else}
 
 	<div class="card lines">
-		<p>What this is. FAF is context. FAFb is context, compiled.</p>
-		<p>Command <code>faf</code>. 33 slots. Not <a href="https://www.npmjs.com/package/faf-cli">FAF-CLI</a> 21 slots (MIT).</p>
+		<p>What this is. FAF is context. FAFb is context, compiled — 33 slots, sealed to a ROM your agent boots, with memory and an agent that reads from it.</p>
+		<p>The compiler for the FAF Trinity. Not a bigger CLI — a different form. Command <code>faf</code>.</p>
+		<p>Not <a href="https://www.npmjs.com/package/faf-cli">FAF-CLI</a>'s 21 slots (MIT) — same DNA, your FAF-CLI work ports straight in.</p>
 		<p>Grok Build and Cursor load <code>AGENTS.md</code>. So does FAFb.</p>
 	</div>
 	<div class="card lines">
@@ -289,16 +290,16 @@ faf --help</pre>
 	</div>
 	<ol class="steps">
 		<li><code>faf --help</code></li>
-		<li><code>faf status</code>. Then <code>faf auto</code> if you want the tree to fill.</li>
+		<li><code>faf status</code> — the 33-slot score. Then <code>faf auto</code>. Then <code>faf status</code> again — it moved.</li>
 		<li><code>faf check</code></li>
 		<li><code>faf export</code>. Look at <code>AGENTS.md</code>.</li>
-		<li><code>faf compile</code>. Starts trial. Writes <code>.fafb</code>.</li>
+		<li><code>faf compile</code>. Starts the trial. Writes <code>.fafb</code> — the ROM.</li>
 		<li><code>faf show</code>. Optional. HTML card.</li>
 		<li><code>fafm add testers to users</code>. Then <code>fafa does context cover the build stack?</code></li>
 	</ol>
 	<div class="lines">
 		<p>If something fails, keep going. Write it in Q19.</p>
-		<p>Do not fix the product for us.</p>
+		<p>Do not fix the product for us — a rough edge you patch out is a finding lost.</p>
 	</div>
 
 	<h2>3. Same form</h2>
@@ -419,7 +420,7 @@ faf --help</pre>
 	<footer class="lines">
 		<p>Private 0.9. Not indexed.</p>
 		<p>Questions locked for this cohort.</p>
-		<p>Help to guide what we build.</p>
+		<p>Help guide what we build —</p>
 		<p>Comments · suggestions welcome.</p>
 		<p><button type="button" class="secondary" onclick={logout}>Sign out</button></p>
 	</footer>
