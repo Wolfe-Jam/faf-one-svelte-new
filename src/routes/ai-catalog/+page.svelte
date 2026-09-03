@@ -15,7 +15,6 @@
 	/>
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<link rel="canonical" href="https://faf.one/ai-catalog" />
 </svelte:head>
 
 <div class="proof-page">

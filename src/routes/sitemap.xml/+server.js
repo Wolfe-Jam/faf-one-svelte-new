@@ -17,6 +17,7 @@ const EXCLUDE = [
 	/^\/diagrams\/og-/, // diagram OG render targets
 	/^\/diagrams\/.*-banner$/, // diagram banner render targets
 	/^\/logo-demo$/, // dev/demo page
+	/^\/uniqueness$/, // 301 → /ai-catalog
 	/^\/v4(\/|$)/, // legacy mini-site
 	/^\/survival$/, // thin wrapper
 	/^\/trinity$/, // shell
