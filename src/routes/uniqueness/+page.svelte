@@ -328,7 +328,9 @@
 		line-height: 1.7;
 	}
 
+	/* override the global `section { padding: var(--space-2xl) 0 }` — too large here */
 	.proof-content section {
+		padding: 0;
 		margin-bottom: 2.5rem;
 	}
 
@@ -337,7 +339,7 @@
 		margin: 0 0 1rem;
 		color: var(--faf-black);
 		font-weight: 800;
-		border-bottom: 2px solid var(--faf-cream);
+		border-bottom: 2px solid var(--faf-light-gray);
 		padding-bottom: 0.4rem;
 	}
 
@@ -361,16 +363,12 @@
 		font-size: 0.95rem;
 	}
 
-	thead {
-		background: var(--faf-locked-dark);
-		color: var(--faf-locked-dark-text);
-	}
-
 	th {
 		text-align: left;
-		padding: 0.65rem 0.75rem;
+		padding: 0.5rem 0.75rem;
 		font-weight: 700;
-		color: var(--faf-locked-dark-text);
+		color: var(--faf-black);
+		border-bottom: 2px solid var(--faf-orange);
 	}
 
 	td {
