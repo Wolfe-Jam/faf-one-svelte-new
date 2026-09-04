@@ -250,7 +250,8 @@
 	{:else}
 
 	<div class="card lines">
-		<p>What this is. FAF is context. FAFb is context, compiled — 33 slots, sealed to a ROM your agent boots, with memory and an agent that reads from it.</p>
+		<p>What this is. FAF stops AI Faffing about — removes the ambiguity, hard facts instead of guesses, so you just code.</p>
+		<p>FAFb is FAF, compiled: your project's 33 facts, sealed to a ROM your agent boots, with memory and an agent that reads from it.</p>
 		<p>The compiler for the FAF Trinity — Context · Memory · Agent. Command <code>faf</code>.</p>
 		<p>Not <a href="https://www.npmjs.com/package/faf-cli">FAF-CLI</a>'s 21 slots (MIT) — same DNA, your FAF-CLI work ports straight in.</p>
 		<p>Grok Build and Cursor load <code>AGENTS.md</code>. So does FAFb.</p>
@@ -285,17 +286,23 @@ faf --help</pre>
 
 	<h2>2. Drive</h2>
 	<div class="lines">
-		<p>Stay in <code>~/fafb-drive</code>. Already inited.</p>
+		<p>Connect to the reference — everyone drives the same one:</p>
+	</div>
+	<pre>faf git https://github.com/Wolfe-Jam/hello-faf
+cd hello-faf</pre>
+	<div class="lines">
+		<p>Every one of FAF's 33 slots, filled on purpose. Not your project — what "done" looks like.</p>
 		<p>Context first. Then memory. Then ask.</p>
 	</div>
 	<ol class="steps">
-		<li><code>faf --help</code></li>
-		<li><code>faf status</code> — the 33-slot score. Then <code>faf auto</code>. Then <code>faf status</code> again — it moved.</li>
+		<li><code>faf status</code> — the 33-slot score. It's 100%.</li>
 		<li><code>faf check</code></li>
+		<li><code>faf gaps</code> — nothing. Compare: <code>faf init</code> in a fresh folder shows you a blank one.</li>
 		<li><code>faf export</code>. Look at <code>AGENTS.md</code>.</li>
-		<li><code>faf compile</code>. Starts the trial. Writes <code>.fafb</code> — the ROM.</li>
+		<li><code>faf compile</code>. Starts the trial. Writes <code>.fafb</code> — the ROM. Read what it says the ROM carries.</li>
 		<li><code>faf show</code>. Optional. HTML card.</li>
-		<li><code>fafm add testers to users</code>. Then <code>fafa does context cover the build stack?</code></li>
+		<li><code>fafm add "every log line needs request_id"</code>. Then <code>fafa "what must every log line include?"</code></li>
+		<li>Open your own AI here — Claude Code, Cursor, whatever you use daily. Ask it <em>"why FastAPI, not Django?"</em> Compare the same question in a repo with no <code>.faf</code>.</li>
 	</ol>
 	<div class="lines">
 		<p>If something fails, keep going. Write it in Q19.</p>
