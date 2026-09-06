@@ -91,7 +91,7 @@ Comments · suggestions · shares welcome.`;
 				a project's AGENTS.md, memory, and identity to any MCP client — nine tools, stdio +
 				stateless Streamable HTTP, discoverable through the Server Card <code>_meta</code> block
 				and an <code>ai-catalog.json</code> sibling. v1.0.0 declares the surface settled: no
-				functional change from 0.6.2, this is the reference point downstream pins to.
+				functional change from 0.6.2, this is the reference point everything downstream pins to.
 			</p>
 			<div class="terminal-block">
 				<code>npx mcp-context-card</code>
@@ -221,7 +221,7 @@ Comments · suggestions · shares welcome.`;
 			<h2>The numbers</h2>
 			<ul>
 				<li><strong>v1.0.0</strong> — npm + MCP Registry + GitHub Release</li>
-				<li><strong>9 tools</strong> — stable order, three concerns</li>
+				<li><strong>9 tools</strong> — 3 context · 3 memory · 1 identity · 2 discovery, stable order</li>
 				<li><strong>2 transports</strong> — stdio, stateless Streamable HTTP</li>
 				<li><strong>2 discovery surfaces</strong> — Server Card <code>_meta</code>, <code>ai-catalog.json</code></li>
 				<li><strong>104 tests</strong> — Linux / macOS / Windows</li>
