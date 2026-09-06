@@ -226,8 +226,9 @@ Comments · suggestions · shares welcome.`;
 				<li><strong>2 discovery surfaces</strong> — Server Card <code>_meta</code>, <code>ai-catalog.json</code></li>
 				<li><strong>104 tests</strong> — Linux / macOS / Windows</li>
 				<li>
-					<strong>3 independent verifications</strong> — Cursor (10/10), the MCP SDK client over
-					stdio (10/10), <code>@modelcontextprotocol/inspector --strict</code> (clean)
+					<strong>3 independent verifications</strong> — Cursor (10/10), Claude Code / the MCP
+					SDK client over stdio (10/10), <code>@modelcontextprotocol/inspector --strict</code>
+					(clean)
 				</li>
 				<li><strong>MIT</strong></li>
 			</ul>
