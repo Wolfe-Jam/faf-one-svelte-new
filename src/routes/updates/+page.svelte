@@ -1,17 +1,45 @@
 <script>
 	import { onMount } from 'svelte';
+
+	// GitHub Releases API — live, structured, CORS-ok. No committed feed file.
 	const RELEASES_URL =
-		'https://raw.githubusercontent.com/Wolfe-Jam/faf-cli/main/website/releases.json';
+		'https://api.github.com/repos/Wolfe-Jam/faf-cli/releases?per_page=10';
 
 	let releases = $state([]);
 	let loading = $state(true);
 	let error = $state(null);
 
+	// GitHub's release shape -> the shape this page renders.
+	/** @param {any} r a GitHub release object */
+	function normalize(r) {
+		const version = r.tag_name; // "v7.10.1"
+		const bare = version.replace(/^v/, ''); // "7.10.1"
+		return {
+			version,
+			name: r.name || version,
+			date: r.published_at,
+			prerelease: r.prerelease,
+			changelog: (r.body || '').trim(),
+			install: {
+				npm: `npm install -g faf-cli@${bare}`,
+				brew: 'brew upgrade faf-cli'
+			},
+			urls: {
+				github: r.html_url,
+				npm: `https://www.npmjs.com/package/faf-cli/v/${bare}`
+			}
+		};
+	}
+
 	onMount(async () => {
 		try {
-			const res = await fetch(RELEASES_URL);
-			if (!res.ok) throw new Error('Failed to fetch releases');
-			releases = await res.json();
+			const res = await fetch(RELEASES_URL, {
+				headers: { Accept: 'application/vnd.github+json' }
+			});
+			if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+			/** @type {any[]} */
+			const data = await res.json();
+			releases = data.filter((r) => !r.draft).map(normalize);
 		} catch (err) {
 			error = err.message;
 		} finally {
