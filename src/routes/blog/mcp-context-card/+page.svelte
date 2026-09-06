@@ -29,7 +29,7 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:title" content="mcp-context-card v1.0.0 — a project's context over MCP" />
 	<meta
 		property="og:description"
-		content="AGENTS.md, memory, and identity — served over MCP, and rendered as one card you can read. Stable surface at 1.0.0."
+		content="AGENTS.md, memory, and identity — served over MCP, and rendered as one card you can see. Stable surface at 1.0.0."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/mcp-context-card" />
@@ -62,7 +62,7 @@ Comments · suggestions · shares welcome.`;
 		<p class="version-tag">v1.0.0 · stable surface · ✪</p>
 		<p class="subtitle">
 			A project's <strong>AGENTS.md</strong>, cross-session <strong>memory</strong>, and
-			<strong>identity</strong> — served over MCP, and rendered as one card you can read.
+			<strong>identity</strong> — served over MCP, and rendered as one card you can see.
 		</p>
 		<div class="meta">
 			<time datetime="2026-09-05">September 5, 2026</time>
