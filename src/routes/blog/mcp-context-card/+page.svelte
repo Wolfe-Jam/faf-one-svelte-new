@@ -120,7 +120,7 @@ Comments · suggestions · shares welcome.`;
 
 		<section>
 			<h2>What it is</h2>
-			<p>Three concerns an MCP client can't see for itself, served through mechanisms that already exist:</p>
+			<p>Three concerns an MCP client can't see for itself:</p>
 			<ul>
 				<li>
 					<strong>Context</strong> — <code>read_agents_md</code> serves AGENTS.md whole or
@@ -136,13 +136,14 @@ Comments · suggestions · shares welcome.`;
 					<strong>Identity</strong> — <code>whoami</code>, from the server's own Server Card, with
 					a <code>package.json</code> fallback.
 				</li>
-				<li>
-					<strong>Discovery</strong> — <code>list_context_sources</code> and
-					<code>render_context_card</code>. The Server Card <code>_meta</code> block and a
-					self-published <code>ai-catalog.json</code> are generated from the same three sources; a
-					CI check fails on drift.
-				</li>
 			</ul>
+			<p>
+				Then <strong>discovery</strong> — two ways a client finds those three, through mechanisms
+				that already exist: the Server Card <code>_meta</code> block and a self-published
+				<code>ai-catalog.json</code>, both generated from the same three sources so a CI check
+				fails on drift. <code>list_context_sources</code> and <code>render_context_card</code>
+				round out the nine tools.
+			</p>
 			<p>
 				Stand it up as a base MCP, or run it alongside a server you already have — it composes,
 				nothing to migrate.
