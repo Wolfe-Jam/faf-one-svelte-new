@@ -24,12 +24,12 @@ Comments · suggestions · shares welcome.`;
 	<title>mcp-context-card v1.0.0 — a project's context over MCP | FAF</title>
 	<meta
 		name="description"
-		content="mcp-context-card 1.0.0: a stable MCP server that serves a project's AGENTS.md, cross-session memory, and identity to any MCP client. Nine tools, dual transport, Server Card + ai-catalog.json discovery. MIT, npm, MCP Registry."
+		content="mcp-context-card v1.0.0: a stable MCP server that serves a project's AGENTS.md, cross-session memory, and identity to any MCP client. Nine tools, dual transport, Server Card + ai-catalog.json discovery. MIT, npm, MCP Registry."
 	/>
 	<meta property="og:title" content="mcp-context-card v1.0.0 — a project's context over MCP" />
 	<meta
 		property="og:description"
-		content="AGENTS.md, memory, and identity — served over MCP, and rendered as one card you can see. Stable surface at 1.0.0."
+		content="AGENTS.md, memory, and identity — served over MCP, and rendered as one card you can see. Stable surface at v1.0.0."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/mcp-context-card" />
@@ -48,7 +48,7 @@ Comments · suggestions · shares welcome.`;
 	<meta name="twitter:title" content="mcp-context-card v1.0.0 — a project's context over MCP" />
 	<meta
 		name="twitter:description"
-		content="Nine tools · stdio + Streamable HTTP · Server Card + ai-catalog.json discovery. Stable at 1.0.0."
+		content="Nine tools · stdio + Streamable HTTP · Server Card + ai-catalog.json discovery. Stable at v1.0.0."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/mcp-context-card-hero.png" />
 </svelte:head>
@@ -86,11 +86,11 @@ Comments · suggestions · shares welcome.`;
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> <code>mcp-context-card</code> is live at
-				<strong>1.0.0</strong> on <strong>npm</strong> and the
+				<strong>v1.0.0</strong> on <strong>npm</strong> and the
 				<strong>MCP Registry</strong> (<code>io.github.Wolfe-Jam/mcp-context-card</code>). It serves
 				a project's AGENTS.md, memory, and identity to any MCP client — nine tools, stdio +
 				stateless Streamable HTTP, discoverable through the Server Card <code>_meta</code> block
-				and an <code>ai-catalog.json</code> sibling. 1.0.0 declares the surface settled: no
+				and an <code>ai-catalog.json</code> sibling. v1.0.0 declares the surface settled: no
 				functional change from 0.6.2, this is the reference point downstream pins to.
 			</p>
 			<div class="terminal-block">
