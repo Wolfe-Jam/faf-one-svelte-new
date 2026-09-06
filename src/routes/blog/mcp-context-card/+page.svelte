@@ -181,7 +181,7 @@ Comments · suggestions · shares welcome.`;
 				identity have no de-facto standard yet, so the server uses the IANA-registered FAF formats
 				as the worked example: <code>project.fafm</code> for memory,
 				<code>.well-known/fafa</code> for identity. Both are swappable — the shapes are the point,
-				not the filenames. More on the format family:
+				not the filenames. More on AGENTS.md and agent identity:
 				<a href="https://faf.one/agents" target="_blank" rel="noopener">faf.one/agents</a>.
 			</p>
 		</section>
