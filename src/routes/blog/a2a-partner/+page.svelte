@@ -231,6 +231,7 @@ Comments · suggestions welcome.`;
 		margin: 0 0 2.5rem;
 		border-radius: 12px;
 		overflow: hidden;
+		border: 1px solid #e5e5e5;
 	}
 	.hero-image img {
 		width: 100%;
