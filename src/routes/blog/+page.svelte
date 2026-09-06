@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/mcp-context-card',
+			title: 'mcp-context-card',
+			version: 'mcp-context-card v1.0.0',
+			date: 'September 5, 2026',
+			timestamp: '2026-09-05',
+			excerpt:
+				"A project's AGENTS.md, cross-session memory, and identity — served to any MCP client, and rendered as one card you can read. Nine tools, dual transport, Server Card + ai-catalog.json discovery. Stable surface at 1.0.0.",
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/table-of-8',
 			title: 'The Table-of-8 Edition',
 			version: 'rust-faf-mcp v0.7.0',
