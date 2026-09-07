@@ -46,8 +46,43 @@
 				</div>
 			</ScrollRevealText>
 
-			<!-- MCP Breakdown Table -->
+			<!-- The MCP landscape — orientation: how servers are built + how they run -->
 			<ScrollRevealText threshold={0} delay={100}>
+				<div class="landscape-section">
+					<h2>The MCP landscape</h2>
+					<p class="landscape-intro">Two questions place any MCP server: what it's <strong>built with</strong>, and how it <strong>runs</strong>. <code>.faf</code> is the context underneath — the same file whichever answers you pick.</p>
+
+					<div class="landscape-grid">
+						<div class="landscape-card">
+							<h3>Built with</h3>
+							<ul>
+								<li><strong>Official SDKs</strong> — TypeScript, Python, C#, Go and Rust are Tier&nbsp;1; Java, Ruby, Swift, PHP and Kotlin follow. Same protocol, each in its own language's idiom.</li>
+								<li><strong>FastMCP</strong> — the high-level Python framework (Prefect-maintained, now on v4). It created the API that was folded into the official Python SDK in 2024, and carries the fuller feature line — most Python MCP servers use it.</li>
+								<li><strong>Hand-rolled</strong> — a server can speak the wire protocol directly. Rust and Go servers often do.</li>
+							</ul>
+						</div>
+
+						<div class="landscape-card">
+							<h3>Runs as</h3>
+							<ul>
+								<li><strong>Local — <code>stdio</code></strong> — the client launches the server as a child process (<code>npx</code>, <code>uvx</code>). Nothing to host. The common case.</li>
+								<li><strong>Remote — Streamable HTTP</strong> — a hosted endpoint (Cloudflare Workers, Vercel, your own). Protocol <code>2026-07-28</code> is sessionless. The older SSE transport is deprecated.</li>
+							</ul>
+						</div>
+					</div>
+
+					<p class="landscape-faf">Where the FAF family sits: <strong>claude-faf-mcp</strong>, <strong>faf-mcp</strong> and <strong>grok-faf-mcp</strong> on the TypeScript SDK · <strong>gemini-faf-mcp</strong> on FastMCP · <strong>rust-faf-mcp</strong> hand-rolled in Rust. Every one reads the same <code>.faf</code>.</p>
+
+					<p class="landscape-links">
+						Deeper: <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer">modelcontextprotocol.io</a>
+						· <a href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noopener noreferrer">the SDKs</a>
+						· <a href="https://gofastmcp.com" target="_blank" rel="noopener noreferrer">gofastmcp.com</a>
+					</p>
+				</div>
+			</ScrollRevealText>
+
+			<!-- MCP Breakdown Table -->
+			<ScrollRevealText threshold={0} delay={150}>
 				<div class="mcp-breakdown">
 					<h3>The Trinity: Model → Context → Protocol</h3>
 					<div class="breakdown-table">
@@ -446,6 +481,20 @@
 							<li><code>Use FAF to enhance my context</code></li>
 						</ul>
 					</div>
+				</div>
+			</ScrollRevealText>
+
+			<!-- Further reading — mirrors /agents; makes the page a citable resource, not just a product page -->
+			<ScrollRevealText threshold={0} delay={500}>
+				<div class="further-section">
+					<h2>Further reading</h2>
+					<ul class="further-links">
+						<li><strong>The protocol</strong> — <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer">modelcontextprotocol.io</a> — spec, concepts, and the <code>2026-07-28</code> revision.</li>
+						<li><strong>The SDKs</strong> — <a href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noopener noreferrer">official SDKs</a> across ten languages, same protocol in each.</li>
+						<li><strong>FastMCP</strong> — <a href="https://gofastmcp.com" target="_blank" rel="noopener noreferrer">gofastmcp.com</a> — the Python framework most Python MCP servers are built on.<!-- TODO(after dev.to publish): + link "FastMCP 3 → 4: a real-world migration checklist" --></li>
+						<li><strong>7/28 — sessionless</strong> — <a href="/agents#mcp">the 7/28 note on /agents</a>, plus <a href="https://github.com/Wolfe-Jam/mcp-better" target="_blank" rel="noopener noreferrer">mcp-better</a>, a textbook <code>2026-07-28</code> server.</li>
+						<li><strong>The format underneath</strong> — <a href="/spec">the <code>.faf</code> format</a> and the <a href="/agents">AGENTS.md field guide</a>.</li>
+					</ul>
 				</div>
 			</ScrollRevealText>
 
@@ -1128,6 +1177,181 @@
 		color: white;
 		border-color: var(--faf-orange);
 		transform: translateY(-2px);
+	}
+
+	/* MCP landscape — orientation grid */
+	.landscape-section {
+		max-width: 900px;
+		margin: 4rem auto;
+	}
+
+	.landscape-section h2 {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 0.75rem;
+		color: var(--faf-black);
+	}
+
+	.landscape-intro {
+		text-align: center;
+		font-size: 1.125rem;
+		color: var(--faf-dark);
+		max-width: 640px;
+		margin: 0 auto 3rem;
+		line-height: 1.6;
+	}
+
+	.landscape-intro code,
+	.landscape-faf code,
+	.landscape-card code {
+		background: var(--faf-surface);
+		color: var(--faf-orange);
+		padding: 0.15rem 0.45rem;
+		border-radius: 4px;
+		font-size: 0.9em;
+		font-weight: 600;
+	}
+
+	.landscape-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.landscape-card {
+		background: var(--faf-white);
+		color: var(--faf-black);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 12px;
+		padding: 1.75rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	}
+
+	.landscape-card h3 {
+		font-size: 1.35rem;
+		margin: 0 0 1rem;
+		color: var(--faf-black);
+	}
+
+	.landscape-card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.landscape-card li {
+		padding: 0.65rem 0;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--faf-dark);
+		border-top: 1px solid var(--faf-light-gray);
+	}
+
+	.landscape-card li:first-child {
+		border-top: none;
+		padding-top: 0;
+	}
+
+	.landscape-card strong {
+		color: var(--faf-black);
+	}
+
+	.landscape-faf {
+		background: rgba(0, 212, 212, 0.05);
+		color: var(--faf-dark);
+		border: 1px solid var(--faf-light-gray);
+		border-left: 4px solid var(--faf-orange);
+		border-radius: 4px;
+		padding: 1.25rem 1.5rem;
+		font-size: 1rem;
+		line-height: 1.7;
+		margin-bottom: 1.25rem;
+	}
+
+	.landscape-faf strong {
+		color: var(--faf-black);
+	}
+
+	.landscape-links {
+		text-align: center;
+		font-size: 1rem;
+		color: var(--faf-dark);
+	}
+
+	.landscape-links a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.landscape-links a:hover {
+		text-decoration: underline;
+	}
+
+	/* Further reading — mirrors /agents */
+	.further-section {
+		max-width: 800px;
+		margin: 4rem auto 2rem;
+	}
+
+	.further-section h2 {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		color: var(--faf-black);
+	}
+
+	.further-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.further-links li {
+		padding: 0.85rem 0;
+		font-size: 1.05rem;
+		line-height: 1.65;
+		color: var(--faf-dark);
+		border-bottom: 1px solid var(--faf-light-gray);
+	}
+
+	.further-links li:last-child {
+		border-bottom: none;
+	}
+
+	.further-links strong {
+		color: var(--faf-black);
+	}
+
+	.further-links a {
+		color: var(--faf-orange);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.further-links a:hover {
+		text-decoration: underline;
+	}
+
+	.further-links code {
+		background: var(--faf-surface);
+		color: var(--faf-orange);
+		padding: 0.15rem 0.45rem;
+		border-radius: 4px;
+		font-size: 0.9em;
+	}
+
+	@media (max-width: 768px) {
+		.landscape-section h2,
+		.further-section h2 {
+			font-size: 2rem;
+		}
+
+		.landscape-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	@media (max-width: 768px) {
