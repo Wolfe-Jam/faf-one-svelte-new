@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/vs-code-edition',
+			title: 'The VS Code Edition',
+			version: 'faf-cli v7.11.0',
+			date: 'September 7, 2026',
+			timestamp: '2026-09-07',
+			excerpt:
+				"faf-cli's drift check is now a function you import, not a command you scrape. computeDrift() joins the public API next to scoreFafYaml; faf drift --json is the CLI mirror. Plus faf export --llms for an llms.txt view. 1402 tests.",
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/gemini-interop',
 			title: 'The Interop Edition',
 			version: 'gemini-faf-mcp v2.7.0',
