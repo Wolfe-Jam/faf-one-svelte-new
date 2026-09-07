@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/gemini-interop',
+			title: 'The Interop Edition',
+			version: 'gemini-faf-mcp v2.7.0',
+			date: 'September 6, 2026',
+			timestamp: '2026-09-06',
+			excerpt:
+				'faf_agents and faf_gemini now author family-standard AGENTS.md / GEMINI.md — the same shape every FAF tool produces, because they call one generator in faf-python-sdk. New faf_migrate brings an old .faf up to the current format. 13 tools, 245 tests.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/mcp-context-card',
 			title: 'mcp-context-card',
 			version: 'mcp-context-card v1.0.0',
