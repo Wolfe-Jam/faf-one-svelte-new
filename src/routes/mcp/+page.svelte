@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>MCP - Model Context Protocol + .faf | Universal AI Context</title>
+	<title>MCP - Model Context Protocol + .faf | Context, authored</title>
 	<meta name="description" content="Official MCP documentation for the .faf format — persistent AI context for Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code. IANA-registered, in Anthropic's MCP Registry (#2759)." />
 </svelte:head>
 
@@ -19,7 +19,7 @@
 				<FafLogo size="small" color="black" />
 			</div>
 			<h1 class="page-title">Model Context Protocol + .faf</h1>
-			<p class="subtitle">We are the 'C' in MCP • Universal AI Context</p>
+			<p class="subtitle">We are the 'C' in MCP • Context, authored.</p>
 			<p class="hero-desc">The official MCP documentation for .faf — persistent project context across Claude, Grok, Gemini, Cursor, Windsurf, Cline, VS Code, and every MCP-compatible platform.</p>
 			<div class="hero-receipts">
 				<a class="receipt-chip" href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener noreferrer">
