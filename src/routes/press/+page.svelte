@@ -100,7 +100,7 @@
 				<div class="achievement-icon">☑️</div>
 				<div class="achievement-content">
 					<h3>MCP servers</h3>
-					<p>Claude, Grok, Gemini, universal faf-mcp — Anthropic registry #2759</p>
+					<p>Claude, Grok, Gemini, faf-mcp for IDEs — Anthropic registry #2759</p>
 				</div>
 			</div>
 			

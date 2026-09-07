@@ -173,7 +173,7 @@ discovery:
 					<p>Lives in your repo, versioned, shared, permanent.</p>
 				</div>
 				<div class="feature">
-					<h4>Universal, not tool-specific</h4>
+					<h4>Portable, not tool-specific</h4>
 					<p>Works with Claude, Gemini, Grok, ChatGPT, any AI.</p>
 				</div>
 			</div>

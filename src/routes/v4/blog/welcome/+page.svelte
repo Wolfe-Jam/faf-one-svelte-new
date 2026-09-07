@@ -88,7 +88,7 @@
 					<p>AI-readiness scoring (0-100%) shows exactly how understandable your codebase is to any AI.</p>
 				</div>
 				<div class="feature">
-					<h3>☑️ Universal</h3>
+					<h3>☑️ Portable</h3>
 					<p>Works with Claude, Grok, ChatGPT, Gemini, Cursor, WARP, or any AI tool - model-portable by design.</p>
 				</div>
 			</div>
@@ -157,7 +157,7 @@
 					<p>Strict standards, rigorous testing, zero-error contracts. Infrastructure you can trust.</p>
 				</div>
 				<div class="value">
-					<h3>🌍 Universality</h3>
+					<h3>🌍 Portability</h3>
 					<p>Works everywhere, for everyone. No vendor lock-in, no platform restrictions.</p>
 				</div>
 				<div class="value">

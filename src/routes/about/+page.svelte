@@ -39,7 +39,7 @@
 		<div class="ecosystem-grid">
 			<div class="eco-item">
 				<strong>faf-cli</strong>
-				<span>Universal CLI — npm</span>
+				<span>CLI — npm</span>
 			</div>
 			<div class="eco-item">
 				<strong>claude-faf-mcp</strong>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="eco-item">
 				<strong>faf-mcp</strong>
-				<span>Universal — npm</span>
+				<span>IDEs — npm</span>
 			</div>
 			<div class="eco-item">
 				<strong>faf-rust-sdk</strong>

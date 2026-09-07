@@ -116,7 +116,7 @@
 			</div>
 
 			<p class="also-note">
-				.faf is the universal format. bi-sync keeps <code>.faf</code> ↔ <code>CLAUDE.md</code> in sync (free forever).
+				.faf is the format underneath. bi-sync keeps <code>.faf</code> ↔ <code>CLAUDE.md</code> in sync (free forever).
 				tri-sync adds AGENTS.md, .cursorrules, GEMINI.md, and session memory.
 			</p>
 		</section>

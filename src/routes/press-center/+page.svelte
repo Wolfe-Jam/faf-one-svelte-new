@@ -14,7 +14,7 @@
 				<a href="/press-release" class="card">
 					<div class="card-emoji">📰</div>
 					<h3>The JPEG for AI</h3>
-					<p>Foundational AI-context Format - Universal, shareable AI context for any AI, human or team</p>
+					<p>Foundational AI-context Format - portable, shareable AI context for any AI, human or team</p>
 					<div class="card-date">September 24, 2025</div>
 				</a>
 			</div>

@@ -137,7 +137,7 @@
 							<div class="breakdown-col">Open Protocol</div>
 						</div>
 					</div>
-					<p class="breakdown-caption">.faf is the <strong>universal Context</strong> layer for any Model using the MCP Protocol</p>
+					<p class="breakdown-caption">.faf is the <strong>Context</strong> layer for any Model using the MCP Protocol</p>
 
 					<div class="prime-messaging">
 						<p class="facts">Formats = facts.</p>
@@ -172,13 +172,13 @@
 						</div>
 					</div>
 
-					<!-- faf-mcp — core / universal -->
+					<!-- faf-mcp — the IDE server -->
 					<div class="package-card">
 						<div class="package-header">
 							<span class="package-icon">📦</span>
-							<h3>faf-mcp <span class="badge">Universal</span></h3>
+							<h3>faf-mcp <span class="badge">IDEs</span></h3>
 						</div>
-						<p class="package-desc">The core, universal MCP server for Cursor, Windsurf, Cline, VS Code, and any MCP-compatible client.</p>
+						<p class="package-desc">The MCP server for Cursor, Windsurf, Cline, VS Code, and any MCP-compatible client.</p>
 						<ul class="package-features">
 							<li>☑️ Cursor, Windsurf, Cline, VS Code — any MCP client</li>
 							<li>☑️ bi-sync <code>.faf</code> ↔ your context files</li>

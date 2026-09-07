@@ -4,9 +4,9 @@
 
 <svelte:head>
 	<title>.faf - The JPEG for AI is YAML & 🍜noodles</title>
-	<meta name="description" content="Foundational AI-context Format - Universal, shareable AI context for any AI, human or team">
+	<meta name="description" content="Foundational AI-context Format - portable, shareable AI context for any AI, human or team">
 	<meta property="og:title" content=".faf - The JPEG for AI is YAML & noodles" />
-	<meta property="og:description" content="Foundational AI-context Format - Universal, shareable AI context for any AI, human or team. 91% token reclaim. IANA registered." />
+	<meta property="og:description" content="Foundational AI-context Format - portable, shareable AI context for any AI, human or team. 91% token reclaim. IANA registered." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -17,7 +17,7 @@
 		<div class="subtitle"><strong>F</strong>oundational <strong>A</strong>I-context <strong>F</strong>ormat</div>
 
 		<p class="intro">
-			Universal, shareable AI-Context for any AI, human or team, regardless of size, location, languages, stack, setup or documentation.
+			Portable, shareable AI-Context for any AI, human or team, regardless of size, location, languages, stack, setup or documentation.
 		</p>
 
 		<h2 class="highlight">The JPEG for AI is YAML & 🍜noodles</h2>
@@ -48,7 +48,7 @@
 				<ul>
 					<li>99% context understanding</li>
 					<li>&lt;3 seconds to complete context</li>
-					<li>Universal format for all AI tools</li>
+					<li>One format for every AI tool</li>
 					<li>Persistent indefinitely</li>
 				</ul>
 			</div>
@@ -111,7 +111,7 @@ human_context:
 		<ul class="platform-list">
 			<li>☑️ <strong>Anthropic MCP</strong> - Claude Desktop native integration (MCP Approval Pending - PR #2759)</li>
 			<li>☑️ <strong>Chrome Extension</strong> - Live in Chrome Web Store</li>
-			<li>☑️ <strong>Universal</strong> - Works with all AI tools</li>
+			<li>☑️ <strong>Portable</strong> - Works with every AI tool</li>
 		</ul>
 
 		<h2>The Creator</h2>
@@ -129,7 +129,7 @@ human_context:
 		<hr class="divider">
 
 		<div class="share-section">
-			<ShareX headline=".faf — the JPEG for AI." point1="Universal AI context format. YAML. IANA-registered." url="https://faf.one/press-release" />
+			<ShareX headline=".faf — the JPEG for AI." point1="Portable AI context format. YAML. IANA-registered." url="https://faf.one/press-release" />
 		</div>
 
 		<p class="tagline"><em>".faf is here. No more faffing about."</em></p>

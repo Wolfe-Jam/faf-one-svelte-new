@@ -54,10 +54,10 @@
         {
             name: 'faf-mcp',
             tagline: 'Cursor, IDEs, VS Code',
-            description: 'Universal FAF MCP server. Works with any MCP-compatible AI client.',
+            description: 'The FAF MCP server for IDEs. Works with any MCP-compatible AI client.',
             features: [
                 'Cursor, Windsurf, VS Code',
-                'Universal MCP protocol',
+                'Standard MCP protocol',
                 `${(data.packageStats['faf-mcp'] || 0).toLocaleString()}+ downloads / month`,
                 'In the official MCP registry'
             ],
@@ -376,7 +376,7 @@
         <PageActions
             headline="One standard. A whole ecosystem."
             point1="CLI, MCP servers, SDKs, plugins, testing."
-            point2="IANA-registered. Universal AI context."
+            point2="IANA-registered. Context, authored."
             url="https://faf.one/ecosystem"
             hashtags="AI,MCP,faf"
         />

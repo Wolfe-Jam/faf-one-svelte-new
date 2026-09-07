@@ -27,7 +27,7 @@
 		<ul>
 			<li><strong>Chrome Extension Auto-Detection</strong> | 90%+ scores automatically</li>
 			<li><strong>Typo Help™</strong> | We know "raect" means "react"</li>
-			<li><strong>Universal Context Extraction</strong> | Works on 15+ web IDEs</li>
+			<li><strong>Context Extraction</strong> | Works on 15+ web IDEs</li>
 		</ul>
 	</div>
 

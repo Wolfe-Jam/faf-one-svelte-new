@@ -302,7 +302,7 @@
 			<div class="card accent-bw">
 				<span class="ai-rank" aria-hidden="true">1</span>
 				<h3>AGENTS.md</h3>
-				<p>Universal agents format</p>
+				<p>For every AI tool</p>
 				<code>faf bi-sync</code>
 			</div>
 			<div class="card accent-orange">
