@@ -4,7 +4,7 @@
 
 	const shareText = `🏁 Just shipped: gemini-faf-mcp v2.7.0 — The Interop Edition
 
-Stop hand-keeping AGENTS.md. Your .faf writes it — and GEMINI.md — from one shared generator.
+Stop hand-keeping AGENTS.md. Your .faf authors it — and GEMINI.md — through one shared tool every FAF package uses.
 
 faf_agents / faf_gemini were 4-field stubs. Now full, family-standard docs.
 New faf_migrate brings an old .faf up to the current format.
@@ -90,10 +90,10 @@ Comments · suggestions welcome.`;
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> <code>faf_agents</code> and <code>faf_gemini</code> used to write thin
-				stub files. They now generate the full, family-standard AGENTS.md and GEMINI.md — the same
-				shape every other FAF tool produces, because they call the same generator. New
-				<code>faf_migrate</code> brings an old <code>.faf</code> up to the current format so those
-				generators have current input.
+				stub files. They now author the full, family-standard AGENTS.md and GEMINI.md — the same
+				shape every other FAF tool produces, because they call the same authoring tool. New
+				<code>faf_migrate</code> brings an old <code>.faf</code> up to the current format so it has
+				current input.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
@@ -102,10 +102,10 @@ Comments · suggestions welcome.`;
 					<code>## Project</code>, <code>## Context</code>, <code>## Stack</code> — with "N/A" in
 					most of them, plus who/why marketing copy that has no business in an agent's operating
 					file. <code>faf_gemini</code> wrote YAML frontmatter and an embedded score. Every FAF tool
-					that generated these files did it a little differently.
+					that authored these files did it a little differently.
 				</p>
 				<p>
-					<strong>Fix.</strong> Both tools now call one generator that lives in
+					<strong>Fix.</strong> Both tools now call one authoring tool that lives in
 					<code>faf-python-sdk</code> — a Python port of the same logic faf-cli uses, kept in
 					parity. The AGENTS.md you get is the full shape: setup, tests, where things live,
 					conventions, a three-tier guardrails ladder, definition of done, when stuck, security,
@@ -134,25 +134,24 @@ Comments · suggestions welcome.`;
 				One blog, one arc. Last write-up was
 				<a href="/blog/gemini-agent-card">v2.6.0 — The Agent Card Edition</a> (a real
 				<code>agent.fafa</code> passport, MCP Server Card, AI Catalog entry). 2.7.0 is the next log
-				entry — the doc generators got real.
+				entry — the doc tools got real.
 			</p>
 			<p>
 				"The Interop Edition" is a shared name. <code>faf-python-sdk</code> 1.3.0 shipped the same
-				day with the same title — it is where <code>generate_agents_md</code> and
-				<code>generate_gemini_md</code> now live. gemini-faf-mcp 2.7.0 is the first server to wrap
-				them. Same work, two packages.
+				day with the same title — it is where the shared AGENTS.md / GEMINI.md authoring tool now
+				lives. gemini-faf-mcp 2.7.0 is the first server to wrap it. Same work, two packages.
 			</p>
 		</section>
 
 		<section>
 			<h2>What 2.7.0 is</h2>
 			<p>
-				<strong>Lesson:</strong> a generated file is only useful if every tool generates the same one.
+				<strong>Lesson:</strong> a file your tools write for you is only useful if every tool writes
+				the same one.
 			</p>
 			<p>
-				<code>faf_agents</code> and <code>faf_gemini</code> are now three-line wrappers over
-				<code>faf-python-sdk</code>'s <code>generate_agents_md</code> /
-				<code>generate_gemini_md</code>. The projection is deterministic — same
+				<code>faf_agents</code> and <code>faf_gemini</code> are now three-line wrappers over one
+				authoring tool in <code>faf-python-sdk</code>. The projection is deterministic — same
 				<code>.faf</code> in, same Markdown out — and it is the BETTER shape faf-cli's
 				<code>faf export</code> already produced. Commands are classified and ordered
 				(install → build → dev), the guardrails render as a three-tier ladder (Always OK / Ask first
@@ -209,8 +208,8 @@ Comments · suggestions welcome.`;
 				<li><strong>Framework:</strong> FastMCP 4 (floor <code>&gt;=4.0.0</code>)</li>
 				<li><strong>Runtime:</strong> Python 3.11+ (3.10 dropped)</li>
 				<li>
-					<strong>Depends on:</strong> <code>faf-python-sdk &gt;=1.3.0</code> — where the generators
-					live
+					<strong>Depends on:</strong> <code>faf-python-sdk &gt;=1.3.0</code> — where the authoring
+					tool lives
 				</li>
 				<li><strong>Tools:</strong> 13 (+1 — <code>faf_migrate</code>)</li>
 				<li><strong>Tests:</strong> 245 passing — now in CI on 3.11 / 3.12 / 3.13</li>
@@ -240,7 +239,7 @@ Comments · suggestions welcome.`;
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ One generator. One standard. Every FAF tool. 🏎️</p>
+			<p>Built with .faf ☑️ One authoring tool. One standard. Every FAF surface. 🏎️</p>
 		</section>
 	</article>
 </div>
