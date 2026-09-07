@@ -39,7 +39,7 @@
 		<div class="ecosystem-grid">
 			<div class="eco-item">
 				<strong>faf-cli</strong>
-				<span>CLI — npm</span>
+				<span>Terminal — npm</span>
 			</div>
 			<div class="eco-item">
 				<strong>claude-faf-mcp</strong>

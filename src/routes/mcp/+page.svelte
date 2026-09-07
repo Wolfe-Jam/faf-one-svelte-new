@@ -261,7 +261,7 @@
 					<div class="package-card">
 						<div class="package-header">
 							<span class="package-icon">📦</span>
-							<h3>faf-cli <span class="badge">CLI</span></h3>
+							<h3>faf-cli <span class="badge">Terminal</span></h3>
 						</div>
 						<p class="package-desc">The CLI on-ramp — author, score, and sync your <code>.faf</code> from any terminal. Claude-first, works cross-vendor.</p>
 						<ul class="package-features">
