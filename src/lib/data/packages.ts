@@ -9,7 +9,7 @@
  *   npm + crates.io as reported · PyPI = pypistats without_mirrors only.
  *   Banner and public totals use this meter only — no mirror inflation.
  *
- * Verified: 2026-09-07 (refreshed via /downloads skill — all 3 registries live)
+ * Verified: 2026-09-08 (refreshed via /downloads skill — all 3 registries live)
  * Auto-refresh: scripts/refresh-downloads.mjs (run daily via GH Actions)
  *
  * To add a new package: edit this file manually, keeping descriptions/icons
@@ -181,7 +181,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'gemini-faf-mcp',
 		description: 'Google Gemini MCP server',
-		downloads: 3_822,
+		downloads: 4_070,
 		install: 'pip install gemini-faf-mcp',
 		registryUrl: 'https://pypi.org/project/gemini-faf-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
@@ -201,7 +201,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-python-sdk',
 		description: 'Python SDK for .faf files',
-		downloads: 2_527,
+		downloads: 2_695,
 		install: 'pip install faf-python-sdk',
 		registryUrl: 'https://pypi.org/project/faf-python-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-python-sdk',
@@ -246,7 +246,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-rust-sdk',
 		description: 'Rust SDK for .faf files',
-		downloads: 967,
+		downloads: 971,
 		install: 'cargo add faf-rust-sdk',
 		registryUrl: 'https://crates.io/crates/faf-rust-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
@@ -256,7 +256,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-radio-rust',
 		description: 'Radio Protocol client — tune, listen, broadcast',
-		downloads: 252,
+		downloads: 254,
 		install: 'cargo add faf-radio-rust',
 		registryUrl: 'https://crates.io/crates/faf-radio-rust',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-radio-rust',
