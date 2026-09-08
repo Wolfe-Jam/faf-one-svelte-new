@@ -114,7 +114,8 @@ Comments · suggestions · shares welcome.`;
 				<code>faf drift --json</code>
 			</div>
 			<p class="muted-note">
-				<strong>Try it without installing:</strong> <code>bunx faf-cli drift --json</code> (or
+				<strong>Try it without installing:</strong>
+				<code>bunx <NpmPkg name="faf-cli" version="7.11.0" /> drift --json</code> (or
 				<code>npx --yes <NpmPkg name="faf-cli" version="7.11.0" /></code>). Pin the version in
 				scripts — <code>@latest</code> drifts.
 			</p>
