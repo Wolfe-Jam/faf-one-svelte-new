@@ -143,6 +143,27 @@ Comments · suggestions · shares welcome.`;
 		</section>
 
 		<section>
+			<h2>The extension is live</h2>
+			<p>
+				<strong>Update — September 8.</strong> The reason for the edition name:
+				<a
+					href="https://marketplace.visualstudio.com/items?itemName=faf.faf-context"
+					target="_blank"
+					rel="noopener">FAF — Project Context</a
+				> is on the VS Code Marketplace and
+				<a href="https://open-vsx.org/extension/faf/faf-context" target="_blank" rel="noopener"
+					>Open VSX</a
+				> (Cursor / VSCodium / Windsurf). Score, tier, and drift in the status bar and a sidebar;
+				the context card rendered in a webview — all of it <code>computeDrift</code>,
+				<code>scoreFafYaml</code>, and <code>generateProjectHtml</code> called in process, no
+				shell-out.
+			</p>
+			<div class="terminal-block">
+				<code>code --install-extension faf.faf-context</code>
+			</div>
+		</section>
+
+		<section>
 			<h2>faf drift --json</h2>
 			<p>The same report, on the command line, self-describing:</p>
 			<div class="terminal-block">
