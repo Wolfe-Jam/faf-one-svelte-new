@@ -9,7 +9,7 @@
  *   npm + crates.io as reported · PyPI = pypistats without_mirrors only.
  *   Banner and public totals use this meter only — no mirror inflation.
  *
- * Verified: 2026-09-08 (refreshed via /downloads skill — all 3 registries live)
+ * Verified: 2026-09-09 (refreshed via /downloads skill — all 3 registries live)
  * Auto-refresh: scripts/refresh-downloads.mjs (run daily via GH Actions)
  *
  * To add a new package: edit this file manually, keeping descriptions/icons
@@ -181,7 +181,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'gemini-faf-mcp',
 		description: 'Google Gemini MCP server',
-		downloads: 4_070,
+		downloads: 4_173,
 		install: 'pip install gemini-faf-mcp',
 		registryUrl: 'https://pypi.org/project/gemini-faf-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
@@ -191,7 +191,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'claude-fafm-sdk',
 		description: 'Claude .fafm Memory SDK — portable agent memory',
-		downloads: 2_330,
+		downloads: 2_439,
 		install: 'pip install claude-fafm-sdk',
 		registryUrl: 'https://pypi.org/project/claude-fafm-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/claude-fafm-sdk',
@@ -201,7 +201,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-python-sdk',
 		description: 'Python SDK for .faf files',
-		downloads: 2_695,
+		downloads: 2_793,
 		install: 'pip install faf-python-sdk',
 		registryUrl: 'https://pypi.org/project/faf-python-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-python-sdk',
@@ -221,7 +221,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'grok-faf-voice',
 		description: 'Voice Memory Layer — LiveKit + xAI Grok',
-		downloads: 1_117,
+		downloads: 1_223,
 		install: 'pip install grok-faf-voice',
 		registryUrl: 'https://pypi.org/project/grok-faf-voice/',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-voice',
