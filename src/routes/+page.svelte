@@ -54,6 +54,7 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/open-renderers-edition" class="ticker-item"><b>faf-cli 7.12</b> The Open Renderers Edition — consumers compose instead of port · one block, every run</a>
 				<a href="/blog/vs-code-edition" class="ticker-item"><b>faf-cli 7.11</b> The VS Code Edition — the drift check is a function you import, not a CLI you scrape</a>
 				<a href="/blog/gemini-interop" class="ticker-item"><b>gemini-faf-mcp 2.7.0</b> The Interop Edition — your .faf writes AGENTS.md and GEMINI.md</a>
 				<a href="/blog/mcp-context-card" class="ticker-item"><b>mcp-context-card 1.0.0</b> A project's AGENTS.md, memory and identity — over MCP, rendered as one card</a>
@@ -73,6 +74,7 @@
 				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
+				<a href="/blog/open-renderers-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.12</b> The Open Renderers Edition — consumers compose instead of port · one block, every run</a>
 				<a href="/blog/vs-code-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.11</b> The VS Code Edition — the drift check is a function you import, not a CLI you scrape</a>
 				<a href="/blog/gemini-interop" class="ticker-item" aria-hidden="true" tabindex="-1"><b>gemini-faf-mcp 2.7.0</b> The Interop Edition — your .faf writes AGENTS.md and GEMINI.md</a>
 				<a href="/blog/table-of-8" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.7.0</b> The Table-of-8 Edition — Setup and Sweep confirm AI's side of the bargain</a>

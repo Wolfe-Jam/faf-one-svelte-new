@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/open-renderers-edition',
+			title: 'The Open Renderers Edition',
+			version: 'faf-cli v7.12.0',
+			date: 'September 9, 2026',
+			timestamp: '2026-09-09',
+			excerpt:
+				'faf-cli opens its renderers, injector and faf auto update chain as public exports — consumers compose instead of port — and faf export --agents is idempotent again: one block, every run.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/vs-code-edition',
 			title: 'The VS Code Edition',
 			version: 'faf-cli v7.11.0',
