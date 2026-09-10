@@ -4,10 +4,10 @@
 
 	const shareText = `Compose, don't port.
 
-The CLI writes. The IDE door composes.
-One scorer, one set of renderers, one injector.
+The CLI authors. The IDE door composes.
+Authoring is more powerful than writing. That's what we call it.
 
-Two copies of the same writer is how a project starts lying about itself.
+Two copies of the same author is how a project starts lying about itself.
 
 #AAIF #MCP
 
@@ -21,12 +21,12 @@ Comments · suggestions · shares welcome.`;
 	<title>Compose, don't port — what faf-cli and .FAF Context mean | FAF</title>
 	<meta
 		name="description"
-		content="faf-cli opened the writers. .FAF Context stopped carrying copies. One score, the same files, and the claims on the box are true."
+		content="faf-cli opened the authoring. .FAF Context stopped carrying copies. One score, the same files, and the claims on the box are true."
 	/>
 	<meta property="og:title" content="Compose, don't port — what faf-cli and .FAF Context mean" />
 	<meta
 		property="og:description"
-		content="The CLI writes. The IDE door composes. Two copies of the same writer is how a project starts lying about itself."
+		content="The CLI authors. The IDE door composes. Authoring is more powerful than writing."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/compose-dont-port" />
@@ -38,7 +38,7 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="Compose, don't port — project.faf writes AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
+		content="Compose, don't port — one author: project.faf → AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
@@ -46,12 +46,12 @@ Comments · suggestions · shares welcome.`;
 	<meta name="twitter:title" content="Compose, don't port — what faf-cli and .FAF Context mean" />
 	<meta
 		name="twitter:description"
-		content="The CLI writes. The IDE door composes. Two copies of the same writer is how a project starts lying about itself."
+		content="The CLI authors. The IDE door composes. Authoring is more powerful than writing."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/compose-dont-port-hero.png" />
 	<meta
 		name="twitter:image:alt"
-		content="Compose, don't port — project.faf writes AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
+		content="Compose, don't port — one author: project.faf → AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
 	/>
 </svelte:head>
 
@@ -72,7 +72,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/compose-dont-port-hero.png"
-			alt="Compose, don't port — project.faf writes AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md one way"
+			alt="Compose, don't port — one author: project.faf → AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
 			width="1200"
 			height="630"
 			loading="eager"
@@ -83,39 +83,40 @@ Comments · suggestions · shares welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> faf-cli opened the writers. .FAF Context
+				<strong>TL;DR:</strong> faf-cli opened the authoring. .FAF Context
 				(<code>faf-mcp</code>) stopped carrying copies. One score, the same files, and the claims
 				on the box are true.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
 				<p>
-					<strong>Old state.</strong> You had a CLI that wrote <code>project.faf</code>, scored it,
-					and exported <code>AGENTS.md</code> / <code>GEMINI.md</code> /
+					<strong>Old state.</strong> You had a CLI that authored <code>project.faf</code>, scored
+					it, and exported <code>AGENTS.md</code> / <code>GEMINI.md</code> /
 					<code>.cursorrules</code> / <code>CLAUDE.md</code>. And you had an IDE MCP server that
 					did the same jobs with its own copies. The copies drifted. The README described a
-					hosted door this package does not run. Two writers. Two numbers. A project lying about
+					hosted door this package does not run. Two authors. Two numbers. A project lying about
 					itself.
 				</p>
 				<p>
-					<strong>Fix.</strong> The CLI made those writers public. The MCP server composes them
+					<strong>Fix.</strong> The CLI made that authoring public. The MCP server composes it
 					in-process. Nothing ported. Nothing shelled out to whatever <code>faf</code> happens to
 					be on PATH.
 				</p>
 				<p>
 					<strong>New state.</strong> Terminal or editor, same bytes, same number. The CLI is the
-					writer. .FAF Context is the door into Cursor, VS Code, Windsurf, Cline — not a second
+					author. .FAF Context is the door into Cursor, VS Code, Windsurf, Cline — not a second
 					product.
 				</p>
 			</div>
 		</section>
 
 		<section>
-			<h2>Two packages. One writer.</h2>
+			<h2>Two packages. One author.</h2>
 			<p>
-				<strong>faf-cli</strong> is the writer. It scores <code>project.faf</code>. It writes the
+				<strong>faf-cli</strong> is the author. It scores <code>project.faf</code>. It authors the
 				instruction files. That is the tool.
 			</p>
+			<p>Authoring is more powerful than writing. That's what we call it.</p>
 			<p>
 				<strong>.FAF Context</strong> is the door. <code>faf-mcp</code> is how that same context
 				shows up in the editor over MCP. Local stdio. The host already has the slot. We fill it.
@@ -134,7 +135,7 @@ Comments · suggestions · shares welcome.`;
 
 		<section>
 			<h2>What was on disk</h2>
-			<p>Same project. Two writers. Two truths.</p>
+			<p>Same project. Two authors. Two truths.</p>
 			<table class="rot-table">
 				<thead>
 					<tr>
@@ -152,7 +153,7 @@ Comments · suggestions · shares welcome.`;
 					<tr>
 						<td>AGENTS.md · GEMINI.md · .cursorrules</td>
 						<td><code>faf export</code></td>
-						<td class="hot">a ported copy of the writer</td>
+						<td class="hot">a ported copy of the authoring</td>
 					</tr>
 					<tr>
 						<td>What the box said</td>
@@ -173,8 +174,8 @@ Comments · suggestions · shares welcome.`;
 		<section>
 			<h2>So the CLI opened, and the door composed</h2>
 			<p>
-				Not a better copy. The same writers the CLI already uses — public, so a consumer can call
-				them instead of porting them.
+				Not a better copy. The same authoring the CLI already uses — public, so a consumer can
+				call it instead of porting it.
 			</p>
 			<ul>
 				<li>
@@ -182,12 +183,12 @@ Comments · suggestions · shares welcome.`;
 					the file on disk.
 				</li>
 				<li>
-					<strong>Same files.</strong> The instruction files the editor writes are the files
-					<code>faf export</code> writes.
+					<strong>Same files.</strong> The instruction files the editor authors are the files
+					<code>faf export</code> authors.
 				</li>
 				<li>
 					<strong>One injector.</strong> Re-export is one block, every run. A stacked file is
-					repaired on the next write.
+					repaired on the next export.
 				</li>
 			</ul>
 			<p>
@@ -217,7 +218,7 @@ Comments · suggestions · shares welcome.`;
 				</li>
 				<li>
 					<a href="/blog/faf-mcp-compose">The Compose Edition</a> — faf-mcp 3.0, .FAF Context.
-					The door composes those writers in-process.
+					The door composes that authoring in-process.
 				</li>
 			</ul>
 			<div class="terminal-block">

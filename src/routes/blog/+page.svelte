@@ -36,7 +36,7 @@
 			date: 'September 10, 2026',
 			timestamp: '2026-09-10',
 			excerpt:
-				'faf-cli opened the writers. .FAF Context stopped carrying copies. One score, the same files, and the claims on the box are true.',
+				'faf-cli opened the authoring. .FAF Context stopped carrying copies. One score, the same files, and the claims on the box are true.',
 			emoji: '✪',
 			category: 'Story'
 		},
