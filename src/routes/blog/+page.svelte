@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/faf-mcp-compose',
+			title: 'The Compose Edition',
+			version: 'faf-mcp v3.0.0',
+			date: 'September 10, 2026',
+			timestamp: '2026-09-10',
+			excerpt:
+				"Compose, don't port: faf-mcp 3.0 runs on faf-cli 7.12 in-process — one scorer, one set of renderers, one injector — and every number, file and claim this package makes is true. Local stdio, 29 tools, Node 22+.",
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/open-renderers-edition',
 			title: 'The Open Renderers Edition',
 			version: 'faf-cli v7.12.0',
