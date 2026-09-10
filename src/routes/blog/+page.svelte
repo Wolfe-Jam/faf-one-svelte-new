@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/compose-dont-port',
+			title: "Compose, don't port",
+			date: 'September 10, 2026',
+			timestamp: '2026-09-10',
+			excerpt:
+				'faf-cli opened the writers. .FAF Context stopped carrying copies. One score, the same files, and the claims on the box are true.',
+			emoji: '✪',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/faf-mcp-compose',
 			title: 'The Compose Edition',
 			version: 'faf-mcp v3.0.0',
