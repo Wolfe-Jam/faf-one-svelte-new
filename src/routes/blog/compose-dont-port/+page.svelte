@@ -38,7 +38,7 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="Compose, don't port — the CLI writes, the door composes"
+		content="Compose, don't port — project.faf writes AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
@@ -51,7 +51,7 @@ Comments · suggestions · shares welcome.`;
 	<meta name="twitter:image" content="https://faf.one/blog/compose-dont-port-hero.png" />
 	<meta
 		name="twitter:image:alt"
-		content="Compose, don't port — the CLI writes, the door composes"
+		content="Compose, don't port — project.faf writes AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md"
 	/>
 </svelte:head>
 
@@ -72,7 +72,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/compose-dont-port-hero.png"
-			alt="Compose, don't port — the CLI writes, the door composes"
+			alt="Compose, don't port — project.faf writes AGENTS.md, GEMINI.md, .cursorrules, CLAUDE.md one way"
 			width="1200"
 			height="630"
 			loading="eager"
