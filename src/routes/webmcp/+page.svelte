@@ -42,8 +42,9 @@
 			listedTools.filter((n) => !TOOL_NAMES.includes(n))
 		)
 	);
-	let outputLabel = $state('output');
 	let outputText = $state('');
+	/** @type {null | { score: number, tier?: string, populated?: number, total?: number, gaps?: string[], faf_version?: string }} */
+	let scoreCard = $state(null);
 	let busy = $state('');
 
 	/** @type {null | { scoreYaml: (yaml: string) => string, fetchText: typeof fetchAllowedYaml }} */
@@ -82,7 +83,18 @@
 	});
 
 	function show(label, value) {
-		outputLabel = label;
+		const isCard =
+			label === 'score_faf' &&
+			value &&
+			typeof value === 'object' &&
+			typeof value.score === 'number' &&
+			!value.error;
+		if (isCard) {
+			scoreCard = value;
+			outputText = '';
+			return;
+		}
+		scoreCard = null;
 		outputText = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
 	}
 
@@ -202,9 +214,9 @@
 
 	<section class="score-block" aria-labelledby="score-heading">
 		<div class="row-head">
-			<h2 id="score-heading"><code>score_faf</code></h2>
+			<h2 id="score-heading"><code>project.faf</code></h2>
 			<div class="actions">
-				<button type="button" class="ghost" onclick={onFixture}>View Context Card</button>
+				<button type="button" class="ghost" onclick={onFixture}>Sample project.faf</button>
 				<button type="button" class="ghost" onclick={onEmit} disabled={busy === 'emit'}>
 					Emit AGENTS.md
 				</button>
@@ -213,12 +225,12 @@
 				</button>
 			</div>
 		</div>
-		<label class="sr-only" for="faf-yaml">.faf YAML</label>
+		<label class="sr-only" for="faf-yaml">project.faf</label>
 		<textarea
 			id="faf-yaml"
 			bind:value={yamlText}
 			spellcheck="false"
-			placeholder="Paste .faf YAML, or View Context Card."
+			placeholder="Paste project.faf, or try a sample."
 		></textarea>
 	</section>
 
@@ -261,8 +273,24 @@
 	</section>
 
 	<section class="out-block" aria-labelledby="out-heading">
-		<h2 id="out-heading">Output · <code>{outputLabel}</code></h2>
-		<pre class="output">{outputText || 'Score, 6Ws, or AGENTS.md land here.'}</pre>
+		<h2 id="out-heading">Context Card</h2>
+		{#if scoreCard}
+			<div class="context-card">
+				<div class="card-score">{scoreCard.score}</div>
+				<div class="card-meta">
+					{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
+					{#if scoreCard.populated != null && scoreCard.total != null}
+						<span>{scoreCard.populated} / {scoreCard.total}</span>
+					{/if}
+					{#if scoreCard.faf_version}<span>project.faf {scoreCard.faf_version}</span>{/if}
+				</div>
+				{#if scoreCard.gaps?.length}
+					<p class="card-gaps">Missing: {scoreCard.gaps.join(', ')}</p>
+				{/if}
+			</div>
+		{:else}
+			<pre class="output">{outputText || 'Score a project.faf to view it.'}</pre>
+		{/if}
 	</section>
 
 	<p class="foot-note">
@@ -499,6 +527,38 @@
 		white-space: pre-wrap;
 		overflow: auto;
 		margin: 0;
+	}
+
+	.context-card {
+		padding: 1.25rem 1.1rem 1.15rem;
+		background: var(--faf-code-bg);
+		border: 1px solid var(--faf-hairline);
+		border-radius: 8px;
+		min-height: 10rem;
+	}
+
+	.card-score {
+		font-size: 3rem;
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		line-height: 1;
+		color: var(--faf-orange);
+	}
+
+	.card-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1rem;
+		margin-top: 0.75rem;
+		color: var(--faf-gray);
+		font-size: 0.92rem;
+	}
+
+	.card-gaps {
+		margin: 0.9rem 0 0;
+		color: var(--faf-ink);
+		font-size: 0.9rem;
+		line-height: 1.45;
 	}
 
 	.foot-note {
