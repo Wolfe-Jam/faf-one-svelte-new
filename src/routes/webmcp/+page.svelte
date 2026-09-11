@@ -204,7 +204,7 @@
 		<div class="row-head">
 			<h2 id="score-heading"><code>score_faf</code></h2>
 			<div class="actions">
-				<button type="button" class="ghost" onclick={onFixture}>Load fixture</button>
+				<button type="button" class="ghost" onclick={onFixture}>View Context Card</button>
 				<button type="button" class="ghost" onclick={onEmit} disabled={busy === 'emit'}>
 					Emit AGENTS.md
 				</button>
@@ -218,7 +218,7 @@
 			id="faf-yaml"
 			bind:value={yamlText}
 			spellcheck="false"
-			placeholder="Paste .faf YAML, or load the fixture."
+			placeholder="Paste .faf YAML, or View Context Card."
 		></textarea>
 	</section>
 

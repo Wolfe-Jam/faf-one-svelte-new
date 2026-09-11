@@ -49,7 +49,7 @@ Native `document.modelContext.registerTool` is used when it exists. The `@mcp-b/
 
 [Model Context Tool Inspector](https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd)
 
-The bundled fixture (`Load fixture`) is a 13-populated / 8-ignored Mk4 document. `score_faf` returns **score 100**.
+The bundled sample (`View Context Card`) is a 13-populated / 8-ignored Mk4 document. `score_faf` returns **score 100**.
 
 Receipt when all five are true:
 
