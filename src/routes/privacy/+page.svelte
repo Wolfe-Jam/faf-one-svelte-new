@@ -42,7 +42,7 @@
 				<li><strong>xAI:</strong> grok-faf-mcp's <code>rag_query</code> tool sends your question to xAI, using your own API key</li>
 				<li><strong>FAF bench:</strong> <code>faf bench grade --submit</code> sends your bench result (date, model, project name, scores) to mcpaas.live, where it is kept</li>
 				<li><strong>rust-faf-mcp via npm:</strong> downloads its binary from GitHub Releases on first run</li>
-				<li><strong>gemini-faf-mcp Python client:</strong> <code>FAFClient</code> (not used by the MCP server) sends a start-up ping — package name and version — to our Google Cloud service, and its remote mode sends your requests there. Set <code>FAF_TELEMETRY_OFF=1</code> to turn the ping off</li>
+				<li><strong>gemini-faf-mcp Python client:</strong> <code>FAFClient</code> (not used by the MCP server) sends a start-up ping — package name and version — to our Google Cloud service only if you set <code>FAF_TELEMETRY=1</code>. Its remote mode sends your requests there. Versions before 2.8.2 sent the ping by default; set <code>FAF_TELEMETRY_OFF=1</code> on those</li>
 			</ul>
 		</section>
 
