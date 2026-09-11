@@ -16,6 +16,7 @@
 			<p>FAF tools run locally and send nothing to FAF. A few features go online — only when you use them, and only to the service you pick.</p>
 			<ul>
 				<li>No telemetry from the CLI, the extensions, or the MCP servers</li>
+				<li>No tracking cookies on faf.one</li>
 				<li>No training — FAF has no training pipeline</li>
 				<li>Never sold</li>
 			</ul>
@@ -51,9 +52,9 @@
 
 			<h3>faf.one</h3>
 			<ul>
-				<li>Cloudflare hosts it and processes request data, such as your IP address, to serve pages</li>
-				<li>Google Analytics counts page views and basic events, using cookies</li>
+				<li>Cloudflare hosts it and counts visits without cookies. Serving pages means it processes request data, such as your IP address</li>
 				<li>If you sign up or use the contact form: your email, via Formspree and Resend</li>
+				<li>FAFb Drive: if you request access, we email you a password through Resend. Signing in sets a sign-in cookie for 14 days</li>
 				<li>If you buy FAF Pro or n8n.faf: Stripe takes the payment, and we keep a license record (email, license key, Stripe customer ID) in Supabase</li>
 				<li>Some pages show GitHub's Sponsors button, loaded from github.com</li>
 				<li>faf.one/webmcp scores in your browser — what you paste isn't sent to us</li>
@@ -91,8 +92,7 @@
 		<section>
 			<h2>Services We Use</h2>
 			<ul>
-				<li><strong>Cloudflare:</strong> hosting and bot protection</li>
-				<li><strong>Google Analytics:</strong> faf.one analytics</li>
+				<li><strong>Cloudflare:</strong> hosting, visit counts (no cookies), and bot protection</li>
 				<li><strong>Google Cloud:</strong> the gemini-faf-mcp hosted service</li>
 				<li><strong>Formspree:</strong> email signup</li>
 				<li><strong>Resend:</strong> email delivery</li>
@@ -108,7 +108,7 @@
 		<section>
 			<h2>Cookies</h2>
 			<ul>
-				<li>faf.one: Google Analytics cookies</li>
+				<li>faf.one: no tracking cookies. FAFb Drive sets a sign-in cookie for 14 days when you sign in. The GitHub Sponsors button on some pages loads from github.com, under GitHub's own policy</li>
 				<li>mcpaas.live: a sign-in cookie, for 1 hour, when you sign in with GitHub</li>
 				<li>No advertising cookies</li>
 			</ul>
