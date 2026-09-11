@@ -46,7 +46,7 @@
 	/** @type {'card' | 'agents' | 'score'} */
 	let view = $state('card');
 	let contextView = $derived(readContext(yamlText));
-	/** @type {null | { score: number, tier?: string, populated?: number, total?: number, gaps?: string[], faf_version?: string }} */
+	/** @type {null | { score: number, tier?: string, populated?: number, active?: number, total?: number, ignored?: number, gaps?: string[], faf_version?: string }} */
 	let scoreCard = $state(null);
 	let scoreError = $state('');
 	let agentsMd = $state('');
@@ -161,8 +161,8 @@
 		if (!scoreCard) return '';
 		const lines = [`score: ${scoreCard.score}`];
 		if (scoreCard.tier) lines.push(`tier: ${scoreCard.tier}`);
-		if (scoreCard.populated != null && scoreCard.total != null) {
-			lines.push(`${scoreCard.populated} / ${scoreCard.total}`);
+		if (scoreCard.populated != null && (scoreCard.active != null || scoreCard.total != null)) {
+			lines.push(`${scoreCard.populated} / ${scoreCard.active ?? scoreCard.total}`);
 		}
 		if (scoreCard.gaps?.length) lines.push(`missing: ${scoreCard.gaps.join(', ')}`);
 		return lines.join('\n');
@@ -425,8 +425,8 @@
 					<div class="card-score">{scoreCard.score}</div>
 					<div class="card-meta">
 						{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
-						{#if scoreCard.populated != null && scoreCard.total != null}
-							<span>{scoreCard.populated} / {scoreCard.total}</span>
+						{#if scoreCard.populated != null && (scoreCard.active != null || scoreCard.total != null)}
+							<span>{scoreCard.populated} / {scoreCard.active ?? scoreCard.total}</span>
 						{/if}
 					</div>
 					{#if scoreCard.gaps?.length}

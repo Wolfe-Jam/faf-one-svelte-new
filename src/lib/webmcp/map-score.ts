@@ -5,10 +5,16 @@ export type ScoreResult = {
 	tier: string;
 	populated: number;
 	total: number;
-	active?: number;
+	active: number;
+	ignored?: number;
 	gaps?: string[];
 	faf_version?: string;
 };
+
+/** Score is populated/active. Ignored slots are not missing — 13/13, not 13/21. */
+export function scoreRatio(result: Pick<ScoreResult, 'populated' | 'active' | 'total'>): string {
+	return `${result.populated} / ${result.active || result.total}`;
+}
 
 function asNumber(value: unknown): number | undefined {
 	if (typeof value === 'number' && Number.isFinite(value)) return value;
@@ -54,14 +60,16 @@ export function mapScoreResult(kernel: unknown, yaml: string): ScoreResult {
 	if (score === undefined || populated === undefined || total === undefined) {
 		throw new Error('kernel JSON missing score, populated, or total');
 	}
+	const ignored = asNumber(k.ignored);
+	const active = asNumber(k.active) ?? total - (ignored ?? 0);
 	const result: ScoreResult = {
 		score,
 		tier: typeof k.tier === 'string' && k.tier ? k.tier : '',
 		populated,
-		total
+		total,
+		active
 	};
-	const active = asNumber(k.active);
-	if (active !== undefined) result.active = active;
+	if (ignored !== undefined) result.ignored = ignored;
 	const gaps = gapsFromSlots(k.slots);
 	if (gaps) result.gaps = gaps;
 	const version = extractFafVersion(yaml);

@@ -46,9 +46,13 @@ describe('Mk4 wasm score_faf', () => {
 		expect(ok).toMatchObject({
 			score: 100,
 			populated: 13,
+			active: 13,
 			total: 21,
 			faf_version: '3.0'
 		});
+		if (!('error' in ok)) {
+			expect(`${ok.populated} / ${ok.active}`).toBe('13 / 13');
+		}
 		expect('error' in ok).toBe(false);
 		const bad = await runScoreFafSafe({ yaml: '{ this is not: yaml: [[[' }, deps);
 		expect(bad).toMatchObject({ error: 'invalid_yaml' });

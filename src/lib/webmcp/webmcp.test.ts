@@ -4,7 +4,7 @@ import { contextCardText, readContext } from './read-context';
 import { toToolError, ToolError } from './errors';
 import { fill6wsYaml, sixWsFromForm } from './fill-6ws';
 import { FIXTURE_YAML } from './fixture';
-import { mapScoreResult } from './map-score';
+import { mapScoreResult, scoreRatio } from './map-score';
 import { registerFafWebmcpTools } from './register';
 import { runScoreFaf, runScoreFafSafe } from './score-faf';
 import { assertAllowedUrl, MAX_YAML_BYTES } from './yaml-url';
@@ -191,6 +191,24 @@ describe('mapScoreResult', () => {
 		);
 		expect(mapped.gaps).toBeUndefined();
 		expect(mapped.faf_version).toBeUndefined();
+	});
+
+	it('score 100 with 8 ignored is 13/13, not 13/21', () => {
+		const mapped = mapScoreResult(
+			{
+				score: 100,
+				tier: '🏆',
+				populated: 13,
+				ignored: 8,
+				active: 13,
+				total: 21,
+				slots: {}
+			},
+			'faf_version: "3.0"\n'
+		);
+		expect(scoreRatio(mapped)).toBe('13 / 13');
+		expect(mapped.active).toBe(13);
+		expect(mapped.populated + (mapped.ignored ?? 0)).toBe(21);
 	});
 });
 
