@@ -114,9 +114,15 @@
 	     that needs a different canonical (e.g. a cross-domain hub page) returns
 	     `canonical` from its load — see /membership. -->
 	<link rel="canonical" href={$page.data?.canonical ?? `https://faf.one${$page.url.pathname}`} />
+	<!-- Chromeless routes also drop the Foundation badge, which lives in app.html. -->
+	{#if $page.data?.chromeless}
+		<style>.foundation-badge { display: none !important; }</style>
+	{/if}
 </svelte:head>
 
-
+<!-- Chromeless routes (load returns `chromeless: true`, e.g. /webmcp) render
+     their own page only: no badges, banner, subscribe box, or footer. -->
+{#if !$page.data?.chromeless}
 <!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
      homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
 {#if $page.url.pathname === '/'}
@@ -162,6 +168,7 @@
 		<span class="banner-receipt">Anthropic-merged<span class="banner-receipt-extra"> #2759</span></span><span class="banner-sep"> · </span><strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-tail"> · IANA-registered</span>
 	</a>
 </div>
+{/if}
 
 {@render children?.()}
 
@@ -171,6 +178,7 @@
 	</div>
 {/if}
 
+{#if !$page.data?.chromeless}
 <div class="footer-chrome">
 	<!-- Sitewide above footer — except /blog index (long list; hero form there instead) -->
 	{#if $page.url.pathname !== '/blog' && $page.url.pathname !== '/blog/'}
@@ -178,6 +186,7 @@
 	{/if}
 	<Footer />
 </div>
+{/if}
 
 <style>
 	/* LOCKED-DARK — banner stays dark over any page below it, regardless
