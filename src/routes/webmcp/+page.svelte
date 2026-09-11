@@ -18,6 +18,13 @@
 		'https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd';
 	const FLAG = 'chrome://flags/#enable-webmcp-testing';
 
+	/** Visitor one-liners — the code name is for the agent; this column is for humans. */
+	const TOOL_BLURB = {
+		score_faf: 'Score this project’s context, 0–100',
+		fill_6ws: 'Who / What / Why / Where / When / How',
+		emit_agents_md: 'Write an AGENTS.md from that context'
+	};
+
 	let yamlText = $state('');
 	let who = $state('');
 	let what = $state('');
@@ -30,6 +37,11 @@
 	let kernelReady = $state(false);
 	let kernelError = $state('');
 	let listedTools = $state([...TOOL_NAMES]);
+	let displayTools = $derived(
+		TOOL_NAMES.filter((n) => listedTools.includes(n)).concat(
+			listedTools.filter((n) => !TOOL_NAMES.includes(n))
+		)
+	);
 	let outputLabel = $state('output');
 	let outputText = $state('');
 	let busy = $state('');
@@ -177,10 +189,13 @@
 
 	<section class="tools" aria-labelledby="tools-heading">
 		<h2 id="tools-heading">Tools this page exposes</h2>
-		<p class="hint">Same names a WebMCP agent sees.</p>
-		<ol>
-			{#each listedTools.length ? listedTools : TOOL_NAMES as name}
-				<li><code>{name}</code></li>
+		<p class="hint">Same names an agent sees — plus what each one does.</p>
+		<ol class="tool-list">
+			{#each displayTools as name}
+				<li>
+					<code>{name}</code>
+					<span class="blurb">{TOOL_BLURB[name] ?? ''}</span>
+				</li>
 			{/each}
 		</ol>
 	</section>
@@ -364,10 +379,27 @@
 		font-size: 1.05rem;
 	}
 
-	.tools ol {
+	.tool-list {
 		margin: 0.5rem 0 0;
-		padding-left: 1.2rem;
+		padding-left: 1.35rem;
+	}
+
+	.tool-list li {
+		display: grid;
+		grid-template-columns: minmax(10.5rem, 13rem) 1fr;
+		gap: 0.35rem 1.15rem;
+		align-items: baseline;
+		padding: 0.28rem 0;
+	}
+
+	.tool-list code {
 		font-family: var(--font-mono);
+	}
+
+	.tool-list .blurb {
+		color: var(--faf-gray);
+		font-size: 0.92rem;
+		line-height: 1.4;
 	}
 
 	.row-head {
@@ -489,6 +521,10 @@
 	@media (max-width: 640px) {
 		.ws-form {
 			grid-template-columns: 1fr;
+		}
+		.tool-list li {
+			grid-template-columns: 1fr;
+			padding: 0.45rem 0;
 		}
 		textarea {
 			min-height: 12rem;
