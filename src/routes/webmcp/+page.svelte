@@ -51,6 +51,9 @@
 	let agentsError = $state('');
 	let sixYaml = $state('');
 	let busy = $state('');
+	let copied = $state(false);
+	/** @type {ReturnType<typeof setTimeout> | null} */
+	let copiedTimer = $state(null);
 
 	/** @type {null | { scoreYaml: (yaml: string) => string, fetchText: typeof fetchAllowedYaml }} */
 	let deps = $state(null);
@@ -84,6 +87,7 @@
 		})();
 		return () => {
 			cancelled = true;
+			if (copiedTimer) clearTimeout(copiedTimer);
 		};
 	});
 
@@ -147,6 +151,74 @@
 
 	function onFixture() {
 		yamlText = FIXTURE_YAML;
+	}
+
+	function cardText() {
+		if (scoreError) return scoreError;
+		if (!scoreCard) return '';
+		const lines = [`score: ${scoreCard.score}`];
+		if (scoreCard.tier) lines.push(`tier: ${scoreCard.tier}`);
+		if (scoreCard.populated != null && scoreCard.total != null) {
+			lines.push(`populated: ${scoreCard.populated} / ${scoreCard.total}`);
+		}
+		if (scoreCard.faf_version) lines.push(`project.faf: ${scoreCard.faf_version}`);
+		if (scoreCard.gaps?.length) lines.push(`missing: ${scoreCard.gaps.join(', ')}`);
+		return lines.join('\n');
+	}
+
+	function paneText() {
+		if (view === 'card') return cardText();
+		if (view === 'agents') return agentsError || agentsMd;
+		return sixYaml;
+	}
+
+	async function copyView() {
+		const text = paneText();
+		if (!text) return;
+		try {
+			await navigator.clipboard.writeText(text);
+		} catch {
+			return;
+		}
+		copied = true;
+		if (copiedTimer) clearTimeout(copiedTimer);
+		copiedTimer = setTimeout(() => {
+			copied = false;
+			copiedTimer = null;
+		}, 1500);
+	}
+
+	function downloadBlob(filename, body) {
+		const blob = new Blob([body], { type: 'text/markdown;charset=utf-8' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = filename;
+		a.click();
+		URL.revokeObjectURL(url);
+	}
+
+	async function downloadAll() {
+		await runScore();
+		runEmit();
+		if (!sixYaml.trim()) {
+			sixYaml = fill6wsYaml({ who, what, why, where, when, how });
+		}
+		const body = [
+			'# Context Card',
+			'',
+			cardText() || '(none)',
+			'',
+			'# AGENTS.md',
+			'',
+			agentsMd || agentsError || '(none)',
+			'',
+			'# 6Ws',
+			'',
+			sixYaml || '(none)',
+			''
+		].join('\n');
+		downloadBlob('context.md', body);
 	}
 
 	/** @param {SubmitEvent} event */
@@ -286,6 +358,19 @@
 				onclick={() => selectView('six')}
 			>
 				6Ws
+			</button>
+		</div>
+		<div class="view-actions">
+			<button
+				type="button"
+				class="ghost"
+				onclick={copyView}
+				disabled={!paneText()}
+			>
+				{copied ? 'Copied' : 'Copy'}
+			</button>
+			<button type="button" class="ghost" onclick={downloadAll} disabled={!!busy}>
+				Download all 3
 			</button>
 		</div>
 
@@ -579,6 +664,14 @@
 
 	.pane {
 		min-height: 10rem;
+	}
+
+	.view-actions {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0 0 0.75rem;
 	}
 
 	textarea,
