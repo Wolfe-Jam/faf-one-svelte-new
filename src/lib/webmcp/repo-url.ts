@@ -18,6 +18,16 @@ export const DEMO_REPOS: DemoRepo[] = [
 		id: 'faf-one',
 		label: 'faf.one',
 		href: 'https://faf.one'
+	},
+	{
+		id: 'zeph',
+		label: 'ZEPH',
+		href: 'https://github.com/Wolfe-Jam/xai-faf-zeph'
+	},
+	{
+		id: 'agents-md-facts',
+		label: 'agents-md-facts',
+		href: 'https://github.com/Wolfe-Jam/agents-md-facts'
 	}
 ];
 
