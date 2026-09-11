@@ -1,157 +1,148 @@
 <svelte:head>
-	<title>Privacy Policy | .faf - The JPEG for AI</title>
+	<title>Privacy Policy | FAF</title>
+	<meta
+		name="description"
+		content="Your code and context stay on your machine. What each FAF tool, website, and hosted service does with your data."
+	/>
 </svelte:head>
 
 <main class="legal-page">
 	<div class="container">
 		<h1>Privacy Policy</h1>
-		<p class="last-updated">Last Updated: March 27, 2026</p>
+		<p class="last-updated">Last Updated: September 11, 2026</p>
 
-		<section>
-			<h2>Our Promise</h2>
-			<p><strong>NO BS Privacy:</strong> We collect only what's necessary, protect it fiercely, and never sell your data. Period.</p>
-		</section>
-
-		<section>
-			<h2>Developer Tools (faf-cli)</h2>
-			<p><strong>faf-cli runs 100% locally on your machine.</strong> When you run <code>faf init</code>, <code>faf auto</code>, or <code>faf score</code>:</p>
+		<section class="promise">
+			<p class="promise-lead">Your code and context stay on your machine.</p>
+			<p>FAF tools run locally and send nothing to FAF. A few features go online — only when you use them, and only to the service you pick.</p>
 			<ul>
-				<li>No source code is read, collected, or transmitted</li>
-				<li>No data leaves your machine — no API calls, no telemetry, no phone-home</li>
-				<li>The WASM scoring kernel runs locally — no cloud processing</li>
-				<li>Your <code>project.faf</code> file contains only metadata you control — never source code</li>
-				<li>Private repos stay private — we never see them</li>
+				<li>No telemetry from the CLI, the extensions, or the MCP servers</li>
+				<li>No training — FAF has no training pipeline</li>
+				<li>Never sold</li>
 			</ul>
-			<p><strong>No training. No retention. No exceptions.</strong></p>
-			<p>FAF has no training pipeline. Your code, your data, and your project metadata are never used to train any AI model, improve any service, or feed any analytics system. We do not have access to your code — faf-cli is an offline tool.</p>
 		</section>
 
 		<section>
-			<h2>MCP Servers (claude-faf-mcp, faf-mcp, grok-faf-mcp, gemini-faf-mcp)</h2>
-			<p>FAF MCP servers run as local processes on your machine, invoked by your AI tool (Claude, Cursor, etc.). They read your local <code>project.faf</code> file and serve it via the MCP protocol to your AI. No data is sent to FAF servers — the MCP connection is between your AI tool and your local filesystem.</p>
-		</section>
-
-		<section>
-			<h2>WASM Scoring Kernel</h2>
-			<p>The faf-scoring-kernel (Rust to WASM) and Zig WASM ghost binary run entirely in-process — inside your Node.js runtime, your browser, or your edge function. No network calls. No data exfiltration. The WASM binary scores your <code>.faf</code> YAML locally and returns a result. Nothing leaves the process.</p>
-		</section>
-
-		<section>
-			<h2>Web Properties (faf.one, builder, mcpaas.live)</h2>
-			<p>When you visit our websites:</p>
+			<h2>Tools on Your Machine</h2>
+			<p><strong>faf-cli</strong>, <strong>FAF Context</strong> for VS Code, the <strong>Stack Grabber</strong> Chrome extension, and the MCP servers <strong>claude-faf-mcp</strong>, <strong>faf-mcp</strong>, <strong>grok-faf-mcp</strong>, <strong>gemini-faf-mcp</strong>, <strong>rust-faf-mcp</strong>, and <strong>faf-memory-mcp</strong>.</p>
 			<ul>
-				<li><strong>Vercel Analytics:</strong> Anonymous page view counts — no personal data, no cookies, no tracking</li>
-				<li><strong>FAF Builder:</strong> When you score a public GitHub repo, we fetch its file tree via the GitHub API. We do not store the results or your repo data</li>
-				<li><strong>MCPaaS:</strong> Edge location logging (Cloudflare data center code only — e.g. "ATL") for our <a href="https://mcpaas.live/globe">Globe</a> visualization. No personal data is logged</li>
+				<li>They read your <code>project.faf</code> and project files locally</li>
+				<li>The WASM scoring kernel runs in-process — nothing leaves the process</li>
+				<li>Your <code>project.faf</code> holds only what you and the tools write into it — never source code</li>
+				<li>Stack Grabber reads the page you're on when you use it, and keeps its results and usage logs (including page URLs) in your browser's local storage</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Only When You Ask</h2>
+			<p>These features go online when you use them, and only to the service named:</p>
+			<ul>
+				<li><strong>GitHub:</strong> <code>faf git</code>, the <code>faf_git</code> MCP tool, and the VS Code “Score a GitHub Repo” command read the repo you name from GitHub. If <code>GITHUB_TOKEN</code> or <code>GH_TOKEN</code> is set, claude-faf-mcp and faf-mcp send it to GitHub with the request</li>
+				<li><strong>Anthropic:</strong> the optional <code>faf ai</code> commands send your <code>project.faf</code> to Anthropic, using your own API key</li>
+				<li><strong>xAI:</strong> grok-faf-mcp's <code>rag_query</code> tool sends your question to xAI, using your own API key</li>
+				<li><strong>FAF bench:</strong> <code>faf bench grade --submit</code> sends your bench result (date, model, project name, scores) to mcpaas.live, where it is kept</li>
+				<li><strong>rust-faf-mcp via npm:</strong> downloads its binary from GitHub Releases on first run</li>
+				<li><strong>gemini-faf-mcp Python client:</strong> <code>FAFClient</code> (not used by the MCP server) sends a start-up ping — package name and version — to our Google Cloud service, and its remote mode sends your requests there. Set <code>FAF_TELEMETRY_OFF=1</code> to turn the ping off</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>What Our Websites and Hosted Services See</h2>
+			<p>Like any website, ours see some request data. Here is what they see and keep.</p>
+
+			<h3>faf.one</h3>
+			<ul>
+				<li>Cloudflare hosts it and processes request data, such as your IP address, to serve pages</li>
+				<li>Google Analytics counts page views and basic events, using cookies</li>
+				<li>If you sign up or use the contact form: your email, via Formspree and Resend</li>
+				<li>If you buy FAF Pro or n8n.faf: Stripe takes the payment, and we keep a license record (email, license key, Stripe customer ID) in Supabase</li>
+				<li>Some pages show GitHub's Sponsors button, loaded from github.com</li>
+				<li>faf.one/webmcp scores in your browser — what you paste isn't sent to us</li>
+			</ul>
+
+			<h3>mcpaas.live and ide.faf.one</h3>
+			<p>Hosted MCP endpoints (including hosted claude, grok, and gemini FAF servers) and namepoints. They process the tool arguments you send, and keep:</p>
+			<ul>
+				<li>Request counts per Cloudflare location (for the <a href="https://mcpaas.live/globe">Globe</a>) and per host, for about 13 months</li>
+				<li>IP addresses, in short-lived rate-limit keys. Cloudflare Turnstile (bot protection) also sees your IP</li>
+				<li>Task inputs and results, for 1 hour</li>
+				<li>Your GitHub profile (username, name, email), for 1 hour after you sign in with GitHub</li>
+				<li>Your email: for 90 days if you register interest in a namepoint, and with your Stripe IDs if you claim one or buy slash. A free claim adds you to our update list</li>
+			</ul>
+			<p>The slash feature forwards your prompt to the AI provider you pick: Anthropic, OpenAI, or xAI.</p>
+
+			<h3>builder.faf.one</h3>
+			<ul>
+				<li>Your browser fetches the public repo you enter straight from GitHub</li>
+				<li>GitHub sign-in is used once, to commit your <code>project.faf</code> — the token isn't kept</li>
+				<li>We count page views and browser user-agents, and keep the names of repos that reach 100%. Cloudflare keeps request logs</li>
+			</ul>
+
+			<h3>gemini-faf-mcp hosted service (Google Cloud)</h3>
+			<ul>
+				<li>Update requests, including what you send, are stored in Google BigQuery</li>
 			</ul>
 		</section>
 
 		<section>
 			<h2>Email</h2>
-			<p>If you provide your email (namepoint claims, contact forms, or purchases), we use it only to:</p>
-			<ul>
-				<li>Communicate about your account or purchase</li>
-				<li>Send important product updates (rare, no spam)</li>
-			</ul>
-			<p>We never sell, share, or use email addresses for marketing without consent. Unsubscribe anytime.</p>
+			<p>If you give us your email, we use it only to talk about your account or purchase, and to send rare product updates. We never sell or share it. Unsubscribe anytime.</p>
 		</section>
 
 		<section>
-			<h2>1. Information We Collect</h2>
-			<h3>When You Sign Up:</h3>
+			<h2>Services We Use</h2>
 			<ul>
-				<li>Email address (for account access)</li>
-				<li>Payment information (processed by Stripe - we never see your card details)</li>
+				<li><strong>Cloudflare:</strong> hosting and bot protection</li>
+				<li><strong>Google Analytics:</strong> faf.one analytics</li>
+				<li><strong>Google Cloud:</strong> the gemini-faf-mcp hosted service</li>
+				<li><strong>Formspree:</strong> email signup</li>
+				<li><strong>Resend:</strong> email delivery</li>
+				<li><strong>Stripe:</strong> payments — we never see your card details</li>
+				<li><strong>Supabase:</strong> license records</li>
+				<li><strong>Upstash:</strong> FAF Builder counters</li>
+				<li><strong>GitHub:</strong> repos you ask for, GitHub sign-in, and the Sponsors button</li>
+				<li><strong>Anthropic, OpenAI, xAI:</strong> only when you use a feature that sends to them</li>
 			</ul>
-			
-			<h3>When You Use .faf:</h3>
-			<ul>
-				<li>Project metadata (to calculate your FAF score)</li>
-				<li>Usage statistics (to improve the service)</li>
-				<li>Error logs (to fix bugs)</li>
-			</ul>
+			<p>Each has its own privacy policy.</p>
 		</section>
 
 		<section>
-			<h2>2. How We Use Your Information</h2>
+			<h2>Cookies</h2>
 			<ul>
-				<li>Process your subscription</li>
-				<li>Send important updates (no spam, ever)</li>
-				<li>Improve the .faf format and tools</li>
-				<li>Provide customer support</li>
-			</ul>
-		</section>
-
-		<section>
-			<h2>3. Data Storage & Security</h2>
-			<ul>
-				<li><strong>Encryption:</strong> All data encrypted in transit and at rest</li>
-				<li><strong>Location:</strong> Stored on secure servers in the United States</li>
-				<li><strong>Access:</strong> Limited to essential personnel only</li>
-				<li><strong>Retention:</strong> Deleted 30 days after account closure</li>
-			</ul>
-		</section>
-
-		<section>
-			<h2>4. Third-Party Services</h2>
-			<p>We use trusted partners:</p>
-			<ul>
-				<li><strong>Stripe:</strong> Payment processing (PCI compliant)</li>
-				<li><strong>Formspree:</strong> Email capture (GDPR compliant)</li>
-				<li><strong>Vercel:</strong> Website hosting (SOC 2 compliant)</li>
-			</ul>
-			<p>Each has their own privacy policy. We chose them for their security standards.</p>
-		</section>
-
-		<section>
-			<h2>5. Your Rights</h2>
-			<p>You can always:</p>
-			<ul>
-				<li>Access your data</li>
-				<li>Correct inaccuracies</li>
-				<li>Delete your account</li>
-				<li>Export your information</li>
-				<li>Opt-out of communications</li>
-			</ul>
-			<p>Email <a href="mailto:team@faf.one">team@faf.one</a> for any data requests.</p>
-		</section>
-
-		<section>
-			<h2>6. Cookies</h2>
-			<p>We use minimal cookies:</p>
-			<ul>
-				<li>Essential cookies for authentication</li>
-				<li>Analytics to improve the service (anonymous)</li>
-				<li>No tracking cookies</li>
+				<li>faf.one: Google Analytics cookies</li>
+				<li>mcpaas.live: a sign-in cookie, for 1 hour, when you sign in with GitHub</li>
 				<li>No advertising cookies</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>7. Children's Privacy</h2>
-			<p>The Service is not intended for users under 13. We don't knowingly collect data from children.</p>
+			<h2>Your Rights</h2>
+			<p>You can always access, correct, export, or delete your data, and opt out of communications. Email <a href="mailto:team@faf.one">team@faf.one</a> for any data request.</p>
 		</section>
 
 		<section>
-			<h2>8. Changes to This Policy</h2>
-			<p>We'll notify you of significant changes via email. Continued use means acceptance of updates.</p>
+			<h2>Children's Privacy</h2>
+			<p>FAF products are not intended for users under 13. We don't knowingly collect data from children.</p>
 		</section>
 
 		<section>
-			<h2>9. Contact Us</h2>
-			<p>Privacy questions or concerns?</p>
-			<p>Email: <a href="mailto:team@faf.one">team@faf.one</a></p>
+			<h2>Changes to This Policy</h2>
+			<p>We update the date above when this page changes. If you've given us your email, we'll tell you about significant changes.</p>
+		</section>
+
+		<section>
+			<h2>Contact Us</h2>
+			<p>Privacy questions or concerns? Email <a href="mailto:team@faf.one">team@faf.one</a>.</p>
 			<p>Location: Atlanta, GA, USA</p>
 		</section>
 
 		<section class="privacy-commitment">
-			<h2>🧡 Our Commitment — All FAF Products</h2>
-			<p>Across every FAF product — faf-cli, all MCP servers, MCPaaS, FAF Builder — your trust is everything. We will never:</p>
+			<h2>Our Commitment — All FAF Products</h2>
+			<p>Across every FAF product — faf-cli, the MCP servers, the VS Code and Chrome extensions, MCPaaS, and FAF Builder — we will never:</p>
 			<ul>
-				<li>Read, collect, or retain your source code</li>
+				<li>Upload your source code to FAF — local tools read it on your machine; hosted tools see only what you send them</li>
 				<li>Use your data for AI training — we have no training pipeline</li>
-				<li>Sell or share your data with third parties</li>
-				<li>Send telemetry without your knowledge</li>
+				<li>Sell your data</li>
+				<li>Add telemetry without listing it on this page</li>
 				<li>Use dark patterns</li>
 				<li>Hide important details</li>
 			</ul>
@@ -160,7 +151,7 @@
 
 		<div class="legal-footer">
 			<p>© {new Date().getFullYear()} FAF. The Context Standard for AI.</p>
-			<p>Your privacy matters. No BS. 🧡</p>
+			<p>Your privacy matters. No BS.</p>
 		</div>
 	</div>
 </main>
@@ -194,6 +185,20 @@
 
 	section {
 		margin-bottom: 2.5rem;
+		padding: 0; /* the app.css section padding (96px) leaves big gaps on a text page */
+	}
+
+	.promise {
+		margin-bottom: 3rem;
+	}
+
+	.promise-lead {
+		font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+		font-weight: 800;
+		line-height: 1.2;
+		letter-spacing: -0.02em;
+		color: var(--faf-black);
+		margin-bottom: 1rem;
 	}
 
 	h2 {
@@ -205,7 +210,7 @@
 	h3 {
 		font-size: 1.2rem;
 		margin-bottom: 0.75rem;
-		margin-top: 1rem;
+		margin-top: 1.5rem;
 		color: var(--faf-black);
 	}
 
@@ -235,6 +240,7 @@
 
 	.privacy-commitment {
 		background: var(--faf-white);
+		color: var(--faf-black);
 		padding: 2rem;
 		border-radius: 12px;
 		border: 2px solid var(--faf-orange);
