@@ -2,7 +2,7 @@
 
 In-page demo at [https://faf.one/webmcp](https://faf.one/webmcp).
 
-A stranger with Chrome WebMCP (or the Inspector) opens the page, asks an agent to score a `.faf`, and gets a number. Scoring is WASM in the browser. No local MCP process. No call to `ide.faf.one`.
+A stranger with Chrome WebMCP (or the Inspector) opens the page, asks an agent to score a `.faf`, and gets a number. Scoring is WASM in the browser. No local MCP process.
 
 Three read-only tools:
 

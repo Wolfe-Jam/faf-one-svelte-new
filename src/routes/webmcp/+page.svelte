@@ -148,8 +148,7 @@
 		<h1>Score a <code>.faf</code> in the tab.</h1>
 		<p class="sub">
 			This page is an in-page tool server. An agent with WebMCP enabled can call the tools below.
-			Scoring runs as WASM in the browser — no local MCP process, no call to
-			<code>ide.faf.one</code>.
+			Scoring runs as WASM in the browser — no local MCP process.
 		</p>
 		<p class="enable">
 			Enable <code>{FLAG}</code>
