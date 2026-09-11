@@ -45,6 +45,7 @@ describe('Mk4 wasm score_faf', () => {
 		const ok = await runScoreFafSafe({ yaml: FIXTURE_YAML }, deps);
 		expect(ok).toMatchObject({
 			score: 100,
+			tier: '✪',
 			populated: 13,
 			active: 13,
 			total: 21,

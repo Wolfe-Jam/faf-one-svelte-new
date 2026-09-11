@@ -11,6 +11,29 @@ export type ScoreResult = {
 	faf_version?: string;
 };
 
+/**
+ * Tier glyph from the score, same thresholds as faf-cli src/core/tiers.ts.
+ * ✪ is the 100% work glyph. The kernel's own tier string (🏆 and the old emoji
+ * ladder) is not used — 🏆 is for social surfaces only.
+ */
+const TIER_GLYPHS: ReadonlyArray<readonly [number, string]> = [
+	[100, '✪'],
+	[99, '★'],
+	[95, '◆'],
+	[85, '◇'],
+	[70, '●'],
+	[55, '●'],
+	[1, '○'],
+	[0, '♡']
+];
+
+export function tierGlyph(score: number): string {
+	for (const [threshold, glyph] of TIER_GLYPHS) {
+		if (score >= threshold) return glyph;
+	}
+	return '♡';
+}
+
 /** Score is populated/active. Ignored slots are not missing — 13/13, not 13/21. */
 export function scoreRatio(result: Pick<ScoreResult, 'populated' | 'active' | 'total'>): string {
 	return `${result.populated} / ${result.active || result.total}`;
@@ -64,7 +87,7 @@ export function mapScoreResult(kernel: unknown, yaml: string): ScoreResult {
 	const active = asNumber(k.active) ?? total - (ignored ?? 0);
 	const result: ScoreResult = {
 		score,
-		tier: typeof k.tier === 'string' && k.tier ? k.tier : '',
+		tier: tierGlyph(score),
 		populated,
 		total,
 		active
