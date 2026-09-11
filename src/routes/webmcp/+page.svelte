@@ -42,9 +42,14 @@
 			listedTools.filter((n) => !TOOL_NAMES.includes(n))
 		)
 	);
-	let outputText = $state('');
+	/** @type {'card' | 'agents' | 'six'} */
+	let view = $state('card');
 	/** @type {null | { score: number, tier?: string, populated?: number, total?: number, gaps?: string[], faf_version?: string }} */
 	let scoreCard = $state(null);
+	let scoreError = $state('');
+	let agentsMd = $state('');
+	let agentsError = $state('');
+	let sixYaml = $state('');
 	let busy = $state('');
 
 	/** @type {null | { scoreYaml: (yaml: string) => string, fetchText: typeof fetchAllowedYaml }} */
@@ -82,33 +87,61 @@
 		};
 	});
 
-	function show(label, value) {
-		const isCard =
-			label === 'score_faf' &&
-			value &&
-			typeof value === 'object' &&
-			typeof value.score === 'number' &&
-			!value.error;
-		if (isCard) {
-			scoreCard = value;
-			outputText = '';
-			return;
-		}
-		scoreCard = null;
-		outputText = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+	function jumpToView() {
+		document.getElementById('view')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
-	async function onScore() {
+	async function runScore() {
 		if (!deps) {
-			show('score_faf', { error: 'kernel_not_ready', message: kernelError || 'WASM not ready' });
+			scoreCard = null;
+			scoreError = JSON.stringify(
+				{ error: 'kernel_not_ready', message: kernelError || 'WASM not ready' },
+				null,
+				2
+			);
 			return;
 		}
 		busy = 'score';
 		try {
 			const result = await runScoreFafSafe({ yaml: yamlText }, deps);
-			show('score_faf', result);
+			if (result && typeof result === 'object' && typeof result.score === 'number' && !result.error) {
+				scoreCard = result;
+				scoreError = '';
+			} else {
+				scoreCard = null;
+				scoreError = JSON.stringify(result, null, 2);
+			}
 		} finally {
 			busy = '';
+		}
+	}
+
+	function runEmit() {
+		busy = 'emit';
+		try {
+			agentsMd = emitAgentsMd(yamlText).markdown;
+			agentsError = '';
+		} catch (err) {
+			agentsMd = '';
+			agentsError = JSON.stringify(toToolError(err), null, 2);
+		} finally {
+			busy = '';
+		}
+	}
+
+	async function selectView(next) {
+		view = next;
+		if (next === 'card') await runScore();
+		if (next === 'agents') runEmit();
+		jumpToView();
+	}
+
+	function jumpTool(name) {
+		if (name === 'score_faf') selectView('card');
+		else if (name === 'emit_agents_md') selectView('agents');
+		else if (name === 'fill_6ws') {
+			view = 'six';
+			document.getElementById('sixws')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	}
 
@@ -116,22 +149,13 @@
 		yamlText = FIXTURE_YAML;
 	}
 
-	function onEmit() {
-		busy = 'emit';
-		try {
-			show('emit_agents_md', emitAgentsMd(yamlText));
-		} catch (err) {
-			show('emit_agents_md', toToolError(err));
-		} finally {
-			busy = '';
-		}
-	}
-
 	/** @param {SubmitEvent} event */
 	function onFill6ws(event) {
 		event.preventDefault();
 		const yaml = fill6wsYaml({ who, what, why, where, when, how });
-		show('fill_6ws', yaml);
+		sixYaml = yaml;
+		view = 'six';
+		jumpToView();
 		if (typeof event.respondWith === 'function') {
 			event.respondWith(Promise.resolve({ yaml }));
 		}
@@ -205,8 +229,10 @@
 		<ol class="tool-list">
 			{#each displayTools as name}
 				<li>
-					<code>{name}</code>
-					<span class="blurb">{TOOL_BLURB[name] ?? ''}</span>
+					<button type="button" class="tool-jump" onclick={() => jumpTool(name)}>
+						<code>{name}</code>
+						<span class="blurb">{TOOL_BLURB[name] ?? ''}</span>
+					</button>
 				</li>
 			{/each}
 		</ol>
@@ -215,15 +241,7 @@
 	<section class="score-block" aria-labelledby="score-heading">
 		<div class="row-head">
 			<h2 id="score-heading"><code>project.faf</code></h2>
-			<div class="actions">
-				<button type="button" class="ghost" onclick={onFixture}>Sample project.faf</button>
-				<button type="button" class="ghost" onclick={onEmit} disabled={busy === 'emit'}>
-					Emit AGENTS.md
-				</button>
-				<button type="button" class="primary" onclick={onScore} disabled={busy === 'score'}>
-					Score
-				</button>
-			</div>
+			<button type="button" class="ghost" onclick={onFixture}>Sample project.faf</button>
 		</div>
 		<label class="sr-only" for="faf-yaml">project.faf</label>
 		<textarea
@@ -234,9 +252,93 @@
 		></textarea>
 	</section>
 
-	<section class="ws-block" aria-labelledby="ws-heading">
-		<h2 id="ws-heading"><code>fill_6ws</code></h2>
-		<p class="hint">Declarative form. Submit returns YAML slots only — no file is saved, no navigation.</p>
+	<section id="view" class="out-block" aria-labelledby="out-heading">
+		<h2 id="out-heading" class="sr-only">View</h2>
+		<div class="tabs" role="tablist" aria-label="View">
+			<button
+				type="button"
+				role="tab"
+				id="tab-card"
+				aria-selected={view === 'card'}
+				aria-controls="pane-card"
+				onclick={() => selectView('card')}
+				disabled={busy === 'score'}
+			>
+				Context Card
+			</button>
+			<button
+				type="button"
+				role="tab"
+				id="tab-agents"
+				aria-selected={view === 'agents'}
+				aria-controls="pane-agents"
+				onclick={() => selectView('agents')}
+				disabled={busy === 'emit'}
+			>
+				AGENTS.md
+			</button>
+			<button
+				type="button"
+				role="tab"
+				id="tab-six"
+				aria-selected={view === 'six'}
+				aria-controls="pane-six"
+				onclick={() => selectView('six')}
+			>
+				6Ws
+			</button>
+		</div>
+
+		<div
+			id="pane-card"
+			class="pane"
+			role="tabpanel"
+			aria-labelledby="tab-card"
+			hidden={view !== 'card'}
+		>
+			{#if scoreCard}
+				<div class="context-card">
+					<div class="card-score">{scoreCard.score}</div>
+					<div class="card-meta">
+						{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
+						{#if scoreCard.populated != null && scoreCard.total != null}
+							<span>{scoreCard.populated} / {scoreCard.total}</span>
+						{/if}
+						{#if scoreCard.faf_version}<span>project.faf {scoreCard.faf_version}</span>{/if}
+					</div>
+					{#if scoreCard.gaps?.length}
+						<p class="card-gaps">Missing: {scoreCard.gaps.join(', ')}</p>
+					{/if}
+				</div>
+			{:else}
+				<pre class="output">{scoreError || 'Open this tab to score the project.faf.'}</pre>
+			{/if}
+		</div>
+
+		<div
+			id="pane-agents"
+			class="pane"
+			role="tabpanel"
+			aria-labelledby="tab-agents"
+			hidden={view !== 'agents'}
+		>
+			<pre class="output">{agentsError || agentsMd || 'Open this tab to write AGENTS.md from the file.'}</pre>
+		</div>
+
+		<div
+			id="pane-six"
+			class="pane"
+			role="tabpanel"
+			aria-labelledby="tab-six"
+			hidden={view !== 'six'}
+		>
+			<pre class="output">{sixYaml || 'Capture Who / What / Why / Where / When / How below, then return YAML here.'}</pre>
+		</div>
+	</section>
+
+	<section id="sixws" class="ws-block" aria-labelledby="ws-heading">
+		<h2 id="ws-heading">Who / What / Why / Where / When / How</h2>
+		<p class="hint">Returns YAML slots only — no file is saved, no navigation.</p>
 		<form
 			class="ws-form"
 			toolname="fill_6ws"
@@ -270,27 +372,6 @@
 			</label>
 			<button type="submit" class="primary">Return YAML</button>
 		</form>
-	</section>
-
-	<section class="out-block" aria-labelledby="out-heading">
-		<h2 id="out-heading">Context Card</h2>
-		{#if scoreCard}
-			<div class="context-card">
-				<div class="card-score">{scoreCard.score}</div>
-				<div class="card-meta">
-					{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
-					{#if scoreCard.populated != null && scoreCard.total != null}
-						<span>{scoreCard.populated} / {scoreCard.total}</span>
-					{/if}
-					{#if scoreCard.faf_version}<span>project.faf {scoreCard.faf_version}</span>{/if}
-				</div>
-				{#if scoreCard.gaps?.length}
-					<p class="card-gaps">Missing: {scoreCard.gaps.join(', ')}</p>
-				{/if}
-			</div>
-		{:else}
-			<pre class="output">{outputText || 'Score a project.faf to view it.'}</pre>
-		{/if}
 	</section>
 
 	<p class="foot-note">
@@ -413,11 +494,26 @@
 	}
 
 	.tool-list li {
+		padding: 0.12rem 0;
+	}
+
+	.tool-jump {
 		display: grid;
 		grid-template-columns: minmax(10.5rem, 13rem) 1fr;
 		gap: 0.35rem 1.15rem;
 		align-items: baseline;
-		padding: 0.28rem 0;
+		width: 100%;
+		text-align: left;
+		font: inherit;
+		background: transparent;
+		border: 0;
+		padding: 0.28rem 0.15rem;
+		cursor: pointer;
+		border-radius: 6px;
+	}
+
+	.tool-jump:hover {
+		background: var(--faf-code-bg);
 	}
 
 	.tool-list code {
@@ -443,10 +539,46 @@
 		margin: 0;
 	}
 
-	.actions {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
+	#view {
+		scroll-margin-top: 4.5rem;
+	}
+
+	#sixws {
+		scroll-margin-top: 4.5rem;
+	}
+
+	.tabs {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 0.35rem;
+		margin: 0 0 0.85rem;
+	}
+
+	.tabs button {
+		font: inherit;
+		font-weight: 700;
+		font-size: 0.9rem;
+		padding: 0.55rem 0.4rem;
+		border-radius: 8px;
+		cursor: pointer;
+		background: transparent;
+		color: var(--faf-ink);
+		border: 2px solid var(--faf-border-strong);
+	}
+
+	.tabs button[aria-selected='true'] {
+		background: var(--faf-orange);
+		color: var(--faf-on-accent);
+		border-color: var(--faf-orange);
+	}
+
+	.tabs button:disabled {
+		opacity: 0.55;
+		cursor: wait;
+	}
+
+	.pane {
+		min-height: 10rem;
 	}
 
 	textarea,
@@ -463,7 +595,7 @@
 	}
 
 	textarea {
-		min-height: 16rem;
+		min-height: 11rem;
 		resize: vertical;
 	}
 
@@ -582,12 +714,14 @@
 		.ws-form {
 			grid-template-columns: 1fr;
 		}
-		.tool-list li {
+		.tool-jump {
 			grid-template-columns: 1fr;
-			padding: 0.45rem 0;
+		}
+		.tabs {
+			grid-template-columns: 1fr;
 		}
 		textarea {
-			min-height: 12rem;
+			min-height: 9rem;
 		}
 	}
 </style>
