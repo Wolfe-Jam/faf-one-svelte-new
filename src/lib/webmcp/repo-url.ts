@@ -28,6 +28,16 @@ export const DEMO_REPOS: DemoRepo[] = [
 		id: 'agents-md-facts',
 		label: 'agents-md-facts',
 		href: 'https://github.com/Wolfe-Jam/agents-md-facts'
+	},
+	{
+		id: 'claude',
+		label: 'Claude',
+		href: 'https://github.com/Wolfe-Jam/claude-faf-mcp'
+	},
+	{
+		id: 'grok',
+		label: 'Grok',
+		href: 'https://github.com/Wolfe-Jam/grok-faf-mcp'
 	}
 ];
 
