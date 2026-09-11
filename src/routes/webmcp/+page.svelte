@@ -122,20 +122,20 @@
 </script>
 
 <svelte:head>
-	<title>WebMCP playground — score a .faf in the tab | FAF</title>
+	<title>WebMCP playground — Score Context in the tab | FAF</title>
 	<meta
 		name="description"
 		content="In-page WebMCP demo: score a .faf with WASM, capture 6Ws, emit AGENTS.md. No local MCP process. IANA application/vnd.faf+yaml."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="WebMCP playground — score a .faf in the tab" />
+	<meta property="og:title" content="WebMCP playground — Score Context in the tab" />
 	<meta
 		property="og:description"
 		content="Three read-only tools. WASM in the page. A stranger asks an agent to score a .faf and gets a number."
 	/>
 	<meta property="og:url" content="https://faf.one/webmcp" />
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="WebMCP playground — score a .faf in the tab" />
+	<meta name="twitter:title" content="WebMCP playground — Score Context in the tab" />
 	<meta
 		name="twitter:description"
 		content="Three read-only WebMCP tools. WASM in the page. No local MCP process."
@@ -145,7 +145,7 @@
 <main class="page">
 	<header class="hero">
 		<p class="kicker">WebMCP demo · IANA <code>application/vnd.faf+yaml</code></p>
-		<h1>Score a <code>.faf</code> in the tab.</h1>
+		<h1>Score Context in the tab.</h1>
 		<p class="sub">
 			This page is an in-page tool server. An agent with WebMCP enabled can call the tools below.
 			Scoring runs as WASM in the browser — no local MCP process.
@@ -260,7 +260,7 @@
 	</p>
 
 	<PageActions
-		headline="WebMCP playground — score a .faf in the tab."
+		headline="Score Context in the tab."
 		point1="Three read-only tools. WASM in the page. No local MCP process."
 		point2="Help guide what we build — comments · suggestions welcome."
 		url="https://faf.one/webmcp"
