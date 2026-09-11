@@ -244,54 +244,47 @@
 	<title>WebMCP playground — Score Context in the tab | FAF</title>
 	<meta
 		name="description"
-		content="In-page WebMCP demo: score a .faf with WASM, capture 6Ws, emit AGENTS.md. No local MCP process. IANA application/vnd.faf+yaml."
+		content="Paste your project.faf. See the Context Card, AGENTS.md, and the score in the browser. Try the sample, then use yours."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="WebMCP playground — Score Context in the tab" />
 	<meta
 		property="og:description"
-		content="Three read-only tools. WASM in the page. A stranger asks an agent to score a .faf and gets a number."
+		content="Paste your project.faf. See the Context Card, AGENTS.md, and the score in the browser."
 	/>
 	<meta property="og:url" content="https://faf.one/webmcp" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="WebMCP playground — Score Context in the tab" />
 	<meta
 		name="twitter:description"
-		content="Three read-only WebMCP tools. WASM in the page. No local MCP process."
+		content="Paste your project.faf. See the Context Card, AGENTS.md, and the score in the browser."
 	/>
 </svelte:head>
 
 <main class="page">
 	<header class="hero">
-		<p class="kicker">WebMCP demo · IANA <code>application/vnd.faf+yaml</code></p>
+		<p class="kicker">Demo · IANA <code>application/vnd.faf+yaml</code></p>
 		<h1>Score Context in the tab.</h1>
 		<p class="sub">
-			This page is an in-page tool server. An agent with WebMCP enabled can call the tools below.
-			Scoring runs as WASM in the browser — no local MCP process.
+			This page reads a <code>project.faf</code> and shows the Context Card, AGENTS.md, and the score
+			— here, in the browser. The sample is the demo. Yours is the point.
 		</p>
+		<ol class="how">
+			<li>Open <strong>Sample project.faf</strong> to see it work.</li>
+			<li>Paste <strong>your</strong> <code>project.faf</code> over the sample.</li>
+			<li>
+				Don’t have one yet?
+				<a href="/try">Make it in one line</a>
+				or
+				<a href="/guides/new-project">start a new project</a>.
+			</li>
+		</ol>
 		<p class="enable">
-			Enable <code>{FLAG}</code>
+			An agent can call the same tools. Enable <code>{FLAG}</code>
 			or the
 			<a href={INSPECTOR} target="_blank" rel="noopener noreferrer">Model Context Tool Inspector</a>.
+			<span class="val"> · {sourceLabel(webmcpSource)}</span>
 		</p>
-		<ul class="status">
-			<li>
-				<span class="key">WebMCP</span>
-				<span class="val">{sourceLabel(webmcpSource)}</span>
-			</li>
-			<li>
-				<span class="key">Kernel</span>
-				<span class="val">
-					{#if kernelReady}
-						WASM ready
-					{:else if kernelError}
-						{kernelError}
-					{:else}
-						loading…
-					{/if}
-				</span>
-			</li>
-		</ul>
 	</header>
 
 	<section class="tools" aria-labelledby="tools-heading">
@@ -314,6 +307,7 @@
 			<h2 id="score-heading"><code>project.faf</code></h2>
 			<button type="button" class="ghost" onclick={onFixture}>Sample project.faf</button>
 		</div>
+		<p class="hint">Demo file, or paste yours. Context Card, AGENTS.md, and Score read this box.</p>
 		<label class="sr-only" for="faf-yaml">project.faf</label>
 		<textarea
 			id="faf-yaml"
@@ -523,9 +517,24 @@
 	.sub,
 	.enable,
 	.hint,
+	.how,
 	.foot-note {
 		color: var(--faf-gray);
 		line-height: 1.55;
+	}
+
+	.how {
+		margin: 0 0 1.15rem;
+		padding-left: 1.2rem;
+		color: var(--faf-ink);
+	}
+
+	.how a {
+		color: var(--faf-cyan-text);
+	}
+
+	:global([data-theme='dark']) .how a {
+		color: var(--faf-cyan-dark);
 	}
 
 	.sub {
