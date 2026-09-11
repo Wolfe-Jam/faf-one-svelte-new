@@ -10,39 +10,14 @@ export type DemoRepo = {
 /** Repos that already publish a project.faf — this page reads the file, it does not clone. */
 export const DEMO_REPOS: DemoRepo[] = [
 	{
-		id: 'faf-cli',
-		label: 'faf-cli',
-		href: 'https://github.com/Wolfe-Jam/faf-cli'
-	},
-	{
-		id: 'faf-one',
-		label: 'faf.one',
-		href: 'https://faf.one'
-	},
-	{
-		id: 'zeph',
-		label: 'ZEPH',
-		href: 'https://github.com/Wolfe-Jam/xai-faf-zeph'
-	},
-	{
 		id: 'agents-md-facts',
 		label: 'agents-md-facts',
 		href: 'https://github.com/Wolfe-Jam/agents-md-facts'
 	},
 	{
-		id: 'claude',
-		label: 'Claude',
-		href: 'https://github.com/Wolfe-Jam/claude-faf-mcp'
-	},
-	{
-		id: 'grok',
-		label: 'Grok',
-		href: 'https://github.com/Wolfe-Jam/grok-faf-mcp'
-	},
-	{
-		id: 'grok-voice',
-		label: 'Grok Voice',
-		href: 'https://github.com/Wolfe-Jam/grok-faf-voice'
+		id: 'faf-cli',
+		label: 'faf-cli',
+		href: 'https://github.com/Wolfe-Jam/faf-cli'
 	}
 ];
 

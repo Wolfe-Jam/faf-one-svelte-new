@@ -1,5 +1,17 @@
 export {};
 
+/** WebMCP declarative attributes (declarative-api-explainer.md). */
+declare module 'svelte/elements' {
+	interface HTMLFormAttributes {
+		toolname?: string;
+		tooldescription?: string;
+		toolautosubmit?: boolean;
+	}
+	interface HTMLInputAttributes {
+		toolparamdescription?: string;
+	}
+}
+
 declare global {
 	interface SubmitEvent {
 		readonly agentInvoked?: boolean;

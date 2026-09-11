@@ -12,6 +12,8 @@ Three read-only tools:
 | `fill_6ws` | declarative form | YAML fragment under `human_context:` |
 | `emit_agents_md` | imperative | `{ markdown }` — minimal renderer, not the full CLI |
 
+Code: [`src/lib/webmcp/`](../../lib/webmcp/). `register.ts` registers the imperative tools; the `fill_6ws` form is in `+page.svelte`.
+
 ## Run locally
 
 From `faf-one-svelte-new`:
@@ -49,7 +51,7 @@ Native `document.modelContext.registerTool` is used when it exists. The `@mcp-b/
 
 [Model Context Tool Inspector](https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd)
 
-The box loads `project.faf` from a public repo that already has one (default: faf-cli). It does not clone. No file in that repo yet? `/try` (`faf git`).
+The box loads `project.faf` from a public repo that already has one (default: agents-md-facts). It does not clone.
 
 Receipt when all five are true:
 

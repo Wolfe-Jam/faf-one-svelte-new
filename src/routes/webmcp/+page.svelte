@@ -9,6 +9,8 @@
 		ensureModelContext,
 		FILL_6WS_DESCRIPTION,
 		registerFafWebmcpTools,
+		SCORE_FAF_DESCRIPTION,
+		SCORE_FAF_SCHEMA,
 		TOOL_NAMES
 	} from '$lib/webmcp/register';
 	import { contextCardText, readContext } from '$lib/webmcp/read-context';
@@ -19,8 +21,30 @@
 	const INSPECTOR =
 		'https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd';
 	const FLAG = 'chrome://flags/#enable-webmcp-testing';
+	const SOURCE = 'https://github.com/Wolfe-Jam/faf-one-svelte-new/tree/main/src/routes/webmcp';
+	const KNOWN_TOOLS = /** @type {readonly string[]} */ (TOOL_NAMES);
+	/** @type {Array<keyof import('$lib/webmcp/read-context').SixView>} */
+	const SIX_KEYS = ['who', 'what', 'why', 'where', 'when', 'how'];
+
+	/** Hero sample, built from the constants register.ts actually registers — it cannot drift. */
+	const SNIPPET_PROPS = Object.entries(SCORE_FAF_SCHEMA.properties)
+		.map(([key, p]) => `      ${key}: { type: '${p.type}', description: '${p.description}' }`)
+		.join(',\n');
+	const SNIPPET = `await document.modelContext.registerTool({
+  name: 'score_faf',
+  description: ${JSON.stringify(SCORE_FAF_DESCRIPTION)},
+  inputSchema: {
+    type: '${SCORE_FAF_SCHEMA.type}',
+    properties: {
+${SNIPPET_PROPS}
+    }
+  },
+  annotations: { readOnlyHint: true },
+  execute: async (input) => scoreFaf(input)
+});`;
 
 	/** Visitor one-liners — the code name is for the agent; this column is for humans. */
+	/** @type {Record<string, string>} */
 	const TOOL_BLURB = {
 		score_faf: 'Score this project’s context, 0–100',
 		fill_6ws: 'Who / What / Why / Where / When / How',
@@ -40,22 +64,29 @@
 	let how = $state('');
 
 	let webmcpSource = $state('loading');
-	let kernelReady = $state(false);
 	let kernelError = $state('');
-	let listedTools = $state([...TOOL_NAMES]);
+	/** @type {string[]} */
+	let listedTools = $state([...KNOWN_TOOLS]);
 	let displayTools = $derived(
-		TOOL_NAMES.filter((n) => listedTools.includes(n)).concat(
-			listedTools.filter((n) => !TOOL_NAMES.includes(n))
+		KNOWN_TOOLS.filter((n) => listedTools.includes(n)).concat(
+			listedTools.filter((n) => !KNOWN_TOOLS.includes(n))
 		)
 	);
-	/** @type {'card' | 'agents' | 'score'} */
-	let view = $state('card');
+	/** @type {'agents' | 'card' | 'score'} */
+	let view = $state('agents');
 	let contextView = $derived(readContext(yamlText));
+	/** AGENTS.md follows the box, like the Context Card, so the first tab is never empty. */
+	let agentsView = $derived.by(() => {
+		if (!yamlText.trim()) return { markdown: '', error: '' };
+		try {
+			return { markdown: emitAgentsMd(yamlText).markdown, error: '' };
+		} catch (err) {
+			return { markdown: '', error: JSON.stringify(toToolError(err), null, 2) };
+		}
+	});
 	/** @type {null | { score: number, tier?: string, populated?: number, active?: number, total?: number, ignored?: number, gaps?: string[], faf_version?: string }} */
 	let scoreCard = $state(null);
 	let scoreError = $state('');
-	let agentsMd = $state('');
-	let agentsError = $state('');
 	let sixYaml = $state('');
 	let busy = $state('');
 	let copied = $state(false);
@@ -65,6 +96,19 @@
 	/** @type {null | { scoreYaml: (yaml: string) => string, fetchText: typeof fetchAllowedYaml }} */
 	let deps = $state(null);
 
+	// The 6Ws form mirrors the loaded file, so a 100% project shows its own six answers.
+	$effect(() => {
+		const six = contextView?.six;
+		if (!six) return;
+		who = six.who;
+		what = six.what;
+		why = six.why;
+		where = six.where;
+		when = six.when;
+		how = six.how;
+		sixYaml = '';
+	});
+
 	onMount(() => {
 		let cancelled = false;
 		(async () => {
@@ -73,7 +117,6 @@
 				await initKernel();
 				if (cancelled) return;
 				deps = { scoreYaml, fetchText: fetchAllowedYaml };
-				kernelReady = true;
 			} catch (err) {
 				if (cancelled) return;
 				kernelError = err instanceof Error ? err.message : String(err);
@@ -118,38 +161,26 @@
 		busy = 'score';
 		try {
 			const result = await runScoreFafSafe({ yaml: yamlText }, deps);
-			if (result && typeof result === 'object' && typeof result.score === 'number' && !result.error) {
-				scoreCard = result;
-				scoreError = '';
-			} else {
+			if ('error' in result) {
 				scoreCard = null;
 				scoreError = JSON.stringify(result, null, 2);
+			} else {
+				scoreCard = result;
+				scoreError = '';
 			}
 		} finally {
 			busy = '';
 		}
 	}
 
-	function runEmit() {
-		busy = 'emit';
-		try {
-			agentsMd = emitAgentsMd(yamlText).markdown;
-			agentsError = '';
-		} catch (err) {
-			agentsMd = '';
-			agentsError = JSON.stringify(toToolError(err), null, 2);
-		} finally {
-			busy = '';
-		}
-	}
-
+	/** @param {'agents' | 'card' | 'score'} next */
 	async function selectView(next) {
 		view = next;
 		if (next === 'score') await runScore();
-		if (next === 'agents') runEmit();
 		jumpToBox();
 	}
 
+	/** @param {string} name */
 	function jumpTool(name) {
 		if (name === 'score_faf') selectView('score');
 		else if (name === 'emit_agents_md') selectView('agents');
@@ -160,6 +191,10 @@
 		}
 	}
 
+	/**
+	 * @param {string} href
+	 * @param {string} id
+	 */
 	async function loadFromHref(href, id) {
 		repoLoading = true;
 		repoNote = '';
@@ -174,7 +209,7 @@
 					repoInput = href;
 					activeRepo = id || '';
 					repoNote = '';
-					view = 'card';
+					view = 'agents';
 					return;
 				} catch (err) {
 					last = err;
@@ -182,7 +217,7 @@
 			}
 			repoNote =
 				messageOf(last) +
-				' This page reads a project.faf that is already there — it does not clone. No file in that repo yet? Make one on /try.';
+				' This page reads a project.faf that is already there — it does not clone.';
 		} catch (err) {
 			repoNote = messageOf(err);
 		} finally {
@@ -190,10 +225,12 @@
 		}
 	}
 
+	/** @param {import('$lib/webmcp/repo-url').DemoRepo} repo */
 	function onPickRepo(repo) {
 		loadFromHref(repo.href, repo.id);
 	}
 
+	/** @param {SubmitEvent} event */
 	function onLoadRepo(event) {
 		event.preventDefault();
 		loadFromHref(repoInput, '');
@@ -205,7 +242,9 @@
 		const lines = [`score: ${scoreCard.score}`];
 		if (scoreCard.tier) lines.push(`tier: ${scoreCard.tier}`);
 		if (scoreCard.populated != null && (scoreCard.active != null || scoreCard.total != null)) {
-			lines.push(`${scoreCard.populated} / ${scoreCard.active ?? scoreCard.total}`);
+			lines.push(
+				`${scoreCard.populated} / ${scoreCard.active ?? scoreCard.total} project context slots (fields) filled`
+			);
 		}
 		if (scoreCard.gaps?.length) lines.push(`missing: ${scoreCard.gaps.join(', ')}`);
 		return lines.join('\n');
@@ -213,7 +252,7 @@
 
 	function paneText() {
 		if (view === 'card') return contextView ? contextCardText(contextView) : '';
-		if (view === 'agents') return agentsError || agentsMd;
+		if (view === 'agents') return agentsView.error || agentsView.markdown;
 		return scoreText();
 	}
 
@@ -233,6 +272,10 @@
 		}, 1500);
 	}
 
+	/**
+	 * @param {string} filename
+	 * @param {string} body
+	 */
 	function downloadBlob(filename, body) {
 		const blob = new Blob([body], { type: 'text/markdown;charset=utf-8' });
 		const url = URL.createObjectURL(blob);
@@ -245,15 +288,14 @@
 
 	async function downloadAll() {
 		await runScore();
-		runEmit();
 		const body = [
+			'# AGENTS.md',
+			'',
+			agentsView.markdown || agentsView.error || '(none)',
+			'',
 			'# Context Card',
 			'',
 			(contextView ? contextCardText(contextView) : '') || '(none)',
-			'',
-			'# AGENTS.md',
-			'',
-			agentsMd || agentsError || '(none)',
 			'',
 			'# Score',
 			'',
@@ -268,13 +310,12 @@
 		event.preventDefault();
 		const yaml = fill6wsYaml({ who, what, why, where, when, how });
 		sixYaml = yaml;
-		view = 'card';
-		jumpToBox();
 		if (typeof event.respondWith === 'function') {
 			event.respondWith(Promise.resolve({ yaml }));
 		}
 	}
 
+	/** @param {string} source */
 	function sourceLabel(source) {
 		if (source === 'native') return 'native document.modelContext';
 		if (source === 'polyfill') return 'polyfill (@mcp-b/webmcp-polyfill)';
@@ -287,50 +328,50 @@
 	<title>WebMCP playground — Score Context in the tab | FAF</title>
 	<meta
 		name="description"
-		content="Paste your project.faf. See the Context Card, AGENTS.md, and the score in the browser. Try the sample, then use yours."
+		content="Paste your project.faf. See AGENTS.md, the Context Card, and the score in the browser. Try the sample, then use yours."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="WebMCP playground — Score Context in the tab" />
 	<meta
 		property="og:description"
-		content="Paste your project.faf. See the Context Card, AGENTS.md, and the score in the browser."
+		content="Paste your project.faf. See AGENTS.md, the Context Card, and the score in the browser."
 	/>
 	<meta property="og:url" content="https://faf.one/webmcp" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="WebMCP playground — Score Context in the tab" />
 	<meta
 		name="twitter:description"
-		content="Paste your project.faf. See the Context Card, AGENTS.md, and the score in the browser."
+		content="Paste your project.faf. See AGENTS.md, the Context Card, and the score in the browser."
 	/>
 </svelte:head>
 
 <main class="page">
 	<header class="hero">
-		<p class="kicker">Demo · IANA <code>application/vnd.faf+yaml</code></p>
+		<p class="kicker">WebMCP demo</p>
 		<h1>Score Context in the tab.</h1>
 		<p class="sub">
-			This page reads a <code>project.faf</code> from a public repo that already has one — no clone.
-			Context Card, AGENTS.md, and Score run on that file. Famous repos without a
-			<code>project.faf</code> need <a href="/try"><code>faf git</code></a> first.
+			This page reads a <code>project.faf</code> (a small YAML file of context to boost AGENTS.md) from a
+			public repo that already has one — no clone.
+			AGENTS.md, Context Card, and Score run on that file.
 		</p>
-		<ol class="how">
-			<li>The box loads from a real repo so it always has data.</li>
-			<li>Pick ours, or paste a GitHub URL whose repo already has <code>project.faf</code>.</li>
-			<li>
-				No file in that repo yet? That’s a clone —
-				<a href="/try">make one in one line</a>.
-			</li>
-		</ol>
-		<p class="enable">
-			An agent can call the same tools. Enable <code>{FLAG}</code>
-			or the
-			<a href={INSPECTOR} target="_blank" rel="noopener noreferrer">Model Context Tool Inspector</a>.
-			<span class="val"> · {sourceLabel(webmcpSource)}</span>
-		</p>
+		<div class="btn-row">
+			<a class="primary" href="#try">Try it</a>
+			<a class="ghost" href={SOURCE} target="_blank" rel="noopener noreferrer">View source</a>
+		</div>
+		<pre class="output snippet"><code>{SNIPPET}</code></pre>
 	</header>
 
+	<section class="plain" aria-labelledby="why-heading">
+		<h2 id="why-heading">Why in the tab?</h2>
+		<p>
+			WebMCP lets a web page give an agent named tools with typed inputs. This page already holds the
+			file and the scorer, so an agent calls <code>score_faf</code> instead of clicking through the UI.
+			No local MCP server.
+		</p>
+	</section>
+
 	<section class="tools" aria-labelledby="tools-heading">
-		<h2 id="tools-heading">Tools this page exposes</h2>
+		<h2 id="tools-heading">WebMCP tools</h2>
 		<p class="hint">Same names an agent sees — plus what each one does.</p>
 		<ol class="tool-list">
 			{#each displayTools as name}
@@ -344,11 +385,12 @@
 		</ol>
 	</section>
 
+	<h2 id="try" class="section-title">Try it</h2>
 	<section id="box" class="work-box" aria-labelledby="score-heading">
 		<div class="row-head">
 			<h2 id="score-heading"><code>project.faf</code></h2>
 		</div>
-		<p class="hint">Loaded from a repo that already has the file. Context Card, AGENTS.md, and Score read this box.</p>
+		<p class="hint">Loaded from a repo that already has the file. AGENTS.md, Context Card, and Score read this box.</p>
 		<div class="repo-row" role="group" aria-label="Demo repos">
 			{#each DEMO_REPOS as repo}
 				<button
@@ -388,23 +430,22 @@
 			<button
 				type="button"
 				role="tab"
+				id="tab-agents"
+				aria-selected={view === 'agents'}
+				aria-controls="pane-agents"
+				onclick={() => selectView('agents')}
+			>
+				AGENTS.md
+			</button>
+			<button
+				type="button"
+				role="tab"
 				id="tab-card"
 				aria-selected={view === 'card'}
 				aria-controls="pane-card"
 				onclick={() => selectView('card')}
 			>
 				Context Card
-			</button>
-			<button
-				type="button"
-				role="tab"
-				id="tab-agents"
-				aria-selected={view === 'agents'}
-				aria-controls="pane-agents"
-				onclick={() => selectView('agents')}
-				disabled={busy === 'emit'}
-			>
-				AGENTS.md
 			</button>
 			<button
 				type="button"
@@ -443,7 +484,7 @@
 						{#if contextView.version}<span>project.faf {contextView.version}</span>{/if}
 					</div>
 					<dl class="card-six">
-						{#each ['who', 'what', 'why', 'where', 'when', 'how'] as key}
+						{#each SIX_KEYS as key}
 							{#if contextView.six[key]}
 								<div>
 									<dt>{key}</dt>
@@ -472,7 +513,7 @@
 			aria-labelledby="tab-agents"
 			hidden={view !== 'agents'}
 		>
-			<pre class="output">{agentsError || agentsMd || 'Open AGENTS.md to write it from the file.'}</pre>
+			<pre class="output">{agentsView.error || agentsView.markdown || 'Paste a project.faf to write AGENTS.md.'}</pre>
 		</div>
 
 		<div
@@ -484,11 +525,16 @@
 		>
 			{#if scoreCard}
 				<div class="score-view">
-					<div class="card-score">{scoreCard.score}</div>
+					<div class="card-score">
+						{scoreCard.score}
+						{#if scoreCard.score === 100}
+							<img class="trophy" src="/faf-trophy.png" alt="Trophy" width="44" height="44" />
+						{/if}
+					</div>
 					<div class="card-meta">
-						{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
+						{#if scoreCard.tier && scoreCard.score !== 100}<span>{scoreCard.tier}</span>{/if}
 						{#if scoreCard.populated != null && (scoreCard.active != null || scoreCard.total != null)}
-							<span>{scoreCard.populated} / {scoreCard.active ?? scoreCard.total}</span>
+							<span>{scoreCard.populated} / {scoreCard.active ?? scoreCard.total} project context slots (fields) filled</span>
 						{/if}
 					</div>
 					{#if scoreCard.gaps?.length}
@@ -503,7 +549,7 @@
 
 	<section id="sixws" class="ws-block" aria-labelledby="ws-heading">
 		<h2 id="ws-heading">Who / What / Why / Where / When / How</h2>
-		<p class="hint">Returns YAML slots only — no file is saved, no navigation.</p>
+		<p class="hint">This file's six human-context slots. Edit any, then Return YAML. Nothing is saved.</p>
 		<form
 			class="ws-form"
 			toolname="fill_6ws"
@@ -513,30 +559,86 @@
 		>
 			<label>
 				<span>who</span>
-				<input name="who" bind:value={who} toolparamdescription="Who is this for?" />
+				<input name="who" bind:value={who} toolparamdescription="Who is this for?" placeholder="Who is this for?" />
 			</label>
 			<label>
 				<span>what</span>
-				<input name="what" bind:value={what} toolparamdescription="What does it do?" />
+				<input name="what" bind:value={what} toolparamdescription="What does it do?" placeholder="What does it do?" />
 			</label>
 			<label>
 				<span>why</span>
-				<input name="why" bind:value={why} toolparamdescription="Why does it exist?" />
+				<input name="why" bind:value={why} toolparamdescription="Why does it exist?" placeholder="Why does it exist?" />
 			</label>
 			<label>
 				<span>where</span>
-				<input name="where" bind:value={where} toolparamdescription="Where does it run?" />
+				<input name="where" bind:value={where} toolparamdescription="Where does it run?" placeholder="Where does it run?" />
 			</label>
 			<label>
 				<span>when</span>
-				<input name="when" bind:value={when} toolparamdescription="When is it happening?" />
+				<input name="when" bind:value={when} toolparamdescription="When is it happening?" placeholder="When is it happening?" />
 			</label>
 			<label>
 				<span>how</span>
-				<input name="how" bind:value={how} toolparamdescription="How is it delivered?" />
+				<input name="how" bind:value={how} toolparamdescription="How is it delivered?" placeholder="How is it delivered?" />
 			</label>
 			<button type="submit" class="primary">Return YAML</button>
 		</form>
+		{#if sixYaml}
+			<pre class="output six-output">{sixYaml}</pre>
+		{/if}
+	</section>
+
+	<section class="plain" aria-labelledby="use-heading">
+		<h2 id="use-heading">How to use</h2>
+		<ol class="steps">
+			<li>
+				<h3>Turn on WebMCP</h3>
+				<p>
+					Enable <code>{FLAG}</code> and relaunch Chrome, or use the
+					<a href={INSPECTOR} target="_blank" rel="noopener noreferrer">Model Context Tool Inspector</a>.
+				</p>
+			</li>
+			<li>
+				<h3>Open this page</h3>
+				<p>It registers the tools on load. Now: <span class="val">{sourceLabel(webmcpSource)}</span>.</p>
+			</li>
+			<li>
+				<h3>Ask your agent</h3>
+				<p>Ask a WebMCP-aware agent to score the project, or run <code>score_faf</code> from the Inspector.</p>
+			</li>
+			<li>
+				<h3>Change the file</h3>
+				<p>
+					Delete a line in the box, like <code>why:</code>, and score again. The score drops and names
+					the missing slot.
+				</p>
+			</li>
+		</ol>
+	</section>
+
+	<section class="plain" aria-labelledby="dev-heading">
+		<h2 id="dev-heading">How it works</h2>
+		<ul class="dev-list">
+			<li>
+				<code>score_faf</code> and <code>emit_agents_md</code> are registered with
+				<code>document.modelContext.registerTool()</code>, <code>readOnlyHint: true</code>.
+			</li>
+			<li>
+				<code>fill_6ws</code> is a plain form with <code>toolname</code>,
+				<code>tooldescription</code>, and <code>toolautosubmit</code>. It answers with
+				<code>respondWith()</code> and does not navigate.
+			</li>
+			<li>
+				Native <code>document.modelContext</code> first. <code>@mcp-b/webmcp-polyfill</code> only as a
+				fallback.
+			</li>
+			<li>
+				Scoring runs as WASM in the tab. The tools' only network call is fetching a
+				<code>project.faf</code> over https from <code>raw.githubusercontent.com</code> or
+				<code>faf.one</code>, capped at 256 KB.
+			</li>
+		</ul>
+		<p class="hint"><a href={SOURCE} target="_blank" rel="noopener noreferrer">Source and README</a> · MIT</p>
 	</section>
 
 	<p class="foot-note">
@@ -547,6 +649,9 @@
 			rel="noopener noreferrer">comments · suggestions welcome</a
 		>.
 	</p>
+	<p class="foot-note">
+		<a href={SOURCE} target="_blank" rel="noopener noreferrer">Source</a> · <a href="/privacy">Privacy</a>
+	</p>
 
 	<PageActions
 		headline="Score Context in the tab."
@@ -556,6 +661,7 @@
 		cta="faf.one/webmcp"
 		ctaPrefix="Open →"
 		hashtags="FAF,WebMCP"
+		sponsor={false}
 	/>
 </main>
 
@@ -563,7 +669,7 @@
 	.page {
 		max-width: 52rem;
 		margin: 0 auto;
-		padding: 4.5rem 1.25rem 3rem;
+		padding: 2.5rem 1.25rem 3rem;
 	}
 
 	.hero h1 {
@@ -579,49 +685,85 @@
 		font-weight: 600;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 	}
 
 	.sub,
-	.enable,
 	.hint,
-	.how,
 	.foot-note {
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		line-height: 1.55;
 	}
 
-	.how {
-		margin: 0 0 1.15rem;
-		padding-left: 1.2rem;
-		color: var(--faf-ink);
-	}
-
-	.how a {
-		color: var(--faf-cyan-text);
-	}
-
-	:global([data-theme='dark']) .how a {
-		color: var(--faf-cyan-dark);
-	}
-
 	.sub {
-		margin: 0 0 1rem;
+		margin: 0 0 1.25rem;
 		font-size: 1.05rem;
 		color: var(--faf-ink);
 	}
 
-	.enable {
+	.btn-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
 		margin: 0 0 1.25rem;
-		font-size: 0.95rem;
 	}
 
-	.enable a,
+	.btn-row a {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	.hero {
+		margin: 0 0 2.5rem;
+	}
+
+	.output.snippet {
+		min-height: 0;
+		font-size: 0.8rem;
+	}
+
+	section.plain {
+		background: transparent;
+		border: 0;
+		padding: 0;
+		margin: 0 0 2.5rem;
+	}
+
+	.plain h2,
+	.section-title {
+		font-size: 1.35rem;
+		margin: 0 0 0.6rem;
+	}
+
+	.section-title {
+		scroll-margin-top: 1rem;
+	}
+
+	.plain p {
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.steps {
+		margin: 0.5rem 0 0;
+		padding-left: 1.3rem;
+		display: grid;
+		gap: 0.9rem;
+	}
+
+	.steps h3 {
+		margin: 0 0 0.2rem;
+		font-size: 1rem;
+	}
+
+	.steps a,
+	.hint a,
 	.foot-note a {
 		color: var(--faf-cyan-text);
 	}
 
-	:global([data-theme='dark']) .enable a,
+	:global([data-theme='dark']) .steps a,
+	:global([data-theme='dark']) .hint a,
 	:global([data-theme='dark']) .foot-note a {
 		color: var(--faf-cyan-dark);
 	}
@@ -631,28 +773,8 @@
 		font-size: 0.9em;
 	}
 
-	.status {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 2rem;
-		display: grid;
-		gap: 0.4rem;
-	}
-
-	.status li {
-		display: flex;
-		gap: 0.75rem;
-		flex-wrap: wrap;
-		font-size: 0.9rem;
-	}
-
-	.key {
-		font-weight: 700;
-		min-width: 4.5rem;
-	}
-
 	.val {
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 	}
 
 	section {
@@ -701,7 +823,7 @@
 	}
 
 	.tool-list .blurb {
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		font-size: 0.92rem;
 		line-height: 1.4;
 	}
@@ -745,17 +867,29 @@
 
 	.repo-note {
 		margin: 0 0 0.75rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		font-size: 0.9rem;
 		line-height: 1.45;
 	}
 
-	#box {
-		scroll-margin-top: 4.5rem;
+	#box,
+	#sixws {
+		scroll-margin-top: 1rem;
 	}
 
-	#sixws {
-		scroll-margin-top: 4.5rem;
+	.dev-list {
+		margin: 0.5rem 0 0.75rem;
+		padding-left: 1.2rem;
+		line-height: 1.55;
+	}
+
+	.dev-list li {
+		padding: 0.15rem 0;
+	}
+
+	.six-output {
+		min-height: 0;
+		margin-top: 0.85rem;
 	}
 
 	.tabs {
@@ -832,7 +966,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 	}
 
 	.ws-form button {
@@ -911,7 +1045,7 @@
 		font-weight: 700;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 	}
 
 	.card-six dd {
@@ -922,7 +1056,7 @@
 		margin: 1rem 0 0;
 		padding: 0;
 		list-style: none;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		font-size: 0.9rem;
 	}
 
@@ -933,6 +1067,9 @@
 	}
 
 	.card-score {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
 		font-size: 3rem;
 		font-weight: 800;
 		letter-spacing: -0.04em;
@@ -940,12 +1077,17 @@
 		color: var(--faf-orange);
 	}
 
+	.trophy {
+		width: 2.75rem;
+		height: 2.75rem;
+	}
+
 	.card-meta {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5rem 1rem;
 		margin-top: 0.75rem;
-		color: var(--faf-gray);
+		color: var(--faf-dark);
 		font-size: 0.92rem;
 	}
 

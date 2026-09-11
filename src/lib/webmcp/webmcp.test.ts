@@ -92,7 +92,7 @@ describe('assertAllowedUrl', () => {
 	});
 
 	it('default demo repo is one that already has a project.faf', () => {
-		expect(DEFAULT_REPO.href).toContain('faf-cli');
+		expect(DEFAULT_REPO.href).toContain('agents-md-facts');
 	});
 
 	it('rejects other hosts', () => {
@@ -296,6 +296,27 @@ describe('emit_agents_md', () => {
 		expect(markdown).not.toContain('slotignored');
 		expect(markdown).toContain('- why: Page-local scoring without a local MCP process');
 		expect(markdown).toContain('compiled from application/vnd.faf+yaml');
+	});
+
+	it('renders commands the way faf-cli does: setup & build, then tests', () => {
+		const { markdown } = emitAgentsMd(
+			[
+				'project:',
+				'  name: demo',
+				'commands:',
+				'  test: bun run test',
+				'  lint: bun run lint',
+				'  build: bun run build',
+				'  install: bun install',
+				'  cicd: slotignored'
+			].join('\n')
+		);
+		expect(markdown).toContain(
+			'## Setup & build\n\n```bash\nbun install    # install\nbun run build    # build\n```'
+		);
+		expect(markdown).toContain('## Run the tests\n\n```bash\nbun run test\nbun run lint\n```');
+		expect(markdown).not.toContain('slotignored');
+		expect(markdown.indexOf('## Setup & build')).toBeLessThan(markdown.indexOf('compiled from'));
 	});
 
 	it('returns a structured invalid_yaml error on broken YAML', () => {
