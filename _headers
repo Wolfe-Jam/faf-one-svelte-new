@@ -4,6 +4,13 @@
 /*
   Strict-Transport-Security: max-age=31536000
 
+# WebMCP playground — tools permission is same-origin only. No Cloudflare pack.
+/webmcp
+  Permissions-Policy: tools=(self)
+
+/webmcp/
+  Permissions-Policy: tools=(self)
+
 # Correct media types for FAF artifacts served from the well-known AI Catalog.
 /.well-known/ai-catalog.json
   Content-Type: application/ai-catalog+json; charset=utf-8

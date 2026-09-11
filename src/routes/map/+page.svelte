@@ -28,6 +28,7 @@
 
 		// ── Ecosystem (AI on-ramps) ──────────────────────────────
 		'/mcp': { title: 'MCP', category: 'Ecosystem', emoji: '🔌', description: 'Model Context Protocol', order: 1 },
+		'/webmcp': { title: 'WebMCP', category: 'Ecosystem', emoji: '🧰', description: 'In-page score · 6Ws · AGENTS.md', order: 1.5 },
 		'/claude': { title: 'Claude', category: 'Ecosystem', emoji: '🧠', description: 'Anthropic Claude', order: 2 },
 		'/grok': { title: 'Grok', category: 'Ecosystem', emoji: '🤖', description: 'xAI / Grok', order: 3 },
 		'/codex': { title: 'Codex', category: 'Ecosystem', emoji: '💻', description: 'OpenAI Codex', order: 4 },

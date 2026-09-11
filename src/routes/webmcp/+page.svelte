@@ -1,0 +1,498 @@
+<script>
+	import { onMount } from 'svelte';
+	import PageActions from '$lib/components/PageActions.svelte';
+	import { emitAgentsMd } from '$lib/webmcp/emit-agents';
+	import { toToolError } from '$lib/webmcp/errors';
+	import { fill6wsYaml } from '$lib/webmcp/fill-6ws';
+	import { FIXTURE_YAML } from '$lib/webmcp/fixture';
+	import {
+		ensureModelContext,
+		FILL_6WS_DESCRIPTION,
+		registerFafWebmcpTools,
+		TOOL_NAMES
+	} from '$lib/webmcp/register';
+	import { runScoreFafSafe } from '$lib/webmcp/score-faf';
+	import { fetchAllowedYaml } from '$lib/webmcp/yaml-url';
+
+	const INSPECTOR =
+		'https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd';
+	const FLAG = 'chrome://flags/#enable-webmcp-testing';
+
+	let yamlText = $state('');
+	let who = $state('');
+	let what = $state('');
+	let why = $state('');
+	let where = $state('');
+	let when = $state('');
+	let how = $state('');
+
+	let webmcpSource = $state('loading');
+	let kernelReady = $state(false);
+	let kernelError = $state('');
+	let listedTools = $state([...TOOL_NAMES]);
+	let outputLabel = $state('output');
+	let outputText = $state('');
+	let busy = $state('');
+
+	/** @type {null | { scoreYaml: (yaml: string) => string, fetchText: typeof fetchAllowedYaml }} */
+	let deps = $state(null);
+
+	onMount(() => {
+		let cancelled = false;
+		(async () => {
+			try {
+				const { initKernel, scoreYaml } = await import('$lib/webmcp/kernel');
+				await initKernel();
+				if (cancelled) return;
+				deps = { scoreYaml, fetchText: fetchAllowedYaml };
+				kernelReady = true;
+			} catch (err) {
+				if (cancelled) return;
+				kernelError = err instanceof Error ? err.message : String(err);
+			}
+
+			try {
+				const { context, source } = await ensureModelContext();
+				if (cancelled) return;
+				webmcpSource = source;
+				if (context && deps) {
+					listedTools = await registerFafWebmcpTools(context, deps);
+				}
+			} catch (err) {
+				if (cancelled) return;
+				webmcpSource = 'none';
+				kernelError = kernelError || (err instanceof Error ? err.message : String(err));
+			}
+		})();
+		return () => {
+			cancelled = true;
+		};
+	});
+
+	function show(label, value) {
+		outputLabel = label;
+		outputText = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+	}
+
+	async function onScore() {
+		if (!deps) {
+			show('score_faf', { error: 'kernel_not_ready', message: kernelError || 'WASM not ready' });
+			return;
+		}
+		busy = 'score';
+		try {
+			const result = await runScoreFafSafe({ yaml: yamlText }, deps);
+			show('score_faf', result);
+		} finally {
+			busy = '';
+		}
+	}
+
+	function onFixture() {
+		yamlText = FIXTURE_YAML;
+	}
+
+	function onEmit() {
+		busy = 'emit';
+		try {
+			show('emit_agents_md', emitAgentsMd(yamlText));
+		} catch (err) {
+			show('emit_agents_md', toToolError(err));
+		} finally {
+			busy = '';
+		}
+	}
+
+	/** @param {SubmitEvent} event */
+	function onFill6ws(event) {
+		event.preventDefault();
+		const yaml = fill6wsYaml({ who, what, why, where, when, how });
+		show('fill_6ws', yaml);
+		if (typeof event.respondWith === 'function') {
+			event.respondWith(Promise.resolve({ yaml }));
+		}
+	}
+
+	function sourceLabel(source) {
+		if (source === 'native') return 'native document.modelContext';
+		if (source === 'polyfill') return 'polyfill (@mcp-b/webmcp-polyfill)';
+		if (source === 'loading') return 'detecting…';
+		return 'not available — human UI still works';
+	}
+</script>
+
+<svelte:head>
+	<title>WebMCP playground — score a .faf in the tab | FAF</title>
+	<meta
+		name="description"
+		content="In-page WebMCP demo: score a .faf with WASM, capture 6Ws, emit AGENTS.md. No local MCP process. IANA application/vnd.faf+yaml."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="WebMCP playground — score a .faf in the tab" />
+	<meta
+		property="og:description"
+		content="Three read-only tools. WASM in the page. A stranger asks an agent to score a .faf and gets a number."
+	/>
+	<meta property="og:url" content="https://faf.one/webmcp" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="WebMCP playground — score a .faf in the tab" />
+	<meta
+		name="twitter:description"
+		content="Three read-only WebMCP tools. WASM in the page. No local MCP process."
+	/>
+</svelte:head>
+
+<main class="page">
+	<header class="hero">
+		<p class="kicker">WebMCP demo · IANA <code>application/vnd.faf+yaml</code></p>
+		<h1>Score a <code>.faf</code> in the tab.</h1>
+		<p class="sub">
+			This page is an in-page tool server. An agent with WebMCP enabled can call the tools below.
+			Scoring runs as WASM in the browser — no local MCP process, no call to
+			<code>ide.faf.one</code>.
+		</p>
+		<p class="enable">
+			Enable <code>{FLAG}</code>
+			or the
+			<a href={INSPECTOR} target="_blank" rel="noopener noreferrer">Model Context Tool Inspector</a>.
+		</p>
+		<ul class="status">
+			<li>
+				<span class="key">WebMCP</span>
+				<span class="val">{sourceLabel(webmcpSource)}</span>
+			</li>
+			<li>
+				<span class="key">Kernel</span>
+				<span class="val">
+					{#if kernelReady}
+						WASM ready
+					{:else if kernelError}
+						{kernelError}
+					{:else}
+						loading…
+					{/if}
+				</span>
+			</li>
+		</ul>
+	</header>
+
+	<section class="tools" aria-labelledby="tools-heading">
+		<h2 id="tools-heading">Tools this page exposes</h2>
+		<p class="hint">Same names a WebMCP agent sees.</p>
+		<ol>
+			{#each listedTools.length ? listedTools : TOOL_NAMES as name}
+				<li><code>{name}</code></li>
+			{/each}
+		</ol>
+	</section>
+
+	<section class="score-block" aria-labelledby="score-heading">
+		<div class="row-head">
+			<h2 id="score-heading"><code>score_faf</code></h2>
+			<div class="actions">
+				<button type="button" class="ghost" onclick={onFixture}>Load fixture</button>
+				<button type="button" class="ghost" onclick={onEmit} disabled={busy === 'emit'}>
+					Emit AGENTS.md
+				</button>
+				<button type="button" class="primary" onclick={onScore} disabled={busy === 'score'}>
+					Score
+				</button>
+			</div>
+		</div>
+		<label class="sr-only" for="faf-yaml">.faf YAML</label>
+		<textarea
+			id="faf-yaml"
+			bind:value={yamlText}
+			spellcheck="false"
+			placeholder="Paste .faf YAML, or load the fixture."
+		></textarea>
+	</section>
+
+	<section class="ws-block" aria-labelledby="ws-heading">
+		<h2 id="ws-heading"><code>fill_6ws</code></h2>
+		<p class="hint">Declarative form. Submit returns YAML slots only — no file is saved, no navigation.</p>
+		<form
+			class="ws-form"
+			toolname="fill_6ws"
+			tooldescription={FILL_6WS_DESCRIPTION}
+			toolautosubmit
+			onsubmit={onFill6ws}
+		>
+			<label>
+				<span>who</span>
+				<input name="who" bind:value={who} toolparamdescription="Who is this for?" />
+			</label>
+			<label>
+				<span>what</span>
+				<input name="what" bind:value={what} toolparamdescription="What does it do?" />
+			</label>
+			<label>
+				<span>why</span>
+				<input name="why" bind:value={why} toolparamdescription="Why does it exist?" />
+			</label>
+			<label>
+				<span>where</span>
+				<input name="where" bind:value={where} toolparamdescription="Where does it run?" />
+			</label>
+			<label>
+				<span>when</span>
+				<input name="when" bind:value={when} toolparamdescription="When is it happening?" />
+			</label>
+			<label>
+				<span>how</span>
+				<input name="how" bind:value={how} toolparamdescription="How is it delivered?" />
+			</label>
+			<button type="submit" class="primary">Return YAML</button>
+		</form>
+	</section>
+
+	<section class="out-block" aria-labelledby="out-heading">
+		<h2 id="out-heading">Output · <code>{outputLabel}</code></h2>
+		<pre class="output">{outputText || 'Score, 6Ws, or AGENTS.md land here.'}</pre>
+	</section>
+
+	<p class="foot-note">
+		Read-only. Three tools. Origin-isolated. Help guide what we build —
+		<a
+			href="https://twitter.com/intent/tweet?text=Help%20guide%20what%20we%20build%20%E2%80%94%20Comments%20%C2%B7%20suggestions%20welcome.&url=https%3A%2F%2Ffaf.one%2Fwebmcp"
+			target="_blank"
+			rel="noopener noreferrer">comments · suggestions welcome</a
+		>.
+	</p>
+
+	<PageActions
+		headline="WebMCP playground — score a .faf in the tab."
+		point1="Three read-only tools. WASM in the page. No local MCP process."
+		point2="Help guide what we build — comments · suggestions welcome."
+		url="https://faf.one/webmcp"
+		cta="faf.one/webmcp"
+		ctaPrefix="Open →"
+		hashtags="FAF,WebMCP"
+	/>
+</main>
+
+<style>
+	.page {
+		max-width: 52rem;
+		margin: 0 auto;
+		padding: 4.5rem 1.25rem 3rem;
+	}
+
+	.hero h1 {
+		font-size: clamp(1.8rem, 4vw, 2.6rem);
+		line-height: 1.15;
+		margin: 0.35rem 0 0.75rem;
+		letter-spacing: -0.03em;
+	}
+
+	.kicker {
+		margin: 0;
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--faf-gray);
+	}
+
+	.sub,
+	.enable,
+	.hint,
+	.foot-note {
+		color: var(--faf-gray);
+		line-height: 1.55;
+	}
+
+	.sub {
+		margin: 0 0 1rem;
+		font-size: 1.05rem;
+		color: var(--faf-ink);
+	}
+
+	.enable {
+		margin: 0 0 1.25rem;
+		font-size: 0.95rem;
+	}
+
+	.enable a,
+	.foot-note a {
+		color: var(--faf-cyan-text);
+	}
+
+	:global([data-theme='dark']) .enable a,
+	:global([data-theme='dark']) .foot-note a {
+		color: var(--faf-cyan-dark);
+	}
+
+	code {
+		font-family: var(--font-mono);
+		font-size: 0.9em;
+	}
+
+	.status {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2rem;
+		display: grid;
+		gap: 0.4rem;
+	}
+
+	.status li {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		font-size: 0.9rem;
+	}
+
+	.key {
+		font-weight: 700;
+		min-width: 4.5rem;
+	}
+
+	.val {
+		color: var(--faf-gray);
+	}
+
+	section {
+		margin: 0 0 2rem;
+		padding: 1.25rem 1.2rem 1.35rem;
+		background: var(--faf-surface);
+		border: 1px solid var(--faf-hairline);
+		border-radius: 12px;
+	}
+
+	h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.05rem;
+	}
+
+	.tools ol {
+		margin: 0.5rem 0 0;
+		padding-left: 1.2rem;
+		font-family: var(--font-mono);
+	}
+
+	.row-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		margin-bottom: 0.75rem;
+	}
+
+	.row-head h2 {
+		margin: 0;
+	}
+
+	.actions {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	textarea,
+	input,
+	.output {
+		width: 100%;
+		font-family: var(--font-mono);
+		font-size: 0.85rem;
+		background: var(--faf-code-bg);
+		color: var(--faf-ink);
+		border: 1px solid var(--faf-hairline);
+		border-radius: 8px;
+		padding: 0.75rem;
+	}
+
+	textarea {
+		min-height: 16rem;
+		resize: vertical;
+	}
+
+	.ws-form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem 1rem;
+	}
+
+	.ws-form label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--faf-gray);
+	}
+
+	.ws-form button {
+		grid-column: 1 / -1;
+		justify-self: start;
+		margin-top: 0.25rem;
+	}
+
+	.primary,
+	.ghost {
+		font: inherit;
+		font-weight: 700;
+		border-radius: 8px;
+		padding: 0.55rem 0.95rem;
+		cursor: pointer;
+	}
+
+	.primary {
+		background: var(--faf-orange);
+		color: var(--faf-on-accent);
+		border: 2px solid var(--faf-orange);
+	}
+
+	.primary:hover {
+		background: var(--faf-orange-dark);
+		border-color: var(--faf-orange-dark);
+	}
+
+	.ghost {
+		background: transparent;
+		color: var(--faf-ink);
+		border: 2px solid var(--faf-border-strong);
+	}
+
+	.primary:disabled,
+	.ghost:disabled {
+		opacity: 0.55;
+		cursor: wait;
+	}
+
+	.output {
+		min-height: 10rem;
+		white-space: pre-wrap;
+		overflow: auto;
+		margin: 0;
+	}
+
+	.foot-note {
+		font-size: 0.9rem;
+		margin: 0 0 0.5rem;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	@media (max-width: 640px) {
+		.ws-form {
+			grid-template-columns: 1fr;
+		}
+		textarea {
+			min-height: 12rem;
+		}
+	}
+</style>
