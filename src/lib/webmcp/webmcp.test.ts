@@ -7,6 +7,7 @@ import { FIXTURE_YAML } from './fixture';
 import { mapScoreResult, scoreRatio } from './map-score';
 import { registerFafWebmcpTools } from './register';
 import { runScoreFaf, runScoreFafSafe } from './score-faf';
+import { DEFAULT_REPO, fafUrlsFromInput } from './repo-url';
 import { assertAllowedUrl, MAX_YAML_BYTES } from './yaml-url';
 
 const KERNEL_OK = JSON.stringify({
@@ -63,6 +64,35 @@ describe('assertAllowedUrl', () => {
 		} catch (err) {
 			expect((err as ToolError).message).toMatch(/mcp endpoints/);
 		}
+	});
+
+	it('rewrites a GitHub repo to raw project.faf candidates', () => {
+		const urls = fafUrlsFromInput('https://github.com/Wolfe-Jam/faf-cli');
+		expect(urls[0]).toBe(
+			'https://raw.githubusercontent.com/Wolfe-Jam/faf-cli/main/project.faf'
+		);
+		expect(urls).toContain(
+			'https://raw.githubusercontent.com/Wolfe-Jam/faf-cli/master/project.faf'
+		);
+	});
+
+	it('maps faf.one to the well-known project.faf', () => {
+		expect(fafUrlsFromInput('https://faf.one')).toEqual([
+			'https://faf.one/.well-known/project.faf'
+		]);
+	});
+
+	it('accepts owner/repo shorthand', () => {
+		expect(fafUrlsFromInput('Wolfe-Jam/faf-cli')[0]).toContain('raw.githubusercontent.com');
+	});
+
+	it('does not fetch github.com HTML', () => {
+		const urls = fafUrlsFromInput('https://github.com/facebook/react');
+		expect(urls.every((u) => u.startsWith('https://raw.githubusercontent.com/'))).toBe(true);
+	});
+
+	it('default demo repo is one that already has a project.faf', () => {
+		expect(DEFAULT_REPO.href).toContain('faf-cli');
 	});
 
 	it('rejects other hosts', () => {

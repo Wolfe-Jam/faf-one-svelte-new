@@ -1,6 +1,7 @@
 import { ToolError, toToolError } from './errors';
 import { mapScoreResult, type ScoreResult } from './map-score';
-import { assertAllowedUrl, assertYamlSize, type FetchText } from './yaml-url';
+import { fafUrlsFromInput } from './repo-url';
+import { assertYamlSize, type FetchText } from './yaml-url';
 
 export type ScoreInput = {
 	yaml?: string;
@@ -29,8 +30,17 @@ export async function resolveYaml(
 		return yaml;
 	}
 	if (url) {
-		const allowed = assertAllowedUrl(url);
-		return deps.fetchText(allowed, signal);
+		const candidates = fafUrlsFromInput(url);
+		let last: unknown;
+		for (const href of candidates) {
+			try {
+				return await deps.fetchText(new URL(href), signal);
+			} catch (err) {
+				last = err;
+			}
+		}
+		if (last instanceof Error) throw last;
+		throw last ?? new ToolError('fetch_failed', 'could not fetch project.faf from that repo');
 	}
 	throw new ToolError('invalid_input', 'require yaml or url');
 }

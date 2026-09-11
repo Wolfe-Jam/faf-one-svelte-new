@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import PageActions from '$lib/components/PageActions.svelte';
 	import { emitAgentsMd } from '$lib/webmcp/emit-agents';
-	import { toToolError } from '$lib/webmcp/errors';
+	import { messageOf, toToolError } from '$lib/webmcp/errors';
 	import { fill6wsYaml } from '$lib/webmcp/fill-6ws';
 	import { FIXTURE_YAML } from '$lib/webmcp/fixture';
 	import {
@@ -12,6 +12,7 @@
 		TOOL_NAMES
 	} from '$lib/webmcp/register';
 	import { contextCardText, readContext } from '$lib/webmcp/read-context';
+	import { DEFAULT_REPO, DEMO_REPOS, fafUrlsFromInput } from '$lib/webmcp/repo-url';
 	import { runScoreFafSafe } from '$lib/webmcp/score-faf';
 	import { fetchAllowedYaml } from '$lib/webmcp/yaml-url';
 
@@ -27,6 +28,10 @@
 	};
 
 	let yamlText = $state('');
+	let repoInput = $state(DEFAULT_REPO.href);
+	let activeRepo = $state(DEFAULT_REPO.id);
+	let repoNote = $state('');
+	let repoLoading = $state(false);
 	let who = $state('');
 	let what = $state('');
 	let why = $state('');
@@ -86,6 +91,9 @@
 				webmcpSource = 'none';
 				kernelError = kernelError || (err instanceof Error ? err.message : String(err));
 			}
+
+			if (!cancelled) await loadFromHref(DEFAULT_REPO.href, DEFAULT_REPO.id);
+			if (!cancelled && !yamlText.trim()) yamlText = FIXTURE_YAML;
 		})();
 		return () => {
 			cancelled = true;
@@ -152,8 +160,43 @@
 		}
 	}
 
-	function onFixture() {
-		yamlText = FIXTURE_YAML;
+	async function loadFromHref(href, id) {
+		repoLoading = true;
+		repoNote = '';
+		try {
+			const urls = fafUrlsFromInput(href);
+			/** @type {unknown} */
+			let last = null;
+			for (const candidate of urls) {
+				try {
+					const text = await fetchAllowedYaml(new URL(candidate));
+					yamlText = text;
+					repoInput = href;
+					activeRepo = id || '';
+					repoNote = '';
+					view = 'card';
+					return;
+				} catch (err) {
+					last = err;
+				}
+			}
+			repoNote =
+				messageOf(last) +
+				' This page reads a project.faf that is already there — it does not clone. No file in that repo yet? Make one on /try.';
+		} catch (err) {
+			repoNote = messageOf(err);
+		} finally {
+			repoLoading = false;
+		}
+	}
+
+	function onPickRepo(repo) {
+		loadFromHref(repo.href, repo.id);
+	}
+
+	function onLoadRepo(event) {
+		event.preventDefault();
+		loadFromHref(repoInput, '');
 	}
 
 	function scoreText() {
@@ -266,17 +309,16 @@
 		<p class="kicker">Demo · IANA <code>application/vnd.faf+yaml</code></p>
 		<h1>Score Context in the tab.</h1>
 		<p class="sub">
-			This page reads a <code>project.faf</code> and shows the Context Card, AGENTS.md, and the score
-			— here, in the browser. The sample is the demo. Yours is the point.
+			This page reads a <code>project.faf</code> from a public repo that already has one — no clone.
+			Context Card, AGENTS.md, and Score run on that file. Famous repos without a
+			<code>project.faf</code> need <a href="/try"><code>faf git</code></a> first.
 		</p>
 		<ol class="how">
-			<li>Open <strong>Sample project.faf</strong> to see it work.</li>
-			<li>Paste <strong>your</strong> <code>project.faf</code> over the sample.</li>
+			<li>The box loads from a real repo so it always has data.</li>
+			<li>Pick ours, or paste a GitHub URL whose repo already has <code>project.faf</code>.</li>
 			<li>
-				Don’t have one yet?
-				<a href="/try">Make it in one line</a>
-				or
-				<a href="/guides/new-project">start a new project</a>.
+				No file in that repo yet? That’s a clone —
+				<a href="/try">make one in one line</a>.
 			</li>
 		</ol>
 		<p class="enable">
@@ -305,15 +347,41 @@
 	<section id="box" class="work-box" aria-labelledby="score-heading">
 		<div class="row-head">
 			<h2 id="score-heading"><code>project.faf</code></h2>
-			<button type="button" class="ghost" onclick={onFixture}>Sample project.faf</button>
 		</div>
-		<p class="hint">Demo file, or paste yours. Context Card, AGENTS.md, and Score read this box.</p>
+		<p class="hint">Loaded from a repo that already has the file. Context Card, AGENTS.md, and Score read this box.</p>
+		<div class="repo-row" role="group" aria-label="Demo repos">
+			{#each DEMO_REPOS as repo}
+				<button
+					type="button"
+					class="ghost"
+					class:active={activeRepo === repo.id}
+					onclick={() => onPickRepo(repo)}
+					disabled={repoLoading}
+				>
+					{repo.label}
+				</button>
+			{/each}
+		</div>
+		<form class="repo-form" onsubmit={onLoadRepo}>
+			<label class="sr-only" for="repo-url">Repo URL</label>
+			<input
+				id="repo-url"
+				type="url"
+				bind:value={repoInput}
+				placeholder="https://github.com/owner/repo"
+				spellcheck="false"
+			/>
+			<button type="submit" class="ghost" disabled={repoLoading}>Load repo</button>
+		</form>
+		{#if repoNote}
+			<p class="repo-note">{repoNote}</p>
+		{/if}
 		<label class="sr-only" for="faf-yaml">project.faf</label>
 		<textarea
 			id="faf-yaml"
 			bind:value={yamlText}
 			spellcheck="false"
-			placeholder="Paste project.faf, or try a sample."
+			placeholder="Loads from a repo. Or paste a project.faf."
 		></textarea>
 
 		<div class="tabs" role="tablist" aria-label="View">
@@ -649,6 +717,37 @@
 
 	.row-head h2 {
 		margin: 0;
+	}
+
+	.repo-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0 0 0.65rem;
+	}
+
+	.repo-row .active {
+		background: var(--faf-orange);
+		color: var(--faf-on-accent);
+		border-color: var(--faf-orange);
+	}
+
+	.repo-form {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0 0 0.65rem;
+	}
+
+	.repo-form input {
+		flex: 1 1 16rem;
+	}
+
+	.repo-note {
+		margin: 0 0 0.75rem;
+		color: var(--faf-gray);
+		font-size: 0.9rem;
+		line-height: 1.45;
 	}
 
 	#box {
