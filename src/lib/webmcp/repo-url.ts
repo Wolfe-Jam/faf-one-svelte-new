@@ -38,6 +38,11 @@ export const DEMO_REPOS: DemoRepo[] = [
 		id: 'grok',
 		label: 'Grok',
 		href: 'https://github.com/Wolfe-Jam/grok-faf-mcp'
+	},
+	{
+		id: 'grok-voice',
+		label: 'Grok Voice',
+		href: 'https://github.com/Wolfe-Jam/grok-faf-voice'
 	}
 ];
 
