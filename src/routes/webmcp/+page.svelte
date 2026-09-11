@@ -11,6 +11,7 @@
 		registerFafWebmcpTools,
 		TOOL_NAMES
 	} from '$lib/webmcp/register';
+	import { contextCardText, readContext } from '$lib/webmcp/read-context';
 	import { runScoreFafSafe } from '$lib/webmcp/score-faf';
 	import { fetchAllowedYaml } from '$lib/webmcp/yaml-url';
 
@@ -42,8 +43,9 @@
 			listedTools.filter((n) => !TOOL_NAMES.includes(n))
 		)
 	);
-	/** @type {'card' | 'agents' | 'six'} */
+	/** @type {'card' | 'agents' | 'score'} */
 	let view = $state('card');
+	let contextView = $derived(readContext(yamlText));
 	/** @type {null | { score: number, tier?: string, populated?: number, total?: number, gaps?: string[], faf_version?: string }} */
 	let scoreCard = $state(null);
 	let scoreError = $state('');
@@ -91,8 +93,8 @@
 		};
 	});
 
-	function jumpToView() {
-		document.getElementById('view')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	function jumpToBox() {
+		document.getElementById('box')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
 	async function runScore() {
@@ -135,17 +137,18 @@
 
 	async function selectView(next) {
 		view = next;
-		if (next === 'card') await runScore();
+		if (next === 'score') await runScore();
 		if (next === 'agents') runEmit();
-		jumpToView();
+		jumpToBox();
 	}
 
 	function jumpTool(name) {
-		if (name === 'score_faf') selectView('card');
+		if (name === 'score_faf') selectView('score');
 		else if (name === 'emit_agents_md') selectView('agents');
 		else if (name === 'fill_6ws') {
-			view = 'six';
 			document.getElementById('sixws')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		} else {
+			selectView('card');
 		}
 	}
 
@@ -153,23 +156,22 @@
 		yamlText = FIXTURE_YAML;
 	}
 
-	function cardText() {
+	function scoreText() {
 		if (scoreError) return scoreError;
 		if (!scoreCard) return '';
 		const lines = [`score: ${scoreCard.score}`];
 		if (scoreCard.tier) lines.push(`tier: ${scoreCard.tier}`);
 		if (scoreCard.populated != null && scoreCard.total != null) {
-			lines.push(`populated: ${scoreCard.populated} / ${scoreCard.total}`);
+			lines.push(`${scoreCard.populated} / ${scoreCard.total}`);
 		}
-		if (scoreCard.faf_version) lines.push(`project.faf: ${scoreCard.faf_version}`);
 		if (scoreCard.gaps?.length) lines.push(`missing: ${scoreCard.gaps.join(', ')}`);
 		return lines.join('\n');
 	}
 
 	function paneText() {
-		if (view === 'card') return cardText();
+		if (view === 'card') return contextView ? contextCardText(contextView) : '';
 		if (view === 'agents') return agentsError || agentsMd;
-		return sixYaml;
+		return scoreText();
 	}
 
 	async function copyView() {
@@ -201,21 +203,18 @@
 	async function downloadAll() {
 		await runScore();
 		runEmit();
-		if (!sixYaml.trim()) {
-			sixYaml = fill6wsYaml({ who, what, why, where, when, how });
-		}
 		const body = [
 			'# Context Card',
 			'',
-			cardText() || '(none)',
+			(contextView ? contextCardText(contextView) : '') || '(none)',
 			'',
 			'# AGENTS.md',
 			'',
 			agentsMd || agentsError || '(none)',
 			'',
-			'# 6Ws',
+			'# Score',
 			'',
-			sixYaml || '(none)',
+			scoreText() || '(none)',
 			''
 		].join('\n');
 		downloadBlob('context.md', body);
@@ -226,8 +225,8 @@
 		event.preventDefault();
 		const yaml = fill6wsYaml({ who, what, why, where, when, how });
 		sixYaml = yaml;
-		view = 'six';
-		jumpToView();
+		view = 'card';
+		jumpToBox();
 		if (typeof event.respondWith === 'function') {
 			event.respondWith(Promise.resolve({ yaml }));
 		}
@@ -310,7 +309,7 @@
 		</ol>
 	</section>
 
-	<section class="score-block" aria-labelledby="score-heading">
+	<section id="box" class="work-box" aria-labelledby="score-heading">
 		<div class="row-head">
 			<h2 id="score-heading"><code>project.faf</code></h2>
 			<button type="button" class="ghost" onclick={onFixture}>Sample project.faf</button>
@@ -322,10 +321,7 @@
 			spellcheck="false"
 			placeholder="Paste project.faf, or try a sample."
 		></textarea>
-	</section>
 
-	<section id="view" class="out-block" aria-labelledby="out-heading">
-		<h2 id="out-heading" class="sr-only">View</h2>
 		<div class="tabs" role="tablist" aria-label="View">
 			<button
 				type="button"
@@ -334,7 +330,6 @@
 				aria-selected={view === 'card'}
 				aria-controls="pane-card"
 				onclick={() => selectView('card')}
-				disabled={busy === 'score'}
 			>
 				Context Card
 			</button>
@@ -352,21 +347,17 @@
 			<button
 				type="button"
 				role="tab"
-				id="tab-six"
-				aria-selected={view === 'six'}
-				aria-controls="pane-six"
-				onclick={() => selectView('six')}
+				id="tab-score"
+				aria-selected={view === 'score'}
+				aria-controls="pane-score"
+				onclick={() => selectView('score')}
+				disabled={busy === 'score'}
 			>
-				6Ws
+				Score
 			</button>
 		</div>
 		<div class="view-actions">
-			<button
-				type="button"
-				class="ghost"
-				onclick={copyView}
-				disabled={!paneText()}
-			>
+			<button type="button" class="ghost" onclick={copyView} disabled={!paneText()}>
 				{copied ? 'Copied' : 'Copy'}
 			</button>
 			<button type="button" class="ghost" onclick={downloadAll} disabled={!!busy}>
@@ -381,22 +372,34 @@
 			aria-labelledby="tab-card"
 			hidden={view !== 'card'}
 		>
-			{#if scoreCard}
+			{#if contextView && (contextView.name || contextView.goal || contextView.six.who)}
 				<div class="context-card">
-					<div class="card-score">{scoreCard.score}</div>
+					{#if contextView.name}<h3 class="card-name">{contextView.name}</h3>{/if}
+					{#if contextView.goal}<p class="card-goal">{contextView.goal}</p>{/if}
 					<div class="card-meta">
-						{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
-						{#if scoreCard.populated != null && scoreCard.total != null}
-							<span>{scoreCard.populated} / {scoreCard.total}</span>
-						{/if}
-						{#if scoreCard.faf_version}<span>project.faf {scoreCard.faf_version}</span>{/if}
+						{#if contextView.language}<span>{contextView.language}</span>{/if}
+						{#if contextView.version}<span>project.faf {contextView.version}</span>{/if}
 					</div>
-					{#if scoreCard.gaps?.length}
-						<p class="card-gaps">Missing: {scoreCard.gaps.join(', ')}</p>
+					<dl class="card-six">
+						{#each ['who', 'what', 'why', 'where', 'when', 'how'] as key}
+							{#if contextView.six[key]}
+								<div>
+									<dt>{key}</dt>
+									<dd>{contextView.six[key]}</dd>
+								</div>
+							{/if}
+						{/each}
+					</dl>
+					{#if contextView.stack.length}
+						<ul class="card-stack">
+							{#each contextView.stack as row}
+								<li><span>{row.key}</span> {row.value}</li>
+							{/each}
+						</ul>
 					{/if}
 				</div>
 			{:else}
-				<pre class="output">{scoreError || 'Open this tab to score the project.faf.'}</pre>
+				<pre class="output">Paste a project.faf to view the Context Card.</pre>
 			{/if}
 		</div>
 
@@ -407,17 +410,32 @@
 			aria-labelledby="tab-agents"
 			hidden={view !== 'agents'}
 		>
-			<pre class="output">{agentsError || agentsMd || 'Open this tab to write AGENTS.md from the file.'}</pre>
+			<pre class="output">{agentsError || agentsMd || 'Open AGENTS.md to write it from the file.'}</pre>
 		</div>
 
 		<div
-			id="pane-six"
+			id="pane-score"
 			class="pane"
 			role="tabpanel"
-			aria-labelledby="tab-six"
-			hidden={view !== 'six'}
+			aria-labelledby="tab-score"
+			hidden={view !== 'score'}
 		>
-			<pre class="output">{sixYaml || 'Capture Who / What / Why / Where / When / How below, then return YAML here.'}</pre>
+			{#if scoreCard}
+				<div class="score-view">
+					<div class="card-score">{scoreCard.score}</div>
+					<div class="card-meta">
+						{#if scoreCard.tier}<span>{scoreCard.tier}</span>{/if}
+						{#if scoreCard.populated != null && scoreCard.total != null}
+							<span>{scoreCard.populated} / {scoreCard.total}</span>
+						{/if}
+					</div>
+					{#if scoreCard.gaps?.length}
+						<p class="card-gaps">Missing: {scoreCard.gaps.join(', ')}</p>
+					{/if}
+				</div>
+			{:else}
+				<pre class="output">{scoreError || 'Open Score to get the number.'}</pre>
+			{/if}
 		</div>
 	</section>
 
@@ -624,7 +642,7 @@
 		margin: 0;
 	}
 
-	#view {
+	#box {
 		scroll-margin-top: 4.5rem;
 	}
 
@@ -754,12 +772,56 @@
 		margin: 0;
 	}
 
-	.context-card {
+	.context-card,
+	.score-view {
 		padding: 1.25rem 1.1rem 1.15rem;
 		background: var(--faf-code-bg);
 		border: 1px solid var(--faf-hairline);
 		border-radius: 8px;
 		min-height: 10rem;
+	}
+
+	.card-name {
+		margin: 0 0 0.4rem;
+		font-size: 1.35rem;
+		letter-spacing: -0.02em;
+	}
+
+	.card-goal {
+		margin: 0 0 0.75rem;
+		line-height: 1.45;
+	}
+
+	.card-six {
+		margin: 0.9rem 0 0;
+		display: grid;
+		gap: 0.45rem 1rem;
+	}
+
+	.card-six dt {
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--faf-gray);
+	}
+
+	.card-six dd {
+		margin: 0.1rem 0 0;
+	}
+
+	.card-stack {
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+		color: var(--faf-gray);
+		font-size: 0.9rem;
+	}
+
+	.card-stack span {
+		font-weight: 700;
+		color: var(--faf-ink);
+		margin-right: 0.35rem;
 	}
 
 	.card-score {

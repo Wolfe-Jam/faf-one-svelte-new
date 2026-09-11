@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { emitAgentsMd } from './emit-agents';
+import { contextCardText, readContext } from './read-context';
 import { toToolError, ToolError } from './errors';
 import { fill6wsYaml, sixWsFromForm } from './fill-6ws';
 import { FIXTURE_YAML } from './fixture';
@@ -221,6 +222,19 @@ describe('fill_6ws', () => {
 		fd.set('what', 'tool');
 		expect(sixWsFromForm(fd).who).toBe('devs');
 		expect(sixWsFromForm(fd).why).toBe('');
+	});
+});
+
+describe('readContext', () => {
+	it('reads identity and 6Ws from the fixture — not a score', () => {
+		const card = readContext(FIXTURE_YAML);
+		expect(card).not.toBeNull();
+		expect(card?.name).toBe('webmcp-fixture');
+		expect(card?.goal).toContain('browser tab');
+		expect(card?.six.who).toContain('Builders');
+		expect(card?.stack.some((s) => s.key === 'hosting')).toBe(true);
+		if (!card) throw new Error('expected a Context Card');
+		expect(contextCardText(card)).not.toMatch(/score:/i);
 	});
 });
 
