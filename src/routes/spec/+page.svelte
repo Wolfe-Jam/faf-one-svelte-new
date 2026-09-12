@@ -31,9 +31,10 @@
 		<section class="intro">
 			<p class="lead">
 				A single, portable file that captures what a project is, how it's built, and why.
-				Readable by humans, code, and AI assistants. <code>.faf</code> is the
-				<strong>Foundational AI-context Format</strong>: plain, human-readable YAML, an open
-				standard registered with IANA as <code>application/vnd.faf+yaml</code>.
+				<strong>FAF is the schema — the fields and what they mean. YAML is the syntax —
+				how you write them down.</strong> Readable by humans, code, and AI assistants,
+				<code>.faf</code> is the <strong>Foundational AI-context Format</strong>, registered
+				with IANA as <code>application/vnd.faf+yaml</code>.
 			</p>
 			<p>This page covers the <code>.faf</code> source format and its compiled binary form, <code>.fafb</code>.</p>
 		</section>
