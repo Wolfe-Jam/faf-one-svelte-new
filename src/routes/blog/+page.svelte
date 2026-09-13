@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/lineage-edition',
+			title: 'The Lineage Edition',
+			date: 'September 13, 2026',
+			timestamp: '2026-09-13',
+			excerpt:
+				'One .faf-dna across faf-cli, FAFb and rust-faf-mcp 0.8.0: faf_init births it, faf_auto grows it, faf_dna shows the journey. Building on faf-cli, FAFb is the full Rust version, for teams: help us finish the launch.',
+			emoji: '🧬',
+			category: 'Interop'
+		},
+		{
 			slug: 'blog/compose-dont-port',
 			title: "Compose, don't port",
 			date: 'September 10, 2026',
