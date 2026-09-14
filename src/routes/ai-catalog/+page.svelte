@@ -142,7 +142,7 @@
 							<td>
 								<code>extensions</code> namespace map, not a nested <code>metadata</code> object
 							</td>
-							<td>re-conformed <strong>2026-08-02</strong></td>
+							<td>re-conformed <strong>2026-09-13</strong></td>
 							<td>
 								ADR-0017 /
 								<a

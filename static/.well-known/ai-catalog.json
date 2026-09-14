@@ -20,15 +20,12 @@
       ],
       "url": "https://faf.one/.well-known/project.faf",
       "updatedAt": "2026-08-24T00:00:00Z",
-      "extensions": [
-        {
-          "type": "https://faf.one/context",
-          "data": {
-            "deterministic": true,
-            "iana": "registered"
-          }
+      "extensions": {
+        "https://faf.one/context": {
+          "deterministic": true,
+          "iana": "registered"
         }
-      ],
+      },
       "trustManifest": {
         "identity": "https://faf.one",
         "attestations": [
@@ -197,15 +194,12 @@
       ],
       "url": "https://faf.one/.well-known/fafa",
       "updatedAt": "2026-08-24T00:00:00Z",
-      "extensions": [
-        {
-          "type": "https://faf.one/context",
-          "data": {
-            "iana": "registered",
-            "trinity": "agent"
-          }
+      "extensions": {
+        "https://faf.one/context": {
+          "iana": "registered",
+          "trinity": "agent"
         }
-      ],
+      },
       "trustManifest": {
         "identity": "https://faf.one",
         "attestations": [
