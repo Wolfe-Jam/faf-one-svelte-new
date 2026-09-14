@@ -19,22 +19,31 @@
     "extendedAgentCard": false,
     "extensions": [
       {
-        "uri": "https://faf.one/context",
-        "description": "FAF context provenance — the durable context block (one context, every door).",
+        "uri": "https://faf.one/ext/context/v1",
+        "description": "FAF passport and project DNA as typed parts",
         "required": false,
         "params": {
-          "faf": "https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf",
-          "mediaType": "application/vnd.faf+yaml",
-          "iana": "https://www.iana.org/assignments/media-types/application/vnd.faf+yaml",
-          "deterministic": true,
-          "generated": "2026-05-04T18:00:00.000Z"
+          "fafaSpecVersion": "1.0",
+          "mediaTypes": [
+            "application/vnd.faf+yaml",
+            "application/vnd.fafm+yaml",
+            "application/vnd.fafa+yaml"
+          ],
+          "provenance": {
+            "faf": "https://github.com/Wolfe-Jam/faf-agent/blob/main/project.faf",
+            "mediaType": "application/vnd.faf+yaml"
+          },
+          "generated": "2026-05-04T18:00:00.000Z",
+          "agentId": "did:web:faf.one:agent",
+          "passport": "https://faf.one/.well-known/fafa"
         }
       }
     ]
   },
   "defaultInputModes": [
     "text/plain",
-    "application/json"
+    "application/vnd.faf+yaml",
+    "application/vnd.fafm+yaml"
   ],
   "defaultOutputModes": [
     "text/plain",
@@ -49,6 +58,10 @@
         "faf",
         "rag",
         "cite-or-refuse"
+      ],
+      "inputModes": [
+        "application/vnd.faf+yaml",
+        "text/plain"
       ]
     },
     {
@@ -58,6 +71,10 @@
       "tags": [
         "faf",
         "citation"
+      ],
+      "inputModes": [
+        "application/vnd.faf+yaml",
+        "text/plain"
       ]
     },
     {
@@ -67,6 +84,10 @@
       "tags": [
         "faf",
         "validate"
+      ],
+      "inputModes": [
+        "application/vnd.faf+yaml",
+        "text/plain"
       ]
     },
     {
@@ -76,6 +97,10 @@
       "tags": [
         "faf",
         "score"
+      ],
+      "inputModes": [
+        "application/vnd.faf+yaml",
+        "text/plain"
       ]
     },
     {
@@ -86,6 +111,10 @@
         "memory",
         "fafm",
         "mcpaas"
+      ],
+      "inputModes": [
+        "application/vnd.fafm+yaml",
+        "text/plain"
       ]
     },
     {
@@ -96,6 +125,10 @@
         "memory",
         "fafm",
         "mcpaas"
+      ],
+      "inputModes": [
+        "application/vnd.fafm+yaml",
+        "text/plain"
       ]
     }
   ]
