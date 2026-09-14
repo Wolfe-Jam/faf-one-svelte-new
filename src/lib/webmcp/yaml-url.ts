@@ -18,7 +18,8 @@ export function assertAllowedUrl(urlString: string): URL {
 	if (!ALLOWED_HOSTS.has(url.hostname)) {
 		throw new ToolError('invalid_url', `host not allowlisted: ${url.hostname}`);
 	}
-	if (url.pathname.includes('/mcp')) {
+	// A whole `mcp` segment only — `/mcp-context-card/` is a repo, not an endpoint.
+	if (url.pathname.split('/').includes('mcp')) {
 		throw new ToolError('invalid_url', 'mcp endpoints are not allowed');
 	}
 	return url;

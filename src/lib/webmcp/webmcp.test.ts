@@ -66,6 +66,22 @@ describe('assertAllowedUrl', () => {
 		}
 	});
 
+	it('rejects an mcp segment deeper in the path', () => {
+		try {
+			assertAllowedUrl('https://faf.one/api/mcp/v1');
+			expect.unreachable();
+		} catch (err) {
+			expect((err as ToolError).message).toMatch(/mcp endpoints/);
+		}
+	});
+
+	it('accepts a repo whose name starts with mcp', () => {
+		const u = assertAllowedUrl(
+			'https://raw.githubusercontent.com/Wolfe-Jam/mcp-context-card/main/project.faf'
+		);
+		expect(u.hostname).toBe('raw.githubusercontent.com');
+	});
+
 	it('rewrites a GitHub repo to raw project.faf candidates', () => {
 		const urls = fafUrlsFromInput('https://github.com/Wolfe-Jam/faf-cli');
 		expect(urls[0]).toBe(
