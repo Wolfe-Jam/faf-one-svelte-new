@@ -36,7 +36,7 @@
 			date links to something you can check.
 		</p>
 		<div class="meta">
-			<time datetime="2026-09-02">Updated 2 September 2026</time>
+			<time datetime="2026-09-15">Updated 15 September 2026</time>
 		</div>
 	</header>
 
@@ -200,6 +200,46 @@
 		</section>
 
 		<section>
+			<h2>Agentic Resource Discovery</h2>
+			<p>
+				<a href="https://github.com/ards-project/ard-spec" target="_blank" rel="noopener">ARD</a>
+				v0.91 (status: Proposal) discovers entries at <code>/.well-known/ard.json</code>. Its
+				predecessor used the AI Catalog path, <code>/.well-known/ai-catalog.json</code>. FAF serves
+				one document for both: on faf.one and mcpaas.live, <code>ard.json</code> redirects to the AI
+				Catalog.
+			</p>
+			<div class="table-scroll">
+				<table>
+					<thead>
+						<tr>
+							<th>Decision</th>
+							<th>FAF</th>
+							<th>ARD v0.91</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>/.well-known/ard.json</code> redirects (301) to the AI Catalog</td>
+							<td>deployed <strong>2026-09-15</strong></td>
+							<td>§5.1: consumers MUST fetch <code>ard.json</code></td>
+						</tr>
+						<tr>
+							<td>
+								<code>displayName</code> on every MCP Server Card entry, set to the card's own title
+							</td>
+							<td>deployed <strong>2026-09-15</strong></td>
+							<td>§4.2: <code>displayName</code> is required</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="note">
+				The AI Catalog keeps <code>displayName</code> optional (PR #56 above); ARD requires it. Carrying
+				it satisfies both. ARD's own conformance tester reports PASS for faf.one and mcpaas.live.
+			</p>
+		</section>
+
+		<section>
 			<h2>Verify</h2>
 			<ul class="verify-list">
 				<li>
@@ -211,6 +251,19 @@
 					<code>curl https://mcpaas.live/.well-known/ai-catalog.json</code> &mdash; three MCP
 					Server Cards, Ed25519-signed (public key at
 					<code>mcpaas.live/.well-known/jwks.json</code>)
+				</li>
+				<li>
+					<code>curl -I https://faf.one/.well-known/ard.json</code> &mdash; 301 to
+					<code>/.well-known/ai-catalog.json</code> (the same on mcpaas.live)
+				</li>
+				<li>
+					ARD:
+					<a
+						href="https://github.com/ards-project/ard-spec/tree/main/conformance"
+						target="_blank"
+						rel="noopener">conformance-test</a
+					>
+					<code>publisher faf.one</code> and <code>publisher mcpaas.live</code> &mdash; PASS
 				</li>
 				<li>
 					IANA:
@@ -245,7 +298,7 @@
 		</section>
 
 		<footer class="proof-footer">
-			<p>Updated 2 September 2026. Every claim on this page links to a public artifact.</p>
+			<p>Updated 15 September 2026. Every claim on this page links to a public artifact.</p>
 			<p>Format authority and canonical wording: <a href="/spec">the Spec page</a>.</p>
 		</footer>
 	</article>
