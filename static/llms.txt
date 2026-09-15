@@ -120,7 +120,7 @@ Also: https://github.com/travisvn/awesome-claude-skills/pull/35
 - Foundation: https://foundation.faf.one
 - MCPaaS: https://mcpaas.live
 - FAF Voice: https://faf-voice.vercel.app
-- Dev Tools: https://fafdev.tools
+- Dev Tools: https://devtools.faf.one
 - Radio: https://radiofaf.com
 - GitHub: https://github.com/Wolfe-Jam
 - ORCID: https://orcid.org/0009-0007-0801-3841
