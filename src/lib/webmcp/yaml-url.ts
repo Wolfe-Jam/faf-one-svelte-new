@@ -34,9 +34,18 @@ export function assertYamlSize(text: string): void {
 
 export type FetchText = (url: URL, signal?: AbortSignal) => Promise<string>;
 
-/** Browser fetch. Re-checks the final URL after redirects. */
+/**
+ * Browser fetch. Refuses redirects: a redirect is a new request to a host the allowlist never
+ * checked, and the browser sends it before `res.url` can be read. The final-URL check stays as a backstop.
+ */
 export async function fetchAllowedYaml(url: URL, signal?: AbortSignal): Promise<string> {
-	const res = await fetch(url.href, { redirect: 'follow', signal });
+	let res: Response;
+	try {
+		res = await fetch(url.href, { redirect: 'error', signal });
+	} catch (err) {
+		if (signal?.aborted) throw err;
+		throw new ToolError('fetch_failed', 'fetch failed (network error, or a redirect: redirects are not followed)');
+	}
 	if (!res.ok) {
 		throw new ToolError('fetch_failed', `fetch failed: HTTP ${res.status}`);
 	}

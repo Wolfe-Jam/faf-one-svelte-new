@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { emitAgentsMd } from './emit-agents';
 import { contextCardText, readContext } from './read-context';
 import { toToolError, ToolError } from './errors';
@@ -8,7 +8,7 @@ import { mapScoreResult, scoreRatio } from './map-score';
 import { registerFafWebmcpTools } from './register';
 import { runScoreFaf, runScoreFafSafe } from './score-faf';
 import { DEFAULT_REPO, fafUrlsFromInput } from './repo-url';
-import { assertAllowedUrl, MAX_YAML_BYTES } from './yaml-url';
+import { assertAllowedUrl, fetchAllowedYaml, MAX_YAML_BYTES } from './yaml-url';
 
 const KERNEL_OK = JSON.stringify({
 	score: 72,
@@ -118,6 +118,44 @@ describe('assertAllowedUrl', () => {
 		} catch (err) {
 			expect((err as ToolError).error).toBe('invalid_url');
 		}
+	});
+});
+
+describe('fetchAllowedYaml', () => {
+	const href = 'https://faf.one/.well-known/project.faf';
+	afterEach(() => vi.unstubAllGlobals());
+
+	it('refuses redirects, so only the checked URL is ever requested', async () => {
+		let init: RequestInit | undefined;
+		vi.stubGlobal('fetch', async (_url: string, options: RequestInit) => {
+			init = options;
+			return { ok: true, status: 200, url: href, headers: new Headers(), text: async () => FIXTURE_YAML };
+		});
+		await fetchAllowedYaml(new URL(href));
+		expect(init?.redirect).toBe('error');
+	});
+
+	it('returns fetch_failed when the fetch is refused', async () => {
+		vi.stubGlobal('fetch', async () => {
+			throw new TypeError('Failed to fetch');
+		});
+		try {
+			await fetchAllowedYaml(new URL(href));
+			expect.unreachable();
+		} catch (err) {
+			expect((err as ToolError).error).toBe('fetch_failed');
+		}
+	});
+
+	it('lets an abort through unchanged', async () => {
+		const controller = new AbortController();
+		controller.abort();
+		vi.stubGlobal('fetch', async () => {
+			throw new DOMException('aborted', 'AbortError');
+		});
+		await expect(fetchAllowedYaml(new URL(href), controller.signal)).rejects.toMatchObject({
+			name: 'AbortError'
+		});
 	});
 });
 
