@@ -46,3 +46,6 @@ project.html
 # Built by scripts/build-agent-card.mjs (npm prebuild) from the public .fafa + project.faf.
 # Never hand-edit or commit it: a kept copy is exactly what drifted before.
 static/.well-known/agent-card.json
+# Named reason: built by the same script from faf-agent-public (mirrored from
+# faf-agent, where the .fafa lives in git and is edited). A copy here drifted before.
+static/.well-known/fafa

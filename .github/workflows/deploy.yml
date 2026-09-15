@@ -4,6 +4,18 @@ on:
   push:
     branches:
       - main
+  # Daily rebuild so /.well-known/fafa and the A2A card follow their public
+  # sources (faf-agent-public) without a push here. Runs before the 06:08 UTC
+  # Spec Alarm, which checks the result.
+  schedule:
+    - cron: '38 5 * * *'
+  workflow_dispatch:
+
+# One deploy at a time, in order: a scheduled run must never finish after a
+# newer push's deploy and put an older build back live.
+concurrency:
+  group: deploy-faf-one
+  cancel-in-progress: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
