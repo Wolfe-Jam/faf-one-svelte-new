@@ -139,6 +139,7 @@
     },
     {
       "identifier": "urn:air:faf.one:mcp:context-server",
+      "displayName": "FAF Context Endpoint",
       "type": "application/mcp-server-card+json",
       "description": "Live MCP server carrying FAF context in its reverse-DNS _meta[\"one.faf/context\"] slot.",
       "tags": [
@@ -147,7 +148,7 @@
         "context"
       ],
       "url": "https://context.faf.one/mcp/server-card",
-      "updatedAt": "2026-08-24T00:00:00Z",
+      "updatedAt": "2026-09-15T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
         "provenance": [
