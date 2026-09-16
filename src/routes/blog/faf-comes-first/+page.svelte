@@ -22,7 +22,7 @@ Claude Code read project.faf before CLAUDE.md. The format designed for AI contex
 	<meta name="description" content="Historic moment: Claude Code read project.faf before Anthropic's own CLAUDE.md convention. The format works. The hierarchy works. The AI listened." />
 	<meta property="og:title" content="The Moment .faf Came First" />
 	<meta property="og:description" content="Claude Code read project.faf before CLAUDE.md. The format designed for AI context is being recognized as authoritative." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

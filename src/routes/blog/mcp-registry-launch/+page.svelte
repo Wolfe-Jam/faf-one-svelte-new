@@ -27,7 +27,7 @@ Persistent project context • Project DNA ✨ for AI-Context, On-Demand. 33+ to
 	<meta name="description" content="October 17, 2025 - claude-faf-mcp officially accepted into Anthropic's Model Context Protocol Registry. Persistent project context with 33+ tools for Claude Desktop, Claude Code, VS Code, GitHub Copilot, and ANY terminal/CLI." />
 	<meta property="og:title" content="It's Official! We got Accepted into the Anthropic MCP Registry" />
 	<meta property="og:description" content="Persistent project context • Project DNA ✨ for AI-Context, On-Demand - Officially accepted into Anthropic's MCP Registry with 33+ tools for universal AI context." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/claude-faf-mcp@latest/assets/icons/faf-icon-64.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/faf-icon-64.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

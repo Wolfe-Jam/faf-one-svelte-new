@@ -28,7 +28,7 @@ From desktop frustration to Anthropic approval. Persistent project context is re
 	<meta name="description" content="From desktop frustration to Anthropic approval - .FAF reaches 10,500+ downloads (5,800 CLI + 4,700 MCP) as the Foundational AI context format gains ecosystem traction." />
 	<meta property="og:title" content=".FAF: 10,500+ downloads: 5,800 CLI: 4,700 MCP - Persistent project context is Real" />
 	<meta property="og:description" content="From desktop frustration to Anthropic approval - Official MCP steward reaches 10,500+ downloads with Foundational AI context format." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

@@ -21,7 +21,7 @@ Imagine how the world would run if software was good. If all code gets better, t
 	<meta name="description" content="Imagine how the world would run if software was good. Not better. Not acceptable. Good. Software that gets better every time you touch it." />
 	<meta property="og:title" content="What If Software Was Good?" />
 	<meta property="og:description" content="If all code gets better, the world gets better. One repo at a time." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

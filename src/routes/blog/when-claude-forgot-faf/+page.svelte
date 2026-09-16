@@ -27,7 +27,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 	<meta name="description" content="Even the AI that built FAF scored it at 12% without .faf context. One command later: 89%. This is the meta-proof that proves the product." />
 	<meta property="og:title" content="When Claude Forgot FAF: The Meta-Proof" />
 	<meta property="og:description" content="12% → 89% in 344ms. The story of how even Claude couldn't recognize FAF without .faf context." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/birth-dna-12-percent.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/birth-dna-12-percent.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -51,7 +51,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 	<article class="post-content">
 		<div class="hero-image">
 			<img
-				src="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/faf-init-demo.gif"
+				src="https://faf.one/blog-assets/faf-init-demo.gif"
 				alt="Running faf init - Claude character witnessing 344ms transformation"
 				class="full-width"
 			/>
@@ -93,7 +93,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 			<div class="visual-block">
 				<h3>Birth DNA: 12%</h3>
 				<img
-					src="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/birth-dna-12-percent.png"
+					src="https://faf.one/blog-assets/birth-dna-12-percent.png"
 					alt="FAF CLI initial context score: 12%"
 					class="full-width"
 				/>
@@ -109,7 +109,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 			<div class="visual-block">
 				<h3>The Transformation</h3>
 				<img
-					src="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/faf-init-demo.gif"
+					src="https://faf.one/blog-assets/faf-init-demo.gif"
 					alt="Running faf init - 344ms transformation"
 					class="full-width"
 				/>
@@ -121,7 +121,7 @@ Even the AI that built FAF scored it at 12% without .faf context. One command la
 			<div class="visual-block">
 				<h3>After: Growth to 89%</h3>
 				<img
-					src="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/growth-to-89-percent.png"
+					src="https://faf.one/blog-assets/growth-to-89-percent.png"
 					alt="FAF CLI after .faf: 89% context score"
 					class="full-width"
 				/>

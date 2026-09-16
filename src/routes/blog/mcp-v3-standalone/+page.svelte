@@ -27,7 +27,7 @@ Zero CLI dependencies across all 50 MCP tools. 16.2x faster. Championship-grade 
 	<meta name="description" content="claude-faf-mcp achieves 100% standalone operation with 50/50 MCP tools operational, delivering 16.2x performance improvement over CLI-dependent versions." />
 	<meta property="og:title" content="claude-faf-mcp v3.0.4 - 100% Standalone Achievement" />
 	<meta property="og:description" content="Zero CLI dependencies across all 50 MCP tools. 16.2x faster. Championship-grade performance." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

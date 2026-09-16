@@ -21,7 +21,7 @@ From grassroots format to official Internet standard — the same status as PDF,
 	<meta name="description" content="IANA (Internet Assigned Numbers Authority) officially registers .faf as application/vnd.faf+yaml - the first AI context format with official media type designation." />
 	<meta property="og:title" content=".faf Officially Registered by IANA as application/vnd.faf+yaml" />
 	<meta property="og:description" content="From grassroots format to official Internet standard - IANA grants .faf official media type status alongside PDF, JSON, and XML." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

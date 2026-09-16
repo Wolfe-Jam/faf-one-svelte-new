@@ -27,7 +27,7 @@ The universal AI context standard with TURBO-CAT format discovery, C-Mirror bi-s
 	<meta name="description" content="FAF CLI v3.0.0 Championship Edition launches with TURBO-CAT format discovery, C-Mirror bi-sync engine, and universal AI compatibility. Open source, free forever." />
 	<meta property="og:title" content="AI CLI/MCP About to Hit 10k on npm Goes OPEN-SOURCE" />
 	<meta property="og:description" content="FAF CLI v3.0.0 Championship Edition - Universal AI context standard with TURBO-CAT discovery, 8ms sync, and championship performance." />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

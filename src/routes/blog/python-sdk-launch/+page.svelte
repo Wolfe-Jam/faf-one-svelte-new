@@ -27,7 +27,7 @@ Single developer. Two crowns. One snake. Who said we couldn't sync with Python?`
 	<meta name="description" content="FAF Python SDK launches on PyPI. Two crowns (IANA + MCP), one snake. Then Grok showed up." />
 	<meta property="og:title" content="The Tale of Two Crowns and a Snake - FAF Python SDK Launch" />
 	<meta property="og:description" content="Single developer. Two crowns. One snake. Who said we couldn't sync with Python?" />
-	<meta property="og:image" content="https://cdn.jsdelivr.net/npm/faf-cli@latest/assets/ai-human-balance-50-50.png" />
+	<meta property="og:image" content="https://faf.one/blog-assets/ai-human-balance-50-50.png" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
