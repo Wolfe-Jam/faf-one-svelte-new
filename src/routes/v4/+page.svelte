@@ -90,7 +90,7 @@
 		<div class="section-content">
 			<h2>The Journey: Format to Standard</h2>
 			<p>It was borne out of pure frustration—one day AI even changed the Auth system! I started looking for the Industry format... the <code>package.json</code> for AI context, if you will—to my utter astonishment there wasn't one? AI needed a format for Context, so I built one.</p>
-			<p><code>.faf</code> was born. F1-inspired software engineering became <a href="/" class="cyan-link">faf.one</a>.</p>
+			<p><code>.faf</code> was born. The work behind it became <a href="/" class="cyan-link">faf.one</a>.</p>
 			<p>We designed the format, then the engine. Developers started using it. Feedback came in. Edge cases emerged. We refined the structure, added scoring, built tooling, launched the CLI on npm. The rest is history.</p>
 
 			<div class="timeline">

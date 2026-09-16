@@ -26,7 +26,7 @@
 			"Quality slipping",
 			"AI making occasional mistakes",
 			"Timeline starting to stretch",
-			{ text: "DELAYS GUARANTEED", isLast: true }
+			{ text: "DELAYS MOUNT", isLast: true }
 		];
 		if (aiContext >= 50) return [
 			"You are literally flipping a coin with AI",
@@ -59,9 +59,9 @@
 			"Project death spiral",
 			"Complete restart needed",
 			"Reputation destroyed",
-			"AI is generating garbage",
+			"AI is writing garbage",
 			"Team has given up",
-			"Failure is guaranteed",
+			"Failure is the default",
 			{ text: "PROJECT FAILURE", isLast: true }
 		];
 	});
