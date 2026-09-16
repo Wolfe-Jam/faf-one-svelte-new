@@ -54,6 +54,7 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/fafb-early-access" class="ticker-item"><b>FAFb 0.9</b> Devs wanted — drive the full Rust version for teams, before 1.0</a>
 				<a href="/blog/pack-edition" class="ticker-item"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
 				<a href="/blog/lineage-edition" class="ticker-item"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>
 				<a href="/blog/faf-mcp-compose" class="ticker-item"><b>faf-mcp 3.0</b> The Compose Edition — compose, don't port · one scorer, one set of renderers, one injector</a>
@@ -77,6 +78,7 @@
 				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
+				<a href="/blog/fafb-early-access" class="ticker-item" aria-hidden="true" tabindex="-1"><b>FAFb 0.9</b> Devs wanted — drive the full Rust version for teams, before 1.0</a>
 				<a href="/blog/pack-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
 				<a href="/blog/lineage-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>
 				<a href="/blog/faf-mcp-compose" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-mcp 3.0</b> The Compose Edition — compose, don't port · one scorer, one set of renderers, one injector</a>
