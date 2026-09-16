@@ -185,6 +185,11 @@ Comments · suggestions · shares welcome.`;
 					<strong>Some things can't map exactly.</strong> Identity and trust differ between cards,
 					and the projector never invents what a spec doesn't define.
 				</li>
+				<li>
+					<strong>A schema URL upstream is missing.</strong> A Server Card carries a
+					<code>$schema</code>, and the spec names one URL for it. That URL returns 404 today. We
+					write it as the spec names it; it resolves when upstream publishes the file.
+				</li>
 			</ul>
 		</section>
 
