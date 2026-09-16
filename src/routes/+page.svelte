@@ -55,6 +55,7 @@
 		<div class="ticker-viewport">
 			<div class="ticker-track">
 				<a href="/blog/pack-edition" class="ticker-item"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
+				<a href="/blog/lineage-edition" class="ticker-item"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>
 				<a href="/blog/faf-mcp-compose" class="ticker-item"><b>faf-mcp 3.0</b> The Compose Edition — compose, don't port · one scorer, one set of renderers, one injector</a>
 				<a href="/blog/open-renderers-edition" class="ticker-item"><b>faf-cli 7.12</b> The Open Renderers Edition — consumers compose instead of port · one block, every run</a>
 				<a href="/blog/vs-code-edition" class="ticker-item"><b>faf-cli 7.11</b> The VS Code Edition — the drift check is a function you import, not a CLI you scrape</a>
@@ -77,6 +78,7 @@
 				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
 				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
 				<a href="/blog/pack-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
+				<a href="/blog/lineage-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>
 				<a href="/blog/faf-mcp-compose" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-mcp 3.0</b> The Compose Edition — compose, don't port · one scorer, one set of renderers, one injector</a>
 				<a href="/blog/open-renderers-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.12</b> The Open Renderers Edition — consumers compose instead of port · one block, every run</a>
 				<a href="/blog/vs-code-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.11</b> The VS Code Edition — the drift check is a function you import, not a CLI you scrape</a>
