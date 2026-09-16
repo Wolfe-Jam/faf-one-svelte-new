@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/pack-edition',
+			title: 'The Pack Edition',
+			date: 'September 15, 2026',
+			timestamp: '2026-09-15',
+			excerpt:
+				'Answer a few questions about an agent or MCP server and get every card it needs: the A2A Agent Card, the MCP Server Card, the registry server.json, an AI Catalog and an ARD manifest. Neutral by default.',
+			emoji: '🎴',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/lineage-edition',
 			title: 'The Lineage Edition',
 			date: 'September 13, 2026',
