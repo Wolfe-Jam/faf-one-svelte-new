@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/fafb-early-access',
+			title: 'Context, compiled.',
+			date: 'September 16, 2026',
+			timestamp: '2026-09-16',
+			excerpt:
+				'FAFb is FAF compiled: your project\'s 33 facts sealed to a ROM your agent boots. The full Rust version, for teams and monorepos. Invite-only drives are open before 1.0 — free access, one honest hour.',
+			emoji: '✪',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/pack-edition',
 			title: 'The Pack Edition',
 			date: 'September 15, 2026',
