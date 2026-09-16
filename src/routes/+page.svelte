@@ -54,6 +54,7 @@
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
 			<div class="ticker-track">
+				<a href="/blog/discoverable-edition" class="ticker-item"><b>faf-cli 7.16</b> The Discoverable Edition — a card nobody can find is not a card</a>
 				<a href="/blog/fafb-early-access" class="ticker-item"><b>FAFb 0.9</b> Devs wanted — drive the full Rust version for teams, before 1.0</a>
 				<a href="/blog/pack-edition" class="ticker-item"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
 				<a href="/blog/lineage-edition" class="ticker-item"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>

@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/discoverable-edition',
+			title: 'The Discoverable Edition',
+			date: 'September 16, 2026',
+			timestamp: '2026-09-16',
+			excerpt:
+				'A card nobody can find is not a card. The catalog faf cards writes now names who publishes it, keys every row the way the specs say to, and can be written as the ARD manifest agent search engines read.',
+			emoji: '🧭',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/fafb-early-access',
 			title: 'Context, compiled.',
 			date: 'September 16, 2026',
