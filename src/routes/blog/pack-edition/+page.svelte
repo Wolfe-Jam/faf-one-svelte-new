@@ -217,7 +217,9 @@ Comments · suggestions · shares welcome.`;
 			<p class="muted-note">
 				<code>--check</code> prints the cards without writing them. Same CLI under the shorter name:
 				<code>npm i -g <NpmPkg name="faf" version="7.15.0" /></code>. More:
-				<a href="https://github.com/Wolfe-Jam/faf-cli/releases/tag/v7.15.0" target="_blank" rel="noopener">release notes</a>
+				<a href="https://docs.faf.one/cards" target="_blank" rel="noopener">docs.faf.one/cards</a>
+					·
+					<a href="https://github.com/Wolfe-Jam/faf-cli/releases/tag/v7.15.0" target="_blank" rel="noopener">release notes</a>
 				·
 				<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener">repo</a>.
 			</p>
