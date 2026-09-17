@@ -1,0 +1,1956 @@
+{
+ "as_of": "2026-09-12",
+ "map": {
+  "as_of": "2026-09-12",
+  "key": [
+   {
+    "card": "A2A Agent Card",
+    "short": "A2A",
+    "style": "solid a2a",
+    "hollow": false
+   },
+   {
+    "card": "MCP Server Card",
+    "short": "MCP Server Card",
+    "style": "solid mcp",
+    "hollow": false
+   },
+   {
+    "card": "AI Catalog",
+    "short": "AI Catalog",
+    "style": "solid aicat",
+    "hollow": false
+   },
+   {
+    "card": "ARD",
+    "short": "ARD",
+    "style": "hollow ard",
+    "hollow": true
+   },
+   {
+    "card": ".fafa",
+    "short": ".fafa",
+    "style": "solid fafa",
+    "hollow": false
+   }
+  ],
+  "views": [
+   {
+    "id": "a",
+    "label": "Protocol ↔ Envelope",
+    "svg": "<svg class=\"map-svg\" viewBox=\"0 0 1602 596\" width=\"1602\" height=\"596\" role=\"img\" aria-label=\"Pack of Cards map, view A\"><line class=\"centre\" x1=\"140\" y1=\"272\" x2=\"1452\" y2=\"272\"/><text class=\"pole\" x=\"12\" y=\"262\">▲ Protocol-bound</text><text class=\"pole\" x=\"12\" y=\"292\">▼ Envelope</text><text class=\"centre-label\" x=\"12\" y=\"276\">centre</text><line class=\"col\" x1=\"170\" y1=\"60\" x2=\"170\" y2=\"506\"/><text class=\"date\" transform=\"translate(174,516) rotate(45)\">05-21</text><text class=\"year\" x=\"166\" y=\"48\">2025</text><line class=\"col\" x1=\"216\" y1=\"60\" x2=\"216\" y2=\"506\"/><text class=\"date\" transform=\"translate(220,516) rotate(45)\">06-09</text><line class=\"col\" x1=\"262\" y1=\"60\" x2=\"262\" y2=\"506\"/><text class=\"date\" transform=\"translate(266,516) rotate(45)\">06-30</text><line class=\"col\" x1=\"308\" y1=\"60\" x2=\"308\" y2=\"506\"/><text class=\"date\" transform=\"translate(312,516) rotate(45)\">07-30</text><line class=\"col\" x1=\"354\" y1=\"60\" x2=\"354\" y2=\"506\"/><text class=\"date\" transform=\"translate(358,516) rotate(45)\">01-21</text><text class=\"year\" x=\"350\" y=\"48\">2026</text><line class=\"col\" x1=\"400\" y1=\"60\" x2=\"400\" y2=\"506\"/><text class=\"date\" transform=\"translate(404,516) rotate(45)\">01-30</text><line class=\"col\" x1=\"446\" y1=\"60\" x2=\"446\" y2=\"506\"/><text class=\"date\" transform=\"translate(450,516) rotate(45)\">03-12</text><line class=\"col\" x1=\"492\" y1=\"60\" x2=\"492\" y2=\"506\"/><text class=\"date\" transform=\"translate(496,516) rotate(45)\">03-23</text><line class=\"col\" x1=\"538\" y1=\"60\" x2=\"538\" y2=\"506\"/><text class=\"date\" transform=\"translate(542,516) rotate(45)\">03-26</text><line class=\"col\" x1=\"584\" y1=\"60\" x2=\"584\" y2=\"506\"/><text class=\"date\" transform=\"translate(588,516) rotate(45)\">04-08</text><line class=\"col\" x1=\"630\" y1=\"60\" x2=\"630\" y2=\"506\"/><text class=\"date\" transform=\"translate(634,516) rotate(45)\">04-30</text><line class=\"col\" x1=\"676\" y1=\"60\" x2=\"676\" y2=\"506\"/><text class=\"date\" transform=\"translate(680,516) rotate(45)\">05-11</text><line class=\"col\" x1=\"722\" y1=\"60\" x2=\"722\" y2=\"506\"/><text class=\"date\" transform=\"translate(726,516) rotate(45)\">05-18</text><line class=\"col\" x1=\"768\" y1=\"60\" x2=\"768\" y2=\"506\"/><text class=\"date\" transform=\"translate(772,516) rotate(45)\">05-19</text><line class=\"col\" x1=\"814\" y1=\"60\" x2=\"814\" y2=\"506\"/><text class=\"date\" transform=\"translate(818,516) rotate(45)\">05-28</text><line class=\"col\" x1=\"860\" y1=\"60\" x2=\"860\" y2=\"506\"/><text class=\"date\" transform=\"translate(864,516) rotate(45)\">06-08</text><line class=\"col\" x1=\"906\" y1=\"60\" x2=\"906\" y2=\"506\"/><text class=\"date\" transform=\"translate(910,516) rotate(45)\">06-20</text><line class=\"col\" x1=\"952\" y1=\"60\" x2=\"952\" y2=\"506\"/><text class=\"date\" transform=\"translate(956,516) rotate(45)\">06-25</text><line class=\"col\" x1=\"998\" y1=\"60\" x2=\"998\" y2=\"506\"/><text class=\"date\" transform=\"translate(1002,516) rotate(45)\">06-26</text><line class=\"col\" x1=\"1044\" y1=\"60\" x2=\"1044\" y2=\"506\"/><text class=\"date\" transform=\"translate(1048,516) rotate(45)\">06-30</text><line class=\"col\" x1=\"1090\" y1=\"60\" x2=\"1090\" y2=\"506\"/><text class=\"date\" transform=\"translate(1094,516) rotate(45)\">07-20</text><line class=\"col\" x1=\"1136\" y1=\"60\" x2=\"1136\" y2=\"506\"/><text class=\"date\" transform=\"translate(1140,516) rotate(45)\">07-30</text><line class=\"col\" x1=\"1182\" y1=\"60\" x2=\"1182\" y2=\"506\"/><text class=\"date\" transform=\"translate(1186,516) rotate(45)\">08-02</text><line class=\"col\" x1=\"1228\" y1=\"60\" x2=\"1228\" y2=\"506\"/><text class=\"date\" transform=\"translate(1232,516) rotate(45)\">08-12</text><line class=\"col\" x1=\"1274\" y1=\"60\" x2=\"1274\" y2=\"506\"/><text class=\"date\" transform=\"translate(1278,516) rotate(45)\">08-15</text><line class=\"col\" x1=\"1320\" y1=\"60\" x2=\"1320\" y2=\"506\"/><text class=\"date\" transform=\"translate(1324,516) rotate(45)\">08-26</text><line class=\"col\" x1=\"1366\" y1=\"60\" x2=\"1366\" y2=\"506\"/><text class=\"date\" transform=\"translate(1370,516) rotate(45)\">08-27</text><line class=\"col\" x1=\"1412\" y1=\"60\" x2=\"1412\" y2=\"506\"/><text class=\"date\" transform=\"translate(1416,516) rotate(45)\">09-12</text><path class=\"line solid a2a\" d=\"M158,272.0H170H216H262H308H316L354,234.0V111.5H400H446H492H538H584H630H645.5L676,142.0H722H768H809.5L814,137.5H860H906H952H998H1044H1085.5L1090,142.0H1136H1182H1228H1274H1320H1366H1412H1438\"/><text class=\"note\" x=\"170\" y=\"258.0\">alone until 2026-01-21: no other card to compare with</text><line class=\"solo\" x1=\"170\" y1=\"272.0\" x2=\"354\" y2=\"272.0\"/><line class=\"terminus solid a2a\" x1=\"158\" y1=\"265.0\" x2=\"158\" y2=\"279.0\"/><line class=\"terminus solid a2a\" x1=\"1438\" y1=\"135.0\" x2=\"1438\" y2=\"149.0\"/><text class=\"line-label\" x=\"1446\" y=\"146.0\">A2A</text><text class=\"line-label start\" x=\"152\" y=\"276.0\" text-anchor=\"end\">A2A</text><path class=\"line solid mcp\" d=\"M342,120.5H354H400H446H492H538H584H630H671.5L676,116.0H722H768H783.5L814,146.5H860H906H952H998H1044H1068.5L1090,168.0H1136H1182H1228H1274H1320H1366H1412H1438\"/><line class=\"terminus solid mcp\" x1=\"342\" y1=\"113.5\" x2=\"342\" y2=\"127.5\"/><line class=\"terminus solid mcp\" x1=\"1438\" y1=\"161.0\" x2=\"1438\" y2=\"175.0\"/><text class=\"line-label\" x=\"1446\" y=\"172.0\">MCP Server Card</text><text class=\"line-label start\" x=\"336\" y=\"124.5\" text-anchor=\"end\">MCP Server Card</text><path class=\"line solid aicat\" d=\"M572,454.0H584H630H638L676,416.0V402.0H722H730L768,364.0V293.5H814H860H906H926.0L952,267.5H998H1044H1090H1105.5L1136,298.0H1182H1228H1274H1282L1320,336.0V350.0H1366H1412H1438\"/><line class=\"terminus solid aicat\" x1=\"572\" y1=\"447.0\" x2=\"572\" y2=\"461.0\"/><line class=\"terminus solid aicat\" x1=\"1438\" y1=\"343.0\" x2=\"1438\" y2=\"357.0\"/><text class=\"line-label\" x=\"1446\" y=\"354.0\">AI Catalog</text><text class=\"line-label start\" x=\"566\" y=\"458.0\" text-anchor=\"end\">AI Catalog</text><path class=\"line casing hollow ard\" d=\"M756,302.5H768H814H860H906H926.0L952,276.5H998H1044H1090H1131.5L1136,272.0H1182H1228H1274H1282L1320,310.0V376.0H1366H1412H1438\"/><path class=\"line core hollow ard\" d=\"M756,302.5H768H814H860H906H926.0L952,276.5H998H1044H1090H1131.5L1136,272.0H1182H1228H1274H1282L1320,310.0V376.0H1366H1412H1438\"/><line class=\"terminus hollow ard\" x1=\"756\" y1=\"295.5\" x2=\"756\" y2=\"309.5\"/><line class=\"terminus hollow ard\" x1=\"1438\" y1=\"369.0\" x2=\"1438\" y2=\"383.0\"/><text class=\"line-label\" x=\"1446\" y=\"380.0\">ARD</text><text class=\"line-label start\" x=\"750\" y=\"306.5\" text-anchor=\"end\">ARD</text><path class=\"line solid fafa\" d=\"M664,376.0H676H722H768H814H860H906H952H972.0L998,402.0H1044H1090H1136H1182H1228H1274H1294.0L1320,428.0H1366H1412H1438\"/><line class=\"terminus solid fafa\" x1=\"664\" y1=\"369.0\" x2=\"664\" y2=\"383.0\"/><line class=\"terminus solid fafa\" x1=\"1438\" y1=\"421.0\" x2=\"1438\" y2=\"435.0\"/><text class=\"line-label\" x=\"1446\" y=\"432.0\">.fafa</text><text class=\"line-label start\" x=\"658\" y=\"380.0\" text-anchor=\"end\">.fafa</text><a href=\"https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"170\" y1=\"272.0\" x2=\"170\" y2=\"262.0\"/><circle class=\"hit\" cx=\"170\" cy=\"272.0\" r=\"10\"><title>A2A Agent Card · 2025-05-21 · v0.2.0\nBaseline: first v0.2.x tag (its GitHub Release entry has no notes). AgentCard defined in specification/json/a2a.json and docs/specification.md §5.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"216\" y1=\"272.0\" x2=\"216\" y2=\"262.0\"/><circle class=\"hit\" cx=\"216\" cy=\"272.0\" r=\"10\"><title>A2A Agent Card · 2025-06-09 · v0.2.2\nextension changed. Release notes: &#x27;Add protocol support for extensions (#716)&#x27; (70f1e2b), which added AgentCapabilities.extensions. Same release: &#x27;spec: Add an optional iconUrl field to the AgentCard (#687)&#x27;. v0.2.1 (&#x27;Add a new boolean for supporting authenticated extended cards&#x27;, #618) changed no tracked value.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"262\" y1=\"272.0\" x2=\"262\" y2=\"262.0\"/><circle class=\"hit\" cx=\"262\" cy=\"272.0\" r=\"10\"><title>A2A Agent Card · 2025-06-30 · v0.2.5\nversioning and required_fields changed. Release notes: BREAKING &#x27;spec: Add a required protocol version to the agent card. (#802)&#x27; (90fa642). v0.2.3 (gRPC annotation typo fixes) and v0.2.4 (&#x27;feat: Add support for multiple transport announcement in AgentCard&#x27;) changed no tracked value.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"308\" y1=\"272.0\" x2=\"308\" y2=\"262.0\"/><circle class=\"hit\" cx=\"308\" cy=\"272.0\" r=\"10\"><title>A2A Agent Card · 2025-07-30 · v0.3.0\ndiscovery and trust changed. Release notes: BREAKING &#x27;Change Well-Known URI for Agent Card hosting from `agent.json` to `agent-card.json` (#841)&#x27; (0858ddb); &#x27;Add `signatures` to the `AgentCard` (#917)&#x27; (ef4a305). v0.2.6 (&#x27;Type fix and doc clarification&#x27;, gRPC json names) changed no tracked value.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"446\" y1=\"111.5\" x2=\"446\" y2=\"101.5\"/><circle class=\"hit\" cx=\"446\" cy=\"111.5\" r=\"10\"><title>A2A Agent Card · 2026-03-12 · v1.0.0\nidentity location, versioning and required_fields changed; trust gained a canonicalization rule. Release notes: &#x27;spec: Large refactor of specification to separate application protocol definition from mapping to transports&#x27; (b078419: added supported_interfaces, deprecated top-level url/preferred_transport/additional_interfaces); &#x27;spec: Remove deprecated fields from a2a.proto for v1.0 release (#1301)&#x27; (60f83c3: removed them, made supported_interfaces REQUIRED); &#x27;spec: Provide ability for SDKs to be backwards compatible (#1401)&#x27; (227e249: moved the protocol version into AgentInterface). Observed in the spec text: §14 IANA Considerations and JCS canonicalization for signing are new (neither occurs at v0.3.0).\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"814\" y1=\"137.5\" x2=\"814\" y2=\"127.5\"/><circle class=\"hit\" cx=\"814\" cy=\"137.5\" r=\"10\"><title>A2A Agent Card · 2026-05-28 · v1.0.1\nLatest release; no tracked value changed. The AgentCard, AgentCapabilities and AgentCardSignature messages are identical to v1.0.0. Release notes: &#x27;spec: prefer application/a2a+json in HTTP binding (#1753)&#x27; (7ff1004), which moves the REST binding (including the extended card response) to application/a2a+json SHOULD; the well-known card still has no stated media type.\nDistance from centre: 5 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"354\" y1=\"120.5\" x2=\"354\" y2=\"110.5\"/><circle class=\"hit\" cx=\"354\" cy=\"120.5\" r=\"10\"><title>MCP Server Card · 2026-01-21 · Initial draft (serverInfo shape)\nFirst public version of SEP-2127 (commit &#x27;SEP-2127: MCP Server Cards - HTTP Server Discovery via .well-known&#x27;; Type: Standards Track). Baseline. The card copies the initialization result (serverInfo, protocolVersion, capabilities, transport) and can list primitives or mark them &quot;dynamic&quot;.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"400\" y1=\"120.5\" x2=\"400\" y2=\"110.5\"/><circle class=\"hit\" cx=\"400\" cy=\"120.5\" r=\"10\"><title>MCP Server Card · 2026-01-30 · Rev 1: server.json shape\n&#x27;Community feedback iteration (rev 1) on SEP-1649 (MCP Server Cards) (#2152)&#x27;. The card is rebuilt on the MCP Registry server.json shape: reverse-DNS `name`, top-level `title`/`version`/`description`, `remotes`, `packages`. serverInfo, protocolVersion and transport are gone. The path is renamed, and the AI Card relationship section is added. Changed: naming, identity, discovery, versioning, required_fields.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"492\" y1=\"120.5\" x2=\"492\" y2=\"110.5\"/><circle class=\"hit\" cx=\"492\" cy=\"120.5\" r=\"10\"><title>MCP Server Card · 2026-03-23 · description required; endpoints simplified\n&#x27;Align Server Card with server.json and simplify endpoints&#x27;. `description` becomes required and `capabilities` optional (required_fields changed). The MCP-resource endpoint (`mcp://server-card.json`) and the registry endpoint are removed, leaving `.well-known` as the only endpoint. The versioning value also includes an earlier change folded in here to stay within 8 checkpoints: 3a61af5 (2026-02-01, &#x27;Prettier&#x27;, the end of the &#x27;Rev on server.json&#x27; series) moved `packages` out of the card into a separate server.json superset. Primitives were removed on 2026-03-02 (308c652), which changed no tracked dimension.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"538\" y1=\"120.5\" x2=\"538\" y2=\"110.5\"/><circle class=\"hit\" cx=\"538\" cy=\"120.5\" r=\"10\"><title>MCP Server Card · 2026-03-26 · Flat /.well-known/mcp-server-card\n&#x27;sep: use flat mcp-server-card well-known suffix&#x27;. The path changes from `/.well-known/mcp/server-card` to `/.well-known/mcp-server-card`, with `/{server-name}` sub-paths for hosts that serve several servers. The IANA suffix to register becomes `mcp-server-card`. Changed: discovery.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"814\" y1=\"146.5\" x2=\"814\" y2=\"136.5\"/><circle class=\"hit\" cx=\"814\" cy=\"146.5\" r=\"10\"><title>MCP Server Card · 2026-05-28 · Extension repo: card media type + MCP Catalog\nMerge of #3 &#x27;Add MCP Catalog discovery specification&#x27;. The extension repo was set up on 2026-04-27 (7a3ff5d), and its schema.ts copied the SEP&#x27;s card with no tracked-dimension change. docs/discovery.md now names a card media type, `application/mcp-server+json` (type changed), and adds a domain-level MCP Catalog at `/.well-known/mcp/catalog.json`. The SEP branch still said Content-Type application/json on this date.\nDistance from centre: 5 of 8 choices</title></circle></a><text class=\"station\" x=\"818\" y=\"128.5\">Extension repo</text><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/docs/discovery.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"860\" y1=\"146.5\" x2=\"860\" y2=\"136.5\"/><circle class=\"hit\" cx=\"860\" cy=\"146.5\" r=\"10\"><title>MCP Server Card · 2026-06-08 · /server-card via catalog; mcp-server-card+json\nMerges on the same day: #18 &#x27;align Catalog mediaType with AI Catalog spec&#x27; (media type becomes `application/mcp-server-card+json`, closes #9); #19 (primitives removed from discovery.md); #22 &#x27;Server Cards: recommend `/server-card` over `.well-known`&#x27; (resolves #12: a card can live at any unreserved URI, `GET &lt;streamable-http-url&gt;/server-card` is reserved, and the catalog is the entry point; issue #11, about the slash vs dash well-known spelling, was closed by hand 25 seconds later); #24 (DoS section); #25 &#x27;require Server Card to be consistent with runtime behavior&#x27;. Changed: type, discovery, trust. On the same day the SEP was rewritten onto the Extensions Track (4590aa4, extension identifier `io.modelcontextprotocol/server-card`) and handed the wire format to this repo. That rewrite reached the SEP branch via #2893 on 2026-06-26.\nDistance from centre: 5 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/docs/discovery.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"1090\" y1=\"168.0\" x2=\"1090\" y2=\"158.0\"/><circle class=\"hit\" cx=\"1090\" cy=\"168.0\" r=\"10\"><title>MCP Server Card · 2026-07-20 · AI Catalog discovery\n&#x27;Use AI Catalog for Server Card discovery (#42)&#x27;. The MCP Catalog (`/.well-known/mcp/catalog.json`) is replaced by the AI Catalog at `/.well-known/ai-catalog.json`. An entry either links to a card (`url`) or embeds it (`data`). Catalog identifiers take the form `urn:air:{publisher}:{namespace}:{name}`. Changed: discovery. Extension-repo changes since the last checkpoint that moved no card dimension: #28 (2026-06-18, card-only: Server/packages types removed, $schema pinned to server-card.schema.json), #31 (2026-06-19, `urn:air:` catalog identifiers), #37 (handshake references dropped), #39 (2026-07-13, catalog `displayName` dropped because the card&#x27;s `title` is the source of truth), #32 (2026-07-13, catalog `mediaType` renamed to `type`). The SEP was updated the same day to match (608046a).\nDistance from centre: 4 of 8 choices</title></circle></a><text class=\"station\" x=\"1094\" y=\"150.0\">AI Catalog discovery</text><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"1228\" y1=\"168.0\" x2=\"1228\" y2=\"158.0\"/><circle class=\"hit\" cx=\"1228\" cy=\"168.0\" r=\"10\"><title>MCP Server Card · 2026-08-12 · Latest (SEP-pinned snapshot 526201bb)\nLatest state. The most recent extension-repo commit is &#x27;docs: add Server Card roadmap priorities (#47)&#x27;. Since the last checkpoint, only #46 (2026-07-24, ETag revalidation) touched discovery.md, and no tracked dimension changed. SEP-2127&#x27;s latest commit, 5c8483d (2026-08-24), pins this snapshot as the contract under review (SEP L85) and sets &#x27;Status: Final&#x27; (SEP L3). PR #2127 is still open with the &#x27;in-review&#x27; label (checked 2026-09-15).\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"584\" y1=\"454.0\" x2=\"584\" y2=\"464.0\"/><circle class=\"hit\" cx=\"584\" cy=\"454.0\" r=\"10\"><title>AI Catalog · 2026-04-08 · #27 first spec on main\nEarliest version of specification/ai-catalog.md on main: PR #27 &#x27;AI Catalog Specification proposal&#x27; merged 2026-04-08 00:13 UTC. The file was first committed 2026-03-31 on the ai-catalog-spec branch as specification/draft-ai-card.md (0271c148) and renamed the same day (3e414775). This version already has the IANA Considerations section (media type + link relation registrations). Baseline.\nDistance from centre: 7 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"630\" y1=\"454.0\" x2=\"630\" y2=\"464.0\"/><circle class=\"hit\" cx=\"630\" cy=\"454.0\" r=\"10\"><title>AI Catalog · 2026-04-30 · #33 inline→data, well-known registration\nPR #33 &#x27;spec: Updates based on discussions during last meeting&#x27; merged: the entry content member `inline` was renamed `data`, top-level `collections` was removed, a Metadata Extensibility section (reverse-DNS key convention) and a Version Handling section were added, and an IANA Well-Known URI registration for `ai-catalog.json` was added.\nDistance from centre: 7 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"952\" y1=\"267.5\" x2=\"952\" y2=\"257.5\"/><circle class=\"hit\" cx=\"952\" cy=\"267.5\" r=\"10\"><title>AI Catalog · 2026-06-25 · #37 type + #36 urn:air\nTwo same-day merges. PR #37 (18:04 UTC) &#x27;Spec: Update mediaType to type for catalogEntry and add known types&#x27; (ADR-0014) renamed the entry&#x27;s `mediaType` to open-text `type` with RECOMMENDED known types, and removed `mediaType` from Attestations. PR #36 (21:30 UTC) &#x27;spec: adopt `urn:air:` naming standard for AI artifacts (ADR 0015)&#x27;. Ref is the #36 merge, the first main commit containing both.\nDistance from centre: 0 of 8 choices</title></circle></a><text class=\"station\" x=\"956\" y=\"249.5\">#37 type + #36 urn:air</text><a href=\"https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"998\" y1=\"267.5\" x2=\"998\" y2=\"257.5\"/><circle class=\"hit\" cx=\"998\" cy=\"267.5\" r=\"10\"><title>AI Catalog · 2026-06-26 · #39 displayName optional (prose)\nPR #39 &#x27;spec: make Catalog Entry displayName optional (not required) (ADR 0016)&#x27; merged. Branch commit 0798bcc was authored 2026-06-08; ADR-0016 is dated 2026-06-18. It moved `displayName` to the OPTIONAL members, removed it from the Level 1 minimum and added a display-name resolution order. It did not change the CDDL.\nDistance from centre: 0 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1044\" y1=\"267.5\" x2=\"1044\" y2=\"257.5\"/><circle class=\"hit\" cx=\"1044\" cy=\"267.5\" r=\"10\"><title>AI Catalog · 2026-06-30 · #56 CDDL displayName optional\nPR #56 &#x27;fix(spec): make displayName optional in CatalogEntry CDDL (align with ADR-0016)&#x27; merged (author Wolfe-Jam). One-line change, `displayName: text,` to `? displayName: text,`, so the normative CDDL now agrees with the prose and Level 1.\nDistance from centre: 0 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1136\" y1=\"298.0\" x2=\"1136\" y2=\"308.0\"/><circle class=\"hit\" cx=\"1136\" cy=\"298.0\" r=\"10\"><title>AI Catalog · 2026-07-30 · #77 extensions map\nPR #77 &#x27;Resolve #58: Add ADR-0017 and migrate to namespace extensions map&#x27; merged. `metadata` (catalog, entry, Trust Manifest) is replaced by `extensions`, a map whose keys are extension namespaces (URL or reverse-DNS). ADR-0017 records that a JSON-LD-style `@context` proposal (Issue #58) was not adopted. PR #60 (entry-field authoritative-source parity for description/version), merged minutes earlier, changed no dimension.\nDistance from centre: 1 of 8 choices</title></circle></a><text class=\"station\" x=\"1140\" y=\"320.0\">#77 extensions map</text><a href=\"https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1182\" y1=\"298.0\" x2=\"1182\" y2=\"308.0\"/><circle class=\"hit\" cx=\"1182\" cy=\"298.0\" r=\"10\"><title>AI Catalog · 2026-08-02 · #47 substantive trust manifest\nPR #47 &#x27;feat(spec): Trust Manifest threat modeling review - suggested updates.&#x27; merged. It carries commit 58597c3 &#x27;require substantive trust manifest&#x27; (authored 2026-06-21; ADR-0020 is dated 2026-06-21). A Trust Manifest, when present, MUST hold at least one substantive member. A signed manifest MUST carry `subject` + `issuedAt`. There is now a JWS algorithm allowlist, trust anchoring, and an optional top-level catalog `signature` (detached JWS). The trust vocabulary value is unchanged; the rules behind it changed.\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1366\" y1=\"350.0\" x2=\"1366\" y2=\"360.0\"/><circle class=\"hit\" cx=\"1366\" cy=\"350.0\" r=\"10\"><title>AI Catalog · 2026-08-27 · latest (#100)\nLatest state on main (HEAD for this file as of 2026-09-15). Since #47: #93 (2026-08-12) and #99 (2026-08-20) added Agent Plugin known entry types (`application/agent-plugins+zip`, `+gzip`); #100 &#x27;Extract mapping appendixes into standalone docs&#x27; moved the mapping appendixes out of the file. No dimension value changed after #47.\nDistance from centre: 3 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"768\" y1=\"302.5\" x2=\"768\" y2=\"312.5\"/><circle class=\"hit\" cx=\"768\" cy=\"302.5\" r=\"10\"><title>ARD · 2026-05-19 · v0.4.2 (Agent Finder)\nEarliest spec version: 9519b49 &#x27;Add initial version (v0.4.2) of Agent finder spec&#x27; (spec/agentfinder.md). Baseline for every dimension.\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"906\" y1=\"302.5\" x2=\"906\" y2=\"312.5\"/><circle class=\"hit\" cx=\"906\" cy=\"302.5\" r=\"10\"><title>ARD · 2026-06-20 · v0.9 (urn:air)\n8fff974 &#x27;spec: rename URN namespace identifier from &lt;ai&gt; to &lt;air&gt; to satisfy NID length requirements (&gt;2 characters).&#x27; Identity changes urn:ai -&gt; urn:air. No other dimension changed between v0.4.2 and this commit (file renamed spec/agentfinder.md -&gt; spec/ard.md on 2026-06-12; v0.5 on 2026-05-29; v0.9 on 2026-06-16).\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"1320\" y1=\"376.0\" x2=\"1320\" y2=\"386.0\"/><circle class=\"hit\" cx=\"1320\" cy=\"376.0\" r=\"10\"><title>ARD · 2026-08-26 · v0.91\nPR #81 (publish-v0.91) merged as aa3e598: a305a52 &#x27;spec: publish v0.91 — promote the draft, single well-known path&#x27;; 49c0c4d &#x27;conformance: validate the ARD entry model, resolve ard.json&#x27; (also reconciled ard.cddl); c21ac6a &#x27;schemas: drop the projection concept, ArdEntry not ardEntry&#x27;. Discovery, encoding, extension, trust and versioning change; ard-entry.schema.json becomes the authoritative schema.\nDistance from centre: 4 of 8 choices</title></circle></a><text class=\"station\" x=\"1324\" y=\"398.0\">v0.91</text><a href=\"https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"1412\" y1=\"376.0\" x2=\"1412\" y2=\"386.0\"/><circle class=\"hit\" cx=\"1412\" cy=\"376.0\" r=\"10\"><title>ARD · 2026-09-12 · latest (v0.91)\nLatest main (b76f235). Since v0.91 only b76db39 (author affiliation, merged 2026-09-12 via PR #82), 56e1325 and 596e72c (conformance tooling and an example) landed. No dimension changed.\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"676\" y1=\"376.0\" x2=\"676\" y2=\"386.0\"/><circle class=\"hit\" cx=\"676\" cy=\"376.0\" r=\"10\"><title>.fafa · 2026-05-11 · v0.1 draft (earliest public)\nEarliest public .fafa spec text: v0.1 draft added to the public About repo Wolfe-Jam/faf-agent-public in &#x27;feat: Claude-Code-quality About Repo — real docs, no source&#x27;. Baseline. (ref is a faf-agent-public SHA; the canonical repo Wolfe-Jam/faf had no AGENT-FORMAT.md yet.)\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"722\" y1=\"376.0\" x2=\"722\" y2=\"386.0\"/><circle class=\"hit\" cx=\"722\" cy=\"376.0\" r=\"10\"><title>.fafa · 2026-05-18 · v1.0 stable (canonical repo)\n&#x27;feat: add AGENT-FORMAT.md (FAFa v1.0 spec for IANA registration)&#x27;: first copy in the canonical repo, v1.0 Stable. Discovery moves from silent to explicitly out of scope (not specified → none). Also, outside the dimensions: §15 adds the standard filename `agent.fafa`, §16 inlines the RFC 6838 template (incl. optional parameter `version`), and the rule that implementations MUST validate agent.id against known schemes is gone. Media type still &#x27;(proposed)&#x27;.\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"998\" y1=\"402.0\" x2=\"998\" y2=\"412.0\"/><circle class=\"hit\" cx=\"998\" cy=\"402.0\" r=\"10\"><title>.fafa · 2026-06-26 · IANA registration (per the IANA record)\nIANA registered application/vnd.fafa+yaml on 2026-06-26. Added at assembly: the spec text kept saying &quot;proposed&quot; until 2026-08-15 (faf@190c338); the registration itself is the IANA fact.\nDistance from centre: 5 of 8 choices</title></circle></a><text class=\"station\" x=\"1002\" y=\"424.0\">IANA registration</text><a href=\"https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"1274\" y1=\"402.0\" x2=\"1274\" y2=\"412.0\"/><circle class=\"hit\" cx=\"1274\" cy=\"402.0\" r=\"10\"><title>.fafa · 2026-08-15 · v1.0 IANA-registered + DOI (latest)\nTwo commits the same day. 01565967c8fc3a74d1b199770fb797583f620ec5 &#x27;fix: Update stale IANA registration status in AGENT-FORMAT.md&#x27; flips type from &#x27;(proposed)&#x27;/&#x27;Planned&#x27; to &#x27;Registered 2026-06-26 (vendor tree)&#x27; (de-facto → iana-registered). 190c3380847c022da3e13a28af57c4dc68b3e02c &#x27;docs: three IANA types + complete paper cohort&#x27; adds only the paper DOI (no dimension change). ref = 190c338 = current main (the latest state). The same day, faf-agent-public de8550f (&#x27;docs: add Agents paper citation and sync AGENT-FORMAT&#x27;) synced its copy to be byte-identical.\nDistance from centre: 5 of 8 choices</title></circle></a><g class=\"interchange join\"><title>Interchange · 2026-01-21\nA2A ↔ MCP Server Card\n  now share encoding: json</title><line class=\"link\" x1=\"354\" y1=\"111.5\" x2=\"354\" y2=\"120.5\"/><circle class=\"ring\" cx=\"354\" cy=\"111.5\" r=\"6\"/><circle class=\"ring\" cx=\"354\" cy=\"120.5\" r=\"6\"/><circle class=\"hit\" cx=\"354\" cy=\"111.5\" r=\"10\"/><circle class=\"hit\" cx=\"354\" cy=\"120.5\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-04-08\nA2A ↔ AI Catalog\n  now share encoding: json\nMCP Server Card ↔ AI Catalog\n  now share encoding: json</title><line class=\"link\" x1=\"584\" y1=\"111.5\" x2=\"584\" y2=\"120.5\"/><circle class=\"ring\" cx=\"584\" cy=\"111.5\" r=\"6\"/><circle class=\"ring\" cx=\"584\" cy=\"120.5\" r=\"6\"/><circle class=\"ring\" cx=\"584\" cy=\"454.0\" r=\"6\"/><circle class=\"hit\" cx=\"584\" cy=\"111.5\" r=\"10\"/><circle class=\"hit\" cx=\"584\" cy=\"120.5\" r=\"10\"/><circle class=\"hit\" cx=\"584\" cy=\"454.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-05-11\nA2A ↔ .fafa\n  now share naming: name\nAI Catalog ↔ .fafa\n  now share extension: metadata-object\n  now share type: de-facto</title><circle class=\"ring\" cx=\"676\" cy=\"142.0\" r=\"6\"/><circle class=\"ring\" cx=\"676\" cy=\"376.0\" r=\"6\"/><circle class=\"ring\" cx=\"676\" cy=\"402.0\" r=\"6\"/><circle class=\"hit\" cx=\"676\" cy=\"142.0\" r=\"10\"/><circle class=\"hit\" cx=\"676\" cy=\"376.0\" r=\"10\"/><circle class=\"hit\" cx=\"676\" cy=\"402.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-05-19\nA2A ↔ ARD\n  now share encoding: json\nMCP Server Card ↔ ARD\n  now share encoding: json\nAI Catalog ↔ ARD\n  now share discovery: /.well-known/ai-catalog.json\n  now share encoding: json\n  now share extension: metadata-object\n  now share naming: displayName\n  now share trust: trust-manifest+jws\n  now share versioning: specVersion\nARD ↔ .fafa\n  now share extension: metadata-object</title><line class=\"link\" x1=\"768\" y1=\"293.5\" x2=\"768\" y2=\"302.5\"/><circle class=\"ring\" cx=\"768\" cy=\"116.0\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"142.0\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"293.5\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"302.5\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"376.0\" r=\"6\"/><circle class=\"hit\" cx=\"768\" cy=\"116.0\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"142.0\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"293.5\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"302.5\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"376.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-05-28\nMCP Server Card ↔ AI Catalog\n  now share type: de-facto\nMCP Server Card ↔ .fafa\n  now share type: de-facto</title><circle class=\"ring\" cx=\"814\" cy=\"146.5\" r=\"6\"/><circle class=\"ring\" cx=\"814\" cy=\"293.5\" r=\"6\"/><circle class=\"ring\" cx=\"814\" cy=\"376.0\" r=\"6\"/><circle class=\"hit\" cx=\"814\" cy=\"146.5\" r=\"10\"/><circle class=\"hit\" cx=\"814\" cy=\"293.5\" r=\"10\"/><circle class=\"hit\" cx=\"814\" cy=\"376.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-06-25\nAI Catalog ↔ ARD\n  now share identity: urn:air</title><line class=\"link\" x1=\"952\" y1=\"267.5\" x2=\"952\" y2=\"276.5\"/><circle class=\"ring\" cx=\"952\" cy=\"267.5\" r=\"6\"/><circle class=\"ring\" cx=\"952\" cy=\"276.5\" r=\"6\"/><circle class=\"hit\" cx=\"952\" cy=\"267.5\" r=\"10\"/><circle class=\"hit\" cx=\"952\" cy=\"276.5\" r=\"10\"/></g><g class=\"interchange split\"><title>Interchange · 2026-06-26\nMCP Server Card ↔ .fafa\n  stop sharing type: de-facto\nAI Catalog ↔ .fafa\n  stop sharing type: de-facto</title><circle class=\"ring\" cx=\"998\" cy=\"146.5\" r=\"6\"/><circle class=\"ring\" cx=\"998\" cy=\"267.5\" r=\"6\"/><circle class=\"ring\" cx=\"998\" cy=\"402.0\" r=\"6\"/><circle class=\"hit\" cx=\"998\" cy=\"146.5\" r=\"10\"/><circle class=\"hit\" cx=\"998\" cy=\"267.5\" r=\"10\"/><circle class=\"hit\" cx=\"998\" cy=\"402.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-07-20\nMCP Server Card ↔ AI Catalog\n  now share discovery: /.well-known/ai-catalog.json\nMCP Server Card ↔ ARD\n  now share discovery: /.well-known/ai-catalog.json</title><line class=\"link\" x1=\"1090\" y1=\"267.5\" x2=\"1090\" y2=\"276.5\"/><circle class=\"ring\" cx=\"1090\" cy=\"168.0\" r=\"6\"/><circle class=\"ring\" cx=\"1090\" cy=\"267.5\" r=\"6\"/><circle class=\"ring\" cx=\"1090\" cy=\"276.5\" r=\"6\"/><circle class=\"hit\" cx=\"1090\" cy=\"168.0\" r=\"10\"/><circle class=\"hit\" cx=\"1090\" cy=\"267.5\" r=\"10\"/><circle class=\"hit\" cx=\"1090\" cy=\"276.5\" r=\"10\"/></g><g class=\"interchange split\"><title>Interchange · 2026-07-30\nAI Catalog ↔ ARD\n  stop sharing extension: metadata-object\nAI Catalog ↔ .fafa\n  stop sharing extension: metadata-object</title><circle class=\"ring\" cx=\"1136\" cy=\"272.0\" r=\"6\"/><circle class=\"ring\" cx=\"1136\" cy=\"298.0\" r=\"6\"/><circle class=\"ring\" cx=\"1136\" cy=\"402.0\" r=\"6\"/><circle class=\"hit\" cx=\"1136\" cy=\"272.0\" r=\"10\"/><circle class=\"hit\" cx=\"1136\" cy=\"298.0\" r=\"10\"/><circle class=\"hit\" cx=\"1136\" cy=\"402.0\" r=\"10\"/></g><g class=\"interchange split\"><title>Interchange · 2026-08-26\nA2A ↔ ARD\n  stop sharing encoding: json\nMCP Server Card ↔ ARD\n  stop sharing discovery: /.well-known/ai-catalog.json\n  stop sharing encoding: json\nAI Catalog ↔ ARD\n  stop sharing discovery: /.well-known/ai-catalog.json\n  stop sharing encoding: json\n  stop sharing trust: trust-manifest+jws\n  stop sharing versioning: specVersion\nARD ↔ .fafa\n  stop sharing extension: metadata-object</title><circle class=\"ring\" cx=\"1320\" cy=\"142.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"168.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"350.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"376.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"428.0\" r=\"6\"/><circle class=\"hit\" cx=\"1320\" cy=\"142.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"168.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"350.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"376.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"428.0\" r=\"10\"/></g></svg>"
+   },
+   {
+    "id": "b",
+    "label": "Strict ↔ Loose",
+    "svg": "<svg class=\"map-svg\" viewBox=\"0 0 1602 440\" width=\"1602\" height=\"440\" role=\"img\" aria-label=\"Pack of Cards map, view B\"><line class=\"centre\" x1=\"140\" y1=\"194\" x2=\"1452\" y2=\"194\"/><text class=\"pole\" x=\"12\" y=\"184\">▲ Strict (more required fields)</text><text class=\"pole\" x=\"12\" y=\"214\">▼ Loose (fewer)</text><text class=\"centre-label\" x=\"12\" y=\"198\">centre</text><line class=\"col\" x1=\"170\" y1=\"60\" x2=\"170\" y2=\"350\"/><text class=\"date\" transform=\"translate(174,360) rotate(45)\">05-21</text><text class=\"year\" x=\"166\" y=\"48\">2025</text><line class=\"col\" x1=\"216\" y1=\"60\" x2=\"216\" y2=\"350\"/><text class=\"date\" transform=\"translate(220,360) rotate(45)\">06-09</text><line class=\"col\" x1=\"262\" y1=\"60\" x2=\"262\" y2=\"350\"/><text class=\"date\" transform=\"translate(266,360) rotate(45)\">06-30</text><line class=\"col\" x1=\"308\" y1=\"60\" x2=\"308\" y2=\"350\"/><text class=\"date\" transform=\"translate(312,360) rotate(45)\">07-30</text><line class=\"col\" x1=\"354\" y1=\"60\" x2=\"354\" y2=\"350\"/><text class=\"date\" transform=\"translate(358,360) rotate(45)\">01-21</text><text class=\"year\" x=\"350\" y=\"48\">2026</text><line class=\"col\" x1=\"400\" y1=\"60\" x2=\"400\" y2=\"350\"/><text class=\"date\" transform=\"translate(404,360) rotate(45)\">01-30</text><line class=\"col\" x1=\"446\" y1=\"60\" x2=\"446\" y2=\"350\"/><text class=\"date\" transform=\"translate(450,360) rotate(45)\">03-12</text><line class=\"col\" x1=\"492\" y1=\"60\" x2=\"492\" y2=\"350\"/><text class=\"date\" transform=\"translate(496,360) rotate(45)\">03-23</text><line class=\"col\" x1=\"538\" y1=\"60\" x2=\"538\" y2=\"350\"/><text class=\"date\" transform=\"translate(542,360) rotate(45)\">03-26</text><line class=\"col\" x1=\"584\" y1=\"60\" x2=\"584\" y2=\"350\"/><text class=\"date\" transform=\"translate(588,360) rotate(45)\">04-08</text><line class=\"col\" x1=\"630\" y1=\"60\" x2=\"630\" y2=\"350\"/><text class=\"date\" transform=\"translate(634,360) rotate(45)\">04-30</text><line class=\"col\" x1=\"676\" y1=\"60\" x2=\"676\" y2=\"350\"/><text class=\"date\" transform=\"translate(680,360) rotate(45)\">05-11</text><line class=\"col\" x1=\"722\" y1=\"60\" x2=\"722\" y2=\"350\"/><text class=\"date\" transform=\"translate(726,360) rotate(45)\">05-18</text><line class=\"col\" x1=\"768\" y1=\"60\" x2=\"768\" y2=\"350\"/><text class=\"date\" transform=\"translate(772,360) rotate(45)\">05-19</text><line class=\"col\" x1=\"814\" y1=\"60\" x2=\"814\" y2=\"350\"/><text class=\"date\" transform=\"translate(818,360) rotate(45)\">05-28</text><line class=\"col\" x1=\"860\" y1=\"60\" x2=\"860\" y2=\"350\"/><text class=\"date\" transform=\"translate(864,360) rotate(45)\">06-08</text><line class=\"col\" x1=\"906\" y1=\"60\" x2=\"906\" y2=\"350\"/><text class=\"date\" transform=\"translate(910,360) rotate(45)\">06-20</text><line class=\"col\" x1=\"952\" y1=\"60\" x2=\"952\" y2=\"350\"/><text class=\"date\" transform=\"translate(956,360) rotate(45)\">06-25</text><line class=\"col\" x1=\"998\" y1=\"60\" x2=\"998\" y2=\"350\"/><text class=\"date\" transform=\"translate(1002,360) rotate(45)\">06-26</text><line class=\"col\" x1=\"1044\" y1=\"60\" x2=\"1044\" y2=\"350\"/><text class=\"date\" transform=\"translate(1048,360) rotate(45)\">06-30</text><line class=\"col\" x1=\"1090\" y1=\"60\" x2=\"1090\" y2=\"350\"/><text class=\"date\" transform=\"translate(1094,360) rotate(45)\">07-20</text><line class=\"col\" x1=\"1136\" y1=\"60\" x2=\"1136\" y2=\"350\"/><text class=\"date\" transform=\"translate(1140,360) rotate(45)\">07-30</text><line class=\"col\" x1=\"1182\" y1=\"60\" x2=\"1182\" y2=\"350\"/><text class=\"date\" transform=\"translate(1186,360) rotate(45)\">08-02</text><line class=\"col\" x1=\"1228\" y1=\"60\" x2=\"1228\" y2=\"350\"/><text class=\"date\" transform=\"translate(1232,360) rotate(45)\">08-12</text><line class=\"col\" x1=\"1274\" y1=\"60\" x2=\"1274\" y2=\"350\"/><text class=\"date\" transform=\"translate(1278,360) rotate(45)\">08-15</text><line class=\"col\" x1=\"1320\" y1=\"60\" x2=\"1320\" y2=\"350\"/><text class=\"date\" transform=\"translate(1324,360) rotate(45)\">08-26</text><line class=\"col\" x1=\"1366\" y1=\"60\" x2=\"1366\" y2=\"350\"/><text class=\"date\" transform=\"translate(1370,360) rotate(45)\">08-27</text><line class=\"col\" x1=\"1412\" y1=\"60\" x2=\"1412\" y2=\"350\"/><text class=\"date\" transform=\"translate(1416,360) rotate(45)\">09-12</text><path class=\"line solid a2a\" d=\"M158,194.0H170H216H262H308H316L354,156.0V155.0H374.0L400,129.0H433.0L446,142.0H492H538H546L584,104.0V90.0H630H676H722H768H814H860H906H952H998H1044H1090H1136H1182H1228H1274H1320H1366H1412H1438\"/><text class=\"note\" x=\"170\" y=\"180.0\">alone until 2026-01-21: no other card to compare with</text><line class=\"solo\" x1=\"170\" y1=\"194.0\" x2=\"354\" y2=\"194.0\"/><line class=\"terminus solid a2a\" x1=\"158\" y1=\"187.0\" x2=\"158\" y2=\"201.0\"/><line class=\"terminus solid a2a\" x1=\"1438\" y1=\"83.0\" x2=\"1438\" y2=\"97.0\"/><text class=\"line-label\" x=\"1446\" y=\"94.0\">A2A</text><text class=\"line-label start\" x=\"152\" y=\"198.0\" text-anchor=\"end\">A2A</text><path class=\"line solid mcp\" d=\"M342,233.0H354H374.0L400,259.0H433.0L446,246.0H492H538H546L584,208.0V189.5H630H671.5L676,185.0H722H763.5L768,180.5H814H860H906H952H993.5L998,185.0H1044H1090H1136H1182H1228H1274H1320H1366H1412H1438\"/><line class=\"terminus solid mcp\" x1=\"342\" y1=\"226.0\" x2=\"342\" y2=\"240.0\"/><line class=\"terminus solid mcp\" x1=\"1438\" y1=\"178.0\" x2=\"1438\" y2=\"192.0\"/><text class=\"line-label\" x=\"1446\" y=\"189.0\">MCP Server Card</text><text class=\"line-label start\" x=\"336\" y=\"237.0\" text-anchor=\"end\">MCP Server Card</text><path class=\"line solid aicat\" d=\"M572,198.5H584H630H671.5L676,194.0H722H763.5L768,189.5H814H860H906H952H967.5L998,220.0H1044H1090H1136H1182H1228H1274H1320H1366H1412H1438\"/><line class=\"terminus solid aicat\" x1=\"572\" y1=\"191.5\" x2=\"572\" y2=\"205.5\"/><line class=\"terminus solid aicat\" x1=\"1438\" y1=\"213.0\" x2=\"1438\" y2=\"227.0\"/><text class=\"line-label\" x=\"1446\" y=\"224.0\">AI Catalog</text><text class=\"line-label start\" x=\"566\" y=\"202.5\" text-anchor=\"end\">AI Catalog</text><path class=\"line casing hollow ard\" d=\"M756,198.5H768H814H860H906H952H993.5L998,194.0H1044H1090H1136H1182H1228H1274H1320H1366H1412H1438\"/><path class=\"line core hollow ard\" d=\"M756,198.5H768H814H860H906H952H993.5L998,194.0H1044H1090H1136H1182H1228H1274H1320H1366H1412H1438\"/><line class=\"terminus hollow ard\" x1=\"756\" y1=\"191.5\" x2=\"756\" y2=\"205.5\"/><line class=\"terminus hollow ard\" x1=\"1438\" y1=\"187.0\" x2=\"1438\" y2=\"201.0\"/><text class=\"line-label\" x=\"1446\" y=\"198.0\">ARD</text><text class=\"line-label start\" x=\"750\" y=\"202.5\" text-anchor=\"end\">ARD</text><path class=\"line solid fafa\" d=\"M664,203.0H676H722H763.5L768,207.5H814H860H906H952H993.5L998,203.0H1044H1090H1136H1182H1228H1274H1320H1366H1412H1438\"/><line class=\"terminus solid fafa\" x1=\"664\" y1=\"196.0\" x2=\"664\" y2=\"210.0\"/><line class=\"terminus solid fafa\" x1=\"1438\" y1=\"196.0\" x2=\"1438\" y2=\"210.0\"/><text class=\"line-label\" x=\"1446\" y=\"207.0\">.fafa</text><text class=\"line-label start\" x=\"658\" y=\"207.0\" text-anchor=\"end\">.fafa</text><a href=\"https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"170\" y1=\"194.0\" x2=\"170\" y2=\"184.0\"/><circle class=\"hit\" cx=\"170\" cy=\"194.0\" r=\"10\"><title>A2A Agent Card · 2025-05-21 · v0.2.0\nBaseline: first v0.2.x tag (its GitHub Release entry has no notes). AgentCard defined in specification/json/a2a.json and docs/specification.md §5.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"216\" y1=\"194.0\" x2=\"216\" y2=\"184.0\"/><circle class=\"hit\" cx=\"216\" cy=\"194.0\" r=\"10\"><title>A2A Agent Card · 2025-06-09 · v0.2.2\nextension changed. Release notes: &#x27;Add protocol support for extensions (#716)&#x27; (70f1e2b), which added AgentCapabilities.extensions. Same release: &#x27;spec: Add an optional iconUrl field to the AgentCard (#687)&#x27;. v0.2.1 (&#x27;Add a new boolean for supporting authenticated extended cards&#x27;, #618) changed no tracked value.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"262\" y1=\"194.0\" x2=\"262\" y2=\"184.0\"/><circle class=\"hit\" cx=\"262\" cy=\"194.0\" r=\"10\"><title>A2A Agent Card · 2025-06-30 · v0.2.5\nversioning and required_fields changed. Release notes: BREAKING &#x27;spec: Add a required protocol version to the agent card. (#802)&#x27; (90fa642). v0.2.3 (gRPC annotation typo fixes) and v0.2.4 (&#x27;feat: Add support for multiple transport announcement in AgentCard&#x27;) changed no tracked value.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"308\" y1=\"194.0\" x2=\"308\" y2=\"184.0\"/><circle class=\"hit\" cx=\"308\" cy=\"194.0\" r=\"10\"><title>A2A Agent Card · 2025-07-30 · v0.3.0\ndiscovery and trust changed. Release notes: BREAKING &#x27;Change Well-Known URI for Agent Card hosting from `agent.json` to `agent-card.json` (#841)&#x27; (0858ddb); &#x27;Add `signatures` to the `AgentCard` (#917)&#x27; (ef4a305). v0.2.6 (&#x27;Type fix and doc clarification&#x27;, gRPC json names) changed no tracked value.\nNo other card yet, so no centre to measure from</title></circle></a><a href=\"https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"446\" y1=\"142.0\" x2=\"446\" y2=\"132.0\"/><circle class=\"hit\" cx=\"446\" cy=\"142.0\" r=\"10\"><title>A2A Agent Card · 2026-03-12 · v1.0.0\nidentity location, versioning and required_fields changed; trust gained a canonicalization rule. Release notes: &#x27;spec: Large refactor of specification to separate application protocol definition from mapping to transports&#x27; (b078419: added supported_interfaces, deprecated top-level url/preferred_transport/additional_interfaces); &#x27;spec: Remove deprecated fields from a2a.proto for v1.0 release (#1301)&#x27; (60f83c3: removed them, made supported_interfaces REQUIRED); &#x27;spec: Provide ability for SDKs to be backwards compatible (#1401)&#x27; (227e249: moved the protocol version into AgentInterface). Observed in the spec text: §14 IANA Considerations and JCS canonicalization for signing are new (neither occurs at v0.3.0).\nDistance from centre: 6 of 8 choices</title></circle></a><text class=\"station\" x=\"450\" y=\"124.0\">v1.0.0</text><a href=\"https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid a2a\" x1=\"814\" y1=\"90.0\" x2=\"814\" y2=\"80.0\"/><circle class=\"hit\" cx=\"814\" cy=\"90.0\" r=\"10\"><title>A2A Agent Card · 2026-05-28 · v1.0.1\nLatest release; no tracked value changed. The AgentCard, AgentCapabilities and AgentCardSignature messages are identical to v1.0.0. Release notes: &#x27;spec: prefer application/a2a+json in HTTP binding (#1753)&#x27; (7ff1004), which moves the REST binding (including the extended card response) to application/a2a+json SHOULD; the well-known card still has no stated media type.\nDistance from centre: 5 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"354\" y1=\"233.0\" x2=\"354\" y2=\"243.0\"/><circle class=\"hit\" cx=\"354\" cy=\"233.0\" r=\"10\"><title>MCP Server Card · 2026-01-21 · Initial draft (serverInfo shape)\nFirst public version of SEP-2127 (commit &#x27;SEP-2127: MCP Server Cards - HTTP Server Discovery via .well-known&#x27;; Type: Standards Track). Baseline. The card copies the initialization result (serverInfo, protocolVersion, capabilities, transport) and can list primitives or mark them &quot;dynamic&quot;.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"400\" y1=\"259.0\" x2=\"400\" y2=\"269.0\"/><circle class=\"hit\" cx=\"400\" cy=\"259.0\" r=\"10\"><title>MCP Server Card · 2026-01-30 · Rev 1: server.json shape\n&#x27;Community feedback iteration (rev 1) on SEP-1649 (MCP Server Cards) (#2152)&#x27;. The card is rebuilt on the MCP Registry server.json shape: reverse-DNS `name`, top-level `title`/`version`/`description`, `remotes`, `packages`. serverInfo, protocolVersion and transport are gone. The path is renamed, and the AI Card relationship section is added. Changed: naming, identity, discovery, versioning, required_fields.\nDistance from centre: 6 of 8 choices</title></circle></a><text class=\"station\" x=\"404\" y=\"281.0\">Rev 1</text><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"492\" y1=\"246.0\" x2=\"492\" y2=\"256.0\"/><circle class=\"hit\" cx=\"492\" cy=\"246.0\" r=\"10\"><title>MCP Server Card · 2026-03-23 · description required; endpoints simplified\n&#x27;Align Server Card with server.json and simplify endpoints&#x27;. `description` becomes required and `capabilities` optional (required_fields changed). The MCP-resource endpoint (`mcp://server-card.json`) and the registry endpoint are removed, leaving `.well-known` as the only endpoint. The versioning value also includes an earlier change folded in here to stay within 8 checkpoints: 3a61af5 (2026-02-01, &#x27;Prettier&#x27;, the end of the &#x27;Rev on server.json&#x27; series) moved `packages` out of the card into a separate server.json superset. Primitives were removed on 2026-03-02 (308c652), which changed no tracked dimension.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"538\" y1=\"246.0\" x2=\"538\" y2=\"256.0\"/><circle class=\"hit\" cx=\"538\" cy=\"246.0\" r=\"10\"><title>MCP Server Card · 2026-03-26 · Flat /.well-known/mcp-server-card\n&#x27;sep: use flat mcp-server-card well-known suffix&#x27;. The path changes from `/.well-known/mcp/server-card` to `/.well-known/mcp-server-card`, with `/{server-name}` sub-paths for hosts that serve several servers. The IANA suffix to register becomes `mcp-server-card`. Changed: discovery.\nDistance from centre: 6 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"814\" y1=\"180.5\" x2=\"814\" y2=\"170.5\"/><circle class=\"hit\" cx=\"814\" cy=\"180.5\" r=\"10\"><title>MCP Server Card · 2026-05-28 · Extension repo: card media type + MCP Catalog\nMerge of #3 &#x27;Add MCP Catalog discovery specification&#x27;. The extension repo was set up on 2026-04-27 (7a3ff5d), and its schema.ts copied the SEP&#x27;s card with no tracked-dimension change. docs/discovery.md now names a card media type, `application/mcp-server+json` (type changed), and adds a domain-level MCP Catalog at `/.well-known/mcp/catalog.json`. The SEP branch still said Content-Type application/json on this date.\nDistance from centre: 5 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/docs/discovery.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"860\" y1=\"180.5\" x2=\"860\" y2=\"170.5\"/><circle class=\"hit\" cx=\"860\" cy=\"180.5\" r=\"10\"><title>MCP Server Card · 2026-06-08 · /server-card via catalog; mcp-server-card+json\nMerges on the same day: #18 &#x27;align Catalog mediaType with AI Catalog spec&#x27; (media type becomes `application/mcp-server-card+json`, closes #9); #19 (primitives removed from discovery.md); #22 &#x27;Server Cards: recommend `/server-card` over `.well-known`&#x27; (resolves #12: a card can live at any unreserved URI, `GET &lt;streamable-http-url&gt;/server-card` is reserved, and the catalog is the entry point; issue #11, about the slash vs dash well-known spelling, was closed by hand 25 seconds later); #24 (DoS section); #25 &#x27;require Server Card to be consistent with runtime behavior&#x27;. Changed: type, discovery, trust. On the same day the SEP was rewritten onto the Extensions Track (4590aa4, extension identifier `io.modelcontextprotocol/server-card`) and handed the wire format to this repo. That rewrite reached the SEP branch via #2893 on 2026-06-26.\nDistance from centre: 5 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/docs/discovery.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"1090\" y1=\"185.0\" x2=\"1090\" y2=\"175.0\"/><circle class=\"hit\" cx=\"1090\" cy=\"185.0\" r=\"10\"><title>MCP Server Card · 2026-07-20 · AI Catalog discovery\n&#x27;Use AI Catalog for Server Card discovery (#42)&#x27;. The MCP Catalog (`/.well-known/mcp/catalog.json`) is replaced by the AI Catalog at `/.well-known/ai-catalog.json`. An entry either links to a card (`url`) or embeds it (`data`). Catalog identifiers take the form `urn:air:{publisher}:{namespace}:{name}`. Changed: discovery. Extension-repo changes since the last checkpoint that moved no card dimension: #28 (2026-06-18, card-only: Server/packages types removed, $schema pinned to server-card.schema.json), #31 (2026-06-19, `urn:air:` catalog identifiers), #37 (handshake references dropped), #39 (2026-07-13, catalog `displayName` dropped because the card&#x27;s `title` is the source of truth), #32 (2026-07-13, catalog `mediaType` renamed to `type`). The SEP was updated the same day to match (608046a).\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid mcp\" x1=\"1228\" y1=\"185.0\" x2=\"1228\" y2=\"175.0\"/><circle class=\"hit\" cx=\"1228\" cy=\"185.0\" r=\"10\"><title>MCP Server Card · 2026-08-12 · Latest (SEP-pinned snapshot 526201bb)\nLatest state. The most recent extension-repo commit is &#x27;docs: add Server Card roadmap priorities (#47)&#x27;. Since the last checkpoint, only #46 (2026-07-24, ETag revalidation) touched discovery.md, and no tracked dimension changed. SEP-2127&#x27;s latest commit, 5c8483d (2026-08-24), pins this snapshot as the contract under review (SEP L85) and sets &#x27;Status: Final&#x27; (SEP L3). PR #2127 is still open with the &#x27;in-review&#x27; label (checked 2026-09-15).\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"584\" y1=\"198.5\" x2=\"584\" y2=\"188.5\"/><circle class=\"hit\" cx=\"584\" cy=\"198.5\" r=\"10\"><title>AI Catalog · 2026-04-08 · #27 first spec on main\nEarliest version of specification/ai-catalog.md on main: PR #27 &#x27;AI Catalog Specification proposal&#x27; merged 2026-04-08 00:13 UTC. The file was first committed 2026-03-31 on the ai-catalog-spec branch as specification/draft-ai-card.md (0271c148) and renamed the same day (3e414775). This version already has the IANA Considerations section (media type + link relation registrations). Baseline.\nDistance from centre: 7 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"630\" y1=\"198.5\" x2=\"630\" y2=\"188.5\"/><circle class=\"hit\" cx=\"630\" cy=\"198.5\" r=\"10\"><title>AI Catalog · 2026-04-30 · #33 inline→data, well-known registration\nPR #33 &#x27;spec: Updates based on discussions during last meeting&#x27; merged: the entry content member `inline` was renamed `data`, top-level `collections` was removed, a Metadata Extensibility section (reverse-DNS key convention) and a Version Handling section were added, and an IANA Well-Known URI registration for `ai-catalog.json` was added.\nDistance from centre: 7 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"952\" y1=\"189.5\" x2=\"952\" y2=\"179.5\"/><circle class=\"hit\" cx=\"952\" cy=\"189.5\" r=\"10\"><title>AI Catalog · 2026-06-25 · #37 type + #36 urn:air\nTwo same-day merges. PR #37 (18:04 UTC) &#x27;Spec: Update mediaType to type for catalogEntry and add known types&#x27; (ADR-0014) renamed the entry&#x27;s `mediaType` to open-text `type` with RECOMMENDED known types, and removed `mediaType` from Attestations. PR #36 (21:30 UTC) &#x27;spec: adopt `urn:air:` naming standard for AI artifacts (ADR 0015)&#x27;. Ref is the #36 merge, the first main commit containing both.\nDistance from centre: 0 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"998\" y1=\"220.0\" x2=\"998\" y2=\"230.0\"/><circle class=\"hit\" cx=\"998\" cy=\"220.0\" r=\"10\"><title>AI Catalog · 2026-06-26 · #39 displayName optional (prose)\nPR #39 &#x27;spec: make Catalog Entry displayName optional (not required) (ADR 0016)&#x27; merged. Branch commit 0798bcc was authored 2026-06-08; ADR-0016 is dated 2026-06-18. It moved `displayName` to the OPTIONAL members, removed it from the Level 1 minimum and added a display-name resolution order. It did not change the CDDL.\nDistance from centre: 0 of 8 choices</title></circle></a><text class=\"station\" x=\"1002\" y=\"242.0\">#39 displayName optio…</text><a href=\"https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1044\" y1=\"220.0\" x2=\"1044\" y2=\"230.0\"/><circle class=\"hit\" cx=\"1044\" cy=\"220.0\" r=\"10\"><title>AI Catalog · 2026-06-30 · #56 CDDL displayName optional\nPR #56 &#x27;fix(spec): make displayName optional in CatalogEntry CDDL (align with ADR-0016)&#x27; merged (author Wolfe-Jam). One-line change, `displayName: text,` to `? displayName: text,`, so the normative CDDL now agrees with the prose and Level 1.\nDistance from centre: 0 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1136\" y1=\"220.0\" x2=\"1136\" y2=\"230.0\"/><circle class=\"hit\" cx=\"1136\" cy=\"220.0\" r=\"10\"><title>AI Catalog · 2026-07-30 · #77 extensions map\nPR #77 &#x27;Resolve #58: Add ADR-0017 and migrate to namespace extensions map&#x27; merged. `metadata` (catalog, entry, Trust Manifest) is replaced by `extensions`, a map whose keys are extension namespaces (URL or reverse-DNS). ADR-0017 records that a JSON-LD-style `@context` proposal (Issue #58) was not adopted. PR #60 (entry-field authoritative-source parity for description/version), merged minutes earlier, changed no dimension.\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1182\" y1=\"220.0\" x2=\"1182\" y2=\"230.0\"/><circle class=\"hit\" cx=\"1182\" cy=\"220.0\" r=\"10\"><title>AI Catalog · 2026-08-02 · #47 substantive trust manifest\nPR #47 &#x27;feat(spec): Trust Manifest threat modeling review - suggested updates.&#x27; merged. It carries commit 58597c3 &#x27;require substantive trust manifest&#x27; (authored 2026-06-21; ADR-0020 is dated 2026-06-21). A Trust Manifest, when present, MUST hold at least one substantive member. A signed manifest MUST carry `subject` + `issuedAt`. There is now a JWS algorithm allowlist, trust anchoring, and an optional top-level catalog `signature` (detached JWS). The trust vocabulary value is unchanged; the rules behind it changed.\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid aicat\" x1=\"1366\" y1=\"220.0\" x2=\"1366\" y2=\"230.0\"/><circle class=\"hit\" cx=\"1366\" cy=\"220.0\" r=\"10\"><title>AI Catalog · 2026-08-27 · latest (#100)\nLatest state on main (HEAD for this file as of 2026-09-15). Since #47: #93 (2026-08-12) and #99 (2026-08-20) added Agent Plugin known entry types (`application/agent-plugins+zip`, `+gzip`); #100 &#x27;Extract mapping appendixes into standalone docs&#x27; moved the mapping appendixes out of the file. No dimension value changed after #47.\nDistance from centre: 3 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"768\" y1=\"198.5\" x2=\"768\" y2=\"188.5\"/><circle class=\"hit\" cx=\"768\" cy=\"198.5\" r=\"10\"><title>ARD · 2026-05-19 · v0.4.2 (Agent Finder)\nEarliest spec version: 9519b49 &#x27;Add initial version (v0.4.2) of Agent finder spec&#x27; (spec/agentfinder.md). Baseline for every dimension.\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"906\" y1=\"198.5\" x2=\"906\" y2=\"188.5\"/><circle class=\"hit\" cx=\"906\" cy=\"198.5\" r=\"10\"><title>ARD · 2026-06-20 · v0.9 (urn:air)\n8fff974 &#x27;spec: rename URN namespace identifier from &lt;ai&gt; to &lt;air&gt; to satisfy NID length requirements (&gt;2 characters).&#x27; Identity changes urn:ai -&gt; urn:air. No other dimension changed between v0.4.2 and this commit (file renamed spec/agentfinder.md -&gt; spec/ard.md on 2026-06-12; v0.5 on 2026-05-29; v0.9 on 2026-06-16).\nDistance from centre: 1 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"1320\" y1=\"194.0\" x2=\"1320\" y2=\"184.0\"/><circle class=\"hit\" cx=\"1320\" cy=\"194.0\" r=\"10\"><title>ARD · 2026-08-26 · v0.91\nPR #81 (publish-v0.91) merged as aa3e598: a305a52 &#x27;spec: publish v0.91 — promote the draft, single well-known path&#x27;; 49c0c4d &#x27;conformance: validate the ARD entry model, resolve ard.json&#x27; (also reconciled ard.cddl); c21ac6a &#x27;schemas: drop the projection concept, ArdEntry not ardEntry&#x27;. Discovery, encoding, extension, trust and versioning change; ard-entry.schema.json becomes the authoritative schema.\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick hollow ard\" x1=\"1412\" y1=\"194.0\" x2=\"1412\" y2=\"184.0\"/><circle class=\"hit\" cx=\"1412\" cy=\"194.0\" r=\"10\"><title>ARD · 2026-09-12 · latest (v0.91)\nLatest main (b76f235). Since v0.91 only b76db39 (author affiliation, merged 2026-09-12 via PR #82), 56e1325 and 596e72c (conformance tooling and an example) landed. No dimension changed.\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"676\" y1=\"203.0\" x2=\"676\" y2=\"193.0\"/><circle class=\"hit\" cx=\"676\" cy=\"203.0\" r=\"10\"><title>.fafa · 2026-05-11 · v0.1 draft (earliest public)\nEarliest public .fafa spec text: v0.1 draft added to the public About repo Wolfe-Jam/faf-agent-public in &#x27;feat: Claude-Code-quality About Repo — real docs, no source&#x27;. Baseline. (ref is a faf-agent-public SHA; the canonical repo Wolfe-Jam/faf had no AGENT-FORMAT.md yet.)\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"722\" y1=\"203.0\" x2=\"722\" y2=\"193.0\"/><circle class=\"hit\" cx=\"722\" cy=\"203.0\" r=\"10\"><title>.fafa · 2026-05-18 · v1.0 stable (canonical repo)\n&#x27;feat: add AGENT-FORMAT.md (FAFa v1.0 spec for IANA registration)&#x27;: first copy in the canonical repo, v1.0 Stable. Discovery moves from silent to explicitly out of scope (not specified → none). Also, outside the dimensions: §15 adds the standard filename `agent.fafa`, §16 inlines the RFC 6838 template (incl. optional parameter `version`), and the rule that implementations MUST validate agent.id against known schemes is gone. Media type still &#x27;(proposed)&#x27;.\nDistance from centre: 4 of 8 choices</title></circle></a><a href=\"https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"998\" y1=\"203.0\" x2=\"998\" y2=\"193.0\"/><circle class=\"hit\" cx=\"998\" cy=\"203.0\" r=\"10\"><title>.fafa · 2026-06-26 · IANA registration (per the IANA record)\nIANA registered application/vnd.fafa+yaml on 2026-06-26. Added at assembly: the spec text kept saying &quot;proposed&quot; until 2026-08-15 (faf@190c338); the registration itself is the IANA fact.\nDistance from centre: 5 of 8 choices</title></circle></a><a href=\"https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md\" target=\"_blank\" rel=\"noopener\"><line class=\"tick solid fafa\" x1=\"1274\" y1=\"203.0\" x2=\"1274\" y2=\"193.0\"/><circle class=\"hit\" cx=\"1274\" cy=\"203.0\" r=\"10\"><title>.fafa · 2026-08-15 · v1.0 IANA-registered + DOI (latest)\nTwo commits the same day. 01565967c8fc3a74d1b199770fb797583f620ec5 &#x27;fix: Update stale IANA registration status in AGENT-FORMAT.md&#x27; flips type from &#x27;(proposed)&#x27;/&#x27;Planned&#x27; to &#x27;Registered 2026-06-26 (vendor tree)&#x27; (de-facto → iana-registered). 190c3380847c022da3e13a28af57c4dc68b3e02c &#x27;docs: three IANA types + complete paper cohort&#x27; adds only the paper DOI (no dimension change). ref = 190c338 = current main (the latest state). The same day, faf-agent-public de8550f (&#x27;docs: add Agents paper citation and sync AGENT-FORMAT&#x27;) synced its copy to be byte-identical.\nDistance from centre: 5 of 8 choices</title></circle></a><g class=\"interchange join\"><title>Interchange · 2026-01-21\nA2A ↔ MCP Server Card\n  now share encoding: json</title><circle class=\"ring\" cx=\"354\" cy=\"155.0\" r=\"6\"/><circle class=\"ring\" cx=\"354\" cy=\"233.0\" r=\"6\"/><circle class=\"hit\" cx=\"354\" cy=\"155.0\" r=\"10\"/><circle class=\"hit\" cx=\"354\" cy=\"233.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-04-08\nA2A ↔ AI Catalog\n  now share encoding: json\nMCP Server Card ↔ AI Catalog\n  now share encoding: json</title><line class=\"link\" x1=\"584\" y1=\"189.5\" x2=\"584\" y2=\"198.5\"/><circle class=\"ring\" cx=\"584\" cy=\"90.0\" r=\"6\"/><circle class=\"ring\" cx=\"584\" cy=\"189.5\" r=\"6\"/><circle class=\"ring\" cx=\"584\" cy=\"198.5\" r=\"6\"/><circle class=\"hit\" cx=\"584\" cy=\"90.0\" r=\"10\"/><circle class=\"hit\" cx=\"584\" cy=\"189.5\" r=\"10\"/><circle class=\"hit\" cx=\"584\" cy=\"198.5\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-05-11\nA2A ↔ .fafa\n  now share naming: name\nAI Catalog ↔ .fafa\n  now share extension: metadata-object\n  now share type: de-facto</title><line class=\"link\" x1=\"676\" y1=\"194.0\" x2=\"676\" y2=\"203.0\"/><circle class=\"ring\" cx=\"676\" cy=\"90.0\" r=\"6\"/><circle class=\"ring\" cx=\"676\" cy=\"194.0\" r=\"6\"/><circle class=\"ring\" cx=\"676\" cy=\"203.0\" r=\"6\"/><circle class=\"hit\" cx=\"676\" cy=\"90.0\" r=\"10\"/><circle class=\"hit\" cx=\"676\" cy=\"194.0\" r=\"10\"/><circle class=\"hit\" cx=\"676\" cy=\"203.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-05-19\nA2A ↔ ARD\n  now share encoding: json\nMCP Server Card ↔ ARD\n  now share encoding: json\nAI Catalog ↔ ARD\n  now share discovery: /.well-known/ai-catalog.json\n  now share encoding: json\n  now share extension: metadata-object\n  now share naming: displayName\n  now share trust: trust-manifest+jws\n  now share versioning: specVersion\nARD ↔ .fafa\n  now share extension: metadata-object</title><line class=\"link\" x1=\"768\" y1=\"180.5\" x2=\"768\" y2=\"189.5\"/><line class=\"link\" x1=\"768\" y1=\"189.5\" x2=\"768\" y2=\"198.5\"/><line class=\"link\" x1=\"768\" y1=\"198.5\" x2=\"768\" y2=\"207.5\"/><circle class=\"ring\" cx=\"768\" cy=\"90.0\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"180.5\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"189.5\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"198.5\" r=\"6\"/><circle class=\"ring\" cx=\"768\" cy=\"207.5\" r=\"6\"/><circle class=\"hit\" cx=\"768\" cy=\"90.0\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"180.5\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"189.5\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"198.5\" r=\"10\"/><circle class=\"hit\" cx=\"768\" cy=\"207.5\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-05-28\nMCP Server Card ↔ AI Catalog\n  now share type: de-facto\nMCP Server Card ↔ .fafa\n  now share type: de-facto</title><line class=\"link\" x1=\"814\" y1=\"180.5\" x2=\"814\" y2=\"189.5\"/><line class=\"link\" x1=\"814\" y1=\"189.5\" x2=\"814\" y2=\"207.5\"/><circle class=\"ring\" cx=\"814\" cy=\"180.5\" r=\"6\"/><circle class=\"ring\" cx=\"814\" cy=\"189.5\" r=\"6\"/><circle class=\"ring\" cx=\"814\" cy=\"207.5\" r=\"6\"/><circle class=\"hit\" cx=\"814\" cy=\"180.5\" r=\"10\"/><circle class=\"hit\" cx=\"814\" cy=\"189.5\" r=\"10\"/><circle class=\"hit\" cx=\"814\" cy=\"207.5\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-06-25\nAI Catalog ↔ ARD\n  now share identity: urn:air</title><line class=\"link\" x1=\"952\" y1=\"189.5\" x2=\"952\" y2=\"198.5\"/><circle class=\"ring\" cx=\"952\" cy=\"189.5\" r=\"6\"/><circle class=\"ring\" cx=\"952\" cy=\"198.5\" r=\"6\"/><circle class=\"hit\" cx=\"952\" cy=\"189.5\" r=\"10\"/><circle class=\"hit\" cx=\"952\" cy=\"198.5\" r=\"10\"/></g><g class=\"interchange split\"><title>Interchange · 2026-06-26\nMCP Server Card ↔ .fafa\n  stop sharing type: de-facto\nAI Catalog ↔ .fafa\n  stop sharing type: de-facto</title><line class=\"link\" x1=\"998\" y1=\"185.0\" x2=\"998\" y2=\"203.0\"/><line class=\"link\" x1=\"998\" y1=\"203.0\" x2=\"998\" y2=\"220.0\"/><circle class=\"ring\" cx=\"998\" cy=\"185.0\" r=\"6\"/><circle class=\"ring\" cx=\"998\" cy=\"203.0\" r=\"6\"/><circle class=\"ring\" cx=\"998\" cy=\"220.0\" r=\"6\"/><circle class=\"hit\" cx=\"998\" cy=\"185.0\" r=\"10\"/><circle class=\"hit\" cx=\"998\" cy=\"203.0\" r=\"10\"/><circle class=\"hit\" cx=\"998\" cy=\"220.0\" r=\"10\"/></g><g class=\"interchange join\"><title>Interchange · 2026-07-20\nMCP Server Card ↔ AI Catalog\n  now share discovery: /.well-known/ai-catalog.json\nMCP Server Card ↔ ARD\n  now share discovery: /.well-known/ai-catalog.json</title><line class=\"link\" x1=\"1090\" y1=\"185.0\" x2=\"1090\" y2=\"194.0\"/><circle class=\"ring\" cx=\"1090\" cy=\"185.0\" r=\"6\"/><circle class=\"ring\" cx=\"1090\" cy=\"194.0\" r=\"6\"/><circle class=\"ring\" cx=\"1090\" cy=\"220.0\" r=\"6\"/><circle class=\"hit\" cx=\"1090\" cy=\"185.0\" r=\"10\"/><circle class=\"hit\" cx=\"1090\" cy=\"194.0\" r=\"10\"/><circle class=\"hit\" cx=\"1090\" cy=\"220.0\" r=\"10\"/></g><g class=\"interchange split\"><title>Interchange · 2026-07-30\nAI Catalog ↔ ARD\n  stop sharing extension: metadata-object\nAI Catalog ↔ .fafa\n  stop sharing extension: metadata-object</title><line class=\"link\" x1=\"1136\" y1=\"194.0\" x2=\"1136\" y2=\"203.0\"/><line class=\"link\" x1=\"1136\" y1=\"203.0\" x2=\"1136\" y2=\"220.0\"/><circle class=\"ring\" cx=\"1136\" cy=\"194.0\" r=\"6\"/><circle class=\"ring\" cx=\"1136\" cy=\"203.0\" r=\"6\"/><circle class=\"ring\" cx=\"1136\" cy=\"220.0\" r=\"6\"/><circle class=\"hit\" cx=\"1136\" cy=\"194.0\" r=\"10\"/><circle class=\"hit\" cx=\"1136\" cy=\"203.0\" r=\"10\"/><circle class=\"hit\" cx=\"1136\" cy=\"220.0\" r=\"10\"/></g><g class=\"interchange split\"><title>Interchange · 2026-08-26\nA2A ↔ ARD\n  stop sharing encoding: json\nMCP Server Card ↔ ARD\n  stop sharing discovery: /.well-known/ai-catalog.json\n  stop sharing encoding: json\nAI Catalog ↔ ARD\n  stop sharing discovery: /.well-known/ai-catalog.json\n  stop sharing encoding: json\n  stop sharing trust: trust-manifest+jws\n  stop sharing versioning: specVersion\nARD ↔ .fafa\n  stop sharing extension: metadata-object</title><line class=\"link\" x1=\"1320\" y1=\"185.0\" x2=\"1320\" y2=\"194.0\"/><line class=\"link\" x1=\"1320\" y1=\"194.0\" x2=\"1320\" y2=\"203.0\"/><line class=\"link\" x1=\"1320\" y1=\"203.0\" x2=\"1320\" y2=\"220.0\"/><circle class=\"ring\" cx=\"1320\" cy=\"90.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"185.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"194.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"203.0\" r=\"6\"/><circle class=\"ring\" cx=\"1320\" cy=\"220.0\" r=\"6\"/><circle class=\"hit\" cx=\"1320\" cy=\"90.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"185.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"194.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"203.0\" r=\"10\"/><circle class=\"hit\" cx=\"1320\" cy=\"220.0\" r=\"10\"/></g></svg>"
+   }
+  ],
+  "positions": [
+   {
+    "card": "A2A Agent Card",
+    "distance": 5,
+    "unique": [
+     "identity",
+     "discovery",
+     "extension",
+     "trust",
+     "versioning"
+    ],
+    "required_count": 8
+   },
+   {
+    "card": "MCP Server Card",
+    "distance": 4,
+    "unique": [
+     "naming",
+     "identity",
+     "extension",
+     "versioning"
+    ],
+    "required_count": 4
+   },
+   {
+    "card": "AI Catalog",
+    "distance": 3,
+    "unique": [
+     "extension",
+     "trust",
+     "versioning"
+    ],
+    "required_count": 3
+   },
+   {
+    "card": "ARD",
+    "distance": 4,
+    "unique": [
+     "discovery",
+     "encoding",
+     "extension",
+     "trust"
+    ],
+    "required_count": 4
+   },
+   {
+    "card": ".fafa",
+    "distance": 6,
+    "unique": [
+     "identity",
+     "type",
+     "encoding",
+     "extension",
+     "trust",
+     "versioning"
+    ],
+    "required_count": 4
+   }
+  ],
+  "method": [
+   "<b>Eight choices</b> every card makes: naming, identity, discovery, type (media type, and whether it is registered), encoding, extension, trust, versioning.",
+   "<b>Quoted from the specs.</b> Each value is taken from the card's spec at a commit: 30 spec versions, 269 quotes, each checked against the line it cites. Every tick links to the spec at that commit.",
+   "<b>Centre.</b> On each date, the value most cards share for each choice.",
+   "<b>Distance.</b> How many of a card's eight choices no other card makes. Leaving a choice open (\"none\", \"not specified\") does not count as a choice.",
+   "<b>A card can move without changing.</b> Distance depends on the other cards: when one spec changes, what counts as shared changes for every card. On 2026-08-26 AI Catalog moved because ARD changed.",
+   "<b>Above or below.</b> Protocol ↔ Envelope: cards defined by one protocol (A2A, MCP Server Card) sit above; protocol-neutral envelopes (AI Catalog, ARD, .fafa) sit below. Strict ↔ Loose: each card's required-field count against the median of the cards present.",
+   "<b>Distance means different, not wrong.</b> .fafa sits furthest out partly because it is the only card with an IANA-registered media type, and the only one written in YAML.",
+   "<b>The choice list is a judgement.</b> A different list would draw a different map. The list and every quote sit behind the map, so anyone can check it or redraw it."
+  ],
+  "counts": {
+   "checkpoints": 30,
+   "quotes": 269,
+   "frames": 28
+  },
+  "classes": [
+   "a2a",
+   "aicat",
+   "ard",
+   "casing",
+   "centre",
+   "centre-label",
+   "col",
+   "core",
+   "date",
+   "fafa",
+   "hit",
+   "interchange",
+   "line",
+   "line-label",
+   "link",
+   "map-svg",
+   "mcp",
+   "note",
+   "pole",
+   "ring",
+   "solo",
+   "split",
+   "station",
+   "terminus",
+   "tick",
+   "year"
+  ]
+ },
+ "choices": {
+  "dims": [
+   "naming",
+   "identity",
+   "discovery",
+   "type",
+   "encoding",
+   "extension",
+   "trust",
+   "versioning"
+  ],
+  "cards": [
+   {
+    "card": "A2A Agent Card",
+    "short": "A2A",
+    "slug": "a2a-agent-card",
+    "spec_repo": "a2aproject/A2A",
+    "checkpoint": "v1.0.1",
+    "date": "2026-05-28",
+    "required_count": 8,
+    "cells": [
+     {
+      "dim": "naming",
+      "label": "name",
+      "evidence": "string name = 1 [(google.api.field_behavior) = REQUIRED];",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L364",
+      "note": "Unchanged from v1.0.0.",
+      "anchor": "a2a-agent-card-naming"
+     },
+     {
+      "dim": "identity",
+      "label": "url",
+      "evidence": "The URL where this interface is available. Must be a valid absolute HTTPS URL in production.",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L337",
+      "note": "Unchanged: endpoint in REQUIRED `supportedInterfaces[].url` (L339). Changed nearby: optional AgentInterface.tenant is now described as \"An opaque string used for routing requests to a specific agent or tenant when multiple agents are served behind a single A2A endpoint\" (L344-L345); the protocol \"does not define its format or semantics\" (L349).",
+      "anchor": "a2a-agent-card-identity"
+     },
+     {
+      "dim": "discovery",
+      "label": "/.well-known/agent-card.json",
+      "evidence": "Accessing `https://{server_domain}/.well-known/agent-card.json`",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L1978",
+      "note": "§14.3 template unchanged (L3328, L3337). IANA's well-known URI registry lists `agent-card.json` as permanent (checked 2026-09-15).",
+      "anchor": "a2a-agent-card-discovery"
+     },
+     {
+      "dim": "type",
+      "label": "none · none",
+      "evidence": "The resource at this URI MUST return an AgentCard object as defined in Section 4.4.1 of the A2A specification.",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L3335",
+      "note": "Still no media type for the card at the well-known URI. Changed here: the REST binding now says \"application/a2a+json **SHOULD** be used for requests and responses\" (L2750), which covers `GET /extendedAgentCard`; the JSON-RPC binding keeps `application/json` (L2236). `application/a2a+json` is still not in IANA's application registry (checked 2026-09-15).",
+      "anchor": "a2a-agent-card-type"
+     },
+     {
+      "dim": "encoding",
+      "label": "json",
+      "evidence": "A JSON metadata document published by an A2A Server, describing its identity, capabilities, skills, service endpoint, and authentication requirements.",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L137",
+      "note": "Unchanged: proto is normative; JSON uses camelCase (§5.5, L1204).",
+      "anchor": "a2a-agent-card-encoding"
+     },
+     {
+      "dim": "extension",
+      "label": "capabilities.extensions",
+      "evidence": "A list of protocol extensions supported by the agent.",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L416",
+      "note": "`repeated AgentExtension extensions = 3;` (L417). Unchanged.",
+      "anchor": "a2a-agent-card-extension"
+     },
+     {
+      "dim": "trust",
+      "label": "jws-signature",
+      "evidence": "Agent Cards **MAY** be digitally signed using JSON Web Signature (JWS)",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L2004",
+      "note": "Unchanged: JCS (RFC 8785) canonicalization before signing (L2008); `signatures` optional (proto L395).",
+      "anchor": "a2a-agent-card-trust"
+     },
+     {
+      "dim": "versioning",
+      "label": "supportedInterfaces[].protocolVersion",
+      "evidence": "The version of the A2A protocol this interface exposes.",
+      "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L351",
+      "note": "REQUIRED (L354). Unchanged. Appendix A.2.1 still mentions an AgentCard `protocolVersions` field (L3509, L3517).",
+      "anchor": "a2a-agent-card-versioning"
+     }
+    ]
+   },
+   {
+    "card": "MCP Server Card",
+    "short": "MCP Server Card",
+    "slug": "mcp-server-card",
+    "spec_repo": "modelcontextprotocol/modelcontextprotocol (SEP-2127) + modelcontextprotocol/experimental-ext-server-card",
+    "checkpoint": "Latest (SEP-pinned snapshot 526201bb)",
+    "date": "2026-08-12",
+    "required_count": 4,
+    "cells": [
+     {
+      "dim": "naming",
+      "label": "title (optional)",
+      "evidence": "Optional human-readable title or display name for the MCP server.",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L75",
+      "note": "`title?: string` (L81). Clients read `title` from the card, not the catalog entry (docs/discovery.md L54-L55).",
+      "anchor": "mcp-server-card-naming"
+     },
+     {
+      "dim": "identity",
+      "label": "reverse-dns",
+      "evidence": "Server name in reverse-DNS format. Must contain exactly one forward slash",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L45",
+      "note": "Pattern `^[a-zA-Z0-9.-]+/[a-zA-Z0-9._-]+$` (L50). The valid example examples/ServerCard/valid/minimal.json uses `example-org/minimal`, with no dot. Catalog-level identifier: `urn:air:{publisher}:{namespace}:{name}` (docs/discovery.md L48).",
+      "anchor": "mcp-server-card-identity"
+     },
+     {
+      "dim": "discovery",
+      "label": "via:/.well-known/ai-catalog.json",
+      "evidence": "Fetch `https://{domain}/.well-known/ai-catalog.json`",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L119",
+      "note": "Card location: 'MCP Servers MAY host their Server Card at `GET <streamable-http-url>/server-card`, which we reserve for this purpose, though any unreserved URI (on any domain) is valid' (L174-L175). SEP 5c8483d L90: 'Cards can be hosted at any unreserved URI, with `<streamable-http-url>/server-card` reserved as the recommended location.'",
+      "anchor": "mcp-server-card-discovery"
+     },
+     {
+      "dim": "type",
+      "label": "application/mcp-server-card+json · de-facto",
+      "evidence": "Server Cards use the media type `application/mcp-server-card+json`.",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L131-L132",
+      "note": "Not in the IANA application media-type registry (checked 2026-09-15); the only 'mcp' matches are unrelated vnd.3gpp.mcptt-* types. Clients SHOULD send `Accept: application/mcp-server-card+json` (L182).",
+      "anchor": "mcp-server-card-type"
+     },
+     {
+      "dim": "encoding",
+      "label": "json",
+      "evidence": "An **MCP Server Card** is a JSON document that describes a single MCP server",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L130",
+      "note": "",
+      "anchor": "mcp-server-card-encoding"
+     },
+     {
+      "dim": "extension",
+      "label": "_meta",
+      "evidence": "extension metadata, which remains the card's extension point.",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/README.md#L27",
+      "note": "The line begins 'Vendors who genuinely need to attach install hints to a Server Card can use namespaced [`_meta`]'. schema.ts L115 and L121 define `_meta?: MetaObject`. SEP 5c8483d L89: '`_meta` is not used to advertise MCP capabilities or negotiated extension support.'",
+      "anchor": "mcp-server-card-extension"
+     },
+     {
+      "dim": "trust",
+      "label": "none",
+      "evidence": "Clients MUST NOT treat Server Card contents as authoritative for security or",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L160",
+      "note": "Advisory only. The 'Server Card Accuracy' security note (L229-L238) calls an inaccurate card 'a mild confusion or downgrade vector'. Hosted cards MUST use HTTPS, TLS 1.2 or later, in production (L273). No signature or trust manifest.",
+      "anchor": "mcp-server-card-trust"
+     },
+     {
+      "dim": "versioning",
+      "label": "$schema, version, remotes[].supportedProtocolVersions",
+      "evidence": "Schema URLs are versioned by the `vN` segment rather than by date; a",
+      "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L36",
+      "note": "$schema must equal `https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json` (L35, L40). version = server version, 'Equivalent of `Implementation.version`' (L55-L57). remotes[].supportedProtocolVersions = 'MCP protocol versions actively supported by this remote endpoint' (L199-L202). README.md L63: 'The `v1` shape is still pre-release and card-only'.",
+      "anchor": "mcp-server-card-versioning"
+     }
+    ]
+   },
+   {
+    "card": "AI Catalog",
+    "short": "AI Catalog",
+    "slug": "ai-catalog",
+    "spec_repo": "Agent-Card/ai-catalog",
+    "checkpoint": "latest (#100)",
+    "date": "2026-08-27",
+    "required_count": 3,
+    "cells": [
+     {
+      "dim": "naming",
+      "label": "displayName (optional)",
+      "evidence": "? displayName: text,",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1687",
+      "note": "Prose: listed under OPTIONAL (L259, L261). Resolution order (L342): entry displayName, then the artifact's own name, then the identifier's trailing segment.",
+      "anchor": "ai-catalog-naming"
+     },
+     {
+      "dim": "identity",
+      "label": "urn:air",
+      "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L206",
+      "note": "Open-text field ('any valid URI or URN is accepted', same line). Format `urn:air:{publisher}:{namespace}:{name}` (L209).",
+      "anchor": "ai-catalog-identity"
+     },
+     {
+      "dim": "discovery",
+      "label": "/.well-known/ai-catalog.json",
+      "evidence": "/.well-known/ai-catalog.json",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1235",
+      "note": "OPTIONAL; a catalog MAY be served from any URL. Link relation `ai-catalog` (L1256). Registration sections: link relation (L1629), well-known URI (L1645). Neither is in the IANA registries (checked 2026-09-15); IANA lists only RFC 9727 `api-catalog`.",
+      "anchor": "ai-catalog-discovery"
+     },
+     {
+      "dim": "type",
+      "label": "application/ai-catalog+json · de-facto",
+      "evidence": "application/ai-catalog+json",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L95",
+      "note": "Registration section L1582. `curl https://www.iana.org/assignments/media-types/application.csv | grep -i catalog` on 2026-09-15 returns no ai-catalog entry.",
+      "anchor": "ai-catalog-type"
+     },
+     {
+      "dim": "encoding",
+      "label": "json",
+      "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L99",
+      "note": "",
+      "anchor": "ai-catalog-encoding"
+     },
+     {
+      "dim": "extension",
+      "label": "extensions-map",
+      "evidence": "represent the extension type (namespace), and the corresponding value contains the extension data.",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1119",
+      "note": "Keys 'MUST be a valid URL or a reverse-DNS string' (L1121-1122). Entry `extensions` L326; catalog top level L151; Trust Manifest L612.",
+      "anchor": "ai-catalog-extension"
+     },
+     {
+      "dim": "trust",
+      "label": "trust-manifest+jws",
+      "evidence": "contain at least one *substantive* trust member:",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L539",
+      "note": "`trustManifest` is OPTIONAL (L553-555). Trust Manifest `signature` is a detached JWS (L604-605); optional top-level catalog `signature` JWS (L156-157). The CDDL still lacks the top-level `signature` (L1670-1675) and TrustManifest `subject`/`issuedAt`/`expiresAt` (L1709-1719).",
+      "anchor": "ai-catalog-trust"
+     },
+     {
+      "dim": "versioning",
+      "label": "specVersion",
+      "evidence": "`specVersion`",
+      "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L102",
+      "note": "'Major.Minor' format (L104); Version Handling section L1174.",
+      "anchor": "ai-catalog-versioning"
+     }
+    ]
+   },
+   {
+    "card": "ARD",
+    "short": "ARD",
+    "slug": "ard",
+    "spec_repo": "ards-project/ard-spec",
+    "checkpoint": "latest (v0.91)",
+    "date": "2026-09-12",
+    "required_count": 4,
+    "cells": [
+     {
+      "dim": "naming",
+      "label": "displayName",
+      "evidence": "| displayName | MUST | Human-readable name. |",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L91",
+      "note": "Row of the table introduced by 'An ARD entry MUST carry:' (L86).",
+      "anchor": "ard-naming"
+     },
+     {
+      "dim": "identity",
+      "label": "urn:air",
+      "evidence": "Domain-anchored URN form (`urn:air:<publisher>:<namespace>:<agent-name>`); see Appendix C.",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L90",
+      "note": "The JSON-LD @id MAY mirror the identifier (L90). ard-entry.schema.json pattern ^urn:air:... (L26).",
+      "anchor": "ard-identity"
+     },
+     {
+      "dim": "discovery",
+      "label": "/.well-known/ard.json",
+      "evidence": "Hosting a manifest of entries at `https://{domain}/.well-known/ard.json`.",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L196",
+      "note": "Link relation: rel=\"ard\" (L199). A consumer MUST fetch /.well-known/ard.json and MUST honour rel=\"ard\"; it MAY also consult the predecessor /.well-known/ai-catalog.json and rel=\"ai-catalog\" (L202). A publisher on the predecessor path SHOULD move to ard.json (L204). In-page JSON-LD markup (L197), Agentmap and DNS (L200) are also listed.",
+      "anchor": "ard-discovery"
+     },
+     {
+      "dim": "type",
+      "label": "none · none",
+      "evidence": "The manifest is a JSON document with an `entries` array of ARD entries (§4)",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L196",
+      "note": "No media type is defined for the manifest document. Entry `type` is the artifact's IANA media type (L92); registries are found through entries whose type is application/ai-registry+json (L215). The application/ai-catalog+json nested-catalog examples are gone.",
+      "anchor": "ard-type"
+     },
+     {
+      "dim": "encoding",
+      "label": "json-ld",
+      "evidence": "An entry is a JSON-LD node describing an agentic resource.",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L78",
+      "note": "Per entry. A consumer MUST expand an entry with the ARD base context (L80; spec/schemas/ard.context.jsonld). Carrying @context in the entry is OPTIONAL (L82). The /.well-known/ard.json manifest itself is 'a JSON document' (L196).",
+      "anchor": "ard-encoding"
+     },
+     {
+      "dim": "extension",
+      "label": "json-ld-context",
+      "evidence": "Terms from any additional namespace declared in the entry's `@context` MAY also appear",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L108",
+      "note": "Such terms become filter dimensions with no spec change (L108). `metadata` remains an optional descriptive term (L106). The schema sets additionalProperties: true by design (L530); ard.cddl ard-entry ends with a `* tstr => any` wildcard (L25).",
+      "anchor": "ard-extension"
+     },
+     {
+      "dim": "trust",
+      "label": "trust-manifest",
+      "evidence": "ARD does not define a signing or verification procedure of its own.",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L181",
+      "note": "trustManifest is optional; ARD requires only trustManifest.identity (L173), whose trust domain MUST align with the URN publisher (L177). Signing, canonicalization and key resolution come from the framework named in trustManifest.trustSchema (L181). ard-entry.schema.json L170 no longer names JWS. The schema's entry property key is `TrustManifest` (L81); the spec, ard.cddl (L45) and the base context use `trustManifest`.",
+      "anchor": "ard-trust"
+     },
+     {
+      "dim": "versioning",
+      "label": "not specified",
+      "evidence": "ARD requires only an `entries` array of ARD entries",
+      "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/schemas/ard-entry.schema.json#L105",
+      "note": "ArdManifest requires only entries (L106); other top-level members are transport-defined and ignored by ARD. ard.cddl ard-manifest is entries plus a wildcard (L13-L15). specVersion is no longer defined. The base context URL ends /context/v1 (spec L78) and entry `version` is the artifact version; neither is a spec-version field.",
+      "anchor": "ard-versioning"
+     }
+    ]
+   },
+   {
+    "card": ".fafa",
+    "short": ".fafa",
+    "slug": "fafa",
+    "spec_repo": "Wolfe-Jam/faf",
+    "checkpoint": "v1.0 IANA-registered + DOI (latest)",
+    "date": "2026-08-15",
+    "required_count": 4,
+    "cells": [
+     {
+      "dim": "naming",
+      "label": "agent.name",
+      "evidence": "**Required:** `name` (Unicode string, unique within the issuing vendor namespace)",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L102",
+      "note": "The spec text still has no display-name field. The companion schema schemas/fafa.schema.json documents an optional `agent.displayName` from 9e79b6914b6cb0ef6df299e52de17ccc47657a5e (2026-07-05), and FAFA's published card uses it (agent.fafa L9). See notes.",
+      "anchor": "fafa-naming"
+     },
+     {
+      "dim": "identity",
+      "label": "agent-id",
+      "evidence": "`id` (globally unique identifier — DID, URI, or vendor-scoped UUID)",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L102",
+      "note": "Practice: FAFA's card uses `id: did:web:faf.one:agent`.",
+      "anchor": "fafa-identity"
+     },
+     {
+      "dim": "discovery",
+      "label": "none",
+      "evidence": "It does not define discovery, transport, authorization, or orchestration.",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L35",
+      "note": "Spec unchanged. Practice only (not in spec): faf.one serves FAFA's card at /.well-known/fafa with Content-Type application/vnd.fafa+yaml (checked 2026-09-15). The one well-known URI request filed is for /.well-known/faf (protocol-registries/well-known-uris#97, open, labels 'new registration' and 'waiting for stable reference'). No request covers /.well-known/fafa.",
+      "anchor": "fafa-discovery"
+     },
+     {
+      "dim": "type",
+      "label": "application/vnd.fafa+yaml · iana-registered",
+      "evidence": "(registered 2026-06-26, last updated 2026-06-26)",
+      "link": "https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml",
+      "note": "Spec at this SHA: L5 '**MIME Type:** `application/vnd.fafa+yaml`', L7 '**IANA Registration:** Registered 2026-06-26 (vendor tree)' (https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L7). The IANA record's 'Published specification' is https://github.com/Wolfe-Jam/faf/blob/main/AGENT-FORMAT.md.",
+      "anchor": "fafa-type"
+     },
+     {
+      "dim": "encoding",
+      "label": "yaml",
+      "evidence": "A `.fafa` file is a single YAML document:",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L55",
+      "note": "§13 (L216): YAML 1.2 / RFC 9512.",
+      "anchor": "fafa-encoding"
+     },
+     {
+      "dim": "extension",
+      "label": "metadata-object",
+      "evidence": "**Optional top-level fields:** `attachment`, `provenance`, `signature`, `metadata` (free-form vendor extensions).",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L94",
+      "note": "§13 (L219): forward-compat rule for unknown top-level fields and unknown agent/capabilities/endpoints subfields. It does not name `provenance` subfields.",
+      "anchor": "fafa-extension"
+     },
+     {
+      "dim": "trust",
+      "label": "other:optional signature object (method, value); signing scheme unspecified",
+      "evidence": "Where present, `signature` carries provenance/integrity material; verification is the consumer's responsibility.",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L194",
+      "note": "Unchanged. FAFA's published card carries no `signature` block.",
+      "anchor": "fafa-trust"
+     },
+     {
+      "dim": "versioning",
+      "label": "version",
+      "evidence": "The top-level `version` field declares which version of this specification the document conforms to.",
+      "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L234",
+      "note": "Spec §16 (L252) lists 'Optional parameters: version', but the IANA record says 'Optional parameters: N/A' and 'versioning is handled in-band via the top-level \"version\" field'.",
+      "anchor": "fafa-versioning"
+     }
+    ]
+   }
+  ]
+ },
+ "lanes": {
+  "faf": [
+   {
+    "card": "A2A Agent Card",
+    "what": "FAFA's card served at faf.one",
+    "repo": "Wolfe-Jam/faf-one-svelte-new",
+    "paths": [
+     "static/.well-known/agent-card.json"
+    ],
+    "versions": [
+     {
+      "date": "2026-08-17",
+      "sha": "d627b2f",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/d627b2f33dd35e071c33a17548168b6e55983727",
+      "commit says": "fix(well-known): serve A2A Agent Card on the faf.one apex",
+      "cites": [],
+      "changes": [
+       "first version"
+      ]
+     },
+     {
+      "date": "2026-08-17",
+      "sha": "50a85fe",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/50a85fe35e24a65e2ff318ccffa278f970444eac",
+      "commit says": "fix(a2a): point Agent Card extension URI at faf.one/context",
+      "cites": [],
+      "changes": [
+       "/capabilities/extensions[0]/uri: \"https://one.faf/context\" → \"https://faf.one/context\""
+      ]
+     },
+     {
+      "date": "2026-08-17",
+      "sha": "11f3a45",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/11f3a454f1db13cca21bcc77b999abfb5abc3b78",
+      "commit says": "fix(a2a): emit apex Agent Card from faf cards",
+      "cites": [],
+      "changes": [
+       "added /capabilities/extensions[*]/params/deterministic, /capabilities/extensions[*]/params/generated, /capabilities/extensions[*]/params/iana",
+       "removed /capabilities/extensions[*]/params/version"
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "sha": "1feaf20",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/1feaf204ffa4f166399b13d1beec0537cf72d92f",
+      "commit says": "fix(a2a): sync agent-card.json to the redesigned FAF extension",
+      "cites": [],
+      "changes": [
+       "added /capabilities/extensions[*]/params/agentId, /capabilities/extensions[*]/params/fafaSpecVersion, /capabilities/extensions[*]/params/mediaTypes[*], /capabilities/extensions[*]/params/passport, /capabilities/extensions[*]/params/provenance/faf, /capabilities/extensions[*]/params/provenance/mediaType, /skills[*]/inputModes[*]",
+       "removed /capabilities/extensions[*]/params/deterministic, /capabilities/extensions[*]/params/faf, /capabilities/extensions[*]/params/iana, /capabilities/extensions[*]/params/mediaType",
+       "/defaultInputModes[*] now in 3 places (was 2)",
+       "/capabilities/extensions[0]/description: \"FAF context provenance — the durable context bloc → \"FAF passport and project DNA as typed parts\"",
+       "/capabilities/extensions[0]/uri: \"https://faf.one/context\" → \"https://faf.one/ext/context/v1\"",
+       "/defaultInputModes[1]: \"application/json\" → \"application/vnd.faf+yaml\""
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "sha": "3bb82b3",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/3bb82b3195f2962a17d2e4aa9bd20756c06595d8",
+      "commit says": "feat: Build the A2A agent card at deploy time instead of keeping a copy",
+      "cites": [],
+      "changes": [
+       "file removed from git here (from this point it is built, not kept)"
+      ]
+     }
+    ]
+   },
+   {
+    "card": "A2A Agent Card",
+    "what": "faf-cli authors the card (faf cards / buildA2ACard)",
+    "repo": "Wolfe-Jam/faf-cli",
+    "paths": [
+     "src/interop/cards.ts"
+    ],
+    "versions": [
+     {
+      "date": "2026-08-17",
+      "sha": "1e49fee",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/1e49fee1721ef3be700b2a9cbad528b75c181317",
+      "commit says": "feat: faf cards — one projector, every door",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-08-17",
+      "sha": "8c54d9e",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/8c54d9ed8b5c24e1c12ecdb5d578b366a52b9074",
+      "commit says": "feat(cards): --faf-pointer and conservative catalog upsert",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-08-17",
+      "sha": "b77d98a",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/b77d98a865e9e250edc56f32ecc1d7bcef647586",
+      "commit says": "feat: doorUrl lets faf cards emit A2A without an authored endpoint",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-08-31",
+      "sha": "5c4d1c9",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/5c4d1c96107ad8c0fd53623afb8b3579a474195e",
+      "commit says": "fix(cards): emit application/a2a-agent-card+json for the catalog A2A row (#113)",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-08",
+      "sha": "6f917a8",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/6f917a8424b6b9f710cfcabe3c8648eab3b4ccf7",
+      "commit says": "feat(interop): render*/build* impl — deprecate the 3 public generate* exports",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "sha": "a857d66",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/a857d667df60d9df85d098a4f61bbd49e478b3d2",
+      "commit says": "feat: A2A extension carries real agent identity, not just provenance",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "sha": "b9c42c4",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/b9c42c4d3eacb3e584750ee3532b34082bc47b14",
+      "commit says": "Merge feat/a2a-card-richer-extension",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-15",
+      "sha": "09b7353",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/09b7353bd8f351ec96a2a61fdfa2c08c2a9a6e92",
+      "commit says": "feat(cards): add a pure pack projector, answers in and every card out",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-16",
+      "sha": "c5e4eeb",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/c5e4eebcf8a505297c4d036e065b35c169dae91f",
+      "commit says": "fix(cards): name the catalog's host, so faf cards reaches discoverable",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-16",
+      "sha": "a88549d",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/a88549dbffb118d95fba93e0d63abcbbb0a0cf4f",
+      "commit says": "fix(cards): one primary key — the CLI keys catalog rows as the pack does",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     },
+     {
+      "date": "2026-09-16",
+      "sha": "4d51ae0",
+      "link": "https://github.com/Wolfe-Jam/faf-cli/commit/4d51ae02897a9243a35b2f2967d415086289778e",
+      "commit says": "feat(cards): add the ard target — the manifest consumers must fetch",
+      "cites": [],
+      "changes": [
+       "code change (see commit)"
+      ]
+     }
+    ]
+   },
+   {
+    "card": "AI Catalog",
+    "what": "faf.one's catalog",
+    "repo": "Wolfe-Jam/faf-one-svelte-new",
+    "paths": [
+     "static/.well-known/ai-catalog.json"
+    ],
+    "versions": [
+     {
+      "date": "2026-06-19",
+      "sha": "47440cf",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/47440cfaf201ad122b2b08199d7d45db5f2a87d7",
+      "commit says": "feat(catalog): publish AI Catalog at /.well-known/ai-catalog.json",
+      "cites": [],
+      "changes": [
+       "first version"
+      ]
+     },
+     {
+      "date": "2026-06-26",
+      "sha": "ce31cbd",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/ce31cbde66d1cc93842dcfc99111a9fbc3a85a8d",
+      "commit says": "fix: conform AI Catalog to post-#37 spec",
+      "cites": [
+       [
+        "AI Catalog",
+        "#37"
+       ]
+      ],
+      "changes": [
+       "added /entries[*]/type",
+       "removed /entries[*]/mediaType",
+       "/entries[*]/identifier changed in 5 places"
+      ]
+     },
+     {
+      "date": "2026-06-30",
+      "sha": "3b7ba5b",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/3b7ba5bc10e1588a68184e5e0afa263b8348a944",
+      "commit says": "fix: align ai-catalog.json with ADR-0016 (#6)",
+      "cites": [
+       [
+        "AI Catalog",
+        "ADR-0016"
+       ]
+      ],
+      "changes": [
+       "removed /entries[*]/metadata/one.faf/context/canonical, /entries[*]/metadata/one.faf/context/mediaType",
+       "/entries[*]/displayName now in 4 places (was 5)"
+      ]
+     },
+     {
+      "date": "2026-07-05",
+      "sha": "c1ca3cd",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/c1ca3cde9d1655c65bfafebea7fa9100938a5923",
+      "commit says": "feat: list FAFA agent + A2A card in ai-catalog (mediaType-primary); declare a2a endpoint (#21)",
+      "cites": [],
+      "changes": [
+       "added /entries[*]/mediaType, /entries[*]/metadata/one.faf/context/trinity",
+       "/entries[*]/description now in 7 places (was 5)",
+       "/entries[*]/displayName now in 6 places (was 4)",
+       "/entries[*]/identifier now in 7 places (was 5)",
+       "/entries[*]/metadata/one.faf/context/iana now in 2 places (was 1)",
+       "/entries[*]/tags[*] now in 33 places (was 24)"
+      ]
+     },
+     {
+      "date": "2026-08-02",
+      "sha": "4d0d914",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/4d0d914c0bca36b525f8b827684753a8ff6307a6",
+      "commit says": "chore: conform ai-catalog.json to ADR-0017 (metadata→extensions array, remove legacy mediaType)",
+      "cites": [
+       [
+        "AI Catalog",
+        "#77"
+       ]
+      ],
+      "changes": [
+       "added /entries[*]/extensions[*]/data/deterministic, /entries[*]/extensions[*]/data/iana, /entries[*]/extensions[*]/data/trinity, /entries[*]/extensions[*]/type",
+       "removed /entries[*]/mediaType, /entries[*]/metadata/one.faf/context/deterministic, /entries[*]/metadata/one.faf/context/iana, /entries[*]/metadata/one.faf/context/trinity"
+      ]
+     },
+     {
+      "date": "2026-08-17",
+      "sha": "4a1a35f",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/4a1a35f4a8bf94a0d2108783431f013f1a07eaf6",
+      "commit says": "fix(catalog): A2A entry points at apex card",
+      "cites": [],
+      "changes": [
+       "/entries[6]/type: \"application/a2a-agent-card+json\" → \"application/json\"",
+       "/entries[6]/updatedAt: \"2026-07-05T00:00:00Z\" → \"2026-08-17T00:00:00Z\"",
+       "/entries[6]/url: \"https://faf-voice.vercel.app/.well-known/agent-ca → \"https://faf.one/.well-known/agent-card.json\""
+      ]
+     },
+     {
+      "date": "2026-08-24",
+      "sha": "2cd91bb",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/2cd91bbfab35cd7b2f113c2184b563051500745a",
+      "commit says": "feat: add mcpaas.live Server Card entry to ai-catalog.json",
+      "cites": [],
+      "changes": [
+       "/entries[*]/description now in 8 places (was 7)",
+       "/entries[*]/identifier now in 8 places (was 7)",
+       "/entries[*]/tags[*] now in 36 places (was 33)",
+       "/entries[*]/type now in 8 places (was 7)",
+       "/entries[*]/updatedAt now in 8 places (was 7)",
+       "/entries[*]/url now in 8 places (was 7)"
+      ]
+     },
+     {
+      "date": "2026-08-24",
+      "sha": "f024c31",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/f024c312659073036673ba8acbd4e5c3ab177724",
+      "commit says": "feat: nest mcpaas.live's catalog as a federated sub-catalog entry",
+      "cites": [],
+      "changes": [
+       "/entries[*]/displayName now in 7 places (was 6)",
+       "/entries[5]/description: \"Real-time MCP context delivery at the edge — the  → \"Real-time MCP context delivery at the edge — the ",
+       "/entries[5]/identifier: \"urn:air:faf.one:mcp:mcpaas\" → \"urn:air:faf.one:catalog:mcpaas\"",
+       "/entries[*]/tags[*] changed in 2 places",
+       "/entries[5]/type: \"application/mcp-server-card+json\" → \"application/ai-catalog+json\"",
+       "/entries[5]/url: \"https://mcpaas.live/mcp/server-card\" → \"https://mcpaas.live/.well-known/ai-catalog.json\""
+      ]
+     },
+     {
+      "date": "2026-08-24",
+      "sha": "b642345",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/b6423457baa0f01332bf3383f44b789b75f82231",
+      "commit says": "feat: add Trust Manifests to every catalog entry (provenance + attestations)",
+      "cites": [],
+      "changes": [
+       "added /entries[*]/trustManifest/attestations[*]/description, /entries[*]/trustManifest/attestations[*]/type, /entries[*]/trustManifest/attestations[*]/uri, /entries[*]/trustManifest/identity, /entries[*]/trustManifest/provenance[*]/relation, /entries[*]/trustManifest/provenance[*]/sourceId"
+      ]
+     },
+     {
+      "date": "2026-08-24",
+      "sha": "82b0c17",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/82b0c176a1efd2cbf401dfdf550293226e607bc1",
+      "commit says": "fix: correct stale updatedAt on 7 catalog entries",
+      "cites": [],
+      "changes": [
+       "/entries[*]/updatedAt changed in 7 places"
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "sha": "bf5fb3f",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/bf5fb3fd8907b0b6f19d432c15d79e32b7d4e510",
+      "commit says": "fix(ai-catalog): serve extensions as a map, not an array",
+      "cites": [
+       [
+        "AI Catalog",
+        "#77"
+       ]
+      ],
+      "changes": [
+       "added /entries[*]/extensions/https://faf.one/context/deterministic, /entries[*]/extensions/https://faf.one/context/iana, /entries[*]/extensions/https://faf.one/context/trinity",
+       "removed /entries[*]/extensions[*]/data/deterministic, /entries[*]/extensions[*]/data/iana, /entries[*]/extensions[*]/data/trinity, /entries[*]/extensions[*]/type"
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "sha": "601827e",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/601827e4dd18da9946e66a43af08181dff59f61f",
+      "commit says": "fix: Add displayName to the context-server AI Catalog entry",
+      "cites": [
+       [
+        "ARD",
+        "v0.91"
+       ]
+      ],
+      "changes": [
+       "/entries[*]/displayName now in 8 places (was 7)",
+       "/entries[4]/updatedAt: \"2026-08-24T00:00:00Z\" → \"2026-09-15T00:00:00Z\""
+      ]
+     }
+    ]
+   },
+   {
+    "card": ".fafa",
+    "what": "FAFA's .fafa served at faf.one",
+    "repo": "Wolfe-Jam/faf-one-svelte-new",
+    "paths": [
+     "static/.well-known/fafa"
+    ],
+    "versions": [
+     {
+      "date": "2026-07-04",
+      "sha": "af6b5cc",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/af6b5ccecc178681e07e2bea2b1c2ddb9f41a58e",
+      "commit says": "feat: serve the canonical FAF Agent card at /.well-known/fafa",
+      "cites": [],
+      "changes": [
+       "first version"
+      ]
+     },
+     {
+      "date": "2026-07-05",
+      "sha": "97973fd",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/97973fd4b579114a70e743af12ceb0a205a4f589",
+      "commit says": "docs: add agent.displayName to served .fafa and schema (#18)",
+      "cites": [],
+      "changes": [
+       "added /agent/displayName"
+      ]
+     },
+     {
+      "date": "2026-07-05",
+      "sha": "c1ca3cd",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/c1ca3cde9d1655c65bfafebea7fa9100938a5923",
+      "commit says": "feat: list FAFA agent + A2A card in ai-catalog (mediaType-primary); declare a2a endpoint (#21)",
+      "cites": [],
+      "changes": [
+       "/endpoints[*]/location now in 3 places (was 2)",
+       "/endpoints[*]/protocol now in 3 places (was 2)",
+       "/endpoints[*]/transport now in 3 places (was 2)",
+       "/endpoints[*]/version now in 2 places (was 1)",
+       "/endpoints[1]/location: \"https://faf-voice.vercel.app/agent\" → \"https://faf-voice.vercel.app/api/a2a\"",
+       "/endpoints[1]/protocol: \"http\" → \"a2a\""
+      ]
+     },
+     {
+      "date": "2026-08-15",
+      "sha": "9b2e424",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/9b2e4247e44c07bd15da354202441b231604cb69",
+      "commit says": "fix: remove unsubstantiated 'user-definable' model claim from FAFA card",
+      "cites": [],
+      "changes": [
+       "/agent/description: \"FAFA (rhymes with Rafa) — the Voice of FAF. A nar → \"FAFA (rhymes with Rafa) — the Voice of FAF. A nar",
+       "/metadata/model: \"Grok (xAI) by default; user-definable per project → \"Grok (xAI)\""
+      ]
+     },
+     {
+      "date": "2026-08-15",
+      "sha": "b946a4d",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/b946a4d5fb3f0e8e971c28fb0a500f428eee8b34",
+      "commit says": "docs: Agents paper on grok/agents/mcp + live .fafa cartridge",
+      "cites": [],
+      "changes": [
+       "added /metadata/knowledge/paper, /metadata/public_repo",
+       "/metadata/knowledge/curated: \"FAFipedia — 35 drift-flagged entries across 7 cat → \"FAFipedia — 39 drift-flagged entries across 7 cat"
+      ]
+     },
+     {
+      "date": "2026-08-18",
+      "sha": "751e49f",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/751e49fc9313d05c0aed2cf1ce7a72a270947605",
+      "commit says": "align: well-known .fafa provenance is the projector block",
+      "cites": [],
+      "changes": [
+       "added /provenance/deterministic, /provenance/generated, /provenance/iana"
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "sha": "ded09cc",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/ded09cc0aecc04349fc66e42309c565d396610eb",
+      "commit says": "feat: Build /.well-known/fafa from its published source instead of keeping a copy",
+      "cites": [],
+      "changes": [
+       "file removed from git here (from this point it is built, not kept)"
+      ]
+     }
+    ]
+   }
+  ],
+  "spec": [
+   {
+    "spec": "A2A",
+    "date": "2025-07-17",
+    "ref": "v0.2.6",
+    "title": "A2A release v0.2.6",
+    "link": "https://github.com/a2aproject/A2A/releases/tag/v0.2.6",
+    "state": ""
+   },
+   {
+    "spec": "A2A",
+    "date": "2025-07-30",
+    "ref": "v0.3.0",
+    "title": "A2A release v0.3.0",
+    "link": "https://github.com/a2aproject/A2A/releases/tag/v0.3.0",
+    "state": ""
+   },
+   {
+    "spec": "A2A",
+    "date": "2026-03-12",
+    "ref": "v1.0.0",
+    "title": "A2A release v1.0.0",
+    "link": "https://github.com/a2aproject/A2A/releases/tag/v1.0.0",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-04-27",
+    "ref": "55996b5",
+    "title": "Add MCP Catalog discovery specification",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/55996b594b65648becc9d7d89c4b8182d94d179a",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-05-18",
+    "ref": "b413524",
+    "title": "docs(discovery): port authoritative fix from upstream PR",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/b4135246f1e5270bc02cfac322b15b789d43f02f",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-05-18",
+    "ref": "9e3b3d7",
+    "title": "docs(discovery): address tadasant review feedback",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/9e3b3d7c9d88d459dc9fc10e60fd0c2f5d53b5cb",
+    "state": ""
+   },
+   {
+    "spec": "A2A",
+    "date": "2026-05-28",
+    "ref": "v1.0.1",
+    "title": "A2A release v1.0.1",
+    "link": "https://github.com/a2aproject/A2A/releases/tag/v1.0.1",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-05",
+    "ref": "ac36447",
+    "title": "style: prettier formatting",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/ac36447c8db1db0084d87eb9f467a63766d0842d",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-05",
+    "ref": "1ff3c61",
+    "title": "docs: remove primitives from Server Card contents (fixes #10)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/1ff3c61b35409a08453abb7e83b20a674f5e2d85",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-05",
+    "ref": "877e626",
+    "title": "docs: align Catalog mediaType with AI Catalog spec",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/877e62682c06ab2b6574eea9176c2b26f9ec1feb",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-08",
+    "ref": "9222cf6",
+    "title": "docs: require Server Card to be consistent with runtime behavior (#25)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/9222cf6527473240f93191151b11b1e3dce3ffd8",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-08",
+    "ref": "bd9bcce",
+    "title": "Add DoS section (#24)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/bd9bcce280144d20c0a2cc8e6b08da26ab86f3d5",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-08",
+    "ref": "10e958f",
+    "title": "Server Cards: recommend `/server-card` over `.well-known` (resolves #12) (#22)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/10e958fa82b8d0440fac855ad55a2093e4ab1665",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-08",
+    "ref": "ee1f187",
+    "title": "Merge remote-tracking branch 'origin/main' into pr/19/sammorrowdrums/fix-discovery-md-primitives",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/ee1f1870841b040069347ebf055c90839365e856",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-12",
+    "ref": "33be466",
+    "title": "Rebrand Agent Finder -> Agentic Resource Discovery (ARD) across the repo",
+    "link": "https://github.com/ards-project/ard-spec/commit/33be46675231fec2939626b09bc438d3ae1616e3",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-12",
+    "ref": "6441baf",
+    "title": "Rename agentfinder.* -> ard.* (spec doc + schema files); fix internal links",
+    "link": "https://github.com/ards-project/ard-spec/commit/6441bafc7483e61aa24e6ace75245888bd124350",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-16",
+    "ref": "32a6f76",
+    "title": "remove extra \"\\\" from the field name",
+    "link": "https://github.com/ards-project/ard-spec/commit/32a6f76e46aa53193f1fb1c32081cc56908cee2c",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-16",
+    "ref": "9ea89ed",
+    "title": "docs: clarify artifact typing, remove mediaType from attestation schemas, and standardize type field naming",
+    "link": "https://github.com/ards-project/ard-spec/commit/9ea89ed58de6149be2b0e3ebbd58486e2bd41bfa",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-16",
+    "ref": "c61d233",
+    "title": "spec: remove Scott Courtney from authors; bump version to v0.9 (Draft)",
+    "link": "https://github.com/ards-project/ard-spec/commit/c61d233614c9380671d4c055f3e5de6e316ab781",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-17",
+    "ref": "96f877d",
+    "title": "chore: remove non-essential changes",
+    "link": "https://github.com/ards-project/ard-spec/commit/96f877d696542959e7a1f4ba6122fcd7fc85029f",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-17",
+    "ref": "0053a5e",
+    "title": "fix: revert URN format to match spec's own conventions",
+    "link": "https://github.com/ards-project/ard-spec/commit/0053a5e8ec7587a21d0612fec7d2df1731f96283",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-17",
+    "ref": "798b728",
+    "title": "fix: spec review — consistency fixes, media types, schema alignment",
+    "link": "https://github.com/ards-project/ard-spec/commit/798b728fba62dfc263cc8455d7dfdd471c84ec12",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-17",
+    "ref": "e419815",
+    "title": "spec: alphabetize acknowledgements (companies and names)",
+    "link": "https://github.com/ards-project/ard-spec/commit/e4198151f6011450832762532f2b7409ee9a4d0d",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-17",
+    "ref": "3fc6ad7",
+    "title": "spec: acknowledgements — Jeremy Moseley under GitHub only; fix Jennifer Marsman",
+    "link": "https://github.com/ards-project/ard-spec/commit/3fc6ad79374fce4a4829b04ebdaf602652ce4d0c",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-17",
+    "ref": "5a7ad2e",
+    "title": "spec: add Acknowledgements section",
+    "link": "https://github.com/ards-project/ard-spec/commit/5a7ad2ed55cc9f7bf8d2aa377808f8463dbd9046",
+    "state": ""
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-06-18",
+    "ref": "ADR-0016",
+    "title": "docs(adr): add ADR-0016 recording the displayName-optional decision",
+    "link": "https://github.com/Agent-Card/ai-catalog/blob/main/adr/0016-displayname-optional.md",
+    "state": "merged"
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-18",
+    "ref": "a0926ab",
+    "title": "Make `<publisher>` and kin visible in Markdown",
+    "link": "https://github.com/ards-project/ard-spec/commit/a0926abc2f1fe412560173f1ac1c1aac290b61ba",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-19",
+    "ref": "bc1e62d",
+    "title": "Merge pull request #17 from domfarolino/uniformly-escape-angle-brackets",
+    "link": "https://github.com/ards-project/ard-spec/commit/bc1e62d23955a12bcdfcead95421b3ffe0b704f1",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-19",
+    "ref": "be2ee21",
+    "title": "updated acknowledgements section",
+    "link": "https://github.com/ards-project/ard-spec/commit/be2ee213b687ccaa1441dc411e8263ddaac03f1f",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-19",
+    "ref": "e42749b",
+    "title": "docs(discovery): adopt AI Catalog `urn:air:` identifier convention (ADR 0015) (#31)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/e42749bfc2d59a288fef5181745cd9f6c95778b4",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-20",
+    "ref": "938b3fb",
+    "title": "Updated type in ai-catalog to ai-registry",
+    "link": "https://github.com/ards-project/ard-spec/commit/938b3fb32802912e616db48a13ea57c8d30d9d5a",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-20",
+    "ref": "4a8a6b8",
+    "title": "Merge branch 'main' into fix/spec-review-fixes",
+    "link": "https://github.com/ards-project/ard-spec/commit/4a8a6b8fdd3ac4a50dcb63213573159c1eed7856",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-20",
+    "ref": "8fff974",
+    "title": "spec: rename URN namespace identifier from <ai> to <air> to satisfy NID length requirements (>2 characters).",
+    "link": "https://github.com/ards-project/ard-spec/commit/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-06-22",
+    "ref": "f7e6fc0",
+    "title": "Correct Namespace Identifier from 'ai' to 'air'",
+    "link": "https://github.com/ards-project/ard-spec/commit/f7e6fc0f7fa2ebdd2eb3fa5b5bdd7e96bec78084",
+    "state": ""
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-06-25",
+    "ref": "#37",
+    "title": "Spec: Update mediaType to type for catalogEntry and add known types",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/37",
+    "state": "merged"
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-06-25",
+    "ref": "#44",
+    "title": "chore: update specStatus to Official and fix markdown formatting",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/44",
+    "state": "merged"
+   },
+   {
+    "spec": "IANA",
+    "date": "2026-06-26",
+    "ref": "vnd.fafa+yaml",
+    "title": "application/vnd.fafa+yaml registered (the .fafa media type)",
+    "link": "https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-06-27",
+    "ref": "92999cb",
+    "title": "docs: drop references to the MCP initialization handshake (SEP-2575) (#37)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/92999cb3f5d82e648385cb92ce41ed9aa1386eda",
+    "state": ""
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-06-30",
+    "ref": "#56",
+    "title": "fix(spec): make displayName optional in CatalogEntry CDDL (align with ADR-0016)",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/56",
+    "state": "merged"
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-07-02",
+    "ref": "0991376",
+    "title": "Enhance DNS section with SVCB and TXT record details",
+    "link": "https://github.com/ards-project/ard-spec/commit/0991376f6abfca1a419a6ea1577c64a59ba2e37c",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-07-13",
+    "ref": "3b2d974",
+    "title": "docs(discovery): rename Catalog Entry mediaType field to type (ADR 0014) (#32)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/3b2d974dbbc1bcf899e0ed2ef49a91758853c9a6",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-07-13",
+    "ref": "72793bb",
+    "title": "docs(discovery): drop displayName from MCP Catalog entries (#14) (#39)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/72793bb203cfeaabdc804aac1cae2612c2dc3499",
+    "state": ""
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-07-20",
+    "ref": "1491bd2",
+    "title": "Use AI Catalog for Server Card discovery (#42)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/1491bd24714c885d5bc6b3bf0857094beff939fd",
+    "state": ""
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-07-24",
+    "ref": "#91",
+    "title": "feat(spec): add ADR-0021 to support multiple identities via `alsoKnownAs`",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/91",
+    "state": "open"
+   },
+   {
+    "spec": "MCP Server Card (discovery)",
+    "date": "2026-07-24",
+    "ref": "8924e08",
+    "title": "docs(discovery): recommend ETag revalidation (#46)",
+    "link": "https://github.com/modelcontextprotocol/ext-server-card/commit/8924e08682b4a936e6464b57845ec2ff17dc8776",
+    "state": ""
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-07-30",
+    "ref": "#77",
+    "title": "Resolve #58: Add ADR-0017 and migrate to namespace extensions map",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/77",
+    "state": "merged"
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-08-20",
+    "ref": "#71",
+    "title": "application/agent-skills+md contradicts the registered-suffix claim and ADR 0014's own rationale",
+    "link": "https://github.com/Agent-Card/ai-catalog/issues/71",
+    "state": "closed"
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-08-26",
+    "ref": "b76db39",
+    "title": "spec: remove R.V.Guha's affiliation from the author list",
+    "link": "https://github.com/ards-project/ard-spec/commit/b76db39bcdca0ef826d48ae407b61a81f4605cb1",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-08-26",
+    "ref": "c21ac6a",
+    "title": "schemas: drop the projection concept, ArdEntry not ardEntry",
+    "link": "https://github.com/ards-project/ard-spec/commit/c21ac6a70c5ee0c857a84db875a81e44a028919d",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-08-26",
+    "ref": "49c0c4d",
+    "title": "conformance: validate the ARD entry model, resolve ard.json",
+    "link": "https://github.com/ards-project/ard-spec/commit/49c0c4d6b4aa9c80173789df8b7ad64c93f4d93a",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-08-26",
+    "ref": "v0.91",
+    "title": "spec: publish v0.91 — promote the draft, single well-known path",
+    "link": "https://github.com/ards-project/ard-spec/commit/a305a5285ed6df33f467c67d1f7a9ab672530fcb",
+    "state": ""
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-09-02",
+    "ref": "#107",
+    "title": "Define Entry Trust Manifest publisher-domain alignment",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/107",
+    "state": "open"
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-09-06",
+    "ref": "#108",
+    "title": "Bind signed Trust Manifests to release coordinates",
+    "link": "https://github.com/Agent-Card/ai-catalog/pull/108",
+    "state": "open"
+   },
+   {
+    "spec": "AI Catalog",
+    "date": "2026-09-13",
+    "ref": "#115",
+    "title": "Discovery path and link relation now differ from ARD v0.91 — 78 of 102 publishers are reachable on only one",
+    "link": "https://github.com/Agent-Card/ai-catalog/issues/115",
+    "state": "open"
+   }
+  ],
+  "private_artifacts_dropped": 3
+ },
+ "receipts": [
+  {
+   "card": "AI Catalog",
+   "spec": "AI Catalog",
+   "ref": "ADR-0016",
+   "spec_date": "2026-06-18",
+   "spec_link": "https://github.com/Agent-Card/ai-catalog/blob/main/adr/0016-displayname-optional.md",
+   "spec_title": "docs(adr): add ADR-0016 recording the displayName-optional decision",
+   "faf_date": "2026-06-30",
+   "faf_sha": "3b7ba5b",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/3b7ba5bc10e1588a68184e5e0afa263b8348a944",
+   "commit says": "fix: align ai-catalog.json with ADR-0016 (#6)",
+   "lag_days": 12
+  },
+  {
+   "card": "AI Catalog",
+   "spec": "AI Catalog",
+   "ref": "#37",
+   "spec_date": "2026-06-25",
+   "spec_link": "https://github.com/Agent-Card/ai-catalog/pull/37",
+   "spec_title": "Spec: Update mediaType to type for catalogEntry and add known types",
+   "faf_date": "2026-06-26",
+   "faf_sha": "ce31cbd",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/ce31cbde66d1cc93842dcfc99111a9fbc3a85a8d",
+   "commit says": "fix: conform AI Catalog to post-#37 spec",
+   "lag_days": 1
+  },
+  {
+   "card": "AI Catalog",
+   "spec": "AI Catalog",
+   "ref": "#77",
+   "spec_date": "2026-07-30",
+   "spec_link": "https://github.com/Agent-Card/ai-catalog/pull/77",
+   "spec_title": "Resolve #58: Add ADR-0017 and migrate to namespace extensions map",
+   "faf_date": "2026-08-02",
+   "faf_sha": "4d0d914",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/4d0d914c0bca36b525f8b827684753a8ff6307a6",
+   "commit says": "chore: conform ai-catalog.json to ADR-0017 (metadata→extensions array, remove legacy mediaType)",
+   "lag_days": 3
+  },
+  {
+   "card": "AI Catalog",
+   "spec": "AI Catalog",
+   "ref": "#77",
+   "spec_date": "2026-07-30",
+   "spec_link": "https://github.com/Agent-Card/ai-catalog/pull/77",
+   "spec_title": "Resolve #58: Add ADR-0017 and migrate to namespace extensions map",
+   "faf_date": "2026-09-13",
+   "faf_sha": "bf5fb3f",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/bf5fb3fd8907b0b6f19d432c15d79e32b7d4e510",
+   "commit says": "fix(ai-catalog): serve extensions as a map, not an array",
+   "lag_days": 45
+  },
+  {
+   "card": "AI Catalog",
+   "spec": "ARD",
+   "ref": "v0.91",
+   "spec_date": "2026-08-26",
+   "spec_link": "https://github.com/ards-project/ard-spec/commit/a305a5285ed6df33f467c67d1f7a9ab672530fcb",
+   "spec_title": "spec: publish v0.91 — promote the draft, single well-known path",
+   "faf_date": "2026-09-14",
+   "faf_sha": "601827e",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/601827e4dd18da9946e66a43af08181dff59f61f",
+   "commit says": "fix: Add displayName to the context-server AI Catalog entry",
+   "lag_days": 19
+  }
+ ],
+ "server_json": {
+  "name": "MCP Registry server.json",
+  "is_card": false,
+  "spec_repo": "modelcontextprotocol/registry",
+  "link": "https://github.com/modelcontextprotocol/registry/commit/2061151d45991456de767f903855e2a75664b659",
+  "first_date": "2025-07-02",
+  "adoption": [
+   {
+    "claim": "32,237 latest-version server entries in the official registry, counted page by page from the live API on 2026-09-15T16:34Z",
+    "link": "https://registry.modelcontextprotocol.io/v0.1/servers?version=latest&limit=100"
+   },
+   {
+    "claim": "The registry repo has 7,251 stars and 36 releases (latest v1.8.1, 2026-08-06), checked 2026-09-15",
+    "link": "https://github.com/modelcontextprotocol/registry/releases/tag/v1.8.1"
+   },
+   {
+    "claim": "AI Catalog names 'an MCP Registry `server.json`' as an artifact whose own version a consumer may read (line added 2026-07-23, commit 2b5afb9f263f7a7252bcac0a1ad3b61a6fdea599)",
+    "link": "https://github.com/Agent-Card/ai-catalog/blob/04a99cd1ac9a20dd6586c6196e87f5e4570303b1/specification/ai-catalog.md#L408"
+   }
+  ],
+  "written_by": "faf cards --target registry",
+  "relation": "CONFIRMED: SEP-2127 Rev 1 borrowed the server.json shape. The first git draft (3bb8831, 2026-01-21) has no server.json reference and no remotes/packages fields (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md). Rev 1 (PR #2152 merged 2026-01-30, commit e105d30) says 'Most fields follow the current MCP Registry `server.json` standard' (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L287), adds remotes/packages (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L79), and has a section 'Why Mirror `server.json`'s shape?' (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L410). Two days later (2195161, 2026-02-01): 'We rename the MCP Registry's `server.json` to `Extended MCP Server Card`' (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/2195161c41a2a03a0bc559bd2ef7c7430e77b963/seps/2127-mcp-server-cards.md#L301). 2026-03-23 (cfe7de2, 'Align Server Card with server.json'): 'Local, stdio-based servers should plan to distribute via `server.json` and the MCP Registry.' (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L306). Latest (5c8483d, 2026-08-24) separates them: 'The Registry owns that schema; the Server Card extension does not define a `Server` superset or package-installation types.' (https://github.com/modelcontextprotocol/modelcontextprotocol/blob/5c8483d511d60ef1f8ded5160c5290fd8213d19e/seps/2127-mcp-server-cards.md#L72). The extension repo agrees: server.json 'is owned by the registry, not by this extension' (https://github.com/modelcontextprotocol/ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/README.md#L25). Precursor: the Server Card idea first appeared as issue SEP-1649 (2025-10-14, closed 2026-01-26, proposing .well-known/mcp.json), which has no git history (https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1649). AI Catalog cites server.json as a referenced artifact (see adoption). server.json's own first schema calls itself 'Schema for a static representation of an MCP server.' (https://github.com/modelcontextprotocol/registry/blob/2061151d45991456de767f903855e2a75664b659/docs/server-json/schema.json#L4)."
+ },
+ "also_out_there": {
+  "groups": {
+   "draw": [
+    {
+     "name": "ANP Agent Description (AD) document (ANP-07)",
+     "owner": "Agent Network Protocol open-source community — GitHub org agent-network-protocol",
+     "status": "active",
+     "reason": "A released (v1.1) agent description document with 17 commits since 2025-01-01, tagged releases, and its own well-known discovery path. It evolves visibly: it began as JSON-LD and dropped the JSON-LD requirement in July 2025.",
+     "spec_repo": "agent-network-protocol/AgentNetworkProtocol",
+     "first_date": "2025-01-01",
+     "link": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/e840b8aa0fccb465145c3cb3377927f1786e27af/07-ANP-Agent%20Description%20Protocol%20Specification%20(Draft).md#L5"
+    },
+    {
+     "name": "agents.json (Wildcard)",
+     "owner": "wild-card-ai (a GitHub user account named 'Wildcard AI', not an organization)",
+     "status": "unclear",
+     "reason": "Passes both tests literally: a public git spec (README plus JSON Schema, quotable at commits) for a well-known discovery file describing a web service for agents. Edge of (b): it describes an API's call flows more than a server's identity; the history is thin (one schema commit, v0.1.0 only).",
+     "spec_repo": "wild-card-ai/agents-json",
+     "first_date": "2025-01-30",
+     "link": "https://github.com/wild-card-ai/agents-json/commit/7ac77e5d24db99a848e0d0507cd849be7429f4af"
+    },
+    {
+     "name": "AGNTCY OASF record (Open Agentic Schema Framework)",
+     "owner": "AGNTCY project (Cisco-originated; Linux Foundation project since 2025-07-29) — repo agntcy/oasf",
+     "status": "active",
+     "reason": "Public git history since 2025-02 with 35 tagged releases and a single record object whose values can be quoted per commit; it describes agents (and MCP servers via modules) for directory discovery. Its directory draft already projects records into AI Catalog, A2A card and MCP Server Card media types, so it lands on the map as a junction.",
+     "spec_repo": "agntcy/oasf",
+     "first_date": "2025-02-14",
+     "link": "https://github.com/agntcy/oasf/blob/9f47789613bf5d70e287552f5210ef61c5e22908/schema/objects/agent.json"
+    },
+    {
+     "name": "IBM ACP Agent Manifest (Agent Communication Protocol; schema 'Agent' then 'AgentManifest', docs 'Agent Detail')",
+     "owner": "IBM Research / BeeAI (i-am-bee org); project donated to the Linux Foundation, then merged into A2A",
+     "status": "merged into A2A (Linux Foundation); repo archived",
+     "reason": "Passes both tests: a dated OpenAPI schema with 23 commits from 2025-04-23 to 2025-07-01, used for discovery (including a well-known file). It ends in a primary-sourced merge into A2A, which gives the map a junction.",
+     "spec_repo": "i-am-bee/acp",
+     "first_date": "2025-04-23",
+     "link": "https://github.com/i-am-bee/acp/blob/bf417365bc1173e858bfe7b69b8527989a65a666/docs/spec/openapi.yaml#L431-L447"
+    },
+    {
+     "name": "MCP Registry server.json",
+     "owner": "modelcontextprotocol (MCP Registry maintainers)",
+     "status": "active",
+     "reason": "Passes both tests: git history since 2025-06-26 with six dated schema versions, and its own spec says it describes MCP servers for registry publishing and client discovery. Server Card Rev 1 was built on its shape, so it is where the Server Card line branched from.",
+     "spec_repo": "modelcontextprotocol/registry",
+     "first_date": "2025-07-02",
+     "link": "https://github.com/modelcontextprotocol/registry/commit/2061151d45991456de767f903855e2a75664b659"
+    },
+    {
+     "name": "ERC-8004 agent registration file (Trustless Agents)",
+     "owner": "Ethereum ERC process; authors listed with MetaMask, ethereum.org, google.com and coinbase.com affiliations",
+     "status": "active",
+     "reason": "Passes both tests, multi-organisation authors, deployed on mainnets, and its git history shows a card branching off the A2A line.",
+     "spec_repo": "ethereum/ERCs",
+     "first_date": "2025-08-18",
+     "link": "https://github.com/ethereum/ERCs/blob/d30865a7209bd84f3bdc2a40fe2df803f2d4f4c3/ERCS/erc-8004.md#L54"
+    },
+    {
+     "name": "Signature Agent Card (Web Bot Auth)",
+     "owner": "IETF individual draft in the Web Bot Auth (webbotauth) WG venue; authors listed with Cloudflare and Amazon",
+     "status": "active",
+     "reason": "An IETF-venue card with 'Agent Card' in its name, git history from 2025-09-05, and Cloudflare and Amazon authors. It describes the agent operator so origins can verify it.",
+     "spec_repo": "thibmeu/draft-meunier-webbotauth-registry (since 2026-09-10); earlier history in webbotauth/draft-ietf-webbotauth-httpsig-protocol",
+     "first_date": "2025-09-05",
+     "link": "https://github.com/webbotauth/draft-ietf-webbotauth-httpsig-protocol/blob/ff550246dd7728fa1baa24a9ec46a5928099d1b1/draft-meunier-webbotauth-registry.md#L75"
+    },
+    {
+     "name": "UCP profile (Universal Commerce Protocol business and platform profile)",
+     "owner": "Universal-Commerce-Protocol; Shopping Tech Council lists Google, Shopify, Etsy, Meta, Amazon, Target, Microsoft, Stripe, Salesforce, Wayfair",
+     "status": "active",
+     "reason": "Broad multi-company backing, git history since 2026-01-11, and the spec calls the profile a discovery document. It links A2A cards and MCP endpoints for commerce servers and agent platforms.",
+     "spec_repo": "Universal-Commerce-Protocol/ucp",
+     "first_date": "2026-01-11",
+     "link": "https://github.com/Universal-Commerce-Protocol/ucp/blob/5ea2729492fd8e81439c704c91f749667c265362/docs/specification/overview.md#L241"
+    }
+   ],
+   "consider": [
+    {
+     "name": "Open Resource Discovery (ORD) document: Agent resource",
+     "owner": "SAP; README says governed by Linux Foundation / NeoNephos",
+     "status": "active",
+     "reason": "Registered well-known, foundation governance and versioned git tags. But ORD is an enterprise resource catalog where Agent is one entity type, marked BETA in the docs. Its role is closer to AI Catalog than to a per-agent card.",
+     "spec_repo": "open-resource-discovery/specification",
+     "first_date": "2023-10-24",
+     "link": "https://github.com/open-resource-discovery/specification/commit/c640f1016b5d43a79e89fa90dc607dfe399b4926"
+    },
+    {
+     "name": "RFC 9727 api-catalog",
+     "owner": "IETF httpapi WG",
+     "status": "active",
+     "reason": "Not agent-specific, but it is the documented precursor of AI Catalog's catalog role. Consider it as a predecessor station on the AI Catalog line rather than its own card.",
+     "spec_repo": "ietf-wg-httpapi/api-catalog",
+     "first_date": "2024-02-08",
+     "link": "https://github.com/ietf-wg-httpapi/api-catalog/commit/a1b46cba0b426ba366e2a1b353ded633beb3f9c9"
+    },
+    {
+     "name": "Eclipse LMOS Agent Description Format",
+     "owner": "Eclipse LMOS (Eclipse Foundation project)",
+     "status": "unclear",
+     "reason": "Foundation-backed agent description with git history, but the spec pages have had no commits since 2025-04-10. Draw it only if the map shows the WoT branch.",
+     "spec_repo": "eclipse-lmos/website",
+     "first_date": "2024-12-13",
+     "link": "https://github.com/eclipse-lmos/website/blob/fccba84207fdf650cb8bfaa4085e04da909943e2/docs/multi_agent_system/agent_description.md#L9"
+    },
+    {
+     "name": "AGNTCY Agent Connect Protocol - Agent ACP Descriptor (Cisco-led 'ACP', not IBM's)",
+     "owner": "AGNTCY (Cisco-led collective; Linux Foundation since 2025-07-29)",
+     "status": "deprecated in favor of A2A; repo archived",
+     "reason": "Passes both tests: 'Describe all the ACP specs of an agent, including schemas and protocol features.' (openapi.json L1903). But it is mostly an invocation-schema descriptor inside an API. It lived three months (Feb to May 2025), and its discovery role passed to the OASF record.",
+     "spec_repo": "agntcy/acp-spec",
+     "first_date": "2025-02-19",
+     "link": "https://github.com/agntcy/acp-spec/commit/2a7adc3471e50ad051387dcc4b71932b7eee89b2"
+    },
+    {
+     "name": "NANDA AgentFacts",
+     "owner": "Project NANDA (MIT-originated) — GitHub org projnanda",
+     "status": "unclear",
+     "reason": "Passes both tests literally, but its git history is one upload commit (2025-06-17) with no later change, so it draws as a single station. Which schema is authoritative is also contested: agentfacts.org names a different repo as official.",
+     "spec_repo": "projnanda/agentfacts-format",
+     "first_date": "2025-06-17",
+     "link": "https://github.com/projnanda/agentfacts-format/blob/89e938c08a7166341201568055c0a3b6852d26e4/agentfacts_schema.json#L3"
+    },
+    {
+     "name": "AID: Agent Identity & Discovery (v1 named Agent Interface Discovery)",
+     "owner": "agentcommunity (Agent Community); IETF individual draft draft-nemethi-dawn-aid-00",
+     "status": "active",
+     "reason": "Git history since 2025-07-05 and an IETF draft under the DAWN name. It is a DNS locator record rather than a full card, so it fits better as a connector than a line.",
+     "spec_repo": "agentcommunity/agent-identity-discovery",
+     "first_date": "2025-07-05",
+     "link": "https://github.com/agentcommunity/agent-identity-discovery/blob/0d408e30395281f6f35f05637efb2a24d7452f85/packages/docs/specification.md#L23"
+    },
+    {
+     "name": "ACP Registry agent entry (Agent Client Protocol, agent.schema.json)",
+     "owner": "agentclientprotocol (Agent Client Protocol project; AAIF proposal #1)",
+     "status": "active",
+     "reason": "Strong adoption (42 agents, JetBrains index) and a pending AAIF proposal. It is a registry-entry and install format, so decide it together with MCP Registry server.json.",
+     "spec_repo": "agentclientprotocol/registry",
+     "first_date": "2025-12-17",
+     "link": "https://github.com/agentclientprotocol/registry/blob/860b104704508c656c32ec498fa10242fc17ef3b/agent.schema.json"
+    }
+   ],
+   "not drawn": [
+    {
+     "name": "W3C WoT Thing Description",
+     "owner": "W3C Web of Things WG",
+     "status": "active",
+     "reason": "Scoped to IoT Things, not agents. It enters the map only as LMOS's parent.",
+     "spec_repo": "w3c/wot-thing-description",
+     "first_date": "2017-02-14",
+     "link": "https://github.com/w3c/wot-thing-description/commit/81309eb154dc5aa0f2f2d21f966b2fa202d5f13b"
+    },
+    {
+     "name": "xRegistry",
+     "owner": "xRegistry authors (CNCF)",
+     "status": "active",
+     "reason": "A generic registry substrate, not an agent or server description.",
+     "spec_repo": "xregistry/spec",
+     "first_date": "2023-04-17",
+     "link": "https://github.com/xregistry/spec/commit/302b805e2e40d4a592975b0c9ae96fd784461eb9"
+    },
+    {
+     "name": "Microsoft 365 Copilot declarative agent manifest",
+     "owner": "Microsoft",
+     "status": "active",
+     "reason": "The schema has clean public git history (8 dated versions), but it is packaging and configuration for one product: '...a declarative agent for third party developers to be deployed to Microsoft 365 Copilot' (v1.0 L3). It carries the agent's instructions and is never published for discovery, and Microsoft's own discovery path uses A2A Agent Cards.",
+     "spec_repo": "microsoft/json-schemas",
+     "first_date": "2024-09-12",
+     "link": "https://github.com/microsoft/json-schemas/blob/f87fa4928811926cadf3efe1b072825b62882ebf/copilot/declarative-agent/v1.0/schema.json#L3-L6"
+    },
+    {
+     "name": "LangChain Agent Protocol (Agent object)",
+     "owner": "LangChain",
+     "status": "active",
+     "reason": "It is a protocol API. The Agent object (openapi.json L1497) exists only as a response from a running server, with no document published for discovery.",
+     "spec_repo": "langchain-ai/agent-protocol",
+     "first_date": "2024-11-12",
+     "link": "https://github.com/langchain-ai/agent-protocol/commit/f33ce53c7899b8f22adf5844a0059eb26e2e2180"
+    },
+    {
+     "name": "Letta Agent File (.af)",
+     "owner": "Letta",
+     "status": "active",
+     "reason": "It serializes agent state for transfer and checkpointing, not for discovery.",
+     "spec_repo": "letta-ai/agent-file",
+     "first_date": "2025-03-23",
+     "link": "https://github.com/letta-ai/agent-file/commit/436012ded0c0419742ad4357f34c9ba0d970fa54"
+    },
+    {
+     "name": "Google ADK AgentConfig (YAML agent config)",
+     "owner": "Google",
+     "status": "active",
+     "reason": "It is config to create an agent, not a discovery or description document.",
+     "spec_repo": "google/adk-python",
+     "first_date": "2025-07-10",
+     "link": "https://github.com/google/adk-python/commit/ca396a3ab1c1c43d5bd1c82fd92e49ce7fa67aec"
+    },
+    {
+     "name": "Oracle Open Agent Specification (Agent Spec)",
+     "owner": "Oracle",
+     "status": "active",
+     "reason": "It is a build and configuration language for running agents, not a discovery document.",
+     "spec_repo": "oracle/agent-spec",
+     "first_date": "2025-10-14",
+     "link": "https://github.com/oracle/agent-spec/commit/6b7852098e21151fb525767d92af43b5270044d6"
+    },
+    {
+     "name": "Microsoft AgentSchema",
+     "owner": "Microsoft (Copilot Studio + Microsoft Foundry)",
+     "status": "active",
+     "reason": "It builds agents rather than describing them for discovery: 'AgentSchema is a client facing spec designed to make creating agents easier in a code first YAML file format.' (README L3).",
+     "spec_repo": "microsoft/AgentSchema",
+     "first_date": "2025-11-09",
+     "link": "https://github.com/microsoft/AgentSchema/commit/913a75eb18b6534acc0927039b0d763baddf72e0"
+    },
+    {
+     "name": "Agent Skills (SKILL.md)",
+     "owner": "agentskills (agentskills/agentskills)",
+     "status": "active",
+     "reason": "An instruction file describing a skill, not an agent or server; out under test (b).",
+     "spec_repo": "agentskills/agentskills",
+     "first_date": "2025-12-16",
+     "link": "https://github.com/agentskills/agentskills/commit/2075f7e89f886e60366e44faff1523ce0f84216e"
+    },
+    {
+     "name": "OpenBindings Interface (OBI)",
+     "owner": "OpenBindings Project",
+     "status": "active",
+     "reason": "Passes both tests and holds an IANA well-known, but no adoption beyond its own project is visible.",
+     "spec_repo": "openbindings/spec",
+     "first_date": "2026-04-15",
+     "link": "https://github.com/openbindings/spec/blob/bcacbdc496fa6f95e1dcf8e055fee3fc9dd1fb5d/openbindings.md#L166"
+    },
+    {
+     "name": "AGTP Agent Identity Document",
+     "owner": "Chris Hood / nomoticai (Nomotic AI); I-D draft-hood-independent-agtp",
+     "status": "active",
+     "reason": "Passes both tests, but it is a single-author individual draft whose repo has 10 stars. Note the IANA registration; do not draw a line.",
+     "spec_repo": "nomoticai/agtp",
+     "first_date": "2026-05-16",
+     "link": "https://github.com/nomoticai/agtp/blob/e096903a455300a1c9236e27df4b11898204ed20/core/schemas/agent-document.schema.json"
+    },
+    {
+     "name": "Agent Name Service (ANS) registration + DNS records",
+     "owner": "GoDaddy (agentnameservice org; LICENSE 'Copyright 2025 GoDaddy Operating Company, LLC.') with IETF individual drafts by Narajala, Courtney, Huang, Habler, Sheriff",
+     "status": "active",
+     "reason": "It is an identity, naming and trust layer: registration 'binds to operational metadata (display name, description, endpoints)' (ans-1 L11) and hands the description itself to the A2A card or MCP metadata through metaDataUrl. Worth a map annotation as the connector between A2A and ARD.",
+     "spec_repo": "agentnameservice/ans-registry",
+     "first_date": "2026-06-30",
+     "link": "https://github.com/agentnameservice/ans-registry/commit/fce2dd259436d4599f5befbb0631a5b22ea623fb"
+    },
+    {
+     "name": "AgentMug .agent file (application/vnd.agentmug.agent+json)",
+     "owner": "Dahshan Labs (AgentMug)",
+     "status": "active",
+     "reason": "It is an executable agent definition ('A .agent file is a portable, declarative definition of an AI agent.', spec L14), not a discovery document.",
+     "spec_repo": "dahshanlabs/agentmug-core",
+     "first_date": "2026-07-30",
+     "link": "https://github.com/dahshanlabs/agentmug-core/commit/1c4e76000edf3327cd3d1b6150633b6a0b544a42"
+    },
+    {
+     "name": "OpenAI ai-plugin.json (ChatGPT plugin manifest)",
+     "owner": "OpenAI",
+     "status": "deprecated",
+     "reason": "Fails (a): the manifest was defined on OpenAI docs pages, not in git, and OpenAI's repos hold only example manifests. No field can be quoted from a spec at a commit.",
+     "spec_repo": null,
+     "first_date": "",
+     "link": ""
+    },
+    {
+     "name": "AWS Agent Registry record (Amazon Bedrock AgentCore)",
+     "owner": "AWS",
+     "status": "active",
+     "reason": "Docs only, with no git-versioned spec. Agent records reuse the A2A card, so there is no separate AWS card to draw.",
+     "spec_repo": null,
+     "first_date": "",
+     "link": ""
+    },
+    {
+     "name": "Claude Code plugin manifest (plugin.json) and marketplace.json",
+     "owner": "Anthropic",
+     "status": "unclear",
+     "reason": "No normative spec with public git history was found (a public docs page only), and it describes a plugin bundle, not an agent or server.",
+     "spec_repo": null,
+     "first_date": "",
+     "link": ""
+    }
+   ]
+  },
+  "borderline_mentions": [
+   {
+    "name": "AgentCard (draft-aevum-agentcard-00)",
+    "link": "https://datatracker.ietf.org/doc/draft-aevum-agentcard/",
+    "why": "Individual I-D (2026-04-22, expires 2026-10-24) defining a framework-neutral 'AgentCard' JSON; no git repo found, so it fails (a) as far as checked; adoption unknown."
+   },
+   {
+    "name": "Agent Capability Advertisement Protocol / Agent Capability Documents (draft-zahed-acap-00)",
+    "link": "https://datatracker.ietf.org/doc/draft-zahed-acap/",
+    "why": "I-D only (2026-06-25); defines ACDs served at a well-known URI; no git or adoption found."
+   },
+   {
+    "name": "ACPM capability profile and 'Autonomous Agent Interchange Format' (draft-schemacommons-acpm-00, draft-schemacommons-aaif-00)",
+    "link": "https://datatracker.ietf.org/doc/draft-schemacommons-aaif/",
+    "why": "I-Ds only (2026-06-25). The second uses the acronym AAIF, which collides with the Agentic AI Foundation; git not checked."
+   },
+   {
+    "name": "AI Agent Discovery and Invocation Protocol (draft-cui-ai-agent-discovery-invocation-02)",
+    "link": "https://datatracker.ietf.org/doc/draft-cui-ai-agent-discovery-invocation/",
+    "why": "I-D defining a common agent metadata format; CATALIST-related; no git repo checked."
+   },
+   {
+    "name": "Metadata and Query Profile for Efficient Agent Discovery (draft-xu-efficient-agent-discovery-profile-00)",
+    "link": "https://datatracker.ietf.org/doc/draft-xu-efficient-agent-discovery-profile/",
+    "why": "I-D-only JSON metadata profile (2026-05-18)."
+   },
+   {
+    "name": "Minimum Discoverable Information model (draft-cui-dawn-mdi-model-00)",
+    "link": "https://datatracker.ietf.org/doc/draft-cui-dawn-mdi-model/",
+    "why": "An information model, not a format; could become the DAWN baseline if the proposed WG adopts it. Watch."
+   },
+   {
+    "name": "ADP v1.1 well-known JSON metadata (draft-pro-adp-agent-discovery-02) and Walko Systems ADP /.well-known/agent-discovery.json",
+    "link": "https://datatracker.ietf.org/doc/draft-pro-adp-agent-discovery/",
+    "why": "I-D only. The DAWN survey calls Walko's ADP single-author with one implementation; whether the two ADPs are the same was not verified."
+   },
+   {
+    "name": "AI Discovery Endpoint /.well-known/ai (draft-aiendpoint-ai-discovery-01)",
+    "link": "https://datatracker.ietf.org/doc/draft-aiendpoint-ai-discovery/",
+    "why": "I-D only; service self-description at /.well-known/ai, a name the IANA expert reserves for standards-based work."
+   },
+   {
+    "name": "IntentWeb AgentManifest (draft-jernalczyk-intentweb-agent-manifest-00)",
+    "link": "https://datatracker.ietf.org/doc/draft-jernalczyk-intentweb-agent-manifest/",
+    "why": "Describes a website for visiting agents (site, not agent); I-D only."
+   },
+   {
+    "name": "DNS-AID (draft-mozleywilliams-dnsop-dnsaid-02; dns-aid/dns-aid-core)",
+    "link": "https://github.com/dns-aid/dns-aid-core",
+    "why": "DNS SVCB records under _agents (a locator, not a document); cited by ARD. Its README says it reads a native metadata doc at /.well-known/agent.json with aid_version; that format was not verified in the draft. The README also says A2A uses /.well-known/agent.json, but A2A's IANA-registered suffix is agent-card.json."
+   },
+   {
+    "name": "Agent Name Service (draft-narajala-courtney-ansv2-01; agentnameservice/ans)",
+    "link": "https://datatracker.ietf.org/doc/draft-narajala-courtney-ansv2/",
+    "why": "Naming and registration protocol that relies on protocol-native cards; covered in vendor-and-merged.json."
+   },
+   {
+    "name": "BEST Behavioral State Protocol (/.well-known/best)",
+    "link": "https://github.com/behavioralstate/spec",
+    "why": "Service capability manifest for agents with git history and an I-D (draft-dinuzzo-best-protocol-01), but 4 stars and a single author; well-known request pre-check open (#104)."
+   },
+   {
+    "name": "bluejetty",
+    "link": "https://github.com/protocol-registries/well-known-uris/issues/106",
+    "why": "Commercial discovery descriptor pointing to 'app packets'; spec on a vendor docs site (git unverified); registration pending."
+   },
+   {
+    "name": "agents.txt / agents.json (kaylacar/agents-txt; draft-car-agents-txt-wellknown-00)",
+    "link": "https://github.com/protocol-registries/well-known-uris/issues/73",
+    "why": "A different spec from the Wildcard agents.json covered elsewhere. It declares what visiting agents may do on a site, not an agent description. Registration refused; the expert called the repo private."
+   },
+   {
+    "name": "ai-disclosure.json (aidisclose.io)",
+    "link": "https://github.com/protocol-registries/well-known-uris/issues/99",
+    "why": "Declares the AI systems a website operates, for transparency rules. Refused under the ai/agent naming policy; spec on a docs site, git unverified."
+   },
+   {
+    "name": "/.well-known/ai (rootz-global/ai-discovery)",
+    "link": "https://github.com/protocol-registries/well-known-uris/issues/80",
+    "why": "Organisation profile for AI agents; registration refused; single company."
+   },
+   {
+    "name": "KCP Knowledge Context Protocol (Cantara)",
+    "link": "https://github.com/protocol-registries/well-known-uris/issues/86",
+    "why": "Knowledge manifest (knowledge.yaml), close to context and instruction files; registration of 'kcp' refused."
+   },
+   {
+    "name": "flyweb.json",
+    "link": "https://github.com/protocol-registries/well-known-uris/issues/71",
+    "why": "Site content manifest for agents (describes a site's content, not an agent); registration pending."
+   },
+   {
+    "name": "Docker MCP Registry server.yaml",
+    "link": "https://github.com/docker/mcp-registry",
+    "why": "328 server.yaml entries describe MCP servers for Docker's catalog. It is a vendor submission format defined in CONTRIBUTING.md, a sibling of MCP Registry server.json."
+   },
+   {
+    "name": "agentregistry agent.yaml (agentregistry-dev/agentregistry)",
+    "link": "https://github.com/agentregistry-dev/agentregistry",
+    "why": "489-star product whose agent records bundle identity and MCP/skill dependencies; no standalone spec found."
+   },
+   {
+    "name": "Solid agent card (jeswr/solid-agent-card)",
+    "link": "https://github.com/jeswr/solid-agent-card",
+    "why": "Combines an A2A Agent Card with an ANP RDF description for Solid; 0 stars."
+   },
+   {
+    "name": "agentrust-io/agent-manifest",
+    "link": "https://github.com/agentrust-io/agent-manifest",
+    "why": "Agent Manifest SDK from the TRACE proposers (AAIF proposal #42); spec status not verified."
+   },
+   {
+    "name": "agentpk (nomoticai/agentpk)",
+    "link": "https://github.com/nomoticai/agentpk",
+    "why": "Agent packaging and signing 'standard' from the same org as AGTP; low adoption."
+   },
+   {
+    "name": "prime-vector/open-agent-spec",
+    "link": "https://github.com/prime-vector/open-agent-spec",
+    "why": "YAML agent definition, 19 stars; name overlaps Oracle's Open Agent Spec."
+   },
+   {
+    "name": "OpenBotAuth agent identity draft (draft-openbotauth-agent-identity-00)",
+    "link": "https://github.com/OpenBotAuth/openbotauth",
+    "why": "Found by code search for 'Signature Agent Card' in docs/specs; not read."
+   },
+   {
+    "name": "W3C Agent Declaration and Assurance CG 'Open KYA Manifest Schema'",
+    "link": "https://www.w3.org/community/adacg/",
+    "why": "Planned only; the group page (started 2026-06-03) lists no draft."
+   },
+   {
+    "name": "AgentMug .agent (application/vnd.agentmug.agent+json)",
+    "link": "https://www.iana.org/assignments/media-types/application/vnd.agentmug.agent+json",
+    "why": "Registered 2026-08-14. Covered in vendor-and-merged.json; listed here only because it came up in the IANA sweep."
+   }
+  ]
+ },
+ "counts": {
+  "cards": 5,
+  "checkpoints": 30,
+  "entries": 270,
+  "linked": 269,
+  "spec_events": 54,
+  "public_artifacts": 4,
+  "frames": 28
+ }
+}

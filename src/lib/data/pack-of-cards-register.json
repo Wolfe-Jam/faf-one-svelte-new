@@ -1,0 +1,2557 @@
+{
+ "cards": {
+  "A2A Agent Card": {
+   "card": "A2A Agent Card",
+   "spec_repo": "a2aproject/A2A",
+   "checkpoints": [
+    {
+     "label": "v0.2.0",
+     "date": "2025-05-21",
+     "ref": "3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2",
+     "sources": [
+      "specification/json/a2a.json",
+      "docs/specification.md"
+     ],
+     "why_checkpoint": "Baseline: first v0.2.x tag (its GitHub Release entry has no notes). AgentCard defined in specification/json/a2a.json and docs/specification.md §5.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "name",
+        "required": true
+       },
+       "evidence": "Human readable name of the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json#L147",
+       "note": "`name` is in the AgentCard `required` array (L195)."
+      },
+      "identity": {
+       "value": "url",
+       "evidence": "A URL to the address the agent is hosted at.",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json#L182",
+       "note": "No dedicated agent identifier field. The required `url` (the A2A service endpoint) is the only per-agent address in the card; spec §4.2 says clients verify the server's identity via its TLS certificate (docs/specification.md L89)."
+      },
+      "extension": {
+       "value": "none",
+       "evidence": "Defines optional capabilities supported by an agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json#L100",
+       "note": "AgentCapabilities has only pushNotifications, stateTransitionHistory and streaming (L99-L116). AgentCard has no `extensions` or `metadata` property, and the word \"extension\" does not occur in docs/specification.md at this commit."
+      },
+      "versioning": {
+       "value": [],
+       "evidence": "The version of the agent - format is up to the provider.",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json#L186",
+       "note": "No field carries the protocol/spec version. The only version field, `version`, is the agent's own; the prose calls it \"Agent or A2A implementation version string\" (docs/specification.md L204)."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "capabilities",
+         "defaultInputModes",
+         "defaultOutputModes",
+         "description",
+         "name",
+         "skills",
+         "url",
+         "version"
+        ],
+        "count": 8
+       },
+       "evidence": "\"required\": [",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/specification/json/a2a.json#L190-L199",
+       "note": "AgentCard `required` array spans L190-L199 (listed in schema order)."
+      },
+      "discovery": {
+       "value": "/.well-known/agent.json",
+       "evidence": "`https://{server_domain}/.well-known/agent.json`",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/docs/specification.md#L143",
+       "note": "§5.3 \"Recommended Location\": the line above (L142) reads \"If using the well-known URI strategy, the recommended location for an agent's Agent Card is:\". §5.2 also lists registries/catalogs and direct configuration. `agent.json` does not appear in IANA's well-known URI registry (checked 2026-09-15)."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "A JSON metadata document published by an A2A Server",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/docs/specification.md#L46",
+       "note": "The spec names no media type for the Agent Card document. Its only Content-Type rule covers JSON-RPC payloads (`application/json`, L67). IANA's application media-type registry has no a2a entry (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "The Agent Card is a JSON document that describes the server's identity, capabilities, skills, service endpoint URL",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/docs/specification.md#L128"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "verify the A2A Server's identity by validating its TLS certificate against trusted certificate authorities",
+       "link": "https://github.com/a2aproject/A2A/blob/3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2/docs/specification.md#L89",
+       "note": "No signature or trust field in the AgentCard schema at this commit. The only trust statement is transport-level: clients SHOULD verify the server's TLS certificate (§4.2)."
+      }
+     }
+    },
+    {
+     "label": "v0.2.2",
+     "date": "2025-06-09",
+     "ref": "d66af72658a9dcf73b559c81ef8b2788ce7fea18",
+     "sources": [
+      "specification/json/a2a.json",
+      "docs/specification.md"
+     ],
+     "why_checkpoint": "extension changed. Release notes: 'Add protocol support for extensions (#716)' (70f1e2b), which added AgentCapabilities.extensions. Same release: 'spec: Add an optional iconUrl field to the AgentCard (#687)'. v0.2.1 ('Add a new boolean for supporting authenticated extended cards', #618) changed no tracked value.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "name",
+        "required": true
+       },
+       "evidence": "Human readable name of the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/specification/json/a2a.json#L158",
+       "note": "`name` is in the AgentCard `required` array (L210)."
+      },
+      "identity": {
+       "value": "url",
+       "evidence": "A URL to the address the agent is hosted at.",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/specification/json/a2a.json#L197",
+       "note": "Unchanged: no dedicated agent identifier field; required `url` is the service endpoint."
+      },
+      "extension": {
+       "value": "capabilities.extensions",
+       "evidence": "A list of extensions supported by this agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/docs/specification.md#L203",
+       "note": "AgentCapabilities.extensions: AgentExtension[] (schema L102-L108). AgentExtension: `uri` required; `required`, `description`, `params` optional (docs/specification.md L215-L218)."
+      },
+      "versioning": {
+       "value": [],
+       "evidence": "The version of the agent - format is up to the provider.",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/specification/json/a2a.json#L201",
+       "note": "Unchanged: no protocol/spec version field in the card."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "capabilities",
+         "defaultInputModes",
+         "defaultOutputModes",
+         "description",
+         "name",
+         "skills",
+         "url",
+         "version"
+        ],
+        "count": 8
+       },
+       "evidence": "\"required\": [",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/specification/json/a2a.json#L205-L214",
+       "note": "Unchanged from v0.2.0."
+      },
+      "discovery": {
+       "value": "/.well-known/agent.json",
+       "evidence": "`https://{server_domain}/.well-known/agent.json`",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/docs/specification.md#L144",
+       "note": "§5.3 \"Recommended Location\": the line above (L143) reads \"If using the well-known URI strategy, the recommended location for an agent's Agent Card is:\". §5.2 also lists registries/catalogs and direct configuration. `agent.json` does not appear in IANA's well-known URI registry (checked 2026-09-15)."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "A JSON metadata document published by an A2A Server",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/docs/specification.md#L46",
+       "note": "The spec names no media type for the Agent Card document. Its only Content-Type rule covers JSON-RPC payloads (`application/json`, L68). IANA's application media-type registry has no a2a entry (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "The Agent Card is a JSON document that describes the server's identity, capabilities, skills, service endpoint URL",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/docs/specification.md#L129"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "verify the A2A Server's identity by validating its TLS certificate against trusted certificate authorities",
+       "link": "https://github.com/a2aproject/A2A/blob/d66af72658a9dcf73b559c81ef8b2788ce7fea18/docs/specification.md#L90",
+       "note": "No signature or trust field in the AgentCard schema at this commit. The only trust statement is transport-level: clients SHOULD verify the server's TLS certificate (§4.2)."
+      }
+     }
+    },
+    {
+     "label": "v0.2.5",
+     "date": "2025-06-30",
+     "ref": "22b52705a169123aa06cdf28261e12150ee5777f",
+     "sources": [
+      "specification/json/a2a.json",
+      "docs/specification.md"
+     ],
+     "why_checkpoint": "versioning and required_fields changed. Release notes: BREAKING 'spec: Add a required protocol version to the agent card. (#802)' (90fa642). v0.2.3 (gRPC annotation typo fixes) and v0.2.4 ('feat: Add support for multiple transport announcement in AgentCard') changed no tracked value.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "name",
+        "required": true
+       },
+       "evidence": "Human readable name of the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/specification/json/a2a.json#L174",
+       "note": "`name` is in the AgentCard `required` array (L243)."
+      },
+      "identity": {
+       "value": "url",
+       "evidence": "A URL to the address the agent is hosted at.",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/specification/json/a2a.json#L227",
+       "note": "Same line continues: \"This represents the preferred endpoint as declared by the agent.\" v0.2.4 added `preferredTransport` and `additionalInterfaces` (more transport/URL pairs); `url` stays the required endpoint. Still no dedicated agent identifier field."
+      },
+      "extension": {
+       "value": "capabilities.extensions",
+       "evidence": "A list of extensions supported by this agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/docs/specification.md#L204"
+      },
+      "versioning": {
+       "value": [
+        "protocolVersion"
+       ],
+       "evidence": "The version of the A2A protocol this agent supports.",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/specification/json/a2a.json#L185",
+       "note": "Top-level string, in the AgentCard `required` array (L244); schema example \"0.2.5\" (L187). The agent's own version stays in `version`."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "capabilities",
+         "defaultInputModes",
+         "defaultOutputModes",
+         "description",
+         "name",
+         "protocolVersion",
+         "skills",
+         "url",
+         "version"
+        ],
+        "count": 9
+       },
+       "evidence": "\"required\": [",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/specification/json/a2a.json#L238-L248",
+       "note": "Adds `protocolVersion` (L244) to the eight from v0.2.0."
+      },
+      "discovery": {
+       "value": "/.well-known/agent.json",
+       "evidence": "`https://{server_domain}/.well-known/agent.json`",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/docs/specification.md#L144",
+       "note": "§5.3 \"Recommended Location\": the line above (L143) reads \"If using the well-known URI strategy, the recommended location for an agent's Agent Card is:\". §5.2 also lists registries/catalogs and direct configuration. `agent.json` does not appear in IANA's well-known URI registry (checked 2026-09-15)."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "A JSON metadata document published by an A2A Server",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/docs/specification.md#L46",
+       "note": "The spec names no media type for the Agent Card document. Its only Content-Type rule covers JSON-RPC payloads (`application/json`, L68). IANA's application media-type registry has no a2a entry (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "The Agent Card is a JSON document that describes the server's identity, capabilities, skills, service endpoint URL",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/docs/specification.md#L129"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "verify the A2A Server's identity by validating its TLS certificate against trusted certificate authorities",
+       "link": "https://github.com/a2aproject/A2A/blob/22b52705a169123aa06cdf28261e12150ee5777f/docs/specification.md#L90",
+       "note": "No signature or trust field in the AgentCard schema at this commit. The only trust statement is transport-level: clients SHOULD verify the server's TLS certificate (§4.2)."
+      }
+     }
+    },
+    {
+     "label": "v0.3.0",
+     "date": "2025-07-30",
+     "ref": "8d57eba286de756176892518a8fc39b0ac2ccefb",
+     "sources": [
+      "specification/json/a2a.json",
+      "docs/specification.md"
+     ],
+     "why_checkpoint": "discovery and trust changed. Release notes: BREAKING 'Change Well-Known URI for Agent Card hosting from `agent.json` to `agent-card.json` (#841)' (0858ddb); 'Add `signatures` to the `AgentCard` (#917)' (ef4a305). v0.2.6 ('Type fix and doc clarification', gRPC json names) changed no tracked value.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "name",
+        "required": true
+       },
+       "evidence": "A human-readable name for the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json#L182",
+       "note": "`name` is in the AgentCard `required` array (L273-L283)."
+      },
+      "identity": {
+       "value": "url",
+       "evidence": "The preferred endpoint URL for interacting with the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json#L259",
+       "note": "Same line continues: \"This URL MUST support the transport specified by 'preferredTransport'.\" Still no dedicated agent identifier field."
+      },
+      "discovery": {
+       "value": "/.well-known/agent-card.json",
+       "evidence": "`https://{server_domain}/.well-known/agent-card.json`",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/docs/specification.md#L293",
+       "note": "Still the \"recommended location\" if using the well-known URI strategy (L292). IANA's well-known URI registry lists `agent-card.json` as permanent, Linux Foundation, dated 2025-08-01 (checked 2026-09-15); that entry postdates this commit."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "A JSON metadata document published by an A2A Server",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/docs/specification.md#L48",
+       "note": "Still no media type named for the Agent Card document. The string `a2a+json` does not occur in docs/specification.md at this commit; Content-Type rules cover JSON-RPC and REST payloads (`application/json`, L79 and L100)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "The Agent Card is a JSON document that describes the server's identity, capabilities, skills, service endpoint URL",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/docs/specification.md#L278"
+      },
+      "extension": {
+       "value": "capabilities.extensions",
+       "evidence": "A list of protocol extensions supported by the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json#L117",
+       "note": "AgentCapabilities.extensions (AgentCapabilities starts at L113)."
+      },
+      "trust": {
+       "value": "jws-signature",
+       "evidence": "Represents a JSON Web Signature (JWS) used to verify the integrity of the AgentCard.",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/docs/specification.md#L371",
+       "note": "Optional `signatures` array (schema L241: \"JSON Web Signatures computed for this AgentCard.\"). AgentCardSignature \"follows the JSON format of an RFC 7515 JSON Web Signature (JWS)\" (schema L287); `protected` and `signature` required. No canonicalization rule at this commit."
+      },
+      "versioning": {
+       "value": [
+        "protocolVersion"
+       ],
+       "evidence": "The version of the A2A protocol this agent supports.",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json#L200",
+       "note": "Top-level, required (L279); schema default \"0.3.0\" (L199)."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "capabilities",
+         "defaultInputModes",
+         "defaultOutputModes",
+         "description",
+         "name",
+         "protocolVersion",
+         "skills",
+         "url",
+         "version"
+        ],
+        "count": 9
+       },
+       "evidence": "\"required\": [",
+       "link": "https://github.com/a2aproject/A2A/blob/8d57eba286de756176892518a8fc39b0ac2ccefb/specification/json/a2a.json#L273-L283",
+       "note": "Unchanged from v0.2.5. `signatures` is optional."
+      }
+     }
+    },
+    {
+     "label": "v1.0.0",
+     "date": "2026-03-12",
+     "ref": "173695755607e884aa9acf8ce4feed90e32727a1",
+     "sources": [
+      "specification/a2a.proto",
+      "docs/specification.md"
+     ],
+     "why_checkpoint": "identity location, versioning and required_fields changed; trust gained a canonicalization rule. Release notes: 'spec: Large refactor of specification to separate application protocol definition from mapping to transports' (b078419: added supported_interfaces, deprecated top-level url/preferred_transport/additional_interfaces); 'spec: Remove deprecated fields from a2a.proto for v1.0 release (#1301)' (60f83c3: removed them, made supported_interfaces REQUIRED); 'spec: Provide ability for SDKs to be backwards compatible (#1401)' (227e249: moved the protocol version into AgentInterface). Observed in the spec text: §14 IANA Considerations and JCS canonicalization for signing are new (neither occurs at v0.3.0).",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "name",
+        "required": true
+       },
+       "evidence": "string name = 1 [(google.api.field_behavior) = REQUIRED];",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto#L359",
+       "note": "Comment at L357: \"A human readable name for the agent.\""
+      },
+      "identity": {
+       "value": "url",
+       "evidence": "The URL where this interface is available. Must be a valid absolute HTTPS URL in production.",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto#L337",
+       "note": "No top-level `url` any more. The endpoint lives in each `supportedInterfaces[]` entry: AgentInterface.url REQUIRED (L339); AgentCard.supported_interfaces REQUIRED, \"Ordered list of supported interfaces. The first entry is preferred.\" (L364-L365). Still no dedicated agent identifier field."
+      },
+      "discovery": {
+       "value": "/.well-known/agent-card.json",
+       "evidence": "Accessing `https://{server_domain}/.well-known/agent-card.json`",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/docs/specification.md#L1954",
+       "note": "§14.3 adds a well-known URI registration template: \"URI suffix: agent-card.json\" (L3305), \"Status: Permanent\" (L3314)."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "The resource at this URI MUST return an AgentCard object as defined in Section 4.4.1 of the A2A specification.",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/docs/specification.md#L3312",
+       "note": "No media type is stated for the card at the well-known URI. §14.1 (L3203) defines `application/a2a+json` as an IANA registration template, \"intended for the HTTP+JSON/REST binding\" (L3227); IANA's application registry has no a2a entry (checked 2026-09-15). At this commit the REST binding says `application/json` for requests and responses (L2729), yet the §6.9 example returns the extended Agent Card with `Content-Type: application/a2a+json` (L1837)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "A JSON metadata document published by an A2A Server, describing its identity, capabilities, skills, service endpoint, and authentication requirements.",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/docs/specification.md#L139",
+       "note": "The normative AgentCard is now the Protocol Buffers message in specification/a2a.proto; JSON serializations MUST use camelCase field names (§5.5, L1206), following ProtoJSON (ADR-001)."
+      },
+      "extension": {
+       "value": "capabilities.extensions",
+       "evidence": "A list of protocol extensions supported by the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto#L411",
+       "note": "`repeated AgentExtension extensions = 3;` in AgentCapabilities (L412). §4.6.1: \"Agents declare their supported extensions in the AgentCard using the `extensions` field\" (docs/specification.md L1006); its example nests it under `capabilities`."
+      },
+      "trust": {
+       "value": "jws-signature",
+       "evidence": "Agent Cards **MAY** be digitally signed using JSON Web Signature (JWS)",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/docs/specification.md#L1979",
+       "note": "New here: before signing, the card MUST be canonicalized with JCS, RFC 8785 (L1983), and the `signatures` field is excluded from the signed content. `repeated AgentCardSignature signatures = 13;` is optional (proto L390)."
+      },
+      "versioning": {
+       "value": [
+        "supportedInterfaces[].protocolVersion"
+       ],
+       "evidence": "The version of the A2A protocol this interface exposes.",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto#L346",
+       "note": "Nested per interface and REQUIRED (`string protocol_version = 4`, L349); JSON name `protocolVersion`. The top-level `protocolVersion` is gone. §3.6 (L710): versions are Major.Minor; patch numbers SHOULD NOT be used in Agent Cards. Appendix A.2.1 still tells implementers to use an AgentCard `protocolVersions` field (L3486, L3494) that the proto does not define."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "name",
+         "description",
+         "supportedInterfaces",
+         "version",
+         "capabilities",
+         "defaultInputModes",
+         "defaultOutputModes",
+         "skills"
+        ],
+        "count": 8
+       },
+       "evidence": "string name = 1 [(google.api.field_behavior) = REQUIRED];",
+       "link": "https://github.com/a2aproject/A2A/blob/173695755607e884aa9acf8ce4feed90e32727a1/specification/a2a.proto#L359-L388",
+       "note": "REQUIRED via google.api.field_behavior annotations on name, description, supported_interfaces, version, capabilities, default_input_modes, default_output_modes, skills (L359-L388); JSON (camelCase) names listed. `url` and `protocolVersion` are no longer top-level fields."
+      }
+     }
+    },
+    {
+     "label": "v1.0.1",
+     "date": "2026-05-28",
+     "ref": "3303592588e388e62e0f69f701af531d2f4e3991",
+     "sources": [
+      "specification/a2a.proto",
+      "docs/specification.md"
+     ],
+     "why_checkpoint": "Latest release; no tracked value changed. The AgentCard, AgentCapabilities and AgentCardSignature messages are identical to v1.0.0. Release notes: 'spec: prefer application/a2a+json in HTTP binding (#1753)' (7ff1004), which moves the REST binding (including the extended card response) to application/a2a+json SHOULD; the well-known card still has no stated media type.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "name",
+        "required": true
+       },
+       "evidence": "string name = 1 [(google.api.field_behavior) = REQUIRED];",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L364",
+       "note": "Unchanged from v1.0.0."
+      },
+      "identity": {
+       "value": "url",
+       "evidence": "The URL where this interface is available. Must be a valid absolute HTTPS URL in production.",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L337",
+       "note": "Unchanged: endpoint in REQUIRED `supportedInterfaces[].url` (L339). Changed nearby: optional AgentInterface.tenant is now described as \"An opaque string used for routing requests to a specific agent or tenant when multiple agents are served behind a single A2A endpoint\" (L344-L345); the protocol \"does not define its format or semantics\" (L349)."
+      },
+      "discovery": {
+       "value": "/.well-known/agent-card.json",
+       "evidence": "Accessing `https://{server_domain}/.well-known/agent-card.json`",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L1978",
+       "note": "§14.3 template unchanged (L3328, L3337). IANA's well-known URI registry lists `agent-card.json` as permanent (checked 2026-09-15)."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "The resource at this URI MUST return an AgentCard object as defined in Section 4.4.1 of the A2A specification.",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L3335",
+       "note": "Still no media type for the card at the well-known URI. Changed here: the REST binding now says \"application/a2a+json **SHOULD** be used for requests and responses\" (L2750), which covers `GET /extendedAgentCard`; the JSON-RPC binding keeps `application/json` (L2236). `application/a2a+json` is still not in IANA's application registry (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "A JSON metadata document published by an A2A Server, describing its identity, capabilities, skills, service endpoint, and authentication requirements.",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L137",
+       "note": "Unchanged: proto is normative; JSON uses camelCase (§5.5, L1204)."
+      },
+      "extension": {
+       "value": "capabilities.extensions",
+       "evidence": "A list of protocol extensions supported by the agent.",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L416",
+       "note": "`repeated AgentExtension extensions = 3;` (L417). Unchanged."
+      },
+      "trust": {
+       "value": "jws-signature",
+       "evidence": "Agent Cards **MAY** be digitally signed using JSON Web Signature (JWS)",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/docs/specification.md#L2004",
+       "note": "Unchanged: JCS (RFC 8785) canonicalization before signing (L2008); `signatures` optional (proto L395)."
+      },
+      "versioning": {
+       "value": [
+        "supportedInterfaces[].protocolVersion"
+       ],
+       "evidence": "The version of the A2A protocol this interface exposes.",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L351",
+       "note": "REQUIRED (L354). Unchanged. Appendix A.2.1 still mentions an AgentCard `protocolVersions` field (L3509, L3517)."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "name",
+         "description",
+         "supportedInterfaces",
+         "version",
+         "capabilities",
+         "defaultInputModes",
+         "defaultOutputModes",
+         "skills"
+        ],
+        "count": 8
+       },
+       "evidence": "string name = 1 [(google.api.field_behavior) = REQUIRED];",
+       "link": "https://github.com/a2aproject/A2A/blob/3303592588e388e62e0f69f701af531d2f4e3991/specification/a2a.proto#L364-L393",
+       "note": "Unchanged from v1.0.0 (AgentCard message identical)."
+      }
+     }
+    }
+   ],
+   "notes": [
+    "Sources. v0.x: the AgentCard is defined in specification/json/a2a.json (JSON Schema, alongside types/src/types.ts, which docs/specification.md includes) and described in docs/specification.md §5. From v1.0.0 the definition of record is specification/a2a.proto; specification/json/README.md at v1.0.0 (L3) says a2a.json is \"a non-normative build artifact derived from the canonical proto definition\" and is not committed. The v1.0 spec tables are rendered from the proto (`proto_to_table`).",
+    "Checkpoints: 6 of the 11 v0.2.0..v1.0.1 releases. v0.2.1, v0.2.3, v0.2.4 and v0.2.6 changed no tracked value (v0.2.1 added supportsAuthenticatedExtendedCard; v0.2.4 added preferredTransport and additionalInterfaces). v1.0.1 is included as the latest release even though no tracked value changed. The v1.0.0-rc tag (6292104) has no GitHub Release and was not used.",
+    "Dates and refs. v0.2.0 uses the annotated tag date (2025-05-21); its GitHub Release entry was published later, 2025-06-09, with empty notes. v0.3.0: the release (published 2025-07-30) targeted 2d3dc909972d9680b974e0fc9a1354c1ba8f519d (\"chore(main): release 0.3.0\"), but the annotated tag object was created 2025-07-31 and now points at 8d57eba, two commits later. That diff touches no AgentCard field (an RPC method name in a table, a push-config description, README), so every value is the same at both commits. v1.0.1 uses the publish date 2026-05-28; its notes heading says 2026-05-26. Refs are the tags' dereferenced commit SHAs.",
+    "Judgement call, identity. No A2A version defines a dedicated agent identifier field. \"url\" is recorded because the required service endpoint URL is the only per-agent address in the card: top-level `url` in v0.x, `supportedInterfaces[].url` in v1.0.x. The spec ties server identity to TLS certificate verification at that endpoint.",
+    "Judgement call, type. No version states a media type for the Agent Card served at the well-known URI, so media_type is \"none\" throughout. From v1.0.0 the spec defines `application/a2a+json` (an IANA registration template, not registered as of 2026-09-15, \"intended for the HTTP+JSON/REST binding\"). The extended Agent Card REST response uses it (example in v1.0.0; SHOULD in v1.0.1). If the register should count the protocol media type as the card's type, the v1.0.0 and v1.0.1 value becomes {\"media_type\": \"application/a2a+json\", \"status\": \"de-facto\"}.",
+    "Judgement call, trust at v0.2.x: recorded \"none\" because the card has no signature or trust field. The spec's only trust mechanism is transport TLS.",
+    "Versioning. v0.2.0 and v0.2.2 record an empty list: `version` is the agent's own version (schema) or \"Agent or A2A implementation version string\" (prose), not the protocol version. Between v0.3.0 and v1.0.0 the top-level field went from protocol_version to a repeated protocol_versions (#1259, a4afeea), then was removed in favour of AgentInterface.protocol_version (#1401, 227e249). Appendix A.2.1 of v1.0.0 and v1.0.1 still refers to an AgentCard `protocolVersions` field; the proto has none, so the proto is followed.",
+    "Discovery. The well-known path was always \"recommended\"/one of several mechanisms (well-known URI, registries/catalogs, direct configuration), never the only one. IANA's well-known URI registry lists `agent-card.json` (permanent, Linux Foundation, 2025-08-01); `agent.json` is not listed (checked 2026-09-15).",
+    "Link format. required_fields links use a line range (#Lstart-Lend) covering the whole required array or the REQUIRED annotations; the evidence quote is on the first line of the range. Quotes keep markdown markup (e.g. **MAY**) as it appears in the file."
+   ]
+  },
+  "AI Catalog": {
+   "card": "AI Catalog",
+   "spec_repo": "Agent-Card/ai-catalog",
+   "checkpoints": [
+    {
+     "label": "#27 first spec on main",
+     "date": "2026-04-08",
+     "ref": "fe8809f4b049b47f0d587f505927fcf78d5edc89",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "Earliest version of specification/ai-catalog.md on main: PR #27 'AI Catalog Specification proposal' merged 2026-04-08 00:13 UTC. The file was first committed 2026-03-31 on the ai-catalog-spec branch as specification/draft-ai-card.md (0271c148) and renamed the same day (3e414775). This version already has the IANA Considerations section (media type + link relation registrations). Baseline.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L944",
+       "note": "CatalogEntry CDDL, no '?' marker. Prose lists `displayName` (L188) under 'It MUST contain the following members' (L180)."
+      },
+      "identity": {
+       "value": "other:open URN or URI (SHOULD)",
+       "evidence": "A string identifying this artifact. This SHOULD be a URN",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L183",
+       "note": "Entry `identifier`. L184 continues '[[RFC8141]] or URI [[RFC3986]] (e.g., `urn:example:agent:name`)'. No URN namespace is prescribed."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L650",
+       "note": "Hosts MAY serve it there; 'Use of the well-known URI is OPTIONAL' (L657) and a catalog MAY be served from any URL (L636). Link relation `ai-catalog` via HTTP Link header or HTML <link> (L670), with an IANA link relation registration section (L897). No well-known URI registration section yet."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L95",
+       "note": "IANA Considerations: 'This section registers the `application/ai-catalog+json` media type' (L850). Not in the IANA media types registry (checked 2026-09-15), so recorded as de-facto."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "An open map of string keys to arbitrary values for custom data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L235",
+       "note": "Optional entry `metadata` (L234). The same open map is on the catalog top level (L148) and the Trust Manifest (L356)."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "The Trust Manifest is an OPTIONAL companion to catalog entries and",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L286",
+       "note": "Optional entry `trustManifest` (L243), also allowed on the host. Its optional `signature` is 'a detached JWS [[RFC7515]]' (L351-352) over the JCS-canonicalized manifest (L453-462)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L102",
+       "note": "Required top-level member: 'the version of this specification that the catalog conforms to, in \"Major.Minor\" format' (L103-104). Entry `version` is the artifact's version, not the spec's."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "mediaType",
+         "url|inline"
+        ],
+        "count": 4
+       },
+       "evidence": "minimum `identifier`, `displayName`, `mediaType`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/fe8809f4b049b47f0d587f505927fcf78d5edc89/specification/ai-catalog.md#L723",
+       "note": "Level 1 list continues '`inline`' (L724). CDDL CatalogEntry (L942-946) agrees: `(url: text // inline: any)` is exactly one of the two, counted as one field. Required top-level catalog fields: specVersion, entries (L99-108; CDDL L920, L922)."
+      }
+     }
+    },
+    {
+     "label": "#33 inline→data, well-known registration",
+     "date": "2026-04-30",
+     "ref": "634a09d98b644153384cde4f1cb4cbb70ead0e04",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "PR #33 'spec: Updates based on discussions during last meeting' merged: the entry content member `inline` was renamed `data`, top-level `collections` was removed, a Metadata Extensibility section (reverse-DNS key convention) and a Version Handling section were added, and an IANA Well-Known URI registration for `ai-catalog.json` was added.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L1226",
+       "note": "CatalogEntry CDDL, no '?' marker. Unchanged since #27."
+      },
+      "identity": {
+       "value": "other:open URN or URI (SHOULD)",
+       "evidence": "A string identifying this artifact. This SHOULD be a URN",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L192",
+       "note": "Unchanged: L193 '[[RFC8141]] or URI [[RFC3986]] (e.g., `urn:example:agent:name`)'."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L825",
+       "note": "Still OPTIONAL (L832). Link relation `ai-catalog` (L845). New: 'This section registers the `ai-catalog.json` well-known URI' (L1184), in addition to the link relation registration (L1168)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L95",
+       "note": "Registration section at L1121. Not in the IANA registry (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "An open map of string keys to arbitrary values for custom data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L244",
+       "note": "Entry `metadata` (L243). New Metadata Extensibility section (L729): reverse-DNS key prefixes RECOMMENDED for vendor-specific keys (L738-742); short unqualified names also allowed."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "The Trust Manifest is an OPTIONAL companion to catalog entries and",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L324",
+       "note": "Detached JWS `signature` (L389-390). Security Considerations recast as progressive trust layers; Layer 2 'includes a `signature` field (detached JWS)' (L956)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L102",
+       "note": "New Version Handling section (L764): 'Major.Minor' format, minor = additive, major = breaking."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "mediaType",
+         "url|data"
+        ],
+        "count": 4
+       },
+       "evidence": "minimum `identifier`, `displayName`, `mediaType`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/634a09d98b644153384cde4f1cb4cbb70ead0e04/specification/ai-catalog.md#L898",
+       "note": "L899 now reads '`data`' (was `inline`). CDDL L1224-1228: `(url: text // data: any)`. Required top-level: specVersion, entries."
+      }
+     }
+    },
+    {
+     "label": "#37 type + #36 urn:air",
+     "date": "2026-06-25",
+     "ref": "c443ffbea351a62d470d7693ebcd2b1bf4458bc9",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "Two same-day merges. PR #37 (18:04 UTC) 'Spec: Update mediaType to type for catalogEntry and add known types' (ADR-0014) renamed the entry's `mediaType` to open-text `type` with RECOMMENDED known types, and removed `mediaType` from Attestations. PR #36 (21:30 UTC) 'spec: adopt `urn:air:` naming standard for AI artifacts (ADR 0015)'. Ref is the #36 merge, the first main commit containing both.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L1239",
+       "note": "CatalogEntry CDDL, no '?' marker."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L192",
+       "note": "The field itself stays open text ('any valid URI or URN is accepted', same line). Format `urn:air:{publisher}:{namespace}:{name}` (L195), {publisher} = the publisher's domain name. Closed or local systems may use other formats. Trust Manifest `identity` now aligns with the identifier's publisher domain segment (L366) instead of matching it exactly."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L838",
+       "note": "Link relation `ai-catalog` (L858). Registration sections: link relation (L1181), well-known URI (L1197)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L95",
+       "note": "Catalog document media type unchanged (registration section L1134, not registered). The entry-level rename (`mediaType` to `type`) is about the referenced artifact's type, not the catalog's."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "An open map of string keys to arbitrary values for custom data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L262",
+       "note": "Entry `metadata` (L261); unchanged."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "The Trust Manifest is an OPTIONAL companion to catalog entries and",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L342",
+       "note": "Detached JWS `signature` (L409-410)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L102"
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "type",
+         "url|data"
+        ],
+        "count": 4
+       },
+       "evidence": "minimum `identifier`, `displayName`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/c443ffbea351a62d470d7693ebcd2b1bf4458bc9/specification/ai-catalog.md#L911",
+       "note": "CDDL CatalogEntry L1237-1241 agrees. `type` is 'an open text format' with RECOMMENDED known types (L212-213). Required top-level: specVersion, entries."
+      }
+     }
+    },
+    {
+     "label": "#39 displayName optional (prose)",
+     "date": "2026-06-26",
+     "ref": "6a75c6e96ea9535c16f589221d85cf44ac1f5a73",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "PR #39 'spec: make Catalog Entry displayName optional (not required) (ADR 0016)' merged. Branch commit 0798bcc was authored 2026-06-08; ADR-0016 is dated 2026-06-18. It moved `displayName` to the OPTIONAL members, removed it from the Level 1 minimum and added a display-name resolution order. It did not change the CDDL.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "Because `displayName` is OPTIONAL, a consumer rendering a catalog entry",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L293",
+       "note": "Listed under 'The following members are OPTIONAL:' (L241, L243). Conflict at this SHA: the CDDL, which the spec calls 'the normative schema' (L1260), still reads `displayName: text,` with no '?' (L1283). #56 fixed it."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L190",
+       "note": "Format `urn:air:{publisher}:{namespace}:{name}` (L193). New last-resort name fallback: the identifier's trailing segment."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L882",
+       "note": "Link relation `ai-catalog` (L902); registrations at L1225 (link relation) and L1241 (well-known URI)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L95",
+       "note": "Registration section L1178; not registered."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "An open map of string keys to arbitrary values for custom data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L278",
+       "note": "Entry `metadata` (L277); unchanged."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "The Trust Manifest is an OPTIONAL companion to catalog entries and",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L386",
+       "note": "Detached JWS `signature` (L453-454)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L102"
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/6a75c6e96ea9535c16f589221d85cf44ac1f5a73/specification/ai-catalog.md#L955",
+       "note": "Per the prose and the Level 1 list. The CDDL CatalogEntry (L1281-1285) still requires displayName (4 fields) at this SHA. Required top-level: specVersion, entries."
+      }
+     }
+    },
+    {
+     "label": "#56 CDDL displayName optional",
+     "date": "2026-06-30",
+     "ref": "41e4442ff8635e08e5c3ce00fc8a068b6b7179fd",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "PR #56 'fix(spec): make displayName optional in CatalogEntry CDDL (align with ADR-0016)' merged (author Wolfe-Jam). One-line change, `displayName: text,` to `? displayName: text,`, so the normative CDDL now agrees with the prose and Level 1.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "? displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L1283",
+       "note": "CDDL and prose (L241-244, L293) now agree."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L190",
+       "note": "Format line L193; unchanged."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L882",
+       "note": "Link relation `ai-catalog` (L902); unchanged."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L95",
+       "note": "Registration section L1178; not registered."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "An open map of string keys to arbitrary values for custom data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L278",
+       "note": "Unchanged."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "The Trust Manifest is an OPTIONAL companion to catalog entries and",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L386",
+       "note": "Unchanged."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L102"
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/41e4442ff8635e08e5c3ce00fc8a068b6b7179fd/specification/ai-catalog.md#L955",
+       "note": "CDDL CatalogEntry (L1281-1285) now matches: identifier, ? displayName, type, (url // data). Required top-level: specVersion, entries."
+      }
+     }
+    },
+    {
+     "label": "#77 extensions map",
+     "date": "2026-07-30",
+     "ref": "22471d4c619319630cf8c594c895747f9d89fcc8",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "PR #77 'Resolve #58: Add ADR-0017 and migrate to namespace extensions map' merged. `metadata` (catalog, entry, Trust Manifest) is replaced by `extensions`, a map whose keys are extension namespaces (URL or reverse-DNS). ADR-0017 records that a JSON-LD-style `@context` proposal (Issue #58) was not adopted. PR #60 (entry-field authoritative-source parity for description/version), merged minutes earlier, changed no dimension.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "? displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L1399",
+       "note": "Prose: L243, resolution order L322."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L190",
+       "note": "Format line L193; unchanged."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L998",
+       "note": "Link relation `ai-catalog` (L1019); registrations L1341 (link relation), L1357 (well-known URI)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L95",
+       "note": "Registration section L1294; not registered."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L99",
+       "note": "Still plain JSON. The Extensions example shows an extension value that itself carries an `@context` key; that is extension data, not the document encoding."
+      },
+      "extension": {
+       "value": "extensions-map",
+       "evidence": "represent the extension type (namespace), and the corresponding value contains the extension data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L882",
+       "note": "L881: 'The `extensions` field is a JSON object (map). Each key in the object MUST'. Keys 'MUST be a valid URL or a reverse-DNS string' (L884-885). Entry `extensions` at L306, also on the catalog top level (L143) and Trust Manifest (L545). One official extension: `https://ai-catalog.org/extensions/metadata`. The Level 1 text still says `metadata` (L1076); #47 fixed it."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "The Trust Manifest is an OPTIONAL companion to catalog entries and",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L473",
+       "note": "Detached JWS `signature` (L540-541)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L102",
+       "note": "Version Handling section L937."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/22471d4c619319630cf8c594c895747f9d89fcc8/specification/ai-catalog.md#L1072",
+       "note": "CDDL CatalogEntry L1397-1401. Required top-level: specVersion, entries."
+      }
+     }
+    },
+    {
+     "label": "#47 substantive trust manifest",
+     "date": "2026-08-02",
+     "ref": "90fe52252aed1c0b48783698044bd2dfa07381b3",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "PR #47 'feat(spec): Trust Manifest threat modeling review - suggested updates.' merged. It carries commit 58597c3 'require substantive trust manifest' (authored 2026-06-21; ADR-0020 is dated 2026-06-21). A Trust Manifest, when present, MUST hold at least one substantive member. A signed manifest MUST carry `subject` + `issuedAt`. There is now a JWS algorithm allowlist, trust anchoring, and an optional top-level catalog `signature` (detached JWS). The trust vocabulary value is unchanged; the rules behind it changed.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "? displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L1675",
+       "note": "Prose resolution order L330."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L198",
+       "note": "Format line L201. The Trust Manifest `identity` domain MUST align with the publisher domain in the entry `identifier`, even across URI schemes."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L1223",
+       "note": "Link relation `ai-catalog` (L1244); registrations L1617 (link relation), L1633 (well-known URI)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L95",
+       "note": "Registration section L1570; not registered."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "extensions-map",
+       "evidence": "represent the extension type (namespace), and the corresponding value contains the extension data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L1107",
+       "note": "Keys URL or reverse-DNS (L1110). Level 1 text now says `extensions` (L1301)."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "contain at least one *substantive* trust member:",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L527",
+       "note": "Substantive = signature, non-empty attestations or provenance, or trustSchema. `trustManifest` itself stays OPTIONAL: 'the `trustManifest` member is itself OPTIONAL' (L542-543). Level 3 requires signature + subject + issuedAt on relied-upon entries. New optional top-level catalog `signature`, a detached JWS over the JCS-canonicalized catalog (L148-149). The CDDL at this SHA has no top-level `signature` (L1658-1663) and no `subject`/`issuedAt`/`expiresAt` in TrustManifest (L1697-1707)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L102"
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/90fe52252aed1c0b48783698044bd2dfa07381b3/specification/ai-catalog.md#L1297",
+       "note": "CDDL CatalogEntry L1673-1677. Required top-level: specVersion, entries. The new top-level `signature` is OPTIONAL (listed under OPTIONAL members, L137, L148)."
+      }
+     }
+    },
+    {
+     "label": "latest (#100)",
+     "date": "2026-08-27",
+     "ref": "b062278fd7f5a83202d33208f1d07c5b5eb7ccb3",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "Latest state on main (HEAD for this file as of 2026-09-15). Since #47: #93 (2026-08-12) and #99 (2026-08-20) added Agent Plugin known entry types (`application/agent-plugins+zip`, `+gzip`); #100 'Extract mapping appendixes into standalone docs' moved the mapping appendixes out of the file. No dimension value changed after #47.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "? displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1687",
+       "note": "Prose: listed under OPTIONAL (L259, L261). Resolution order (L342): entry displayName, then the artifact's own name, then the identifier's trailing segment."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "the standard `urn:air` naming structure is **HIGHLY RECOMMENDED** and **MUST** be used for open or federated systems.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L206",
+       "note": "Open-text field ('any valid URI or URN is accepted', same line). Format `urn:air:{publisher}:{namespace}:{name}` (L209)."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1235",
+       "note": "OPTIONAL; a catalog MAY be served from any URL. Link relation `ai-catalog` (L1256). Registration sections: link relation (L1629), well-known URI (L1645). Neither is in the IANA registries (checked 2026-09-15); IANA lists only RFC 9727 `api-catalog`."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L95",
+       "note": "Registration section L1582. `curl https://www.iana.org/assignments/media-types/application.csv | grep -i catalog` on 2026-09-15 returns no ai-catalog entry."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "extensions-map",
+       "evidence": "represent the extension type (namespace), and the corresponding value contains the extension data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1119",
+       "note": "Keys 'MUST be a valid URL or a reverse-DNS string' (L1121-1122). Entry `extensions` L326; catalog top level L151; Trust Manifest L612."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "contain at least one *substantive* trust member:",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L539",
+       "note": "`trustManifest` is OPTIONAL (L553-555). Trust Manifest `signature` is a detached JWS (L604-605); optional top-level catalog `signature` JWS (L156-157). The CDDL still lacks the top-level `signature` (L1670-1675) and TrustManifest `subject`/`issuedAt`/`expiresAt` (L1709-1719)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L102",
+       "note": "'Major.Minor' format (L104); Version Handling section L1174."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/b062278fd7f5a83202d33208f1d07c5b5eb7ccb3/specification/ai-catalog.md#L1309",
+       "note": "CDDL CatalogEntry L1685-1689 agrees. Required top-level catalog fields: specVersion, entries (L99-109; CDDL L1671, L1673)."
+      }
+     }
+    }
+   ],
+   "notes": [
+    "File history: the GitHub commits API lists 89 commits touching specification/ai-catalog.md (branch commits reachable from main included), not ~58 since June. The earliest is 0271c148 (2026-03-31), which added it as specification/draft-ai-card.md; 3e414775 renamed it to specification/ai-catalog.md the same day. It reached main via PR #27 on 2026-04-08 UTC. Main's first-parent history has 22 commits touching the file. Checkpoints use main first-parent commits (the PR merges) and UTC merge dates, so the dates are when a change became the published spec, not when it was authored on a branch.",
+    "Pre-history (not checkpointed; different paths). The earliest AI Catalog definition in the repo is type/src/ai-catalog.ts (a334ccf7, 2025-11-05, TypeScript, then an 'AI Card' project). It is served at /.well-known/ai-catalog.json and has `$schema`, `specVersion`, `host`, and an `agents` array whose entries require `id` ('primary verifiable ID ... (e.g., DID)'), `name`, `description` and `cardUrl`. A CDDL form followed as type/ai-catalog.md (2025-11-24), renamed to type/ai-catalog-cddl.md, then specification/cddl/ai-cddl.md (2026-03-05), then specification/cddl/ai-catalog.md (2026-03-10); it was on main from PR #4 (558814b8, 2026-03-11) and deleted 2026-04-16 (f055f10, PR #31). That version: entries in `records`; required id, name, description, cardUrl, updatedAt (5); no media type, no extension point, no trust. https://github.com/Agent-Card/ai-catalog/blob/558814b8941a748c881a692f8715262690224fd2/specification/cddl/ai-catalog.md#L22",
+    "The earliest branch version of specification/ai-catalog.md (2026-03-31) used entry `id`/`name`. 1e8c70c9 ('align naming to PR #19 (identifier/displayName)', 2026-04-01) switched it to `identifier`/`displayName` before it reached main.",
+    "Milestones checked against main: (1) displayName optional: branch commit 0798bcc is dated 2026-06-08 and ADR-0016 2026-06-18 (added on that branch that day). It reached main on 2026-06-26 via PR #39, prose only; PR #56 aligned the CDDL on 2026-06-30. (2) urn:ai to urn:air: `urn:ai` existed only on branch jbu/ai-catalog-updates (fade4e9 2026-05-15, c8edcdd 2026-05-30) and was renamed there in 1698fec (2026-06-11). `urn:ai` never appears on main. Main went straight from open URN/URI wording to `urn:air` via PR #36 on 2026-06-25. (3) Substantive trust manifest: commit 58597c3 was authored 2026-06-21 but reached main on 2026-08-02 via PR #47. (4) PR #37 merged 2026-06-25, as stated. (5) PR #77 / ADR-0017 merged 2026-07-30, as stated. (6) IANA Considerations (media type + link relation) exists from the first main version (#27, and already in 0271c148); #33 added the well-known URI registration on 2026-04-30.",
+    "'Trust manifest made required' is not what the spec says. `trustManifest` stays OPTIONAL at every checkpoint. Since #47 a Trust Manifest must be substantive when present, and Level 3 conformance requires signature, subject and issuedAt on entries whose trust is relied upon.",
+    "IANA status (checked 2026-09-15 against the IANA CSVs): `application/ai-catalog+json` is not in the media types registry, `ai-catalog.json` is not in Well-Known URIs, and `ai-catalog` is not in Link Relations. The spec only contains registration request sections. Type status is recorded as de-facto at every checkpoint, meaning named in the spec but unregistered.",
+    "Judgement calls. Checkpoint 3 merges two same-day PRs (#37 at 18:04 UTC, then #36 at 21:30 UTC) to stay within 8 checkpoints; there is no main commit where #36 is in without #37. At checkpoint 4 (#39) the spec contradicts itself: prose and Level 1 say optional, the CDDL says required. naming.required is recorded as false per the prose, with the conflict in the note. `url|inline` and `url|data` count as one required field, because the spec requires exactly one of the two. Before #36 identity is recorded as 'other:open URN or URI (SHOULD)'. From #36 it is 'urn:air', though the field stays open text and the MUST applies only to open or federated systems. Trust is 'trust-manifest+jws' throughout, because the optional Trust Manifest has carried an optional detached-JWS `signature` since the first version. The #47 checkpoint is kept as a listed milestone even though this vocabulary value did not change there.",
+    "Prose vs CDDL at the latest SHA (b062278f): the CDDL, which the spec calls 'the normative schema', has no top-level catalog `signature` and no TrustManifest `subject`, `issuedAt` or `expiresAt`. The prose has defined all of these since #47. Separately, from #77 until #47 the Level 1 conformance text still named `metadata` after it had been renamed `extensions`.",
+    "Entry-level `type` (called `mediaType` until #37) names the referenced artifact's type. It is an open string with RECOMMENDED known values and does not affect the catalog document's own media type, which is what the `type` dimension records. The spec notes that the `+md` suffix used in `application/agent-skills+md` 'is to be registered'."
+   ]
+  },
+  "ARD": {
+   "card": "ARD",
+   "spec_repo": "ards-project/ard-spec",
+   "checkpoints": [
+    {
+     "label": "v0.4.2 (Agent Finder)",
+     "date": "2026-05-19",
+     "ref": "9519b49e8f21da1d75a3430d748069f3c9f325e7",
+     "sources": [
+      "spec/agentfinder.md"
+     ],
+     "why_checkpoint": "Earliest spec version: 9519b49 'Add initial version (v0.4.2) of Agent finder spec' (spec/agentfinder.md). Baseline for every dimension.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "| displayName | String | Human-readable name. |",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L164",
+       "note": "Row of the table introduced by 'Each object in the entries array MUST contain:' (L159)."
+      },
+      "identity": {
+       "value": "other:urn:ai",
+       "evidence": "urn:ai:<publisher>:<namespace>:<agent-name>",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L192",
+       "note": "§4.2.1 (L189): the identifier MUST follow a domain-anchored URN format complying with RFC 8141. NID is 'ai' (L198); <publisher> MUST be an FQDN (L199)."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "Hosting the manifest at https://{domain}/.well-known/ai-catalog.json.",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L393",
+       "note": "Link relation: rel=\"ai-catalog\" in an HTML <link> tag (L395). Also listed: an Agentmap directive in robots.txt (L394) and DNS Service Binding records (L396)."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "\"type\": \"application/ai-catalog+json\",",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L101",
+       "note": "No media type is defined for the manifest document. application/ai-catalog+json appears only as the `type` of an entry whose `data` is a nested catalog (L101); the spec does not call it the manifest's media type or state its registration status."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "A decentralized publishing mechanism where developers and enterprises host static JSON manifests.",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L386",
+       "note": "The manifest file is ai-catalog.json (L65); all examples are JSON."
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "| metadata | Map | Custom metadata key-value pairs. |",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L184",
+       "note": "Optional entry field. §4.5 (L341) also lets entries use Schema.org vocabulary in descriptive fields as Search filter dimensions."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "Optional. Detached JWS signature computed over the Trust Manifest content.",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L357",
+       "note": "trustManifest is an optional entry field (L185); identity is its only required member (L353). Verification procedures are deferred to the ai-catalog specification (L380)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "\"specVersion\": \"1.0\",",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L69",
+       "note": "Shown in the §4.1 manifest example only; no field table defines manifest top-level members at this commit. The JSON Schema added 2026-05-20 (1530a30) requires it, enum [\"1.0\"], described as the version of the ai-catalog specification."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "type",
+         "url|data"
+        ],
+        "count": 4
+       },
+       "evidence": "Each object in the entries array MUST contain:",
+       "link": "https://github.com/ards-project/ard-spec/blob/9519b49e8f21da1d75a3430d748069f3c9f325e7/spec/agentfinder.md#L159",
+       "note": "Rows identifier, displayName, type (L163-L165). L167: 'Exactly one of the following MUST be present:' url or data (L171-L172)."
+      }
+     }
+    },
+    {
+     "label": "v0.9 (urn:air)",
+     "date": "2026-06-20",
+     "ref": "8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34",
+     "sources": [
+      "spec/ard.md",
+      "spec/schemas/ai-catalog.schema.json",
+      "spec/schemas/ard.cddl"
+     ],
+     "why_checkpoint": "8fff974 'spec: rename URN namespace identifier from <ai> to <air> to satisfy NID length requirements (>2 characters).' Identity changes urn:ai -> urn:air. No other dimension changed between v0.4.2 and this commit (file renamed spec/agentfinder.md -> spec/ard.md on 2026-06-12; v0.5 on 2026-05-29; v0.9 on 2026-06-16).",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "| displayName | String | Human-readable name. |",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L168",
+       "note": "Row of the table introduced by 'Each object in the entries array MUST contain:' (L163)."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "urn:air:<publisher>:<namespace>:<agent-name>",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L196",
+       "note": "Changed from urn:ai in this commit (ADR-0009, NID length). ai-catalog.schema.json pattern ^urn:air:... (L70). The §4.2.1 NID bullet (L202) still read 'ai' until f7e6fc0 (2026-06-22)."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "Hosting the manifest at https://{domain}/.well-known/ai-catalog.json.",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L393",
+       "note": "Link relation: rel=\"ai-catalog\" (L395). Agentmap (L394) and DNS Service Binding records (L396) also listed. The DNS bullet gained SVCB/TXT detail on 2026-07-02 (0991376); path and relation unchanged."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "\"type\": \"application/ai-catalog+json\",",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L107",
+       "note": "No media type is defined for the manifest document. application/ai-catalog+json is the `type` of entries that carry (L107) or point to (L153) a nested catalog. §4 (L67) says the manifest builds upon and extends the ai-catalog schema. Registration status is not stated."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "A decentralized publishing mechanism where developers and enterprises host static JSON manifests.",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L386",
+       "note": "Appendix D (L706) describes the CDDL as supporting both JSON and CBOR encodings; the manifest file is ai-catalog.json (L71)."
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "| metadata | Map | Custom metadata key-value pairs. |",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L188",
+       "note": "ai-catalog.schema.json L122: 'Arbitrary key-value pairs for custom extensions.' §4.5 (L342) allows Schema.org vocabulary in descriptive fields."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "Optional. Detached JWS signature computed over the Trust Manifest content.",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L358",
+       "note": "trustManifest is optional (L189); identity is its only required member (L354). ai-catalog.schema.json L203: 'Detached JWS signature generated over the fields of the trustManifest.' Verification is deferred to the ai-catalog specification (L380)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "Version of the ai-catalog specification used in this manifest.",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/schemas/ai-catalog.schema.json#L11",
+       "note": "Required at the manifest root (L7), enum [\"1.0\"] (L12). ard.cddl L9: specVersion: \"1.0\"."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "type",
+         "url|data"
+        ],
+        "count": 4
+       },
+       "evidence": "Each object in the entries array MUST contain:",
+       "link": "https://github.com/ards-project/ard-spec/blob/8fff974404a0b2f7d5a91fcd0cf6146cb1bcbf34/spec/ard.md#L163",
+       "note": "Rows identifier, displayName, type (L167-L169); 'Exactly one of the following MUST be present:' (L171) url or data. ai-catalog.schema.json L56 requires identifier, displayName, type, plus a oneOf for url/data."
+      }
+     }
+    },
+    {
+     "label": "v0.91",
+     "date": "2026-08-26",
+     "ref": "aa3e598bb7752a9175897823234311216acfa864",
+     "sources": [
+      "spec/ard.md",
+      "spec/schemas/ard-entry.schema.json",
+      "spec/schemas/ard.cddl",
+      "spec/schemas/ard.context.jsonld"
+     ],
+     "why_checkpoint": "PR #81 (publish-v0.91) merged as aa3e598: a305a52 'spec: publish v0.91 — promote the draft, single well-known path'; 49c0c4d 'conformance: validate the ARD entry model, resolve ard.json' (also reconciled ard.cddl); c21ac6a 'schemas: drop the projection concept, ArdEntry not ardEntry'. Discovery, encoding, extension, trust and versioning change; ard-entry.schema.json becomes the authoritative schema.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "| displayName | MUST | Human-readable name. |",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L91",
+       "note": "Row of the table introduced by 'An ARD entry MUST carry:' (L86)."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "Domain-anchored URN form (`urn:air:<publisher>:<namespace>:<agent-name>`); see Appendix C.",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L90",
+       "note": "The JSON-LD @id MAY mirror the identifier (L90). ard-entry.schema.json pattern ^urn:air:... (L26)."
+      },
+      "discovery": {
+       "value": "/.well-known/ard.json",
+       "evidence": "Hosting a manifest of entries at `https://{domain}/.well-known/ard.json`.",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L196",
+       "note": "Link relation: rel=\"ard\" (L199). A consumer MUST fetch /.well-known/ard.json and MUST honour rel=\"ard\"; it MAY also consult the predecessor /.well-known/ai-catalog.json and rel=\"ai-catalog\" (L202). A publisher on the predecessor path SHOULD move to ard.json (L204). In-page JSON-LD markup (L197), Agentmap and DNS (L200) are also listed."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "The manifest is a JSON document with an `entries` array of ARD entries (§4)",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L196",
+       "note": "No media type is defined for the manifest document. Entry `type` is the artifact's IANA media type (L92); registries are found through entries whose type is application/ai-registry+json (L215). The application/ai-catalog+json nested-catalog examples are gone."
+      },
+      "encoding": {
+       "value": "json-ld",
+       "evidence": "An entry is a JSON-LD node describing an agentic resource.",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L78",
+       "note": "Per entry. A consumer MUST expand an entry with the ARD base context (L80; spec/schemas/ard.context.jsonld). Carrying @context in the entry is OPTIONAL (L82). The /.well-known/ard.json manifest itself is 'a JSON document' (L196)."
+      },
+      "extension": {
+       "value": "json-ld-context",
+       "evidence": "Terms from any additional namespace declared in the entry's `@context` MAY also appear",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L108",
+       "note": "Such terms become filter dimensions with no spec change (L108). `metadata` remains an optional descriptive term (L106). The schema sets additionalProperties: true by design (L530); ard.cddl ard-entry ends with a `* tstr => any` wildcard (L25)."
+      },
+      "trust": {
+       "value": "trust-manifest",
+       "evidence": "ARD does not define a signing or verification procedure of its own.",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L181",
+       "note": "trustManifest is optional; ARD requires only trustManifest.identity (L173), whose trust domain MUST align with the URN publisher (L177). Signing, canonicalization and key resolution come from the framework named in trustManifest.trustSchema (L181). ard-entry.schema.json L170 no longer names JWS. The schema's entry property key is `TrustManifest` (L81); the spec, ard.cddl (L45) and the base context use `trustManifest`."
+      },
+      "versioning": {
+       "value": "not specified",
+       "evidence": "ARD requires only an `entries` array of ARD entries",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/schemas/ard-entry.schema.json#L105",
+       "note": "ArdManifest requires only entries (L106); other top-level members are transport-defined and ignored by ARD. ard.cddl ard-manifest is entries plus a wildcard (L13-L15). specVersion is no longer defined. The base context URL ends /context/v1 (spec L78) and entry `version` is the artifact version; neither is a spec-version field."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "type",
+         "url|data"
+        ],
+        "count": 4
+       },
+       "evidence": "An ARD entry MUST carry:",
+       "link": "https://github.com/ards-project/ard-spec/blob/aa3e598bb7752a9175897823234311216acfa864/spec/ard.md#L86",
+       "note": "Rows identifier, displayName, type, url _or_ data (exactly one) at L90-L93; ard-entry.schema.json L91 requires identifier, displayName, type, plus a oneOf for url/data. representativeQueries is SHOULD (L99), a conformance warning when missing; capabilities MAY (L100)."
+      }
+     }
+    },
+    {
+     "label": "latest (v0.91)",
+     "date": "2026-09-12",
+     "ref": "b76f235a8f461876ad4f1e77abd0eb0eb302b48d",
+     "sources": [
+      "spec/ard.md",
+      "spec/schemas/ard-entry.schema.json",
+      "spec/schemas/ard.cddl",
+      "spec/schemas/ard.context.jsonld"
+     ],
+     "why_checkpoint": "Latest main (b76f235). Since v0.91 only b76db39 (author affiliation, merged 2026-09-12 via PR #82), 56e1325 and 596e72c (conformance tooling and an example) landed. No dimension changed.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": true
+       },
+       "evidence": "| displayName | MUST | Human-readable name. |",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L91",
+       "note": "Row of the table introduced by 'An ARD entry MUST carry:' (L86)."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "Domain-anchored URN form (`urn:air:<publisher>:<namespace>:<agent-name>`); see Appendix C.",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L90",
+       "note": "The JSON-LD @id MAY mirror the identifier (L90). ard-entry.schema.json pattern ^urn:air:... (L26)."
+      },
+      "discovery": {
+       "value": "/.well-known/ard.json",
+       "evidence": "Hosting a manifest of entries at `https://{domain}/.well-known/ard.json`.",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L196",
+       "note": "Link relation: rel=\"ard\" (L199). A consumer MUST fetch /.well-known/ard.json and MUST honour rel=\"ard\"; it MAY also consult the predecessor /.well-known/ai-catalog.json and rel=\"ai-catalog\" (L202). A publisher on the predecessor path SHOULD move to ard.json (L204). In-page JSON-LD markup (L197), Agentmap and DNS (L200) are also listed."
+      },
+      "type": {
+       "value": {
+        "media_type": "none",
+        "status": "none"
+       },
+       "evidence": "The manifest is a JSON document with an `entries` array of ARD entries (§4)",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L196",
+       "note": "No media type is defined for the manifest document. Entry `type` is the artifact's IANA media type (L92); registries are found through entries whose type is application/ai-registry+json (L215). The application/ai-catalog+json nested-catalog examples are gone."
+      },
+      "encoding": {
+       "value": "json-ld",
+       "evidence": "An entry is a JSON-LD node describing an agentic resource.",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L78",
+       "note": "Per entry. A consumer MUST expand an entry with the ARD base context (L80; spec/schemas/ard.context.jsonld). Carrying @context in the entry is OPTIONAL (L82). The /.well-known/ard.json manifest itself is 'a JSON document' (L196)."
+      },
+      "extension": {
+       "value": "json-ld-context",
+       "evidence": "Terms from any additional namespace declared in the entry's `@context` MAY also appear",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L108",
+       "note": "Such terms become filter dimensions with no spec change (L108). `metadata` remains an optional descriptive term (L106). The schema sets additionalProperties: true by design (L530); ard.cddl ard-entry ends with a `* tstr => any` wildcard (L25)."
+      },
+      "trust": {
+       "value": "trust-manifest",
+       "evidence": "ARD does not define a signing or verification procedure of its own.",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L181",
+       "note": "trustManifest is optional; ARD requires only trustManifest.identity (L173), whose trust domain MUST align with the URN publisher (L177). Signing, canonicalization and key resolution come from the framework named in trustManifest.trustSchema (L181). ard-entry.schema.json L170 no longer names JWS. The schema's entry property key is `TrustManifest` (L81); the spec, ard.cddl (L45) and the base context use `trustManifest`."
+      },
+      "versioning": {
+       "value": "not specified",
+       "evidence": "ARD requires only an `entries` array of ARD entries",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/schemas/ard-entry.schema.json#L105",
+       "note": "ArdManifest requires only entries (L106); other top-level members are transport-defined and ignored by ARD. ard.cddl ard-manifest is entries plus a wildcard (L13-L15). specVersion is no longer defined. The base context URL ends /context/v1 (spec L78) and entry `version` is the artifact version; neither is a spec-version field."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "displayName",
+         "type",
+         "url|data"
+        ],
+        "count": 4
+       },
+       "evidence": "An ARD entry MUST carry:",
+       "link": "https://github.com/ards-project/ard-spec/blob/b76f235a8f461876ad4f1e77abd0eb0eb302b48d/spec/ard.md#L86",
+       "note": "Rows identifier, displayName, type, url _or_ data (exactly one) at L90-L93; ard-entry.schema.json L91 requires identifier, displayName, type, plus a oneOf for url/data. representativeQueries is SHOULD (L99), a conformance warning when missing; capabilities MAY (L100)."
+      }
+     }
+    }
+   ],
+   "notes": [
+    "Checkpoints follow spec/ard.md (spec/agentfinder.md before 6441baf, 2026-06-12) on main, plus the schemas it names. Dates are UTC; 8fff974 is 2026-06-19 in the author's time zone.",
+    "Version line: v0.4.2 (Draft) 2026-05-19; v0.5 (Draft) 2026-05-29 (e95c679); v0.9 (Draft) 2026-06-16 (c61d233); v0.91 2026-08-26 (a305a52). The Status line reads 'Proposal' (L6) at every checkpoint. Agent Finder was renamed Agentic Resource Discovery on 2026-06-12 (33be466).",
+    "Milestone check, 2026-06-20 'Updated type in ai-catalog to ai-registry' (938b3fb, merged in PR #5 as 5721f3b): it changed two federation-referral example types from application/ai-registry+json to application/ai-registry. No dimension changed. At the latest commit those examples read application/ai-registry+json (spec/ard.md L458, L464).",
+    "Milestone check, ai to air: the rename is 8fff974 (2026-06-20 UTC, committed straight to main, with ADR-0009). The 2026-06-22 commit f7e6fc0 'Correct Namespace Identifier from 'ai' to 'air'' (PR #38) fixed one leftover bullet that still named the NID 'ai' (L202). The identity value changes at 8fff974.",
+    "Milestone check, 2026-07-02 DNS section (0991376, merged 2026-07-08 via PR #56): added SVCB records, an optional TXT fallback and a DNS-AID link to the DNS bullet. The well-known path and link relation did not change, so it is not a checkpoint. The v0.91 DNS bullet (L200) does not carry the SVCB/TXT/DNS-AID wording; it survives in spec/ard-v0.9.md.",
+    "Milestone check, 2026-08-26: a305a52 (publish v0.91), 49c0c4d and c21ac6a (schema changes, ArdEntry) all landed in PR #81, merged as aa3e598, so main never held a305a52 alone. They form one checkpoint. In a305a52 by itself, ard.cddl still carried specVersion: \"1.0\", host and closed maps; 49c0c4d removed those.",
+    "v0.91 was drafted as a separate file, spec/ard-v0.91-draft.md (PR #70), from 2026-07-29 (5594fbd) to 2026-08-04 (bae99d1). It merged to main on 2026-08-22 (251e639) while README still named spec/ard.md (v0.9) as the specification, so the draft is not a checkpoint. Draft-only states: 5594fbd made representativeQueries a MUST (its ard-entry.schema.json L93 required it); 554b1f6 (2026-08-02) softened it to SHOULD with a conformance warning. 5594fbd's schema still called the signature a 'Detached JWS signature' (L158); b3c471b (2026-07-31) moved signing to the declared trust framework. Predecessor-path handling went SHOULD-honour (5594fbd), then MUST-fallback (bae99d1), then MAY in the published v0.91 (a305a52).",
+    "Observation: at aa3e598 and b76f235, ard-entry.schema.json names the entry property `TrustManifest` (L81), from the PascalCase rename in c21ac6a. spec/ard.md (L106, L173), ard.cddl (L45) and ard.context.jsonld (L19) use `trustManifest`. JSON Schema property names are case-sensitive. The trust value is recorded from the spec text.",
+    "type: no checkpoint defines a media type for the manifest document. v0.4.2 to v0.9 examples use application/ai-catalog+json as the `type` of entries that carry or point to a nested catalog. The spec never calls it the manifest's media type or states its registration status, so the value is 'none'. The spec's IANA note (de-facto status) covers only the artifact types application/a2a-agent-card+json and application/mcp-server(-card)+json.",
+    "required_fields counts the value-or-reference pair as one member, \"url|data\" (exactly one), matching the other register files. The JSON Schema `required` arrays list identifier, displayName and type, plus a oneOf for url/data.",
+    "versioning: at v0.4.2, specVersion appears only in the manifest example (L69). The JSON Schema added 2026-05-20 (1530a30) made it required, enum [\"1.0\"], described as the ai-catalog specification version. At v0.91 no field carries the spec version. The base context URL ends /context/v1 and entry `version` is the artifact version; neither is recorded as spec versioning.",
+    "spec/schemas/ai-catalog.schema.json is still in the repo at the latest commit (last changed 2026-06-20). spec/ard.md v0.91 no longer references it; D.1 says the ARD entry schema does not derive from any catalog schema. Only the archived spec/ard-v0.9.md links to it.",
+    "representativeQueries was optional (SHOULD contain 2-5) at v0.4.2 to v0.9, and the ai-catalog JSON Schema enforced 2-5 items when present. At v0.91 it is a SHOULD whose absence or count is only a conformance warning. It is not counted in required_fields at any checkpoint.",
+    "encoding: through v0.9, Appendix D described the CDDL as supporting both JSON and CBOR (8fff974 L706). At v0.91 the CDDL header calls the file a restatement of the JSON Schema for CBOR/CDDL consumers. The manifest is JSON at every checkpoint; from v0.91 each entry is a JSON-LD node."
+   ]
+  },
+  ".fafa": {
+   "card": ".fafa",
+   "spec_repo": "Wolfe-Jam/faf",
+   "checkpoints": [
+    {
+     "label": "v0.1 draft (earliest public)",
+     "date": "2026-05-11",
+     "ref": "17a9530e187130c048fbb6fc9b5da8770a819ac8",
+     "sources": [
+      "Wolfe-Jam/faf-agent-public:AGENT-FORMAT.md"
+     ],
+     "why_checkpoint": "Earliest public .fafa spec text: v0.1 draft added to the public About repo Wolfe-Jam/faf-agent-public in 'feat: Claude-Code-quality About Repo — real docs, no source'. Baseline. (ref is a faf-agent-public SHA; the canonical repo Wolfe-Jam/faf had no AGENT-FORMAT.md yet.)",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "agent.name",
+        "required": true
+       },
+       "evidence": "`name` — Unicode string, unique within the issuing vendor namespace",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L126",
+       "note": "Listed under the agent section's 'Required subfields' (L125); L109 requires `agent` 'with at least `name` and `id`'. No separate human display-name field is defined."
+      },
+      "identity": {
+       "value": "agent-id",
+       "evidence": "`id` — Globally unique identifier (DID, URI, or vendor-scoped UUID)",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L127",
+       "note": "Required `agent.id`; schemes open (DID, URI, or vendor-scoped UUID); example uses did:web (L70). Security §11 adds 'Validate `agent.id` against known identifier schemes' (L222)."
+      },
+      "discovery": {
+       "value": "not specified",
+       "evidence": "",
+       "link": "",
+       "note": "v0.1 is silent on how a .fafa document is found or fetched. The only 'discovery' wording is capability `tags` 'for filtering / discovery' (L150), which is about filtering capabilities, not locating the document."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/vnd.fafa+yaml",
+        "status": "de-facto"
+       },
+       "evidence": "**MIME Type (proposed):** `application/vnd.fafa+yaml`",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L5",
+       "note": "Named vendor-tree type, not registered: L7 'IANA Registration: Queued — to be submitted after `vnd.fafm+yaml` clears DE review'. 'de-facto' here = named in the spec but unregistered. The IANA page (registered 2026-06-26) postdates this commit, so the spec line is cited."
+      },
+      "encoding": {
+       "value": "yaml",
+       "evidence": "A `.fafa` file is a single YAML document",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L63",
+       "note": "§12 (L239): '`.fafa` is YAML 1.2 / RFC 9512 compliant.'"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "`metadata` (free-form vendor extensions)",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L117",
+       "note": "Optional top-level `metadata`. §12 also: 'Treat unknown top-level fields as forward-compatible extensions' (L243) and unknown subfields within agent/capabilities/endpoints (L244)."
+      },
+      "trust": {
+       "value": "other:optional signature object (method, value); signing scheme unspecified",
+       "evidence": "signature:                   # OPTIONAL — provenance / integrity",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L102",
+       "note": "Example block has only `method: ...` and `value: ...` (L103–104); no algorithm, key or format defined. §11 (L223): 'Treat `endpoints` as untrusted until verified against `signature` if present'. Open question 2 (L297): single object or array."
+      },
+      "versioning": {
+       "value": "version",
+       "evidence": "The `version` field at document top-level declares which version of this spec the document conforms to.",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L288",
+       "note": "Top-level `version` = .fafa spec version (example \"0.1\", L66); distinct from `agent.version` = 'Semantic version of the agent (NOT of the .fafa spec)' (L131)."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "version",
+         "agent",
+         "capabilities",
+         "endpoints"
+        ],
+        "count": 4
+       },
+       "evidence": "**Required top-level fields:**",
+       "link": "https://github.com/Wolfe-Jam/faf-agent-public/blob/17a9530e187130c048fbb6fc9b5da8770a819ac8/AGENT-FORMAT.md#L107-L111",
+       "note": "L108–L111: `version`; `agent` (with at least `name` and `id`); `capabilities` (array, may be empty…); `endpoints` (array, must be non-empty)."
+      }
+     }
+    },
+    {
+     "label": "v1.0 stable (canonical repo)",
+     "date": "2026-05-18",
+     "ref": "62c706228bc7990323f674a33bc2d0a422c03e93",
+     "sources": [
+      "AGENT-FORMAT.md"
+     ],
+     "why_checkpoint": "'feat: add AGENT-FORMAT.md (FAFa v1.0 spec for IANA registration)': first copy in the canonical repo, v1.0 Stable. Discovery moves from silent to explicitly out of scope (not specified → none). Also, outside the dimensions: §15 adds the standard filename `agent.fafa`, §16 inlines the RFC 6838 template (incl. optional parameter `version`), and the rule that implementations MUST validate agent.id against known schemes is gone. Media type still '(proposed)'.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "agent.name",
+        "required": true
+       },
+       "evidence": "**Required:** `name` (Unicode string, unique within the issuing vendor namespace)",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L101",
+       "note": "No display-name field in the spec text."
+      },
+      "identity": {
+       "value": "agent-id",
+       "evidence": "`id` (globally unique identifier — DID, URI, or vendor-scoped UUID)",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L101",
+       "note": "Same schemes as v0.1. §15 (L242): multiple .fafa documents per scope 'distinguished by `agent.id`'. §18 defers 'Multiple simultaneous identifier schemes for `agent.id`' (L283). v0.1's 'Validate `agent.id` against known identifier schemes' MUST is no longer present."
+      },
+      "discovery": {
+       "value": "none",
+       "evidence": "It does not define discovery, transport, authorization, or orchestration.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L34",
+       "note": "Explicitly out of scope: 'It defines the **document** those mechanisms carry, reference, and resolve.' §15 (L241) names a standard filename `agent.fafa` (alongside `project.faf` at the project layer). That is a file convention, not a discovery path."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/vnd.fafa+yaml",
+        "status": "de-facto"
+       },
+       "evidence": "**MIME Type (proposed):** `application/vnd.fafa+yaml`",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L5",
+       "note": "L7: 'IANA Registration: Planned (queued behind `application/vnd.fafm+yaml`, registered 2026-05-13)'. IANA registered .fafa on 2026-06-26, but this text was not updated until 2026-08-15 (0156596), so from 2026-06-26 to 2026-08-15 the spec text lagged the registry."
+      },
+      "encoding": {
+       "value": "yaml",
+       "evidence": "A `.fafa` file is a single YAML document:",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L54",
+       "note": "§13 (L215): '`.fafa` is YAML 1.2 / RFC 9512 compliant.'"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "**Optional top-level fields:** `attachment`, `provenance`, `signature`, `metadata` (free-form vendor extensions).",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L93",
+       "note": "§13 (L218): consumers MUST treat unknown top-level fields, and unknown subfields within agent/capabilities/endpoints, as forward-compatible extensions."
+      },
+      "trust": {
+       "value": "other:optional signature object (method, value); signing scheme unspecified",
+       "evidence": "Where present, `signature` carries provenance/integrity material; verification is the consumer's responsibility.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L193",
+       "note": "Same `signature` block (`method`, `value`; L86–88). Same line: 'The format does not itself provide cryptographic services.' §18 defers '`signature` as an array (multiple signers)' (L284) and content-addressed provenance (L287)."
+      },
+      "versioning": {
+       "value": "version",
+       "evidence": "The top-level `version` field declares which version of this specification the document conforms to.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L233",
+       "note": "Distinct from `agent.version` ('semantic version of the agent, NOT of this spec', L103). §16 (L251) also lists media-type 'Optional parameters: version'."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "version",
+         "agent",
+         "capabilities",
+         "endpoints"
+        ],
+        "count": 4
+       },
+       "evidence": "**Required top-level fields:** `version`, `agent` (with at least `name` and `id`), `capabilities` (array; MAY be empty), `endpoints`",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L91",
+       "note": "Line continues: '(array; MUST be non-empty).' Unchanged from v0.1."
+      }
+     }
+    },
+    {
+     "label": "IANA registration (per the IANA record)",
+     "date": "2026-06-26",
+     "ref": "62c706228bc7990323f674a33bc2d0a422c03e93",
+     "sources": [
+      "AGENT-FORMAT.md"
+     ],
+     "why_checkpoint": "IANA registered application/vnd.fafa+yaml on 2026-06-26. Added at assembly: the spec text kept saying \"proposed\" until 2026-08-15 (faf@190c338); the registration itself is the IANA fact.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "agent.name",
+        "required": true
+       },
+       "evidence": "**Required:** `name` (Unicode string, unique within the issuing vendor namespace)",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L101",
+       "note": "No display-name field in the spec text."
+      },
+      "identity": {
+       "value": "agent-id",
+       "evidence": "`id` (globally unique identifier — DID, URI, or vendor-scoped UUID)",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L101",
+       "note": "Same schemes as v0.1. §15 (L242): multiple .fafa documents per scope 'distinguished by `agent.id`'. §18 defers 'Multiple simultaneous identifier schemes for `agent.id`' (L283). v0.1's 'Validate `agent.id` against known identifier schemes' MUST is no longer present."
+      },
+      "discovery": {
+       "value": "none",
+       "evidence": "It does not define discovery, transport, authorization, or orchestration.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L34",
+       "note": "Explicitly out of scope: 'It defines the **document** those mechanisms carry, reference, and resolve.' §15 (L241) names a standard filename `agent.fafa` (alongside `project.faf` at the project layer). That is a file convention, not a discovery path."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/vnd.fafa+yaml",
+        "status": "iana-registered"
+       },
+       "evidence": "(registered 2026-06-26, last updated 2026-06-26)",
+       "link": "https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml",
+       "note": "From the IANA record, not the spec text; every other value is carried over unchanged from v1.0 stable (canonical repo)."
+      },
+      "encoding": {
+       "value": "yaml",
+       "evidence": "A `.fafa` file is a single YAML document:",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L54",
+       "note": "§13 (L215): '`.fafa` is YAML 1.2 / RFC 9512 compliant.'"
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "**Optional top-level fields:** `attachment`, `provenance`, `signature`, `metadata` (free-form vendor extensions).",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L93",
+       "note": "§13 (L218): consumers MUST treat unknown top-level fields, and unknown subfields within agent/capabilities/endpoints, as forward-compatible extensions."
+      },
+      "trust": {
+       "value": "other:optional signature object (method, value); signing scheme unspecified",
+       "evidence": "Where present, `signature` carries provenance/integrity material; verification is the consumer's responsibility.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L193",
+       "note": "Same `signature` block (`method`, `value`; L86–88). Same line: 'The format does not itself provide cryptographic services.' §18 defers '`signature` as an array (multiple signers)' (L284) and content-addressed provenance (L287)."
+      },
+      "versioning": {
+       "value": "version",
+       "evidence": "The top-level `version` field declares which version of this specification the document conforms to.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L233",
+       "note": "Distinct from `agent.version` ('semantic version of the agent, NOT of this spec', L103). §16 (L251) also lists media-type 'Optional parameters: version'."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "version",
+         "agent",
+         "capabilities",
+         "endpoints"
+        ],
+        "count": 4
+       },
+       "evidence": "**Required top-level fields:** `version`, `agent` (with at least `name` and `id`), `capabilities` (array; MAY be empty), `endpoints`",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/62c706228bc7990323f674a33bc2d0a422c03e93/AGENT-FORMAT.md#L91",
+       "note": "Line continues: '(array; MUST be non-empty).' Unchanged from v0.1."
+      }
+     }
+    },
+    {
+     "label": "v1.0 IANA-registered + DOI (latest)",
+     "date": "2026-08-15",
+     "ref": "190c3380847c022da3e13a28af57c4dc68b3e02c",
+     "sources": [
+      "AGENT-FORMAT.md",
+      "https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml"
+     ],
+     "why_checkpoint": "Two commits the same day. 01565967c8fc3a74d1b199770fb797583f620ec5 'fix: Update stale IANA registration status in AGENT-FORMAT.md' flips type from '(proposed)'/'Planned' to 'Registered 2026-06-26 (vendor tree)' (de-facto → iana-registered). 190c3380847c022da3e13a28af57c4dc68b3e02c 'docs: three IANA types + complete paper cohort' adds only the paper DOI (no dimension change). ref = 190c338 = current main (the latest state). The same day, faf-agent-public de8550f ('docs: add Agents paper citation and sync AGENT-FORMAT') synced its copy to be byte-identical.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "agent.name",
+        "required": true
+       },
+       "evidence": "**Required:** `name` (Unicode string, unique within the issuing vendor namespace)",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L102",
+       "note": "The spec text still has no display-name field. The companion schema schemas/fafa.schema.json documents an optional `agent.displayName` from 9e79b6914b6cb0ef6df299e52de17ccc47657a5e (2026-07-05), and FAFA's published card uses it (agent.fafa L9). See notes."
+      },
+      "identity": {
+       "value": "agent-id",
+       "evidence": "`id` (globally unique identifier — DID, URI, or vendor-scoped UUID)",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L102",
+       "note": "Practice: FAFA's card uses `id: did:web:faf.one:agent`."
+      },
+      "discovery": {
+       "value": "none",
+       "evidence": "It does not define discovery, transport, authorization, or orchestration.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L35",
+       "note": "Spec unchanged. Practice only (not in spec): faf.one serves FAFA's card at /.well-known/fafa with Content-Type application/vnd.fafa+yaml (checked 2026-09-15). The one well-known URI request filed is for /.well-known/faf (protocol-registries/well-known-uris#97, open, labels 'new registration' and 'waiting for stable reference'). No request covers /.well-known/fafa."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/vnd.fafa+yaml",
+        "status": "iana-registered"
+       },
+       "evidence": "(registered 2026-06-26, last updated 2026-06-26)",
+       "link": "https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml",
+       "note": "Spec at this SHA: L5 '**MIME Type:** `application/vnd.fafa+yaml`', L7 '**IANA Registration:** Registered 2026-06-26 (vendor tree)' (https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L7). The IANA record's 'Published specification' is https://github.com/Wolfe-Jam/faf/blob/main/AGENT-FORMAT.md."
+      },
+      "encoding": {
+       "value": "yaml",
+       "evidence": "A `.fafa` file is a single YAML document:",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L55",
+       "note": "§13 (L216): YAML 1.2 / RFC 9512."
+      },
+      "extension": {
+       "value": "metadata-object",
+       "evidence": "**Optional top-level fields:** `attachment`, `provenance`, `signature`, `metadata` (free-form vendor extensions).",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L94",
+       "note": "§13 (L219): forward-compat rule for unknown top-level fields and unknown agent/capabilities/endpoints subfields. It does not name `provenance` subfields."
+      },
+      "trust": {
+       "value": "other:optional signature object (method, value); signing scheme unspecified",
+       "evidence": "Where present, `signature` carries provenance/integrity material; verification is the consumer's responsibility.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L194",
+       "note": "Unchanged. FAFA's published card carries no `signature` block."
+      },
+      "versioning": {
+       "value": "version",
+       "evidence": "The top-level `version` field declares which version of this specification the document conforms to.",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L234",
+       "note": "Spec §16 (L252) lists 'Optional parameters: version', but the IANA record says 'Optional parameters: N/A' and 'versioning is handled in-band via the top-level \"version\" field'."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "version",
+         "agent",
+         "capabilities",
+         "endpoints"
+        ],
+        "count": 4
+       },
+       "evidence": "**Required top-level fields:** `version`, `agent` (with at least `name` and `id`), `capabilities` (array; MAY be empty), `endpoints`",
+       "link": "https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L92",
+       "note": "Matches schemas/fafa.schema.json L8 `\"required\": [\"version\", \"agent\", \"capabilities\", \"endpoints\"]`."
+      }
+     }
+    }
+   ],
+   "notes": [
+    "Normative spec: AGENT-FORMAT.md in Wolfe-Jam/faf. The IANA record's 'Published specification' field is https://github.com/Wolfe-Jam/faf/blob/main/AGENT-FORMAT.md, and the spec itself (§16 L256, §17 L275) calls that URL canonical. Wolfe-Jam/faf-agent-public holds a copy: the v0.1 draft from 2026-05-11 (17a9530) until 2026-08-15, when de8550f synced it to be byte-identical to faf@190c338. faf-agent-public/SPEC.md is not the format spec: it is 'PLAN-X — FAF AGENT Final Specification' (v1.4, the agent's architecture). Wolfe-Jam/faf schemas/fafa.schema.json (from 2026-07-05) is a companion JSON Schema that points back to AGENT-FORMAT.md. It is used here for gap notes only.",
+    "The spec has only two versions: 0.1 (2026-05-11) and 1.0 (2026-05-18), matching its own §19 change history. Since 2026-05-18, 1.0 has had only header and metadata edits (IANA status and DOI, both on 2026-08-15). There are 3 checkpoints. The two 2026-08-15 commits are merged into one checkpoint because only the first (0156596) changed a value.",
+    "Earliest public version caveat: the v0.1 draft's own footer says 'Status: DRAFT — internal review only. Not for public distribution until v1.0.' (L321 @17a9530), yet it was committed to the public About repo on 2026-05-11. The GitHub API cannot show when that repo became public (it was created 2026-05-11). It is the earliest public text found. The canonical repo's first copy is already v1.0.",
+    "Vocabulary choices: type 'de-facto' is used for the named-but-unregistered vendor type ('MIME Type (proposed)') before registration. Discovery is 'not specified' where v0.1 is silent and 'none' from v1.0, where §2 explicitly says the format 'does not define discovery'. Naming is recorded as the dotted path `agent.name` (the leaf field is `name`). Trust is 'other:' because `signature` is a bare optional {method, value} object with no JWS or any other scheme named.",
+    "Spec vs IANA record: spec §16 lists media-type 'Optional parameters: version' (https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L252), but the IANA record (registered 2026-06-26) says 'Optional parameters: N/A' and 'versioning is handled in-band via the top-level \"version\" field of the document'. The spec header also kept '(proposed)'/'Planned' from the 2026-06-26 registration until 0156596 on 2026-08-15.",
+    "Spec vs schema vs practice, displayName: FAFA's published card (Wolfe-Jam/faf-agent-public agent.fafa @ef8103f, added 2026-09-15; byte-identical to what faf.one/.well-known/fafa served on 2026-09-15) uses `agent.displayName` (https://github.com/Wolfe-Jam/faf-agent-public/blob/ef8103f80e8a08a92ff53b1b09fd8d035c5df0d3/agent.fafa#L9). AGENT-FORMAT.md never defines it. The schema documents it as optional 'Human-readable display name, distinct from the machine `name`/id' (https://github.com/Wolfe-Jam/faf/blob/16f50bed52b939815e47895e7ed30e62385adbbd/schemas/fafa.schema.json#L26), added in 9e79b6914b6cb0ef6df299e52de17ccc47657a5e (2026-07-05, #14).",
+    "Spec vs schema vs practice, provenance: the card uses `provenance.mediaType` (https://github.com/Wolfe-Jam/faf-agent-public/blob/ef8103f80e8a08a92ff53b1b09fd8d035c5df0d3/agent.fafa#L66). AGENT-FORMAT.md still names the field `provenance.spec` (example https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L85, §9 https://github.com/Wolfe-Jam/faf/blob/190c3380847c022da3e13a28af57c4dc68b3e02c/AGENT-FORMAT.md#L144). The schema renamed spec→mediaType in 16f50bed52b939815e47895e7ed30e62385adbbd (2026-07-06, #15; https://github.com/Wolfe-Jam/faf/blob/16f50bed52b939815e47895e7ed30e62385adbbd/schemas/fafa.schema.json#L148), and the spec text was never updated. The card also carries `provenance.iana`, `deterministic` and `generated` (L67–69). The spec does not define these, and its §13 forward-compat rule names only top-level and agent/capabilities/endpoints unknowns. The schema allows them (additionalProperties: true).",
+    "Practice otherwise matches the spec. The card has all 4 required top-level fields (version \"1.0\"; agent.name + agent.id did:web:faf.one:agent; 6 capabilities; 3 endpoints: mcp/stdio, a2a/http, http/http). Vendor extensions sit in `metadata`, as the spec says. There is no `signature` block, so the trust mechanism is unused in practice.",
+    "Assembly (2026-09-15): added the 2026-06-26 IANA registration checkpoint; the type status follows the IANA record, and the spec text caught up on 2026-08-15."
+   ]
+  },
+  "MCP Server Card": {
+   "card": "MCP Server Card",
+   "spec_repo": "modelcontextprotocol/modelcontextprotocol (SEP-2127) + modelcontextprotocol/experimental-ext-server-card",
+   "checkpoints": [
+    {
+     "label": "Initial draft (serverInfo shape)",
+     "date": "2026-01-21",
+     "repo": "modelcontextprotocol/modelcontextprotocol",
+     "ref": "3bb8831844ed142c1f81858aff610d12a0755c79",
+     "sources": [
+      "seps/2127-mcp-server-cards.md"
+     ],
+     "why_checkpoint": "First public version of SEP-2127 (commit 'SEP-2127: MCP Server Cards - HTTP Server Discovery via .well-known'; Type: Standards Track). Baseline. The card copies the initialization result (serverInfo, protocolVersion, capabilities, transport) and can list primitives or mark them \"dynamic\".",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "serverInfo.title",
+        "required": false
+       },
+       "evidence": "**title** (string, optional): Human-readable server display name",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L153",
+       "note": "Nested in `serverInfo`, which follows the `Implementation` interface (L151)."
+      },
+      "identity": {
+       "value": "other:serverInfo.name, free-form programmatic identifier",
+       "evidence": "**name** (string, required): Server identifier for programmatic use",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L152",
+       "note": "No format is given for the name. Example value: \"example-mcp-server\" (L51)."
+      },
+      "discovery": {
+       "value": "/.well-known/mcp/server-card.json",
+       "evidence": "/.well-known/mcp/server-card.json",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L217",
+       "note": "The same text disagrees with itself: the Abstract (L12) and Proposed Solution (L26) say `.well-known/mcp.json`. A second endpoint, an MCP resource at `mcp://server-card.json` (L206), is SHOULD for all servers, so cards can also be read after connecting."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/json",
+        "status": "iana-registered"
+       },
+       "evidence": "MUST return `Content-Type: application/json`",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L222",
+       "note": "Generic JSON type (IANA, RFC 8259). No card-specific media type is defined. The MCP resource also uses MIME type application/json (L207)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "Static resource containing the server card JSON",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L208",
+       "note": "Schema examples are JSON blocks (L45, L91)."
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "**_meta** (object, optional): Additional metadata following",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L190",
+       "note": "Follows MCP's standard `_meta` definition. `capabilities.experimental` (L162) is part of the copied server capabilities, not a card extension point."
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "because server cards are advisory (the actual connection still requires initialization and authentication)",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L332",
+       "note": "No signature or trust mechanism. Same line: cards SHOULD be served over HTTPS and clients SHOULD validate TLS certificates. Clients MUST check that the tools seen at initialization match the advertised ones (L317)."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "protocolVersion",
+        "serverInfo.version"
+       ],
+       "evidence": "**version** (string, required): Schema version for the server card document (e.g., \"1.0\")",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L149",
+       "note": "$schema = URL of the card's JSON schema (L148). version = card document schema version (L149). protocolVersion = the MCP protocol version the server supports (L150). serverInfo.version = server software version (L154)."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "version",
+         "protocolVersion",
+         "serverInfo",
+         "transport",
+         "capabilities"
+        ],
+        "count": 6
+       },
+       "evidence": "**$schema** (string, required): URL to the JSON schema definition for the MCP Server Card format",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/3bb8831844ed142c1f81858aff610d12a0755c79/seps/2127-mcp-server-cards.md#L148-L161",
+       "note": "Required markers: $schema L148, version L149, protocolVersion L150, serverInfo L151, transport L158, capabilities L161. Nested required fields: serverInfo.name, serverInfo.version, transport.type."
+      }
+     }
+    },
+    {
+     "label": "Rev 1: server.json shape",
+     "date": "2026-01-30",
+     "repo": "modelcontextprotocol/modelcontextprotocol",
+     "ref": "e105d30b6264d957050389c0b0edf3ceae2a8224",
+     "sources": [
+      "seps/2127-mcp-server-cards.md"
+     ],
+     "why_checkpoint": "'Community feedback iteration (rev 1) on SEP-1649 (MCP Server Cards) (#2152)'. The card is rebuilt on the MCP Registry server.json shape: reverse-DNS `name`, top-level `title`/`version`/`description`, `remotes`, `packages`. serverInfo, protocolVersion and transport are gone. The path is renamed, and the AI Card relationship section is added. Changed: naming, identity, discovery, versioning, required_fields.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "**title** (string, optional): Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L293"
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "**name** (string, required): Server name in reverse-DNS format.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L290",
+       "note": "Same line: 'Must contain exactly one forward slash separating namespace from server name.' Example: \"io.modelcontextprotocol.anonymous/brave-search\" (L68)."
+      },
+      "discovery": {
+       "value": "/.well-known/mcp/server-card",
+       "evidence": "/.well-known/mcp/server-card",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L359",
+       "note": "The multi-tenant example uses sub-paths `/.well-known/mcp/server-card/<id>` (L54). `.well-known/ai-catalog.json` is named as the AI Card domain mechanism (L43). The MCP resource `mcp://server-card.json` is still SHOULD (L348)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/json",
+        "status": "iana-registered"
+       },
+       "evidence": "MUST return `Content-Type: application/json`",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L365",
+       "note": "Unchanged: generic JSON, no card-specific type."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "Static resource containing the server card JSON",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L350"
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "**\\_meta** (object, optional): Additional metadata following",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L331"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "because server cards are advisory (the actual connection still requires initialization and authentication)",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L477",
+       "note": "Unchanged: HTTPS SHOULD, no signature."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions",
+        "packages[].supportedProtocolVersions"
+       ],
+       "evidence": "**version** (string, required): Version string for this server. SHOULD follow semantic versioning",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L291",
+       "note": "version = server version ('Equivalent of Implementation.version', same line). $schema = card schema URI 'that evolves in-place per major version iteration' (L289). remotes[].supportedProtocolVersions (L298) and packages[].supportedProtocolVersions (L304) = MCP protocol versions each remote or package supports. The initial draft's card-document `version` and `protocolVersion` are removed."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "capabilities"
+        ],
+        "count": 4
+       },
+       "evidence": "**$schema** (string, required): The Server Card JSON schema URI",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/e105d30b6264d957050389c0b0edf3ceae2a8224/seps/2127-mcp-server-cards.md#L289-L306",
+       "note": "Required markers: $schema L289, name L290, version L291, capabilities L306. description is optional (L292)."
+      }
+     }
+    },
+    {
+     "label": "description required; endpoints simplified",
+     "date": "2026-03-23",
+     "repo": "modelcontextprotocol/modelcontextprotocol",
+     "ref": "cfe7de2787ddc7cc28eb7504554db31d6162fcc0",
+     "sources": [
+      "seps/2127-mcp-server-cards.md"
+     ],
+     "why_checkpoint": "'Align Server Card with server.json and simplify endpoints'. `description` becomes required and `capabilities` optional (required_fields changed). The MCP-resource endpoint (`mcp://server-card.json`) and the registry endpoint are removed, leaving `.well-known` as the only endpoint. The versioning value also includes an earlier change folded in here to stay within 8 checkpoints: 3a61af5 (2026-02-01, 'Prettier', the end of the 'Rev on server.json' series) moved `packages` out of the card into a separate server.json superset. Primitives were removed on 2026-03-02 (308c652), which changed no tracked dimension.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "**title** (string, optional): Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L193"
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "**name** (string, required): Server name in reverse-DNS format.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L190"
+      },
+      "discovery": {
+       "value": "/.well-known/mcp/server-card",
+       "evidence": "/.well-known/mcp/server-card",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L313",
+       "note": "Path unchanged. `.well-known` is now the only endpoint: 'MCP Server Cards supporting HTTP-based transports ... _SHOULD_ provide a server card via a .well-known URI.' (L304). Local stdio servers are pointed to server.json and the MCP Registry instead (L306)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/json",
+        "status": "iana-registered"
+       },
+       "evidence": "MUST return `Content-Type: application/json`",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L319"
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "MUST return `Content-Type: application/json`",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L319",
+       "note": "The MCP-resource line that said 'server card JSON' was removed in this commit. The served Content-Type is the remaining statement of encoding."
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "**\\_meta** (object, optional): Additional metadata following",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L219"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "because server cards are advisory (the actual connection still requires initialization and authentication)",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L420"
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "**supportedProtocolVersions** (array of string, optional): list of MCP protocol versions actively supported by this Remote.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L198",
+       "note": "$schema (L189) and version (L191) are unchanged. packages[].supportedProtocolVersions now appears only in the separate server.json schema (L296-L297), not in the card."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "**description** (string, required): Clear human-readable explanation of server functionality.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/cfe7de2787ddc7cc28eb7504554db31d6162fcc0/seps/2127-mcp-server-cards.md#L192",
+       "note": "Required markers: $schema L189, name L190, version L191, description L192. capabilities is now '(object, optional)' (L203)."
+      }
+     }
+    },
+    {
+     "label": "Flat /.well-known/mcp-server-card",
+     "date": "2026-03-26",
+     "repo": "modelcontextprotocol/modelcontextprotocol",
+     "ref": "97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7",
+     "sources": [
+      "seps/2127-mcp-server-cards.md"
+     ],
+     "why_checkpoint": "'sep: use flat mcp-server-card well-known suffix'. The path changes from `/.well-known/mcp/server-card` to `/.well-known/mcp-server-card`, with `/{server-name}` sub-paths for hosts that serve several servers. The IANA suffix to register becomes `mcp-server-card`. Changed: discovery.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "**title** (string, optional): Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L193"
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "**name** (string, required): Server name in reverse-DNS format.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L190"
+      },
+      "discovery": {
+       "value": "/.well-known/mcp-server-card",
+       "evidence": "/.well-known/mcp-server-card",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L313",
+       "note": "Hosts with several servers SHOULD use `/.well-known/mcp-server-card/{server-name}` (L319), where `{server-name}` matches the card's `name` (L322). IANA registration is planned for suffix `mcp-server-card` (L436, L440)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/json",
+        "status": "iana-registered"
+       },
+       "evidence": "MUST return `Content-Type: application/json`",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L327"
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "MUST return `Content-Type: application/json`",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L327"
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "**\\_meta** (object, optional): Additional metadata following",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L219"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "because server cards are advisory (the actual connection still requires initialization and authentication)",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L428"
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "**supportedProtocolVersions** (array of string, optional): list of MCP protocol versions actively supported by this Remote.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L198",
+       "note": "$schema L189, version L191."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "**description** (string, required): Clear human-readable explanation of server functionality.",
+       "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/97c62861a5c9d3a129bad6db6f5a8dd9a1547fb7/seps/2127-mcp-server-cards.md#L192",
+       "note": "Unchanged. The next SEP change (389a07d, 2026-04-06, merged via #2525 on 2026-04-13) removed the optional capabilities, requires and remotes[].authentication. No tracked dimension changed."
+      }
+     }
+    },
+    {
+     "label": "Extension repo: card media type + MCP Catalog",
+     "date": "2026-05-28",
+     "repo": "modelcontextprotocol/experimental-ext-server-card",
+     "ref": "ffe58b0fe31394f209190395d7fc4f8e9118e70b",
+     "sources": [
+      "schema.ts",
+      "schema.json",
+      "docs/discovery.md",
+      "README.md"
+     ],
+     "why_checkpoint": "Merge of #3 'Add MCP Catalog discovery specification'. The extension repo was set up on 2026-04-27 (7a3ff5d), and its schema.ts copied the SEP's card with no tracked-dimension change. docs/discovery.md now names a card media type, `application/mcp-server+json` (type changed), and adds a domain-level MCP Catalog at `/.well-known/mcp/catalog.json`. The SEP branch still said Content-Type application/json on this date.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts#L75",
+       "note": "`title?: string` (L81). MCP Catalog entries also carry a required `displayName` (docs/discovery.md L56), which is a catalog field, not a card field."
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "Server name in reverse-DNS format. Must contain exactly one forward slash",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts#L45",
+       "note": "Pattern `^[a-zA-Z0-9.-]+/[a-zA-Z0-9._-]+$` (L50) does not itself require a dot. Catalog entries get their own identifier: 'MUST begin with `urn:mcp:server:` and end with the `name` value' of the card (docs/discovery.md L60)."
+      },
+      "discovery": {
+       "value": "/.well-known/mcp-server-card",
+       "evidence": "publishing at a `.well-known/mcp-server-card` URI for pre-connection discovery.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts#L14",
+       "note": "Card path unchanged in schema.ts. New: domain-level MCP Catalog at `/.well-known/mcp/catalog.json` (docs/discovery.md L31). Its entries carry each card's `url`, and the example uses `https://example.com/.well-known/mcp-server-card` (L75). The README at this SHA uses the slash form `/.well-known/mcp/server-card` (README.md L13); that mismatch was later tracked as ext issue #11."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/mcp-server+json",
+        "status": "de-facto"
+       },
+       "evidence": "Server Cards use the media type `application/mcp-server+json`.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/docs/discovery.md#L136-L137",
+       "note": "Named in the text but not registered: it is absent from the IANA application media-type registry (checked 2026-09-15). The catalog entry `mediaType` 'MUST be `application/mcp-server+json`' (L57). The SEP at the same time (ce0d2da) still said the card endpoint 'MUST return `Content-Type: application/json`'."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An **MCP Server Card** is a JSON document that describes a single MCP server",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/docs/discovery.md#L135",
+       "note": "README.md L27 at this SHA: schema.json is 'Generated JSON Schema 2020-12'."
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "Extension metadata using reverse-DNS namespacing for vendor-specific data.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts#L115",
+       "note": "`_meta?: MetaObject` (L121), following the protocol's standard `_meta` definition (L117)."
+      },
+      "trust": {
+       "value": "not specified",
+       "evidence": "Domains that want richer metadata (trust manifests, publisher identity, collections) can adopt the full AI Catalog format",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/docs/discovery.md#L163-L164",
+       "note": "At this SHA, schema.ts, README.md and discovery.md say nothing about card authenticity, signing or advisory status. The cited line leaves trust manifests to the full AI Catalog format. The HTTPS/TLS rule (L199) covers MCP Catalogs only. The SEP branch at the same date still called cards advisory (ce0d2da)."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "Schema URLs are versioned by the `vN` segment rather than by date so that",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.ts#L35",
+       "note": "$schema pattern `^https://static\\.modelcontextprotocol\\.io/schemas/v1/[^/]+\\.schema\\.json$` (L40). version = server version, 'Equivalent of `Implementation.version`' (L55-L57). remotes[].supportedProtocolVersions (L217-L220). The separate `Server` superset (server.json shape) also has packages[].supportedProtocolVersions (L261-L263)."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "\"required\": [\"$schema\", \"description\", \"name\", \"version\"],",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/ffe58b0fe31394f209190395d7fc4f8e9118e70b/schema.json#L590",
+       "note": "Inside the `ServerCard` definition, which starts at L529. The identical array at L526 belongs to the `Server` superset. Matches the SEP's required set."
+      }
+     }
+    },
+    {
+     "label": "/server-card via catalog; mcp-server-card+json",
+     "date": "2026-06-08",
+     "repo": "modelcontextprotocol/experimental-ext-server-card",
+     "ref": "9222cf6527473240f93191151b11b1e3dce3ffd8",
+     "sources": [
+      "docs/discovery.md",
+      "schema.ts",
+      "schema.json"
+     ],
+     "why_checkpoint": "Merges on the same day: #18 'align Catalog mediaType with AI Catalog spec' (media type becomes `application/mcp-server-card+json`, closes #9); #19 (primitives removed from discovery.md); #22 'Server Cards: recommend `/server-card` over `.well-known`' (resolves #12: a card can live at any unreserved URI, `GET <streamable-http-url>/server-card` is reserved, and the catalog is the entry point; issue #11, about the slash vs dash well-known spelling, was closed by hand 25 seconds later); #24 (DoS section); #25 'require Server Card to be consistent with runtime behavior'. Changed: type, discovery, trust. On the same day the SEP was rewritten onto the Extensions Track (4590aa4, extension identifier `io.modelcontextprotocol/server-card`) and handed the wire format to this repo. That rewrite reached the SEP branch via #2893 on 2026-06-26.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/schema.ts#L84",
+       "note": "MCP Catalog entries still carry a required `displayName` (docs/discovery.md L56)."
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "Server name in reverse-DNS format. Must contain exactly one forward slash",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/schema.ts#L54",
+       "note": "Catalog identifier is still `urn:mcp:server:` + card `name` (docs/discovery.md L60)."
+      },
+      "discovery": {
+       "value": "via:/.well-known/mcp/catalog.json",
+       "evidence": "The Catalog is the discovery entrypoint, and every Catalog Entry already carries the",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/docs/discovery.md#L174",
+       "note": "The card no longer has a well-known path. 'Clients therefore never need to _guess_ a Server Card's location' and a card 'MAY be hosted at any unreserved URI' (L175-L177). Reserved default: 'MCP Servers MAY host their Server Card at `GET <streamable-http-url>/server-card`' (L181). A `.well-known` card path was considered and not recommended (L202). The catalog is at `/.well-known/mcp/catalog.json` (L31). schema.ts L14-L15 says the same."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/mcp-server-card+json",
+        "status": "de-facto"
+       },
+       "evidence": "Server Cards use the media type `application/mcp-server-card+json`.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/docs/discovery.md#L138-L139",
+       "note": "Clients SHOULD send `Accept: application/mcp-server-card+json` (L190). Not in the IANA registry (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An **MCP Server Card** is a JSON document that describes a single MCP server",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/docs/discovery.md#L137"
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "Extension metadata using reverse-DNS namespacing for vendor-specific data.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/schema.ts#L124"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "Clients MUST NOT treat Server Card contents as authoritative for security or",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/docs/discovery.md#L167",
+       "note": "Cards are advisory, with no signature or manifest. Clients 'SHOULD verify a Server Card's claims against the live connection, preferring the runtime values' (L169-L170). schema.ts L25-L27 says the same."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "Schema URLs are versioned by the `vN` segment rather than by date so that",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/schema.ts#L44",
+       "note": "$schema pattern still allows any `/v1/<name>.schema.json` (L49). remotes[].supportedProtocolVersions at L230."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "\"required\": [\"$schema\", \"description\", \"name\", \"version\"],",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/9222cf6527473240f93191151b11b1e3dce3ffd8/schema.json#L590",
+       "note": "`ServerCard` definition starts at L529."
+      }
+     }
+    },
+    {
+     "label": "AI Catalog discovery",
+     "date": "2026-07-20",
+     "repo": "modelcontextprotocol/experimental-ext-server-card",
+     "ref": "1491bd24714c885d5bc6b3bf0857094beff939fd",
+     "sources": [
+      "docs/discovery.md",
+      "schema.ts",
+      "schema.json",
+      "README.md"
+     ],
+     "why_checkpoint": "'Use AI Catalog for Server Card discovery (#42)'. The MCP Catalog (`/.well-known/mcp/catalog.json`) is replaced by the AI Catalog at `/.well-known/ai-catalog.json`. An entry either links to a card (`url`) or embeds it (`data`). Catalog identifiers take the form `urn:air:{publisher}:{namespace}:{name}`. Changed: discovery. Extension-repo changes since the last checkpoint that moved no card dimension: #28 (2026-06-18, card-only: Server/packages types removed, $schema pinned to server-card.schema.json), #31 (2026-06-19, `urn:air:` catalog identifiers), #37 (handshake references dropped), #39 (2026-07-13, catalog `displayName` dropped because the card's `title` is the source of truth), #32 (2026-07-13, catalog `mediaType` renamed to `type`). The SEP was updated the same day to match (608046a).",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/schema.ts#L75",
+       "note": "Catalog entries no longer repeat the name. Clients 'can read the server's `title`, `description`, and `version` from the card itself' (docs/discovery.md L54-L55)."
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "Server name in reverse-DNS format. Must contain exactly one forward slash",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/schema.ts#L45",
+       "note": "The card keeps its reverse-DNS `name`. AI Catalog entry identifiers use `urn:air:{publisher}:{namespace}:{name}` (docs/discovery.md L48); a card named `com.example/weather` 'can use the catalog identifier `urn:air:example.com:mcp:weather`' (L51-L52). urn:air is catalog-level, not a card field."
+      },
+      "discovery": {
+       "value": "via:/.well-known/ai-catalog.json",
+       "evidence": "Fetch `https://{domain}/.well-known/ai-catalog.json`",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/docs/discovery.md#L119",
+       "note": "Step 1 of the SHOULD client flow (L104). 'Clients performing domain-level discovery SHOULD attempt to retrieve this well-known URL' (L29), and the catalog SHOULD use `application/ai-catalog+json` (L30). An entry carries `url` or inline `data` (L42-L43). The card's own location is unchanged: any unreserved URI, with `GET <streamable-http-url>/server-card` reserved (L174). schema.ts L12-L13: clients learn a card's URL 'from an AI Catalog rather than guessing it'."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/mcp-server-card+json",
+        "status": "de-facto"
+       },
+       "evidence": "Server Cards use the media type `application/mcp-server-card+json`.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/docs/discovery.md#L131-L132",
+       "note": "The catalog entry `type` 'MUST be `application/mcp-server-card+json`' (L41). Not IANA-registered (checked 2026-09-15)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An **MCP Server Card** is a JSON document that describes a single MCP server",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/docs/discovery.md#L130"
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "Extension metadata using reverse-DNS namespacing for vendor-specific data.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/schema.ts#L115",
+       "note": "README.md L27 (since #28): namespaced `_meta` 'remains the card's extension point'. README.md L63: card objects are open (no `additionalProperties: false`)."
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "Clients MUST NOT treat Server Card contents as authoritative for security or",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/docs/discovery.md#L160",
+       "note": "Unchanged: advisory, checked against the live `server/discover` result (L146-L163)."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "Schema URLs are versioned by the `vN` segment rather than by date; a",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/schema.ts#L36",
+       "note": "Since #28 the $schema pattern is pinned to `.../schemas/v1/server-card\\.schema\\.json$` (L40), and 'a breaking revision of the Server Card shape publishes a new `vN` family' (L37). remotes[].supportedProtocolVersions at L199-L202."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "\"required\": [\"$schema\", \"description\", \"name\", \"version\"],",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/1491bd24714c885d5bc6b3bf0857094beff939fd/schema.json#L256",
+       "note": "`ServerCard` definition starts at L195. It is the only card-shaped definition since #28 removed `Server`."
+      }
+     }
+    },
+    {
+     "label": "Latest (SEP-pinned snapshot 526201bb)",
+     "date": "2026-08-12",
+     "repo": "modelcontextprotocol/experimental-ext-server-card",
+     "ref": "526201bbc80231daa40ffcdecfc9da4e54e5dc93",
+     "sources": [
+      "docs/discovery.md",
+      "schema.ts",
+      "schema.json",
+      "README.md",
+      "docs/core-maintainer-roadmap.md"
+     ],
+     "why_checkpoint": "Latest state. The most recent extension-repo commit is 'docs: add Server Card roadmap priorities (#47)'. Since the last checkpoint, only #46 (2026-07-24, ETag revalidation) touched discovery.md, and no tracked dimension changed. SEP-2127's latest commit, 5c8483d (2026-08-24), pins this snapshot as the contract under review (SEP L85) and sets 'Status: Final' (SEP L3). PR #2127 is still open with the 'in-review' label (checked 2026-09-15).",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L75",
+       "note": "`title?: string` (L81). Clients read `title` from the card, not the catalog entry (docs/discovery.md L54-L55)."
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "Server name in reverse-DNS format. Must contain exactly one forward slash",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L45",
+       "note": "Pattern `^[a-zA-Z0-9.-]+/[a-zA-Z0-9._-]+$` (L50). The valid example examples/ServerCard/valid/minimal.json uses `example-org/minimal`, with no dot. Catalog-level identifier: `urn:air:{publisher}:{namespace}:{name}` (docs/discovery.md L48)."
+      },
+      "discovery": {
+       "value": "via:/.well-known/ai-catalog.json",
+       "evidence": "Fetch `https://{domain}/.well-known/ai-catalog.json`",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L119",
+       "note": "Card location: 'MCP Servers MAY host their Server Card at `GET <streamable-http-url>/server-card`, which we reserve for this purpose, though any unreserved URI (on any domain) is valid' (L174-L175). SEP 5c8483d L90: 'Cards can be hosted at any unreserved URI, with `<streamable-http-url>/server-card` reserved as the recommended location.'"
+      },
+      "type": {
+       "value": {
+        "media_type": "application/mcp-server-card+json",
+        "status": "de-facto"
+       },
+       "evidence": "Server Cards use the media type `application/mcp-server-card+json`.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L131-L132",
+       "note": "Not in the IANA application media-type registry (checked 2026-09-15); the only 'mcp' matches are unrelated vnd.3gpp.mcptt-* types. Clients SHOULD send `Accept: application/mcp-server-card+json` (L182)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An **MCP Server Card** is a JSON document that describes a single MCP server",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L130"
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "extension metadata, which remains the card's extension point.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/README.md#L27",
+       "note": "The line begins 'Vendors who genuinely need to attach install hints to a Server Card can use namespaced [`_meta`]'. schema.ts L115 and L121 define `_meta?: MetaObject`. SEP 5c8483d L89: '`_meta` is not used to advertise MCP capabilities or negotiated extension support.'"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "Clients MUST NOT treat Server Card contents as authoritative for security or",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L160",
+       "note": "Advisory only. The 'Server Card Accuracy' security note (L229-L238) calls an inaccurate card 'a mild confusion or downgrade vector'. Hosted cards MUST use HTTPS, TLS 1.2 or later, in production (L273). No signature or trust manifest."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "Schema URLs are versioned by the `vN` segment rather than by date; a",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L36",
+       "note": "$schema must equal `https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json` (L35, L40). version = server version, 'Equivalent of `Implementation.version`' (L55-L57). remotes[].supportedProtocolVersions = 'MCP protocol versions actively supported by this remote endpoint' (L199-L202). README.md L63: 'The `v1` shape is still pre-release and card-only'."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "\"required\": [\"$schema\", \"description\", \"name\", \"version\"],",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.json#L256",
+       "note": "`ServerCard` definition starts at L195. The optional fields are title, websiteUrl, repository, icons, remotes and _meta (schema.ts L81-L121). The smallest valid card, examples/ServerCard/valid/minimal.json, has exactly these four fields."
+      }
+     }
+    }
+   ],
+   "notes": [
+    "The claim that the original path was `/.well-known/mcp-server-card` does not hold. The first public SEP text (3bb8831, 2026-01-21) specifies `/.well-known/mcp/server-card.json` (L217), while its Abstract says `.well-known/mcp.json` (L12). Rev 1 (e105d30, 2026-01-30) changed it to `/.well-known/mcp/server-card`. The flat `/.well-known/mcp-server-card` arrived only on 2026-03-26 (97c6286).",
+    "The move to `<streamable-http-url>/server-card` is confirmed as ext PR #22 (merged 2026-06-08, 10e958f; resolves issue #12; issue #11 was closed by hand 25 seconds later). At #22, domain discovery still ran through the MCP Catalog at `/.well-known/mcp/catalog.json`. The switch to `/.well-known/ai-catalog.json` came later, in ext PR #42 (merged 2026-07-20, 1491bd2).",
+    "The Extensions Track rewrite is confirmed: SEP commit 4590aa4 (authored 2026-06-08, 'SEP-2127: refactor to Extensions Track charter') changes Type from Standards Track to Extensions Track, adds extension identifier `io.modelcontextprotocol/server-card`, and hands the wire format to the extension repo. It reached the sep/mcp-server-cards branch through #2893 on 2026-06-26. From then on the SEP names the extension repo's schema.ts as the single source of truth, so checkpoints 5 to 8 cite the extension repo.",
+    "'A v1 card is identity + remotes, no primitives' is confirmed at 526201b: schema.ts L15-L19 ('identity, transport, and protocol versions'; primitives are not enumerated), and the fields are name, version, description, title, websiteUrl, repository, icons, remotes and _meta. The removals happened in steps: primitives from the SEP on 2026-03-02 (308c652); capabilities, requires and authentication on 2026-04-06 (389a07d, merged via #2525 on 2026-04-13); the Server/packages superset from the extension repo on 2026-06-18 (#28). None of these changed a tracked dimension, apart from the versioning list noted in checkpoint 3.",
+    "Folded to stay within 8 checkpoints: 3a61af5 (2026-02-01) moved `packages` out of the card into a separate server.json superset, which removed packages[].supportedProtocolVersions from the card's versioning list. That change shows first in checkpoint 3 (2026-03-23), and its why_checkpoint says so. Every other dimension change has its own checkpoint.",
+    "The SEP branch was rebased: every commit from 3bb8831 to 97c6286 has committer date 2026-03-26. Checkpoint dates use author dates, and the SHAs are the ones now on the branch. Commits before the rebase may have had different SHAs.",
+    "The two sources disagreed for a while. From the extension repo's start (2026-04-27) until the SEP rewrite on 2026-06-08, the SEP said 'MUST return Content-Type: application/json' while ext docs/discovery.md (from 2026-05-28) said `application/mcp-server+json`. The ext README used the slash path `/.well-known/mcp/server-card` while schema.ts used the dash path `/.well-known/mcp-server-card`. The rewritten SEP listed both as open items (4590aa4 L180-L181, removed again in 229e5cd). Checkpoint 5 records the extension repo's values.",
+    "Media-type status: `application/json` is IANA-registered (RFC 8259) but generic. Neither `application/mcp-server+json` nor `application/mcp-server-card+json` is in the IANA application registry (checked 2026-09-15; the only 'mcp' matches are vnd.3gpp.mcptt-*). 'de-facto' is used here, as in the .fafa register, to mean 'named in the spec, not registered'. The IANA well-known URI registry has no entry for mcp-server-card, mcp or ai-catalog.",
+    "Judgement call on discovery: from 2026-06-08 the text says the catalog is the entry point and clients never guess a card's location. The value therefore records the catalog mechanism (`via:...`), and the reserved default card location `<streamable-http-url>/server-card` (a server MAY use it) goes in the note. A reader who wants the card URL itself should use that note.",
+    "Judgement call on identity: from rev 1 the card's own identifier is always the reverse-DNS `name`. Catalog-entry identifiers changed separately: `urn:mcp:server:<name>` (2026-05-28), then `urn:air:<publisher>:<name>` (#31, 2026-06-19), then `urn:air:{publisher}:{namespace}:{name}` with an `mcp` namespace in the examples (#42, 2026-07-20). These are catalog fields, so identity stays 'reverse-dns' and no checkpoint was made for them.",
+    "Trust is 'not specified' only at checkpoint 5, because the extension repo at that SHA had no card-level trust text (the SEP of the same date called cards advisory). Every other checkpoint is 'none': advisory metadata with no signature or manifest. The normative 'MUST NOT treat as authoritative' wording arrived with ext #25 on 2026-06-08.",
+    "SEP status conflict: 5c8483d (commit title 'Regenerate SEP docs') changes the header to 'Status: Final', but PR #2127 is open and unmerged, with labels SEP, in-review, extension, roadmap/transport, and mergeable_state 'blocked' (checked 2026-09-15). On 2026-07-20, 1d6ff6a set Final and 84643c8 set it back to Draft six minutes later. The extension README at 526201b still says 'Status: Experimental'.",
+    "Naming: MCP Catalog entries had a required `displayName` from 2026-05-28 until #39 (2026-07-13) dropped it in favour of the card's `title`. Because this is catalog-level, the card's naming value (title, optional) has not changed since rev 1.",
+    "Roadmap (docs/core-maintainer-roadmap.md at 526201b) lists three future themes: graduation to an official extension (L8-L14), adding primitives back ('Describe what a server does', L18-L23), and per-remote authentication (L25-L30). These are plans, not spec text, so they are not recorded as values.",
+    "The first SEP header says 'Created: 2025-01-21' (3bb8831 L5), which looks like a typo: rev 1 corrected it to 2026-01-21, and the PR was opened 2026-01-21."
+   ]
+  }
+ },
+ "as_of": "2026-09-12"
+}

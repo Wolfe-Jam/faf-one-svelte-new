@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "node scripts/build-agent-card.mjs",
+    "prebuild": "node scripts/build-agent-card.mjs && node scripts/check-pack-of-cards.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "test:webmcp": "vitest run --config vitest.config.webmcp.ts"

@@ -43,6 +43,7 @@
 		'/n8n': { title: 'n8n', category: 'Ecosystem', emoji: '🔗', description: 'n8n automation', order: 13 },
 		'/migrate': { title: 'Migrate', category: 'Ecosystem', emoji: '➡️', description: 'Keep context when moving tools', order: 14 },
 		'/ai-catalog': { title: 'AI Catalog', category: 'Ecosystem', emoji: '🗂️', description: 'FAF ↔ AI Catalog spec — a timeline', order: 15 },
+		'/pack-of-cards': { title: 'Pack of Cards', category: 'Ecosystem', emoji: '🃏', description: 'Five agent-card specs, mapped', order: 16 },
 
 		// ── Standards ───────────────────────────────────────────
 		'/wjttc': { title: 'WJTTC', category: 'Standards', emoji: '🏆', description: 'MCP testing certification', order: 1 },
