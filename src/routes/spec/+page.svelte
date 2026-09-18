@@ -75,9 +75,9 @@ commands:
 			<p><code>.fafb</code> is the compiled binary form of a <code>.faf</code>. It's modeled on <strong>IFF</strong> — the chunked format Commodore created for the Amiga in the '80s (Microsoft's RIFF and the ELF executable format use the same idea): a magic number, a set of named chunks, and a table that indexes them.</p>
 			<p>What the binary buys you:</p>
 			<ul>
-				<li><strong>Content-addressable</strong> — identical content compiles to identical bytes. The same project context yields the same hash on every machine, so a <code>.fafb</code> can be deduped, cached, and verified by hash. Context gets an identity.</li>
+				<li><strong>Two identities</strong> — a <strong>Content ID</strong> for what the AI reads, and a <strong>file digest</strong> for the whole file. Same context, same Content ID. Stamps, comments, and signatures bind to the file digest. The brick can be cached and verified without mixing those two jobs.</li>
 				<li><strong>O(1) lookup</strong> — the section table sits at the end of the file; a reader maps any chunk by name without scanning content.</li>
-				<li><strong>Priority truncation</strong> — each chunk carries a truncation priority, so a reader deterministically drops lower-priority chunks to fit any token budget; identity chunks are kept longest.</li>
+				<li><strong>Prefix truncation</strong> — a shorter rendering is always a prefix of the full one. Chunks leave from the tail, whole priority tiers at a time; identity chunks always stay.</li>
 				<li><strong>Sealed</strong> — a CRC32 of the source <code>.faf</code> is sealed into the header.</li>
 			</ul>
 		</section>
@@ -89,7 +89,7 @@ commands:
 				<li><strong>Writer (closed)</strong> — a compiler emits exactly the canonical chunk set, in canonical order, and nothing else. Non-canonical keys fold into the <code>context</code> chunk — preserved in full, never given a section of their own. The format has a fixed shape, the way a JPEG does.</li>
 				<li><strong>Reader (graceful)</strong> — an unknown section name is skipped, not rejected. A future minor version can add a chunk without breaking deployed readers.</li>
 			</ul>
-			<p>Closing the writer is what makes the output content-addressable: the same <code>.faf</code> always compiles to identical <code>.fafb</code> bytes.</p>
+			<p>Closing the writer is what makes the brick addressable: a closed chunk set, in a fixed order. A stamp on the file never changes the Content ID.</p>
 			<p>The canonical set is <strong>13 chunks — 11 DNA (core identity) + 2 Context</strong> — mirroring the <code>.faf</code> structure:</p>
 			<ul>
 				<li><strong>Identity</strong> — <code>faf_version</code> &middot; <code>project</code> &middot; <code>app_type</code> &middot; <code>about</code></li>
@@ -126,6 +126,7 @@ commands:
 		<section>
 			<h2>Registration</h2>
 			<p><code>.faf</code> is registered with IANA as the media type <strong><code>application/vnd.faf+yaml</code></strong> (registered 2025-10-30). The <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml">IANA record</a> is the authoritative registration; the security and interop notes above mirror its considerations. Optional parameter: <code>version</code> (e.g. <code>version=1.0</code>).</p>
+			<p><code>.fafb</code>'s type string is <code>application/vnd.fafb</code> — deliberately unregistered. Do not file it. Cards may use the string.</p>
 		</section>
 
 		<section>
