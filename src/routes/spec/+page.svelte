@@ -126,7 +126,6 @@ commands:
 		<section>
 			<h2>Registration</h2>
 			<p><code>.faf</code> is registered with IANA as the media type <strong><code>application/vnd.faf+yaml</code></strong> (registered 2025-10-30). The <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml">IANA record</a> is the authoritative registration; the security and interop notes above mirror its considerations. Optional parameter: <code>version</code> (e.g. <code>version=1.0</code>).</p>
-			<p><code>.fafb</code>'s type string is <code>application/vnd.fafb</code> — deliberately unregistered. Do not file it. Cards may use the string.</p>
 		</section>
 
 		<section>
