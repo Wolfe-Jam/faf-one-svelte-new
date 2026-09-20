@@ -38,6 +38,7 @@
 			excerpt:
 				'A card nobody can find is not a card. The catalog faf cards writes now names who publishes it, keys every row the way the specs say to, and can be written as the ARD manifest agent search engines read.',
 			emoji: '🧭',
+			version: 'faf-cli v7.16.1',
 			category: 'Release'
 		},
 		{
@@ -48,6 +49,7 @@
 			excerpt:
 				'FAFb is FAF compiled: your project\'s 33 facts sealed to a ROM your agent boots. The full Rust version, for teams and monorepos. Invite-only drives are open before 1.0 — free access, one honest hour.',
 			emoji: '✪',
+			version: 'FAFb 0.9',
 			category: 'Launch'
 		},
 		{
@@ -58,6 +60,7 @@
 			excerpt:
 				'Answer a few questions about an agent or MCP server and get every card it needs: the A2A Agent Card, the MCP Server Card, the registry server.json, an AI Catalog and an ARD manifest. Neutral by default.',
 			emoji: '🎴',
+			version: 'faf-cli v7.15.0',
 			category: 'Release'
 		},
 		{
@@ -68,6 +71,7 @@
 			excerpt:
 				'One .faf-dna across faf-cli, FAFb and rust-faf-mcp 0.8.0: faf_init births it, faf_auto grows it, faf_dna shows the journey. Building on faf-cli, FAFb is the full Rust version, for teams: help us finish the launch.',
 			emoji: '🧬',
+			version: 'rust-faf-mcp v0.8.0',
 			category: 'Interop'
 		},
 		{
