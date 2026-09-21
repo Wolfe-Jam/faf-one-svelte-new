@@ -71,6 +71,22 @@ commands:
 		</section>
 
 		<section>
+			<h2>How it's scored</h2>
+			<p>A <code>.faf</code> is scored by counting slots. There are <strong>33</strong>, and the list never changes — that's what makes two projects comparable.</p>
+			<p>Every slot starts <strong>empty</strong>. Three states, never a fourth:</p>
+			<ul>
+				<li><strong>empty</strong> — the default. Nothing established yet.</li>
+				<li><strong>slotignored</strong> — not required for this <code>app_type</code>. Labelled, and does not score.</li>
+				<li><strong>populated</strong> — holds a verified fact.</li>
+			</ul>
+			<p><code>app_type</code> decides which slots are required. A CLI tool isn't asked about its CSS framework; a documentation repo isn't asked about a database. Slots the type doesn't require leave the calculation entirely — nothing is held against a project for lacking something it was never meant to have.</p>
+			<pre><code>{`score = populated / active × 100     active = 33 − slotignored`}</code></pre>
+			<p>That's the whole calculation. No weighting, no judgement, no model. The same file scores the same everywhere, and anyone can check the arithmetic by hand.</p>
+			<p><strong>faf-cli</strong> (MIT, free) scores 21 slots, for every app type — the whole picture for a single application. The full <strong>33</strong> adds twelve slots that only matter once a project becomes a monorepo or a team: how packages are organised, what orchestrates the build, how versioning and shared config work. Same file, same answer, different universe.</p>
+			<p>One caveat worth knowing: a <code>scores</code> block inside a <code>.faf</code> is a <strong>carried claim</strong>, recorded when the file was written — not a live result. A compiler copies it through unchanged. For a score you can rely on, run a scorer.</p>
+		</section>
+
+		<section>
 			<h2><code>.fafb</code> — context, compiled</h2>
 			<p><code>.fafb</code> is the compiled binary form of a <code>.faf</code>. It's modeled on <strong>IFF</strong> — the chunked format Commodore created for the Amiga in the '80s (Microsoft's RIFF and the ELF executable format use the same idea): a magic number, a set of named chunks, and a table that indexes them.</p>
 			<p>What the binary buys you:</p>
@@ -147,9 +163,10 @@ commands:
 		<section>
 			<h2>Links</h2>
 			<ul>
-				<li><strong>Specification</strong> — <a href="https://github.com/Wolfe-Jam/faf-rust/blob/main/crates/faf-fafb/BINARY-FORMAT.md">BINARY-FORMAT.md</a></li>
+				<li><strong><code>.faf</code> specification</strong> — <a href="https://github.com/Wolfe-Jam/faf/blob/main/SPECIFICATION.md">SPECIFICATION.md</a> — the format, the 33 slots, and how a score is worked out</li>
+				<li><strong>FAFb wire specification</strong> — <a href="https://github.com/Wolfe-Jam/faf-rust/blob/main/crates/faf-fafb/BINARY-FORMAT.md">BINARY-FORMAT.md</a> — the binary container</li>
 				<li><strong>IANA</strong> — <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml"><code>application/vnd.faf+yaml</code></a></li>
-				<li><strong>GitHub</strong> — <a href="https://github.com/Wolfe-Jam/faf-rust">Wolfe-Jam/faf-rust</a></li>
+				<li><strong>GitHub</strong> — <a href="https://github.com/Wolfe-Jam/faf">Wolfe-Jam/faf</a> (format) · <a href="https://github.com/Wolfe-Jam/faf-rust">Wolfe-Jam/faf-rust</a> (implementation)</li>
 			</ul>
 		</section>
 	</article>
