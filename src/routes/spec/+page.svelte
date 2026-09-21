@@ -124,6 +124,7 @@ commands:
 		<section>
 			<h2>Stability — wire v2 is frozen</h2>
 			<p>The byte layout is immutable, enforced by a byte-exact golden-master test. New capabilities ship only as forward-compatible additions — we do not break v2. Because the <code>.faf</code> source is always authoritative, you <strong>recompile, never migrate</strong>. Nothing gets trapped in an old binary.</p>
+			<p>Independent writers meet on the same bytes: <strong>faf-cli</strong> (MIT, TypeScript) and the Rust compiler both hit the golden master exactly. That's a receipt against the reference fixture, earned build by build — not a theorem about every input.</p>
 		</section>
 
 		<section>
