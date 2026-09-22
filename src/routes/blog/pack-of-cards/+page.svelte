@@ -142,6 +142,12 @@ Comments · suggestions welcome.`;
 				sit above the centre, protocol-neutral envelopes below.
 				<strong>Strict ↔ Loose</strong>: each card's required fields against the median.
 			</p>
+			<ZoomImage
+				src="/blog/pack-of-cards-strip.png"
+				alt="The map as a band: five card lines running west to east, with the centre line dashed through the middle"
+				width={1602}
+				height={516}
+			/>
 		</section>
 
 		<section>
