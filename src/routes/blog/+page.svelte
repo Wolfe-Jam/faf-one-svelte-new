@@ -31,6 +31,19 @@
 
 	const posts = [
 		{
+			slug: 'blog/pack-of-cards',
+			title: 'Pack of Cards',
+			date: 'September 21, 2026',
+			timestamp: '2026-09-21',
+			excerpt:
+				'Machines find an agent or a server through cards. Five specs, all in public git — read version by version and drawn as one map, after Harry Beck\'s Underground diagram.',
+			emoji: '🗺️',
+			// Custom = one-off black/white single-word pill (not a permanent category ladder).
+			// No version: nothing shipped — this is the map, not a release.
+			category: 'Custom',
+			label: 'INDUSTRY'
+		},
+		{
 			slug: 'blog/discoverable-edition',
 			title: 'The Discoverable Edition',
 			date: 'September 16, 2026',
