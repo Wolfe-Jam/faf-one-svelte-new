@@ -4,6 +4,7 @@
 <script lang="ts">
 	import { buildShareIntent } from '$lib/shareIntent.js';
 	import NpmPkg from '$lib/NpmPkg.svelte';
+	import ZoomImage from '$lib/components/ZoomImage.svelte';
 
 	const shareText = `Five agent-card specs, drawn as one map.
 
@@ -71,16 +72,12 @@ Comments · suggestions welcome.`;
 		</div>
 	</header>
 
-	<div class="hero-image">
-		<img
-			src="/blog/pack-of-cards-hero.png"
-			alt="Five agent-card specs drawn as one map: A2A, MCP Server Card, AI Catalog, ARD and .fafa"
-			width="1200"
-			height="630"
-			loading="eager"
-			decoding="async"
-		/>
-	</div>
+	<ZoomImage
+		src="/blog/pack-of-cards-hero.png"
+		alt="Five agent-card specs drawn as one map: A2A, MCP Server Card, AI Catalog, ARD and .fafa"
+		width={1200}
+		height={630}
+	/>
 
 	<article class="post-content">
 		<section class="intro">
@@ -369,16 +366,6 @@ Comments · suggestions welcome.`;
 		color: #fff;
 	}
 
-	.hero-image {
-		margin: 0 0 2.5rem;
-		border-radius: 12px;
-		overflow: hidden;
-	}
-	.hero-image img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
 
 	.post-content section {
 		margin-bottom: 2.5rem;
