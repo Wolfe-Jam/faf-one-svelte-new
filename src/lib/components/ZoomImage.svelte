@@ -109,6 +109,10 @@
 	}
 
 	.zoom-dialog {
+		/* app.css has a global `* { margin: 0 }`, which beats the UA's
+		   `dialog:modal { margin: auto }` and pins the dialog top-left.
+		   Restore it explicitly or the modal is not centred. */
+		margin: auto;
 		max-width: 96vw;
 		max-height: 96vh;
 		padding: 0;
@@ -125,7 +129,8 @@
 	.zoom-full {
 		display: block;
 		max-width: 96vw;
-		max-height: 88vh;
+		/* leaves room under the centred dialog for the close button at -3rem */
+		max-height: 84vh;
 		width: auto;
 		height: auto;
 		border-radius: 12px;
