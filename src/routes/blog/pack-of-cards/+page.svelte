@@ -83,9 +83,9 @@ Comments · suggestions welcome.`;
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> Machines find an agent or a server through cards — small files they read.
-				There are five that matter, every spec lives in public git, and we read every version and drew
-				them as one map, after Harry Beck's Underground diagram.
-				<a href="/pack-of-cards">See the map →</a>
+				Five seem prominent. Every spec lives in public git, so we read every version and drew them
+				as one map, after Harry Beck's Underground diagram.
+				<a href="/pack-of-cards#map">See the map →</a>
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
@@ -267,7 +267,7 @@ Comments · suggestions welcome.`;
 				<code>npx <NpmPkg name="faf-cli" version="latest" /> cards --target catalog,ard</code>
 			</div>
 			<p class="muted-note">
-				<a href="/pack-of-cards">The map</a>
+				<a href="/pack-of-cards#map">The map</a>
 				·
 				<a href="/pack-of-cards/register">the register</a>
 				·
