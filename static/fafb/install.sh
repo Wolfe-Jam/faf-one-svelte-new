@@ -3,7 +3,7 @@
 # Makes ~/fafb-drive. Puts faf on PATH via env.sh.
 set -euo pipefail
 
-VERSION="${FAFB_BINARY_VERSION:-0.9.0}"
+VERSION="${FAFB_BINARY_VERSION:-0.9.5}"
 DEST="${FAFB_DRIVE_HOME:-$HOME/fafb-drive}"
 CACHE="${FAFB_CACHE_DIR:-$HOME/.cache/fafb}"
 BASE="${FAFB_DIST_BASE:-https://github.com/Wolfe-Jam/fafb-dist/releases/download/v${VERSION}}"
