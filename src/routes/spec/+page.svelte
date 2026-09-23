@@ -118,6 +118,7 @@ commands:
 		<section>
 			<h2>The wire (v2)</h2>
 			<p>A 32-byte little-endian header (magic <code>FAFB</code>, version, feature flags, source CRC32, and offsets), then section data in canonical order, a string table, and a 16-byte-per-entry <strong>section table at the end</strong> for O(1) access. Readers ignore unknown flag bits and skip unknown section names.</p>
+			<p class="spec-pointer"><strong>The tour → <a href="/bricks">Anatomy of a Brick</a></strong> — nine things about those bytes, each with the run it came from.</p>
 			<p class="spec-pointer"><strong>Full specification → <a href="https://github.com/Wolfe-Jam/faf-rust/blob/main/crates/faf-fafb/BINARY-FORMAT.md">BINARY-FORMAT.md</a></strong></p>
 		</section>
 
