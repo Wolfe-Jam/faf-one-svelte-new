@@ -4,11 +4,11 @@
 	let mounted = false;
 	onMount(() => { mounted = true; });
 
-	const shareText = `Countdown to 150k.
+	const shareText = `We expect to hit 150,000 downloads on September 25.
 
-149,405 downloads across npm, PyPI and crates.io. 595 to go — about a day at current pace.
+149,405 today across npm, PyPI and crates.io. 595 to go at +684/day.
 
-+684/day since the 133k crossing.
+Posting the prediction before the fact, so you can check it.
 The number is a hard floor: PyPI without_mirrors only, 26 packages, 3 registries.
 
 npx faf-cli auto
@@ -20,10 +20,10 @@ Comments · suggestions welcome.`;
 </script>
 
 <svelte:head>
-	<title>Countdown to 150k | FAF</title>
-	<meta name="description" content="149,405 downloads. 595 to go. The shortest countdown we have run — and the number is a floor, not a headline. Counts fed daily, pace derived, nothing typed by hand." />
-	<meta property="og:title" content="Countdown to 150k — FAF Ecosystem" />
-	<meta property="og:description" content="595 to go, about a day at current pace. The number is a hard floor: PyPI without_mirrors only, 26 packages, 3 registries." />
+	<title>150k on September 25 | FAF</title>
+	<meta name="description" content="149,405 downloads today, 595 to go at 684 a day. We expect to cross 150,000 on September 25 — the prediction posted before the fact, so you can check it. The number is a floor, not a headline." />
+	<meta property="og:title" content="We expect 150k on September 25 — FAF Ecosystem" />
+	<meta property="og:description" content="149,405 today, 595 to go at +684/day. Prediction posted before the fact. The number is a hard floor: PyPI without_mirrors only, 26 packages, 3 registries." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/countdown-150k-hero.png" />
@@ -33,11 +33,11 @@ Comments · suggestions welcome.`;
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Countdown to 150k
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / 150k on September 25
 		</div>
 
-		<h1>Countdown to 150k</h1>
-		<p class="subtitle">595 to go. At this pace, that is tomorrow.</p>
+		<h1>150k on September 25</h1>
+		<p class="subtitle">595 to go at 684 a day. Posting the prediction before the fact, so you can check it.</p>
 		<div class="meta">
 			<time datetime="2026-09-24">September 24, 2026</time>
 			<span class="separator">&bull;</span>
@@ -46,30 +46,34 @@ Comments · suggestions welcome.`;
 	</header>
 
 	<div class="hero-image">
-		<img src="/blog/countdown-150k-hero.png" alt="Countdown to 150k — 595 downloads to go, 149,405 down across npm, PyPI and crates.io." />
+		<img src="/blog/countdown-150k-hero.png" alt="150k expected September 25 — 149,405 downloads today, 595 to go at 684 a day across npm, PyPI and crates.io." />
 	</div>
 
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> The FAF ecosystem sits at <strong>149,405 downloads</strong> across npm, PyPI and crates.io &mdash; <strong>595 short</strong> of 150,000. That is under a day at the current pace, which makes this the shortest countdown we have run. The number is also a <em>floor</em>, not a headline, and that part matters more than the milestone.
+				<strong>TL;DR:</strong> The FAF ecosystem sits at <strong>149,405 downloads</strong> across npm, PyPI and crates.io &mdash; <strong>595 short</strong> of 150,000, running at 684 a day. So we expect to cross on <strong>September 25</strong>, and we are saying so the day before rather than the day after. Check it against <a href="/downloads">/downloads</a> tomorrow. The number is also a <em>floor</em>, not a headline, and that part matters more than the milestone.
 			</p>
 		</section>
 
 		<section class="celebration">
-			<div class="big-number">595</div>
-			<div class="big-label">downloads to go</div>
+			<div class="big-number">Sep 25</div>
+			<div class="big-label">595 to go &middot; 684 a day</div>
 		</section>
 
 		<section>
-			<h2>Today&rsquo;s Count</h2>
+			<h2>The Prediction</h2>
 
-			<pre class="heartbeat"><code>{`Countdown to 150k
-149,405 downloads · 595 to go
-+684/day since the 133k crossing · ~1 day at this pace
-npm 135,347 · PyPI 12,154 · crates 1,904`}</code></pre>
+			<pre class="heartbeat"><code>{`150,000 expected 2026-09-25
+149,405 today · 595 to go · +684/day since the 133k crossing
+npm 135,347 · PyPI 12,154 · crates 1,904
+
+the meter refreshes 09:00 UTC daily
+tomorrow's refresh should read ~150,089`}</code></pre>
 
 			<p>Every number above is <em>fed, not typed</em> &mdash; the same daily-refreshed file that powers the banner at the top of this site and the table on <a href="/downloads">/downloads</a>. One source, three surfaces.</p>
+
+			<p>A forecast is only worth reading if it can be wrong. This one is dated, the arithmetic is above it, and the number it will be checked against is public. If the 25th comes and the meter reads 149,9-something, that is on us and it stays on the page.</p>
 		</section>
 
 		<section>
@@ -102,7 +106,7 @@ npm 135,347 · PyPI 12,154 · crates 1,904`}</code></pre>
 				<span class="copy-btn">Copy</span>
 			</button>
 
-			<p>Every install is one less to go. Watch the banner at the top of this page tick over &mdash; or check back tomorrow.</p>
+			<p>Every install is one less to go, and 595 is a small enough gap that readers of this post could move it themselves. Watch the banner at the top of this page tick over &mdash; then check <a href="/downloads">/downloads</a> on the 25th and see whether we called it.</p>
 		</section>
 
 		<section class="share-section">

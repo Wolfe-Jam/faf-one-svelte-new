@@ -32,12 +32,12 @@
 	const posts = [
 		{
 			slug: 'blog/countdown-150k',
-			title: 'Countdown to 150k',
+			title: '150k on September 25',
 			version: 'faf.one/downloads',
 			date: 'September 24, 2026',
 			timestamp: '2026-09-24',
 			excerpt:
-				'149,405 downloads. 595 to go — about a day at current pace. The shortest countdown we have run, and the number is a floor, not a headline: PyPI without_mirrors only, 26 packages, 3 registries.',
+				'149,405 downloads today, 595 to go at 684 a day. We expect to cross 150,000 on the 25th — posted the day before rather than the day after, so you can check it. The number is a floor, not a headline.',
 			emoji: '🏆',
 			category: 'Milestone'
 		},
