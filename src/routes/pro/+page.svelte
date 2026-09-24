@@ -76,11 +76,11 @@
 
 		<!-- ============ PRO SECTION (Rust) ============ -->
 		<section class="product-section rust-section">
-			<div class="badge rust-badge">rust-faf-cli</div>
+			<div class="badge rust-badge">FAFb</div>
 
 			<h2 class="section-title">Pro &mdash; the Rust compiler suite</h2>
 			<p class="rust-intro">
-				For CI-scale and power-user workflows the free CLI isn't built for. 288x faster parsing, built for xAI, now available to everyone.
+				For CI-scale and power-user workflows the free CLI isn't built for. Native Rust, all 33 slots scored, and the compiled brick.
 			</p>
 			<div class="free-pro-grid">
 				<div class="tier-card free-card">
@@ -109,9 +109,10 @@
 			</div>
 
 			<div class="install-inline">
-				<div class="code-box rust-code-box">brew install Wolfe-Jam/faf/rust-faf-cli</div>
+				<div class="code-box rust-code-box">curl -fsSL https://faf.one/fafb/install.sh | bash</div>
 				<p class="install-alt">
-					Or grab a binary from <a href="https://github.com/Wolfe-Jam/rust-faf-cli/releases" class="rust-link">GitHub Releases</a>
+					macOS, Linux and Windows. No Rust toolchain, no account, no token &mdash;
+					first Pro command starts the trial.
 				</p>
 			</div>
 		</section>
@@ -218,7 +219,7 @@
 					<div class="step-number">2</div>
 					<div class="step-content">
 						<h4>Activate</h4>
-						<div class="code-box">faf pro activate FAF-XXXX-XXXX-XXXX-XXXX</div>
+						<div class="code-box">faf pro activate FAF-PRO-XXXX-XXXX-XXXX</div>
 						<p>One key, one <code>~/.faf/license.json</code>.</p>
 					</div>
 				</div>
