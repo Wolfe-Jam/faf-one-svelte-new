@@ -46,7 +46,7 @@ Comments · suggestions welcome.`;
 	</header>
 
 	<div class="hero-image">
-		<img src="/blog/countdown-150k-hero.png" alt="150k expected September 25 — 149,405 downloads today, 595 to go at 684 a day across npm, PyPI and crates.io." />
+		<img src="/blog/countdown-150k-chart.jpeg" alt="Cumulative .faf downloads from June 2025 to September 2026, rising from 10k in November 2025 through 36k in March 2026, 70k on May 10 and 100k on June 20, to 150k expected on September 25, 2026." />
 	</div>
 
 	<article class="post-content">
