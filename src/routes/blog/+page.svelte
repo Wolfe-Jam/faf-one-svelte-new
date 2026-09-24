@@ -37,7 +37,7 @@
 			date: 'September 24, 2026',
 			timestamp: '2026-09-24',
 			excerpt:
-				'149,351 downloads. 649 to go — about a day at current pace. The shortest countdown we have run, and the number is a floor, not a headline: PyPI without_mirrors only, 26 packages, 3 registries.',
+				'149,405 downloads. 595 to go — about a day at current pace. The shortest countdown we have run, and the number is a floor, not a headline: PyPI without_mirrors only, 26 packages, 3 registries.',
 			emoji: '🏆',
 			category: 'Milestone'
 		},

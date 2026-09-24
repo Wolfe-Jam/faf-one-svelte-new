@@ -6,9 +6,9 @@
 
 	const shareText = `Countdown to 150k.
 
-149,351 downloads across npm, PyPI and crates.io. 649 to go — about a day at current pace.
+149,405 downloads across npm, PyPI and crates.io. 595 to go — about a day at current pace.
 
-+711/day since the 133k crossing.
++684/day since the 133k crossing.
 The number is a hard floor: PyPI without_mirrors only, 26 packages, 3 registries.
 
 npx faf-cli auto
@@ -21,9 +21,9 @@ Comments · suggestions welcome.`;
 
 <svelte:head>
 	<title>Countdown to 150k | FAF</title>
-	<meta name="description" content="149,351 downloads. 649 to go. The shortest countdown we have run — and the number is a floor, not a headline. Counts fed daily, pace derived, nothing typed by hand." />
+	<meta name="description" content="149,405 downloads. 595 to go. The shortest countdown we have run — and the number is a floor, not a headline. Counts fed daily, pace derived, nothing typed by hand." />
 	<meta property="og:title" content="Countdown to 150k — FAF Ecosystem" />
-	<meta property="og:description" content="649 to go, about a day at current pace. The number is a hard floor: PyPI without_mirrors only, 26 packages, 3 registries." />
+	<meta property="og:description" content="595 to go, about a day at current pace. The number is a hard floor: PyPI without_mirrors only, 26 packages, 3 registries." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/countdown-150k-hero.png" />
@@ -37,7 +37,7 @@ Comments · suggestions welcome.`;
 		</div>
 
 		<h1>Countdown to 150k</h1>
-		<p class="subtitle">649 to go. At this pace, that is tomorrow.</p>
+		<p class="subtitle">595 to go. At this pace, that is tomorrow.</p>
 		<div class="meta">
 			<time datetime="2026-09-24">September 24, 2026</time>
 			<span class="separator">&bull;</span>
@@ -46,18 +46,18 @@ Comments · suggestions welcome.`;
 	</header>
 
 	<div class="hero-image">
-		<img src="/blog/countdown-150k-hero.png" alt="Countdown to 150k — 649 downloads to go, 149,351 down across npm, PyPI and crates.io." />
+		<img src="/blog/countdown-150k-hero.png" alt="Countdown to 150k — 595 downloads to go, 149,405 down across npm, PyPI and crates.io." />
 	</div>
 
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> The FAF ecosystem sits at <strong>149,351 downloads</strong> across npm, PyPI and crates.io &mdash; <strong>649 short</strong> of 150,000. That is under a day at the current pace, which makes this the shortest countdown we have run. The number is also a <em>floor</em>, not a headline, and that part matters more than the milestone.
+				<strong>TL;DR:</strong> The FAF ecosystem sits at <strong>149,405 downloads</strong> across npm, PyPI and crates.io &mdash; <strong>595 short</strong> of 150,000. That is under a day at the current pace, which makes this the shortest countdown we have run. The number is also a <em>floor</em>, not a headline, and that part matters more than the milestone.
 			</p>
 		</section>
 
 		<section class="celebration">
-			<div class="big-number">649</div>
+			<div class="big-number">595</div>
 			<div class="big-label">downloads to go</div>
 		</section>
 
@@ -65,9 +65,9 @@ Comments · suggestions welcome.`;
 			<h2>Today&rsquo;s Count</h2>
 
 			<pre class="heartbeat"><code>{`Countdown to 150k
-149,351 downloads · 649 to go
-+711/day since the 133k crossing · ~1 day at this pace
-npm 135,347 · PyPI 12,132 · crates 1,872`}</code></pre>
+149,405 downloads · 595 to go
++684/day since the 133k crossing · ~1 day at this pace
+npm 135,347 · PyPI 12,154 · crates 1,904`}</code></pre>
 
 			<p>Every number above is <em>fed, not typed</em> &mdash; the same daily-refreshed file that powers the banner at the top of this site and the table on <a href="/downloads">/downloads</a>. One source, three surfaces.</p>
 		</section>
@@ -75,7 +75,7 @@ npm 135,347 · PyPI 12,132 · crates 1,872`}</code></pre>
 		<section>
 			<h2>The Number Is a Floor</h2>
 
-			<p>149,351 is not the biggest number we could print. It is the biggest one we can defend.</p>
+			<p>149,405 is not the biggest number we could print. It is the biggest one we can defend.</p>
 
 			<p>The meter counts npm and crates.io as reported, and PyPI as <code>without_mirrors</code> only &mdash; real installs, no mirror or bot traffic folded in. The PyPI statistics window runs about 180 days, so every package older than that is <strong>undercounted on purpose</strong>. Twenty-six packages, three registries, one hard floor.</p>
 
@@ -85,11 +85,11 @@ npm 135,347 · PyPI 12,132 · crates 1,872`}</code></pre>
 		<section>
 			<h2>From 133k, 24 Days Ago</h2>
 
-			<p>133,000 landed on <a href="/blog/hundred-thirty-three-thousand">August 31</a> &mdash; that one was +32,000 in 72 days. The 16,351 since arrived in 23.</p>
+			<p>133,000 landed on <a href="/blog/hundred-thirty-three-thousand">August 31</a> &mdash; that one was +32,000 in 72 days. The 16,405 since arrived in 24.</p>
 
 			<pre class="heartbeat"><code>{`60k  → 100k    +40,000 in 51 days    784/day
 100k → 133k    +33,000 in 72 days    458/day
-133k → today   +16,351 in 23 days    711/day`}</code></pre>
+133k → today   +16,405 in 24 days    684/day`}</code></pre>
 
 			<p>The middle stretch was the slow one. The pace since has not quite returned to the run into six figures, but it is close &mdash; and it came with no launch, no campaign and no marketing spend behind it.</p>
 		</section>
