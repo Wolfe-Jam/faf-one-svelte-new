@@ -16,8 +16,8 @@ npx faf-cli auto
 Help guide what we build —
 Comments · suggestions welcome.`;
 	const chartSvg = `<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ct cd" class="faf-chart">
-<title id="ct">Cumulative .faf downloads, September 2025 to September 2026</title>
-<desc id="cd">A line rising from zero on 16 September 2025 to 149,405 on 24 September 2026, steepening through the year, with a dashed final segment to 150,000 expected on 25 September 2026.</desc>
+<title id="ct">Cumulative .faf downloads, June 2025 to September 2026</title>
+<desc id="cd">Flat at zero from June 2025 until the first package was published on 16 September 2025, then rising to 149,405 by 24 September 2026. A visible step down of 21,981 on 1 August 2026, when PyPI mirror traffic was removed from the count. A dashed final segment reaches 150,000, expected 25 September.</desc>
 <style>
 .faf-chart{--ink:#1a1a1a;--ink2:#3a352d;--line:#e6e1d6;--ring:#FEFCF8;--faf:#FF6B35;font-family:'Roboto Condensed','Arial Narrow',system-ui,sans-serif}
 @media (prefers-color-scheme:dark){.faf-chart:not([data-theme=light]){--ink:#f2f2f2;--ink2:#d8d3ca;--line:#2b2a28;--ring:#0a0a0a}}
@@ -31,7 +31,8 @@ Comments · suggestions welcome.`;
 .faf-chart .fc-dot-proj{fill:var(--ring);stroke:var(--faf);stroke-width:3}
 .faf-chart .fc-leader{stroke:var(--ink2);stroke-width:1}
 .faf-chart .fc-lab{fill:var(--ink);font-size:26px;font-weight:700}
-.faf-chart .fc-lab-proj{fill:var(--ink2);font-weight:400;font-style:italic;font-size:23px}
+.faf-chart .fc-note{fill:var(--faf)}
+.faf-chart .fc-lab-proj{fill:var(--ink2);font-weight:400;font-style:italic;font-size:21px}
 .faf-chart .fc-hd{fill:var(--ink);font-size:33px;font-weight:700}
 .faf-chart .fc-sub{fill:var(--ink2);font-size:21px;font-family:'Roboto Mono',ui-monospace,Menlo,monospace}
 </style>
@@ -51,32 +52,31 @@ Comments · suggestions welcome.`;
 <text class="fc-ax" x="94" y="261.3" text-anchor="end">125k</text>
 <line class="fc-grid" x1="112" y1="104.0" x2="1028" y2="104.0"/>
 <text class="fc-ax" x="94" y="112.0" text-anchor="end">150k</text>
-<text class="fc-ax" x="148.7" y="1040" text-anchor="start">Oct 2025</text>
-<text class="fc-ax" x="374.1" y="1040" text-anchor="middle">Jan 2026</text>
-<text class="fc-ax" x="594.5" y="1040" text-anchor="middle">Apr 2026</text>
-<text class="fc-ax" x="817.4" y="1040" text-anchor="middle">Jul 2026</text>
-<text class="fc-ax" x="1028.0" y="1040" text-anchor="end">Sep 2026</text>
-<path class="fc-ar" d="M112.0,1000.0 L217.3,937.3 L405.9,880.5 L513.7,820.8 L594.5,701.3 L665.5,641.6 L690.0,581.9 L790.4,402.7 L966.8,205.5 L1025.6,107.6 L1025.6,1000.0 L112.0,1000.0 Z"/>
-<path class="fc-ln" d="M112.0,1000.0 L217.3,937.3 L405.9,880.5 L513.7,820.8 L594.5,701.3 L665.5,641.6 L690.0,581.9 L790.4,402.7 L966.8,205.5 L1025.6,107.6"/>
-<path class="fc-ln-proj" d="M1025.6,107.6 L1028.0,104.0"/>
-<circle class="fc-dot" cx="112.0" cy="1000.0" r="6"><title>first package published (claude-faf-mcp) &#183; 16 Sep 2025</title></circle>
-<circle class="fc-dot" cx="217.3" cy="937.3" r="6"><title>10,500 downloads &#183; 29 Oct 2025</title></circle>
-<text class="fc-lab" x="231.3" y="925.3" text-anchor="start">10.5k</text>
-<circle class="fc-dot" cx="405.9" cy="880.5" r="6"><title>20,000 downloads &#183; 14 Jan 2026</title></circle>
-<circle class="fc-dot" cx="513.7" cy="820.8" r="6"><title>30,000 downloads &#183; 27 Feb 2026</title></circle>
-<circle class="fc-dot" cx="594.5" cy="701.3" r="6"><title>50,000 downloads &#183; 1 Apr 2026</title></circle>
-<text class="fc-lab" x="580.5" y="695.3" text-anchor="end">50k</text>
-<circle class="fc-dot" cx="665.5" cy="641.6" r="6"><title>60,000 downloads &#183; 30 Apr 2026</title></circle>
-<circle class="fc-dot" cx="690.0" cy="581.9" r="6"><title>~70,000 (derived, not a published milestone) &#183; 10 May 2026</title></circle>
-<circle class="fc-dot" cx="790.4" cy="402.7" r="6"><title>100,000 downloads &#183; 20 Jun 2026</title></circle>
-<text class="fc-lab" x="776.4" y="396.7" text-anchor="end">100k</text>
-<circle class="fc-dot" cx="966.8" cy="205.5" r="6"><title>133,000 downloads &#183; 31 Aug 2026</title></circle>
-<text class="fc-lab" x="952.8" y="199.5" text-anchor="end">133k</text>
-<circle class="fc-dot" cx="1025.6" cy="107.6" r="6"><title>149,405 downloads today &#183; 24 Sep 2026</title></circle>
+<text class="fc-ax" x="169.1" y="1040" text-anchor="start">Jul 2025</text>
+<text class="fc-ax" x="403.4" y="1040" text-anchor="middle">Nov 2025</text>
+<text class="fc-ax" x="631.9" y="1040" text-anchor="middle">Mar 2026</text>
+<text class="fc-ax" x="864.2" y="1040" text-anchor="middle">Jul 2026</text>
+<path class="fc-ar" d="M112.0,1000.0 L315.8,1000.0 L397.7,937.3 L544.3,880.5 L628.1,800.8 L630.0,799.5 L641.4,782.9 L677.6,726.6 L690.9,700.5 L704.3,682.5 L769.0,570.8 L778.5,554.2 L782.3,545.4 L784.2,543.2 L786.1,541.8 L788.0,543.6 L790.0,542.7 L791.9,539.5 L793.8,538.6 L795.7,532.6 L797.6,527.7 L799.5,527.0 L801.4,525.8 L803.3,521.8 L805.2,518.2 L807.1,511.6 L809.0,508.6 L810.9,505.7 L812.8,503.2 L814.7,499.0 L816.6,497.8 L818.5,492.5 L820.4,482.5 L822.3,480.4 L824.2,469.4 L826.1,467.1 L828.0,453.1 L829.9,441.9 L831.9,439.1 L833.8,434.1 L835.7,428.9 L837.6,425.6 L839.5,416.2 L841.4,413.7 L843.3,402.4 L845.2,399.1 L847.1,392.7 L849.0,386.5 L850.9,381.7 L852.8,376.5 L854.7,374.0 L856.6,368.4 L858.5,367.0 L860.4,359.9 L862.3,353.4 L864.2,348.4 L866.1,337.3 L868.0,334.0 L869.9,329.5 L871.8,322.6 L873.7,319.8 L875.7,315.1 L877.6,310.8 L879.5,307.5 L881.4,304.6 L883.3,299.5 L885.2,295.3 L887.1,294.4 L889.0,292.2 L890.9,289.1 L892.8,286.8 L894.7,283.9 L896.6,282.0 L898.5,280.5 L900.4,278.5 L902.3,274.8 L904.2,268.0 L906.1,264.7 L908.0,262.8 L909.9,261.0 L911.8,256.0 L913.7,254.6 L915.6,253.5 L917.5,251.6 L919.5,248.2 L921.4,246.8 L923.3,379.9 L925.2,374.0 L927.1,370.1 L929.0,361.9 L930.9,358.9 L932.8,356.4 L934.7,352.5 L936.6,352.1 L938.5,346.0 L940.4,339.3 L942.3,339.1 L944.2,332.8 L946.1,326.7 L948.0,321.1 L949.9,314.9 L951.8,304.7 L953.7,301.7 L955.6,301.3 L957.5,290.8 L959.4,277.0 L961.3,267.0 L963.3,248.2 L965.2,238.0 L967.1,231.1 L969.0,230.8 L970.9,222.4 L972.8,214.6 L974.7,211.6 L976.6,209.9 L978.5,208.3 L980.4,205.9 L982.3,202.9 L984.2,198.3 L986.1,195.1 L988.0,194.9 L989.9,193.4 L991.8,194.0 L993.7,191.2 L995.6,188.7 L997.5,186.2 L999.4,179.3 L1001.3,169.2 L1003.2,166.3 L1005.1,160.1 L1007.1,142.2 L1009.0,137.5 L1010.9,137.1 L1012.8,130.2 L1014.7,119.1 L1016.6,115.8 L1018.5,113.6 L1020.4,110.6 L1022.3,108.0 L1024.2,107.9 L1026.1,107.6 L1026.1,1000.0 L112.0,1000.0 Z"/>
+<path class="fc-ln" d="M112.0,1000.0 L315.8,1000.0 L397.7,937.3 L544.3,880.5 L628.1,800.8 L630.0,799.5 L641.4,782.9 L677.6,726.6 L690.9,700.5 L704.3,682.5 L769.0,570.8 L778.5,554.2 L782.3,545.4 L784.2,543.2 L786.1,541.8 L788.0,543.6 L790.0,542.7 L791.9,539.5 L793.8,538.6 L795.7,532.6 L797.6,527.7 L799.5,527.0 L801.4,525.8 L803.3,521.8 L805.2,518.2 L807.1,511.6 L809.0,508.6 L810.9,505.7 L812.8,503.2 L814.7,499.0 L816.6,497.8 L818.5,492.5 L820.4,482.5 L822.3,480.4 L824.2,469.4 L826.1,467.1 L828.0,453.1 L829.9,441.9 L831.9,439.1 L833.8,434.1 L835.7,428.9 L837.6,425.6 L839.5,416.2 L841.4,413.7 L843.3,402.4 L845.2,399.1 L847.1,392.7 L849.0,386.5 L850.9,381.7 L852.8,376.5 L854.7,374.0 L856.6,368.4 L858.5,367.0 L860.4,359.9 L862.3,353.4 L864.2,348.4 L866.1,337.3 L868.0,334.0 L869.9,329.5 L871.8,322.6 L873.7,319.8 L875.7,315.1 L877.6,310.8 L879.5,307.5 L881.4,304.6 L883.3,299.5 L885.2,295.3 L887.1,294.4 L889.0,292.2 L890.9,289.1 L892.8,286.8 L894.7,283.9 L896.6,282.0 L898.5,280.5 L900.4,278.5 L902.3,274.8 L904.2,268.0 L906.1,264.7 L908.0,262.8 L909.9,261.0 L911.8,256.0 L913.7,254.6 L915.6,253.5 L917.5,251.6 L919.5,248.2 L921.4,246.8 L923.3,379.9 L925.2,374.0 L927.1,370.1 L929.0,361.9 L930.9,358.9 L932.8,356.4 L934.7,352.5 L936.6,352.1 L938.5,346.0 L940.4,339.3 L942.3,339.1 L944.2,332.8 L946.1,326.7 L948.0,321.1 L949.9,314.9 L951.8,304.7 L953.7,301.7 L955.6,301.3 L957.5,290.8 L959.4,277.0 L961.3,267.0 L963.3,248.2 L965.2,238.0 L967.1,231.1 L969.0,230.8 L970.9,222.4 L972.8,214.6 L974.7,211.6 L976.6,209.9 L978.5,208.3 L980.4,205.9 L982.3,202.9 L984.2,198.3 L986.1,195.1 L988.0,194.9 L989.9,193.4 L991.8,194.0 L993.7,191.2 L995.6,188.7 L997.5,186.2 L999.4,179.3 L1001.3,169.2 L1003.2,166.3 L1005.1,160.1 L1007.1,142.2 L1009.0,137.5 L1010.9,137.1 L1012.8,130.2 L1014.7,119.1 L1016.6,115.8 L1018.5,113.6 L1020.4,110.6 L1022.3,108.0 L1024.2,107.9 L1026.1,107.6"/>
+<path class="fc-ln-proj" d="M1026.1,107.6 L1028.0,104.0"/>
+<circle class="fc-dot" cx="315.8" cy="1000.0" r="6"><title>first package published (claude-faf-mcp) &#183; 16 Sep 2025</title></circle>
+<circle class="fc-dot" cx="397.7" cy="937.3" r="6"><title>10,500 downloads &#183; 29 Oct 2025</title></circle>
+<text class="fc-lab" x="411.7" y="925.3" text-anchor="start">10.5k</text>
+<circle class="fc-dot" cx="544.3" cy="880.5" r="6"><title>20,000 downloads &#183; 14 Jan 2026</title></circle>
+<circle class="fc-dot" cx="690.9" cy="700.5" r="6"><title>50,134 on the meter &#183; 1 Apr 2026</title></circle>
+<text class="fc-lab" x="676.9" y="694.5" text-anchor="end">50k</text>
+<circle class="fc-dot" cx="843.3" cy="402.4" r="6"><title>100,000 downloads &#183; 20 Jun 2026</title></circle>
+<text class="fc-lab" x="829.3" y="396.4" text-anchor="end">100k</text>
+<circle class="fc-dot" cx="980.4" cy="205.9" r="6"><title>133,000 downloads &#183; 31 Aug 2026</title></circle>
+<text class="fc-lab" x="988.4" y="191.9" text-anchor="start">133k</text>
+<circle class="fc-dot" cx="923.3" cy="379.9" r="6"><title>1 Aug 2026 &#183; hard floor locked &#183; 125,794 to 103,813</title></circle>
+<line class="fc-leader" x1="915.3" y1="387.9" x2="871.3" y2="471.9"/>
+<text class="fc-lab fc-note" x="820.0" y="298.0" text-anchor="end">&#8722;21,981</text>
+<text class="fc-lab-proj" x="136.8" y="978.0" text-anchor="start">.faf existed. Nothing published yet.</text>
 <circle class="fc-dot-proj" cx="1028.0" cy="104.0" r="8"><title>150,000 expected 25 Sep 2026</title></circle>
 <line class="fc-leader" x1="1018.0" y1="118.0" x2="1008.0" y2="288.0"/>
 <text class="fc-lab" x="1002.0" y="316.0" text-anchor="end">149,405 today</text>
-<text class="fc-lab fc-lab-proj" x="1002.0" y="346.0" text-anchor="end">150,000 expected 25 Sep</text>
+<text class="fc-lab-proj" x="1002.0" y="346.0" text-anchor="end">150,000 expected 25 Sep</text>
 </svg>`;
 	const shareUrl = 'https://faf.one/blog/countdown-150k';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
@@ -146,6 +146,15 @@ tomorrow's refresh should read ~150,089`}</code></pre>
 
 			<p>The meter counts npm and crates.io as reported, and PyPI as <code>without_mirrors</code> only &mdash; real installs, no mirror or bot traffic folded in. The PyPI statistics window runs about 180 days, so every package older than that is <strong>undercounted on purpose</strong>. Twenty-six packages, three registries, one hard floor.</p>
 
+			<p>We know what that costs, because we paid it. Until 1 August the meter counted PyPI downloads <em>with</em> mirrors. Then we switched it off:</p>
+
+			<pre class="heartbeat"><code>{`2026-08-01  e67c292  hard floor meter — PyPI without_mirrors only
+125,794  ->  103,813      one-time step-down
+                          -21,981 downloads, written off
+                          same installs, stricter meter`}</code></pre>
+
+			<p>Twenty-two thousand downloads, gone in a commit. It cost us a milestone post too: 111,111 had already been crossed on 3 July under the old count, the correction put us back underneath it, and by the time we re-crossed honestly on 12 August, 133,000 was the nearer target. That post is archived, unshipped.</p>
+
 			<p>Counting mirrors would make the number bigger and make it worth less. A milestone you have to explain is not a milestone.</p>
 		</section>
 
@@ -168,10 +177,10 @@ tomorrow's refresh should read ~150,089`}</code></pre>
 
 			<figure class="chart">
 				{@html chartSvg}
-				<figcaption>Solid to 149,405 today. The last 595 is dashed, ending in a hollow ring, because it has not happened yet.</figcaption>
+				<figcaption>Flat until the first package went up on 16 September 2025. The cliff on 1 August is the mirror write-off. Solid to 149,405 today; the last 595 is dashed, ending in a hollow ring, because it has not happened yet.</figcaption>
 			</figure>
 
-			<p>Two things the shape shows that the numbers alone do not: the flat stretch through January and February, and the turn in April that has not let up since.</p>
+			<p>The bumps are the point. A flat first quarter when the format existed and nobody had downloaded it. The turn in April that has not let up since. And the notch, which is the only part of this curve we put there on purpose.</p>
 		</section>
 
 		<section>
