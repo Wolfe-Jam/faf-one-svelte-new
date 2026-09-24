@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/another-brick',
+			title: 'All in all, another Brick in the Wall',
+			date: 'September 23, 2026',
+			timestamp: '2026-09-23',
+			excerpt:
+				'A yank does not edit a crate\'s description — ours advertised a claim that was never true for six months. Three more findings from auditing our own published surfaces.',
+			emoji: '🧱',
+			// Story: a case study, not a release — no version clue.
+			category: 'Story'
+		},
+		{
 			slug: 'blog/pack-of-cards',
 			title: 'Pack of Cards',
 			date: 'September 21, 2026',
