@@ -247,6 +247,41 @@
 		</div>
 	</section>
 
+	<!-- Editor Extension — linked, deliberately NOT counted in the hard floor -->
+	<section class="pkg-section" id="editors">
+		<div class="container">
+			<h2 class="section-title">
+				<span class="section-icon vscode-icon">VS Code</span>
+				<span>Editor Extension</span>
+				<span class="section-count">1 extension &middot; not in the hard floor</span>
+			</h2>
+			<div class="cards-grid">
+				<div class="pkg-card">
+					<div class="card-top">
+						<span class="card-icon">🏎️</span>
+						<span class="card-name">faf-context</span>
+					</div>
+					<p class="card-desc">Score, tier and drift in the editor sidebar</p>
+					<div class="install-box">
+						<code class="install-cmd">$ code --install-extension faf.faf-context</code>
+						<button
+							class="copy-btn"
+							class:copied={copiedIndex === allPackages.length}
+							onclick={() => copyInstall('code --install-extension faf.faf-context', allPackages.length)}
+						>
+							{copiedIndex === allPackages.length ? 'Copied' : 'Copy'}
+						</button>
+					</div>
+					<div class="card-links">
+						<a href="https://marketplace.visualstudio.com/items?itemName=faf.faf-context" target="_blank" rel="noopener" class="card-link plain-link">Marketplace</a>
+						<a href="https://open-vsx.org/extension/faf/faf-context" target="_blank" rel="noopener" class="card-link plain-link">Open VSX</a>
+						<a href="https://github.com/Wolfe-Jam/faf-vscode" target="_blank" rel="noopener" class="card-link github-link">GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- CTA Section -->
 	<section class="cta-section" id="notify">
 		<div class="container">
@@ -559,6 +594,14 @@
 		color: #111;
 	}
 
+	/* Editor extension: black and white, no registry colour.
+	   --faf-black and --faf-cream invert together, so the pill
+	   self-contrasts in both themes. */
+	.vscode-icon {
+		background: var(--faf-black);
+		color: var(--faf-cream);
+	}
+
 	.section-count {
 		font-size: 0.85rem;
 		color: var(--faf-dark);
@@ -719,10 +762,15 @@
 		background: rgba(222, 165, 43, 0.25);
 	}
 
-	.github-link {
+	.github-link,
+	.plain-link {
 		background: var(--faf-gray-light);
 		color: var(--faf-black);
 		border: 1px solid var(--faf-light-gray);
+	}
+
+	.plain-link:hover {
+		color: var(--faf-orange);
 	}
 
 	.github-link:hover {
