@@ -22,6 +22,7 @@
 		'https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd';
 	const FLAG = 'chrome://flags/#enable-webmcp-testing';
 	const SOURCE = 'https://github.com/Wolfe-Jam/faf-one-svelte-new/tree/main/src/routes/webmcp';
+	const LISTING = 'https://github.com/webmachinelearning/awesome-webmcp#demos';
 	const KNOWN_TOOLS = /** @type {readonly string[]} */ (TOOL_NAMES);
 	/** @type {Array<keyof import('$lib/webmcp/read-context').SixView>} */
 	const SIX_KEYS = ['who', 'what', 'why', 'where', 'when', 'how'];
@@ -358,6 +359,10 @@ ${SNIPPET_PROPS}
 			<a class="primary" href="#try">Try it</a>
 			<a class="ghost" href={SOURCE} target="_blank" rel="noopener noreferrer">View source</a>
 		</div>
+		<p class="hint listed">
+			Listed in the W3C Web Machine Learning group's
+			<a href={LISTING} target="_blank" rel="noopener noreferrer">awesome-webmcp</a> (Demos).
+		</p>
 		<pre class="output snippet"><code>{SNIPPET}</code></pre>
 	</header>
 
@@ -711,6 +716,11 @@ ${SNIPPET_PROPS}
 	.btn-row a {
 		display: inline-block;
 		text-decoration: none;
+	}
+
+	.listed {
+		margin: -0.5rem 0 1.25rem;
+		font-size: 0.95rem;
 	}
 
 	.hero {
