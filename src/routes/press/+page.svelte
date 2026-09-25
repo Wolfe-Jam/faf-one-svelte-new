@@ -273,7 +273,7 @@
 			
 			<div class="social-links">
 				<a href="https://github.com/Wolfe-Jam/faf" target="_blank" class="social-link">⭐ GitHub</a>
-				<a href="https://twitter.com/faf_format" target="_blank" class="social-link">Twitter</a>
+				<a href="https://x.com/wolfe_jam" target="_blank" rel="noopener" class="social-link">X (Twitter)</a>
 			</div>
 			
 			<p class="contact-note">
