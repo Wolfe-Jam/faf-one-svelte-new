@@ -36,7 +36,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-cli',
 		description: 'CLI for .faf management',
-		downloads: 52_756,
+		downloads: 52_963,
 		install: 'npm i -g faf-cli',
 		registryUrl: 'https://npmjs.com/package/faf-cli',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-cli',
@@ -46,7 +46,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'claude-faf-mcp',
 		description: 'Anthropic-merged MCP server (#2759)',
-		downloads: 23_521,
+		downloads: 23_598,
 		install: 'npx claude-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/claude-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/claude-faf-mcp',
@@ -56,7 +56,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-mcp',
 		description: 'Cursor / VS Code / IDE MCP server',
-		downloads: 11_175,
+		downloads: 11_231,
 		install: 'npx faf-mcp',
 		registryUrl: 'https://npmjs.com/package/faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-mcp',
@@ -66,7 +66,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-scoring-kernel',
 		description: 'Mk4 WASM scoring engine',
-		downloads: 12_390,
+		downloads: 12_517,
 		install: 'npm i faf-scoring-kernel',
 		registryUrl: 'https://npmjs.com/package/faf-scoring-kernel',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-sdk',
@@ -76,7 +76,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'grok-faf-mcp',
 		description: 'MCP server for xAI Grok',
-		downloads: 9_396,
+		downloads: 9_464,
 		install: 'npx grok-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/grok-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-mcp',
@@ -86,7 +86,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization for Context Engineers',
-		downloads: 5_403,
+		downloads: 5_423,
 		install: 'npm i slash-tokens',
 		registryUrl: 'https://npmjs.com/package/slash-tokens',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
@@ -96,7 +96,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'bun-sticky',
 		description: 'Bun-native FAF runtime',
-		downloads: 2_247,
+		downloads: 2_252,
 		install: 'bun add bun-sticky',
 		registryUrl: 'https://npmjs.com/package/bun-sticky',
 		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky',
@@ -106,7 +106,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'wjttc',
 		description: 'Championship-grade MCP testing',
-		downloads: 3_056,
+		downloads: 3_082,
 		install: 'npx wjttc',
 		registryUrl: 'https://npmjs.com/package/wjttc',
 		githubUrl: 'https://github.com/Wolfe-Jam/wjttc',
@@ -116,7 +116,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm-sdk',
 		description: 'Browser/Edge WASM runtime',
-		downloads: 847,
+		downloads: 850,
 		install: 'npm i faf-wasm-sdk',
 		registryUrl: 'https://npmjs.com/package/faf-wasm-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-sdk',
@@ -126,7 +126,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf',
 		description: 'CLI alias (bunx faf → faf-cli)',
-		downloads: 13_228,
+		downloads: 13_307,
 		install: 'bunx faf',
 		registryUrl: 'https://npmjs.com/package/faf',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-cli',
@@ -136,7 +136,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm-core',
 		description: 'Zig WASM kernel — foundational',
-		downloads: 534,
+		downloads: 536,
 		install: 'npm i faf-wasm-core',
 		registryUrl: 'https://npmjs.com/package/faf-wasm-core',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-core',
@@ -146,7 +146,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'bun-sticky-faf',
 		description: 'Fastest Bun FAF CLI',
-		downloads: 373,
+		downloads: 382,
 		install: 'bun add bun-sticky-faf',
 		registryUrl: 'https://npmjs.com/package/bun-sticky-faf',
 		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky-faf',
@@ -156,7 +156,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm',
 		description: 'WASM SDK for browser scoring',
-		downloads: 344,
+		downloads: 346,
 		install: 'npm i faf-wasm',
 		registryUrl: 'https://npmjs.com/package/faf-wasm',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm',
@@ -166,7 +166,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-wasm-gen',
 		description: 'Rust→WASM .faf generator — the generate sibling of faf-wasm-sdk',
-		downloads: 77,
+		downloads: 79,
 		install: 'npm i faf-wasm-gen',
 		registryUrl: 'https://npmjs.com/package/faf-wasm-gen',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-gen',
@@ -246,7 +246,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-rust-sdk',
 		description: 'Rust SDK for .faf files',
-		downloads: 1_146,
+		downloads: 1_150,
 		install: 'cargo add faf-rust-sdk',
 		registryUrl: 'https://crates.io/crates/faf-rust-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
@@ -256,7 +256,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-radio-rust',
 		description: 'Radio Protocol client — tune, listen, broadcast',
-		downloads: 293,
+		downloads: 294,
 		install: 'cargo add faf-radio-rust',
 		registryUrl: 'https://crates.io/crates/faf-radio-rust',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-radio-rust',
