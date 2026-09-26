@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/hundred-fifty-thousand',
+			title: '150,000 Downloads',
+			date: 'September 25, 2026',
+			timestamp: '2026-09-25',
+			excerpt:
+				'Predicted the day before, crossed on the day: forecast ~150,089, counted 150,149 on the hard-floor meter. Plus the one thing the countdown got wrong.',
+			emoji: '🏆',
+			// Milestone: nothing shipped, so no version clue.
+			category: 'Milestone'
+		},
+		{
 			slug: 'blog/countdown-150k',
 			title: '150k on September 25',
 			version: 'faf.one/downloads',
