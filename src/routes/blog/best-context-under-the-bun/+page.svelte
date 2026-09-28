@@ -102,9 +102,9 @@ bunx faf-cli auto — 0% to 100% AI context in 0.5s. Zero code changes.`;
 		<section>
 			<h2>Three Install Paths</h2>
 
-<pre><code>{`bunx faf-cli auto                  # Bun
-npx faf-cli auto                   # npm
-brew install faf-cli && faf auto   # Homebrew`}</code></pre>
+<pre><code>{`bunx faf-cli auto                                 # Bun
+npx faf-cli auto                                  # npm
+brew install wolfe-jam/faf/faf-cli && faf auto    # Homebrew`}</code></pre>
 
 			<p>All three download from the npm registry. Same package. Same counter.</p>
 

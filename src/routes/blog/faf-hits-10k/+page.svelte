@@ -122,7 +122,7 @@ description: What this skill does
 					<div class="validation-icon">🍺</div>
 					<h3>Homebrew Distribution</h3>
 					<p>
-						Available via <code>brew install faf-cli</code> for macOS and Linux users, providing native package management integration.
+						Available via <code>brew install wolfe-jam/faf/faf-cli</code> for macOS and Linux users, providing native package management integration.
 					</p>
 					<p class="validation-stat">5,800 total CLI downloads</p>
 				</div>
@@ -288,8 +288,8 @@ faf score       # Check AI-readiness (0-100%)</code></pre>
 				<code class="copy-code">npm install -g faf-cli</code>
 				<button class="copy-btn">{copiedId === 'install-npm' ? 'Copied!' : 'Copy'}</button>
 			</div>
-			<div class="copy-box" onclick={() => copyText('brew install faf-cli', 'install-brew')}>
-				<code class="copy-code">brew install faf-cli</code>
+			<div class="copy-box" onclick={() => copyText('brew install wolfe-jam/faf/faf-cli', 'install-brew')}>
+				<code class="copy-code">brew install wolfe-jam/faf/faf-cli</code>
 				<button class="copy-btn">{copiedId === 'install-brew' ? 'Copied!' : 'Copy'}</button>
 			</div>
 
