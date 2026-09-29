@@ -37,7 +37,7 @@
 			date: 'September 29, 2026',
 			timestamp: '2026-09-29',
 			excerpt:
-				'faf score now counts all 33 slots, with the same always-33 kernel the rest of FAF uses. Scores can move when you upgrade. Run faf auto and they come back.',
+				'faf-cli v8 authors a new era: the Always33 engine. Same score, everywhere. faf-cli still fills 21 slots, and the 12 enterprise slots stay slotignored. Run faf auto after upgrading and the score comes back.',
 			emoji: '✪',
 			category: 'Release'
 		},

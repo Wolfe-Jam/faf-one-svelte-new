@@ -9,7 +9,7 @@
 
 One engine, one number.
 
-faf score now counts all 33 slots, the same score every FAF tool gives.
+A new era: the Always33 engine. Same score, everywhere.
 Upgrading? Run faf auto: 56 → 100 on the v7 files we tested.
 
 Verified on 80 repos · 2075 tests · npm + Homebrew
@@ -26,12 +26,12 @@ Comments · suggestions · shares welcome.`;
 	<title>The Always33 Edition - faf-cli v8.0.0 | FAF</title>
 	<meta
 		name="description"
-		content="One engine, one number: faf-cli v8 scores all 33 slots with the always-33 kernel. Run faf auto after upgrading and the score returns."
+		content="A new era: the Always33 engine, authored by faf-cli v8. Same score, everywhere. Run faf auto after upgrading and the score returns."
 	/>
 	<meta property="og:title" content="The Always33 Edition - faf-cli v8.0.0" />
 	<meta
 		property="og:description"
-		content="One engine, one number: faf-cli v8 scores all 33 slots with the always-33 kernel."
+		content="A new era: the Always33 engine, authored by faf-cli v8. Same score, everywhere."
 	/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/always33-edition" />
@@ -41,17 +41,17 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="faf-cli v8.0.0, The Always33 Edition: now scores all 33 slots. One engine, one number." />
+	<meta property="og:image:alt" content="faf-cli v8.0.0, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8." />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
 	<meta name="twitter:title" content="The Always33 Edition - faf-cli v8.0.0" />
 	<meta
 		name="twitter:description"
-		content="One engine, one number: faf-cli v8 scores all 33 slots with the always-33 kernel."
+		content="A new era: the Always33 engine, authored by faf-cli v8. Same score, everywhere."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/always33-edition-hero.png" />
-	<meta name="twitter:image:alt" content="faf-cli v8.0.0, The Always33 Edition: now scores all 33 slots. One engine, one number." />
+	<meta name="twitter:image:alt" content="faf-cli v8.0.0, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8." />
 </svelte:head>
 
 <div class="blog-post">
@@ -62,8 +62,7 @@ Comments · suggestions · shares welcome.`;
 		<h1>The Always33 Edition</h1>
 		<p class="version-tag">faf-cli v8.0.0 · Always33 series, part 1</p>
 		<p class="subtitle">
-			One engine, one number: faf-cli v8 scores all 33 slots with the always-33 kernel — the same
-			score faf-kernel, faf-rust-sdk and rust-faf-mcp give.
+			A new era: the Always33 engine. Same score, everywhere, authored by faf-cli v8.
 		</p>
 		<div class="meta">
 			<time datetime="2026-09-29">September 29, 2026</time>
@@ -75,7 +74,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/always33-edition-hero.png"
-			alt="faf-cli v8.0.0, The Always33 Edition: now scores all 33 slots. One engine, one number."
+			alt="faf-cli v8.0.0, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8."
 			width="1200"
 			height="630"
 			loading="eager"
@@ -86,9 +85,10 @@ Comments · suggestions · shares welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> <code>faf score</code> now counts all 33 slots, with the same
-				always-33 kernel the rest of FAF uses. Scores can move when you upgrade. Run
-				<code>faf auto</code> and they come back.
+				<strong>TL;DR:</strong> faf-cli v8 authors a new era: the Always33 engine. Same score,
+				everywhere. faf-cli still fills 21 slots, and the 12 enterprise slots stay
+				<code>slotignored</code>. Scores can move when you upgrade. Run <code>faf auto</code> and
+				they come back.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
@@ -140,8 +140,9 @@ Comments · suggestions · shares welcome.`;
 		<section>
 			<h2>What v8 is</h2>
 			<p>
-				<strong>The always-33 engine.</strong> faf-cli scores every <code>.faf</code> against all 33
-				slots with the vendored scoring kernel (Rust, compiled to WASM). Through v7.16,
+				<strong>The Always33 engine.</strong> faf-cli scores every <code>.faf</code> with the
+				vendored always-33 kernel (Rust, compiled to WASM), the same engine behind every FAF
+				score. Through v7.16,
 				<code>faf score</code> counted only slots 1 to 21. We checked it against the reference
 				always-33 scorer on the <code>project.faf</code> of all 80 FAF repos: same score on every
 				one.
@@ -186,7 +187,7 @@ Comments · suggestions · shares welcome.`;
 					Older <code>.faf-dna</code> files that carry <code>birthWeight</code> now read as the
 					birth score. The file is never rewritten.
 				</li>
-				<li><code>faf demo</code> writes its sample with all 33 slots and scores ✪ 100%.</li>
+				<li><code>faf demo</code> writes its sample the faf-cli way, 21 slots plus the 12 enterprise markers, and scores ✪ 100%.</li>
 			</ul>
 		</section>
 
@@ -221,7 +222,7 @@ Comments · suggestions · shares welcome.`;
 			<ul>
 				<li><strong>Version:</strong> 8.0.0 (September 26, 2026)</li>
 				<li><strong>Edition:</strong> The Always33 Edition</li>
-				<li><strong>Scoring:</strong> all 33 slots, always-33 kernel (Rust → WASM)</li>
+				<li><strong>Scoring:</strong> always-33 kernel (Rust → WASM); faf-cli fills 21 slots, the 12 enterprise slots <code>slotignored</code></li>
 				<li><strong>Verified:</strong> same score as the reference scorer on 80 FAF repos</li>
 				<li><strong>Tests:</strong> 2075</li>
 				<li><strong>Packages:</strong> npm <code>faf-cli</code> · Homebrew <code>wolfe-jam/faf/faf-cli</code></li>
