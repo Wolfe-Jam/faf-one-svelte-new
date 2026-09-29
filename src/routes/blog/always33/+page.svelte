@@ -126,7 +126,7 @@ Comments · suggestions welcome.`;
 			</p>
 			<div class="insight-box">
 				<h3>FAF seeds your project</h3>
-				<p>It defines the roots before AI codes a single line, so AI codes from rooted facts and definitions.</p>
+				<p>It defines the roots before AI codes a single line,<br class="wide-break" /> so AI codes from rooted facts and definitions.</p>
 			</div>
 		</section>
 
@@ -170,14 +170,14 @@ Comments · suggestions welcome.`;
 					</tr>
 				</thead>
 				<tbody>
-					<tr><td>faf-kernel</td><td>the engine under all of them (Rust)</td><td>1.1</td></tr>
-					<tr><td>faf-cli</td><td>the terminal</td><td>8</td></tr>
-					<tr><td>claude-faf-mcp</td><td>Claude</td><td>7</td></tr>
-					<tr><td>faf-mcp</td><td>Cursor, VS Code, Windsurf</td><td>4</td></tr>
-					<tr><td>gemini-faf-mcp</td><td>Gemini</td><td>3</td></tr>
-					<tr><td>grok-faf-mcp</td><td>Grok</td><td>2</td></tr>
-					<tr><td>faf-python-sdk</td><td>Python</td><td>2</td></tr>
-					<tr><td>mcpaas.live</td><td>the edge, hosted</td><td>1.8</td></tr>
+					<tr><td>faf-kernel</td><td>the engine under all of them (Rust)</td><td>v1.1</td></tr>
+					<tr><td>faf-cli</td><td>the terminal</td><td>v8</td></tr>
+					<tr><td>claude-faf-mcp</td><td>Claude</td><td>v7</td></tr>
+					<tr><td>faf-mcp</td><td>Cursor, VS Code, Windsurf</td><td>v4</td></tr>
+					<tr><td>gemini-faf-mcp</td><td>Gemini</td><td>v3</td></tr>
+					<tr><td>grok-faf-mcp</td><td>Grok</td><td>v2</td></tr>
+					<tr><td>faf-python-sdk</td><td>Python</td><td>v2</td></tr>
+					<tr><td>mcpaas.live</td><td>the edge, hosted</td><td>v1.8</td></tr>
 				</tbody>
 			</table>
 		</section>
@@ -208,11 +208,11 @@ Comments · suggestions welcome.`;
 			<h2>The version numbers tell the story</h2>
 			<p>
 				Nobody planned these numbers. Each one counts how many times that product changed in a
-				big way. Read them in order and you get the build history: the CLI first at 8, then
-				Claude at 7, the IDEs at 4, Gemini at 3, Grok and Python at 2, the edge at 1.8.
+				big way. Read them in order and you get the build history: the CLI first at v8, then
+				Claude at v7, the IDEs at v4, Gemini at v3, Grok and Python at v2, the edge at v1.8.
 			</p>
 			<p>
-				The youngest piece is <strong>faf-kernel, at 1.1</strong>. It is also the engine every
+				The youngest piece is <strong>faf-kernel, at v1.1</strong>. It is also the engine every
 				other product now stands on. Always33 is the moment the stack that grew over time came to
 				rest on one foundation.
 			</p>
@@ -233,12 +233,12 @@ Comments · suggestions welcome.`;
 			<h2>The series</h2>
 			<p>One post per release, in the order it was built:</p>
 			<ul>
-				<li><strong>faf-cli 8</strong>: where it started, and the number is always 33</li>
-				<li><strong>claude-faf-mcp 7</strong>: the first platform</li>
-				<li><strong>faf-mcp 4</strong>: every IDE</li>
-				<li><strong>gemini-faf-mcp 3 and grok-faf-mcp 2</strong>: one number across frontier models</li>
-				<li><strong>faf-python-sdk 2 and mcpaas.live 1.8</strong>: beyond JavaScript, and out to the edge</li>
-				<li><strong>faf-kernel 1.1</strong>: the engine under everything</li>
+				<li><strong>faf-cli v8</strong>: where it started, and the number is always 33</li>
+				<li><strong>claude-faf-mcp v7</strong>: the first platform</li>
+				<li><strong>faf-mcp v4</strong>: every IDE</li>
+				<li><strong>gemini-faf-mcp v3 and grok-faf-mcp v2</strong>: one number across frontier models</li>
+				<li><strong>faf-python-sdk v2 and mcpaas.live v1.8</strong>: beyond JavaScript, and out to the edge</li>
+				<li><strong>faf-kernel v1.1</strong>: the engine under everything</li>
 			</ul>
 		</section>
 
@@ -498,6 +498,7 @@ Comments · suggestions welcome.`;
 	.insight-box p {
 		margin: 0;
 		line-height: 1.7;
+		text-wrap: balance;
 	}
 
 	.share-section {
@@ -526,6 +527,9 @@ Comments · suggestions welcome.`;
 	}
 
 	@media (max-width: 600px) {
+		.wide-break {
+			display: none;
+		}
 		.post-header h1 {
 			font-size: 2rem;
 		}
