@@ -41,7 +41,7 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="The Always33 Edition — faf-cli v8.0.0 · one engine, one number" />
+	<meta property="og:image:alt" content="faf-cli v8.0.0, The Always33 Edition: now scores all 33 slots. One engine, one number." />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
@@ -51,7 +51,7 @@ Comments · suggestions · shares welcome.`;
 		content="One engine, one number: faf-cli v8 scores all 33 slots with the always-33 kernel."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/always33-edition-hero.png" />
-	<meta name="twitter:image:alt" content="The Always33 Edition — faf-cli v8.0.0 · one engine, one number" />
+	<meta name="twitter:image:alt" content="faf-cli v8.0.0, The Always33 Edition: now scores all 33 slots. One engine, one number." />
 </svelte:head>
 
 <div class="blog-post">
@@ -75,7 +75,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/always33-edition-hero.png"
-			alt="The Always33 Edition — faf-cli v8.0.0 · one engine, one number"
+			alt="faf-cli v8.0.0, The Always33 Edition: now scores all 33 slots. One engine, one number."
 			width="1200"
 			height="630"
 			loading="eager"
