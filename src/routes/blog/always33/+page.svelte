@@ -149,7 +149,7 @@ Comments · suggestions welcome.`;
 			</p>
 			<ol class="progression" aria-label="From format to interoperability">
 				<li>Format</li>
-				<li>Common representation</li>
+				<li>Shared language</li>
 				<li>Layer</li>
 				<li>Interoperability</li>
 			</ol>
