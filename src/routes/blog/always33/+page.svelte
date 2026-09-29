@@ -84,17 +84,17 @@ Comments · suggestions welcome.`;
 				<p class="plain-label">In Plain English</p>
 				<p>
 					<strong>Old state.</strong> FAF grew one tool at a time. Each tool learned to score a
-					project on its own, and they did not always agree. The same file could read 64 in one
+					project on its own, and they did not always agree. In the worst case noted, the same file could read 64 in one
 					place and 100 in another.
 				</p>
 				<p>
 					<strong>Fix.</strong> One engine underneath all of them. It scores every file against
 					the same 33 slots. Slots a project doesn't use are marked <code>slotignored</code>, and
-					drop out of the count.
+					do not score.
 				</p>
 				<p>
-					<strong>New state.</strong> One number, wherever you ask. If two FAF tools ever
-					disagree about your project, one of them is wrong, and the tests say which.
+					<strong>New state.</strong> One number, wherever you ask. Every FAF tool gives the same file
+					the same score, and the tests check it on every release.
 				</p>
 			</div>
 		</section>
@@ -116,6 +116,9 @@ Comments · suggestions welcome.`;
 				what the project <em>is</em>, for any AI. It sits between the manifest and the prose, and
 				the alphabet put it there.
 			</p>
+			<blockquote class="pull">
+				<code>project.faf</code> is to context what <code>package.json</code> is to dependencies.
+			</blockquote>
 			<p>
 				Timing matters. You can't easily change your code trees once they've grown. If AI starts
 				coding from guesses, the guesses become branches, and the branches become the project.
@@ -361,7 +364,11 @@ Comments · suggestions welcome.`;
 		font-weight: 800;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
-		color: #1d8348;
+		color: #1a1a1a;
+	}
+	/* In Plain English is black and white; the green stays on the TL;DR */
+	.lead.plain-english {
+		border-left-color: #1a1a1a;
 	}
 	.plain-english p {
 		margin: 0 0 0.85rem;
@@ -465,6 +472,15 @@ Comments · suggestions welcome.`;
 		padding: 0;
 	}
 
+	.pull {
+		margin: 1.75rem 0;
+		padding: 0.25rem 0 0.25rem 1.25rem;
+		border-left: 4px solid #1a1a1a;
+		font-size: 1.3rem;
+		font-weight: 700;
+		line-height: 1.5;
+		color: #1a1a1a;
+	}
 	.insight-box {
 		background: #f3f9f5;
 		color: #1a1a1a;
