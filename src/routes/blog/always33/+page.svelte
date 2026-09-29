@@ -89,8 +89,8 @@ Comments · suggestions welcome.`;
 				</p>
 				<p>
 					<strong>Fix.</strong> One engine underneath all of them. It scores every file against
-					the same 33 slots. Slots a project doesn't use are marked <code>slotignored</code>, and
-					do not score.
+					the same 33 slots. Slots that are not applicable to a project are marked
+					<code>slotignored</code>, and do not score.
 				</p>
 				<p>
 					<strong>New state.</strong> One number, wherever you ask. Every FAF tool gives the same file
