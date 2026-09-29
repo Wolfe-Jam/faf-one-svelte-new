@@ -351,12 +351,12 @@ Comments · suggestions welcome.`;
 		line-height: 1.8;
 		background: #fff;
 		color: #1a1a1a;
-		border-left: 4px solid #1d8348;
+		border-left: 4px solid #00bc61; /* FAF Foundation Green */
 		padding: 1.25rem 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
 	.intro .lead + .lead {
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 	.lead .plain-label {
 		margin: 0 0 0.85rem;
