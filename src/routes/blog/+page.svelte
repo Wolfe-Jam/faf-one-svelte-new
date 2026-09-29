@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/always33-edition',
+			title: 'The Always33 Edition',
+			version: 'faf-cli v8.0.0',
+			date: 'September 29, 2026',
+			timestamp: '2026-09-29',
+			excerpt:
+				'faf score now counts all 33 slots, with the same always-33 kernel the rest of FAF uses. Scores can move when you upgrade. Run faf auto and they come back.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/always33',
 			title: 'The Always33 Suite',
 			date: 'September 29, 2026',
