@@ -484,7 +484,7 @@ Comments · suggestions welcome.`;
 	.insight-box {
 		background: #f3f9f5;
 		color: #1a1a1a;
-		border: 2px solid #1d8348;
+		border: 2px solid #00bc61;
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin: 2rem 0;
@@ -492,7 +492,7 @@ Comments · suggestions welcome.`;
 	}
 	.insight-box h3 {
 		margin: 0 0 0.5rem;
-		color: #1d8348;
+		color: #1a1a1a;
 		font-size: 1.1rem;
 	}
 	.insight-box p {
