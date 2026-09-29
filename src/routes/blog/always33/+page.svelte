@@ -139,6 +139,28 @@ Comments · suggestions welcome.`;
 				code trees, into memory, and into the agentic layer, where one agent clues in another:
 				use FAF like this, for that.
 			</p>
+			<h3>The context layer</h3>
+			<p>
+				<code>.faf</code>, <code>.fafm</code> and <code>.fafa</code> are not three more file
+				extensions. Together they form the project context layer: one structured, portable
+				description of a project, sitting between the software and the AI that has to understand
+				it. The code underneath can be any language, any stack. The layer keeps the same shape, so
+				any AI can read it.
+			</p>
+			<ol class="progression" aria-label="From format to interoperability">
+				<li>Format</li>
+				<li>Common representation</li>
+				<li>Layer</li>
+				<li>Interoperability</li>
+			</ol>
+			<blockquote class="pull">
+				A format's power isn't only what it stores. It's what it lets other systems agree on.
+			</blockquote>
+			<p>
+				JSON, HTTP, Markdown and Git earned their place that way. FAF is that agreement for AI
+				context. Always33 makes the agreement hold: the same file scores the same on every
+				platform.
+			</p>
 			<figure class="map-figure">
 				<img
 					src="/blog/always33-map.png"
@@ -472,6 +494,46 @@ Comments · suggestions welcome.`;
 		padding: 0;
 	}
 
+	.post-content section > h3 {
+		font-size: 1.3rem;
+		font-weight: 800;
+		color: #1a1a1a;
+		margin: 2.25rem 0 0.75rem;
+	}
+	.progression {
+		list-style: none;
+		counter-reset: step;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 1.5rem 0;
+		padding: 0;
+	}
+	.progression li {
+		counter-increment: step;
+		background: #1a1a1a;
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 0.95rem;
+		padding: 0.45rem 0.9rem;
+		border-radius: 6px;
+	}
+	.progression li::before {
+		content: counter(step) '. ';
+		color: #00d4d4;
+	}
+	.progression li:not(:last-child) {
+		margin-right: 1.6rem;
+		position: relative;
+	}
+	.progression li:not(:last-child)::after {
+		content: '→';
+		position: absolute;
+		right: -1.35rem;
+		color: #1a1a1a;
+		font-weight: 700;
+	}
 	.pull {
 		margin: 1.75rem 0;
 		padding: 0.25rem 0 0.25rem 1.25rem;
@@ -480,6 +542,7 @@ Comments · suggestions welcome.`;
 		font-weight: 700;
 		line-height: 1.5;
 		color: #1a1a1a;
+		text-wrap: balance;
 	}
 	.insight-box {
 		background: #f3f9f5;
