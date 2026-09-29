@@ -218,7 +218,8 @@ Comments · suggestions welcome.`;
 			</ul>
 			<p>
 				The 12 enterprise slots stay visible even when they're marked. Most projects mark them
-				unused today. What they're for is coming.
+				unused today. What they're for is coming in <a href="/blog/fafb-early-access">fafb</a>
+				(faf-binary): teams can use all 33 slots for monorepos and large, complex codebases.
 			</p>
 			<p>One command writes the markers and re-scores:</p>
 			<div class="terminal-block">
