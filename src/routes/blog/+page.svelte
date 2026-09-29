@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/always33',
+			title: 'The Always33 Suite',
+			date: 'September 29, 2026',
+			timestamp: '2026-09-29',
+			excerpt:
+				"One engine, one number. The same project.faf gets the same score in the CLI, Claude, Cursor, VS Code, Gemini, Grok, Python and at the edge. FAF seeds your project, defining the roots before AI codes a single line.",
+			emoji: '🏆',
+			category: 'Foundation'
+		},
+		{
 			slug: 'blog/hundred-fifty-thousand',
 			title: '150,000 Downloads',
 			date: 'September 25, 2026',
