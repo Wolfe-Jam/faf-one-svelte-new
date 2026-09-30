@@ -88,7 +88,7 @@
 		{
 			slug: 'blog/always33-edition',
 			title: 'The Always33 Edition, Part I',
-			version: 'faf-cli v8.0.0',
+			version: 'faf-cli v8.0.1',
 			date: 'September 29, 2026',
 			timestamp: '2026-09-29',
 			excerpt:

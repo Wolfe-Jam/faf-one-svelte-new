@@ -5,7 +5,7 @@
 	// Cloudflare Scrape Shield mangles package@version as "email" — always use NpmPkg in HTML.
 	import NpmPkg from '$lib/NpmPkg.svelte';
 
-	const shareText = `🏁 Just shipped: faf-cli v8.0.0 — The Always33 Edition
+	const shareText = `🏁 Just shipped: faf-cli v8.0.1 — The Always33 Edition
 
 One engine, one number.
 
@@ -23,12 +23,12 @@ Comments · suggestions · shares welcome.`;
 </script>
 
 <svelte:head>
-	<title>The Always33 Edition - faf-cli v8.0.0 | FAF</title>
+	<title>The Always33 Edition - faf-cli v8.0.1 | FAF</title>
 	<meta
 		name="description"
 		content="A new era: the Always33 engine, authored by faf-cli v8. Same score, everywhere. Run faf auto after upgrading and the score returns."
 	/>
-	<meta property="og:title" content="The Always33 Edition - faf-cli v8.0.0" />
+	<meta property="og:title" content="The Always33 Edition - faf-cli v8.0.1" />
 	<meta
 		property="og:description"
 		content="A new era: the Always33 engine, authored by faf-cli v8. Same score, everywhere."
@@ -41,17 +41,17 @@ Comments · suggestions · shares welcome.`;
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="faf-cli v8.0.0, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8." />
+	<meta property="og:image:alt" content="faf-cli v8.0.1, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8." />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
-	<meta name="twitter:title" content="The Always33 Edition - faf-cli v8.0.0" />
+	<meta name="twitter:title" content="The Always33 Edition - faf-cli v8.0.1" />
 	<meta
 		name="twitter:description"
 		content="A new era: the Always33 engine, authored by faf-cli v8. Same score, everywhere."
 	/>
 	<meta name="twitter:image" content="https://faf.one/blog/always33-edition-hero.png" />
-	<meta name="twitter:image:alt" content="faf-cli v8.0.0, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8." />
+	<meta name="twitter:image:alt" content="faf-cli v8.0.1, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8." />
 </svelte:head>
 
 <div class="blog-post">
@@ -60,7 +60,7 @@ Comments · suggestions · shares welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Always33 Edition
 		</div>
 		<h1>The Always33 Edition</h1>
-		<p class="version-tag">faf-cli v8.0.0 · Always33 series, Part I</p>
+		<p class="version-tag">faf-cli v8.0.1 · Always33 series, Part I</p>
 		<p class="subtitle">
 			A new era: the Always33 engine. Same score, everywhere, authored by faf-cli v8.
 		</p>
@@ -74,7 +74,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/always33-edition-hero.png"
-			alt="faf-cli v8.0.0, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8."
+			alt="faf-cli v8.0.1, The Always33 Edition: same score, everywhere. The Always33 engine, authored by faf-cli v8."
 			width="1200"
 			height="630"
 			loading="eager"
@@ -83,6 +83,19 @@ Comments · suggestions · shares welcome.`;
 	</div>
 
 	<article class="post-content">
+		<aside class="update-note">
+			<p class="update-label">Update, September 30: v8.0.1</p>
+			<p>
+				<strong>faf-cli v8.0.1 fixes installs with pnpm.</strong> v8.0.0 pointed at a folder inside
+				faf-cli that pnpm couldn't find, so pnpm installs of faf-cli, and of the MCP servers built on
+				it, stopped with an error. v8.0.1 gets the scoring kernel from npm instead. It also works with
+				<code>pnpm dlx faf</code>.
+			</p>
+			<div class="terminal-block">
+				<code>npm install -g <NpmPkg name="faf-cli" version="8.0.1" /></code>
+			</div>
+		</aside>
+
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> faf-cli v8 authors a new era: the Always33 engine. Same score,
@@ -106,12 +119,12 @@ Comments · suggestions · shares welcome.`;
 				</p>
 			</div>
 			<div class="terminal-block">
-				<code>npm install -g <NpmPkg name="faf-cli" version="8.0.0" /></code>
+				<code>npm install -g <NpmPkg name="faf-cli" version="8.0.1" /></code>
 				<code>faf auto</code>
 			</div>
 			<p class="muted-note">
 				Homebrew: <code>brew install wolfe-jam/faf/faf-cli</code>. To try it without installing:
-				<code>npx faf-cli auto</code>.
+				<code>npx faf-cli auto</code> or <code>pnpm dlx faf auto</code>.
 			</p>
 		</section>
 
@@ -129,6 +142,10 @@ Comments · suggestions · shares welcome.`;
 				</li>
 				<li>
 					<strong>v8.0.0</strong>: The Always33 Edition. This is the log entry for the stretch.
+				</li>
+				<li>
+					<strong>v8.0.1</strong>: pnpm installs work. faf-cli gets its scoring kernel from npm, not
+					a folder inside the package.
 				</li>
 			</ul>
 			<p>
@@ -195,7 +212,7 @@ Comments · suggestions · shares welcome.`;
 			<h2>Try it</h2>
 			<p><strong>Install</strong> (npm or Homebrew):</p>
 			<div class="terminal-block">
-				<code>npm install -g <NpmPkg name="faf-cli" version="8.0.0" /></code>
+				<code>npm install -g <NpmPkg name="faf-cli" version="8.0.1" /></code>
 				<code>brew install wolfe-jam/faf/faf-cli</code>
 			</div>
 			<p><strong>Then, in your project:</strong></p>
@@ -220,7 +237,7 @@ Comments · suggestions · shares welcome.`;
 		<section>
 			<h2>Technical details</h2>
 			<ul>
-				<li><strong>Version:</strong> 8.0.0 (September 26, 2026)</li>
+				<li><strong>Version:</strong> 8.0.1 (September 30, 2026); 8.0.0 shipped September 26</li>
 				<li><strong>Edition:</strong> The Always33 Edition</li>
 				<li><strong>Scoring:</strong> always-33 kernel (Rust → WASM); faf-cli fills 21 slots, the 12 enterprise slots <code>slotignored</code></li>
 				<li><strong>Verified:</strong> same score as the reference scorer on 80 FAF repos</li>
@@ -369,6 +386,26 @@ Comments · suggestions · shares welcome.`;
 		text-decoration: underline;
 	}
 
+	.update-note {
+		margin: 0 0 2rem;
+		padding: 1.25rem 1.35rem;
+		background: #f7f5f0;
+		border-radius: 8px;
+		border-left: 4px solid #00b8b8;
+	}
+	.update-note p {
+		margin: 0 0 0.75rem;
+	}
+	.update-note .update-label {
+		font-size: 0.82rem;
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #1a1a1a;
+	}
+	.update-note .terminal-block {
+		margin: 0.75rem 0 0;
+	}
 	.lead {
 		font-size: 1.15rem;
 		padding: 1.25rem 1.35rem;
