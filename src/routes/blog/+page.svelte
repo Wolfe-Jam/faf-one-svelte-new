@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/claude-always33-edition',
+			title: 'The Always33 Edition',
+			version: 'claude-faf-mcp v7.0.0',
+			date: 'September 29, 2026',
+			timestamp: '2026-09-29',
+			excerpt:
+				'New era, new engine. Unified scoring in Claude Code, Desktop and claude.ai: claude-faf-mcp v7 gives your file the same score as faf-cli. Run faf_auto after upgrading and the score comes back.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/always33-edition',
 			title: 'The Always33 Edition',
 			version: 'faf-cli v8.0.0',
