@@ -7,9 +7,12 @@
 	--faf-cyan: #00ffff;         /* AI-Happy/Tech 🩵 */
 	--faf-cyan-dark: #00d4d4;    /* Cyan on dark surfaces */
 	--faf-cyan-text: #006e6e;    /* Cyan on creme (readable) */
-	--faf-green: #00aa55;
-	--faf-green-hover: #008040;
-	--faf-green-light: #4ade80;
+	/* One green, two strengths (2026-09-30): Foundation Green #00BC61 for fills,
+	   bars, borders and text on dark; Foundation Green Deep #1D8348 where contrast
+	   matters (green text on cream, white text on green). Terminal #00ff88 is separate. */
+	--faf-green: #1D8348;
+	--faf-green-hover: #00BC61;
+	--faf-green-light: #00BC61;
 
 	/* Locked chrome — NEVER flip in [data-theme="dark"] */
 	--faf-locked-dark: #0a0a0a;
@@ -21,8 +24,8 @@
 	   those tokens invert and go light-on-light / dark-on-dark. */
 	--faf-solid-bg: var(--faf-locked-dark);
 	--faf-solid-fg: var(--faf-locked-dark-text);
-	--faf-foundation-green: #00bf63;
-	--faf-foundation-green-dark: #00a855;
+	--faf-foundation-green: #00BC61;
+	--faf-foundation-green-dark: #1D8348;
 	--faf-locked-dark-hover: #111111;
 	--faf-locked-dark-muted: #2d2d2d;
 
@@ -60,7 +63,7 @@
 	--faf-card-error-bg: #fef2f2;
 	--faf-card-info-bg: #eff6ff;
 	--faf-pill-success-bg: #f0fdf4;
-	--faf-pill-success-fg: #16a34a;
+	--faf-pill-success-fg: #1D8348;
 	--faf-pill-success-border: #bbf7d0;
 	--faf-pill-info-bg: #eff6ff;
 	--faf-pill-info-fg: #2563eb;
@@ -114,7 +117,7 @@
 	--faf-card-error-bg: #2a1414;
 	--faf-card-info-bg: #141c2a;
 	--faf-pill-success-bg: #0f2318;
-	--faf-pill-success-fg: #4ade80;
+	--faf-pill-success-fg: #00BC61;
 	--faf-pill-success-border: #1e4a30;
 	--faf-pill-info-bg: #141c2a;
 	--faf-pill-info-fg: #60a5fa;
@@ -533,7 +536,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 3px 10px rgba(0, 191, 99, 0.35);
+	box-shadow: 0 3px 10px rgba(0, 188, 97, 0.35);
 	cursor: pointer;
 	transition: all 0.3s ease;
 	z-index: 1000;
@@ -542,7 +545,7 @@ section {
 
 .foundation-badge:hover {
 	transform: scale(1.1);
-	box-shadow: 0 5px 16px rgba(0, 191, 99, 0.55);
+	box-shadow: 0 5px 16px rgba(0, 188, 97, 0.55);
 }
 
 .foundation-badge svg {

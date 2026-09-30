@@ -77,7 +77,7 @@ Warm (Danger/Warning):
 
 Cool (Solution/Trust):
 - Cyan:    #00D4D4 (primary), #00ffff (hover)
-- Green:   #00aa55 (success, canonical FAF-Green) · #00ff88 (terminal carve-out)
+- Green:   FAF Foundation Green #00BC61 (fills, bars, borders, text on dark) · Foundation Green Deep #1D8348 (green text on cream, white text on green) · #00ff88 (terminal carve-out). One green, two strengths (2026-09-30); #00aa55, #00bf63, #00a855, #008040 and #4ade80 are retired.
 
 Grays (Brightened for dark bg):
 - #aaa (was #666) - primary gray text

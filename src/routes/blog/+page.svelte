@@ -2347,8 +2347,8 @@
 
 	.academic-card {
 		background: #fdfdf8;
-		border-color: #00aa55;
-		border-left: 4px solid #00aa55;
+		border-color: #00BC61;
+		border-left: 4px solid #00BC61;
 	}
 
 	.academic-card .post-category {
