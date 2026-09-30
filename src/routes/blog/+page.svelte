@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/python-edge-always33-edition',
+			title: 'The Always33 Edition, Part V',
+			version: 'faf-python-sdk v2.0.0',
+			date: 'September 30, 2026',
+			timestamp: '2026-09-30',
+			excerpt:
+				'Beyond JavaScript, out to the edge. faf-python-sdk v2 matches the kernel on 845 of 845 files, and mcpaas.live v1.8 scores every hosted route with it: the same score in Python and at the edge.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/gemini-grok-always33-edition',
 			title: 'The Always33 Edition, Part IV',
 			version: 'gemini-faf-mcp v3.0.0',
