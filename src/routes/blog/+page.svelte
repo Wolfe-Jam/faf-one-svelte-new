@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/gemini-grok-always33-edition',
+			title: 'The Always33 Edition, Part IV',
+			version: 'gemini-faf-mcp v3.0.0',
+			date: 'September 30, 2026',
+			timestamp: '2026-09-30',
+			excerpt:
+				'Same score in Gemini and Grok. gemini-faf-mcp v3 and grok-faf-mcp v2 score with the always-33 engine: one engine, across frontier models. Upgrading? Run faf auto once and your score is back.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/faf-mcp-always33-edition',
 			title: 'The Always33 Edition, Part III',
 			version: 'faf-mcp v4.0.0',
