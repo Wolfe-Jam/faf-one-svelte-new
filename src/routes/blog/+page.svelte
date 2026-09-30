@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/faf-mcp-always33-edition',
+			title: 'The Always33 Edition, Part III',
+			version: 'faf-mcp v4.0.0',
+			date: 'September 29, 2026',
+			timestamp: '2026-09-29',
+			excerpt:
+				'One score, every IDE. Unified scoring in Cursor, VS Code, Windsurf and Cline: faf-mcp v4 gives your file the same score as faf-cli. Upgrading from v3? Run faf_auto once and your score is back.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/claude-always33-edition',
 			title: 'The Always33 Edition, Part II',
 			version: 'claude-faf-mcp v7.0.0',
