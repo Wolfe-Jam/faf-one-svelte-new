@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/faf-kernel-always33',
+			title: 'One kernel, every score, Part VI',
+			version: 'faf-kernel v1.1.1',
+			date: 'September 30, 2026',
+			timestamp: '2026-09-30',
+			excerpt:
+				'The youngest piece is the engine under all of them. 9 public project.faf files through 6 engines: the kernel, faf-cli, Python and three hosted MCP routes. 54 of 54 scores agree.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/python-edge-always33-edition',
 			title: 'The Always33 Edition, Part V',
 			version: 'faf-python-sdk v2.0.0',
