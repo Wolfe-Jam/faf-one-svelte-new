@@ -256,12 +256,12 @@ Comments · suggestions welcome.`;
 			<h2>The series</h2>
 			<p>One post per release, in the order it was built:</p>
 			<ul>
-				<li><strong>faf-cli v8</strong>: where it started, and the number is always 33</li>
-				<li><strong>claude-faf-mcp v7</strong>: the first platform</li>
-				<li><strong>faf-mcp v4</strong>: every IDE</li>
-				<li><strong>gemini-faf-mcp v3 and grok-faf-mcp v2</strong>: one number across frontier models</li>
-				<li><strong>faf-python-sdk v2 and mcpaas.live v1.8</strong>: beyond JavaScript, and out to the edge</li>
-				<li><strong>faf-kernel v1.1</strong>: the engine under everything</li>
+				<li><a href="/blog/always33-edition"><strong>Part I, faf-cli v8</strong></a>: where it started, and the number is always 33</li>
+				<li><a href="/blog/claude-always33-edition"><strong>Part II, claude-faf-mcp v7</strong></a>: the first platform</li>
+				<li><a href="/blog/faf-mcp-always33-edition"><strong>Part III, faf-mcp v4</strong></a>: every IDE</li>
+				<li><a href="/blog/gemini-grok-always33-edition"><strong>Part IV, gemini-faf-mcp v3 and grok-faf-mcp v2</strong></a>: one number across frontier models</li>
+				<li><a href="/blog/python-edge-always33-edition"><strong>Part V, faf-python-sdk v2 and mcpaas.live v1.8</strong></a>: beyond JavaScript, and out to the edge</li>
+				<li><a href="/blog/faf-kernel-always33"><strong>Part VI, faf-kernel v1.1</strong></a>: the engine under everything</li>
 			</ul>
 		</section>
 
