@@ -37,7 +37,7 @@
 			date: 'September 29, 2026',
 			timestamp: '2026-09-29',
 			excerpt:
-				'New era, new engine. Unified scoring in Claude Code, Desktop and claude.ai: claude-faf-mcp v7 gives your file the same score as faf-cli. Run faf_auto after upgrading and the score comes back.',
+				'New era, new engine. Unified scoring in Claude Code, Desktop and claude.ai: claude-faf-mcp v7 gives your file the same score as faf-cli. Upgrading from v6? Run faf_auto once and your score is back.',
 			emoji: '✪',
 			category: 'Release'
 		},
@@ -48,7 +48,7 @@
 			date: 'September 29, 2026',
 			timestamp: '2026-09-29',
 			excerpt:
-				'faf-cli v8 authors a new era: the Always33 engine. Same score, everywhere. faf-cli still fills 21 slots, and the 12 enterprise slots stay slotignored. Run faf auto after upgrading and the score comes back.',
+				'faf-cli v8 authors a new era: the Always33 engine. Same score, everywhere. faf-cli still fills 21 slots, and the 12 enterprise slots stay slotignored. Upgrading from v7? Run faf auto once and your score is back.',
 			emoji: '✪',
 			category: 'Release'
 		},

@@ -87,8 +87,8 @@ Comments · suggestions · shares welcome.`;
 			<p class="lead">
 				<strong>TL;DR:</strong> faf-cli v8 authors a new era: the Always33 engine. Same score,
 				everywhere. faf-cli still fills 21 slots, and the 12 enterprise slots stay
-				<code>slotignored</code>. Scores can move when you upgrade. Run <code>faf auto</code> and
-				they come back.
+				<code>slotignored</code>. Upgrading from v7? Run <code>faf auto</code> once. It marks the 12
+				enterprise slots <code>slotignored</code>, and your score is back.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
@@ -153,7 +153,7 @@ Comments · suggestions · shares welcome.`;
 				12 enterprise slots (infra, app, ops) <code>slotignored</code> unless your app type uses
 				them, and <code>faf score</code> lists all 33.
 			</p>
-			<h3>Upgrading: scores can move</h3>
+			<h3>Upgrading: run <code>faf auto</code> once</h3>
 			<p>
 				This is the breaking part. A <code>.faf</code> without the 12 enterprise markers now counts
 				them as empty: 21 filled is 21 of 33, which is 64%. Run <code>faf auto</code>. It writes the

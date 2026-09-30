@@ -93,8 +93,9 @@ Comments · suggestions · shares welcome.`;
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> claude-faf-mcp v7 scores with faf-cli 8's always-33 kernel, so
-				Claude gets the same number as faf-cli and faf-kernel. Scores can move when you upgrade.
-				Run <code>faf_auto</code> and they come back.
+				Claude gets the same number as faf-cli and faf-kernel. Upgrading from v6? Run
+				<code>faf_auto</code> once. It marks the 12 enterprise slots <code>slotignored</code>, and
+				your score is back.
 			</p>
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
@@ -172,7 +173,7 @@ Comments · suggestions · shares welcome.`;
 				base slots and marks the 12 enterprise slots <code>slotignored</code> unless your app type
 				uses them. Those slots drop out of the count.
 			</p>
-			<h3>Upgrading: scores can move</h3>
+			<h3>Upgrading: run <code>faf_auto</code> once</h3>
 			<p>
 				This is why v7 is a major release. A <code>.faf</code> without the 12 enterprise markers
 				now counts them as empty: 21 filled is 64%. Run <code>faf_auto</code>. It writes the
