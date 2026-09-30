@@ -60,7 +60,7 @@ Comments · suggestions · shares welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / The Always33 Edition
 		</div>
 		<h1>The Always33 Edition</h1>
-		<p class="version-tag">faf-cli v8.0.0 · Always33 series, part 1</p>
+		<p class="version-tag">faf-cli v8.0.0 · Always33 series, Part I</p>
 		<p class="subtitle">
 			A new era: the Always33 engine. Same score, everywhere, authored by faf-cli v8.
 		</p>

@@ -32,7 +32,7 @@
 	const posts = [
 		{
 			slug: 'blog/claude-always33-edition',
-			title: 'The Always33 Edition',
+			title: 'The Always33 Edition, Part II',
 			version: 'claude-faf-mcp v7.0.0',
 			date: 'September 29, 2026',
 			timestamp: '2026-09-29',
@@ -43,7 +43,7 @@
 		},
 		{
 			slug: 'blog/always33-edition',
-			title: 'The Always33 Edition',
+			title: 'The Always33 Edition, Part I',
 			version: 'faf-cli v8.0.0',
 			date: 'September 29, 2026',
 			timestamp: '2026-09-29',

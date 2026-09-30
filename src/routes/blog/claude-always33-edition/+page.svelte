@@ -69,7 +69,7 @@ Comments · suggestions · shares welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / claude-faf-mcp v7
 		</div>
 		<h1>The Always33 Edition</h1>
-		<p class="version-tag">claude-faf-mcp v7.0.0 · Always33 series, part 2</p>
+		<p class="version-tag">claude-faf-mcp v7.0.0 · Always33 series, Part II</p>
 		<p class="subtitle">New era, new engine. Unified scoring in Claude Code, Desktop and claude.ai.</p>
 		<div class="meta">
 			<time datetime="2026-09-29">September 29, 2026</time>
@@ -153,7 +153,7 @@ Comments · suggestions · shares welcome.`;
 				</li>
 			</ul>
 			<p>
-				This is part 2 of the Always33 series. Part 1 was
+				This is Part II of the Always33 series. Part I was
 				<a href="/blog/always33-edition">faf-cli v8</a>, where the engine was authored. The overview
 				is <a href="/blog/always33">The Always33 Suite</a>.
 			</p>
