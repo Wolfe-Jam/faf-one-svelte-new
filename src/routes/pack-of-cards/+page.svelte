@@ -54,8 +54,16 @@
 				and it is the piece FAF writes today:
 			</p>
 			<div class="terminal-block"><code>faf cards --target registry</code></div>
-			{#if server_json.adoption}
-				<p class="adoption">{server_json.adoption}</p>
+			{#if server_json.adoption?.length}
+				<ul class="adoption">
+					{#each server_json.adoption as a}
+						<li>
+							{a.claim}{#if a.link}{' · '}<a href={a.link} target="_blank" rel="noopener"
+									>source</a
+								>{/if}
+						</li>
+					{/each}
+				</ul>
 			{/if}
 			{#if server_json.link}
 				<p>
@@ -251,6 +259,11 @@
 	.adoption {
 		font-size: 0.9rem;
 		color: var(--faf-dark);
+		padding-left: 1.1rem;
+		max-width: 74ch;
+	}
+	.adoption li {
+		margin: 0.25rem 0;
 	}
 	.drawn {
 		display: flex;

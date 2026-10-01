@@ -1511,7 +1511,7 @@
     "link": "https://github.com/modelcontextprotocol/registry/releases/tag/v1.8.1"
    },
    {
-    "claim": "AI Catalog names 'an MCP Registry `server.json`' as an artifact whose own version a consumer may read (line added 2026-07-23, commit 2b5afb9f263f7a7252bcac0a1ad3b61a6fdea599)",
+    "claim": "AI Catalog names 'an MCP Registry server.json' as an artifact whose own version a consumer may read (line added 2026-07-23, commit 2b5afb9f263f7a7252bcac0a1ad3b61a6fdea599)",
     "link": "https://github.com/Agent-Card/ai-catalog/blob/04a99cd1ac9a20dd6586c6196e87f5e4570303b1/specification/ai-catalog.md#L408"
    }
   ],
