@@ -23,6 +23,14 @@
 		}
 		return String(v);
 	}
+	/** A spec_repo can name more than one repo ("a/b (SEP-1) + c/d"): link each one. */
+	function repoParts(s: string | undefined): { text: string; repo?: string }[] {
+		if (!s) return [];
+		return s
+			.split(/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/)
+			.filter(Boolean)
+			.map((t) => (/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(t) ? { text: t, repo: t } : { text: t }));
+	}
 </script>
 
 <svelte:head>
@@ -61,9 +69,11 @@
 		<section id={c.slug} class="card-block">
 			<h2>{c.card}</h2>
 			<p class="repo">
-				<a href="https://github.com/{reg[c.card]?.spec_repo}" target="_blank" rel="noopener">
-					{reg[c.card]?.spec_repo}
-				</a>
+				{#each repoParts(reg[c.card]?.spec_repo) as part}{#if part.repo}<a
+							href="https://github.com/{part.repo}"
+							target="_blank"
+							rel="noopener">{part.text}</a
+						>{:else}{part.text}{/if}{/each}
 			</p>
 
 			{#if reg[c.card]?.notes?.length}
