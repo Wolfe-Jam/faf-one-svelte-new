@@ -316,6 +316,8 @@ Comments · suggestions welcome.`;
 
 	.copy-code {
 		flex: 1;
+		min-width: 0;
+		overflow-x: auto;
 		font-family: 'Monaco', 'Courier New', monospace;
 		color: #00d4d4;
 		background: transparent;

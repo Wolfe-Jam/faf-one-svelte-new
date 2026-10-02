@@ -1023,6 +1023,16 @@
 		.big-orange {
 			grid-template-columns: 1fr;
 		}
+
+		.layers,
+		.layer-group {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.layer {
+			width: 100%;
+		}
 	}
 
 	/* Signup */

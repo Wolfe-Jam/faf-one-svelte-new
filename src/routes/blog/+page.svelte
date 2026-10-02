@@ -2389,5 +2389,11 @@
 			width: 5.5rem;
 			font-size: 0.75rem;
 		}
+
+		.list-version {
+			flex-shrink: 1;
+			min-width: 0;
+			overflow-wrap: anywhere;
+		}
 	}
 </style>

@@ -718,7 +718,7 @@ URL-based MCP server for Grok. Zero installation. 17 MCP tools. Grok-exclusive f
 	}
 
 	.notification-screenshot {
-		max-width: 500px;
+		max-width: min(500px, 100%);
 	}
 
 	.screenshot-caption {

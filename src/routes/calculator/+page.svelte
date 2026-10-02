@@ -547,5 +547,9 @@
 			grid-template-columns: 1fr;
 			gap: 1rem;
 		}
+
+		.result-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>
