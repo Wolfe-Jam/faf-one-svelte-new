@@ -296,9 +296,11 @@ metadata:
 			<pre class="fafa-block"><code>{fafaExample}</code></pre>
 			<p>
 				Then faf-cli projects every card that has a place for it — correct to each spec, checked by
-				each spec's own validator.
+				each spec's own validator. It reads the <code>.fafa</code> beside your <code>project.faf</code>;
+				if you don't have one yet, <code>init</code> makes it.
 			</p>
 			<div class="terminal-block">
+				<code>npx <NpmPkg name="faf-cli" version="latest" /> init</code>
 				<code>npx <NpmPkg name="faf-cli" version="latest" /> cards --target catalog,ard</code>
 			</div>
 			<p class="muted-note">
