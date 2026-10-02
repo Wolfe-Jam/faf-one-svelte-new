@@ -204,7 +204,7 @@ Full plugin support, SSH bug fix, and discoverable in 8,500+ plugin registry. 20
 	}
 
 	.blog-post {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

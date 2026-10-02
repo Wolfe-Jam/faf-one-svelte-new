@@ -169,9 +169,9 @@
 
 <style>
 	.blog-post {
-		max-width: 720px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 3rem 1.5rem;
+		padding: 3rem 1rem;
 		color: #f5f5f5;
 	}
 

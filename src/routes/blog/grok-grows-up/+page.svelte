@@ -199,7 +199,7 @@
 	.blog-post {
 		max-width: 760px;
 		margin: 0 auto;
-		padding: 2rem 1.5rem 4rem;
+		padding: 2rem 1rem 4rem;
 		color: #333;
 	}
 

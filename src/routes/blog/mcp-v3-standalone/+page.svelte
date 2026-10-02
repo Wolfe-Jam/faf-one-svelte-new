@@ -494,9 +494,9 @@ Claude: [Direct function call, 63ms execution]
 	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 2rem 1rem;
 		background: var(--faf-white);
 		min-height: 100vh;
 	}

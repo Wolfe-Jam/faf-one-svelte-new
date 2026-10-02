@@ -180,7 +180,7 @@ WHO, WHAT, WHY. Three questions. That's all a developer needs to start.`;
 	}
 
 	.blog-post {
-		max-width: 720px;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		color: #333;

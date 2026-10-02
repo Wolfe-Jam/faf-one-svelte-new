@@ -194,9 +194,9 @@ gemini.tune(vec!["91.0".to_string()]).await?;
 	}
 
 	.blog-post {
-		max-width: 720px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 2rem 1rem;
 	}
 
 	.breadcrumb {

@@ -165,7 +165,7 @@ npx agents-md-facts`;
 	   Link/kicker text: punchy #00b8b8 (Release cyan; brighter than #006e6e / #00a8a8). */
 	.blog-post {
 		--agents-cyan-text: #00b8b8;
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

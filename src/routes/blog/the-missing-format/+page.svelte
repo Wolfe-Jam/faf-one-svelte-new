@@ -448,9 +448,9 @@ competitors:
 	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
-		max-width: 900px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 2rem 1rem;
 		font-family: system-ui, -apple-system, sans-serif;
 	}
 

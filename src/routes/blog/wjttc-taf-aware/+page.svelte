@@ -160,9 +160,9 @@ Validation Checks:
 	}
 
 	.blog-post {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 		line-height: 1.6;
 		color: #1a1a1a;
