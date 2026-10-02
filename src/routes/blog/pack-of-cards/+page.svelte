@@ -18,6 +18,30 @@ Help guide what we build —
 Comments · suggestions welcome.`;
 	const shareUrl = 'https://faf.one/blog/pack-of-cards';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
+
+	// The seven answers as an agent.fafa. Valid against fafa.schema.json; its cards
+	// pass ai-catalog validate (discoverable) and the ARD conformance test.
+	const fafaExample = `version: "1.0"
+agent:
+  name: weather-agent                 # short name
+  displayName: Weather Agent          # name
+  id: urn:air:example.com:agent:weather-agent   # domain + short name
+  version: 1.2.0                      # version
+  description: Answers questions about the weather anywhere.   # what it does
+  homepage: https://example.com
+capabilities:                         # what it can do
+  - name: Get forecast
+    type: tool
+    description: A three-day forecast for a place.
+endpoints:                            # where it runs
+  - protocol: a2a
+    transport: http
+    location: https://example.com/a2a
+metadata:
+  cards:
+    examples:                         # 2-5 questions people ask it; search finds it by these
+      - Will it rain in Leeds tomorrow?
+      - What is the forecast for Tokyo this weekend?`;
 </script>
 
 <svelte:head>
@@ -266,8 +290,13 @@ Comments · suggestions welcome.`;
 			<h2>Get your pack</h2>
 			<p>
 				Seven answers describe an agent or a server: name, short name, domain, what it does, version,
-				where it runs, what it can do. From those, faf-cli writes the <code>.fafa</code> and projects
-				every card that has a place for it — correct to each spec, checked by each spec's own validator.
+				where it runs, what it can do. They go in one small file, <code>agent.fafa</code>. Copy this
+				one into your project and change the values:
+			</p>
+			<pre class="fafa-block"><code>{fafaExample}</code></pre>
+			<p>
+				Then faf-cli projects every card that has a place for it — correct to each spec, checked by
+				each spec's own validator.
 			</p>
 			<div class="terminal-block">
 				<code>npx <NpmPkg name="faf-cli" version="latest" /> cards --target catalog,ard</code>
@@ -455,6 +484,22 @@ Comments · suggestions welcome.`;
 		display: flex;
 		flex-direction: column;
 		gap: 0.4rem;
+	}
+	.fafa-block {
+		background: #1a1a1a;
+		color: #e8e8e8;
+		border-radius: 8px;
+		padding: 1rem 1.25rem;
+		margin: 1.25rem 0;
+		overflow-x: auto;
+		font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
+		font-size: 0.85rem;
+		line-height: 1.5;
+	}
+	.fafa-block code {
+		background: transparent;
+		color: inherit;
+		padding: 0;
 	}
 	.terminal-block code {
 		background: transparent;
