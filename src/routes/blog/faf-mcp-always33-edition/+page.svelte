@@ -24,7 +24,7 @@ Comments · suggestions · shares welcome.`;
 	<title>The Always33 Edition - faf-mcp v4.0.0 | FAF</title>
 	<meta
 		name="description"
-		content="One score, every IDE. Unified scoring in Cursor, VS Code, Windsurf and Cline: faf-mcp v4 scores with faf-cli 8's always-33 kernel."
+		content="One score, every IDE. Unified scoring in Cursor, VS Code, Windsurf and Cline: faf-mcp v4 scores with faf-cli v8's always-33 kernel."
 	/>
 	<meta property="og:title" content="The Always33 Edition - faf-mcp v4.0.0" />
 	<meta
@@ -90,7 +90,7 @@ Comments · suggestions · shares welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> faf-mcp v4 scores with faf-cli 8's always-33 kernel, so your IDE
+				<strong>TL;DR:</strong> faf-mcp v4 scores with faf-cli v8's always-33 kernel, so your IDE
 				gets the same number as faf-cli and claude-faf-mcp. Upgrading from v3? Run
 				<code>faf_auto</code> once. It marks the 12 enterprise slots <code>slotignored</code>, and
 				your score is back.
@@ -98,12 +98,12 @@ Comments · suggestions · shares welcome.`;
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
 				<p>
-					<strong>Old state.</strong> faf-mcp used faf-cli 7's scoring, which counted 21 slots.
+					<strong>Old state.</strong> faf-mcp used faf-cli v7's scoring, which counted 21 slots.
 					The always-33 tools counted 33. Your IDE and the rest of FAF could show different
 					numbers for the same file.
 				</p>
 				<p>
-					<strong>Fix.</strong> v4 composes faf-cli 8. Every tool's score now comes from the
+					<strong>Fix.</strong> v4 composes faf-cli v8. Every tool's score now comes from the
 					always-33 kernel. Slots that are not applicable to a project are marked
 					<code>slotignored</code>, and do not score.
 				</p>
@@ -163,7 +163,7 @@ Comments · suggestions · shares welcome.`;
 			<p>
 				<strong>The Always33 engine, in your IDE.</strong> faf-mcp composes
 				<strong>faf-cli ^8.0.0</strong>. The old range, ^7.12.0, could never reach 8.x. Every
-				tool's score is now faf-cli 8's, from the always-33 kernel. Checked live:
+				tool's score is now faf-cli v8's, from the always-33 kernel. Checked live:
 				<code>faf_score</code> gave faf-python-sdk 56, mcp-context-card 56 and faf-cli ✪ 100, the
 				same as faf-cli v8 and claude-faf-mcp v7.
 			</p>
@@ -230,7 +230,7 @@ Comments · suggestions · shares welcome.`;
 				<li><strong>Version:</strong> 4.0.0 (September 26, 2026)</li>
 				<li><strong>Edition:</strong> The Always33 Edition</li>
 				<li>
-					<strong>Scoring:</strong> faf-cli 8's always-33 kernel (Rust → WASM); 21 slots filled,
+					<strong>Scoring:</strong> faf-cli v8's always-33 kernel (Rust → WASM); 21 slots filled,
 					the 12 enterprise slots <code>slotignored</code>
 				</li>
 				<li><strong>Tools:</strong> Core 15 (29 with <code>FAF_TOOLS=all</code>)</li>
