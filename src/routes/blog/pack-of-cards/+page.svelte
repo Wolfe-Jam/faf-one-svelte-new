@@ -290,18 +290,21 @@ metadata:
 			<h2>Get your pack</h2>
 			<p>
 				Seven answers describe an agent or a server: name, short name, domain, what it does, version,
-				where it runs, what it can do. They go in one small file, <code>agent.fafa</code>. Copy this
-				one into your project and change the values:
-			</p>
-			<pre class="fafa-block"><code>{fafaExample}</code></pre>
-			<p>
-				Then faf-cli projects every card that has a place for it — correct to each spec, checked by
-				each spec's own validator. It reads the <code>.fafa</code> beside your <code>project.faf</code>;
-				if you don't have one yet, <code>init</code> makes it.
+				where it runs, what it can do. One command asks them, writes your <code>agent.fafa</code>, then
+				projects every card that has a place for it — correct to each spec, checked by each spec's own
+				validator.
 			</p>
 			<div class="terminal-block">
-				<code>npx <NpmPkg name="faf-cli" version="latest" /> init</code>
-				<code>npx <NpmPkg name="faf-cli" version="latest" /> cards --target catalog,ard</code>
+				<code>npx <NpmPkg name="faf-cli" version="latest" /> card init</code>
+			</div>
+			<p>
+				Press Enter at the end and you have your AI Catalog and ARD entries. Add a
+				<code>project.faf</code> (<code>init</code>) and <code>cards</code> adds the A2A, MCP and registry
+				cards. Rather write it by hand? Copy this <code>agent.fafa</code> and change the values:
+			</p>
+			<pre class="fafa-block"><code>{fafaExample}</code></pre>
+			<div class="terminal-block">
+				<code>npx <NpmPkg name="faf-cli" version="latest" /> cards</code>
 			</div>
 			<p class="muted-note">
 				<a href="/pack-of-cards#map">The map</a>
