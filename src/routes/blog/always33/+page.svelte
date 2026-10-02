@@ -183,6 +183,16 @@ Comments · suggestions welcome.`;
 			<p>
 				Not a stack of separate tools. Every platform gathers around the same score.
 			</p>
+			<figure class="map-figure">
+				<img
+					src="/blog/always33-hub-wheel.jpg"
+					alt="The Always33 Suite: the FAF smiley at the centre, connected to Claude, Cursor, VS Code, Gemini, SpaceXAI, Python, Cloudflare and the terminal. One .faf. One score. Everywhere."
+					width="1440"
+					height="1440"
+					loading="lazy"
+					decoding="async"
+				/>
+			</figure>
 			<table class="suite-table">
 				<thead>
 					<tr>
