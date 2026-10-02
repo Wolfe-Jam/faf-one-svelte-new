@@ -26,7 +26,7 @@ Comments · suggestions · shares welcome.`;
 	<title>The Always33 Edition - claude-faf-mcp v7.0.0 | FAF</title>
 	<meta
 		name="description"
-		content="New era, new engine. Unified scoring, now in Claude Code and Claude Desktop: claude-faf-mcp v7 scores with faf-cli 8's always-33 kernel."
+		content="New era, new engine. Unified scoring, now in Claude Code and Claude Desktop: claude-faf-mcp v7 scores with faf-cli v8's always-33 kernel."
 	/>
 	<meta property="og:title" content="The Always33 Edition - claude-faf-mcp v7.0.0" />
 	<meta
@@ -92,7 +92,7 @@ Comments · suggestions · shares welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> claude-faf-mcp v7 scores with faf-cli 8's always-33 kernel, so
+				<strong>TL;DR:</strong> claude-faf-mcp v7 scores with faf-cli v8's always-33 kernel, so
 				Claude gets the same number as faf-cli and faf-kernel. Upgrading from v6? Run
 				<code>faf_auto</code> once. It marks the 12 enterprise slots <code>slotignored</code>, and
 				your score is back.
@@ -100,12 +100,12 @@ Comments · suggestions · shares welcome.`;
 			<div class="lead plain-english">
 				<p class="plain-label">In Plain English</p>
 				<p>
-					<strong>Old state.</strong> claude-faf-mcp used faf-cli 7's scoring, which counted 21
+					<strong>Old state.</strong> claude-faf-mcp used faf-cli v7's scoring, which counted 21
 					slots. The always-33 tools counted 33. Claude and the rest of FAF could show different
 					numbers for the same file.
 				</p>
 				<p>
-					<strong>Fix.</strong> v7 composes faf-cli 8. Every tool's score now comes from the
+					<strong>Fix.</strong> v7 composes faf-cli v8. Every tool's score now comes from the
 					always-33 kernel. Slots that are not applicable to a project are marked
 					<code>slotignored</code>, and do not score.
 				</p>
@@ -121,9 +121,9 @@ Comments · suggestions · shares welcome.`;
 			<p class="muted-note">
 				<strong>Claude Desktop:</strong> one click with the
 				<a
-					href="https://github.com/Wolfe-Jam/claude-faf-mcp/releases/download/v7.0.0/claude-faf-mcp-7.0.0.mcpb"
+					href="https://github.com/Wolfe-Jam/claude-faf-mcp/releases/download/v7.0.1/claude-faf-mcp-7.0.1.mcpb"
 					target="_blank"
-					rel="noopener">claude-faf-mcp-7.0.0.mcpb</a
+					rel="noopener">claude-faf-mcp-7.0.1.mcpb</a
 				>
 				extension, which runs the server bundled inside it. Or add
 				<code>npx -y claude-faf-mcp</code> to <code>claude_desktop_config.json</code>.
@@ -164,7 +164,7 @@ Comments · suggestions · shares welcome.`;
 			<p>
 				<strong>The Always33 engine, in Claude.</strong> claude-faf-mcp composes
 				<strong>faf-cli ^8.0.0</strong>. The old range, ^7.13.1, could never reach 8.x. Every
-				tool's score is now faf-cli 8's, from the always-33 kernel. Checked live:
+				tool's score is now faf-cli v8's, from the always-33 kernel. Checked live:
 				<code>faf_score</code> gave faf-python-sdk 56, mcp-context-card 56 and faf-cli ✪ 100, the
 				same as faf-cli v8 and the reference always-33 scorer.
 			</p>
@@ -235,7 +235,7 @@ Comments · suggestions · shares welcome.`;
 				<li><strong>Version:</strong> 7.0.0 (September 26, 2026)</li>
 				<li><strong>Edition:</strong> The Always33 Edition</li>
 				<li>
-					<strong>Scoring:</strong> faf-cli 8's always-33 kernel (Rust → WASM); 21 slots filled,
+					<strong>Scoring:</strong> faf-cli v8's always-33 kernel (Rust → WASM); 21 slots filled,
 					the 12 enterprise slots <code>slotignored</code>
 				</li>
 				<li><strong>Tools:</strong> Core 14 (30 with <code>FAF_TOOLS=all</code>)</li>

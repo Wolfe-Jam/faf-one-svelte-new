@@ -193,7 +193,7 @@ Comments · suggestions · shares welcome.`;
 			<p>
 				<strong>The Always33 engine, on npm and at the edge.</strong> grok-faf-mcp composes
 				<strong>faf-cli ^8.0.0</strong>. <code>faf_score</code>, <code>refresh_faf</code>,
-				<code>faf_trust</code> and the context resources all score with faf-cli 8's kernel. The
+				<code>faf_trust</code> and the context resources all score with faf-cli v8's kernel. The
 				hosted endpoint, <code>mcpaas.live/grok/mcp/v1</code>, scores with the same kernel, so the
 				hosted and local numbers match. Checked live: faf-python-sdk 56, mcp-context-card 56,
 				faf-cli ✪ 100.
@@ -268,7 +268,7 @@ Comments · suggestions · shares welcome.`;
 				</li>
 				<li>
 					<strong>grok-faf-mcp:</strong> 2.0.0 (September 27, 2026) · npm + Homebrew + hosted
-					<code>mcpaas.live/grok/mcp/v1</code> · 12 tools local, 19 hosted · scoring via faf-cli 8
+					<code>mcpaas.live/grok/mcp/v1</code> · 12 tools local, 19 hosted · scoring via faf-cli v8
 				</li>
 				<li><strong>Edition:</strong> The Always33 Edition</li>
 				<li>
