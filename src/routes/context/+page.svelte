@@ -1,5 +1,6 @@
 <script>
 	import PageActions from '$lib/components/PageActions.svelte';
+	import Trophy from '$lib/components/Trophy.svelte';
 </script>
 
 <svelte:head>
@@ -17,7 +18,7 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content=".faf — Foundational Context Layer" />
-	<meta name="twitter:description" content="Persistent project context for AI. /plugin install faf — Claude Code." />
+	<meta name="twitter:description" content="Persistent project context for AI. FAF Skills for Claude Code." />
 	<meta name="twitter:image" content="https://www.faf.one/social-logo.png" />
 </svelte:head>
 
@@ -43,8 +44,9 @@
 
 	<section class="content">
 		<h2>The plugin</h2>
-		<pre>/plugin install faf</pre>
-		<p>The plugin wraps <a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">claude-faf-mcp</a> — already listed in the official MCP Registry (PR <a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener">#2759</a>, merged). Auto-detect your stack, score 0&ndash;100% (🏆 Trophy at 100%), and bi-sync <code>.faf</code> &harr; <code>CLAUDE.md</code>.</p>
+		<pre>{`/plugin marketplace add Wolfe-Jam/faf-skills
+/plugin install faf@faf-skills`}</pre>
+		<p><a href="https://github.com/Wolfe-Jam/faf-skills" target="_blank" rel="noopener">FAF Skills</a> is the FAF plugin for Claude Code. Auto-detect your stack, score 0&ndash;100% (<Trophy /> Trophy at 100%), and sync <code>.faf</code> &harr; <code>CLAUDE.md</code>. Its toolbox, <a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">claude-faf-mcp</a>, is in the official MCP Registry.</p>
 		<p>Complementary to Anthropic's own <code>claude-md-management</code> plugin: <code>.faf</code> is the structured source that authors what <code>claude-md-management</code> maintains.</p>
 	</section>
 
@@ -58,7 +60,7 @@
 		<ul class="receipts">
 			<li><strong>IANA-registered</strong> &mdash; <code>application/vnd.faf+yaml</code> (October 30, 2025)</li>
 			<li><strong>Companion paper</strong> &mdash; the .faf Context paper on Zenodo (DOI <a href="https://doi.org/10.5281/zenodo.18251362" target="_blank" rel="noopener">10.5281/zenodo.18251362</a>)</li>
-			<li><strong><a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">claude-faf-mcp on npm</a></strong> &mdash; in the official MCP Registry; PR #2759 merged</li>
+			<li><strong><a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">claude-faf-mcp on npm</a></strong> &mdash; in the official MCP Registry</li>
 			<li><strong>Six FAF servers</strong> on the official MCP Registry (claude / grok / gemini / faf-mcp / rust-faf / WJTTC)</li>
 			<li><strong>Sibling layer</strong> &mdash; <code>.fafm</code> Permanent Memory Layer &rarr; <a href="/memory">/memory</a></li>
 		</ul>
@@ -66,11 +68,12 @@
 
 	<section class="content cta-section">
 		<h2>Try it</h2>
-		<pre>/plugin install faf</pre>
-		<a class="cta" href="https://github.com/Wolfe-Jam/faf-plugin" target="_blank" rel="noopener">View the plugin on GitHub &rarr;</a>
+		<pre>{`/plugin marketplace add Wolfe-Jam/faf-skills
+/plugin install faf@faf-skills`}</pre>
+		<a class="cta" href="https://github.com/Wolfe-Jam/faf-skills" target="_blank" rel="noopener">View FAF Skills on GitHub &rarr;</a>
 		<p class="links">
 			<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">npm</a> &middot;
-			<a href="https://github.com/Wolfe-Jam/faf-plugin" target="_blank" rel="noopener">Plugin</a> &middot;
+			<a href="https://github.com/Wolfe-Jam/faf-skills" target="_blank" rel="noopener">FAF Skills</a> &middot;
 			<a href="https://github.com/Wolfe-Jam/faf" target="_blank" rel="noopener">Spec</a> &middot;
 			<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener">CLI</a>
 		</p>
