@@ -73,7 +73,7 @@
 	<meta property="og:image:height" content="630" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@wolfejam77" />
+	<meta name="twitter:site" content="@wolfe_jam" />
 	<meta name="twitter:title" content="FAF Agent — The Voice of FAF" />
 	<meta name="twitter:description" content="Cites the spec on every answer, or refuses out of scope without drama." />
 	<meta name="twitter:image" content="https://faf.one/og/agent-og-1200x630.png" />
@@ -128,7 +128,7 @@
 			Chat to FAFA live
 			<span class="chat-cta-arrow">&rarr;</span>
 		</a>
-		<a class="fam-tag" href="https://mcpaas.live/claim" target="_blank" rel="noopener">Join the FAM 🐘 →</a>
+		<a class="fam-tag" href="https://mcpaas.live/claim" target="_blank" rel="noopener">Join the FAM →</a>
 		<p class="manifesto">FAF defines. AGENTS.md instructs. AI codes.</p>
 		<p class="response">I speak their language.</p>
 	</section>
@@ -157,11 +157,11 @@
 		<div class="grid">
 			<div class="card">
 				<strong>validate_faf <span class="defer">⌚</span></strong>
-				<p>Deterministic validation via <code>bunx faf-cli check</code>; this tool wires the same kernel in v0.2.0</p>
+				<p>Deterministic validation via <code>bunx faf-cli check</code>; this tool wires the same kernel in a later release</p>
 			</div>
 			<div class="card">
 				<strong>score_faf <span class="defer">⌚</span></strong>
-				<p>Mk4 scoring via <code>bunx faf-cli score</code>; this tool wires the same kernel in v0.2.0</p>
+				<p>Always-33 scoring via <code>bunx faf-cli score</code>; this tool wires the same kernel in a later release</p>
 			</div>
 			<div class="card">
 				<strong>ask</strong>
@@ -180,7 +180,7 @@
 				<p>Read the soul body for a namepoint</p>
 			</div>
 		</div>
-		<p class="defer-note"><span class="defer">⌚</span> marker: v0.1.x returns a structured <code>not_implemented</code> response that points at <code>faf-cli</code>; the Rust/WASM kernel powering faf-cli's same-name commands wires through to this package in v0.2.0.</p>
+		<p class="defer-note"><span class="defer">⌚</span> marker: v0.1.x returns a structured <code>not_implemented</code> response that points at <code>faf-cli</code>; the Rust/WASM kernel powering faf-cli's same-name commands wires through to this package in a later release.</p>
 	</section>
 
 	<section class="contract">
@@ -216,37 +216,28 @@
 			</div>
 			<div class="tab-content">
 				{#if activeTab === 'claude'}
-					<p class="tab-note">Add to <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>:</p>
-					<div class="code-block"><pre>{`{
-  "mcpServers": {
-    "faf-agent": {
-      "command": "python",
-      "args": ["-m", "faf_agent_mcp.server"]
-    }
-  }
-}`}</pre></div>
+					<p class="tab-note">Run once in your terminal:</p>
+					<div class="code-block"><pre>claude mcp add faf-agent -- uvx faf-agent-mcp</pre></div>
 				{/if}
 				{#if activeTab === 'cursor'}
 					<p class="tab-note">Add to <code>~/.cursor/mcp.json</code>:</p>
 					<div class="code-block"><pre>{`{
   "mcpServers": {
     "faf-agent": {
-      "command": "python",
-      "args": ["-m", "faf_agent_mcp.server"]
+      "command": "uvx",
+      "args": ["faf-agent-mcp"]
     }
   }
 }`}</pre></div>
 				{/if}
 				{#if activeTab === 'continue'}
-					<p class="tab-note">Add to <code>~/.continue/config.json</code>:</p>
-					<div class="code-block"><pre>{`{
-  "mcpServers": {
-    "faf-agent": {
-      "command": "python",
-      "args": ["-m", "faf_agent_mcp.server"]
-    }
-  }
-}`}</pre></div>
+					<p class="tab-note">Add to <code>.continue/config.yaml</code>:</p>
+					<div class="code-block"><pre>{`mcpServers:
+  - name: faf-agent
+    type: stdio
+    command: uvx
+    args:
+      - faf-agent-mcp`}</pre></div>
 				{/if}
 			</div>
 		</div>
@@ -274,10 +265,10 @@
 		</div>
 		<div class="qs-step">
 			<h3>Validate + score &mdash; deterministic</h3>
-			<p class="tab-note">Delegate the check to the deterministic Mk4 kernel &mdash; the same one <code>faf-cli</code> runs. Not a chat guess.</p>
+			<p class="tab-note">Delegate the check to the deterministic always-33 kernel &mdash; the same one <code>faf-cli</code> runs. Not a chat guess.</p>
 			<div class="code-block"><pre>{`bunx faf-cli check   # validate
 bunx faf-cli score   # score`}</pre></div>
-			<p class="tab-note">The same kernel wires as native MCP tools (<code>validate_faf</code> / <code>score_faf</code>) in faf-agent v0.2.0.</p>
+			<p class="tab-note">The same kernel wires as native MCP tools (<code>validate_faf</code> / <code>score_faf</code>) in a later faf-agent release.</p>
 		</div>
 		<div class="qs-step">
 			<h3>Discover &mdash; find, then call</h3>
@@ -296,17 +287,17 @@ curl https://faf.one/.well-known/agent-card.json`}</pre></div>
 			<a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.faf</div>
 				<div class="family-layer">FCL — Foundational Context Layer</div>
-				<div class="family-status">✅ IANA registered</div>
+				<div class="family-status">IANA registered</div>
 			</a>
 			<a href="https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.fafm</div>
-				<div class="family-layer">VML — Voice Memory Layer</div>
-				<div class="family-status">✅ IANA registered</div>
+				<div class="family-layer">Memory — VML (voice) · PML (knowledge)</div>
+				<div class="family-status">IANA registered</div>
 			</a>
 			<a href="https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml" class="family-card" target="_blank" rel="noopener noreferrer">
 				<div class="family-name">.fafa</div>
 				<div class="family-layer">Agent Card</div>
-				<div class="family-status">✅ IANA registered</div>
+				<div class="family-status">IANA registered</div>
 			</a>
 			<div class="family-card">
 				<div class="family-name">.fafb</div>
