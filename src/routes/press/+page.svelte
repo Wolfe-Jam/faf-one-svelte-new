@@ -285,6 +285,11 @@
 </section>
 
 <style>
+	.container {
+		max-width: 960px;
+		padding: 0 1rem;
+	}
+
 
 	.press-hero {
 		background: var(--faf-black);
@@ -341,7 +346,6 @@
 	}
 	
 	.intro-box {
-		max-width: 800px;
 		margin: 0 auto;
 	}
 	
@@ -419,7 +423,6 @@
 	}
 	
 	.achievements-list {
-		max-width: 800px;
 		margin: 0 auto;
 	}
 	
@@ -605,7 +608,6 @@
 	}
 	
 	.timeline-container {
-		max-width: 800px;
 		margin: 0 auto;
 		position: relative;
 		padding-left: 150px;

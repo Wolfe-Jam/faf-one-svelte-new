@@ -352,7 +352,7 @@
 
 <style>
 	.wjttc-page {
-		max-width: 1200px;
+		max-width: 960px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
