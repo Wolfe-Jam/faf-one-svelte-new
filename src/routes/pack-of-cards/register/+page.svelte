@@ -143,7 +143,6 @@
 		background: var(--faf-section-alt);
 		border-radius: 8px;
 		border-left: 4px solid var(--faf-orange);
-		max-width: 80ch;
 		line-height: 1.7;
 	}
 	.jump {

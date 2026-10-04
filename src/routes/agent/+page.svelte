@@ -358,9 +358,9 @@ curl https://faf.one/.well-known/agent-card.json`}</pre></div>
 	:global(body) { background: var(--faf-locked-dark); color: var(--faf-locked-dark-text); }
 
 	main {
-		max-width: 720px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 3rem 1.5rem 5rem;
+		padding: 3rem 1rem 5rem;
 		color: #eee;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	}
@@ -395,7 +395,6 @@ curl https://faf.one/.well-known/agent-card.json`}</pre></div>
 		color: #ccc;
 		font-size: 1.05rem;
 		line-height: 1.55;
-		max-width: 560px;
 		margin: 0 auto 0.5rem;
 	}
 
