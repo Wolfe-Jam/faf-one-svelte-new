@@ -1,14 +1,14 @@
-import { env } from '$env/dynamic/private';
+import { FAFB_DRIVE_SECRET, RESEND_API_KEY, FAFB_DRIVE_ALLOW } from '$app/env/private';
 
 const COOKIE = 'fafb_drive';
 const enc = new TextEncoder();
 
 function secret(): string {
-	return env.FAFB_DRIVE_SECRET || env.RESEND_API_KEY || '';
+	return FAFB_DRIVE_SECRET || RESEND_API_KEY || '';
 }
 
 function allowed(email: string): boolean {
-	const raw = (env.FAFB_DRIVE_ALLOW || '').trim();
+	const raw = (FAFB_DRIVE_ALLOW || '').trim();
 	if (!raw) return true;
 	const want = email.toLowerCase();
 	return raw
@@ -47,7 +47,7 @@ function timingEqual(a: string, b: string): boolean {
 
 export function normEmail(raw: string): string | null {
 	const e = raw.trim().toLowerCase();
-	if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) return null;
+	if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(e)) return null;
 	return e;
 }
 

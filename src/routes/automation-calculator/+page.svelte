@@ -1,6 +1,6 @@
 <script lang="ts">
-	import RiskSlider from '$lib/components/risk-assessment/RiskSlider.svelte';
-	import ImpactDisplay from '$lib/components/risk-assessment/ImpactDisplay.svelte';
+	import RiskSlider from '#lib/components/risk-assessment/RiskSlider.svelte';
+	import ImpactDisplay from '#lib/components/risk-assessment/ImpactDisplay.svelte';
 
 	// Automation-specific inputs
 	let workflows = $state(25); // Total workflows managed

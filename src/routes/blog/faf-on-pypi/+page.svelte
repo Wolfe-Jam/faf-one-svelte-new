@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	let copiedId = $state('');
 	async function copyText(text: string, id: string) {

@@ -1,6 +1,6 @@
 <script>
-	import FafLogo from '$lib/components/FafLogo.svelte';
-	import PageActions from '$lib/components/PageActions.svelte';
+	import FafLogo from '#lib/components/FafLogo.svelte';
+	import PageActions from '#lib/components/PageActions.svelte';
 
 	let copiedKey = $state(null);
 	let activeTab = $state('claude');

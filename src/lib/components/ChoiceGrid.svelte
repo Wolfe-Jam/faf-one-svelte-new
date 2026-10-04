@@ -5,7 +5,7 @@
 	 * and links to the line it came from. The full register — every checkpoint,
 	 * not just the latest — lives at /pack-of-cards/register.
 	 */
-	import { pack } from '$lib/data/pack-of-cards';
+	import { pack } from '#lib/data/pack-of-cards.js';
 
 	const { dims, cards } = pack.choices;
 </script>

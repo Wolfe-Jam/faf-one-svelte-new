@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	
 	let isVisible = $state(false);
@@ -70,9 +70,12 @@
 				<summary>Technical Details</summary>
 				<div class="tech-info">
 					<code>
-						Error: {$page.status}<br/>
-						Path: {$page.url.pathname}<br/>
-						Format: Context not found in .faf registry<br/>
+						Error: {page.status}
+						<br />
+						Path: {page.url.pathname}
+						<br />
+						Format: Context not found in .faf registry
+						<br />
 						Recovery: Automatic redirect available
 					</code>
 				</div>

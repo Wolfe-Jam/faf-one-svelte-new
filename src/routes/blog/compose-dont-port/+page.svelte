@@ -1,6 +1,6 @@
 <!-- pubblog Story — spine copied from one-block (GOLD). Teaching, not a release. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `Compose, don't port.
 

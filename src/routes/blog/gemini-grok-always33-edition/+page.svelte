@@ -1,7 +1,7 @@
 <!-- pubblog Release — gemini-faf-mcp v3.0.0 + grok-faf-mcp v2.0.0, The Always33 Edition.
      Part IV of the Always33 series (overview: /blog/always33). Chrome copied from faf-mcp-always33-edition. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: gemini-faf-mcp v3 + grok-faf-mcp v2 — The Always33 Edition
 

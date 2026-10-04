@@ -6,7 +6,7 @@
 	 * pipeline's MAP_CSS with site tokens swapped in — `verify_public.py` checks
 	 * every class the SVG uses still has a rule here.
 	 */
-	import { pack } from '$lib/data/pack-of-cards';
+	import { pack } from '#lib/data/pack-of-cards.js';
 
 	const { key, views, positions, method, counts, as_of } = pack.map;
 	let view = $state(views[0].id);

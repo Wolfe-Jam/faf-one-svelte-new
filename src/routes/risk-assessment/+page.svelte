@@ -1,8 +1,8 @@
 <script lang="ts">
-	import RiskSlider from '$lib/components/risk-assessment/RiskSlider.svelte';
-	import ImpactDisplay from '$lib/components/risk-assessment/ImpactDisplay.svelte';
-	import ComparisonCard from '$lib/components/risk-assessment/ComparisonCard.svelte';
-	import ContextPreview from '$lib/components/risk-assessment/ContextPreview.svelte';
+	import RiskSlider from '#lib/components/risk-assessment/RiskSlider.svelte';
+	import ImpactDisplay from '#lib/components/risk-assessment/ImpactDisplay.svelte';
+	import ComparisonCard from '#lib/components/risk-assessment/ComparisonCard.svelte';
+	import ContextPreview from '#lib/components/risk-assessment/ContextPreview.svelte';
 
 	// Default values
 	const defaults = {

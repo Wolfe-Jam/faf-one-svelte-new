@@ -1,5 +1,5 @@
 <script>
-	import ShareX from '$lib/components/ShareX.svelte';
+	import ShareX from '#lib/components/ShareX.svelte';
 </script>
 
 <svelte:head>

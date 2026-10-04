@@ -7,10 +7,9 @@
  * Same spine as contact: RESEND_API_KEY + team@faf.one inbox.
  */
 
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
+import { RESEND_API_KEY } from '$app/env/private';
 
 /** Same Formspree form as downloads — backup if Resend send fails. */
 const FORMSPREE_URL = 'https://formspree.io/f/xnngaegg';
@@ -19,8 +18,8 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-	if (!resend && env.RESEND_API_KEY) {
-		resend = new Resend(env.RESEND_API_KEY);
+	if (!resend && RESEND_API_KEY) {
+		resend = new Resend(RESEND_API_KEY);
 	}
 	return resend;
 }
@@ -113,7 +112,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const source = typeof body.source === 'string' ? body.source : 'faf.one/subscribe';
 
 		if (!email || !EMAIL_RE.test(email)) {
-			return json({ error: 'Invalid email address' }, { status: 400 });
+			return Response.json({ error: 'Invalid email address' }, { status: 400 });
 		}
 
 		const client = getResend();
@@ -122,7 +121,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			if (team.ok) {
 				sendAutoReply(client, email);
 				console.log(`✅ New subscriber (Resend → team@): ${email} from ${source}`);
-				return json({ message: 'Subscribed!', subscribed: true, via: 'resend' });
+				return Response.json({ message: 'Subscribed!', subscribed: true, via: 'resend' });
 			}
 			console.error('❌ Resend subscribe notify failed:', team.error);
 		}
@@ -131,13 +130,13 @@ export const POST: RequestHandler = async ({ request }) => {
 		const fs = await subscribeFormspree(email, source);
 		if (!fs.ok) {
 			console.error('❌ Formspree subscribe error:', fs.error);
-			return json({ error: 'Failed to subscribe' }, { status: 500 });
+			return Response.json({ error: 'Failed to subscribe' }, { status: 500 });
 		}
 
 		console.log(`✅ New subscriber (Formspree): ${email} from ${source}`);
-		return json({ message: 'Subscribed!', subscribed: true, via: 'formspree' });
+		return Response.json({ message: 'Subscribed!', subscribed: true, via: 'formspree' });
 	} catch (error) {
 		console.error('❌ Subscribe error:', error);
-		return json({ error: 'Failed to subscribe' }, { status: 500 });
+		return Response.json({ error: 'Failed to subscribe' }, { status: 500 });
 	}
 };

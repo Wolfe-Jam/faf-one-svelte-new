@@ -17,7 +17,7 @@
 	//   <PageActions />                                      → Sponsor only (blog when article owns X)
 	//   <PageActions headline=".." ... cta="uvx faf" />      → override CTA
 	//   <PageActions headline=".." ... sponsor={false} />    → X only
-	import ShareX from '$lib/components/ShareX.svelte';
+	import ShareX from '#lib/components/ShareX.svelte';
 	let {
 		headline = '',
 		point1 = '',

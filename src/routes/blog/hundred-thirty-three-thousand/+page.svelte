@@ -13,7 +13,7 @@
 	import {
 		npmPackages, pypiPackages, cratesPackages,
 		npmTotal, pypiTotal, cratesTotal, grandTotal
-	} from '$lib/data/packages';
+	} from '#lib/data/packages.js';
 	const fmt = (n: number) => n.toLocaleString('en-US');
 </script>
 

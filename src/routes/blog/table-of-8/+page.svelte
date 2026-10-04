@@ -1,6 +1,6 @@
 <!-- pubblog GOLD — default Release model. Locked 2026-08-19. Copy matching-client. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: rust-faf-mcp v0.7.0 — The Table-of-8 Edition
 

@@ -3,11 +3,11 @@
  * Production: 404 — never allow arbitrary email send from a public GET.
  */
 
-import { error, json } from '@sveltejs/kit';
-import { dev } from '$app/environment';
+import { error } from '@sveltejs/kit';
+import { dev } from '$app/env';
 import type { RequestHandler } from './$types';
-import { sendLicenseEmail } from '$lib/emails/send-license-email';
-import type { License } from '$lib/license-generator';
+import { sendLicenseEmail } from '#lib/emails/send-license-email.js';
+import type { License } from '#lib/license-generator.js';
 
 export const GET: RequestHandler = async ({ url }) => {
     if (!dev) error(404, 'Not found');
@@ -36,14 +36,14 @@ export const GET: RequestHandler = async ({ url }) => {
     const result = await sendLicenseEmail(testLicense);
 
     if (result.success) {
-        return json({
+        return Response.json({
             success: true,
             message: `Test email sent to ${testEmail} from team@faf.one 🏎️💨`,
             licenseKey: testLicense.key,
             email: testEmail
         });
     } else {
-        return json({
+        return Response.json({
             success: false,
             error: result.error,
             message: 'Email send failed - check Resend domain verification',

@@ -1,7 +1,7 @@
 <!-- pubblog GOLD — default Release model. Locked 2026-08-19. Copy this file.
      ~/.claude/skills/pubblog/references/release-matching-client.md -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: mcp-better v0.5.0 — matching client completes MRTR
 

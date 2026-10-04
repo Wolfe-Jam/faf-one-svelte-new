@@ -1,7 +1,7 @@
 <!-- pubblog — Release model, copied from mcp-better-matching-client (gold, locked 2026-08-19). -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: gemini-faf-mcp v2.6.0 — The Agent Card Edition
 

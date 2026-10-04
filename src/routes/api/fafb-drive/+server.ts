@@ -2,16 +2,15 @@
  * FAFb 0.9 test-drive answers → team@faf.one
  * Unlisted. Same Q01–Q22 as the locked cohort set.
  */
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
-import { cookieName, readSession } from '$lib/fafb-drive-auth';
+import { RESEND_API_KEY } from '$app/env/private';
+import { cookieName, readSession } from '#lib/fafb-drive-auth.js';
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-	if (!resend && env.RESEND_API_KEY) {
-		resend = new Resend(env.RESEND_API_KEY);
+	if (!resend && RESEND_API_KEY) {
+		resend = new Resend(RESEND_API_KEY);
 	}
 	return resend;
 }
@@ -37,23 +36,23 @@ function asText(v: unknown): string {
 export const POST: RequestHandler = async ({ request, cookies }) => {
 	const who = await readSession(cookies.get(cookieName()));
 	if (!who) {
-		return json({ success: false, error: 'Sign in first.' }, { status: 401 });
+		return Response.json({ success: false, error: 'Sign in first.' }, { status: 401 });
 	}
 
-	if (!env.RESEND_API_KEY) {
-		return json({ success: false, error: 'Email service not configured' }, { status: 500 });
+	if (!RESEND_API_KEY) {
+		return Response.json({ success: false, error: 'Email service not configured' }, { status: 500 });
 	}
 
 	let body: Record<string, unknown>;
 	try {
 		body = await request.json();
 	} catch {
-		return json({ success: false, error: 'Invalid JSON' }, { status: 400 });
+		return Response.json({ success: false, error: 'Invalid JSON' }, { status: 400 });
 	}
 
 	// Honeypot
 	if (asText(body.website)) {
-		return json({ success: true });
+		return Response.json({ success: true });
 	}
 
 	const answers: Record<string, string> = {};
@@ -62,7 +61,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 	}
 
 	if (!answers.Q01 || !answers.Q03 || !answers.Q06 || !answers.Q19 || !answers.Q20 || !answers.Q21) {
-		return json({ success: false, error: 'Required fields missing' }, { status: 400 });
+		return Response.json({ success: false, error: 'Required fields missing' }, { status: 400 });
 	}
 
 	const handle = answers.Q01;
@@ -88,7 +87,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 
 	const client = getResend();
 	if (!client) {
-		return json({ success: false, error: 'Email service not configured' }, { status: 500 });
+		return Response.json({ success: false, error: 'Email service not configured' }, { status: 500 });
 	}
 
 	const { error } = await client.emails.send({
@@ -100,8 +99,8 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 	});
 
 	if (error) {
-		return json({ success: false, error: error.message }, { status: 500 });
+		return Response.json({ success: false, error: error.message }, { status: 500 });
 	}
 
-	return json({ success: true });
+	return Response.json({ success: true });
 };

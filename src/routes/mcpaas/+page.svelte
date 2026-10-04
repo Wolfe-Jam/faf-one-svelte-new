@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import PageActions from '$lib/components/PageActions.svelte';
+	import PageActions from '#lib/components/PageActions.svelte';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 </script>

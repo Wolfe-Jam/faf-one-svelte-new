@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 
 	// Just Shipped - Latest releases showcase as dismissable popup that stays on page
 	let showAsPopup = $state(false);
@@ -35,548 +35,575 @@
 	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
 		<button class="close-button" onclick={closePopup} aria-label="Close">✕</button>
 
-<section class="just-shipped popup-mode">
-	<div class="container">
-		<h2 class="section-title">Foundation Layer</h2>
+			<section class="just-shipped popup-mode">
+				<div class="container">
+					<h2 class="section-title">Foundation Layer</h2>
 
-		<!-- Authority Logos -->
-		<div class="popup-logos">
-			<a href="https://github.com/modelcontextprotocol/servers" class="logo-item mcp-logo-item" target="_blank" rel="noopener">
-				<img src="/mcp-logo.png" alt="Model Context Protocol" class="popup-mcp-logo" />
-				<span class="logo-text">Model Context Protocol<br><small>Open-sourced by Anthropic</small></span>
-			</a>
+					<!-- Authority Logos -->
+					<div class="popup-logos">
+						<a
+							href="https://github.com/modelcontextprotocol/servers"
+							class="logo-item mcp-logo-item"
+							target="_blank"
+							rel="noopener"
+						>
+							<img
+								src="/mcp-logo.png"
+								alt="Model Context Protocol"
+								class="popup-mcp-logo"
+							/>
+
+							<span class="logo-text">
+								Model Context Protocol
+								<br />
+								<small>Open-sourced by Anthropic</small>
+							</span>
+						</a>
 			<a href="https://chrome.google.com/webstore/detail/faf" class="logo-item chrome-logo-item" target="_blank" rel="noopener">
 				<img src="/chrome-web-store-badge-medium.png" alt="Available in the Chrome Web Store" class="popup-chrome-logo" />
-			</a>
-		</div>
+						</a>
+					</div>
 
-		<div class="total-stats stats-top">
-			<p>
+					<div class="total-stats stats-top">
+						<p>
 				<strong>50,000+ Downloads</strong> •
-				<strong>MIT License, FREE FOREVER</strong>
-			</p>
-		</div>
+							<strong>MIT License, FREE FOREVER</strong>
+						</p>
+					</div>
 
-		<!-- The Composed Edition v6.10.x -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>✪ faf-cli v6.10.x — The Composed Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Every FAF MCP composes single-source engines, never reimplements them. Turbo-Cat + the bench engine join the public API — and a same-day no-guess patch proves the doctrine polices itself.</p>
+					<!-- The Composed Edition v6.10.x -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>✪ faf-cli v6.10.x — The Composed Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Every FAF MCP composes single-source engines, never reimplements them. Turbo-Cat + the bench engine join the public API — and a same-day no-guess patch proves the doctrine polices itself.</p>
 			<a href="/blog/composed-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- The Grounded Edition v6.9.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>✪ faf-cli v6.9.0 — The Grounded Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">You're Grounded! faf bench measures your AI cold vs with-faf — graded by your own .faf, ✪ receipts. The 6Ws Interview goes public-API. faf refresh: drift → refresh → re-grounded.</p>
+					<!-- The Grounded Edition v6.9.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>✪ faf-cli v6.9.0 — The Grounded Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">You're Grounded! faf bench measures your AI cold vs with-faf — graded by your own .faf, ✪ receipts. The 6Ws Interview goes public-API. faf refresh: drift → refresh → re-grounded.</p>
 			<a href="/blog/grounded-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- The Trust Edition v5.8.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>✪ claude-faf-mcp v5.8.0 — The Trust Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Claude Code-native context that just works. Every session opens with faf: context ✪ 100% — fresh. Quiet output, typed results, a parity hash any engine can verify. 35 tools, 547 tests.</p>
+					<!-- The Trust Edition v5.8.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>✪ claude-faf-mcp v5.8.0 — The Trust Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Claude Code-native context that just works. Every session opens with faf: context ✪ 100% — fresh. Quiet output, typed results, a parity hash any engine can verify. 35 tools, 547 tests.</p>
 			<a href="/blog/trust-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- The Relentless Edition v6.8.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🏎️ faf-cli v6.8.0 — The Relentless Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Birth DNA, 6-W extractor, format-finder — restored. Grok interop (faf export --grok), extension App-Type — added. One shared pipeline makes init, auto, git impossible to drift between.</p>
+					<!-- The Relentless Edition v6.8.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🏎️ faf-cli v6.8.0 — The Relentless Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Birth DNA, 6-W extractor, format-finder — restored. Grok interop (faf export --grok), extension App-Type — added. One shared pipeline makes init, auto, git impossible to drift between.</p>
 			<a href="/blog/relentless-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- The HTML Edition v6.7.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🏎️ faf-cli v6.7.0 — The HTML Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">We rendered a .faf. The day we saw FAF. faf show renders project.faf → project.html, on-demand, for human and team review. The 4th pillar: FAF defines. MD instructs. AI codes. HTML shows.</p>
+					<!-- The HTML Edition v6.7.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🏎️ faf-cli v6.7.0 — The HTML Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">We rendered a .faf. The day we saw FAF. faf show renders project.faf → project.html, on-demand, for human and team review. The 4th pillar: FAF defines. MD instructs. AI codes. HTML shows.</p>
 			<a href="/blog/html-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- The Trophy Edition v6.6.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🏆 faf-cli v6.6.0 — The Trophy Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Until now we had 85% as a recommended minimum. It's now 100. All or nothing. AI gets its best shot at assisting you. v6.6 adds the 20th app-type — about — and flips the recommendation: 🏆 Trophy only.</p>
+					<!-- The Trophy Edition v6.6.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🏆 faf-cli v6.6.0 — The Trophy Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Until now we had 85% as a recommended minimum. It's now 100. All or nothing. AI gets its best shot at assisting you. v6.6 adds the 20th app-type — about — and flips the recommendation: 🏆 Trophy only.</p>
 			<a href="/blog/trophy-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- The Day of the GRID v1.5.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🌐 mcpaas-cf v1.5.0 — The Day of the GRID</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Package.json got a UI. Point /grid at any npm package or GitHub repo — same renderer reads the structure. /grid?npm=react, /grid?gh=facebook/react. See what's there. See what's not.</p>
+					<!-- The Day of the GRID v1.5.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🌐 mcpaas-cf v1.5.0 — The Day of the GRID</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Package.json got a UI. Point /grid at any npm package or GitHub repo — same renderer reads the structure. /grid?npm=react, /grid?gh=facebook/react. See what's there. See what's not.</p>
 			<a href="/blog/the-day-of-the-grid" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Extension Edition v5.5.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🔌 claude-faf-mcp v5.5.0 — The Extension Edition</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">One-click Desktop Extension for Claude. No JSON config, no terminal. 32 tools, 118 tests, zero failures. Submitted to Anthropic Connectors Directory.</p>
+					<!-- Extension Edition v5.5.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🔌 claude-faf-mcp v5.5.0 — The Extension Edition</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">One-click Desktop Extension for Claude. No JSON config, no terminal. 32 tools, 118 tests, zero failures. Submitted to Anthropic Connectors Directory.</p>
 			<a href="/blog/extension-edition" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- 50,000 Downloads Milestone -->
-		<div class="chrome-featured milestone-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🏆 50,000 Downloads — FAF Ecosystem Milestone</h3>
-					<span class="chrome-badge milestone-badge">Milestone</span>
-				</div>
-			</div>
-			<p class="chrome-description">16 packages. 3 registries. 3 languages. One format. npm, PyPI, crates.io — the format keeps spreading because it keeps working.</p>
+					<!-- 50,000 Downloads Milestone -->
+					<div class="chrome-featured milestone-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🏆 50,000 Downloads — FAF Ecosystem Milestone</h3>
+								<span class="chrome-badge milestone-badge">Milestone</span>
+							</div>
+						</div>
+						<p class="chrome-description">16 packages. 3 registries. 3 languages. One format. npm, PyPI, crates.io — the format keeps spreading because it keeps working.</p>
 			<a href="/blog/fifty-thousand" class="chrome-install milestone-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- bun-sticky v2.0.0 WASM Edition -->
-		<div class="chrome-featured bun-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🥐 bun-sticky v2.0.0 - WASM Edition</h3>
-					<span class="chrome-badge bun-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Mk4 WASM kernel embedded. Data-driven slotignore. All engines produce identical scores. 284us per score. 405 tests.</p>
+					<!-- bun-sticky v2.0.0 WASM Edition -->
+					<div class="chrome-featured bun-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🥐 bun-sticky v2.0.0 - WASM Edition</h3>
+								<span class="chrome-badge bun-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Mk4 WASM kernel embedded. Data-driven slotignore. All engines produce identical scores. 284us per score. 405 tests.</p>
 			<a href="/blog/wasm-edition" class="chrome-install bun-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- FAFb The Definitive Edition v2.0.0 -->
-		<div class="chrome-featured rust-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🦀 faf-rust-sdk v2.0.0 - FAFb The Definitive Edition</h3>
-					<span class="chrome-badge rust-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">The definitive binary format for AI context. String table, chunk classification (DNA/Context/Pointer), enterprise scale. 313 tests across Rust + WASM SDKs.</p>
+					<!-- FAFb The Definitive Edition v2.0.0 -->
+					<div class="chrome-featured rust-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🦀 faf-rust-sdk v2.0.0 - FAFb The Definitive Edition</h3>
+								<span class="chrome-badge rust-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">The definitive binary format for AI context. String table, chunk classification (DNA/Context/Pointer), enterprise scale. 313 tests across Rust + WASM SDKs.</p>
 			<a href="/blog/fafb-definitive-edition" class="chrome-install rust-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Mk4 Championship Engine -->
-		<div class="chrome-featured rust-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🧬 Mk4 Championship Engine — Unified Scoring</h3>
-					<span class="chrome-badge rust-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">One Rust engine, 33 slots, 596 tests. Claude, Gemini, OpenAI, and Grok finally score the same file the same way. Context-Impairment: cured.</p>
+					<!-- Mk4 Championship Engine -->
+					<div class="chrome-featured rust-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🧬 Mk4 Championship Engine — Unified Scoring</h3>
+								<span class="chrome-badge rust-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">One Rust engine, 33 slots, 596 tests. Claude, Gemini, OpenAI, and Grok finally score the same file the same way. Context-Impairment: cured.</p>
 			<a href="/blog/mk4-engine" class="chrome-install rust-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Interop MCP v2.0.0 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🔄 faf-mcp v2.0.0 - The Interop MCP for Context</h3>
-					<span class="chrome-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Define once. Sync everywhere. The dedicated MCP server for Cursor, Windsurf, Cline, and VS Code. 5 interop tools, 7 bundled parsers, 61 tools, 309 tests.</p>
+					<!-- Interop MCP v2.0.0 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🔄 faf-mcp v2.0.0 - The Interop MCP for Context</h3>
+								<span class="chrome-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Define once. Sync everywhere. The dedicated MCP server for Cursor, Windsurf, Cline, and VS Code. 5 interop tools, 7 bundled parsers, 61 tools, 309 tests.</p>
 			<a href="/blog/interop-mcp" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- RAM Edition v5.0.0 -->
-		<div class="chrome-featured foundation-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🧠 faf-cli v5.0.0 - The RAM Edition</h3>
-					<span class="chrome-badge foundation-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Bi-sync is core. Tri-sync adds more. It adds RAM — auto-syncing with Claude's MEMORY.md. Pro Gate with 14-day free trial. For builders, serious coders, and app-makers.</p>
+					<!-- RAM Edition v5.0.0 -->
+					<div class="chrome-featured foundation-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🧠 faf-cli v5.0.0 - The RAM Edition</h3>
+								<span class="chrome-badge foundation-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Bi-sync is core. Tri-sync adds more. It adds RAM — auto-syncing with Claude's MEMORY.md. Pro Gate with 14-day free trial. For builders, serious coders, and app-makers.</p>
 			<a href="/blog/ram-edition" class="chrome-install foundation-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- AGENTS.md Edition v4.5.0 -->
-		<div class="chrome-featured foundation-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🔗 faf-cli v4.5.0 - The AGENTS.md Edition</h3>
-					<span class="chrome-badge foundation-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">One project.faf, every format. Full AGENTS.md + .cursorrules interop. Define once, sync everywhere with faf bi-sync --all.</p>
+					<!-- AGENTS.md Edition v4.5.0 -->
+					<div class="chrome-featured foundation-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🔗 faf-cli v4.5.0 - The AGENTS.md Edition</h3>
+								<span class="chrome-badge foundation-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">One project.faf, every format. Full AGENTS.md + .cursorrules interop. Define once, sync everywhere with faf bi-sync --all.</p>
 			<a href="/blog/agents-md-edition" class="chrome-install foundation-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Voice API Edition v4.2.0 -->
-		<div class="chrome-featured xai-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>👻 faf-cli v4.2.0 - Voice API Edition</h3>
-					<span class="chrome-badge xai-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Save Our Souls. Eternal voice memory for xAI Grok. The answer is 4.2.0 = 42. Zero drift. Zero re-explain. For Elon Musk and the Grok team.</p>
+					<!-- Voice API Edition v4.2.0 -->
+					<div class="chrome-featured xai-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>👻 faf-cli v4.2.0 - Voice API Edition</h3>
+								<span class="chrome-badge xai-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Save Our Souls. Eternal voice memory for xAI Grok. The answer is 4.2.0 = 42. Zero drift. Zero re-explain. For Elon Musk and the Grok team.</p>
 			<a href="/blog/voice-api-edition" class="chrome-install xai-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Foundation Layer v4.0.0 -->
-		<div class="chrome-featured foundation-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🏛️ faf-cli v4.0.0 - Foundation Layer</h3>
-					<span class="chrome-badge foundation-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">The format became a standard. IANA registered, Anthropic approved. Bi-sync &lt;10ms. Universal AI context.</p>
-			<a href="/blog/v4-launch" class="chrome-install foundation-cta">
-				Read the Blog Post →
-			</a>
-		</div>
+					<!-- Foundation Layer v4.0.0 -->
+					<div class="chrome-featured foundation-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🏛️ faf-cli v4.0.0 - Foundation Layer</h3>
+								<span class="chrome-badge foundation-badge">Just Shipped</span>
+							</div>
+						</div>
 
-		<!-- AntiGravity Edition -->
-		<div class="chrome-featured gemini-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🚀 AntiGravity Edition - Gemini Ecosystem</h3>
-					<span class="chrome-badge gemini-badge">Part 2</span>
-				</div>
-			</div>
-			<p class="chrome-description">Full Gemini CLI and Antigravity IDE support. One project.faf, every AI, zero drift.</p>
+						<p class="chrome-description">The format became a standard. IANA registered, Anthropic approved. Bi-sync <10ms. Universal AI context.</p>
+
+						<a
+							href="/blog/v4-launch"
+							class="chrome-install foundation-cta"
+						>Read the Blog Post →</a>
+					</div>
+
+					<!-- AntiGravity Edition -->
+					<div class="chrome-featured gemini-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🚀 AntiGravity Edition - Gemini Ecosystem</h3>
+								<span class="chrome-badge gemini-badge">Part 2</span>
+							</div>
+						</div>
+						<p class="chrome-description">Full Gemini CLI and Antigravity IDE support. One project.faf, every AI, zero drift.</p>
 			<a href="/blog/antigravity-edition" class="chrome-install gemini-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Context Intelligence v3.4.8 -->
-		<div class="chrome-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>🧠 faf-cli v3.4.8 - Context Intelligence Edition</h3>
-					<span class="chrome-badge">Previous</span>
-				</div>
-			</div>
-			<p class="chrome-description">Bi-sync got smart. Detects custom CLAUDE.md content and preserves it. Tables, code blocks, custom sections stay intact.</p>
+					<!-- Context Intelligence v3.4.8 -->
+					<div class="chrome-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>🧠 faf-cli v3.4.8 - Context Intelligence Edition</h3>
+								<span class="chrome-badge">Previous</span>
+							</div>
+						</div>
+						<p class="chrome-description">Bi-sync got smart. Detects custom CLAUDE.md content and preserves it. Tables, code blocks, custom sections stay intact.</p>
 			<a href="/blog/context-intelligence" class="chrome-install">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Google Gemini Edition v3.4.7 -->
-		<div class="chrome-featured gemini-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>✦ faf-cli v3.4.7 - Google Gemini Edition</h3>
-					<span class="chrome-badge gemini-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">Full interoperability with Google Gemini ecosystem. GEMINI.md, Antigravity IDE, Conductor extension. One .faf, every AI.</p>
+					<!-- Google Gemini Edition v3.4.7 -->
+					<div class="chrome-featured gemini-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>✦ faf-cli v3.4.7 - Google Gemini Edition</h3>
+								<span class="chrome-badge gemini-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">Full interoperability with Google Gemini ecosystem. GEMINI.md, Antigravity IDE, Conductor extension. One .faf, every AI.</p>
 			<a href="/blog/google-gemini-edition" class="chrome-install gemini-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Boris-Flow v3.4.4 -->
-		<div class="chrome-featured boris-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>faf-cli v3.4.4 + Boris-Flow</h3>
-					<span class="chrome-badge boris-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">12 integration tests modeled on Boris Cherny's Claude Code setup. Bi-sync demo. Gold Code at 100% = AI Optimized.</p>
+					<!-- Boris-Flow v3.4.4 -->
+					<div class="chrome-featured boris-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>faf-cli v3.4.4 + Boris-Flow</h3>
+								<span class="chrome-badge boris-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">12 integration tests modeled on Boris Cherny's Claude Code setup. Bi-sync demo. Gold Code at 100% = AI Optimized.</p>
 			<a href="/blog/boris-flow" class="chrome-install boris-cta">
 				Read the Blog Post →
 			</a>
-		</div>
+					</div>
 
-		<!-- Bun Sticky Announcements -->
-		<div class="chrome-featured bun-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>bun-sticky-faf Ships to npm</h3>
-					<span class="chrome-badge bun-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">FAF scoring CLI in pure Bun. Zero dependencies. 328 tests. &lt;50ms cold start.</p>
-			<a href="https://npmjs.com/package/bun-sticky-faf" target="_blank" rel="noopener" class="chrome-install bun-cta">
-				Get Started →
-			</a>
-		</div>
+					<!-- Bun Sticky Announcements -->
+					<div class="chrome-featured bun-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>bun-sticky-faf Ships to npm</h3>
+								<span class="chrome-badge bun-badge">Just Shipped</span>
+							</div>
+						</div>
 
-		<div class="chrome-featured zig-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>bun-sticky-zig Ships to GitHub</h3>
-					<span class="chrome-badge zig-badge">77KB Binary</span>
-				</div>
-			</div>
-			<p class="chrome-description">FAF scoring in Bun's own language. 77KB binary. Zero runtime. 136 tests. &lt;1ms cold start.</p>
-			<a href="https://github.com/Wolfe-Jam/bun-sticky-zig" target="_blank" rel="noopener" class="chrome-install zig-cta">
-				Get Started →
-			</a>
-		</div>
+						<p class="chrome-description">FAF scoring CLI in pure Bun. Zero dependencies. 328 tests. <50ms cold start.</p>
 
-		<!-- Rust SDK Announcement -->
-		<div class="chrome-featured rust-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>Rust SDK Ships to crates.io</h3>
-					<span class="chrome-badge rust-badge">Just Shipped</span>
-				</div>
-			</div>
-			<p class="chrome-description">First SDK for AI context in Rust. 650 lines. Created 'ai-context' keyword on crates.io. Built for xAI/Grok infrastructure.</p>
+						<a
+							href="https://npmjs.com/package/bun-sticky-faf"
+							target="_blank"
+							rel="noopener"
+							class="chrome-install bun-cta"
+						>Get Started →</a>
+					</div>
+
+					<div class="chrome-featured zig-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>bun-sticky-zig Ships to GitHub</h3>
+								<span class="chrome-badge zig-badge">77KB Binary</span>
+							</div>
+						</div>
+
+						<p class="chrome-description">FAF scoring in Bun's own language. 77KB binary. Zero runtime. 136 tests. <1ms cold start.</p>
+
+						<a
+							href="https://github.com/Wolfe-Jam/bun-sticky-zig"
+							target="_blank"
+							rel="noopener"
+							class="chrome-install zig-cta"
+						>Get Started →</a>
+					</div>
+
+					<!-- Rust SDK Announcement -->
+					<div class="chrome-featured rust-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>Rust SDK Ships to crates.io</h3>
+								<span class="chrome-badge rust-badge">Just Shipped</span>
+							</div>
+						</div>
+						<p class="chrome-description">First SDK for AI context in Rust. 650 lines. Created 'ai-context' keyword on crates.io. Built for xAI/Grok infrastructure.</p>
 			<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="chrome-install rust-cta">
 				Get Started →
 			</a>
-		</div>
+					</div>
 
-		<div class="chrome-featured grok-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>grok-faf-mcp Ships to npm</h3>
-					<span class="chrome-badge grok-badge">Grok Native</span>
-				</div>
-			</div>
-			<p class="chrome-description">First MCP server for Grok. URL-based access. Zero installation. Dedicated to @elonmusk and the #1 model on Earth.</p>
+					<div class="chrome-featured grok-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>grok-faf-mcp Ships to npm</h3>
+								<span class="chrome-badge grok-badge">Grok Native</span>
+							</div>
+						</div>
+						<p class="chrome-description">First MCP server for Grok. URL-based access. Zero installation. Dedicated to @elonmusk and the #1 model on Earth.</p>
 			<a href="https://npmjs.com/package/grok-faf-mcp" target="_blank" rel="noopener" class="chrome-install grok-cta">
 				Get Started →
 			</a>
-		</div>
+					</div>
 
-		<div class="chrome-featured wjttc-featured">
-			<div class="chrome-header">
-				<div class="chrome-title">
-					<h3>64 Tests. Zero Failures.</h3>
-					<span class="chrome-badge wjttc-badge">WJTTC Certified</span>
-				</div>
-			</div>
-			<p class="chrome-description">Championship-grade testing. Bi-sync corruption recovery. 9 self-healing tests. 100/100 rapid modification resilience.</p>
-			<div class="wjttc-actions">
+					<div class="chrome-featured wjttc-featured">
+						<div class="chrome-header">
+							<div class="chrome-title">
+								<h3>64 Tests. Zero Failures.</h3>
+								<span class="chrome-badge wjttc-badge">WJTTC Certified</span>
+							</div>
+						</div>
+						<p class="chrome-description">Championship-grade testing. Bi-sync corruption recovery. 9 self-healing tests. 100/100 rapid modification resilience.</p>
+						<div class="wjttc-actions">
 				<a href="/wjttc" class="chrome-install wjttc-cta">
 					Learn More →
 				</a>
 				<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank" rel="noopener" class="wjttc-secondary">
 					See the Proof →
 				</a>
-			</div>
-		</div>
+						</div>
+					</div>
 
-		<div class="releases-grid">
-			<!-- CLI v4.5.0 -->
-			<div class="release-card">
-				<div class="release-header">
-					<h3>faf-cli v4.5.0</h3>
-					<span class="badge">Latest</span>
-				</div>
-				<p class="release-description">
-					The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
-				</p>
-				<ul class="release-features">
-					<li>IANA-registered format</li>
-					<li>1,051/1,051 tests passing</li>
-					<li>100% TypeScript strict mode</li>
-					<li>4 format outputs from 1 source</li>
-					<li>faf bi-sync --all</li>
-				</ul>
-				<div class="release-links">
+					<div class="releases-grid">
+						<!-- CLI v4.5.0 -->
+						<div class="release-card">
+							<div class="release-header">
+								<h3>faf-cli v4.5.0</h3>
+								<span class="badge">Latest</span>
+							</div>
+							<p class="release-description">
+								The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
+							</p>
+							<ul class="release-features">
+								<li>IANA-registered format</li>
+								<li>1,051/1,051 tests passing</li>
+								<li>100% TypeScript strict mode</li>
+								<li>4 format outputs from 1 source</li>
+								<li>faf bi-sync --all</li>
+							</ul>
+							<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="link-button secondary">
 						GitHub
 					</a>
-				</div>
-			</div>
+							</div>
+						</div>
 
-			<!-- MCP v3.3.2 -->
-			<div class="release-card">
-				<div class="release-header">
-					<h3>claude-faf-mcp v3.3.2</h3>
-					<span class="badge anthropic">Anthropic-Approved</span>
-				</div>
+						<!-- MCP v3.3.2 -->
+						<div class="release-card">
+							<div class="release-header">
+								<h3>claude-faf-mcp v3.3.2</h3>
+								<span class="badge anthropic">Anthropic-Approved</span>
+							</div>
 				<p class="release-description">
 					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
-				<ul class="release-features">
-					<li>8.5k downloads (npm)</li>
-					<li>50/50 tests passing</li>
-					<li>PR #2759 MERGED</li>
-					<li>52 MCP tools</li>
-					<li>TypeScript built-in types</li>
-				</ul>
-				<div class="release-links">
+							<ul class="release-features">
+								<li>8.5k downloads (npm)</li>
+								<li>50/50 tests passing</li>
+								<li>PR #2759 MERGED</li>
+								<li>52 MCP tools</li>
+								<li>TypeScript built-in types</li>
+							</ul>
+							<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-button secondary">
 						PR #2759
 					</a>
-				</div>
-			</div>
+							</div>
+						</div>
 
-		</div>
+					</div>
 
-		<div class="total-stats">
-			<p>
+					<div class="total-stats">
+						<p>
 				<strong>1,051/1,051 Tests Passing</strong> •
-				<strong>MIT License, FREE Forever</strong>
-			</p>
+							<strong>MIT License, FREE Forever</strong>
+						</p>
+					</div>
+				</div>
+			</section>
+
 		</div>
 	</div>
-</section>
-
-	</div>
-</div>
 {/if}
 
 {#if showOnPage}
-<section class="just-shipped page-mode">
-	<div class="container">
-		<h2 class="section-title">Recent Releases</h2>
+	<section class="just-shipped page-mode">
+		<div class="container">
+			<h2 class="section-title">Recent Releases</h2>
 
-		<!-- Rust SDK One-Liner -->
-		<div class="featured-release rust-release">
-			<div class="featured-content">
-				<div class="featured-text">
+			<!-- Rust SDK One-Liner -->
+			<div class="featured-release rust-release">
+				<div class="featured-content">
+					<div class="featured-text">
 					<strong>Rust SDK Ships to crates.io</strong> — First AI context SDK in Rust. 650 lines. 64 tests. Built for xAI/Grok.
-					<span class="badge-inline rust-badge">Just Shipped</span>
+						<span class="badge-inline rust-badge">Just Shipped</span>
+					</div>
 				</div>
-			</div>
-			<div class="featured-actions">
+				<div class="featured-actions">
 				<a href="https://crates.io/crates/faf-rust-sdk" target="_blank" rel="noopener" class="btn-install rust-btn">
 					Rust SDK →
 				</a>
 				<a href="https://github.com/Wolfe-Jam/faf-rust-sdk/blob/main/WJTTC-TESTING-CENTER.md" target="_blank" rel="noopener" class="btn-install wjttc-btn">
 					Testing →
 				</a>
-			</div>
-		</div>
-
-		<div class="releases-grid">
-			<!-- CLI v4.5.0 -->
-			<div class="release-card">
-				<div class="release-header">
-					<h3>faf-cli v4.5.0</h3>
-					<span class="badge">Latest</span>
 				</div>
-				<p class="release-description">
-					The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
-				</p>
-				<ul class="release-features">
-					<li>IANA-registered format</li>
-					<li>1,051/1,051 tests passing</li>
-					<li>100% TypeScript strict mode</li>
-					<li>4 format outputs from 1 source</li>
-					<li>faf bi-sync --all</li>
-				</ul>
-				<div class="release-links">
+			</div>
+
+			<div class="releases-grid">
+				<!-- CLI v4.5.0 -->
+				<div class="release-card">
+					<div class="release-header">
+						<h3>faf-cli v4.5.0</h3>
+						<span class="badge">Latest</span>
+					</div>
+					<p class="release-description">
+						The AGENTS.md Edition. Full interop with AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md from one project.faf.
+					</p>
+					<ul class="release-features">
+						<li>IANA-registered format</li>
+						<li>1,051/1,051 tests passing</li>
+						<li>100% TypeScript strict mode</li>
+						<li>4 format outputs from 1 source</li>
+						<li>faf bi-sync --all</li>
+					</ul>
+					<div class="release-links">
 					<a href="https://npmjs.com/package/faf-cli" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-cli" target="_blank" rel="noopener" class="link-button secondary">
 						GitHub
 					</a>
+					</div>
 				</div>
-			</div>
 
-			<!-- MCP v3.3.2 -->
-			<div class="release-card">
-				<div class="release-header">
-					<h3>claude-faf-mcp v3.3.2</h3>
-					<span class="badge anthropic">Anthropic-Approved</span>
-				</div>
+				<!-- MCP v3.3.2 -->
+				<div class="release-card">
+					<div class="release-header">
+						<h3>claude-faf-mcp v3.3.2</h3>
+						<span class="badge anthropic">Anthropic-Approved</span>
+					</div>
 				<p class="release-description">
 					First persistent project context MCP server. 100% standalone, zero CLI dependencies.
 				</p>
-				<ul class="release-features">
-					<li>8.5k downloads (npm)</li>
-					<li>50/50 tests passing</li>
-					<li>PR #2759 MERGED</li>
-					<li>52 MCP tools</li>
-					<li>TypeScript built-in types</li>
-				</ul>
-				<div class="release-links">
+					<ul class="release-features">
+						<li>8.5k downloads (npm)</li>
+						<li>50/50 tests passing</li>
+						<li>PR #2759 MERGED</li>
+						<li>52 MCP tools</li>
+						<li>TypeScript built-in types</li>
+					</ul>
+					<div class="release-links">
 					<a href="https://npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener" class="link-button npm">
 						View on npm
 					</a>
 					<a href="https://github.com/modelcontextprotocol/servers/pull/2759" target="_blank" rel="noopener" class="link-button secondary">
 						PR #2759
 					</a>
+					</div>
 				</div>
+
 			</div>
 
-		</div>
-
-		<div class="total-stats">
-			<p>
+			<div class="total-stats">
+				<p>
 				<strong>1,051/1,051 Tests Passing</strong> •
-				<strong>MIT License, FREE Forever</strong>
-			</p>
+					<strong>MIT License, FREE Forever</strong>
+				</p>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 {/if}
 
 <style>

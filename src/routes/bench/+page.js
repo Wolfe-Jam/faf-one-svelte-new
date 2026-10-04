@@ -1,4 +1,4 @@
-import bundled from '$lib/grounding-receipts.json';
+import bundled from '#lib/grounding-receipts.json';
 
 // The collection backend (mcpaas.live = execution/feeder; faf.one = the page).
 const ENDPOINT = 'https://mcpaas.live/bench/receipts';

@@ -1,4 +1,4 @@
-import { grandTotal, formatTotal } from '$lib/data/packages';
+import { grandTotal, formatTotal } from '#lib/data/packages.js';
 
 // Header banner downloads counter reads from the SAME source of truth
 // as the /downloads page (src/lib/data/packages.ts). One source, two

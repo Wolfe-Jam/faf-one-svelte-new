@@ -1,5 +1,5 @@
 <script>
-	import PageActions from '$lib/components/PageActions.svelte';
+	import PageActions from '#lib/components/PageActions.svelte';
 </script>
 
 <svelte:head>

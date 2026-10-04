@@ -7,7 +7,7 @@
 	 * - onMount AND $effect both force light (parent onMount used to race $effect alone)
 	 * - cream body inline so canvas never inherits dark page-bg mid-nav
 	 */
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import { onMount, onDestroy } from 'svelte';
 
 	let { children } = $props();

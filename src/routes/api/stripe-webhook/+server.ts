@@ -5,11 +5,10 @@
  * No database dependency. Simple and reliable.
  */
 
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { generateLicenseKey } from '$lib/license-generator';
-import { sendLicenseEmail } from '$lib/emails/send-license-email';
-import { storeLicense, getNextLicenseNumber } from '$lib/license-store';
+import { generateLicenseKey } from '#lib/license-generator.js';
+import { sendLicenseEmail } from '#lib/emails/send-license-email.js';
+import { storeLicense, getNextLicenseNumber } from '#lib/license-store.js';
 
 // Pro tier payment links (tri-sync CLI, Annual, Global)
 const PRO_PAYMENT_LINKS = [
@@ -27,14 +26,14 @@ export const POST: RequestHandler = async ({ request }) => {
         const signature = request.headers.get('stripe-signature');
 
         if (!signature) {
-            return json({ error: 'No signature' }, { status: 400 });
+            return Response.json({ error: 'No signature' }, { status: 400 });
         }
 
         let event;
         try {
             event = JSON.parse(body);
         } catch {
-            return json({ error: 'Invalid JSON' }, { status: 400 });
+            return Response.json({ error: 'Invalid JSON' }, { status: 400 });
         }
 
         console.log(`📨 Webhook received: ${event.type}`);
@@ -46,7 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
             if (!email) {
                 console.error('❌ No email in checkout session');
-                return json({ error: 'No email' }, { status: 400 });
+                return Response.json({ error: 'No email' }, { status: 400 });
             }
 
             // Only process known Pro payment links
@@ -54,7 +53,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
             if (!isProPaymentLink && !session.metadata?.tier) {
                 console.log(`⏭️ Skipping unknown payment link: ${session.payment_link || 'none'}`);
-                return json({ received: true, skipped: true });
+                return Response.json({ received: true, skipped: true });
             }
 
             const tier = session.metadata?.tier || 'pro';
@@ -108,15 +107,15 @@ export const POST: RequestHandler = async ({ request }) => {
                 // Don't fail the webhook — email was sent, key is valid
             }
 
-            return json({ received: true, key, tier, email, licenseNumber, emailSent: emailResult.success, emailError: emailResult.error || null });
+            return Response.json({ received: true, key, tier, email, licenseNumber, emailSent: emailResult.success, emailError: emailResult.error || null });
         }
 
         // All other events — acknowledge
-        return json({ received: true });
+        return Response.json({ received: true });
 
     } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
         console.error('❌ Webhook error:', message);
-        return json({ error: 'Webhook handler failed', detail: message }, { status: 500 });
+        return Response.json({ error: 'Webhook handler failed', detail: message }, { status: 500 });
     }
 };

@@ -1,7 +1,7 @@
 <!-- pubblog Release — spine copied from mcp-better-matching-client (GOLD). -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: faf-mcp v3.0.0 — The Compose Edition
 

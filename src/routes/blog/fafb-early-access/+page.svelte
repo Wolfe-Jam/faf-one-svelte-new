@@ -1,6 +1,6 @@
 <!-- pubblog: early access. Spine from mcp-better-matching-client (gold). -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 FAFb 0.9 — early access
 

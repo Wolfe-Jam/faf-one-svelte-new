@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 	let mounted = false;
 	onMount(() => {
 		mounted = true;

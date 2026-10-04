@@ -4,7 +4,7 @@
 	 * from the spec and the line they came from. The learn page shows the latest
 	 * value per choice; this is all of them.
 	 */
-	import { cardRegister, pack } from '$lib/data/pack-of-cards';
+	import { cardRegister, pack } from '#lib/data/pack-of-cards.js';
 
 	const cards = pack.choices.cards; // keeps the map's order and slugs
 	const reg = cardRegister.cards;

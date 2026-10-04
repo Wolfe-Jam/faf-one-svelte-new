@@ -1,7 +1,7 @@
 <!-- pubblog Release — faf-mcp v4.0.0, The Always33 Edition. Part III of the Always33 series
      (overview: /blog/always33). Chrome copied from claude-always33-edition. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: faf-mcp v4.0.0 — The Always33 Edition
 

@@ -1,13 +1,12 @@
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
-import { isAllowed, normEmail, passwordFor } from '$lib/fafb-drive-auth';
+import { RESEND_API_KEY } from '$app/env/private';
+import { isAllowed, normEmail, passwordFor } from '#lib/fafb-drive-auth.js';
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-	if (!resend && env.RESEND_API_KEY) {
-		resend = new Resend(env.RESEND_API_KEY);
+	if (!resend && RESEND_API_KEY) {
+		resend = new Resend(RESEND_API_KEY);
 	}
 	return resend;
 }
@@ -17,18 +16,18 @@ export const POST: RequestHandler = async ({ request }) => {
 	try {
 		body = await request.json();
 	} catch {
-		return json({ success: false, error: 'Invalid JSON' }, { status: 400 });
+		return Response.json({ success: false, error: 'Invalid JSON' }, { status: 400 });
 	}
 
-	if (body.website) return json({ success: true });
+	if (body.website) return Response.json({ success: true });
 
 	const email = normEmail(body.email || '');
 	if (!email) {
-		return json({ success: false, error: 'Need a real email.' }, { status: 400 });
+		return Response.json({ success: false, error: 'Need a real email.' }, { status: 400 });
 	}
 
 	// Same reply either way. Do not leak the list.
-	const ok = isAllowed(email) && !!env.RESEND_API_KEY;
+	const ok = isAllowed(email) && !!RESEND_API_KEY;
 	if (ok) {
 		try {
 			const pw = await passwordFor(email);
@@ -56,5 +55,5 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 	}
 
-	return json({ success: true });
+	return Response.json({ success: true });
 };

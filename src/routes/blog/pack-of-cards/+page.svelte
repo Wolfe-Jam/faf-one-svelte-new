@@ -2,9 +2,9 @@
      Category: Custom / INDUSTRY (black pill, white word). Light page, dark hero.
      Hero is rendered by card-evolution/render_hero.py from alignment.json — never hand-edited. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
-	import ZoomImage from '$lib/components/ZoomImage.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
+	import ZoomImage from '#lib/components/ZoomImage.svelte';
 
 	const shareText = `Five agent-card specs, drawn as one map.
 

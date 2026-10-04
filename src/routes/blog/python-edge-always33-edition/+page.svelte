@@ -1,7 +1,7 @@
 <!-- pubblog Release — faf-python-sdk v2.0.0 + mcpaas.live v1.8, The Always33 Edition.
      Part V of the Always33 series (overview: /blog/always33). Chrome copied from gemini-grok-always33-edition. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: faf-python-sdk v2 + mcpaas.live v1.8 — The Always33 Edition
 

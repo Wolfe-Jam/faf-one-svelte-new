@@ -1,5 +1,5 @@
 <script>
-	import ProjectSurvival from '$lib/components/ProjectSurvival.svelte';
+	import ProjectSurvival from '#lib/components/ProjectSurvival.svelte';
 </script>
 
 <svelte:head>

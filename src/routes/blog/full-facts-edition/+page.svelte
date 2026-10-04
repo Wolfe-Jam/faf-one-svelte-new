@@ -1,8 +1,8 @@
 <!-- pubblog — Release model (matching-client gold). faf-cli CYAN card identity.
      faf-cli 7.10.0 — The Full-Facts Edition. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: faf-cli v7.10.0 — The Full-Facts Edition
 

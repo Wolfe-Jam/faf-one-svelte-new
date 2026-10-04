@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { pack } from '$lib/data/pack-of-cards';
-	import PackMap from '$lib/components/PackMap.svelte';
-	import ChoiceGrid from '$lib/components/ChoiceGrid.svelte';
+	import { pack } from '#lib/data/pack-of-cards.js';
+	import PackMap from '#lib/components/PackMap.svelte';
+	import ChoiceGrid from '#lib/components/ChoiceGrid.svelte';
 
 	const { counts, receipts, server_json, also_out_there, lanes, as_of } = pack;
 	const drawn = pack.map.key;

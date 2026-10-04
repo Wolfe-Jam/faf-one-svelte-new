@@ -1,11 +1,11 @@
 <script>
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
-	import WolfejamGizmo from '$lib/components/WolfejamGizmo.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import BlogSubscribe from '$lib/components/BlogSubscribe.svelte';
-	import { page } from '$app/stores';
+	import { browser } from '$app/env';
+	import WolfejamGizmo from '#lib/components/WolfejamGizmo.svelte';
+	import Footer from '#lib/components/Footer.svelte';
+	import BlogSubscribe from '#lib/components/BlogSubscribe.svelte';
+	import { page } from '$app/state';
 
 	let { children, data } = $props();
 	// Start light until mount — avoids SSR/hydration black-on-black flash.
@@ -21,7 +21,7 @@
 	/** Always set BOTH background and color — never leave color unset on a dark canvas. */
 	function applyBodyTheme() {
 		if (!browser) return;
-		const bg = $page.data?.bg;
+		const bg = page.data?.bg;
 		const s = document.body.style;
 		const theme = document.documentElement.getAttribute('data-theme');
 		if (bg === 'dark') {
@@ -53,7 +53,7 @@
 		// Race: FOUC + blog layout force light; root onMount used to overwrite with
 		// localStorage dark → --faf-dark/--faf-black flip to near-white while the
 		// blog canvas stays cream = classic white-text-on-light (stubborn for years).
-		if (isBlogPath($page.url.pathname)) {
+		if (isBlogPath(page.url.pathname)) {
 			document.documentElement.setAttribute('data-theme', 'light');
 		} else {
 			document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
@@ -89,7 +89,7 @@
 	$effect(() => {
 		if (!browser) return;
 		void isDark;
-		const path = $page.url.pathname;
+		const path = page.url.pathname;
 		if (isBlogPath(path)) {
 			document.documentElement.setAttribute('data-theme', 'light');
 		}
@@ -113,79 +113,191 @@
 	     canonicalise to faf.one so they aren't indexed as themselves). A route
 	     that needs a different canonical (e.g. a cross-domain hub page) returns
 	     `canonical` from its load — see /membership. -->
-	<link rel="canonical" href={$page.data?.canonical ?? `https://faf.one${$page.url.pathname}`} />
+
+	<link
+		rel="canonical"
+		href={page.data?.canonical ?? `https://faf.one${page.url.pathname}`}
+	/>
+
 	<!-- Chromeless routes also drop the Foundation badge, which lives in app.html. -->
-	{#if $page.data?.chromeless}
+	{#if page.data?.chromeless}
 		<style>.foundation-badge { display: none !important; }</style>
 	{/if}
 </svelte:head>
 
 <!-- Chromeless routes (load returns `chromeless: true`, e.g. /webmcp) render
      their own page only: no badges, banner, subscribe box, or footer. -->
-{#if !$page.data?.chromeless}
-<!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
+{#if !page.data?.chromeless}
+	<!-- Home badge (twin of the Foundation badge in app.html, top-left). On the
      homepage it's a filled white "you are home" dot; elsewhere a back arrow. -->
-{#if $page.url.pathname === '/'}
-	<span class="chrome-badge home-badge home-here" aria-label="Home" aria-current="page">
-		<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="white" /></svg>
-	</span>
-{:else}
+	{#if page.url.pathname === '/'}
+		<span
+			class="chrome-badge home-badge home-here"
+			aria-label="Home"
+			aria-current="page"
+		><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="white"></circle></svg></span>
+	{:else}
 	<a href="/" class="chrome-badge home-badge" aria-label="Back">
-		<svg viewBox="0 0 100 100" fill="none">
-			<path d="M60 25 L35 50 L60 75" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+			<svg viewBox="0 0 100 100" fill="none">
+				<path
+					d="M60 25 L35 50 L60 75"
+					stroke="white"
+					stroke-width="10"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				></path>
+			</svg>
+		</a>
+	{/if}
+
+	<!-- Chrome badges — fixed top-left family (Home · Map · Blog · Skills).
+     Fast CSS tooltips on hover; no text pill (was mini-nav). -->
+
+	<a
+		href="/map"
+		class="chrome-badge map-badge"
+		aria-label="Site map"
+	>
+		<svg
+			viewBox="0 0 100 100"
+			fill="none"
+			aria-hidden="true"
+		>
+			<circle
+				cx="50"
+				cy="50"
+				r="36"
+				stroke="white"
+				stroke-width="8"
+			></circle>
+
+			<ellipse
+				cx="50"
+				cy="50"
+				rx="17"
+				ry="36"
+				stroke="white"
+				stroke-width="6"
+			></ellipse>
+
+			<line
+				x1="14"
+				y1="50"
+				x2="86"
+				y2="50"
+				stroke="white"
+				stroke-width="6"
+			></line>
 		</svg>
 	</a>
-{/if}
 
-<!-- Chrome badges — fixed top-left family (Home · Map · Blog · Skills).
-     Fast CSS tooltips on hover; no text pill (was mini-nav). -->
-<a href="/map" class="chrome-badge map-badge" aria-label="Site map">
-	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
-		<circle cx="50" cy="50" r="36" stroke="white" stroke-width="8" />
-		<ellipse cx="50" cy="50" rx="17" ry="36" stroke="white" stroke-width="6" />
-		<line x1="14" y1="50" x2="86" y2="50" stroke="white" stroke-width="6" />
-	</svg>
-</a>
+	<a
+		href="/blog"
+		class="chrome-badge blog-badge"
+		aria-label="Blog"
+	>
+		<svg
+			viewBox="0 0 100 100"
+			fill="none"
+			aria-hidden="true"
+		>
+			<rect
+				x="22"
+				y="20"
+				width="56"
+				height="60"
+				rx="6"
+				stroke="white"
+				stroke-width="8"
+			></rect>
 
-<a href="/blog" class="chrome-badge blog-badge" aria-label="Blog">
-	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
-		<rect x="22" y="20" width="56" height="60" rx="6" stroke="white" stroke-width="8" />
-		<line x1="32" y1="38" x2="68" y2="38" stroke="white" stroke-width="6" stroke-linecap="round" />
-		<line x1="32" y1="52" x2="68" y2="52" stroke="white" stroke-width="6" stroke-linecap="round" />
-		<line x1="32" y1="66" x2="54" y2="66" stroke="white" stroke-width="6" stroke-linecap="round" />
-	</svg>
-</a>
+			<line
+				x1="32"
+				y1="38"
+				x2="68"
+				y2="38"
+				stroke="white"
+				stroke-width="6"
+				stroke-linecap="round"
+			></line>
 
-<a href="https://skills.faf.one" class="chrome-badge skills-badge" aria-label="Skills" target="_blank" rel="noopener noreferrer">
-	<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
-		<path d="M50 12 L58 38 L86 38 L64 54 L72 80 L50 64 L28 80 L36 54 L14 38 L42 38 Z" stroke="white" stroke-width="7" stroke-linejoin="round" />
-	</svg>
-</a>
+			<line
+				x1="32"
+				y1="52"
+				x2="68"
+				y2="52"
+				stroke="white"
+				stroke-width="6"
+				stroke-linecap="round"
+			></line>
 
-<!-- Milestone banner -->
-<div class="official-banner" class:auto-hide={!$page.data?.pinBanner} class:revealed={nearTop}>
-	<a href="/downloads" class="banner-line">
-		<span class="banner-receipt">Anthropic-merged<span class="banner-receipt-extra"> #2759</span></span><span class="banner-sep"> · </span><strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-tail"> · IANA-registered</span>
+			<line
+				x1="32"
+				y1="66"
+				x2="54"
+				y2="66"
+				stroke="white"
+				stroke-width="6"
+				stroke-linecap="round"
+			></line>
+		</svg>
 	</a>
-</div>
+
+	<a
+		href="https://skills.faf.one"
+		class="chrome-badge skills-badge"
+		aria-label="Skills"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<svg
+			viewBox="0 0 100 100"
+			fill="none"
+			aria-hidden="true"
+		>
+			<path
+				d="M50 12 L58 38 L86 38 L64 54 L72 80 L50 64 L28 80 L36 54 L14 38 L42 38 Z"
+				stroke="white"
+				stroke-width="7"
+				stroke-linejoin="round"
+			></path>
+		</svg>
+	</a>
+
+	<!-- Milestone banner -->
+
+	<div
+		class="official-banner"
+		class:auto-hide={!page.data?.pinBanner}
+		class:revealed={nearTop}
+	>
+		<a href="/downloads" class="banner-line">
+		<span class="banner-receipt">Anthropic-merged<span class="banner-receipt-extra"> #2759</span></span><span class="banner-sep"> · </span><strong class="banner-count">{data.downloadCount} downloads</strong><span class="banner-tail"> · IANA-registered</span>
+		</a>
+	</div>
 {/if}
 
 {@render children?.()}
 
-{#if !$page.data?.hideThemeToggle}
+{#if !page.data?.hideThemeToggle}
 	<div class="theme-toggle">
-		<WolfejamGizmo {isDark} ontoggle={handleThemeToggle} size={24} />
+		<WolfejamGizmo
+			isDark={isDark}
+			ontoggle={handleThemeToggle}
+			size={24}
+		/>
 	</div>
 {/if}
 
-{#if !$page.data?.chromeless}
-<div class="footer-chrome">
-	<!-- Sitewide above footer — except /blog index (long list; hero form there instead) -->
-	{#if $page.url.pathname !== '/blog' && $page.url.pathname !== '/blog/'}
-		<BlogSubscribe />
-	{/if}
-	<Footer />
-</div>
+{#if !page.data?.chromeless}
+	<div class="footer-chrome">
+		<!-- Sitewide above footer — except /blog index (long list; hero form there instead) -->
+		{#if page.url.pathname !== '/blog' && page.url.pathname !== '/blog/'}
+			<BlogSubscribe />
+		{/if}
+		<Footer />
+	</div>
 {/if}
 
 <style>

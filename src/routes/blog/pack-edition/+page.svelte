@@ -1,7 +1,7 @@
 <!-- pubblog: Release. Spine copied from mcp-better-matching-client (gold). -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: faf-cli v7.15.0 — The Pack Edition
 
