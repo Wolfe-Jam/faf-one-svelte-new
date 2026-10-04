@@ -544,9 +544,9 @@
 	}
 
 	.container {
-		max-width: 1200px;
+		max-width: 960px;
 		margin: 0 auto;
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 
 	.logo-wrapper {
@@ -575,7 +575,6 @@
 		text-align: center;
 		font-size: 1.125rem;
 		color: var(--faf-dark);
-		max-width: 800px;
 		margin: 0 auto;
 		line-height: 1.6;
 	}
@@ -627,7 +626,6 @@
 	}
 
 	.intro-block {
-		max-width: 800px;
 		margin: 0 auto 4rem;
 		text-align: center;
 	}
@@ -654,7 +652,6 @@
 	}
 
 	.mcp-breakdown {
-		max-width: 700px;
 		margin: 4rem auto;
 		text-align: center;
 	}
@@ -776,7 +773,6 @@
 		text-align: center;
 		font-size: 1.125rem;
 		color: var(--faf-dark);
-		max-width: 640px;
 		margin: 0 auto 3rem;
 		line-height: 1.6;
 	}
@@ -799,7 +795,6 @@
 	}
 
 	.tool-count-note {
-		max-width: 720px;
 		margin: 1.5rem auto 0;
 		padding: 1rem 1.5rem;
 		background: rgba(0, 212, 212, 0.05);
@@ -1181,7 +1176,6 @@
 
 	/* MCP landscape — orientation grid */
 	.landscape-section {
-		max-width: 900px;
 		margin: 4rem auto;
 	}
 
@@ -1196,7 +1190,6 @@
 		text-align: center;
 		font-size: 1.125rem;
 		color: var(--faf-dark);
-		max-width: 640px;
 		margin: 0 auto 3rem;
 		line-height: 1.6;
 	}
@@ -1292,7 +1285,6 @@
 
 	/* Further reading — mirrors /agents */
 	.further-section {
-		max-width: 800px;
 		margin: 4rem auto 2rem;
 	}
 
