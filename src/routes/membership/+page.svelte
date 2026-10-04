@@ -122,9 +122,9 @@
 
 <style>
 	.page {
-		max-width: 720px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 0 1.5rem 2rem;
+		padding: 0 1rem 2rem;
 	}
 
 	.hero {

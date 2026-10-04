@@ -283,9 +283,9 @@
 	}
 
 	.content {
-		max-width: 960px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 1.5rem 2rem 4rem;
+		padding: 1.5rem 1rem 4rem;
 	}
 
 	/* Hero */
@@ -649,7 +649,6 @@
 		font-size: 1.05rem;
 		line-height: 1.7;
 		margin: 0 auto 1rem;
-		max-width: 560px;
 	}
 
 	.team-contact {
@@ -1045,7 +1044,7 @@
 	/* Mobile */
 	@media (max-width: 768px) {
 		.content {
-			padding: 1rem 1.25rem 3rem;
+			padding: 1rem 1rem 3rem;
 		}
 
 		.title {

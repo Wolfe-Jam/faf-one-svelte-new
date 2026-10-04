@@ -154,9 +154,9 @@
 	}
 
 	.content {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 1.5rem 2rem 4rem;
+		padding: 1.5rem 1rem 4rem;
 	}
 
 	/* Hero */
@@ -502,7 +502,7 @@
 	/* Mobile */
 	@media (max-width: 768px) {
 		.content {
-			padding: 1rem 1.25rem 3rem;
+			padding: 1rem 1rem 3rem;
 		}
 
 		.title {

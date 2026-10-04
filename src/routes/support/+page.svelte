@@ -263,7 +263,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2rem;
 		margin-bottom: 4rem;
-		max-width: 1000px;
+		max-width: 760px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -323,7 +323,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 
 	/* FAQ Section Styles */
 	.faq-section {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto 4rem;
 	}
 
@@ -369,7 +369,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 	}
 
 	.common-issues {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto 4rem;
 	}
 
