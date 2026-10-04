@@ -164,9 +164,9 @@
 	}
 
 	.container {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 
 	h1 {

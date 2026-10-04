@@ -226,9 +226,9 @@
 
 <style>
 	.page {
-		max-width: 720px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 0 1.5rem 3rem;
+		padding: 0 1rem 3rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		color: #111;
 		line-height: 1.65;

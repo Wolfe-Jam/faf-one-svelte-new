@@ -514,7 +514,6 @@
 		font-size: 0.875rem;
 		color: #666;
 		font-style: italic;
-		max-width: 800px;
 		margin: 0 auto;
 	}
 	
