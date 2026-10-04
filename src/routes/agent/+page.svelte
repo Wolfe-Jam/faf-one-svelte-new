@@ -129,7 +129,7 @@
 			<span class="chat-cta-arrow">&rarr;</span>
 		</a>
 		<a class="fam-tag" href="https://mcpaas.live/claim" target="_blank" rel="noopener">Join the FAM 🐘 →</a>
-		<p class="manifesto">FAF defines. MD instructs. AI codes.</p>
+		<p class="manifesto">FAF defines. AGENTS.md instructs. AI codes.</p>
 		<p class="response">I speak their language.</p>
 	</section>
 
