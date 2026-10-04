@@ -602,3 +602,35 @@ section {
 		grid-template-columns: 1fr;
 	}
 }
+/* Phone safety net: nothing on a page is wider than the screen.
+   Phone widths only; a page's own scoped styles still win. */
+@media (max-width: 640px) {
+	img,
+	video {
+		max-width: 100%;
+		height: auto;
+	}
+	svg {
+		max-width: 100%;
+	}
+	table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+	p,
+	li,
+	a,
+	cite,
+	code {
+		overflow-wrap: anywhere;
+	}
+	/* Tables scroll in their own box, so cells keep whole words. */
+	:where(td, th),
+	:where(td, th) * {
+		overflow-wrap: normal;
+	}
+	:where(div, section, article, form, figure, header, footer, aside) {
+		min-width: 0;
+	}
+}

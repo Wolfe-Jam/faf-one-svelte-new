@@ -561,7 +561,7 @@ How grok-faf-mcp went from idea to live production in under 24 hours — with lo
 	}
 
 	.notification-screenshot {
-		max-width: 500px;
+		max-width: min(500px, 100%);
 	}
 
 	.screenshot-caption {
