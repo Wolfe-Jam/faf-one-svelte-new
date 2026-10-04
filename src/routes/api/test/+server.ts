@@ -3,11 +3,17 @@
  * Production: 404 — never expose env flags or license counts publicly.
  */
 
-import { error, json } from '@sveltejs/kit';
-import { dev } from '$app/environment';
+import { error } from '@sveltejs/kit';
+import { dev } from '$app/env';
 import type { RequestHandler } from './$types';
-import { getSupabase } from '$lib/supabase';
-import { env } from '$env/dynamic/private';
+import { getSupabase } from '#lib/supabase.js';
+
+import {
+    SUPABASE_URL2,
+    SUPABASE_SERVICE_KEY2,
+    RESEND_API_KEY,
+    STRIPE_SECRET_KEY
+} from '$app/env/private';
 
 export const GET: RequestHandler = async () => {
     if (!dev) error(404, 'Not found');
@@ -16,10 +22,10 @@ export const GET: RequestHandler = async () => {
 
     // Check 1: Environment variables
     checks.envVars = {
-        SUPABASE_URL: !!env.SUPABASE_URL2,
-        SUPABASE_SERVICE_KEY: !!env.SUPABASE_SERVICE_KEY2,
-        RESEND_API_KEY: !!env.RESEND_API_KEY,
-        STRIPE_SECRET_KEY: !!env.STRIPE_SECRET_KEY,
+        SUPABASE_URL: !!SUPABASE_URL2,
+        SUPABASE_SERVICE_KEY: !!SUPABASE_SERVICE_KEY2,
+        RESEND_API_KEY: !!RESEND_API_KEY,
+        STRIPE_SECRET_KEY: !!STRIPE_SECRET_KEY
     };
 
     // Check 2: Supabase connection
@@ -71,7 +77,7 @@ export const GET: RequestHandler = async () => {
         }
     }
 
-    return json({
+    return Response.json({
         status: 'ok',
         message: 'FAF TURBO API Test',
         timestamp: new Date().toISOString(),

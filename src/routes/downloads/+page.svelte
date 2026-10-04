@@ -11,7 +11,7 @@
 		formatNumber,
 		formatTotal,
 		allPackages
-	} from '$lib/data/packages';
+	} from '#lib/data/packages.js';
 
 	let isVisible = $state(false);
 	let copiedIndex = $state(-1);

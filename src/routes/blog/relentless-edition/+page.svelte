@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 	let mounted = false;
 	onMount(() => { mounted = true; });
 

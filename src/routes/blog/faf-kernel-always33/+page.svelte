@@ -1,7 +1,7 @@
 <!-- pubblog Release — faf-kernel v1.1.1, the Always33 engine. Part VI (finale) of the Always33 series
      (overview: /blog/always33). Matrix run 2026-09-30; raw results in PLANET-FAF/cloud-briefs. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 The Always33 series, Part VI: faf-kernel v1.1
 

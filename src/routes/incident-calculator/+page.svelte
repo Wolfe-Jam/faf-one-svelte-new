@@ -1,5 +1,5 @@
 <script lang="ts">
-	import RiskSlider from '$lib/components/risk-assessment/RiskSlider.svelte';
+	import RiskSlider from '#lib/components/risk-assessment/RiskSlider.svelte';
 
 	// Incident-specific inputs
 	let incidentsPerMonth = $state(3); // Production incidents

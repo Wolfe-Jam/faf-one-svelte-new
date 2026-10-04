@@ -2,7 +2,7 @@
 	// Standalone "Share on 𝕏" pill. The share FORMULA lives in one place —
 	// $lib/shareIntent.js (buildShareIntent) — shared with pages that keep their
 	// own button styling. This component = that formula + the default pill style.
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	let {
 		headline = '',

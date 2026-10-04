@@ -11,8 +11,8 @@
 	import {
 		npmPackages, pypiPackages, cratesPackages,
 		npmTotal, pypiTotal, cratesTotal, grandTotal
-	} from '$lib/data/packages';
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	} from '#lib/data/packages.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 	const fmt = (n: number) => n.toLocaleString('en-US');
 
 	const shareText = `150,000 downloads. Predicted the day before, crossed on the day.

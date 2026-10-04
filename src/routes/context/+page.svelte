@@ -1,6 +1,6 @@
 <script>
-	import PageActions from '$lib/components/PageActions.svelte';
-	import Trophy from '$lib/components/Trophy.svelte';
+	import PageActions from '#lib/components/PageActions.svelte';
+	import Trophy from '#lib/components/Trophy.svelte';
 </script>
 
 <svelte:head>

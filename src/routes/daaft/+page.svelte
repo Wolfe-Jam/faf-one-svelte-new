@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	let mounted = $state(false);
 	let showSplash = $state(true);

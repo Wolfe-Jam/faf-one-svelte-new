@@ -5,16 +5,16 @@
  */
 
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
+import { RESEND_API_KEY } from '$app/env/private';
 import type { License } from '../license-generator';
 
 // Lazy-initialize to avoid build-time errors
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-    if (!resend && env.RESEND_API_KEY) {
-        resend = new Resend(env.RESEND_API_KEY);
-    }
-    return resend;
+   if (!resend && RESEND_API_KEY) {
+      resend = new Resend(RESEND_API_KEY);
+   }
+   return resend;
 }
 
 /**
@@ -22,20 +22,20 @@ function getResend(): Resend | null {
  */
 function generateLicenseEmailHTML(license: License): string {
     const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
-    const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
-    const isPro = license.tier === 'pro';
-    const isFriend = license.licenseNumber != null;
+   const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
+   const isPro = license.tier === 'pro';
+   const isFriend = license.licenseNumber != null;
     const friendLabel = isFriend ? `Friend of FAF #${String(license.licenseNumber).padStart(4, '0')}` : '';
 
-    // Steel blue for Pro, orange for TURBO/LEGENDS
-    const accentColor = isPro ? '#4682B4' : '#FF6B35';
-    const accentLight = isPro ? '#5A9AC8' : '#FF8C42';
-    // Pro header: dark-to-steel-blue fade (matches faf.one banner)
-    const headerGradient = isPro
-        ? 'linear-gradient(135deg, #0a0a0a 0%, #1a2a3a 40%, #4682B4 100%)'
-        : `linear-gradient(135deg, ${accentColor} 0%, ${accentLight} 100%)`;
+   // Steel blue for Pro, orange for TURBO/LEGENDS
+   const accentColor = isPro ? '#4682B4' : '#FF6B35';
+   const accentLight = isPro ? '#5A9AC8' : '#FF8C42';
+   // Pro header: dark-to-steel-blue fade (matches faf.one banner)
+   const headerGradient = isPro
+      ? 'linear-gradient(135deg, #0a0a0a 0%, #1a2a3a 40%, #4682B4 100%)'
+      : `linear-gradient(135deg, ${accentColor} 0%, ${accentLight} 100%)`;
 
-    return `
+   return `
 <!DOCTYPE html>
 <html>
 <head>
@@ -223,48 +223,48 @@ function generateLicenseEmailHTML(license: License): string {
  * Send license email to customer
  */
 export async function sendLicenseEmail(license: License): Promise<{ success: boolean; error?: string }> {
-    if (!env.RESEND_API_KEY) {
-        console.error('❌ RESEND_API_KEY not set');
-        return { success: false, error: 'Email service not configured' };
-    }
+   if (!RESEND_API_KEY) {
+      console.error('❌ RESEND_API_KEY not set');
+      return { success: false, error: 'Email service not configured' };
+   }
 
-    try {
+   try {
         const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
-        const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
+      const tierEmoji = license.tier === 'pro' ? '⚡' : license.tier === 'legends' ? '👑' : '🏎️💨';
 
-        // Friends of FAF get a special subject line
-        const isFriend = license.licenseNumber != null;
-        const subject = isFriend
-            ? `🧡 Friend of FAF #${String(license.licenseNumber).padStart(4, '0')} — Your All Areas License`
-            : `${tierEmoji} Your ${tierName} License Key`;
+      // Friends of FAF get a special subject line
+      const isFriend = license.licenseNumber != null;
+      const subject = isFriend
+         ? `🧡 Friend of FAF #${String(license.licenseNumber).padStart(4, '0')} — Your All Areas License`
+         : `${tierEmoji} Your ${tierName} License Key`;
 
-        const client = getResend();
-        if (!client) {
-            return { success: false, error: 'Email service not configured' };
-        }
-        const { data, error } = await client.emails.send({
-            from: 'FAF <team@faf.one>',
-            replyTo: 'team@faf.one',
-            to: license.email,
-            subject,
-            html: generateLicenseEmailHTML(license)
-        });
+      const client = getResend();
+      if (!client) {
+         return { success: false, error: 'Email service not configured' };
+      }
+      const { data, error } = await client.emails.send({
+         from: 'FAF <team@faf.one>',
+         replyTo: 'team@faf.one',
+         to: license.email,
+         subject,
+         html: generateLicenseEmailHTML(license)
+      });
 
-        if (error) {
-            console.error('❌ Email send error:', error);
-            return { success: false, error: error.message };
-        }
+      if (error) {
+         console.error('❌ Email send error:', error);
+         return { success: false, error: error.message };
+      }
 
-        console.log(`✅ License email sent to ${license.email}, ID: ${data?.id}`);
-        return { success: true };
+      console.log(`✅ License email sent to ${license.email}, ID: ${data?.id}`);
 
-    } catch (error) {
-        console.error('❌ Unexpected email error:', error);
-        return {
-            success: false,
-            error: error instanceof Error ? error.message : 'Unknown error'
-        };
-    }
+      return { success: true };
+   } catch(error) {
+      console.error('❌ Unexpected email error:', error);
+      return {
+         success: false,
+         error: error instanceof Error ? error.message : 'Unknown error'
+      };
+   }
 }
 
 /**
@@ -272,9 +272,9 @@ export async function sendLicenseEmail(license: License): Promise<{ success: boo
  */
 function generateLicenseEmailText(license: License): string {
     const tierName = license.tier === 'pro' ? 'FAF Pro' : license.tier === 'legends' ? '.FAF LEGENDS' : '.FAF TURBO';
-    const isPro = license.tier === 'pro';
+   const isPro = license.tier === 'pro';
 
-    return `
+   return `
 Welcome to ${tierName}!
 
 Your License Key: ${license.key}

@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import PageActions from '$lib/components/PageActions.svelte';
+	import PageActions from '#lib/components/PageActions.svelte';
 
 	let heroVisible = $state(false);
 	let problemVisible = $state(false);

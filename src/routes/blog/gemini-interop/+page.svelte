@@ -1,6 +1,6 @@
 <!-- pubblog — Release model, copied from gemini-agent-card / mcp-better-matching-client (gold, locked 2026-08-19). -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: gemini-faf-mcp v2.7.0 — The Interop Edition
 

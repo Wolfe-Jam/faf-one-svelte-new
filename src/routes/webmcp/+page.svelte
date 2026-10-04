@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
-	import PageActions from '$lib/components/PageActions.svelte';
-	import { emitAgentsMd } from '$lib/webmcp/emit-agents';
-	import { messageOf, toToolError } from '$lib/webmcp/errors';
-	import { fill6wsYaml } from '$lib/webmcp/fill-6ws';
-	import { FIXTURE_YAML } from '$lib/webmcp/fixture';
+	import PageActions from '#lib/components/PageActions.svelte';
+	import { emitAgentsMd } from '#lib/webmcp/emit-agents.js';
+	import { messageOf, toToolError } from '#lib/webmcp/errors.js';
+	import { fill6wsYaml } from '#lib/webmcp/fill-6ws.js';
+	import { FIXTURE_YAML } from '#lib/webmcp/fixture.js';
 	import {
 		ensureModelContext,
 		FILL_6WS_DESCRIPTION,
@@ -12,11 +12,11 @@
 		SCORE_FAF_DESCRIPTION,
 		SCORE_FAF_SCHEMA,
 		TOOL_NAMES
-	} from '$lib/webmcp/register';
-	import { contextCardText, readContext } from '$lib/webmcp/read-context';
-	import { DEFAULT_REPO, DEMO_REPOS, fafUrlsFromInput } from '$lib/webmcp/repo-url';
-	import { runScoreFafSafe } from '$lib/webmcp/score-faf';
-	import { fetchAllowedYaml } from '$lib/webmcp/yaml-url';
+	} from '#lib/webmcp/register.js';
+	import { contextCardText, readContext } from '#lib/webmcp/read-context.js';
+	import { DEFAULT_REPO, DEMO_REPOS, fafUrlsFromInput } from '#lib/webmcp/repo-url.js';
+	import { runScoreFafSafe } from '#lib/webmcp/score-faf.js';
+	import { fetchAllowedYaml } from '#lib/webmcp/yaml-url.js';
 
 	const INSPECTOR =
 		'https://chromewebstore.google.com/detail/model-context-tool-inspec/gbpdfapgefenggkahomfgkhfehlcenpd';
@@ -24,7 +24,7 @@
 	const SOURCE = 'https://github.com/Wolfe-Jam/faf-one-svelte-new/tree/main/src/routes/webmcp';
 	const LISTING = 'https://github.com/webmachinelearning/awesome-webmcp#demos';
 	const KNOWN_TOOLS = /** @type {readonly string[]} */ (TOOL_NAMES);
-	/** @type {Array<keyof import('$lib/webmcp/read-context').SixView>} */
+	/** @type {Array<keyof import('#lib/webmcp/read-context.js').SixView>} */
 	const SIX_KEYS = ['who', 'what', 'why', 'where', 'when', 'how'];
 
 	/** Hero sample, built from the constants register.ts actually registers — it cannot drift. */
@@ -114,7 +114,7 @@ ${SNIPPET_PROPS}
 		let cancelled = false;
 		(async () => {
 			try {
-				const { initKernel, scoreYaml } = await import('$lib/webmcp/kernel');
+				const { initKernel, scoreYaml } = await import('#lib/webmcp/kernel.js');
 				await initKernel();
 				if (cancelled) return;
 				deps = { scoreYaml, fetchText: fetchAllowedYaml };
@@ -226,7 +226,7 @@ ${SNIPPET_PROPS}
 		}
 	}
 
-	/** @param {import('$lib/webmcp/repo-url').DemoRepo} repo */
+	/** @param {import('#lib/webmcp/repo-url.js').DemoRepo} repo */
 	function onPickRepo(repo) {
 		loadFromHref(repo.href, repo.id);
 	}

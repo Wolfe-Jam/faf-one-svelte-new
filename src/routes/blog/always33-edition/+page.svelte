@@ -1,9 +1,9 @@
 <!-- pubblog Release — faf-cli v8.0.0, The Always33 Edition. Post 1 of the Always33 series
      (overview: /blog/always33). Chrome copied from the mcp-better-matching-client gold. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 	// Cloudflare Scrape Shield mangles package@version as "email" — always use NpmPkg in HTML.
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: faf-cli v8.0.1 — The Always33 Edition
 

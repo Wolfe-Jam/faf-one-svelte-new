@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import PageActions from '$lib/components/PageActions.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import PageActions from '#lib/components/PageActions.svelte';
 	let mounted = false;
 	onMount(() => {
 		mounted = true;

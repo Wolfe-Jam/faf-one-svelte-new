@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: faf-memory-mcp v0.1.1
 

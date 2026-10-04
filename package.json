@@ -1,48 +1,52 @@
 {
-  "name": "faf-one-svelte",
-  "private": true,
-  "version": "1.0.4",
-  "type": "module",
-  "engines": {
-    "node": ">=22"
-  },
-  "scripts": {
-    "dev": "vite dev",
-    "prebuild": "node scripts/build-agent-card.mjs && node scripts/check-pack-of-cards.mjs",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test:webmcp": "vitest run --config vitest.config.webmcp.ts"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-cloudflare": "^7.2.8",
-    "@sveltejs/adapter-static": "^3.0.0",
-    "@sveltejs/kit": "^2.70.2",
-    "@sveltejs/vite-plugin-svelte": "^5.1.1",
-    "svelte": "^5.0.0",
-    "vite": "^6.4.3",
-    "wrangler": "^4.119.0",
-    "vitest": "^4.1.11"
-  },
-  "description": "FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management",
-  "keywords": [
-    "faf",
-    "ai-context",
-    "context-mirroring"
-  ],
-  "author": "wolfejam",
-  "license": "MIT",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.75.0",
-    "faf-cli": "^3.0.1",
-    "marked": "^17.0.0",
-    "resend": "^6.1.2",
-    "yaml": "^2.8.1",
-    "@mcp-b/webmcp-polyfill": "^5.1.0"
-  },
-  "overrides": {
-    "postcss": ">=8.5.23",
-    "sharp": ">=0.35.4",
-    "undici": ">=8.10.2",
-    "cookie": "0.7.2"
-  }
+	"name": "faf-one-svelte",
+	"private": true,
+	"version": "1.0.4",
+	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"prebuild": "node scripts/build-agent-card.mjs && node scripts/check-pack-of-cards.mjs",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test:webmcp": "vitest run --config vitest.config.webmcp.ts"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-cloudflare": "^8.0.0",
+		"@sveltejs/adapter-static": "^4.0.0",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"svelte": "^5.57.1",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.12",
+		"vitest": "^4.1.11",
+		"wrangler": "^4.119.0"
+	},
+	"description": "FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management",
+	"keywords": [
+		"faf",
+		"ai-context",
+		"context-mirroring"
+	],
+	"author": "wolfejam",
+	"license": "MIT",
+	"dependencies": {
+		"@mcp-b/webmcp-polyfill": "^5.1.0",
+		"@supabase/supabase-js": "^2.75.0",
+		"faf-cli": "^3.0.1",
+		"marked": "^17.0.0",
+		"resend": "^6.1.2",
+		"yaml": "^2.8.1"
+	},
+	"overrides": {
+		"postcss": ">=8.5.23",
+		"sharp": ">=0.35.4",
+		"undici": ">=8.10.2"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
+	}
 }

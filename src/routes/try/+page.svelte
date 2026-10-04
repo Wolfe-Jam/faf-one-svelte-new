@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	let codeTyped = $state('');
 	let showOutput = $state(false);

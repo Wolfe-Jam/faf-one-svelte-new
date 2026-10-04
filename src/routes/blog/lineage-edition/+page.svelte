@@ -1,9 +1,9 @@
 <!-- pubblog — show / tell / explainer on the matching-client spine.
      rust-faf-mcp 0.8.0 The Lineage Edition + a call for a select few FAFb 0.9 drivers. -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 	// Cloudflare Scrape Shield mangles package@version as "email" — always use NpmPkg in HTML.
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: rust-faf-mcp v0.8.0 — The Lineage Edition
 

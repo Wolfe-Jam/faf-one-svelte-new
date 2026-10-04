@@ -1,5 +1,5 @@
 <script>
-	import Directory from '$lib/components/Directory.svelte';
+	import Directory from '#lib/components/Directory.svelte';
 
 	// Curated metadata. Spine first. Strays → Legacy (not peer to Home).
 	// Routes not listed still appear in More — except HIDE.

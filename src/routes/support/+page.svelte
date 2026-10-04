@@ -1,5 +1,5 @@
 <script>
-	import ContactModal from '$lib/components/ContactModal.svelte';
+	import ContactModal from '#lib/components/ContactModal.svelte';
 
 	let showContactModal = $state(false);
 	let name = $state('');

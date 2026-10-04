@@ -1,7 +1,7 @@
 <script>
-	import FafLogo from '$lib/components/FafLogo.svelte';
-	import ScrollRevealText from '$lib/components/ScrollRevealText.svelte';
-	import PageActions from '$lib/components/PageActions.svelte';
+	import FafLogo from '#lib/components/FafLogo.svelte';
+	import ScrollRevealText from '#lib/components/ScrollRevealText.svelte';
+	import PageActions from '#lib/components/PageActions.svelte';
 
 	let activeTab = 'cursor';
 </script>

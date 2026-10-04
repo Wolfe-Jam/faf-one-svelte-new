@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `🏁 Just shipped: rust-faf-mcp v0.5.1 — The Mk4 Truth Edition
 

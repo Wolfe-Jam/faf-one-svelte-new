@@ -1,5 +1,5 @@
 <script>
-	import FafLogo from '$lib/components/FafLogo.svelte';
+	import FafLogo from '#lib/components/FafLogo.svelte';
 </script>
 
 <svelte:head>

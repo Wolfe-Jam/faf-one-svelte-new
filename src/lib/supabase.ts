@@ -5,7 +5,7 @@
  */
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { env } from '$env/dynamic/private';
+import { SUPABASE_URL2, SUPABASE_SERVICE_KEY2 } from '$app/env/private';
 
 // Lazy-initialize to avoid build-time errors
 let supabaseClient: SupabaseClient | null = null;
@@ -16,8 +16,8 @@ let supabaseClient: SupabaseClient | null = null;
  */
 export function getSupabase(): SupabaseClient | null {
     if (!supabaseClient) {
-        const supabaseUrl = env.SUPABASE_URL2;
-        const supabaseServiceKey = env.SUPABASE_SERVICE_KEY2;
+        const supabaseUrl = SUPABASE_URL2;
+        const supabaseServiceKey = SUPABASE_SERVICE_KEY2;
 
         if (!supabaseUrl || !supabaseServiceKey) {
             console.warn('⚠️ Supabase not configured. Set SUPABASE_URL2 and SUPABASE_SERVICE_KEY2');

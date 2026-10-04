@@ -4,16 +4,15 @@
  * Sends contact form submissions to team@faf.one via Resend
  */
 
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
+import { RESEND_API_KEY } from '$app/env/private';
 
 // Lazy-initialize to avoid build-time errors
 let resend: Resend | null = null;
 function getResend(): Resend | null {
-	if (!resend && env.RESEND_API_KEY) {
-		resend = new Resend(env.RESEND_API_KEY);
+	if (!resend && RESEND_API_KEY) {
+		resend = new Resend(RESEND_API_KEY);
 	}
 	return resend;
 }
@@ -28,12 +27,12 @@ interface ContactFormData {
 
 function generateContactEmailHTML(data: ContactFormData): string {
 	const categoryLabel = data.category
-		? {
+		? ({
 			bug: '🐛 Bug Report',
 			feature: '✨ Feature Request',
 			question: '❓ Question',
 			feedback: '💬 Feedback'
-		}[data.category] || 'General'
+		})[data.category] || 'General'
 		: 'General';
 
 	return `
@@ -144,12 +143,12 @@ function generateContactEmailHTML(data: ContactFormData): string {
 
 function generateContactEmailText(data: ContactFormData): string {
 	const categoryLabel = data.category
-		? {
+		? ({
 			bug: 'Bug Report',
 			feature: 'Feature Request',
 			question: 'Question',
 			feedback: 'Feedback'
-		}[data.category] || 'General'
+		})[data.category] || 'General'
 		: 'General';
 
 	return `
@@ -170,9 +169,9 @@ Reply to: ${data.email}
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-	if (!env.RESEND_API_KEY) {
+	if (!RESEND_API_KEY) {
 		console.error('❌ RESEND_API_KEY not set');
-		return json({
+		return Response.json({
 			success: false,
 			error: 'Email service not configured'
 		}, { status: 500 });
@@ -183,7 +182,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		// Validate required fields
 		if (!data.email || !data.message) {
-			return json({
+			return Response.json({
 				success: false,
 				error: 'Email and message are required'
 			}, { status: 400 });
@@ -192,7 +191,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		// Validate email format
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailRegex.test(data.email)) {
-			return json({
+			return Response.json({
 				success: false,
 				error: 'Invalid email address'
 			}, { status: 400 });
@@ -201,7 +200,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		// Send email via Resend
 		const client = getResend();
 		if (!client) {
-			return json({
+			return Response.json({
 				success: false,
 				error: 'Email service not configured'
 			}, { status: 500 });
@@ -217,7 +216,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		if (error) {
 			console.error('❌ Contact email send error:', error);
-			return json({
+			return Response.json({
 				success: false,
 				error: error.message
 			}, { status: 500 });
@@ -254,14 +253,14 @@ export const POST: RequestHandler = async ({ request }) => {
 </body></html>`,
 		}).catch((err: Error) => console.warn('⚠️ Auto-reply failed (non-critical):', err.message));
 
-		return json({
+		return Response.json({
 			success: true,
 			message: 'Message sent successfully'
 		});
 
 	} catch (error) {
 		console.error('❌ Contact form error:', error);
-		return json({
+		return Response.json({
 			success: false,
 			error: error instanceof Error ? error.message : 'Unknown error'
 		}, { status: 500 });

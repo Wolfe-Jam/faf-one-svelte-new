@@ -1,4 +1,4 @@
-import { cookieName, readSession } from '$lib/fafb-drive-auth';
+import { cookieName, readSession } from '#lib/fafb-drive-auth.js';
 
 export const prerender = false;
 

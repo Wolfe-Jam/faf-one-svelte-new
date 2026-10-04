@@ -1,7 +1,6 @@
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { findLicenseByKey } from '$lib/license-store';
-import { isValidKeyFormat } from '$lib/license-generator';
+import { findLicenseByKey } from '#lib/license-store.js';
+import { isValidKeyFormat } from '#lib/license-generator.js';
 
 /**
  * 🏎️ License Validation Endpoint
@@ -26,7 +25,7 @@ export const POST: RequestHandler = async ({ request }) => {
             body = await request.json();
         } catch (parseError) {
             // Malformed JSON
-            return json({
+            return Response.json({
                 valid: false,
                 message: 'Invalid JSON in request body'
             }, { status: 400 });
@@ -36,7 +35,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
         // Validate format
         if (!isValidKeyFormat(key)) {
-            return json({
+            return Response.json({
                 valid: false,
                 message: 'Invalid license key format'
             }, { status: 400 });
@@ -46,7 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
         const license = await findLicenseByKey(key);
 
         if (!license) {
-            return json({
+            return Response.json({
                 valid: false,
                 message: 'License key not found'
             }, { status: 404 });
@@ -54,7 +53,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
         // Check status
         if (license.status !== 'active') {
-            return json({
+            return Response.json({
                 valid: false,
                 message: `License is ${license.status}`,
                 status: license.status
@@ -62,7 +61,7 @@ export const POST: RequestHandler = async ({ request }) => {
         }
 
         // Valid license
-        return json({
+        return Response.json({
             valid: true,
             tier: license.tier,
             status: license.status,
@@ -71,7 +70,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     } catch (error) {
         console.error('❌ Validation error:', error);
-        return json({
+        return Response.json({
             valid: false,
             message: 'Validation failed'
         }, { status: 500 });

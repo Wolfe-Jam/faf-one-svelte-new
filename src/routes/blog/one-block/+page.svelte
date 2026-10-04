@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 
 	const shareText = `We said the A2A extension was the same context as MCP.
 

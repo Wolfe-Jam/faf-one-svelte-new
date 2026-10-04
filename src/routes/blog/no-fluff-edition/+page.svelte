@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import { buildShareIntent } from '#lib/shareIntent.js';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: grok-faf-mcp v1.10.0 — The No-Fluff Edition
 

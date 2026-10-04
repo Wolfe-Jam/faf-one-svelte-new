@@ -1,9 +1,9 @@
 <!-- pubblog Release — claude-faf-mcp v7.0.0, The Always33 Edition. Post 2 of the Always33 series
      (overview: /blog/always33). Chrome copied from the faf-cli v8 post (always33-edition). -->
 <script lang="ts">
-	import { buildShareIntent } from '$lib/shareIntent.js';
+	import { buildShareIntent } from '#lib/shareIntent.js';
 	// Cloudflare Scrape Shield mangles package@version as "email" — always use NpmPkg in HTML.
-	import NpmPkg from '$lib/NpmPkg.svelte';
+	import NpmPkg from '#lib/NpmPkg.svelte';
 
 	const shareText = `🏁 Just shipped: claude-faf-mcp v7.0.0 — The Always33 Edition
 
