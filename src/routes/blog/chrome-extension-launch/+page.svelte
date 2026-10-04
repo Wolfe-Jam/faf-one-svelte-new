@@ -245,7 +245,7 @@ AI: "I see you're using React 18 with Vite, here's what I'd change in Button.tsx
 	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;

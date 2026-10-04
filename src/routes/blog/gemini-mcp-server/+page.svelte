@@ -298,7 +298,7 @@ python -m pytest tests/ -v`}</code></pre>
 	}
 
 	.blog-post {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

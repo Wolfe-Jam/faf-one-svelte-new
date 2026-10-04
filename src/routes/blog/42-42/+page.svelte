@@ -310,9 +310,9 @@
 	}
 
 	.container {
-		max-width: 900px;
+		max-width: 760px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 2rem 1rem;
 	}
 
 	.post-header {

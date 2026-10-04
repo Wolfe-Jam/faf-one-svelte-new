@@ -286,7 +286,7 @@ Imagine how the world would run if software was good. If all code gets better, t
 	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
-		max-width: 48rem;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		color: var(--faf-dark);

@@ -290,7 +290,7 @@ The fastest FAF scoring CLI. Zero dependencies. Pure Bun APIs. TypeScript native
 	:global(body) { background: var(--faf-cream); }
 
 	.blog-post {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
