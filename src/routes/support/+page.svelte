@@ -83,6 +83,7 @@
 				<button onclick={() => showContactModal = true} class="contact-button-primary">
 					⚡️ Contact Team →
 				</button>
+				<p class="email-line">or email <a href="mailto:team@faf.one">team@faf.one</a></p>
 				<p>Response time: Within 24 hours</p>
 				<p class="priority-note">🏆 LEGENDS get priority support</p>
 			</div>
@@ -227,7 +228,7 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 
 		<div class="emergency-banner">
 			<h3>🚨 Urgent Issue?</h3>
-			<p>LEGENDS and Enterprise customers can reach us directly at <strong>team@faf.one</strong></p>
+			<p>Email <a href="mailto:team@faf.one">team@faf.one</a>. LEGENDS and Enterprise get priority.</p>
 		</div>
 	</div>
 </main>
@@ -491,8 +492,18 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 		font-size: 1.5rem;
 	}
 
-	.emergency-banner strong {
+	.emergency-banner a {
 		color: var(--faf-orange);
+		font-weight: 600;
+	}
+
+	.email-line {
+		margin-top: 0.75rem;
+	}
+
+	.email-line a {
+		color: var(--faf-orange);
+		font-weight: 600;
 	}
 
 	.contact-button-primary {

@@ -29,6 +29,8 @@
 			{/each}
 		</nav>
 
+		<p class="contact"><a href="mailto:team@faf.one">team@faf.one</a></p>
+
 		<p class="meta">IANA-registered · application/vnd.faf+yaml · Atlanta</p>
 
 		<p class="copy">
@@ -88,6 +90,21 @@
 	.sep {
 		color: #555;
 		user-select: none;
+	}
+
+	.contact {
+		margin: 0 0 1rem;
+		font-size: 0.9rem;
+	}
+
+	.contact a {
+		color: var(--faf-orange);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.contact a:hover {
+		text-decoration: underline;
 	}
 
 	.meta {
