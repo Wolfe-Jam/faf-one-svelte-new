@@ -10,6 +10,12 @@
  *   Banner and public totals use this meter only — no mirror inflation.
  *
  * Verified: 2026-10-04 (refreshed via /downloads skill — all 3 registries live)
+ *
+ * COVERAGE STEP 2026-10-04: +10 entries for packages already shipping
+ * (npm: rust-faf-mcp, mcp-context-card, mcp-better, faf-taf-git, mcpaas,
+ * agents-md-facts · crates: faf-fafb, faf-kernel, mcp-better, faf-wasm-sdk)
+ * = +9,319 all-time on the day. A labelled step, not growth. Name holders,
+ * utils and fringe packages stay out.
  * Auto-refresh: scripts/refresh-downloads.mjs (run daily via GH Actions)
  *
  * To add a new package: edit this file manually, keeping descriptions/icons
@@ -30,7 +36,7 @@ export interface Package {
 	icon: string;
 }
 
-// ── npm packages (14) ─────────────────────────────────────────────
+// ── npm packages (20) ─────────────────────────────────────────────
 
 export const npmPackages: Package[] = [
 	{
@@ -172,6 +178,66 @@ export const npmPackages: Package[] = [
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-gen',
 		registry: 'npm',
 		icon: '⚡'
+	},
+	{
+		name: 'rust-faf-mcp',
+		description: 'Rust MCP server for .faf (npm)',
+		downloads: 2_732,
+		install: 'npx rust-faf-mcp',
+		registryUrl: 'https://npmjs.com/package/rust-faf-mcp',
+		githubUrl: 'https://github.com/Wolfe-Jam/rust-faf-mcp',
+		registry: 'npm',
+		icon: '🔌'
+	},
+	{
+		name: 'mcp-context-card',
+		description: 'Context, memory & identity MCP server',
+		downloads: 2_167,
+		install: 'npx -y mcp-context-card',
+		registryUrl: 'https://npmjs.com/package/mcp-context-card',
+		githubUrl: 'https://github.com/Wolfe-Jam/mcp-context-card',
+		registry: 'npm',
+		icon: '🪪'
+	},
+	{
+		name: 'mcp-better',
+		description: 'Modern MCP setup (2026-07-28 model)',
+		downloads: 1_400,
+		install: 'npx mcp-better',
+		registryUrl: 'https://npmjs.com/package/mcp-better',
+		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
+		registry: 'npm',
+		icon: '✅'
+	},
+	{
+		name: 'faf-taf-git',
+		description: 'Test Receipt Printer for git (TAF)',
+		downloads: 748,
+		install: 'npx faf-taf-git',
+		registryUrl: 'https://npmjs.com/package/faf-taf-git',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf-taf-git',
+		registry: 'npm',
+		icon: '🧾'
+	},
+	{
+		name: 'mcpaas',
+		description: 'MCPaaS SDK — context on demand',
+		downloads: 676,
+		install: 'npm i mcpaas',
+		registryUrl: 'https://npmjs.com/package/mcpaas',
+		githubUrl: 'https://github.com/Wolfe-Jam/mcpaas-sdk',
+		registry: 'npm',
+		icon: '📡'
+	},
+	{
+		name: 'agents-md-facts',
+		description: 'AGENTS.md authored from the repo facts',
+		downloads: 624,
+		install: 'npx agents-md-facts',
+		registryUrl: 'https://npmjs.com/package/agents-md-facts',
+		githubUrl: 'https://github.com/Wolfe-Jam/agents-md-facts',
+		registry: 'npm',
+		icon: '📋'
 	}
 ];
 
@@ -240,13 +306,13 @@ export const pypiPackages: Package[] = [
 	}
 ];
 
-// ── crates.io packages (6) ────────────────────────────────────────
+// ── crates.io packages (10) ────────────────────────────────────────
 
 export const cratesPackages: Package[] = [
 	{
 		name: 'faf-rust-sdk',
 		description: 'Rust SDK for .faf files',
-		downloads: 1_184,
+		downloads: 1_188,
 		install: 'cargo add faf-rust-sdk',
 		registryUrl: 'https://crates.io/crates/faf-rust-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
@@ -256,7 +322,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-radio-rust',
 		description: 'Radio Protocol client — tune, listen, broadcast',
-		downloads: 313,
+		downloads: 314,
 		install: 'cargo add faf-radio-rust',
 		registryUrl: 'https://crates.io/crates/faf-radio-rust',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-radio-rust',
@@ -302,6 +368,46 @@ export const cratesPackages: Package[] = [
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
 		registry: 'crates',
 		icon: '⚡'
+	},
+	{
+		name: 'faf-fafb',
+		description: 'FAFb v2 — the compiled binary form of .faf',
+		downloads: 369,
+		install: 'cargo add faf-fafb',
+		registryUrl: 'https://crates.io/crates/faf-fafb',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust',
+		registry: 'crates',
+		icon: '📦'
+	},
+	{
+		name: 'faf-kernel',
+		description: 'The FAF kernel — parse, validate, score',
+		downloads: 353,
+		install: 'cargo add faf-kernel',
+		registryUrl: 'https://crates.io/crates/faf-kernel',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust',
+		registry: 'crates',
+		icon: '⚙️'
+	},
+	{
+		name: 'mcp-better',
+		description: 'Modern MCP setup (Rust)',
+		downloads: 198,
+		install: 'cargo add mcp-better',
+		registryUrl: 'https://crates.io/crates/mcp-better',
+		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
+		registry: 'crates',
+		icon: '✅'
+	},
+	{
+		name: 'faf-wasm-sdk',
+		description: 'WASM SDK — the kernel for the edge',
+		downloads: 52,
+		install: 'cargo add faf-wasm-sdk',
+		registryUrl: 'https://crates.io/crates/faf-wasm-sdk',
+		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust',
+		registry: 'crates',
+		icon: '🕸️'
 	}
 ];
 

@@ -28,14 +28,16 @@ const PACKAGES_TS = 'src/lib/data/packages.ts';
 const NPM = [
 	'faf-cli', 'faf', 'claude-faf-mcp', 'faf-mcp', 'faf-scoring-kernel',
 	'bun-sticky', 'slash-tokens', 'wjttc', 'grok-faf-mcp',
-	'faf-wasm-core', 'faf-wasm-sdk', 'faf-wasm', 'faf-wasm-gen', 'bun-sticky-faf'
+	'faf-wasm-core', 'faf-wasm-sdk', 'faf-wasm', 'faf-wasm-gen', 'bun-sticky-faf',
+	'rust-faf-mcp', 'mcp-context-card', 'mcp-better', 'faf-taf-git', 'mcpaas', 'agents-md-facts'
 ];
 const PYPI = [
 	'gemini-faf-mcp', 'claude-fafm-sdk', 'faf-python-sdk', 'faf-agent-mcp',
 	'grok-faf-voice', 'slash-tokens'
 ];
 const CRATES = [
-	'faf-rust-sdk', 'rust-faf-mcp', 'faf', 'faf-radio-rust', 'mcpaas', 'slash-tokens'
+	'faf-rust-sdk', 'rust-faf-mcp', 'faf', 'faf-radio-rust', 'mcpaas', 'slash-tokens',
+	'faf-fafb', 'faf-kernel', 'mcp-better', 'faf-wasm-sdk'
 ];
 
 async function fetchNpm(name) {
