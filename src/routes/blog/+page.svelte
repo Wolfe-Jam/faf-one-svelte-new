@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/grok-new-era-edition',
+			title: 'The New Era Edition',
+			version: 'grok-faf-mcp v2.1.0',
+			date: 'October 5, 2026',
+			timestamp: '2026-10-05',
+			excerpt:
+				'Glass-box tools: every Grok tool now says what it does — reads, writes or rewrites — so your client knows when to ask first. New card, new look at grok.faf.one.',
+			emoji: '✪',
+			category: 'Grok'
+		},
+		{
 			slug: 'blog/faf-kernel-always33',
 			title: 'One kernel, every score, Part VI',
 			version: 'faf-kernel v1.1.1',
