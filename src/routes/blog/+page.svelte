@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/ladder-edition',
+			title: 'The Ladder Edition',
+			version: 'faf-cli v8.2.0',
+			date: 'October 5, 2026',
+			timestamp: '2026-10-05',
+			excerpt:
+				"One ladder for every card: agent.fafa builds the plain cards, and project.faf adds FAF's context.",
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/grok-new-era-edition',
 			title: 'The New Era Edition',
 			version: 'grok-faf-mcp v2.1.0',

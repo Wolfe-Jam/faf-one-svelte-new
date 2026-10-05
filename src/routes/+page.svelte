@@ -6,6 +6,7 @@
 	// the top of src/routes/blog/+page.svelte (the blog index is the source).
 	// Speed is set per item below, so adding or removing items keeps the pace.
 	const tickerItems = [
+		{ href: '/blog/ladder-edition', tag: 'faf-cli 8.2', text: 'The Ladder Edition — one ladder for every card · context in the cards' },
 		{ href: '/blog/grok-new-era-edition', tag: 'grok-faf-mcp 2.1', text: 'The New Era Edition — Context Over MCP · every tool says what it does' },
 		{ href: '/blog/faf-kernel-always33', tag: 'faf-kernel 1.1', text: 'One kernel, every score — 54 of 54 scores agree' },
 		{ href: '/blog/python-edge-always33-edition', tag: 'faf-python-sdk 2.0', text: 'The Always33 Edition, Part V — the same score in Python and at the edge' },
@@ -14,8 +15,7 @@
 		{ href: '/blog/claude-always33-edition', tag: 'claude-faf-mcp 7.0', text: 'The Always33 Edition, Part II — the same score in Claude' },
 		{ href: '/blog/always33-edition', tag: 'faf-cli 8.0', text: 'The Always33 Edition, Part I — the Always33 engine' },
 		{ href: '/blog/always33', tag: 'Always33', text: 'The Always33 Suite — one engine, one number' },
-		{ href: '/blog/hundred-fifty-thousand', tag: '150,000', text: 'Downloads — predicted the day before, crossed on the day' },
-		{ href: '/blog/pack-of-cards', tag: 'Pack of Cards', text: 'Five card specs, drawn as one map' }
+		{ href: '/blog/hundred-fifty-thousand', tag: '150,000', text: 'Downloads — predicted the day before, crossed on the day' }
 	];
 	const TICKER_SECONDS_PER_ITEM = 10;
 
