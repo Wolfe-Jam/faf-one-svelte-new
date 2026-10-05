@@ -2,6 +2,23 @@
 	let { data } = $props();
 	let copied = $state(false);
 
+	// Homepage ticker: the latest posts, newest first. Keep ~10; take them from
+	// the top of src/routes/blog/+page.svelte (the blog index is the source).
+	// Speed is set per item below, so adding or removing items keeps the pace.
+	const tickerItems = [
+		{ href: '/blog/grok-new-era-edition', tag: 'grok-faf-mcp 2.1', text: 'The New Era Edition — Context Over MCP · every tool says what it does' },
+		{ href: '/blog/faf-kernel-always33', tag: 'faf-kernel 1.1', text: 'One kernel, every score — 54 of 54 scores agree' },
+		{ href: '/blog/python-edge-always33-edition', tag: 'faf-python-sdk 2.0', text: 'The Always33 Edition, Part V — the same score in Python and at the edge' },
+		{ href: '/blog/gemini-grok-always33-edition', tag: 'gemini-faf-mcp 3.0', text: 'The Always33 Edition, Part IV — the same score in Gemini and Grok' },
+		{ href: '/blog/faf-mcp-always33-edition', tag: 'faf-mcp 4.0', text: 'The Always33 Edition, Part III — one score, every IDE' },
+		{ href: '/blog/claude-always33-edition', tag: 'claude-faf-mcp 7.0', text: 'The Always33 Edition, Part II — the same score in Claude' },
+		{ href: '/blog/always33-edition', tag: 'faf-cli 8.0', text: 'The Always33 Edition, Part I — the Always33 engine' },
+		{ href: '/blog/always33', tag: 'Always33', text: 'The Always33 Suite — one engine, one number' },
+		{ href: '/blog/hundred-fifty-thousand', tag: '150,000', text: 'Downloads — predicted the day before, crossed on the day' },
+		{ href: '/blog/pack-of-cards', tag: 'Pack of Cards', text: 'Five card specs, drawn as one map' }
+	];
+	const TICKER_SECONDS_PER_ITEM = 10;
+
 	function copyCommand() {
 		navigator.clipboard.writeText('npx faf-cli init');
 		copied = true;
@@ -53,56 +70,15 @@
 	<section class="blog-ticker" aria-label="Latest from the blog">
 		<a href="/blog" class="ticker-label">Latest</a>
 		<div class="ticker-viewport">
-			<div class="ticker-track">
-				<a href="/blog/discoverable-edition" class="ticker-item"><b>faf-cli 7.16</b> The Discoverable Edition — a card nobody can find is not a card</a>
-				<a href="/blog/fafb-early-access" class="ticker-item"><b>FAFb 0.9</b> Devs wanted — drive the full Rust version for teams, before 1.0</a>
-				<a href="/blog/pack-edition" class="ticker-item"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
-				<a href="/blog/lineage-edition" class="ticker-item"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>
-				<a href="/blog/faf-mcp-compose" class="ticker-item"><b>faf-mcp 3.0</b> The Compose Edition — compose, don't port · one scorer, one set of renderers, one injector</a>
-				<a href="/blog/open-renderers-edition" class="ticker-item"><b>faf-cli 7.12</b> The Open Renderers Edition — consumers compose instead of port · one block, every run</a>
-				<a href="/blog/vs-code-edition" class="ticker-item"><b>faf-cli 7.11</b> The VS Code Edition — the drift check is a function you import, not a CLI you scrape</a>
-				<a href="/blog/gemini-interop" class="ticker-item"><b>gemini-faf-mcp 2.7.0</b> The Interop Edition — your .faf writes AGENTS.md and GEMINI.md</a>
-				<a href="/blog/mcp-context-card" class="ticker-item"><b>mcp-context-card 1.0.0</b> A project's AGENTS.md, memory and identity — over MCP, rendered as one card</a>
-				<a href="/blog/table-of-8" class="ticker-item"><b>rust-faf-mcp 0.7.0</b> The Table-of-8 Edition — Setup and Sweep confirm AI's side of the bargain</a>
-				<a href="/blog/full-facts-edition" class="ticker-item"><b>faf-cli 7.10</b> The Full-Facts Edition — every slot grounded in the repo's own files</a>
-				<a href="/blog/mk4-truth-edition" class="ticker-item"><b>rust-faf-mcp 0.5.0</b> The Mk4 Truth Edition — one kernel, one number, no more drift</a>
-				<a href="/blog/slash-tokens-fixed-deal" class="ticker-item"><b>slash-tokens 1.6.5</b> The Fixed Deal Edition — Solo $20 mailbox, 10% waived</a>
-				<a href="/blog/no-fluff-edition" class="ticker-item"><b>grok-faf-mcp 1.10.0</b> The No-Fluff Edition — No fluff in a project.faf</a>
-				<a href="/blog/mcp-better-matching-client" class="ticker-item"><b>mcp-better 0.5.0</b> Matching client completes MRTR — the peer is two-sided</a>
-				<a href="/blog/projector-floor" class="ticker-item"><b>claude-faf-mcp 5.22</b> The Projector Floor — same block as MCP</a>
-				<a href="/blog/projector-edition" class="ticker-item"><b>faf-cli 7.8</b> The Projector Edition — one projector, every door</a>
-				<a href="/blog/memory-in-chat" class="ticker-item"><b>faf-memory-mcp 0.1.1</b> etch writes the file — in chat → memory.faf.one</a>
-				<a href="/blog/swift-edition" class="ticker-item"><b>faf-cli 7.7</b> The Swift Edition — Package.swift alone ≠ app</a>
-				<a href="/blog/ruby-edition" class="ticker-item"><b>faf-cli 7.6</b> The Ruby Edition — Gemfile alone ≠ Rails</a>
-				<a href="/blog/jvm-edition" class="ticker-item"><b>faf-cli 7.5</b> The JVM Edition — pom / gradle alone ≠ type</a>
-				<a href="/blog/csharp-edition" class="ticker-item"><b>faf-cli 7.4</b> The C# Edition — .csproj alone ≠ type</a>
-				<a href="/blog/go-edition" class="ticker-item"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
-				<a href="/blog/memory-is-vast" class="ticker-item"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
-				<a href="/blog/compactable-memory" class="ticker-item"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
-				<a href="/blog/fafb-early-access" class="ticker-item" aria-hidden="true" tabindex="-1"><b>FAFb 0.9</b> Devs wanted — drive the full Rust version for teams, before 1.0</a>
-				<a href="/blog/pack-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.15</b> The Pack Edition — answers in, every card out</a>
-				<a href="/blog/lineage-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.8.0</b> The Lineage Edition — one .faf-dna across faf-cli, FAFb and rust-faf-mcp</a>
-				<a href="/blog/faf-mcp-compose" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-mcp 3.0</b> The Compose Edition — compose, don't port · one scorer, one set of renderers, one injector</a>
-				<a href="/blog/open-renderers-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.12</b> The Open Renderers Edition — consumers compose instead of port · one block, every run</a>
-				<a href="/blog/vs-code-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.11</b> The VS Code Edition — the drift check is a function you import, not a CLI you scrape</a>
-				<a href="/blog/gemini-interop" class="ticker-item" aria-hidden="true" tabindex="-1"><b>gemini-faf-mcp 2.7.0</b> The Interop Edition — your .faf writes AGENTS.md and GEMINI.md</a>
-				<a href="/blog/mcp-context-card" class="ticker-item" aria-hidden="true" tabindex="-1"><b>mcp-context-card 1.0.0</b> A project's AGENTS.md, memory and identity — over MCP, rendered as one card</a>
-				<a href="/blog/table-of-8" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.7.0</b> The Table-of-8 Edition — Setup and Sweep confirm AI's side of the bargain</a>
-				<a href="/blog/full-facts-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.10</b> The Full-Facts Edition — every slot grounded in the repo's own files</a>
-				<a href="/blog/mk4-truth-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>rust-faf-mcp 0.5.0</b> The Mk4 Truth Edition — one kernel, one number, no more drift</a>
-				<a href="/blog/slash-tokens-fixed-deal" class="ticker-item" aria-hidden="true" tabindex="-1"><b>slash-tokens 1.6.5</b> The Fixed Deal Edition — Solo $20 mailbox, 10% waived</a>
-				<a href="/blog/no-fluff-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>grok-faf-mcp 1.10.0</b> The No-Fluff Edition — No fluff in a project.faf</a>
-				<a href="/blog/mcp-better-matching-client" class="ticker-item" aria-hidden="true" tabindex="-1"><b>mcp-better 0.5.0</b> Matching client completes MRTR — the peer is two-sided</a>
-				<a href="/blog/projector-floor" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-faf-mcp 5.22</b> The Projector Floor — same block as MCP</a>
-				<a href="/blog/projector-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.8</b> The Projector Edition — one projector, every door</a>
-				<a href="/blog/memory-in-chat" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-memory-mcp 0.1.1</b> etch writes the file — in chat → memory.faf.one</a>
-				<a href="/blog/swift-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.7</b> The Swift Edition — Package.swift alone ≠ app</a>
-				<a href="/blog/ruby-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.6</b> The Ruby Edition — Gemfile alone ≠ Rails</a>
-				<a href="/blog/jvm-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.5</b> The JVM Edition — pom / gradle alone ≠ type</a>
-				<a href="/blog/csharp-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.4</b> The C# Edition — .csproj alone ≠ type</a>
-				<a href="/blog/go-edition" class="ticker-item" aria-hidden="true" tabindex="-1"><b>faf-cli 7.3</b> The Go Edition — go.mod alone ≠ backend</a>
-				<a href="/blog/memory-is-vast" class="ticker-item" aria-hidden="true" tabindex="-1"><b>Memory is vast</b> .fafm — knowledge + voice · remember and forget</a>
-				<a href="/blog/compactable-memory" class="ticker-item" aria-hidden="true" tabindex="-1"><b>claude-fafm-sdk 2.0</b> Compactable — epoch compact · no silent zombies</a>
+			<div class="ticker-track" style="--ticker-duration: {tickerItems.length * TICKER_SECONDS_PER_ITEM}s">
+				{#each tickerItems as item (item.href)}
+					<a href={item.href} class="ticker-item"><b>{item.tag}</b> {item.text}</a>
+				{/each}
+				{#each tickerItems as item (item.href + '#loop')}
+					<a href={item.href} class="ticker-item" aria-hidden="true" tabindex="-1"
+						><b>{item.tag}</b> {item.text}</a
+					>
+				{/each}
 			</div>
 		</div>
 	</section>
@@ -335,7 +311,7 @@
 		display: inline-flex;
 		gap: 2.5rem;
 		white-space: nowrap;
-		animation: ticker-scroll 36s linear infinite;
+		animation: ticker-scroll var(--ticker-duration, 100s) linear infinite;
 	}
 	.blog-ticker:hover .ticker-track {
 		animation-play-state: paused;
