@@ -89,11 +89,11 @@
 	<section class="content" id="key">
 		<h2>The <code>one.faf/context</code> key</h2>
 		<p>FAF's namespaced extension key. <code>one.faf</code> is reverse-DNS for <code>faf.one</code> &mdash; the key dereferences here. This page documents it; the payload is machine-described by a <a href="/schemas/one.faf-context.schema.json">JSON Schema</a>.</p>
-		<p>Wherever a host format offers a namespaced slot, the FAF receipt rides under this key &mdash; a thin, falsifiable pointer at the <code>.faf</code> artifact, never a copy of it:</p>
+		<p>The FAF receipt is a thin, falsifiable pointer at the <code>.faf</code> artifact, never a copy of it. Each host format names its slot its own way, so the key differs by surface:</p>
 		<ul class="receipts">
-			<li><strong>AI Catalog</strong> &mdash; on the <code>.faf</code> entry in <a href="/.well-known/ai-catalog.json">faf.one/.well-known/ai-catalog.json</a></li>
-			<li><strong>MCP server card</strong> &mdash; <code>_meta</code> on <a href="https://context.faf.one/mcp/server-card" target="_blank" rel="noopener">context.faf.one/mcp/server-card</a></li>
-			<li><strong>A2A Agent Card</strong> &mdash; <code>capabilities.extensions[].uri</code> on <a href="/.well-known/agent-card.json">faf.one/.well-known/agent-card.json</a> (data-only; <code>required: false</code>)</li>
+			<li><strong>MCP Server Card</strong> &mdash; <code>one.faf/context</code> in <code>_meta</code> on <a href="https://context.faf.one/mcp/server-card" target="_blank" rel="noopener">context.faf.one/mcp/server-card</a> (the <code>&lt;streamable-http-url&gt;/server-card</code> path of <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2127" target="_blank" rel="noopener">SEP-2127</a>, merged as Final 2026-10-06)</li>
+			<li><strong>AI Catalog</strong> &mdash; <code>https://faf.one/context</code> in <code>extensions</code> on the <code>.faf</code> entry in <a href="/.well-known/ai-catalog.json">faf.one/.well-known/ai-catalog.json</a> (the catalog's extension keys are URIs)</li>
+			<li><strong>A2A Agent Card</strong> &mdash; <code>https://faf.one/ext/context/v1</code> as <code>capabilities.extensions[].uri</code> on <a href="/.well-known/agent-card.json">faf.one/.well-known/agent-card.json</a> (data-only; <code>required: false</code>)</li>
 		</ul>
 		<pre>{`"one.faf/context": {
   "faf": "https://context.faf.one/.well-known/project.faf",
