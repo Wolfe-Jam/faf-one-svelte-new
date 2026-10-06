@@ -6,7 +6,7 @@
 	<title>FAF and the AI Catalog specification — a timeline | FAF</title>
 	<meta
 		name="description"
-		content="Design decisions FAF made, and the dates the AI Catalog specification ratified them. Every date links to a verifiable artifact."
+		content="Design decisions FAF made, and the dates they were merged into the AI Catalog specification. Every date links to a verifiable artifact."
 	/>
 	<meta property="og:title" content="FAF and the AI Catalog specification — a timeline" />
 	<meta
@@ -30,13 +30,13 @@
 		<h1>FAF and the AI Catalog specification</h1>
 		<p class="lead">
 			The <a href="https://ai-catalog.io/" target="_blank" rel="noopener">AI Catalog</a> is a
-			cross-protocol standard for making AI artifacts discoverable — a typed, nestable JSON
+			cross-protocol specification (pre-release) for making AI artifacts discoverable — a typed, nestable JSON
 			container where each entry declares its type by media type. FAF publishes into it. This page
-			records the design decisions FAF made, and the dates the specification ratified them. Every
+			records the design decisions FAF made, and the dates they were merged into the specification. Every
 			date links to something you can check.
 		</p>
 		<div class="meta">
-			<time datetime="2026-09-15">Updated 15 September 2026</time>
+			<time datetime="2026-10-06">Updated 6 October 2026</time>
 		</div>
 	</header>
 
@@ -106,7 +106,7 @@
 			<h2>Design decisions and the specification</h2>
 			<p>
 				Each row: the design choice FAF shipped, and the AI Catalog specification change that
-				ratified it. Where the FAF date is earlier, the deployment predated the rule.
+				matches it. Where the FAF date is earlier, the deployment predated the rule.
 			</p>
 			<div class="table-scroll">
 				<table>
@@ -159,24 +159,47 @@
 							</td>
 							<td>deployed <strong>2026-08-24</strong></td>
 							<td>
-								ADR-0024 /
+								<code>identity</code> is any URI; signed manifests verify only
+								<code>did:web</code> —
 								<a
-									href="https://github.com/Agent-Card/ai-catalog/pull/107"
+									href="https://github.com/Agent-Card/ai-catalog/pull/110"
 									target="_blank"
-									rel="noopener">PR #107</a
-								>, proposed <strong>2026-09-02</strong> (pending)
+									rel="noopener">PR #110</a
+								>, merged <strong>2026-10-01</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								MCP Server Card at <code>&lt;streamable-http-url&gt;/server-card</code>, listed as
+								an <code>application/mcp-server-card+json</code> entry
+							</td>
+							<td>
+								<a href="https://context.faf.one/mcp/server-card">listed</a>
+								<strong>2026-06-19</strong>
+							</td>
+							<td>
+								<a
+									href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2127"
+									target="_blank"
+									rel="noopener">SEP-2127</a
+								>, merged as Final <strong>2026-10-06</strong>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<p class="note">
-				On the last row: ADR-0024 defines publisher-domain alignment only for <code>did:web</code>,
-				HTTPS, and SPIFFE identities, and its diff rewrites the specification's own examples away
-				from bare <code>urn:air</code> identity values. FAF's catalog used <code>https://faf.one</code>
-				as the trust-manifest identity from the 2026-08-24 build-out, on
-				<code>urn:air:faf.one:&hellip;</code> identifiers — which aligns under the proposed rule with
-				no change. Verified against the live endpoint.
+				On the last row: FAF's catalog has used <code>https://faf.one</code> as the trust-manifest
+				identity since the 2026-08-24 build-out, on <code>urn:air:faf.one:&hellip;</code>
+				identifiers. The earlier alignment proposal (PR #107) closed unmerged. Of the four
+				trust-layer changes merged on 2026-10-01 (PRs
+				<a href="https://github.com/Agent-Card/ai-catalog/pull/105" target="_blank" rel="noopener">#105</a>,
+				<a href="https://github.com/Agent-Card/ai-catalog/pull/108" target="_blank" rel="noopener">#108</a>,
+				<a href="https://github.com/Agent-Card/ai-catalog/pull/109" target="_blank" rel="noopener">#109</a>,
+				<a href="https://github.com/Agent-Card/ai-catalog/pull/110" target="_blank" rel="noopener">#110</a>),
+				#110 defines signature verification for <code>did:web</code> identities only. FAF's
+				manifests are unsigned, carry provenance, and remain valid; a signed version would use
+				<code>did:web:faf.one</code>. Verified against the live endpoint.
 			</p>
 		</section>
 
@@ -194,7 +217,7 @@
 				(<a
 					href="https://github.com/modelcontextprotocol/experimental-ext-server-card/pull/14"
 					target="_blank"
-					rel="noopener">experimental-ext-server-card #14</a
+					rel="noopener">ext-server-card #14</a
 				>).
 			</p>
 		</section>
@@ -234,8 +257,10 @@
 				</table>
 			</div>
 			<p class="note">
-				The AI Catalog keeps <code>displayName</code> optional (PR #56 above); ARD requires it. Carrying
-				it satisfies both. ARD's own conformance tester reports PASS for faf.one and mcpaas.live.
+				ARD requires <code>displayName</code>. The AI Catalog makes it optional (PR #56 above) and
+				says it SHOULD be omitted when the artifact names itself, as a Server Card does with its
+				<code>title</code>. FAF keeps it on the MCP entry for ARD, a deliberate departure from that
+				SHOULD; the A2A entry omits it. ARD's own conformance tester reports PASS for faf.one and mcpaas.live.
 			</p>
 		</section>
 

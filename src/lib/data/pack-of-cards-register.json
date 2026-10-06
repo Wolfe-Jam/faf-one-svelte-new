@@ -1084,13 +1084,13 @@
      }
     },
     {
-     "label": "latest (#100)",
+     "label": "#100 mapping appendixes",
      "date": "2026-08-27",
      "ref": "b062278fd7f5a83202d33208f1d07c5b5eb7ccb3",
      "sources": [
       "specification/ai-catalog.md"
      ],
-     "why_checkpoint": "Latest state on main (HEAD for this file as of 2026-09-15). Since #47: #93 (2026-08-12) and #99 (2026-08-20) added Agent Plugin known entry types (`application/agent-plugins+zip`, `+gzip`); #100 'Extract mapping appendixes into standalone docs' moved the mapping appendixes out of the file. No dimension value changed after #47.",
+     "why_checkpoint": "Main as of 2026-09-15 (HEAD for this file then). Since #47: #93 (2026-08-12) and #99 (2026-08-20) added Agent Plugin known entry types (`application/agent-plugins+zip`, `+gzip`); #100 'Extract mapping appendixes into standalone docs' moved the mapping appendixes out of the file. No dimension value changed after #47.",
      "values": {
       "naming": {
        "value": {
@@ -1161,6 +1161,85 @@
        "note": "CDDL CatalogEntry L1685-1689 agrees. Required top-level catalog fields: specVersion, entries (L99-109; CDDL L1671, L1673)."
       }
      }
+    },
+    {
+     "label": "latest (10-01 trust merges)",
+     "date": "2026-10-01",
+     "ref": "769b17461dbc74ee2d7efc8461f0238b8aa39987",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "Latest state on main (HEAD for this file as of 2026-10-06). On 2026-10-01 four PRs merged short of a full TSC vote, open to objection before v1: #105 (separate artifact identity from registry coordinates), #108 (signed Trust Manifests bind release coordinates through `subject`), #109 (Host Trust Manifests removed from v1), #110 (did:web verification for signed Entry Trust Manifests). Identity stays urn:air but softens: 'HIGHLY RECOMMENDED and MUST be used for open or federated systems' became a RECOMMENDED absolute URI, with urn:air a SHOULD for publishers who want the identifier preserved across catalogs. Trust stays a Trust Manifest with a detached JWS; issuer verification is now defined only for root did:web. No tracked value changed.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "? displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L1873",
+       "note": "Prose: listed under OPTIONAL (L261). The entry displayName, the artifact's own name, then the identifier's trailing segment (resolution order, L279). SHOULD be omitted when the artifact names itself."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "SHOULD use the AI Catalog-specific `urn:air` naming structure",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L206",
+       "note": "Open-text field ('any valid URI or URN is accepted', same line). For open or federated systems a globally unique absolute URI is RECOMMENDED (same line; #105). Format `urn:air:{publisher}:{namespace}:{name}` (L209)."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L1405",
+       "note": "OPTIONAL; a catalog MAY be served from any URL. Link relation `ai-catalog` (L1434-1454). Registration sections: link relation (L1814), well-known URI (L1830). Neither is in the IANA registries (checked 2026-10-06); IANA lists only RFC 9727 `api-catalog`."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L95",
+       "note": "Registration section L1767. The IANA application media-types registry has no ai-catalog entry (checked 2026-10-06)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L99"
+      },
+      "extension": {
+       "value": "extensions-map",
+       "evidence": "represent the extension type (namespace), and the corresponding value contains the extension data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L1289",
+       "note": "Keys 'MUST be a valid URL or a reverse-DNS string' (L1291-1292). Entry `extensions` L326; catalog top level L151; Trust Manifest L677."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "contain at least one *substantive* trust member:",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L603",
+       "note": "`trustManifest` is OPTIONAL (L335-338). Trust Manifest `signature` is a detached JWS (L669-670, procedure L932); optional top-level catalog `signature` JWS (L156-157). Subject Binding L723 (#108). Issuer verification defined for root did:web only (L966; #110). Host Trust Manifests removed (#109). The CDDL TrustManifest now carries `subject`/`issuedAt`/`expiresAt`/`signature`; the top-level AICatalog CDDL still lacks `signature` (L1857)."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L102",
+       "note": "'Major.Minor' format (L104); Version Handling section L1344."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L1482",
+       "note": "CDDL CatalogEntry L1871 agrees. Required top-level catalog fields: specVersion, entries (L99-109; CDDL L1857)."
+      }
+     }
     }
    ],
    "notes": [
@@ -1171,7 +1250,7 @@
     "'Trust manifest made required' is not what the spec says. `trustManifest` stays OPTIONAL at every checkpoint. Since #47 a Trust Manifest must be substantive when present, and Level 3 conformance requires signature, subject and issuedAt on entries whose trust is relied upon.",
     "IANA status (checked 2026-09-15 against the IANA CSVs): `application/ai-catalog+json` is not in the media types registry, `ai-catalog.json` is not in Well-Known URIs, and `ai-catalog` is not in Link Relations. The spec only contains registration request sections. Type status is recorded as de-facto at every checkpoint, meaning named in the spec but unregistered.",
     "Judgement calls. Checkpoint 3 merges two same-day PRs (#37 at 18:04 UTC, then #36 at 21:30 UTC) to stay within 8 checkpoints; there is no main commit where #36 is in without #37. At checkpoint 4 (#39) the spec contradicts itself: prose and Level 1 say optional, the CDDL says required. naming.required is recorded as false per the prose, with the conflict in the note. `url|inline` and `url|data` count as one required field, because the spec requires exactly one of the two. Before #36 identity is recorded as 'other:open URN or URI (SHOULD)'. From #36 it is 'urn:air', though the field stays open text and the MUST applies only to open or federated systems. Trust is 'trust-manifest+jws' throughout, because the optional Trust Manifest has carried an optional detached-JWS `signature` since the first version. The #47 checkpoint is kept as a listed milestone even though this vocabulary value did not change there.",
-    "Prose vs CDDL at the latest SHA (b062278f): the CDDL, which the spec calls 'the normative schema', has no top-level catalog `signature` and no TrustManifest `subject`, `issuedAt` or `expiresAt`. The prose has defined all of these since #47. Separately, from #77 until #47 the Level 1 conformance text still named `metadata` after it had been renamed `extensions`.",
+    "Prose vs CDDL: at b062278f (2026-08-27) the CDDL, which the spec calls 'the normative schema', had no top-level catalog `signature` and no TrustManifest `subject`, `issuedAt` or `expiresAt`, though the prose had defined all of these since #47. At 769b174 (2026-10-01) the TrustManifest CDDL carries all four; the top-level `signature` is still missing. Separately, from #77 until #47 the Level 1 conformance text still named `metadata` after it had been renamed `extensions`.",
     "Entry-level `type` (called `mediaType` until #37) names the referenced artifact's type. It is an open string with RECOMMENDED known values and does not affect the catalog document's own media type, which is what the `type` dimension records. The spec notes that the `+md` suffix used in `application/agent-skills+md` 'is to be registered'."
    ]
   },
@@ -2447,7 +2526,7 @@
      }
     },
     {
-     "label": "Latest (SEP-pinned snapshot 526201bb)",
+     "label": "SEP-pinned snapshot 526201bb",
      "date": "2026-08-12",
      "repo": "modelcontextprotocol/experimental-ext-server-card",
      "ref": "526201bbc80231daa40ffcdecfc9da4e54e5dc93",
@@ -2458,7 +2537,94 @@
       "README.md",
       "docs/core-maintainer-roadmap.md"
      ],
-     "why_checkpoint": "Latest state. The most recent extension-repo commit is 'docs: add Server Card roadmap priorities (#47)'. Since the last checkpoint, only #46 (2026-07-24, ETag revalidation) touched discovery.md, and no tracked dimension changed. SEP-2127's latest commit, 5c8483d (2026-08-24), pins this snapshot as the contract under review (SEP L85) and sets 'Status: Final' (SEP L3). PR #2127 is still open with the 'in-review' label (checked 2026-09-15).",
+     "why_checkpoint": "State at the SEP-pinned snapshot. The most recent extension-repo commit is 'docs: add Server Card roadmap priorities (#47)'. Since the last checkpoint, only #46 (2026-07-24, ETag revalidation) touched discovery.md, and no tracked dimension changed. SEP-2127's latest commit, 5c8483d (2026-08-24), pins this snapshot as the contract under review (SEP L85) and sets 'Status: Final' (SEP L3). PR #2127 merged on 2026-10-06 (merge commit 0a11bf6), with the SEP at 'Status: Final' and the same snapshot pin.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "title",
+        "required": false
+       },
+       "evidence": "Optional human-readable title or display name for the MCP server.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L75",
+       "note": "`title?: string` (L81). Clients read `title` from the card, not the catalog entry (docs/discovery.md L54-L55)."
+      },
+      "identity": {
+       "value": "reverse-dns",
+       "evidence": "Server name in reverse-DNS format. Must contain exactly one forward slash",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L45",
+       "note": "Pattern `^[a-zA-Z0-9.-]+/[a-zA-Z0-9._-]+$` (L50). The valid example examples/ServerCard/valid/minimal.json uses `example-org/minimal`, with no dot. Catalog-level identifier: `urn:air:{publisher}:{namespace}:{name}` (docs/discovery.md L48)."
+      },
+      "discovery": {
+       "value": "via:/.well-known/ai-catalog.json",
+       "evidence": "Fetch `https://{domain}/.well-known/ai-catalog.json`",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L119",
+       "note": "Card location: 'MCP Servers MAY host their Server Card at `GET <streamable-http-url>/server-card`, which we reserve for this purpose, though any unreserved URI (on any domain) is valid' (L174-L175). SEP 5c8483d L90: 'Cards can be hosted at any unreserved URI, with `<streamable-http-url>/server-card` reserved as the recommended location.'"
+      },
+      "type": {
+       "value": {
+        "media_type": "application/mcp-server-card+json",
+        "status": "de-facto"
+       },
+       "evidence": "Server Cards use the media type `application/mcp-server-card+json`.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L131-L132",
+       "note": "Not in the IANA application media-type registry (checked 2026-09-15); the only 'mcp' matches are unrelated vnd.3gpp.mcptt-* types. Clients SHOULD send `Accept: application/mcp-server-card+json` (L182)."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An **MCP Server Card** is a JSON document that describes a single MCP server",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L130"
+      },
+      "extension": {
+       "value": "_meta",
+       "evidence": "extension metadata, which remains the card's extension point.",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/README.md#L27",
+       "note": "The line begins 'Vendors who genuinely need to attach install hints to a Server Card can use namespaced [`_meta`]'. schema.ts L115 and L121 define `_meta?: MetaObject`. SEP 5c8483d L89: '`_meta` is not used to advertise MCP capabilities or negotiated extension support.'"
+      },
+      "trust": {
+       "value": "none",
+       "evidence": "Clients MUST NOT treat Server Card contents as authoritative for security or",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/docs/discovery.md#L160",
+       "note": "Advisory only. The 'Server Card Accuracy' security note (L229-L238) calls an inaccurate card 'a mild confusion or downgrade vector'. Hosted cards MUST use HTTPS, TLS 1.2 or later, in production (L273). No signature or trust manifest."
+      },
+      "versioning": {
+       "value": [
+        "$schema",
+        "version",
+        "remotes[].supportedProtocolVersions"
+       ],
+       "evidence": "Schema URLs are versioned by the `vN` segment rather than by date; a",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.ts#L36",
+       "note": "$schema must equal `https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json` (L35, L40). version = server version, 'Equivalent of `Implementation.version`' (L55-L57). remotes[].supportedProtocolVersions = 'MCP protocol versions actively supported by this remote endpoint' (L199-L202). README.md L63: 'The `v1` shape is still pre-release and card-only'."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "$schema",
+         "name",
+         "version",
+         "description"
+        ],
+        "count": 4
+       },
+       "evidence": "\"required\": [\"$schema\", \"description\", \"name\", \"version\"],",
+       "link": "https://github.com/modelcontextprotocol/experimental-ext-server-card/blob/526201bbc80231daa40ffcdecfc9da4e54e5dc93/schema.json#L256",
+       "note": "`ServerCard` definition starts at L195. The optional fields are title, websiteUrl, repository, icons, remotes and _meta (schema.ts L81-L121). The smallest valid card, examples/ServerCard/valid/minimal.json, has exactly these four fields."
+      }
+     }
+    },
+    {
+     "label": "Latest (SEP-2127 merged, Final)",
+     "date": "2026-10-06",
+     "repo": "modelcontextprotocol/experimental-ext-server-card",
+     "ref": "526201bbc80231daa40ffcdecfc9da4e54e5dc93",
+     "sources": [
+      "docs/discovery.md",
+      "schema.ts",
+      "schema.json",
+      "README.md",
+      "docs/core-maintainer-roadmap.md"
+     ],
+     "why_checkpoint": "Latest state. PR #2127 merged on 2026-10-06 (merge commit 0a11bf6) with the SEP at 'Status: Final' (Extensions Track, L3). The merged SEP still names extension snapshot 526201bb as the contract it considered (L85) and says implementers should follow the current, versioned extension specification after acceptance. The extension repo, renamed modelcontextprotocol/ext-server-card, has had no commits since 526201bb (checked 2026-10-06) and its README still says 'Status: Experimental'. Values are therefore cited at 526201bb; no tracked dimension changed. This checkpoint marks the status change, not a wire-format change.",
      "values": {
       "naming": {
        "value": {
@@ -2537,21 +2703,21 @@
    "notes": [
     "The claim that the original path was `/.well-known/mcp-server-card` does not hold. The first public SEP text (3bb8831, 2026-01-21) specifies `/.well-known/mcp/server-card.json` (L217), while its Abstract says `.well-known/mcp.json` (L12). Rev 1 (e105d30, 2026-01-30) changed it to `/.well-known/mcp/server-card`. The flat `/.well-known/mcp-server-card` arrived only on 2026-03-26 (97c6286).",
     "The move to `<streamable-http-url>/server-card` is confirmed as ext PR #22 (merged 2026-06-08, 10e958f; resolves issue #12; issue #11 was closed by hand 25 seconds later). At #22, domain discovery still ran through the MCP Catalog at `/.well-known/mcp/catalog.json`. The switch to `/.well-known/ai-catalog.json` came later, in ext PR #42 (merged 2026-07-20, 1491bd2).",
-    "The Extensions Track rewrite is confirmed: SEP commit 4590aa4 (authored 2026-06-08, 'SEP-2127: refactor to Extensions Track charter') changes Type from Standards Track to Extensions Track, adds extension identifier `io.modelcontextprotocol/server-card`, and hands the wire format to the extension repo. It reached the sep/mcp-server-cards branch through #2893 on 2026-06-26. From then on the SEP names the extension repo's schema.ts as the single source of truth, so checkpoints 5 to 8 cite the extension repo.",
+    "The Extensions Track rewrite is confirmed: SEP commit 4590aa4 (authored 2026-06-08, 'SEP-2127: refactor to Extensions Track charter') changes Type from Standards Track to Extensions Track, adds extension identifier `io.modelcontextprotocol/server-card`, and hands the wire format to the extension repo. It reached the sep/mcp-server-cards branch through #2893 on 2026-06-26. From then on the SEP names the extension repo's schema.ts as the single source of truth, so checkpoints 5 to 9 cite the extension repo.",
     "'A v1 card is identity + remotes, no primitives' is confirmed at 526201b: schema.ts L15-L19 ('identity, transport, and protocol versions'; primitives are not enumerated), and the fields are name, version, description, title, websiteUrl, repository, icons, remotes and _meta. The removals happened in steps: primitives from the SEP on 2026-03-02 (308c652); capabilities, requires and authentication on 2026-04-06 (389a07d, merged via #2525 on 2026-04-13); the Server/packages superset from the extension repo on 2026-06-18 (#28). None of these changed a tracked dimension, apart from the versioning list noted in checkpoint 3.",
-    "Folded to stay within 8 checkpoints: 3a61af5 (2026-02-01) moved `packages` out of the card into a separate server.json superset, which removed packages[].supportedProtocolVersions from the card's versioning list. That change shows first in checkpoint 3 (2026-03-23), and its why_checkpoint says so. Every other dimension change has its own checkpoint.",
+    "Folded to keep one checkpoint per dimension change: 3a61af5 (2026-02-01) moved `packages` out of the card into a separate server.json superset, which removed packages[].supportedProtocolVersions from the card's versioning list. That change shows first in checkpoint 3 (2026-03-23), and its why_checkpoint says so. Every other dimension change has its own checkpoint.",
     "The SEP branch was rebased: every commit from 3bb8831 to 97c6286 has committer date 2026-03-26. Checkpoint dates use author dates, and the SHAs are the ones now on the branch. Commits before the rebase may have had different SHAs.",
     "The two sources disagreed for a while. From the extension repo's start (2026-04-27) until the SEP rewrite on 2026-06-08, the SEP said 'MUST return Content-Type: application/json' while ext docs/discovery.md (from 2026-05-28) said `application/mcp-server+json`. The ext README used the slash path `/.well-known/mcp/server-card` while schema.ts used the dash path `/.well-known/mcp-server-card`. The rewritten SEP listed both as open items (4590aa4 L180-L181, removed again in 229e5cd). Checkpoint 5 records the extension repo's values.",
     "Media-type status: `application/json` is IANA-registered (RFC 8259) but generic. Neither `application/mcp-server+json` nor `application/mcp-server-card+json` is in the IANA application registry (checked 2026-09-15; the only 'mcp' matches are vnd.3gpp.mcptt-*). 'de-facto' is used here, as in the .fafa register, to mean 'named in the spec, not registered'. The IANA well-known URI registry has no entry for mcp-server-card, mcp or ai-catalog.",
     "Judgement call on discovery: from 2026-06-08 the text says the catalog is the entry point and clients never guess a card's location. The value therefore records the catalog mechanism (`via:...`), and the reserved default card location `<streamable-http-url>/server-card` (a server MAY use it) goes in the note. A reader who wants the card URL itself should use that note.",
     "Judgement call on identity: from rev 1 the card's own identifier is always the reverse-DNS `name`. Catalog-entry identifiers changed separately: `urn:mcp:server:<name>` (2026-05-28), then `urn:air:<publisher>:<name>` (#31, 2026-06-19), then `urn:air:{publisher}:{namespace}:{name}` with an `mcp` namespace in the examples (#42, 2026-07-20). These are catalog fields, so identity stays 'reverse-dns' and no checkpoint was made for them.",
     "Trust is 'not specified' only at checkpoint 5, because the extension repo at that SHA had no card-level trust text (the SEP of the same date called cards advisory). Every other checkpoint is 'none': advisory metadata with no signature or manifest. The normative 'MUST NOT treat as authoritative' wording arrived with ext #25 on 2026-06-08.",
-    "SEP status conflict: 5c8483d (commit title 'Regenerate SEP docs') changes the header to 'Status: Final', but PR #2127 is open and unmerged, with labels SEP, in-review, extension, roadmap/transport, and mergeable_state 'blocked' (checked 2026-09-15). On 2026-07-20, 1d6ff6a set Final and 84643c8 set it back to Draft six minutes later. The extension README at 526201b still says 'Status: Experimental'.",
+    "SEP status, resolved: 5c8483d (commit title 'Regenerate SEP docs') changed the header to 'Status: Final' while PR #2127 was still open and blocked (checked 2026-09-15). PR #2127 merged on 2026-10-06 (0a11bf6) with the header at Final (Extensions Track). The extension repo, since renamed modelcontextprotocol/ext-server-card, still says 'Status: Experimental' in its README (checked 2026-10-06). On 2026-07-20, 1d6ff6a set Final and 84643c8 set it back to Draft six minutes later. The extension README at 526201b still says 'Status: Experimental'.",
     "Naming: MCP Catalog entries had a required `displayName` from 2026-05-28 until #39 (2026-07-13) dropped it in favour of the card's `title`. Because this is catalog-level, the card's naming value (title, optional) has not changed since rev 1.",
     "Roadmap (docs/core-maintainer-roadmap.md at 526201b) lists three future themes: graduation to an official extension (L8-L14), adding primitives back ('Describe what a server does', L18-L23), and per-remote authentication (L25-L30). These are plans, not spec text, so they are not recorded as values.",
     "The first SEP header says 'Created: 2025-01-21' (3bb8831 L5), which looks like a typo: rev 1 corrected it to 2026-01-21, and the PR was opened 2026-01-21."
    ]
   }
  },
- "as_of": "2026-09-12"
+ "as_of": "2026-10-06"
 }

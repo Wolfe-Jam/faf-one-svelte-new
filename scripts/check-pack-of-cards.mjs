@@ -20,7 +20,7 @@ const COMPONENT = 'src/lib/components/PackMap.svelte';
 // public and supplies register links — a substring match would ban both.
 const PRIVATE_REPOS = ['Wolfe-Jam/FAF-Voice', 'Wolfe-Jam/faf-agent', 'Wolfe-Jam/faf-mcpaas'];
 const LEAK_MARKERS = ['/Users/', 'PLANET-FAF', '03-TECHNICAL', 'card-evolution', 'mcpaas-cf'];
-const EXPECT = { cards: 5, checkpoints: 30, entries: 270, linked: 269 };
+const EXPECT = { cards: 5, checkpoints: 32, entries: 288, linked: 287 };
 
 const problems = [];
 
