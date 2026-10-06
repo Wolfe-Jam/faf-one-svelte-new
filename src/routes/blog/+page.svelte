@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/gemini-new-era-edition',
+			title: 'The New Era Edition, for Gemini',
+			version: 'gemini-faf-mcp v3.1.0',
+			date: 'October 6, 2026',
+			timestamp: '2026-10-06',
+			excerpt:
+				'Glass-box tools: every Gemini tool now says what it does — reads, writes or rewrites — so your client knows when to ask first. In Gemini CLI and Google Antigravity.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/ladder-edition',
 			title: 'The Ladder Edition',
 			version: 'faf-cli v8.2.0',
