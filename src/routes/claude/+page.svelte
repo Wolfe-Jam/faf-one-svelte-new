@@ -1,441 +1,654 @@
 <script>
 	import PageActions from '#lib/components/PageActions.svelte';
+
+	let copied = $state('');
+	function copy(text) {
+		try {
+			navigator.clipboard.writeText(text).then(() => {
+				copied = text;
+				setTimeout(() => (copied = ''), 1600);
+			});
+		} catch (e) {}
+	}
 </script>
 
 <svelte:head>
-	<title>Claude + .faf — is your agent grounded?</title>
-	<meta name="description" content="Claude graded its own grounding on faf-cli: 1/9 without context, 8/9 with the .faf. This is a blind spot — measure yours in one command. IANA-registered, in Anthropic's MCP Registry, 96.1k downloads." />
+	<title>Claude + .faf — your project, known to Claude</title>
+	<meta
+		name="description"
+		content="Claude graded its own grounding on faf-cli: 1/9 without context, 8/9 with the .faf. claude-faf-mcp brings your project.faf to Claude Code, Claude Desktop and claude.ai. IANA-registered, 150k+ downloads."
+	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap"
+		rel="stylesheet"
+	/>
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Claude grounding: this is a blind spot." />
-	<meta property="og:description" content="Claude graded its own grounding on faf-cli: 1/9 without context, 8/9 with the .faf. Measure yours: npx faf-cli@latest bench" />
+	<meta property="og:title" content="Your project, known to Claude." />
+	<meta
+		property="og:description"
+		content="Claude graded its own grounding on faf-cli: 1/9 without context, 8/9 with the .faf. Measure yours: npx faf-cli bench"
+	/>
 	<meta property="og:url" content="https://www.faf.one/claude" />
 	<meta property="og:image" content="https://www.faf.one/cards/claude-faf-cli.png" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Claude grounding: this is a blind spot." />
-	<meta name="twitter:description" content="Claude graded its own grounding: 1/9 without context, 8/9 with the .faf. Measure yours in one command." />
+	<meta name="twitter:title" content="Your project, known to Claude." />
+	<meta
+		name="twitter:description"
+		content="Claude graded its own grounding: 1/9 without context, 8/9 with the .faf. Measure yours in one command."
+	/>
 	<meta name="twitter:image" content="https://www.faf.one/cards/claude-faf-cli.png" />
 </svelte:head>
 
 <main class="page">
-
-	<section class="score-hero">
-		<p class="eyebrow">For Claude · faf-cli</p>
-		<div class="score-pair">
-			<div class="score">
-				<span class="score-num cold">1<span class="denom">/9</span></span>
-				<span class="score-label">without context</span>
+	<!-- Hero -->
+	<section class="hero">
+		<div class="hero-text">
+			<p class="eyebrow">
+				<img src="/logos/claude-starburst-clay.svg" alt="" width="18" height="18" /> For Claude
+			</p>
+			<h1>Your project, known to Claude.</h1>
+			<p class="lede">
+				With claude-faf-mcp, Claude reads your <code>project.faf</code>: the stack, the goal and who
+				it's for. In Claude Code, Claude Desktop and claude.ai. Keep your <code>CLAUDE.md</code>.
+			</p>
+			<div class="hero-cta">
+				<button class="btn btn-solid" onclick={() => copy('claude mcp add faf -- npx -y claude-faf-mcp')}>
+					{copied === 'claude mcp add faf -- npx -y claude-faf-mcp' ? 'Copied' : 'Add to Claude Code'}
+				</button>
+				<a class="btn btn-outline" href="#measure">Measure the gap</a>
 			</div>
-			<span class="arrow">&rarr;</span>
-			<div class="score">
-				<span class="score-num win">8<span class="denom">/9</span></span>
-				<span class="score-label">with context</span>
+		</div>
+		<div class="bench-card">
+			<p class="bench-title">Claude graded its own grounding on faf-cli</p>
+			<div class="bench-pair">
+				<div>
+					<span class="bench-num">1<span class="denom">/9</span></span>
+					<span class="bench-label">without context</span>
+				</div>
+				<span class="bench-arrow">&rarr;</span>
+				<div>
+					<span class="bench-num win">8<span class="denom">/9</span></span>
+					<span class="bench-label">with context</span>
+				</div>
+			</div>
+			<a class="bench-link" href="/bench">See every receipt &rarr;</a>
+		</div>
+	</section>
+
+	<!-- Where -->
+	<section class="where">
+		<p class="where-label">Works where you use Claude</p>
+		<div class="tiles">
+			<div class="tile">
+				<img src="/logos/claude-code-logo.svg" alt="" width="28" height="28" />
+				<span class="tile-name">Claude Code</span>
+				<code>claude mcp add faf -- npx -y claude-faf-mcp</code>
+			</div>
+			<div class="tile">
+				<img src="/logos/claude-starburst-clay.svg" alt="" width="28" height="28" />
+				<span class="tile-name">Claude Desktop</span>
+				<code>one-click .mcpb from the release</code>
+			</div>
+			<div class="tile">
+				<img src="/logos/claude-starburst-clay.svg" alt="" width="28" height="28" />
+				<span class="tile-name">claude.ai</span>
+				<code>mcpaas.live/claude/mcp/v1</code>
 			</div>
 		</div>
 	</section>
 
-	<section class="hero">
-		<h1>This is a blind spot.</h1>
-		<p class="sub">Don't make it yours!</p>
-	</section>
-
-	<section class="content qa">
-		<p class="q">What is this?</p>
-		<p>A bench that scores how grounded your Claude agent really is on your project — and the tiny file that enhances <code>CLAUDE.md</code> instantly, deterministically and on-demand.</p>
-	</section>
-
-	<section class="content qa">
-		<p class="q">Why should I use it?</p>
-		<p class="lanes-intro">Choose a lane.</p>
+	<!-- Blind spot -->
+	<section class="block">
+		<h2>This is a blind spot.</h2>
+		<p class="block-lede">CLAUDE.md is doing your context. There are two lanes, not one.</p>
 		<div class="lanes">
 			<div class="lane faf">
 				<span class="lane-tag">Context</span>
 				<span class="lane-file">project.faf</span>
-				<p>AI thrives on it. Structured YAML — fast facts, deterministic, a single source of truth. Instantly, on-demand.</p>
+				<p>
+					Structured YAML: verified facts, derived from your repo, the human ones approved by you. The
+					same on every read: the stack, the goal, who it's for.
+				</p>
 			</div>
 			<div class="lane md">
 				<span class="lane-tag">Instructions</span>
 				<span class="lane-file">CLAUDE.md</span>
-				<p>The agent's playbook. Conventions, commands, the house style. CLAUDE.md rules here.</p>
+				<p>The agent's playbook: conventions, commands, the house style. CLAUDE.md rules here.</p>
 			</div>
 		</div>
-		<p class="lanes-doctrine">FAF defines. MD Instructs.</p>
-		<p class="blind-reveal">Can you see your blind-spot?<br />CLAUDE.md is doing your Context.<br />There are two lanes, not one.</p>
-		<p class="lanes-doctrine">Stay in lane.</p>
+		<p class="doctrine">FAF defines. CLAUDE.md instructs. Claude codes.</p>
 	</section>
 
-	<section class="content qa">
-		<p class="q">Is FAF legit?</p>
-		<p class="proof-lead">Receipts, not adjectives.</p>
-		<div class="proof">
-			<div class="proof-chip">
-				<span class="proof-key">IANA</span>
-				<span class="proof-val">registered media type</span>
+	<!-- Context Over MCP -->
+	<section class="block">
+		<h2>Context Over MCP, in Claude</h2>
+		<p class="block-lede">
+			claude-faf-mcp brings your project's context to Claude over MCP. One <code>project.faf</code>, the
+			same always-33 score faf-cli gives, everywhere Claude runs.
+		</p>
+		<div class="feature-grid">
+			<div class="feature">
+				<span class="feature-key">Core 14 tools</span>
+				<span class="feature-val">30 with <code>FAF_TOOLS=all</code></span>
 			</div>
-			<div class="proof-chip">
-				<span class="proof-key">Anthropic</span>
-				<span class="proof-val">merged Oct 2025 · #2759</span>
+			<div class="feature">
+				<span class="feature-key">Always-33</span>
+				<span class="feature-val">one score, the same as faf-cli</span>
 			</div>
-			<div class="proof-chip">
-				<span class="proof-key">96.1k</span>
-				<span class="proof-val">downloads</span>
+			<div class="feature">
+				<span class="feature-key">v7</span>
+				<span class="feature-val">The Always33 Edition</span>
 			</div>
+		</div>
+		<p class="more">
+			<a href="https://github.com/Wolfe-Jam/claude-faf-mcp" target="_blank" rel="noopener"
+				>claude-faf-mcp on GitHub</a
+			>
+			·
+			<a href="https://www.npmjs.com/package/claude-faf-mcp" target="_blank" rel="noopener">npm</a>
+			·
+			<a
+				href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fclaude-faf-mcp/versions/latest"
+				target="_blank"
+				rel="noopener">MCP Registry</a
+			>
+		</p>
+	</section>
+
+	<!-- Receipts -->
+	<section class="block">
+		<h2>Receipts, not adjectives.</h2>
+		<div class="receipts">
+			<a
+				class="receipt"
+				href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml"
+				target="_blank"
+				rel="noopener"
+			>
+				<span class="receipt-key">IANA</span>
+				<span class="receipt-val">registered media type</span>
+			</a>
+			<a
+				class="receipt"
+				href="https://github.com/modelcontextprotocol/servers/pull/2759"
+				target="_blank"
+				rel="noopener"
+			>
+				<span class="receipt-key">Anthropic</span>
+				<span class="receipt-val">merged Oct 2025 · #2759</span>
+			</a>
+			<a class="receipt" href="/blog/hundred-fifty-thousand">
+				<span class="receipt-key">150k+</span>
+				<span class="receipt-val">downloads</span>
+			</a>
+			<a
+				class="receipt"
+				href="https://registry.modelcontextprotocol.io/v0.1/servers/one.faf%2Fclaude-faf-mcp/versions/latest"
+				target="_blank"
+				rel="noopener"
+			>
+				<span class="receipt-key">MCP Registry</span>
+				<span class="receipt-val">one.faf/claude-faf-mcp</span>
+			</a>
 		</div>
 	</section>
 
-	<section class="content cta-section">
-		<h2>Measure your own — one command</h2>
-		<p>Run the bench on your repo. Keep your <code>CLAUDE.md</code>. Nothing replaced.</p>
-		<div class="terminal">
-			<code class="cmd">npx faf-cli@latest bench</code>
-		</div>
-		<p class="cmd-note">Get your two numbers — cold, and with a <code>.faf</code>.<br />The gap is what your agent's been guessing.</p>
-		<a class="cta" href="/bench">See every receipt on the wall &rarr;</a>
+	<!-- Measure -->
+	<section class="block measure" id="measure">
+		<h2>Measure your own, in one command</h2>
+		<p class="block-lede">Run the bench on your repo. Keep your <code>CLAUDE.md</code>. Nothing replaced.</p>
+		<button class="terminal" onclick={() => copy('npx faf-cli bench')}>
+			<code>npx faf-cli bench</code>
+			<span class="copy-hint">{copied === 'npx faf-cli bench' ? 'Copied' : 'Copy'}</span>
+		</button>
+		<p class="note">
+			Get your two numbers: cold, and with a <code>.faf</code>. The gap is what your agent has been
+			guessing.
+		</p>
 	</section>
 
-	<section class="content faq">
+	<!-- FAQ -->
+	<section class="block faq">
 		<h2>"What does it do that CLAUDE.md doesn't?"</h2>
-		<p>The fair question, and the honest answer isn't an argument — it's a number. CLAUDE.md is a keeper, but why waste tokens and leave context to guesswork? We measured it and fixed it, so you don't have to.</p>
-		<p>The <code>.faf</code> adds the structured layer CLAUDE.md was never meant to be: deterministic facts, same every read, <a href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml" target="_blank" rel="noopener">IANA-registered</a>. Run the bench, keep both files, and let the gap decide.</p>
+		<p>
+			The fair question, and the honest answer isn't an argument: it's a number. CLAUDE.md is a keeper,
+			but why waste tokens and leave context to guesswork? We measured it and fixed it, so you don't have
+			to.
+		</p>
+		<p>
+			The <code>.faf</code> adds the structured layer CLAUDE.md was never meant to be: deterministic facts,
+			the same every read,
+			<a
+				href="https://www.iana.org/assignments/media-types/application/vnd.faf+yaml"
+				target="_blank"
+				rel="noopener">IANA-registered</a
+			>. Run the bench, keep both files, and let the gap decide.
+		</p>
 	</section>
 
-	<section class="content footer-section">
-		<p class="footer-tagline">Don't argue context. Measure it.</p>
-		<p class="footer-iana">Share the number with your team — it's their agent too.</p>
+	<section class="block closing">
+		<p class="closing-line">Don't argue context. Measure it.</p>
+		<p class="closing-sub">Share the number with your team. It's their agent too.</p>
+		<p class="credit">Claude and Claude Code marks © Anthropic.</p>
 	</section>
 
 	<PageActions
 		headline="Claude graded its own grounding: 1/9 without context, 8/9 with the .faf."
-		point1="Your CLAUDE.md instructs. The .faf grounds. Keep both."
-		point2="Measure your repo: npx faf-cli@latest bench"
+		point1="Your CLAUDE.md instructs. The .faf defines. Keep both."
+		point2="Measure your repo: npx faf-cli bench"
 		url="https://www.faf.one/claude"
 		hashtags="Claude,Anthropic,AI,Context"
 	/>
-
 </main>
 
 <style>
+	/* Theme-locked light page in Anthropic's palette. */
+	:global(:root:not([data-theme='dark']) body) {
+		background: #faf9f5;
+		color: #141413;
+	}
 	.page {
-		max-width: 700px;
+		--ink: #141413;
+		--body: #3d3d3a;
+		--muted: #5e5d59;
+		--line: #e8e6dc;
+		--card: #ffffff;
+		--cream: #faf9f5;
+		--orange: #ff6b35;
+		--code-bg: #f0eee6;
+		--solid-bg: #141413;
+		--solid-fg: #ffffff;
+		--solid-hover: #30302e;
+		--outline: #c9c7bd;
+		--term-bg: #141413;
+		--shadow: rgba(20, 20, 19, 0.05);
+		--serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+		max-width: 1080px;
 		margin: 0 auto;
-		padding: 0 1.5rem;
+		padding: 0 24px 72px;
+		color: var(--ink);
+		background: transparent;
+	}
+	:global([data-theme='dark']) .page {
+		--ink: #f5f4ef;
+		--body: #d9d7cf;
+		--muted: #a9a79f;
+		--line: #2f2e2b;
+		--card: #1d1c1a;
+		--code-bg: #2a2926;
+		--solid-bg: #f5f4ef;
+		--solid-fg: #141413;
+		--solid-hover: #ffffff;
+		--outline: #55534d;
+		--term-bg: #0b0b0a;
+		--shadow: rgba(0, 0, 0, 0.35);
+	}
+	.page code {
+		border: 0;
+		box-shadow: none;
+		outline: 0;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.88em;
+		background: var(--code-bg);
+		color: var(--ink);
+		padding: 1px 6px;
+		border-radius: 5px;
 	}
 
-	/* Scores ARE the hero — top of the page, nothing above */
-	.score-hero {
-		text-align: center;
-		padding: 3.5rem 0 1rem;
-	}
-
+	/* Hero */
 	.hero {
-		text-align: center;
-		padding: 1rem 0 1.5rem;
-		border-bottom: 1px solid var(--faf-light-gray);
-		margin-bottom: 1rem;
+		display: grid;
+		grid-template-columns: 1.15fr 1fr;
+		gap: 48px;
+		align-items: center;
+		padding: 72px 0 48px;
 	}
-
 	.eyebrow {
-		font-size: 0.8rem;
-		font-weight: 700;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		color: var(--faf-orange);
-		margin-bottom: 0.75rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 15px;
+		font-weight: 500;
+		color: var(--muted);
+		margin: 0 0 18px;
 	}
-
-	.hero h1 {
-		font-size: 2.4rem;
-		font-weight: 800;
-		color: var(--faf-black);
-		line-height: 1.15;
-		margin-bottom: 0.5rem;
+	h1 {
+		font-family: var(--serif);
+		font-weight: 400;
+		font-size: clamp(44px, 6vw, 68px);
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+		margin: 0 0 22px;
+		color: var(--ink);
 	}
-
-	.sub {
-		font-size: 1.25rem;
-		font-weight: 600;
-		color: var(--faf-dark);
+	.lede {
+		font-size: 19px;
+		line-height: 1.55;
+		color: var(--body);
+		margin: 0 0 30px;
+		max-width: 520px;
 	}
-
-	.score-pair {
+	.hero-cta {
 		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	.btn {
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		gap: 1.5rem;
-		margin-bottom: 0;
+		height: 46px;
+		padding: 0 22px;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 500;
+		text-decoration: none;
+		cursor: pointer;
+		font-family: inherit;
+	}
+	.btn-solid {
+		background: var(--solid-bg);
+		color: var(--solid-fg);
+		border: 1px solid var(--solid-bg);
+	}
+	.btn-solid:hover {
+		background: var(--solid-hover);
+	}
+	.btn-outline {
+		background: transparent;
+		color: var(--ink);
+		border: 1px solid var(--outline);
+	}
+	.btn-outline:hover {
+		border-color: var(--ink);
 	}
 
-	.score {
+	.bench-card {
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: 16px;
+		padding: 28px;
+		box-shadow: 0 8px 30px var(--shadow);
+	}
+	.bench-title {
+		font-size: 15px;
+		color: var(--muted);
+		margin: 0 0 18px;
+	}
+	.bench-pair {
+		display: flex;
+		align-items: flex-end;
+		gap: 22px;
+	}
+	.bench-pair > div {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		gap: 0.35rem;
 	}
-
-	.score-num {
-		font-family: var(--font-mono);
-		font-size: 3.6rem;
-		font-weight: 800;
+	.bench-num {
+		font-family: var(--serif);
+		font-size: 72px;
 		line-height: 1;
+		color: var(--ink);
 	}
-
-	.score-num.cold {
-		color: var(--faf-black);
+	.bench-num.win {
+		color: var(--orange);
 	}
-
-	.score-num.win {
-		color: var(--faf-cyan-text);
-	}
-
 	.denom {
-		font-size: 1.7rem;
-		font-weight: 600;
-		opacity: 0.6;
+		font-size: 28px;
+		color: var(--muted);
+	}
+	.bench-label {
+		font-size: 14px;
+		color: var(--muted);
+		margin-top: 6px;
+	}
+	.bench-arrow {
+		font-size: 30px;
+		color: var(--muted);
+		padding-bottom: 30px;
+	}
+	.bench-link {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 15px;
+		color: var(--ink);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
-	.score-label {
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: var(--faf-dark);
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
+	/* Where */
+	.where {
+		padding: 8px 0 24px;
 	}
-
-	.arrow {
-		font-size: 2rem;
-		color: var(--faf-orange);
-		font-weight: 700;
-	}
-
-	.content {
-		padding: 1.25rem 0;
-	}
-
-	.content h2 {
-		font-size: 1.3rem;
-		font-weight: 700;
-		color: var(--faf-black);
-		margin-bottom: 1rem;
-	}
-
-	.content p {
-		color: var(--faf-dark);
-		line-height: 1.7;
-		margin-bottom: 1rem;
-	}
-
-	.qa .q {
-		font-size: 1.3rem;
-		font-weight: 800;
-		color: var(--faf-black);
-		margin-bottom: 0.5rem;
-	}
-
-	.qa p:last-child {
-		margin-bottom: 0;
-	}
-
-	.lanes-intro {
-		font-weight: 700;
-		color: var(--faf-black);
-		margin-bottom: 0.85rem !important;
-	}
-
-	.blind-reveal {
+	.where-label {
 		text-align: center;
-		color: var(--faf-dark);
-		line-height: 1.7;
-		margin: 0.85rem 0 0 !important;
+		font-size: 15px;
+		color: var(--muted);
+		margin: 0 0 16px;
+	}
+	.tiles {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 12px;
+	}
+	.tile {
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: 14px;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.tile-name {
+		font-weight: 600;
+		font-size: 17px;
+		color: var(--ink);
+	}
+	.tile code {
+		font-size: 13px;
+		word-break: break-all;
+		background: transparent;
+		padding: 0;
+		color: var(--muted);
 	}
 
+	/* Blocks */
+	.block {
+		padding: 56px 0 8px;
+		max-width: 760px;
+		margin: 0 auto;
+	}
+	h2 {
+		font-family: var(--serif);
+		font-weight: 400;
+		font-size: clamp(30px, 4vw, 42px);
+		letter-spacing: -0.015em;
+		line-height: 1.15;
+		margin: 0 0 14px;
+		color: var(--ink);
+	}
+	.block-lede {
+		font-size: 18px;
+		line-height: 1.6;
+		color: var(--body);
+		margin: 0 0 24px;
+	}
 	.lanes {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
+		gap: 12px;
 	}
-
 	.lane {
-		border: 1px solid var(--faf-light-gray);
-		border-radius: 10px;
-		padding: 1.1rem 1.25rem;
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: 14px;
+		padding: 22px;
+		border-top-width: 4px;
 	}
-
 	.lane.faf {
-		border-left: 3px solid var(--faf-cyan-text);
+		border-top-color: var(--orange);
 	}
-
 	.lane.md {
-		border-left: 3px solid #D97757;
+		border-top-color: var(--ink);
 	}
-
-	.lane.md .lane-file {
-		color: #D97757;
-	}
-
 	.lane-tag {
 		display: block;
-		font-size: 0.72rem;
+		font-size: 12px;
 		font-weight: 700;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: var(--faf-dark);
-		margin-bottom: 0.2rem;
+		color: var(--muted);
 	}
-
 	.lane-file {
 		display: block;
-		font-family: var(--font-mono);
-		font-size: 1.05rem;
-		font-weight: 800;
-		color: var(--faf-black);
-		margin-bottom: 0.5rem;
+		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 19px;
+		font-weight: 700;
+		margin: 6px 0 10px;
+		color: var(--ink);
 	}
-
-	.lane.faf .lane-file {
-		color: var(--faf-cyan-text);
-	}
-
 	.lane p {
-		font-size: 0.9rem;
-		line-height: 1.6;
-		margin-bottom: 0;
+		margin: 0;
+		font-size: 15px;
+		line-height: 1.55;
+		color: var(--body);
 	}
-
-	.lanes-doctrine {
+	.doctrine {
 		text-align: center;
-		font-weight: 800;
-		font-size: 1.15rem;
-		color: var(--faf-black);
-		margin: 1.25rem 0 0;
+		font-family: var(--serif);
+		font-size: 24px;
+		margin: 28px 0 0;
+		color: var(--ink);
 	}
 
-	.proof-lead {
-		font-weight: 600;
-		color: var(--faf-black);
-		margin-bottom: 0.85rem !important;
+	.feature-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 12px;
 	}
-
-	.proof {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem;
-	}
-
-	.proof-chip {
+	.feature,
+	.receipt {
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: 14px;
+		padding: 18px 20px;
 		display: flex;
 		flex-direction: column;
-		border: 1px solid var(--faf-light-gray);
-		border-left: 3px solid var(--faf-cyan-text);
-		border-radius: 0 8px 8px 0;
-		padding: 0.6rem 1rem;
+		gap: 4px;
+		text-decoration: none;
 	}
-
-	.proof-key {
-		font-family: var(--font-mono);
-		font-size: 1.05rem;
-		font-weight: 800;
-		color: var(--faf-black);
+	.receipt:hover {
+		border-color: var(--outline);
 	}
-
-	.proof-val {
-		font-size: 0.8rem;
-		color: var(--faf-dark);
+	.feature-key,
+	.receipt-key {
+		font-weight: 700;
+		font-size: 17px;
+		color: var(--ink);
+	}
+	.feature-val,
+	.receipt-val {
+		font-size: 14px;
+		color: var(--muted);
+	}
+	.more {
+		margin: 18px 0 0;
+		font-size: 15px;
+		color: var(--muted);
+	}
+	.more a,
+	.faq a {
+		color: var(--ink);
+		text-underline-offset: 3px;
+	}
+	.receipts {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 12px;
 	}
 
 	.terminal {
-		background: var(--faf-locked-dark);
-		border-radius: 8px;
-		padding: 1rem 1.25rem;
-		margin: 1rem 0 0.75rem;
-		text-align: left;
-		overflow-x: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		background: var(--term-bg);
+		border: 1px solid var(--line);
+		border-radius: 12px;
+		padding: 18px 20px;
+		cursor: pointer;
+		font-family: inherit;
 	}
-
-	.cmd {
-		font-family: var(--font-mono);
+	.terminal code {
+		background: transparent;
 		color: #00ff88;
-		font-size: 1rem;
-		background: none;
+		font-size: 17px;
 		padding: 0;
 	}
-
-	.cmd-note {
-		font-size: 0.95rem;
-	}
-
-	code {
-		font-family: var(--font-mono);
-		background: var(--faf-gray-light);
-		padding: 0.15rem 0.4rem;
-		border-radius: 4px;
-		font-size: 0.9em;
-		color: var(--faf-cyan-text);
-	}
-
-	.cta-section {
-		text-align: center;
-		padding: 2rem 0;
-		border-top: 1px solid var(--faf-light-gray);
-		margin-top: 1rem;
-	}
-
-	.cta {
-		display: inline-block;
-		margin-top: 1rem;
-		padding: 0.9rem 1.75rem;
-		background: var(--faf-orange);
-		color: white;
-		text-decoration: none;
-		font-weight: 600;
-		border-radius: 8px;
-		font-size: 1.05rem;
-		transition: transform 0.15s ease;
-	}
-
-	.cta:hover {
-		transform: translateY(-1px);
-	}
-
-	.faq h2 {
-		font-style: italic;
-		color: var(--faf-black);
-	}
-
-	.faq a {
-		color: var(--faf-cyan-text);
+	.copy-hint {
+		color: #ffffff;
+		font-size: 13px;
 		font-weight: 600;
 	}
+	.note {
+		font-size: 15px;
+		color: var(--muted);
+		margin: 14px 0 0;
+		line-height: 1.55;
+	}
 
-	.footer-section {
+	.faq p {
+		font-size: 17px;
+		line-height: 1.65;
+		color: var(--body);
+		margin: 0 0 16px;
+	}
+	.closing {
 		text-align: center;
-		padding: 3rem 0;
-		border-top: 1px solid var(--faf-light-gray);
-		margin-top: 2rem;
+	}
+	.closing-line {
+		font-family: var(--serif);
+		font-size: 30px;
+		margin: 0 0 8px;
+		color: var(--ink);
+	}
+	.closing-sub {
+		font-size: 16px;
+		color: var(--muted);
+		margin: 0 0 24px;
+	}
+	.credit {
+		font-size: 13px;
+		color: var(--muted);
+		margin: 0;
 	}
 
-	.footer-tagline {
-		font-weight: 800;
-		font-size: 1.5rem;
-		color: var(--faf-black);
-	}
-
-	.footer-iana {
-		font-size: 1.1rem;
-		color: var(--faf-dark);
-		margin-top: 0.85rem;
-	}
-
-	@media (max-width: 768px) {
-		.hero h1 {
-			font-size: 1.9rem;
+	@media (max-width: 860px) {
+		.hero {
+			grid-template-columns: 1fr;
+			padding-top: 48px;
 		}
-		.score-num {
-			font-size: 2.7rem;
+		.tiles,
+		.feature-grid {
+			grid-template-columns: 1fr;
 		}
-		.lanes {
+		.receipts {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media (max-width: 560px) {
+		.page {
+			padding: 0 16px 56px;
+		}
+		.lanes,
+		.receipts {
 			grid-template-columns: 1fr;
 		}
 	}
