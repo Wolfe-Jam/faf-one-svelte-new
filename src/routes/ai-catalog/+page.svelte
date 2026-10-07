@@ -259,8 +259,8 @@
 			<p class="note">
 				ARD requires <code>displayName</code>. The AI Catalog makes it optional (PR #56 above) and
 				says it SHOULD be omitted when the artifact names itself, as a Server Card does with its
-				<code>title</code>. FAF keeps it on the MCP entry for ARD, a deliberate departure from that
-				SHOULD; the A2A entry omits it. ARD's own conformance tester reports PASS for faf.one and mcpaas.live.
+				<code>title</code>, or an A2A Agent Card with its <code>name</code>. FAF keeps it on every
+				entry, because ARD requires it, a deliberate departure from that SHOULD. ARD's own conformance tester reports PASS for faf.one and mcpaas.live.
 			</p>
 		</section>
 
