@@ -9,7 +9,7 @@
  *   npm + crates.io as reported · PyPI = pypistats without_mirrors only.
  *   Banner and public totals use this meter only — no mirror inflation.
  *
- * Verified: 2026-10-10 (refreshed via /downloads skill — all 3 registries live)
+ * Verified: 2026-10-11 (refreshed via /downloads skill — all 3 registries live)
  *
  * COVERAGE STEP 2026-10-04: +10 entries for packages already shipping
  * (npm: rust-faf-mcp, mcp-context-card, mcp-better, faf-taf-git, mcpaas,
@@ -42,7 +42,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-cli',
 		description: 'CLI for .faf management',
-		downloads: 57_739,
+		downloads: 58_171,
 		install: 'npm i -g faf-cli',
 		registryUrl: 'https://npmjs.com/package/faf-cli',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-cli',
@@ -52,7 +52,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'claude-faf-mcp',
 		description: 'Anthropic-merged MCP server (#2759)',
-		downloads: 24_941,
+		downloads: 25_245,
 		install: 'npx claude-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/claude-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/claude-faf-mcp',
@@ -62,7 +62,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-mcp',
 		description: 'Cursor / VS Code / IDE MCP server',
-		downloads: 11_946,
+		downloads: 12_120,
 		install: 'npx faf-mcp',
 		registryUrl: 'https://npmjs.com/package/faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-mcp',
@@ -72,7 +72,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-scoring-kernel',
 		description: 'Mk4 WASM scoring engine',
-		downloads: 14_243,
+		downloads: 14_439,
 		install: 'npm i faf-scoring-kernel',
 		registryUrl: 'https://npmjs.com/package/faf-scoring-kernel',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-wasm-sdk',
@@ -82,7 +82,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'grok-faf-mcp',
 		description: 'MCP server for xAI Grok',
-		downloads: 10_437,
+		downloads: 10_564,
 		install: 'npx grok-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/grok-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-mcp',
@@ -92,7 +92,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization for Context Engineers',
-		downloads: 6_217,
+		downloads: 6_430,
 		install: 'npm i slash-tokens',
 		registryUrl: 'https://npmjs.com/package/slash-tokens',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
@@ -102,7 +102,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'bun-sticky',
 		description: 'Bun-native FAF runtime',
-		downloads: 2_506,
+		downloads: 2_514,
 		install: 'bun add bun-sticky',
 		registryUrl: 'https://npmjs.com/package/bun-sticky',
 		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky',
@@ -112,7 +112,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'wjttc',
 		description: 'Championship-grade MCP testing',
-		downloads: 3_366,
+		downloads: 3_409,
 		install: 'npx wjttc',
 		registryUrl: 'https://npmjs.com/package/wjttc',
 		githubUrl: 'https://github.com/Wolfe-Jam/wjttc',
@@ -132,7 +132,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf',
 		description: 'CLI alias (bunx faf → faf-cli)',
-		downloads: 15_526,
+		downloads: 15_592,
 		install: 'bunx faf',
 		registryUrl: 'https://npmjs.com/package/faf',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-cli',
@@ -152,7 +152,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'bun-sticky-faf',
 		description: 'Fastest Bun FAF CLI',
-		downloads: 412,
+		downloads: 415,
 		install: 'bun add bun-sticky-faf',
 		registryUrl: 'https://npmjs.com/package/bun-sticky-faf',
 		githubUrl: 'https://github.com/Wolfe-Jam/bun-sticky-faf',
@@ -182,7 +182,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'rust-faf-mcp',
 		description: 'Rust MCP server for .faf (npm)',
-		downloads: 3_093,
+		downloads: 3_123,
 		install: 'npx rust-faf-mcp',
 		registryUrl: 'https://npmjs.com/package/rust-faf-mcp',
 		githubUrl: 'https://github.com/Wolfe-Jam/rust-faf-mcp',
@@ -192,7 +192,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'mcp-context-card',
 		description: 'Context, memory & identity MCP server',
-		downloads: 3_042,
+		downloads: 3_173,
 		install: 'npx -y mcp-context-card',
 		registryUrl: 'https://npmjs.com/package/mcp-context-card',
 		githubUrl: 'https://github.com/Wolfe-Jam/mcp-context-card',
@@ -202,7 +202,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'mcp-better',
 		description: 'Modern MCP setup (2026-07-28 model)',
-		downloads: 1_423,
+		downloads: 1_440,
 		install: 'npx mcp-better',
 		registryUrl: 'https://npmjs.com/package/mcp-better',
 		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
@@ -212,7 +212,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'faf-taf-git',
 		description: 'Test Receipt Printer for git (TAF)',
-		downloads: 802,
+		downloads: 812,
 		install: 'npx faf-taf-git',
 		registryUrl: 'https://npmjs.com/package/faf-taf-git',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-taf-git',
@@ -232,7 +232,7 @@ export const npmPackages: Package[] = [
 	{
 		name: 'agents-md-facts',
 		description: 'AGENTS.md authored from the repo facts',
-		downloads: 781,
+		downloads: 790,
 		install: 'npx agents-md-facts',
 		registryUrl: 'https://npmjs.com/package/agents-md-facts',
 		githubUrl: 'https://github.com/Wolfe-Jam/agents-md-facts',
@@ -247,7 +247,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'gemini-faf-mcp',
 		description: 'Google Gemini MCP server',
-		downloads: 5_228,
+		downloads: 5_239,
 		install: 'pip install gemini-faf-mcp',
 		registryUrl: 'https://pypi.org/project/gemini-faf-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
@@ -257,7 +257,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'claude-fafm-sdk',
 		description: 'Claude .fafm Memory SDK — portable agent memory',
-		downloads: 2_632,
+		downloads: 2_638,
 		install: 'pip install claude-fafm-sdk',
 		registryUrl: 'https://pypi.org/project/claude-fafm-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/claude-fafm-sdk',
@@ -267,7 +267,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-python-sdk',
 		description: 'Python SDK for .faf files',
-		downloads: 2_865,
+		downloads: 2_882,
 		install: 'pip install faf-python-sdk',
 		registryUrl: 'https://pypi.org/project/faf-python-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-python-sdk',
@@ -287,7 +287,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'grok-faf-voice',
 		description: 'Voice Memory Layer — LiveKit + xAI Grok',
-		downloads: 1_292,
+		downloads: 1_293,
 		install: 'pip install grok-faf-voice',
 		registryUrl: 'https://pypi.org/project/grok-faf-voice/',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-voice',
@@ -297,7 +297,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'slash-tokens',
 		description: 'Token Optimization (Python placeholder)',
-		downloads: 274,
+		downloads: 277,
 		install: 'pip install slash-tokens',
 		registryUrl: 'https://pypi.org/project/slash-tokens/',
 		githubUrl: 'https://github.com/Wolfe-Jam/slash-tokens',
@@ -392,7 +392,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'mcp-better',
 		description: 'Modern MCP setup (Rust)',
-		downloads: 204,
+		downloads: 205,
 		install: 'cargo add mcp-better',
 		registryUrl: 'https://crates.io/crates/mcp-better',
 		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
