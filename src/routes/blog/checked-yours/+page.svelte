@@ -237,12 +237,12 @@ Checked yours?`;
 		margin: 0 auto;
 		padding: 2rem 1rem 4rem;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 
 	.breadcrumb {
 		font-size: 0.9rem;
-		color: #333;
+		color: var(--faf-dark);
 		margin-bottom: 1.5rem;
 	}
 	.breadcrumb a {
@@ -256,13 +256,13 @@ Checked yours?`;
 	.post-header h1 {
 		font-size: 2.6rem;
 		margin: 0 0 0.5rem;
-		color: #000;
+		color: var(--faf-black);
 		letter-spacing: -0.02em;
 	}
 
 	.subtitle {
 		font-size: 1.25rem;
-		color: #1a1a1a;
+		color: var(--faf-black);
 		margin: 0 0 1rem;
 		line-height: 1.5;
 	}
@@ -272,11 +272,11 @@ Checked yours?`;
 		align-items: center;
 		gap: 0.75rem;
 		font-size: 0.9rem;
-		color: #333;
+		color: var(--faf-dark);
 		margin-bottom: 2.5rem;
 	}
 	.separator {
-		color: #333;
+		color: var(--faf-dark);
 	}
 	.category {
 		padding: 0.25rem 0.75rem;
@@ -306,7 +306,7 @@ Checked yours?`;
 
 	.post-content h2 {
 		font-size: 1.6rem;
-		color: #000;
+		color: var(--faf-black);
 		margin: 0 0 1rem;
 		letter-spacing: -0.01em;
 	}
@@ -323,7 +323,8 @@ Checked yours?`;
 	.lead {
 		font-size: 1.1rem;
 		line-height: 1.8;
-		background: #fff;
+		background: var(--faf-surface);
+		color: var(--faf-black);
 		border-left: 4px solid #8b5a2b;
 		padding: 1.25rem 1.5rem;
 		border-radius: 0 8px 8px 0;
@@ -337,7 +338,7 @@ Checked yours?`;
 		font-weight: 800;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
-		color: #8b5a2b;
+		color: var(--faf-black);
 	}
 	.plain-english p {
 		margin: 0 0 0.85rem;
@@ -352,8 +353,6 @@ Checked yours?`;
 	}
 
 	.post-content code {
-		background: #e5e5e5;
-		color: #1a1a1a;
 		padding: 0.12rem 0.4rem;
 		border-radius: 4px;
 		font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
@@ -365,29 +364,32 @@ Checked yours?`;
 		border-collapse: collapse;
 		margin: 1.25rem 0;
 		font-size: 0.95rem;
-		background: #fff;
+		background: var(--faf-surface);
+		color: var(--faf-black);
 		border-radius: 8px;
 		overflow: hidden;
 	}
 	.rot-table th {
 		text-align: left;
 		padding: 0.75rem 1rem;
-		background: #f4f1ec;
+		background: var(--faf-section-alt);
+		color: var(--faf-black);
 		font-size: 0.85rem;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		color: #1a1a1a;
+		color: var(--faf-black);
 	}
 	.rot-table td {
 		padding: 0.75rem 1rem;
-		border-top: 1px solid #eee;
+		border-top: 1px solid var(--faf-border);
 	}
 	.rot-table .hot {
-		color: #c0392b;
+		color: var(--faf-black);
+		font-weight: 700;
 	}
 
 	.terminal-block {
-		background: #1a1a1a;
+		background: var(--faf-solid-bg);
 		border-radius: 8px;
 		padding: 1.25rem 1.5rem;
 		margin: 1.25rem 0;
@@ -408,8 +410,8 @@ Checked yours?`;
 	}
 	.share-btn {
 		display: inline-block;
-		background: #000;
-		color: #fff;
+		background: var(--faf-solid-bg);
+		color: var(--faf-solid-fg);
 		padding: 0.75rem 2rem;
 		border-radius: 999px;
 		text-decoration: none;
@@ -421,9 +423,9 @@ Checked yours?`;
 
 	.footer-note {
 		text-align: center;
-		color: #1a1a1a;
+		color: var(--faf-dark);
 		font-size: 0.95rem;
-		border-top: 1px solid #eee;
+		border-top: 1px solid var(--faf-border);
 		padding-top: 2rem;
 	}
 
