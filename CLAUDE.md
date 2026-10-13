@@ -38,6 +38,16 @@ Persistent project context for the AI era
 
 # CLAUDE.md - FAF Website Development
 
+## 🎨 SITE RULES — every change (wolfejam, 2026-10-13)
+
+1. **Any added content runs through the style checker:** `npm run style:check` (scripts/style-check.sh; with no arguments it checks every .svelte/.css file the branch changes). It must be clean before the PR. CI runs it on every PR.
+2. **Colours as per the site guide:** the tokens in the table below (`--faf-black`, `--faf-dark`, `--faf-cyan-text`, `--faf-surface`, `--faf-border`, `--faf-solid-bg/fg`, `--faf-page-bg`, …), never hex. A literal stays only with a reason on the same line: `/* literal-ok: <reason> */` (category pill + its border, media frames). The `#00ff88` terminal green is the one carve-out with no marker.
+3. **Custom pages need wolfejam's approval** before they're built: any new route or page that isn't a standard blog post from `/pubblog`, and any page with its own design or palette.
+
+The checker catches the two historic faults by name: **cyan text on light** (bright `#00d4d4`/`var(--faf-cyan)` text, use `var(--faf-cyan-text)`) and **dark text on dark** (hex dark text that doesn't flip with the theme). It also fails `:global(body)` with `!important` (the theme-switch flash), gradients and mid-gray text.
+
+Older pages are hex-coded. With no arguments the checker gates only the lines a change adds, so editing an old page doesn't fail on its old lines; `npm run style:check -- <file>` checks a whole file.
+
 ## 🛑 NO BS ZONE 🛑
 **This is a NO BS Zone. We are credible, we have amazing FACTS, we can use our own stats. The whole brand is built on TRUST!**
 
