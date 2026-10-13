@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/checked-yours',
+			title: 'Checked Yours?',
+			date: 'October 13, 2026',
+			timestamp: '2026-10-13',
+			excerpt:
+				'MCP Server Cards went final on October 6. We checked all 26,105 remote endpoints in the MCP Registry: about 2% publish a valid card. Then we checked our own, and it failed two CORS rules.',
+			emoji: '☑️',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/gemini-new-era-edition',
 			title: 'The New Era Edition, for Gemini',
 			version: 'gemini-faf-mcp v3.1.0',
