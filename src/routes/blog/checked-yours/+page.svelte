@@ -283,10 +283,10 @@ Checked yours?`;
 		border-radius: 999px;
 		font-size: 0.8rem;
 		font-weight: 600;
-		color: #fff;
+		color: #fff; /* literal-ok: Story pill text, paired with its category bg */
 	}
 	.category.story {
-		background: #8b5a2b;
+		background: #8b5a2b; /* literal-ok: Story category colour */
 	}
 
 	.hero-image {
@@ -325,7 +325,7 @@ Checked yours?`;
 		line-height: 1.8;
 		background: var(--faf-surface);
 		color: var(--faf-black);
-		border-left: 4px solid #8b5a2b;
+		border-left: 4px solid #8b5a2b; /* literal-ok: Story category accent border */
 		padding: 1.25rem 1.5rem;
 		border-radius: 0 8px 8px 0;
 	}
@@ -445,7 +445,7 @@ Checked yours?`;
 		margin: 1.5rem 0;
 		border-radius: 12px;
 		overflow: hidden;
-		background: #1e1f29;
+		background: #1e1f29; /* literal-ok: video frame behind the Dracula terminal clip */
 	}
 	.demo-video video {
 		width: 100%;
