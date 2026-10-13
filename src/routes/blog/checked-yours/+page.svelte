@@ -408,7 +408,7 @@ Checked yours?`;
 		text-align: center;
 		margin: 3rem 0 2rem;
 	}
-	.share-btn {
+	.post-content a.share-btn {
 		display: inline-block;
 		background: var(--faf-solid-bg);
 		color: var(--faf-solid-fg);
