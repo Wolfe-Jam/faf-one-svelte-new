@@ -246,7 +246,7 @@ Checked yours?`;
 		margin-bottom: 1.5rem;
 	}
 	.breadcrumb a {
-		color: #00d4d4;
+		color: var(--faf-cyan-text);
 		text-decoration: none;
 	}
 	.breadcrumb a:hover {
@@ -317,7 +317,7 @@ Checked yours?`;
 	}
 
 	.post-content a {
-		color: #00d4d4;
+		color: var(--faf-cyan-text);
 	}
 
 	.lead {
