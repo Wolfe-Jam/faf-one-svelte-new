@@ -1,0 +1,19 @@
+name: Style check
+
+# Every PR: changed .svelte/.css files must use the site colour tokens (CLAUDE.md, Site rules).
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  style-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Style check (changed files)
+        run: bash scripts/style-check.sh
