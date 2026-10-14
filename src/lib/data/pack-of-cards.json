@@ -911,6 +911,38 @@
        "/entries[*]/displayName now in 8 places (was 7)",
        "/entries[4]/updatedAt: \"2026-08-24T00:00:00Z\" → \"2026-09-15T00:00:00Z\""
       ]
+     },
+     {
+      "date": "2026-10-06",
+      "sha": "1d3e759",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/1d3e7595c858629512240091f74258d9eeec0030",
+      "commit says": "fix: cards pages + catalog current with SEP-2127 and the 10-01 AI Catalog merges (#58)",
+      "cites": [
+       [
+        "AI Catalog",
+        "#108"
+       ]
+      ],
+      "changes": [
+       "/entries[*]/displayName now in 7 places (was 8)",
+       "/entries[7]/type: \"application/json\" → \"application/a2a-agent-card+json\"",
+       "/entries[7]/updatedAt: \"2026-08-24T00:00:00Z\" → \"2026-10-06T00:00:00Z\""
+      ]
+     },
+     {
+      "date": "2026-10-07",
+      "sha": "e6d23b4",
+      "link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/e6d23b4313ab062c8dba1ba84eab0bd78a9d2c5c",
+      "commit says": "fix: Restore displayName on the A2A catalog entry (#59)",
+      "cites": [
+       [
+        "ARD",
+        "v0.91"
+       ]
+      ],
+      "changes": [
+       "/entries[*]/displayName now in 8 places (was 7)"
+      ]
      }
     ]
    },
@@ -1381,6 +1413,14 @@
    },
    {
     "spec": "ARD",
+    "date": "2026-08-24",
+    "ref": "2672020",
+    "title": "spec: name the two attestation classes in §5.2, with a worked example",
+    "link": "https://github.com/ards-project/ard-spec/commit/26720203accdd6d48ffa232b56a2acbcdbe9f272",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
     "date": "2026-08-26",
     "ref": "b76db39",
     "title": "spec: remove R.V.Guha's affiliation from the author list",
@@ -1418,6 +1458,22 @@
     "title": "Discovery path and link relation now differ from ARD v0.91 — 78 of 102 publishers are reachable on only one",
     "link": "https://github.com/Agent-Card/ai-catalog/issues/115",
     "state": "open"
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-09-23",
+    "ref": "220adee",
+    "title": "spec: distinguish base URL from search endpoint for application/ai-registry+json (§5.3)",
+    "link": "https://github.com/ards-project/ard-spec/commit/220adee65f246a049e3872efc3e824cb25e223b4",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-09-23",
+    "ref": "54b09bd",
+    "title": "spec: record optional multi-segment <namespace> in Appendix C (ADR-0007)",
+    "link": "https://github.com/ards-project/ard-spec/commit/54b09bdec32ddd0f1cce87af6123ae5988de69cd",
+    "state": ""
    },
    {
     "spec": "AI Catalog",
@@ -1466,6 +1522,30 @@
     "title": "SEP-2127 merged (Status: Final, Extensions Track)",
     "link": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2127",
     "state": "merged"
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-10-11",
+    "ref": "cbe4bbf",
+    "title": "spec: list standard recognized media types in §3.3 and align skill example (#37, #95)",
+    "link": "https://github.com/ards-project/ard-spec/commit/cbe4bbf902ee9e43b6583d8511ef698c708f99b6",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-10-11",
+    "ref": "ca551a5",
+    "title": "Merge pull request #99 from sachinsharma3191/fix/91-registry-url-semantics",
+    "link": "https://github.com/ards-project/ard-spec/commit/ca551a544e28872a48488e6fa75d34e75ac2df1b",
+    "state": ""
+   },
+   {
+    "spec": "ARD",
+    "date": "2026-10-12",
+    "ref": "9d33ea1",
+    "title": "chore: merge main and update attestation scopes for v0.91 (§4.5.2)",
+    "link": "https://github.com/ards-project/ard-spec/commit/9d33ea17164be2e7255a9d4761fb451a1692f28b",
+    "state": ""
    }
   ],
   "private_artifacts_dropped": 3
@@ -1535,6 +1615,32 @@
    "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/601827e4dd18da9946e66a43af08181dff59f61f",
    "commit says": "fix: Add displayName to the context-server AI Catalog entry",
    "lag_days": 19
+  },
+  {
+   "card": "AI Catalog",
+   "spec": "ARD",
+   "ref": "v0.91",
+   "spec_date": "2026-08-26",
+   "spec_link": "https://github.com/ards-project/ard-spec/commit/a305a5285ed6df33f467c67d1f7a9ab672530fcb",
+   "spec_title": "spec: publish v0.91 — promote the draft, single well-known path",
+   "faf_date": "2026-10-07",
+   "faf_sha": "e6d23b4",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/e6d23b4313ab062c8dba1ba84eab0bd78a9d2c5c",
+   "commit says": "fix: Restore displayName on the A2A catalog entry (#59)",
+   "lag_days": 42
+  },
+  {
+   "card": "AI Catalog",
+   "spec": "AI Catalog",
+   "ref": "#108",
+   "spec_date": "2026-10-01",
+   "spec_link": "https://github.com/Agent-Card/ai-catalog/pull/108",
+   "spec_title": "Bind signed Trust Manifests to release coordinates",
+   "faf_date": "2026-10-06",
+   "faf_sha": "1d3e759",
+   "faf_link": "https://github.com/Wolfe-Jam/faf-one-svelte-new/commit/1d3e7595c858629512240091f74258d9eeec0030",
+   "commit says": "fix: cards pages + catalog current with SEP-2127 and the 10-01 AI Catalog merges (#58)",
+   "lag_days": 5
   }
  ],
  "server_json": {
@@ -1991,7 +2097,7 @@
   "checkpoints": 32,
   "entries": 288,
   "linked": 287,
-  "spec_events": 58,
+  "spec_events": 64,
   "public_artifacts": 4,
   "frames": 30
  }
