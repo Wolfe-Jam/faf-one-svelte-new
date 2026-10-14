@@ -23,6 +23,7 @@
 			<nav class="quick-nav">
 				<a href="#iana" class="nav-pill">Standards</a>
 				<a href="#schemas" class="nav-pill">Schemas</a>
+				<a href="#cards" class="nav-pill">Cards</a>
 				<a href="#github" class="nav-pill">GitHub</a>
 				<a href="#mcp" class="nav-pill">MCP</a>
 				<a href="#packages" class="nav-pill">Packages</a>
@@ -116,6 +117,35 @@
 						<span class="link-name">claude.fafa</span>
 						<span class="link-desc">Live Agent Card (.fafa) — well-known discovery</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cards -->
+	<section class="links-section" id="cards">
+		<div class="container">
+			<div class="card">
+				<h2>🃏 Cards</h2>
+				<div class="links-grid">
+					<a href="https://wolfe-jam.github.io/agent-business-card/" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">Get your business card</span>
+						<span class="link-desc">Paste a GitHub repo, get its business card</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="https://server-card-check.wolfejam2020.workers.dev" target="_blank" rel="noopener" class="link-item">
+						<span class="link-name">Server Card Check</span>
+						<span class="link-desc">Check an MCP server's Server Card, rule by rule</span>
+						<span class="link-stat status-live">☑️ LIVE</span>
+					</a>
+					<a href="/pack-of-cards" class="link-item">
+						<span class="link-name">Pack of Cards</span>
+						<span class="link-desc">Five agent-card specs, mapped</span>
+					</a>
+					<a href="/ai-catalog" class="link-item">
+						<span class="link-name">AI Catalog timeline</span>
+						<span class="link-desc">FAF and the AI Catalog specification</span>
 					</a>
 				</div>
 			</div>
@@ -398,6 +428,14 @@
 					<a href="https://foundation.faf.one" target="_blank" rel="noopener" class="link-item">
 						<span class="link-name">foundation.faf.one</span>
 						<span class="link-desc">FAF Foundation</span>
+					</a>
+					<a href="/webmcp" class="link-item">
+						<span class="link-name">WebMCP playground</span>
+						<span class="link-desc">Score context in the tab</span>
+					</a>
+					<a href="/bricks" class="link-item">
+						<span class="link-name">Bricks</span>
+						<span class="link-desc">Inside a .fafb</span>
 					</a>
 				</div>
 			</div>
