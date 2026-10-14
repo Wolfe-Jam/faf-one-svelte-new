@@ -50,10 +50,11 @@
 			<h2>First, the one that is not a card</h2>
 			<p>
 				<strong>{server_json.name}</strong> is the MCP Registry entry — how a server is published
-				to a registry, rather than a card a server serves at its own door. It is not on the map,
-				and it is the piece FAF writes today:
+				to a registry, rather than a card a server serves at its own door. It is not on the map.
+				FAF writes it from one <code>agent.fafa</code>, along with each card below that your
+				endpoints allow:
 			</p>
-			<div class="terminal-block"><code>faf cards --target registry</code></div>
+			<div class="terminal-block"><code>faf cards</code></div>
 			{#if server_json.adoption?.length}
 				<ul class="adoption">
 					{#each server_json.adoption as a}
@@ -191,6 +192,11 @@
 				a spec that moves shows up as a failed check rather than a wrong page. As of {as_of}.
 			</p>
 			<p><a class="deep" href="/pack-of-cards/register">Every value, every quote, every version →</a></p>
+			<p>
+				<a class="deep" href="https://wolfe-jam.github.io/agent-business-card/" target="_blank" rel="noopener"
+					>See any repo's business card →</a
+				>
+			</p>
 		</section>
 	</div>
 </div>
