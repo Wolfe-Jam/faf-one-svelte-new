@@ -207,7 +207,7 @@ export const npmPackages: Package[] = [
 		registryUrl: 'https://npmjs.com/package/mcp-better',
 		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
 		registry: 'npm',
-		icon: '✅'
+		icon: '☑️'
 	},
 	{
 		name: 'faf-taf-git',
@@ -397,7 +397,7 @@ export const cratesPackages: Package[] = [
 		registryUrl: 'https://crates.io/crates/mcp-better',
 		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
 		registry: 'crates',
-		icon: '✅'
+		icon: '☑️'
 	},
 	{
 		name: 'faf-wasm-sdk',
