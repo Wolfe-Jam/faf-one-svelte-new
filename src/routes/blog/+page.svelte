@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/business-card-edition',
+			title: 'The Business Card Edition',
+			version: 'faf-cli v8.3.2',
+			date: 'October 17, 2026',
+			timestamp: '2026-10-17',
+			excerpt:
+				'Business cards say what the repo is: a package can be a CLI or a library, from npm, PyPI or crates.io, and only an MCP server gets MCP cards.',
+			emoji: '✪',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/checked-yours',
 			title: 'Checked Yours?',
 			date: 'October 13, 2026',
