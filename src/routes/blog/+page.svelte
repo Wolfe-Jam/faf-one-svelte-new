@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/shipped-this-week-2026-10-17',
+			title: 'Shipped this Week — Oct 17, 2026',
+			version: 'October 10–16, 2026',
+			date: 'October 17, 2026',
+			timestamp: '2026-10-17',
+			excerpt:
+				'10 releases across 5 apps. The one that matters most: faf-cli v8.3, The Business Card Edition. Your repo\'s business card now says what the repo is.',
+			emoji: '☑️',
+			category: 'Release'
+		},
+		{
 			slug: 'blog/business-card-edition',
 			title: 'The Business Card Edition',
 			version: 'faf-cli v8.3.2',
