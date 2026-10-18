@@ -322,7 +322,9 @@ Comments · suggestions · shares welcome.`;
 		display: block;
 	}
 
+	/* The site-wide section rule adds 96px top and bottom; posts need none. */
 	.post-content section {
+		padding: 0;
 		margin-bottom: 2.5rem;
 	}
 
@@ -391,6 +393,7 @@ Comments · suggestions · shares welcome.`;
 	.terminal-block code {
 		display: block;
 		background: none;
+		border: none; /* the site-wide code pill adds a hairline border */
 		color: #00ff88; /* literal-ok: terminal-green inside the solid terminal block */
 		font-size: 0.9rem;
 		line-height: 1.7;
