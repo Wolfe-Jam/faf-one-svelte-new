@@ -9,7 +9,7 @@
 <main class="legal-page">
 	<div class="container">
 		<h1>Privacy Policy</h1>
-		<p class="last-updated">Last Updated: September 11, 2026</p>
+		<p class="last-updated">Last Updated: October 18, 2026</p>
 
 		<section class="promise">
 			<p class="promise-lead">Your code and context stay on your machine.</p>
@@ -24,12 +24,12 @@
 
 		<section>
 			<h2>Tools on Your Machine</h2>
-			<p><strong>faf-cli</strong>, <strong>FAF Context</strong> for VS Code, the <strong>Stack Grabber</strong> Chrome extension, and the MCP servers <strong>claude-faf-mcp</strong>, <strong>faf-mcp</strong>, <strong>grok-faf-mcp</strong>, <strong>gemini-faf-mcp</strong>, <strong>rust-faf-mcp</strong>, and <strong>faf-memory-mcp</strong>.</p>
+			<p><strong>faf-cli</strong>, <strong>FAF Context</strong> for VS Code, the <strong>Agent Discovery Check</strong> Chrome extension, and the MCP servers <strong>claude-faf-mcp</strong>, <strong>faf-mcp</strong>, <strong>grok-faf-mcp</strong>, <strong>gemini-faf-mcp</strong>, <strong>rust-faf-mcp</strong>, and <strong>faf-memory-mcp</strong>.</p>
 			<ul>
 				<li>They read your <code>project.faf</code> and project files locally</li>
 				<li>The WASM scoring kernel runs in-process — nothing leaves the process</li>
 				<li>Your <code>project.faf</code> holds only what you and the tools write into it — never source code</li>
-				<li>Stack Grabber reads the page you're on when you use it, and keeps its results and usage logs (including page URLs) in your browser's local storage</li>
+				<li>Agent Discovery Check reads only the tab you click it on, and only when you click. It requests a few public files from that same site (<code>/.well-known/ai-catalog.json</code> and <code>/llms.txt</code>; on a GitHub repository page, <code>AGENTS.md</code> and <code>project.faf</code>), reads which WebMCP tools the page offers, and checks the Server Card the site's AI Catalog lists, which can be on another host. Requests are read-only and carry no cookies; a host that is not the site you clicked on sees that site's address as the referrer. Results appear in the popup. It sends nothing to FAF, stores nothing, and has no analytics</li>
 			</ul>
 		</section>
 
