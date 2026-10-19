@@ -87,7 +87,7 @@
         "wasm",
         "xai"
       ],
-      "url": "https://raw.githubusercontent.com/Wolfe-Jam/xai-faf-zeph/main/project.faf",
+      "url": "https://faf.one/.well-known/zeph.faf",
       "updatedAt": "2026-08-24T00:00:00Z",
       "trustManifest": {
         "identity": "https://faf.one",
