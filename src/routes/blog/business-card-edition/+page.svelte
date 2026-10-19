@@ -125,6 +125,33 @@ Comments · suggestions · shares welcome.`;
 				Some are CLIs. Some are libraries on PyPI or crates.io. The card could only describe the
 				first kind, so the rest came out wrong. 8.3 is what fixed it.
 			</p>
+			<figure class="card-pair">
+				<div class="card-pair-grid">
+					<img
+						src="/blog/business-card-edition-faf-cli-card-light.png"
+						alt="faf-cli's business card in light mode: CLI · v8.3.2, claimed, MIT"
+						width="724"
+						height="416"
+						loading="lazy"
+					/>
+					<img
+						src="/blog/business-card-edition-faf-cli-card-dark.png"
+						alt="faf-cli's business card in dark mode: CLI · v8.3.2, claimed, MIT"
+						width="724"
+						height="416"
+						loading="lazy"
+					/>
+				</div>
+				<figcaption>
+					faf-cli's own card, light and dark: a CLI, not an MCP server. Printed live from its
+					agent.fafa by the
+					<a
+						href="https://wolfe-jam.github.io/agent-business-card/?repo=Wolfe-Jam/faf-cli"
+						target="_blank"
+						rel="noopener">business card viewer</a
+					>.
+				</figcaption>
+			</figure>
 			<ul>
 				<li>
 					<strong><code>--kind mcp|cli|library</code></strong> says what <code>--package</code> is.
@@ -457,6 +484,33 @@ Comments · suggestions · shares welcome.`;
 	@media (max-width: 600px) {
 		.post-header h1 {
 			font-size: 2rem;
+		}
+	}
+	.card-pair {
+		margin: 1.5rem 0 0;
+	}
+	.card-pair-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+	}
+	.card-pair img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
+	.card-pair figcaption {
+		margin-top: 0.6rem;
+		font-size: 0.9rem;
+		color: var(--faf-dark);
+	}
+	.card-pair figcaption a {
+		color: var(--faf-cyan-text);
+	}
+	@media (max-width: 600px) {
+		.card-pair-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
