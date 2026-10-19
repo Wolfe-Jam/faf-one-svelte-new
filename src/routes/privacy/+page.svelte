@@ -9,7 +9,7 @@
 <main class="legal-page">
 	<div class="container">
 		<h1>Privacy Policy</h1>
-		<p class="last-updated">Last Updated: October 18, 2026</p>
+		<p class="last-updated">Last Updated: October 19, 2026</p>
 
 		<section class="promise">
 			<p class="promise-lead">Your code and context stay on your machine.</p>
@@ -29,7 +29,7 @@
 				<li>They read your <code>project.faf</code> and project files locally</li>
 				<li>The WASM scoring kernel runs in-process — nothing leaves the process</li>
 				<li>Your <code>project.faf</code> holds only what you and the tools write into it — never source code</li>
-				<li>Agent Discovery Check reads only the tab you click it on, and only when you click. It requests a few public files from that same site (<code>/.well-known/ai-catalog.json</code> and <code>/llms.txt</code>; on a GitHub repository page, <code>AGENTS.md</code> and <code>project.faf</code>), reads which WebMCP tools the page offers, and checks the Server Card the site's AI Catalog lists, which can be on another host. Requests are read-only and carry no cookies; a host that is not the site you clicked on sees that site's address as the referrer. Results appear in the popup. It sends nothing to FAF, stores nothing, and has no analytics</li>
+				<li>Agent Discovery Check reads only the tab you click it on, and only when you click. It requests <code>/.well-known/ai-catalog.json</code> and <code>/llms.txt</code> from that same site (on a GitHub repository page, also <code>AGENTS.md</code> and <code>project.faf</code>) and reads which WebMCP tools the page offers. When the site's AI Catalog lists an MCP Server Card, it requests that card and checks the catalog's links, up to 30 requests in all, only on the site itself and the card's host, which can be another site. It does not follow redirects. Every request is GET, HEAD or OPTIONS and carries no cookies; another host is told only the address of the site you clicked on. Results appear in the popup. It sends nothing to FAF, stores nothing, and has no analytics</li>
 			</ul>
 		</section>
 
