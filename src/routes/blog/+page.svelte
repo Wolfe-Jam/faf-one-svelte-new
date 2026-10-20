@@ -55,10 +55,10 @@
 		{
 			slug: 'blog/checked-yours',
 			title: 'Checked Yours?',
-			date: 'October 13, 2026',
-			timestamp: '2026-10-13',
+			date: 'Updated October 20, 2026',
+			timestamp: '2026-10-20',
 			excerpt:
-				'MCP Server Cards went final on October 6. We checked all 26,105 remote endpoints in the MCP Registry: about 2% publish a valid card. Then we checked our own, and it failed two CORS rules.',
+				'We counted every remote MCP server in the registry on October 12 and again on October 20. Hosts with a valid Server Card rose from 1.9% to 2.7%, nearly four times faster than the registry grew.',
 			emoji: '☑️',
 			category: 'Story'
 		},
