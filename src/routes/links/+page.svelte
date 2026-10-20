@@ -657,8 +657,8 @@
 				<h2>🌐 Browser Extensions</h2>
 				<div class="links-grid">
 					<a href="https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm" target="_blank" rel="noopener" class="link-item">
-						<span class="link-name">Chrome Extension</span>
-						<span class="link-desc">Google-approved — Chrome Web Store</span>
+						<span class="link-name">Agent Discovery Check</span>
+						<span class="link-desc">Chrome Web Store</span>
 						<span class="link-stat status-live">☑️ LIVE</span>
 					</a>
 					<a href="https://github.com/Wolfe-Jam/faf-chrome-extension" target="_blank" rel="noopener" class="link-item">

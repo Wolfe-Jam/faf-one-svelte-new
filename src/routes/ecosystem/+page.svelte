@@ -231,14 +231,14 @@
             status: 'Beta'
         },
         {
-            name: 'Chrome Extension',
-            tagline: 'Browser integration',
-            description: 'Author .faf context directly from your browser. Approved by Google.',
+            name: 'Agent Discovery Check',
+            tagline: 'Chrome extension',
+            description: 'Checks the site you are on for an AI Catalog, MCP Server Card, llms.txt and WebMCP tools. Reads a site only when you click.',
             features: [
-                'One-click context extraction',
-                'Works on any GitHub repo',
-                'Copy context to clipboard',
-                'Approved by Google, live in the Web Store'
+                'One click on any site',
+                'Every check cites its spec, MUST or SHOULD',
+                'Reads only, keeps nothing',
+                'Free and open source'
             ],
             github: 'https://github.com/Wolfe-Jam/faf-chrome-extension',
             store: 'https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm',

@@ -109,8 +109,8 @@
 			</div>
 
 			<div class="faq-item">
-				<h3>Do I need the Chrome Extension?</h3>
-				<p>No, but it helps! The extension automatically extracts context from web-based IDEs (Monaco, GitHub, CodeSandbox) and adds it to your .faf file. It's especially useful for Chrome Extension development.</p>
+				<h3>What does the Chrome extension do?</h3>
+				<p>Agent Discovery Check checks whether the website you are on publishes what AI agents look for: an AI Catalog, an MCP Server Card, llms.txt and WebMCP tools. You don't need it to use .faf. Click the icon on any site to see the result. It replaced Stack Grabber, which is retired.</p>
 			</div>
 
 			<div class="faq-item">
@@ -151,8 +151,8 @@ export PATH=$PATH:$(npm config get prefix)/bin</code></pre>
 			</div>
 
 			<div class="issue-item">
-				<h3>Chrome Extension not detecting .faf</h3>
-				<p>Refresh the page and ensure the extension has permissions for the site.</p>
+				<h3>The extension says Not published or Unreadable</h3>
+				<p>Not published means the site has no such file at the standard address. Unreadable means the site answered but the file could not be read: an error, a redirect, or no answer in time. Click Check again. The extension only checks the tab you click it on, and only when you click.</p>
 			</div>
 		</div>
 

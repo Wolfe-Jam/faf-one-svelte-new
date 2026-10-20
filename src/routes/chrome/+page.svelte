@@ -13,21 +13,21 @@
 </script>
 
 <svelte:head>
-	<title>FAF Chrome Extension - Redirecting...</title>
-	<meta name="description" content="Get the FAF Chrome Extension for instant AI context extraction from web IDEs" />
+	<title>Agent Discovery Check - Redirecting...</title>
+	<meta name="description" content="Agent Discovery Check: see whether the site you are on publishes an AI Catalog, an MCP Server Card, llms.txt and WebMCP tools." />
 </svelte:head>
 
 <div class="redirect-container">
 	<img src="/orange-smiley.svg" alt="FAF Logo" class="logo" />
-	<h1>🎯 FAF Chrome Extension</h1>
-	<p class="subtitle">The JPEG for AI™ - Now in your browser!</p>
+	<h1>Agent Discovery Check</h1>
+	<p class="subtitle">A Chrome extension that checks the site you are on. It reads a site only when you click.</p>
 
 	<div class="features">
-		<h2>🎉 Friday Features</h2>
+		<h2>What it checks</h2>
 		<ul>
-			<li><strong>Chrome Extension Auto-Detection</strong> | 90%+ scores automatically</li>
-			<li><strong>Typo Help™</strong> | We know "raect" means "react"</li>
-			<li><strong>Context Extraction</strong> | Works on 15+ web IDEs</li>
+			<li><strong>AI Catalog</strong> | /.well-known/ai-catalog.json</li>
+			<li><strong>MCP Server Card</strong> | found through the catalog, checked against its spec</li>
+			<li><strong>llms.txt and WebMCP tools</strong> | each result cites the spec it comes from</li>
 		</ul>
 	</div>
 
@@ -40,8 +40,8 @@
 	</p>
 
 	<div class="supported-platforms">
-		<h3>Supported Platforms:</h3>
-		<p>GitHub • GitLab • Bitbucket • Replit • CodeSandbox • StackBlitz • VS Code Web • Codespaces + more!</p>
+		<h3>On GitHub repository pages:</h3>
+		<p>It also checks for AGENTS.md and project.faf.</p>
 	</div>
 </div>
 
