@@ -51,7 +51,6 @@
 		// ── Community ───────────────────────────────────────────
 		'/sponsors': { title: 'Sponsors', category: 'Community', emoji: '💛', description: 'Support the project', order: 1 },
 		'/membership': { title: 'Foundation', category: 'Community', emoji: '🏛️', description: 'Stewardship → foundation.faf.one', order: 2 },
-		'/support': { title: 'Support', category: 'Community', emoji: '🆘', description: 'Get help', order: 3 },
 		'/press': { title: 'Press', category: 'Community', emoji: '📰', description: 'Press kit · releases · media', order: 4 },
 		'/updates': { title: 'Updates', category: 'Community', emoji: '📝', description: 'Release notes', order: 5 },
 

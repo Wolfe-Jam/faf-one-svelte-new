@@ -1,3 +1,4 @@
 /docs    https://docs.faf.one    301
 /docs/*  https://docs.faf.one/:splat    301
 /uniqueness  /ai-catalog  301
+/support  https://docs.faf.one  301

@@ -59,10 +59,6 @@
 				<span class="icon">📚</span>
 				Browse Docs
 			</a>
-			<a href="/support" class="btn btn-ghost">
-				<span class="icon">💬</span>
-				Get Help
-			</a>
 		</div>
 		
 		<div class="error-details">
