@@ -349,7 +349,9 @@ export CENSUS_DIR=./census-data && mkdir -p "$CENSUS_DIR"`;
 		display: block;
 	}
 
+	/* The site-wide section rule adds 96px top and bottom; posts need none. */
 	.post-content section {
+		padding: 0;
 		margin-bottom: 2.5rem;
 	}
 
@@ -451,6 +453,7 @@ export CENSUS_DIR=./census-data && mkdir -p "$CENSUS_DIR"`;
 		font-size: 0.9rem;
 		line-height: 1.7;
 		padding: 0;
+		border: none; /* the site-wide code pill adds a hairline border */
 	}
 
 
