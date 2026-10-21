@@ -151,19 +151,74 @@ Comments · suggestions welcome.`;
 				<strong>Missing isn't failing.</strong> A surface the site doesn't publish shows as grey
 				"Not published", not as an error.
 			</p>
-			<figure class="sites">
-				<img
-					src="/blog/agent-discovery-check-four-sites.png"
-					alt="Four Agent Discovery Check results: faf.one with all four published; mcpaas.live with a catalog and cards but no llms.txt or WebMCP tools; example.com with nothing published, all grey; and a GitHub repository page, with github.com's own catalog plus the repo's AGENTS.md and project.faf rows"
-					width="748"
-					height="1224"
-					loading="lazy"
-				/>
-				<figcaption>
-					The store build in a fresh browser, October 21: faf.one, mcpaas.live, example.com and a
-					GitHub repository. All published, some, none, and a repo.
-				</figcaption>
-			</figure>
+		</section>
+
+		<section>
+			<h2>Four sites, four results</h2>
+			<p>The store build, run on four real addresses on October 21.</p>
+
+			<div class="result">
+				<img src="/blog/agent-discovery-check-1-faf-one.png" alt="Agent Discovery Check on faf.one: AI Catalog, MCP Server Card, llms.txt and WebMCP tools all published" width="360" height="545" loading="lazy" />
+				<div class="result-text">
+					<h3>Everything published</h3>
+					<p class="where">faf.one/webmcp</p>
+					<p>
+						An AI Catalog with 8 entries, the Server Card it lists, an llms.txt, and three WebMCP
+						tools on the page.
+					</p>
+					<p>
+						The one issue is a SHOULD: the catalog says the A2A agent card is
+						<code>application/a2a-agent-card+json</code>, and the file is served as
+						<code>application/json</code>, which is what A2A clients expect. We kept it, and the
+						check still says so.
+					</p>
+				</div>
+			</div>
+
+			<div class="result">
+				<img src="/blog/agent-discovery-check-2-mcpaas.png" alt="Agent Discovery Check on mcpaas.live: AI Catalog and MCP Server Card published, llms.txt and WebMCP tools not published" width="360" height="502" loading="lazy" />
+				<div class="result-text">
+					<h3>Some published</h3>
+					<p class="where">mcpaas.live</p>
+					<p>
+						A catalog that lists three Server Cards; the first is checked. No llms.txt, and no
+						WebMCP tools on the page.
+					</p>
+					<p>
+						The one issue is a SHOULD: the catalog entry repeats the card's own title, where the
+						spec prefers entries to stay lean.
+					</p>
+				</div>
+			</div>
+
+			<div class="result">
+				<img src="/blog/agent-discovery-check-3-example.png" alt="Agent Discovery Check on example.com: nothing published, every row grey, the Server Card skipped" width="360" height="435" loading="lazy" />
+				<div class="result-text">
+					<h3>Nothing published</h3>
+					<p class="where">example.com</p>
+					<p>
+						Every row is grey. The Server Card is skipped, because without a catalog there is
+						nothing to list one.
+					</p>
+					<p>Missing isn't failing: nothing here is marked as an error.</p>
+				</div>
+			</div>
+
+			<div class="result">
+				<img src="/blog/agent-discovery-check-4-github.png" alt="Agent Discovery Check on a GitHub repository: github.com's AI Catalog, Server Card and llms.txt, plus the repository's AGENTS.md and project.faf, all published" width="360" height="640" loading="lazy" />
+				<div class="result-text">
+					<h3>A GitHub repository</h3>
+					<p class="where">github.com/Wolfe-Jam/faf-cli</p>
+					<p>
+						The last two rows are the repository's own files: AGENTS.md and project.faf, both
+						there.
+					</p>
+					<p>
+						The rows above them are github.com's. GitHub publishes an AI Catalog that lists its
+						MCP Server Card, and an llms.txt, so they're checked too.
+					</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -417,21 +472,32 @@ Comments · suggestions welcome.`;
 		vertical-align: top;
 	}
 
-	.sites {
-		margin: 1.5rem auto 0;
-		max-width: 560px;
+	.result {
+		display: flex;
+		gap: 1.5rem;
+		align-items: flex-start;
+		margin: 1.75rem 0 0;
 	}
-	.sites img {
-		display: block;
-		width: 100%;
+	.result img {
+		flex: 0 0 auto;
+		width: 280px;
 		height: auto;
+		border-radius: 10px;
 	}
-	.sites figcaption {
-		margin-top: 0.75rem;
-		font-size: 0.9rem;
-		line-height: 1.6;
+	.result-text {
+		flex: 1;
+		min-width: 0;
+	}
+	.result-text h3 {
+		margin: 0.25rem 0 0.15rem;
+		font-size: 1.2rem;
+		color: var(--faf-black);
+	}
+	.result-text .where {
+		margin: 0 0 0.75rem;
+		font-family: 'SF Mono', 'Fira Code', Menlo, monospace;
+		font-size: 0.85rem;
 		color: var(--faf-dark);
-		text-align: center;
 	}
 
 	.install {
@@ -493,6 +559,13 @@ Comments · suggestions welcome.`;
 	@media (max-width: 600px) {
 		.post-header h1 {
 			font-size: 2rem;
+		}
+		.result {
+			flex-direction: column;
+		}
+		.result img {
+			width: 100%;
+			max-width: 320px;
 		}
 		.rot-table {
 			font-size: 0.85rem;
