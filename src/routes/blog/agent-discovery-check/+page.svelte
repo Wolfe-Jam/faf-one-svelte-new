@@ -151,6 +151,19 @@ Comments · suggestions welcome.`;
 				<strong>Missing isn't failing.</strong> A surface the site doesn't publish shows as grey
 				"Not published", not as an error.
 			</p>
+			<figure class="sites">
+				<img
+					src="/blog/agent-discovery-check-four-sites.png"
+					alt="Four Agent Discovery Check results: faf.one with all four published; mcpaas.live with a catalog and cards but no llms.txt or WebMCP tools; example.com with nothing published, all grey; and a GitHub repository page, with github.com's own catalog plus the repo's AGENTS.md and project.faf rows"
+					width="748"
+					height="1224"
+					loading="lazy"
+				/>
+				<figcaption>
+					The store build in a fresh browser, October 21: faf.one, mcpaas.live, example.com and a
+					GitHub repository. All published, some, none, and a repo.
+				</figcaption>
+			</figure>
 		</section>
 
 		<section>
@@ -402,6 +415,23 @@ Comments · suggestions welcome.`;
 		padding: 0.75rem 1rem;
 		border-top: 1px solid var(--faf-border);
 		vertical-align: top;
+	}
+
+	.sites {
+		margin: 1.5rem auto 0;
+		max-width: 560px;
+	}
+	.sites img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.sites figcaption {
+		margin-top: 0.75rem;
+		font-size: 0.9rem;
+		line-height: 1.6;
+		color: var(--faf-dark);
+		text-align: center;
 	}
 
 	.install {
