@@ -31,6 +31,16 @@
 
 	const posts = [
 		{
+			slug: 'blog/shuffle-the-pack',
+			title: 'How to Shuffle the Pack',
+			date: 'October 21, 2026',
+			timestamp: '2026-10-21',
+			excerpt:
+				'MCP Server Card census reproduction guidance. Three scripts, 166 lines, read-only: run the count yourself, and see the four choices that move the answer from 8.5% to under 3%.',
+			emoji: '🃏',
+			category: 'Story'
+		},
+		{
 			slug: 'blog/shipped-this-week-2026-10-17',
 			title: 'Shipped this Week — Oct 17, 2026',
 			version: 'October 10–16, 2026',
