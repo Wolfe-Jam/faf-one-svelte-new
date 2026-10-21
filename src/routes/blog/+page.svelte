@@ -31,6 +31,17 @@
 
 	const posts = [
 		{
+			slug: 'blog/agent-discovery-check',
+			title: 'Agent Discovery Check',
+			version: 'Chrome extension v2.0.0',
+			date: 'October 21, 2026',
+			timestamp: '2026-10-21',
+			excerpt:
+				"Is this site ready for AI agents? One click tells you: AI Catalog, MCP Server Card, llms.txt and WebMCP tools, each verdict linked to its spec section. Free on the Chrome Web Store.",
+			emoji: '☑️',
+			category: 'Launch'
+		},
+		{
 			slug: 'blog/shipped-this-week-2026-10-17',
 			title: 'Shipped this Week — Oct 17, 2026',
 			version: 'October 10–16, 2026',
