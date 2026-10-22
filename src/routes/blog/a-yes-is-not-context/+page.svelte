@@ -103,6 +103,13 @@ Keep the fact that a decision was made. Don't keep the decision itself as someth
 			<p>Arthur Teboul is the founder of <a href="https://dokutrak.com">DokuTrak</a>. It collects, for accountants and law firms, the documents their clients still have to send, gives those clients one place to upload, and keeps reminding them until nothing is missing.</p>
 		</section>
 
+		<section class="guest-invite">
+			<p>
+				Arthur is faf.one's first guest writer. If you'd like to write for faf.one, email
+				<a href="mailto:team@faf.one">team@faf.one</a>.
+			</p>
+		</section>
+
 		<section class="share-section">
 			<a href={xIntent} target="_blank" rel="noopener" class="share-btn">Post on X</a>
 		</section>
@@ -188,6 +195,7 @@ Keep the fact that a decision was made. Don't keep the decision itself as someth
 		margin: -1rem -1rem 2rem -1rem;
 		border-radius: 12px;
 		overflow: hidden;
+		border: 1px solid var(--faf-border-strong); /* the hero is light on a light page: a thin outline frames it */
 	}
 	.hero-image img {
 		width: 100%;
@@ -229,6 +237,12 @@ Keep the fact that a decision was made. Don't keep the decision itself as someth
 		padding-top: 1.5rem;
 		font-style: italic;
 		color: var(--faf-dark);
+	}
+
+	.post-content section.guest-invite {
+		text-align: center;
+		font-weight: 600;
+		color: var(--faf-black);
 	}
 
 	.post-content section.share-section {
