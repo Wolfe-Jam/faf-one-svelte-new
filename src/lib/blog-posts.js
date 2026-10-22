@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/a-yes-is-not-context',
+		ticker: 'Guest post: A yes is not context — what an agent should remember about an approval',
+		title: 'A yes is not context',
+		date: 'October 22, 2026',
+		timestamp: '2026-10-22',
+		excerpt:
+			'Guest post by Arthur Teboul (DokuTrak). An agent asked a person before emailing a client. What should it keep from that yes? Facts it can prove, decisions only a person can make, and a yes tied to one exact action.',
+		emoji: '✉️',
+		category: 'Story'
+	},
+	{
 		slug: 'blog/agent-discovery-check',
 		ticker: 'Agent Discovery Check — is this site ready for AI agents? One click tells you',
 		title: 'Agent Discovery Check',
