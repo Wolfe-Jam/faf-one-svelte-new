@@ -3,6 +3,7 @@ import { Resend } from 'resend';
 import { RESEND_API_KEY } from '$app/env/private';
 import { isAllowed, normEmail, passwordFor } from '#lib/fafb-drive-auth.js';
 import { allow } from '#lib/rate-limit.js';
+import { FAFB_DRIVE_OPEN, FAFB_DRIVE_PAUSED } from '#lib/fafb-drive-switch.js';
 
 const HOUR = 60 * 60 * 1000;
 
@@ -15,6 +16,9 @@ function getResend(): Resend | null {
 }
 
 export const POST: RequestHandler = async ({ request, getClientAddress }) => {
+	if (!FAFB_DRIVE_OPEN) {
+		return Response.json({ success: false, error: FAFB_DRIVE_PAUSED }, { status: 503 });
+	}
 	let body: { email?: string; website?: string };
 	try {
 		body = await request.json();

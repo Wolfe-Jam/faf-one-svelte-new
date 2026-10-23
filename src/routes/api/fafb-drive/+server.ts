@@ -6,6 +6,7 @@ import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
 import { RESEND_API_KEY } from '$app/env/private';
 import { cookieName, readSession } from '#lib/fafb-drive-auth.js';
+import { FAFB_DRIVE_OPEN, FAFB_DRIVE_PAUSED } from '#lib/fafb-drive-switch.js';
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
@@ -34,6 +35,9 @@ function asText(v: unknown): string {
 }
 
 export const POST: RequestHandler = async ({ request, cookies }) => {
+	if (!FAFB_DRIVE_OPEN) {
+		return Response.json({ success: false, error: FAFB_DRIVE_PAUSED }, { status: 503 });
+	}
 	const who = await readSession(cookies.get(cookieName()));
 	if (!who) {
 		return Response.json({ success: false, error: 'Sign in first.' }, { status: 401 });

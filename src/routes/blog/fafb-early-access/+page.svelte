@@ -1,6 +1,7 @@
 <!-- pubblog: early access. Spine from mcp-better-matching-client (gold). -->
 <script lang="ts">
 	import { buildShareIntent } from '#lib/shareIntent.js';
+	import { FAFB_DRIVE_OPEN } from '#lib/fafb-drive-switch.js';
 
 	const shareText = `🏁 FAFb 0.9 — early access
 
@@ -162,10 +163,17 @@ Comments · suggestions · shares welcome.`;
 
 		<section>
 			<h2>What early access is</h2>
-			<p>
-				Invite-only for now. Ask for a drive and we send you in — installing takes one line, no Rust
-				toolchain, no GitHub account, no token.
-			</p>
+			{#if FAFB_DRIVE_OPEN}
+				<p>
+					Invite-only for now. Ask for a drive and we send you in — installing takes one line, no Rust
+					toolchain, no GitHub account, no token.
+				</p>
+			{:else}
+				<p>
+					Invite-only, and paused for now. Installing takes one line, no Rust toolchain, no GitHub
+					account, no token.
+				</p>
+			{/if}
 			<ul>
 				<li><strong>Free access</strong> for the drive.</li>
 				<li><strong>A blunt, honest hour</strong> on a real project. A monorepo or team repo is a plus.</li>
@@ -192,14 +200,23 @@ Comments · suggestions · shares welcome.`;
 		</section>
 
 		<section class="feedback-invite">
-			<h2>Take a drive</h2>
-			<p>
-				Ask for a drive and we will send you in. Questions and nits are welcome either way —
-				<a href="mailto:team@faf.one">team@faf.one</a>.
-			</p>
+			{#if FAFB_DRIVE_OPEN}
+				<h2>Take a drive</h2>
+				<p>
+					Ask for a drive and we will send you in. Questions and nits are welcome either way —
+					<a href="mailto:team@faf.one">team@faf.one</a>.
+				</p>
+			{:else}
+				<h2>Drives are paused</h2>
+				<p>
+					Questions and nits are welcome — <a href="mailto:team@faf.one">team@faf.one</a>.
+				</p>
+			{/if}
 			<div class="feedback-actions">
 				<a href={xIntent} target="_blank" rel="noopener" class="feedback-btn">Post on X</a>
-				<a href="/fafb-drive" class="feedback-btn secondary">Request a drive</a>
+				{#if FAFB_DRIVE_OPEN}
+					<a href="/fafb-drive" class="feedback-btn secondary">Request a drive</a>
+				{/if}
 			</div>
 		</section>
 

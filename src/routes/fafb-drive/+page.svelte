@@ -216,7 +216,12 @@
 		<p>About 30–60 minutes. Cargo first.</p>
 	</div>
 
-	{#if !authed}
+	{#if !data.open}
+		<div class="card lines">
+			<p>Drives are paused for now.</p>
+			<p>Questions: <a href="mailto:team@faf.one">team@faf.one</a></p>
+		</div>
+	{:else if !authed}
 		<div class="card lines">
 			<p>Email in. Password sent out.</p>
 			<p>Then you can drive.</p>

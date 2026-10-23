@@ -2,6 +2,7 @@
      rust-faf-mcp 0.8.0 The Lineage Edition + a call for a select few FAFb 0.9 drivers. -->
 <script lang="ts">
 	import { buildShareIntent } from '#lib/shareIntent.js';
+	import { FAFB_DRIVE_OPEN } from '#lib/fafb-drive-switch.js';
 	// Cloudflare Scrape Shield mangles package@version as "email" — always use NpmPkg in HTML.
 	import NpmPkg from '#lib/NpmPkg.svelte';
 
@@ -197,13 +198,20 @@ Comments · suggestions · shares welcome.`;
 				<li>Comfortable in a terminal (macOS, Linux or Windows).</li>
 				<li>A blunt, honest hour.</li>
 			</ul>
-			<p>
-				Request a drive and a password comes by email. One line installs it, no Rust toolchain
-				needed. The 14-day Pro trial starts on first gated use. No card.
-			</p>
-			<div class="feedback-actions">
-				<a href="/fafb-drive" class="feedback-btn">Request a drive</a>
-			</div>
+			{#if FAFB_DRIVE_OPEN}
+				<p>
+					Request a drive and a password comes by email. One line installs it, no Rust toolchain
+					needed. The 14-day Pro trial starts on first gated use. No card.
+				</p>
+				<div class="feedback-actions">
+					<a href="/fafb-drive" class="feedback-btn">Request a drive</a>
+				</div>
+			{:else}
+				<p>
+					Drives are paused for now. Questions are welcome at
+					<a href="mailto:team@faf.one">team@faf.one</a>.
+				</p>
+			{/if}
 		</section>
 
 		<section>
