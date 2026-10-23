@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/shipped-this-week-2026-10-23',
+		title: 'Shipped this Week — Oct 23, 2026',
+		version: 'October 17–22, 2026',
+		date: 'October 23, 2026',
+		timestamp: '2026-10-23',
+		excerpt:
+			'One launch and three new reads. The one that matters most: Agent Discovery Check v2.0.0, free on the Chrome Web Store. Is this site ready for AI agents? One click tells you.',
+		emoji: '☑️',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/a-yes-is-not-context',
 		ticker: 'Guest post: A yes is not context — what an agent should remember about an approval',
 		title: 'A yes is not context',
