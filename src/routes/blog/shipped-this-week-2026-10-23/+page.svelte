@@ -43,7 +43,7 @@ Comments · suggestions · shares welcome.`;
 		</div>
 		<h1>Shipped this Week</h1>
 		<p class="version-tag">October 17–22, 2026</p>
-		<p class="subtitle">Everything we released this week, one line each.</p>
+		<p class="subtitle">New this week.</p>
 		<div class="meta">
 			<time datetime="2026-10-23">October 23, 2026</time>
 			<span class="separator">•</span>
