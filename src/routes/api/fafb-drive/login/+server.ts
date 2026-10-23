@@ -7,8 +7,12 @@ import {
 	makeSession,
 	normEmail
 } from '#lib/fafb-drive-auth.js';
+import { FAFB_DRIVE_OPEN, FAFB_DRIVE_PAUSED } from '#lib/fafb-drive-switch.js';
 
 export const POST: RequestHandler = async ({ request, cookies }) => {
+	if (!FAFB_DRIVE_OPEN) {
+		return Response.json({ success: false, error: FAFB_DRIVE_PAUSED }, { status: 503 });
+	}
 	let body: { email?: string; password?: string };
 	try {
 		body = await request.json();

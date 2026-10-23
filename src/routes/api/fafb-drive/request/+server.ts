@@ -2,6 +2,10 @@ import type { RequestHandler } from './$types';
 import { Resend } from 'resend';
 import { RESEND_API_KEY } from '$app/env/private';
 import { isAllowed, normEmail, passwordFor } from '#lib/fafb-drive-auth.js';
+import { allow } from '#lib/rate-limit.js';
+import { FAFB_DRIVE_OPEN, FAFB_DRIVE_PAUSED } from '#lib/fafb-drive-switch.js';
+
+const HOUR = 60 * 60 * 1000;
 
 let resend: Resend | null = null;
 function getResend(): Resend | null {
@@ -11,7 +15,10 @@ function getResend(): Resend | null {
 	return resend;
 }
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, getClientAddress }) => {
+	if (!FAFB_DRIVE_OPEN) {
+		return Response.json({ success: false, error: FAFB_DRIVE_PAUSED }, { status: 503 });
+	}
 	let body: { email?: string; website?: string };
 	try {
 		body = await request.json();
@@ -24,6 +31,20 @@ export const POST: RequestHandler = async ({ request }) => {
 	const email = normEmail(body.email || '');
 	if (!email) {
 		return Response.json({ success: false, error: 'Need a real email.' }, { status: 400 });
+	}
+
+	// Each request emails the address typed in: cap per address and per client.
+	let ip = 'unknown';
+	try {
+		ip = getClientAddress();
+	} catch {
+		// no client address in this environment
+	}
+	if (!allow(`fafb-pw:${email}`, 3, HOUR) || !allow(`fafb-pw-ip:${ip}`, 5, HOUR)) {
+		return Response.json(
+			{ success: false, error: 'Too many requests. Try again in an hour.' },
+			{ status: 429 }
+		);
 	}
 
 	// Same reply either way. Do not leak the list.
