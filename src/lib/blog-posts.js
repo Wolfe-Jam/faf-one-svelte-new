@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/skills-ladder',
+		title: "Glue a Skill's Facts Into the Skill",
+		version: 'skills-ladder v0.1.1',
+		date: 'October 25, 2026',
+		timestamp: '2026-10-25',
+		excerpt:
+			'skills-ladder is on npm. It rates any SKILL.md GOOD, BETTER or BEST. BEST means the skill\'s facts are in a FAF Block.',
+		emoji: '☑️',
+		category: 'Launch',
+		ticker: 'skills-ladder — glue a skill\'s facts into the skill'
+	},
+	{
 		slug: 'blog/skills-edition',
 		title: 'The Skills Edition',
 		version: 'faf-cli v8.4.0',
