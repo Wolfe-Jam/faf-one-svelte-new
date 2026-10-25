@@ -151,7 +151,7 @@
 		</a>
 	{/if}
 
-	<!-- Chrome badges — fixed top-left family (Home · Map · Blog · Skills).
+	<!-- Chrome badges — fixed top-left family (Home · Map · Blog · Skills · Links).
      Fast CSS tooltips on hover; no text pill (was mini-nav). -->
 
 	<a
@@ -260,6 +260,33 @@
 				d="M50 12 L58 38 L86 38 L64 54 L72 80 L50 64 L28 80 L36 54 L14 38 L42 38 Z"
 				stroke="white"
 				stroke-width="7"
+				stroke-linejoin="round"
+			></path>
+		</svg>
+	</a>
+
+	<a
+		href="/links"
+		class="chrome-badge links-badge"
+		aria-label="Links"
+	>
+		<svg
+			viewBox="0 0 100 100"
+			fill="none"
+			aria-hidden="true"
+		>
+			<path
+				d="M44 56 a14 14 0 0 0 20 0 l12 -12 a14 14 0 0 0 -20 -20 l-6 6"
+				stroke="white"
+				stroke-width="8"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			></path>
+			<path
+				d="M56 44 a14 14 0 0 0 -20 0 l-12 12 a14 14 0 0 0 20 20 l6 -6"
+				stroke="white"
+				stroke-width="8"
+				stroke-linecap="round"
 				stroke-linejoin="round"
 			></path>
 		</svg>
@@ -549,6 +576,14 @@
 		content: 'Skills';
 	}
 
+	.links-badge {
+		left: 220px;
+	}
+
+	.links-badge::after {
+		content: 'Links';
+	}
+
 	@media (max-width: 768px) {
 		.chrome-badge {
 			width: 36px;
@@ -574,6 +609,10 @@
 
 		.skills-badge {
 			left: 147px;
+		}
+
+		.links-badge {
+			left: 191px;
 		}
 
 		.theme-toggle {
