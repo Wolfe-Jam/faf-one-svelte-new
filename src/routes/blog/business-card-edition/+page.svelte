@@ -433,7 +433,8 @@ Comments · suggestions · shares welcome.`;
 		color: var(--faf-dark);
 	}
 
-	.feedback-invite {
+	/* section-qualified: the post-wide `.post-content section { padding: 0 }` would win otherwise. */
+	.post-content section.feedback-invite {
 		margin-top: 1rem;
 		padding: 1.5rem 1.35rem;
 		background: var(--faf-section-alt);
@@ -473,7 +474,7 @@ Comments · suggestions · shares welcome.`;
 		border: 2px solid var(--faf-black);
 	}
 
-	.footer-note {
+	.post-content section.footer-note {
 		text-align: center;
 		color: var(--faf-dark);
 		font-size: 0.95rem;
