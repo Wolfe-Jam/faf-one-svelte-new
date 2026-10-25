@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/skills-edition',
+		title: 'The Skills Edition',
+		version: 'faf-cli v8.4.0',
+		date: 'October 25, 2026',
+		timestamp: '2026-10-25',
+		excerpt:
+			'faf knows skills: a SKILL.md repo is skills (9 slots), one shipped as a plugin is skills-plugin (12).',
+		emoji: '✪',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/shipped-this-week-2026-10-23',
 		title: 'Shipped this Week — Oct 23, 2026',
 		version: 'October 17–22, 2026',
