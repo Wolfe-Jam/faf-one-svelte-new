@@ -34,14 +34,14 @@ Comments · suggestions welcome.`;
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/skills-edition" />
 	<meta property="og:site_name" content=".faf Format Authority" />
-	<meta property="og:image" content="https://faf.one/blog/skills-edition-hero.png" />
-	<meta property="og:image:secure_url" content="https://faf.one/blog/skills-edition-hero.png" />
+	<meta property="og:image" content="https://faf.one/blog/skills-edition-hero-2.png" />
+	<meta property="og:image:secure_url" content="https://faf.one/blog/skills-edition-hero-2.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:image:alt"
-		content="faf-cli v8.4.0, The Skills Edition: faf knows Skills"
+		content="faf-cli v8.4.0, The Skills Edition: faf knows skills"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
@@ -51,10 +51,10 @@ Comments · suggestions welcome.`;
 		name="twitter:description"
 		content="A SKILL.md repo is skills (9 slots). One shipped as a plugin is skills-plugin (12)."
 	/>
-	<meta name="twitter:image" content="https://faf.one/blog/skills-edition-hero.png" />
+	<meta name="twitter:image" content="https://faf.one/blog/skills-edition-hero-2.png" />
 	<meta
 		name="twitter:image:alt"
-		content="faf-cli v8.4.0, The Skills Edition: faf knows Skills"
+		content="faf-cli v8.4.0, The Skills Edition: faf knows skills"
 	/>
 </svelte:head>
 
@@ -78,8 +78,8 @@ Comments · suggestions welcome.`;
 
 	<div class="hero-image">
 		<img
-			src="/blog/skills-edition-hero.png"
-			alt="faf-cli v8.4.0, The Skills Edition: faf knows Skills"
+			src="/blog/skills-edition-hero-2.png"
+			alt="faf-cli v8.4.0, The Skills Edition: faf knows skills"
 			width="1200"
 			height="630"
 			loading="eager"
