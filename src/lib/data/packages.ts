@@ -9,7 +9,7 @@
  *   npm + crates.io as reported · PyPI = pypistats without_mirrors only.
  *   Banner and public totals use this meter only — no mirror inflation.
  *
- * Verified: 2026-10-24 (refreshed via /downloads skill — all 3 registries live)
+ * Verified: 2026-10-25 (refreshed via /downloads skill — all 3 registries live)
  *
  * COVERAGE STEP 2026-10-04: +10 entries for packages already shipping
  * (npm: rust-faf-mcp, mcp-context-card, mcp-better, faf-taf-git, mcpaas,
@@ -247,7 +247,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'gemini-faf-mcp',
 		description: 'Google Gemini MCP server',
-		downloads: 5_698,
+		downloads: 5_711,
 		install: 'pip install gemini-faf-mcp',
 		registryUrl: 'https://pypi.org/project/gemini-faf-mcp/',
 		githubUrl: 'https://github.com/Wolfe-Jam/gemini-faf-mcp',
@@ -257,7 +257,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'claude-fafm-sdk',
 		description: 'Claude .fafm Memory SDK — portable agent memory',
-		downloads: 2_794,
+		downloads: 2_797,
 		install: 'pip install claude-fafm-sdk',
 		registryUrl: 'https://pypi.org/project/claude-fafm-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/claude-fafm-sdk',
@@ -267,7 +267,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'faf-python-sdk',
 		description: 'Python SDK for .faf files',
-		downloads: 3_022,
+		downloads: 3_027,
 		install: 'pip install faf-python-sdk',
 		registryUrl: 'https://pypi.org/project/faf-python-sdk/',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-python-sdk',
@@ -287,7 +287,7 @@ export const pypiPackages: Package[] = [
 	{
 		name: 'grok-faf-voice',
 		description: 'Voice Memory Layer — LiveKit + xAI Grok',
-		downloads: 1_340,
+		downloads: 1_342,
 		install: 'pip install grok-faf-voice',
 		registryUrl: 'https://pypi.org/project/grok-faf-voice/',
 		githubUrl: 'https://github.com/Wolfe-Jam/grok-faf-voice',
@@ -312,7 +312,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-rust-sdk',
 		description: 'Rust SDK for .faf files',
-		downloads: 1_316,
+		downloads: 1_324,
 		install: 'cargo add faf-rust-sdk',
 		registryUrl: 'https://crates.io/crates/faf-rust-sdk',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust-sdk',
@@ -322,7 +322,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-radio-rust',
 		description: 'Radio Protocol client — tune, listen, broadcast',
-		downloads: 339,
+		downloads: 340,
 		install: 'cargo add faf-radio-rust',
 		registryUrl: 'https://crates.io/crates/faf-radio-rust',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-radio-rust',
@@ -372,7 +372,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-fafb',
 		description: 'FAFb v2 — the compiled binary form of .faf',
-		downloads: 469,
+		downloads: 476,
 		install: 'cargo add faf-fafb',
 		registryUrl: 'https://crates.io/crates/faf-fafb',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust',
@@ -382,7 +382,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'faf-kernel',
 		description: 'The FAF kernel — parse, validate, score',
-		downloads: 453,
+		downloads: 460,
 		install: 'cargo add faf-kernel',
 		registryUrl: 'https://crates.io/crates/faf-kernel',
 		githubUrl: 'https://github.com/Wolfe-Jam/faf-rust',
@@ -392,7 +392,7 @@ export const cratesPackages: Package[] = [
 	{
 		name: 'mcp-better',
 		description: 'Modern MCP setup (Rust)',
-		downloads: 219,
+		downloads: 220,
 		install: 'cargo add mcp-better',
 		registryUrl: 'https://crates.io/crates/mcp-better',
 		githubUrl: 'https://github.com/Wolfe-Jam/mcp-better',
