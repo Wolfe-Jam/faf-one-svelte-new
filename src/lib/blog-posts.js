@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/beyond-valid',
+		title: 'Beyond Valid: What an Agent Needs From a SKILL.md',
+		date: 'October 26, 2026',
+		timestamp: '2026-10-26',
+		excerpt:
+			'A skill can pass the validator and still leave an agent guessing. Six steps, by hand, from a valid SKILL.md to one an agent can choose, run safely and finish.',
+		emoji: '☑️',
+		category: 'Interop',
+		ticker: 'Beyond Valid — what an agent needs from a SKILL.md'
+	},
+	{
 		slug: 'blog/skills-ladder',
 		title: "Glue a Skill's Facts Into the Skill",
 		version: 'skills-ladder v0.1.1',
