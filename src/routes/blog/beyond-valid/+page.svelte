@@ -102,7 +102,6 @@ done_when: "RELEASE_NOTES.md lists every pull request merged since the previous 
 		name="description"
 		content="A skill can pass the validator and still leave an agent guessing. Validate it, then add the five things an agent needs: what and when, needs, touches, steps, done."
 	/>
-	<link rel="canonical" href="https://faf.one/blog/beyond-valid" />
 	<meta property="og:title" content="Beyond Valid: What an Agent Needs From a SKILL.md" />
 	<meta
 		property="og:description"
