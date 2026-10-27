@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/agent-skills-edition',
+		title: 'The Agent Skills Edition',
+		version: 'faf-cli v8.5.0',
+		date: 'October 27, 2026',
+		timestamp: '2026-10-27',
+		excerpt:
+			'faf knows a skills repo when it sees one, and the skills types name their framework: skills is 10 slots, skills-plugin is 14.',
+		emoji: '✪',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/beyond-valid',
 		title: 'Beyond Valid: What an Agent Needs From a SKILL.md',
 		date: 'October 26, 2026',
