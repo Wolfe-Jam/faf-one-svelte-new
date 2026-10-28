@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/instructions-edition',
+		title: 'The Instructions Edition',
+		version: 'claude-faf-mcp v7.1.0',
+		date: 'October 28, 2026',
+		timestamp: '2026-10-28',
+		excerpt:
+			'Three FAF MCP servers now tell the model how their tools fit together: server instructions in initialize, plus faf-cli 8.5.0, which knows a skills repo when it sees one.',
+		emoji: '✪',
+		category: 'Release',
+		ticker: 'The Instructions Edition — claude-faf-mcp · faf-mcp · grok-faf-mcp'
+	},
+	{
 		slug: 'blog/agent-skills-edition',
 		title: 'The Agent Skills Edition',
 		version: 'faf-cli v8.5.0',
