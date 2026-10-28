@@ -195,7 +195,6 @@ Keep the fact that a decision was made. Don't keep the decision itself as someth
 		margin: -1rem -1rem 2rem -1rem;
 		border-radius: 12px;
 		overflow: hidden;
-		border: 1px solid var(--faf-border-strong); /* the hero is light on a light page: a thin outline frames it */
 	}
 	.hero-image img {
 		width: 100%;
