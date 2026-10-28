@@ -234,6 +234,14 @@ button.faf-solid,
 	margin-top: 3rem;
 }
 
+/* Blog hero images — a thin outline on every one. Heroes are often light cards
+   on a light page, so their edge disappears. Global so every post (current and
+   new) gets it without editing each one: the scoped per-post .hero-image rules
+   set margin/radius/overflow but never a border, so this applies uncontested. */
+.hero-image {
+	border: 1px solid var(--faf-border-strong);
+}
+
 /* X share buttons (.share-btn, .x-share, .share-x) — a crisp 2px WHITE outline.
    1px fragments (sub-pixel rendering) and is too thin; the buttons are black
    (#000), so a white border reads cleanly on any page background, both themes.
