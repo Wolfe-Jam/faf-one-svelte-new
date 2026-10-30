@@ -7,7 +7,7 @@
 
 Three MCP servers now tell the model how their tools fit together.
 
-…and 8 more releases, including faf-cli 8.5.0 and skills-ladder.
+…and 12 more releases, including faf-cli 8.5.0, faf-taf-git 2.4.0 and skills-ladder 0.2.0.
 
 Help guide what we build —
 Comments · suggestions · shares welcome.`;
@@ -17,9 +17,9 @@ Comments · suggestions · shares welcome.`;
 
 <svelte:head>
 	<title>Shipped this Week — Oct 30, 2026 | FAF</title>
-	<meta name="description" content="11 releases across 6 apps, October 23–29. The headline: The Instructions Edition, three MCP servers that now tell the model how their tools fit together." />
+	<meta name="description" content="15 releases across 7 apps, October 23–30. The headline: The Instructions Edition, three MCP servers that now tell the model how their tools fit together." />
 	<meta property="og:title" content="Shipped this Week — Oct 30, 2026" />
-	<meta property="og:description" content="11 releases across 6 apps, October 23–29. The headline: The Instructions Edition, three MCP servers that now tell the model how their tools fit together." />
+	<meta property="og:description" content="15 releases across 7 apps, October 23–30. The headline: The Instructions Edition, three MCP servers that now tell the model how their tools fit together." />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://faf.one/blog/shipped-this-week-2026-10-30" />
 	<meta property="og:site_name" content=".faf Format Authority" />
@@ -33,7 +33,7 @@ Comments · suggestions · shares welcome.`;
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
 	<meta name="twitter:title" content="Shipped this Week — Oct 30, 2026" />
-	<meta name="twitter:description" content="11 releases across 6 apps, October 23–29. The headline: The Instructions Edition, three MCP servers that now tell the model how their tools fit together." />
+	<meta name="twitter:description" content="15 releases across 7 apps, October 23–30. The headline: The Instructions Edition, three MCP servers that now tell the model how their tools fit together." />
 	<meta name="twitter:image" content="https://faf.one/blog/shipped-this-week-2026-10-30-hero.png" />
 	<meta name="twitter:image:alt" content="Shipped this Week, October 30, 2026" />
 </svelte:head>
@@ -44,7 +44,7 @@ Comments · suggestions · shares welcome.`;
 			<a href="/">Home</a> / <a href="/blog">Blog</a> / Shipped this Week — Oct 30, 2026
 		</div>
 		<h1>Shipped this Week</h1>
-		<p class="version-tag">October 23–29, 2026</p>
+		<p class="version-tag">October 23–30, 2026</p>
 		<p class="subtitle">New this week.</p>
 		<div class="meta">
 			<time datetime="2026-10-30">October 30, 2026</time>
@@ -67,7 +67,7 @@ Comments · suggestions · shares welcome.`;
 	<article class="post-content">
 		<section class="intro">
 			<p class="lead">
-				<strong>TL;DR:</strong> 11 releases across 6 apps. The one that matters most: The
+				<strong>TL;DR:</strong> 15 releases across 7 apps. The one that matters most: The
 				Instructions Edition. claude-faf-mcp, faf-mcp and grok-faf-mcp now tell the model how their
 				tools fit together.
 			</p>
@@ -154,7 +154,40 @@ Comments · suggestions · shares welcome.`;
 		</section>
 
 		<section>
+			<h2>faf-taf-git</h2>
+			<p class="ship-line">
+				<strong>v2.4.1</strong> — <code>faf-taf-git --version</code> answers, and the descriptions say
+				tamper-evident, not "cannot be gamed".
+			</p>
+			<p class="ship-line">
+				<strong>v2.4.0</strong> — JUnit XML parser: TAF now reads the report format most test runners
+				can write, so Python, Rust, Go, Java and .NET projects get receipts with no conversion script.
+			</p>
+			<div class="terminal-block">
+				<code>npx --yes <NpmPkg name="faf-taf-git" version="2.4.1" /> --version</code>
+			</div>
+			<p class="ship-notes">
+				<a href="https://github.com/Wolfe-Jam/faf-taf-git/releases/tag/v2.4.0" target="_blank" rel="noopener"
+					>v2.4.0 notes</a
+				>
+				·
+				<a href="https://github.com/Wolfe-Jam/faf-taf-git/releases/tag/v2.4.1" target="_blank" rel="noopener"
+					>v2.4.1 notes</a
+				>
+			</p>
+		</section>
+
+		<section>
 			<h2>skills-ladder</h2>
+			<p class="ship-line">
+				<strong>v0.2.1</strong> — A short commit SHA in <code>@ref</code> now says to use the full
+				SHA, a branch or a tag, instead of git's "couldn't find remote ref".
+			</p>
+			<p class="ship-line">
+				<strong>v0.2.0</strong> — Rate a public repo by URL: <code>skills-ladder github:owner/repo</code>
+				fetches one commit, read-only, with no clone or token. <code>--census</code> prints one CSV
+				row per target.
+			</p>
 			<p class="ship-line">
 				<strong>v0.1.1</strong> — Docs only; no change to the checks.
 			</p>
@@ -163,7 +196,7 @@ Comments · suggestions · shares welcome.`;
 				a ladder (GOOD · BETTER · BEST), read-only.
 			</p>
 			<div class="terminal-block">
-				<code>npx --yes <NpmPkg name="skills-ladder" version="0.1.1" /> .</code>
+				<code>npx --yes <NpmPkg name="skills-ladder" version="0.2.1" /> .</code>
 			</div>
 			<p class="ship-notes"><a href="/blog/skills-ladder">Read the post</a></p>
 		</section>

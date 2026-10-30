@@ -7,11 +7,11 @@ export const posts = [
 	{
 		slug: 'blog/shipped-this-week-2026-10-30',
 		title: 'Shipped this Week — Oct 30, 2026',
-		version: 'October 23–29, 2026',
+		version: 'October 23–30, 2026',
 		date: 'October 30, 2026',
 		timestamp: '2026-10-30',
 		excerpt:
-			'11 releases across 6 apps. The one that matters most: The Instructions Edition. claude-faf-mcp, faf-mcp and grok-faf-mcp now tell the model how their tools fit together.',
+			'15 releases across 7 apps. The one that matters most: The Instructions Edition. claude-faf-mcp, faf-mcp and grok-faf-mcp now tell the model how their tools fit together.',
 		emoji: '☑️',
 		category: 'Release'
 	},
