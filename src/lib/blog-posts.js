@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/birth-certificate-edition',
+		title: 'The Birth Certificate Edition',
+		version: 'faf-cli v8.6.0',
+		date: 'October 31, 2026',
+		timestamp: '2026-10-31',
+		excerpt:
+			'One birth certificate per project, protected: init --new rebuilds project.faf without touching it, go and edit record every climb, and faf dna --json shows the lineage.',
+		emoji: '🧬',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/shipped-this-week-2026-10-30',
 		title: 'Shipped this Week — Oct 30, 2026',
 		version: 'October 23–30, 2026',
