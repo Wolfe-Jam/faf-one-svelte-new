@@ -466,6 +466,12 @@
 			padding: 10px 15px;
 		}
 
+		/* Pinned banner on a phone: the fixed badges take the top row,
+		   so the line sits beneath them instead of under the icons. */
+		.official-banner:not(.auto-hide) {
+			padding-top: 50px;
+		}
+
 		.banner-line {
 			font-size: 0.82em;
 		}
