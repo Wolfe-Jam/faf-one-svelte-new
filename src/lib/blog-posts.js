@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/receipts-edition',
+		title: 'The Receipts Edition',
+		version: 'faf-cli v8.7.0',
+		date: 'November 1, 2026',
+		timestamp: '2026-11-01',
+		excerpt:
+			'Your Test Receipts, in your terminal: faf taf receipts shows them, taf setup writes the recipe for JavaScript (Jest, Vitest, Bun), Python and Go, and every test run on your default branch gets one, red ones too.',
+		emoji: '🧾',
+		category: 'Release',
+		ticker: 'The Receipts Edition — a deep dive: Test Receipts, in your terminal'
+	},
+	{
 		slug: 'blog/birth-certificate-edition',
 		title: 'The Birth Certificate Edition',
 		version: 'faf-cli v8.6.0',
