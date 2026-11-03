@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/two-hundred-thousand',
+		title: '200,000 Downloads',
+		date: 'November 3, 2026',
+		timestamp: '2026-11-03',
+		excerpt:
+			'200,070 downloads across 36 packages on npm, PyPI and crates.io, counted straight: PyPI without mirrors, no bots. Fireworks came early.',
+		emoji: '🏆',
+		// Milestone: nothing shipped, so no version clue.
+		category: 'Milestone'
+	},
+	{
 		slug: 'blog/receipts-edition',
 		title: 'The Receipts Edition',
 		version: 'faf-cli v8.7.0',
