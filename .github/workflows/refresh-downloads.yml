@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write  # Required to commit + push updated packages.ts
+  actions: write   # Required to start the deploy (a GITHUB_TOKEN push starts no workflows)
 
 jobs:
   refresh:
@@ -26,6 +27,7 @@ jobs:
         run: node scripts/refresh-downloads.mjs
 
       - name: Commit and push if changed
+        id: push
         run: |
           if git diff --quiet src/lib/data/packages.ts; then
             echo "No changes — counts unchanged or all APIs flat"
@@ -36,3 +38,13 @@ jobs:
           git add src/lib/data/packages.ts
           git commit -m "chore: refresh download counts (daily auto-update)"
           git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # The push above is made with GITHUB_TOKEN, and GitHub starts no workflow from
+      # such a push, so deploy.yml never saw the new counts until its next daily run:
+      # the banner ran a day behind. workflow_dispatch is allowed with GITHUB_TOKEN.
+      - name: Deploy the new counts today
+        if: steps.push.outputs.pushed == 'true'
+        run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
