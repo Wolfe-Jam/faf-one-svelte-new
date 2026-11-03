@@ -4,7 +4,7 @@
 	 * Crossing figures in the prose are FROZEN (the day it crossed):
 	 *   200,070 = npm 181,923 · PyPI 14,589 (without_mirrors) · crates.io 3,558
 	 *   36 packages, /downloads live run + data refresh 2ad49bf, 2026-11-03.
-	 * The tables are FED from #lib/data/packages.js (daily auto-refresh).
+	 * The tiles are FED from #lib/data/packages.js (daily auto-refresh).
 	 * The share text is the X post for Nov 5 (Bonfire Night).
 	 */
 	import {
@@ -170,40 +170,11 @@ like for like +40,602 in 39 days   1,041/day`}</code
 				</div>
 			</div>
 			<p class="fed-note">
-				These tiles and the tables below are live: {fmt(grandTotal)} today, from the same daily refresh
-				that feeds the site banner. The figures above are frozen at the crossing. Every package:
+				These tiles are live: {fmt(grandTotal)} today, from the same daily refresh that feeds the site
+				banner. The figures above are frozen at the crossing. Every package:
 				<a href="/downloads">faf.one/downloads</a>.
 			</p>
 
-			<h3 class="registry-header">npm</h3>
-			<div class="package-table">
-				{#each [...npmPackages].sort((a, b) => b.downloads - a.downloads) as p}
-					<div class="pkg-row">
-						<span><strong>{p.name}</strong></span>
-						<span>{fmt(p.downloads)}</span>
-					</div>
-				{/each}
-			</div>
-
-			<h3 class="registry-header">PyPI</h3>
-			<div class="package-table">
-				{#each [...pypiPackages].sort((a, b) => b.downloads - a.downloads) as p}
-					<div class="pkg-row">
-						<span><strong>{p.name}</strong></span>
-						<span>{fmt(p.downloads)}</span>
-					</div>
-				{/each}
-			</div>
-
-			<h3 class="registry-header">crates.io</h3>
-			<div class="package-table">
-				{#each [...cratesPackages].sort((a, b) => b.downloads - a.downloads) as p}
-					<div class="pkg-row">
-						<span><strong>{p.name}</strong></span>
-						<span>{fmt(p.downloads)}</span>
-					</div>
-				{/each}
-			</div>
 		</section>
 
 		<section>
@@ -440,35 +411,6 @@ npm i -g faf-cli          install it`}</code
 	}
 	.fed-note {
 		font-size: 0.95rem;
-	}
-
-	.registry-header {
-		font-size: 1.15rem;
-		color: var(--faf-black);
-		margin: 1.5rem 0 0.5rem;
-	}
-	.package-table {
-		background: var(--faf-surface);
-		color: var(--faf-black);
-		border: 1px solid var(--faf-border);
-		border-radius: 8px;
-		overflow: hidden;
-	}
-	.pkg-row {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		padding: 0.5rem 1rem;
-		border-top: 1px solid var(--faf-border);
-		font-size: 0.95rem;
-	}
-	.pkg-row:first-child {
-		border-top: none;
-	}
-	.pkg-header {
-		background: var(--faf-section-alt);
-		color: var(--faf-black);
-		font-weight: 700;
 	}
 
 	.post-content section.feedback-invite {
