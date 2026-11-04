@@ -22,7 +22,7 @@
 		"svelte": "^5.57.1",
 		"typescript": "^6.0.3",
 		"vite": "^8.0.12",
-		"vitest": "^4.1.11",
+		"vitest": "^4.1.12",
 		"wrangler": "^4.119.0"
 	},
 	"description": "FAF.ONE - The JPEG for AI | Foundational AI-context Format - Professional AI-Context Management",
@@ -44,7 +44,7 @@
 	"overrides": {
 		"postcss": ">=8.5.23",
 		"sharp": ">=0.35.4",
-		"undici": ">=8.10.2",
+		"undici": ">=8.12.2",
 		"@modelcontextprotocol/server": "^2.3.0"
 	},
 	"imports": {
