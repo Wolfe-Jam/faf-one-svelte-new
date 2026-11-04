@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/read-back-edition',
+		title: 'The Read-Back Edition',
+		version: 'grok-faf-voice v0.6.0',
+		date: 'November 4, 2026',
+		timestamp: '2026-11-04',
+		excerpt: 'Nothing is saved until the holder hears it back and says yes.',
+		emoji: '🎙️',
+		category: 'Release',
+		ticker: 'The Read-Back Edition — grok-faf-voice 0.6.0'
+	},
+	{
 		slug: 'blog/same-bytes-edition',
 		title: 'The Same Bytes Edition',
 		version: 'faf-zeph v0.1.0',
