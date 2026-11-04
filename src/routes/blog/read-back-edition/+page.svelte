@@ -76,7 +76,7 @@ Comments · suggestions · shares welcome.`;
 	<div class="hero-image">
 		<img
 			src="/blog/read-back-edition-hero.png"
-			alt="The Read-Back Edition — grok-faf-voice v0.6.0 · nothing is saved until the holder hears it back and says yes"
+			alt="The Read-Back Edition — grok-faf-voice v0.6.0 · voices Ara, Eve, Leo, Rex, and Sal · nothing is saved until the holder hears it back and says yes"
 			width="1200"
 			height="630"
 			loading="eager"
