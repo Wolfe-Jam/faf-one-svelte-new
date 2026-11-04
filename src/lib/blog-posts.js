@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/same-bytes-edition',
+		title: 'The Same Bytes Edition',
+		version: 'faf-zeph v0.1.0',
+		date: 'November 3, 2026',
+		timestamp: '2026-11-03',
+		excerpt:
+			'Loads the ZEPH wasm and calls score, validate, tier, and find_section. The wasm in the install is the wasm in the repo.',
+		emoji: '✪',
+		category: 'Release',
+		ticker: 'The Same Bytes Edition — faf-zeph 0.1.0'
+	},
+	{
 		slug: 'blog/two-hundred-thousand',
 		title: '200,000 Downloads',
 		date: 'November 3, 2026',
