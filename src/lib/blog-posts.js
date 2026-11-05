@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/write-once-edition',
+		title: 'The Write-Once Edition',
+		version: 'faf-cli v8.9.0',
+		date: 'November 5, 2026',
+		timestamp: '2026-11-05',
+		excerpt:
+			"A birth certificate that can't be reissued. faf dna --verify checks it against the commit that first saved it. Plus a lighter install, and every command documented.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'The Write-Once Edition — faf-cli v8.9.0'
+	},
+	{
 		slug: 'blog/your-files-stay-yours',
 		title: 'Your files stay yours',
 		version: 'grok-faf-mcp v2.2.4',
