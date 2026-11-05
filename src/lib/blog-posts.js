@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/your-files-stay-yours',
+		title: 'Your files stay yours',
+		version: 'grok-faf-mcp v2.2.4',
+		date: 'November 5, 2026',
+		timestamp: '2026-11-05',
+		excerpt:
+			"faf_sync keeps your hand-written files, writes the context files it names, and tells you what it couldn't write.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'Your files stay yours — grok-faf-mcp v2.2.4'
+	},
+	{
 		slug: 'blog/read-back-edition',
 		title: 'The Read-Back Edition',
 		version: 'grok-faf-voice v0.6.0',
