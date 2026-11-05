@@ -4,17 +4,14 @@
 
 	const shareText = `🏁 Just shipped: grok-faf-mcp v2.2.4 — The Instructions Edition
 
-Your AGENTS.md and CLAUDE.md are yours. faf_sync now proves it.
+Your AGENTS.md is yours. faf_sync writes next to it, never over it.
 
-Hand-written files are never reclaimed; faf only replaces the block it wrote.
-A file it can't safely write is left as it is, and the reply says why.
-
-Same injector as faf-cli · faf-mcp · claude-faf-mcp
+Hand-written files kept · refused files named · same writer as faf-cli
 
 npx --yes grok-faf-mcp@2.2.4
 
 Help guide what we build —
-Comments · suggestions welcome.`;
+Comments · suggestions · shares welcome.`;
 	const shareUrl = 'https://faf.one/blog/your-files-stay-yours';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
@@ -114,6 +111,29 @@ Comments · suggestions welcome.`;
 		</section>
 
 		<section>
+			<h2>What happened since The Instructions Edition</h2>
+			<p>
+				One blog, one arc. Last write-up was
+				<a href="/blog/instructions-edition">The Instructions Edition</a> (v2.2.0). Short tour to
+				today:
+			</p>
+			<ul>
+				<li>
+					<strong>2.2.1</strong> — one rule for project questions: read <code>project.faf</code>
+					first.
+				</li>
+				<li><strong>2.2.2</strong> — cleanup: removes leftover two-way sync wording.</li>
+				<li>
+					<strong>2.2.3</strong> — <code>faf_write</code> can no longer overwrite the birth
+					certificate or your context files.
+				</li>
+				<li>
+					<strong>2.2.4</strong> — <code>faf_sync</code> keeps your hand-written files. This post.
+				</li>
+			</ul>
+		</section>
+
+		<section>
 			<h2>Why it matters if you use Grok or Cursor</h2>
 			<p>
 				Your <code>AGENTS.md</code>, <code>CLAUDE.md</code> and <code>.cursorrules</code> are where
@@ -137,7 +157,18 @@ Comments · suggestions welcome.`;
 		</section>
 
 		<section>
-			<h2>What changed</h2>
+			<h2>What 2.2.4 is</h2>
+			<p>
+				faf writes its block between two marker lines, <code>&lt;!-- faf:start --&gt;</code> and
+				<code>&lt;!-- faf:end --&gt;</code>. The rule is simple: <strong
+					>faf replaces only text it can prove it wrote.</strong
+				> If the file has a matching pair of marker lines, only what's between them is updated. If it
+				doesn't, faf puts its block on top and keeps everything else.
+			</p>
+			<p>
+				That rule already lived in faf-cli. grok-faf-mcp now calls faf-cli's writer instead of
+				keeping its own copy, so every FAF tool that writes your context files behaves the same way.
+			</p>
 			<div class="table-wrap">
 				<table>
 					<thead>
@@ -182,21 +213,6 @@ Comments · suggestions welcome.`;
 				<code>.clinerules</code>), or <code>CLAUDE.md</code> when there are none. Before 2.2.4 it
 				wrote none of them. One change to know about: in a project with no context files,
 				<code>faf_sync</code> now creates <code>CLAUDE.md</code>.
-			</p>
-		</section>
-
-		<section>
-			<h2>How it works</h2>
-			<p>
-				faf writes its block between two marker lines, <code>&lt;!-- faf:start --&gt;</code> and
-				<code>&lt;!-- faf:end --&gt;</code>. The rule is simple: <strong
-					>faf replaces only text it can prove it wrote.</strong
-				> If the file has a matching pair of marker lines, only what's between them is updated. If it
-				doesn't, faf puts its block on top and keeps everything else.
-			</p>
-			<p>
-				That rule already lived in faf-cli. grok-faf-mcp now calls faf-cli's writer instead of
-				keeping its own copy, so every FAF tool that writes your context files behaves the same way.
 			</p>
 		</section>
 
