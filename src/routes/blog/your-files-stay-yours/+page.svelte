@@ -4,7 +4,7 @@
 
 	const shareText = `🏁 Just shipped: grok-faf-mcp v2.2.4 — The Instructions Edition
 
-Your AGENTS.md is yours. faf_sync writes next to it, never over it.
+Your CLAUDE.md is yours. faf_sync writes next to it, never over it.
 
 Hand-written files kept · refused files named · same writer as faf-cli
 
@@ -62,8 +62,8 @@ Comments · suggestions · shares welcome.`;
 		<h1>Your files stay yours</h1>
 		<p class="version-tag">grok-faf-mcp v2.2.4 · The Instructions Edition</p>
 		<p class="subtitle">
-			Your AGENTS.md, CLAUDE.md and .cursorrules hold your team's rules. faf now writes next to them,
-			never over them.
+			Your CLAUDE.md and .cursorrules hold your team's rules. faf now writes next to them, never over
+			them.
 		</p>
 		<div class="meta">
 			<time datetime="2026-11-05">November 5, 2026</time>
@@ -136,7 +136,7 @@ Comments · suggestions · shares welcome.`;
 		<section>
 			<h2>Why it matters if you use Grok or Cursor</h2>
 			<p>
-				Your <code>AGENTS.md</code>, <code>CLAUDE.md</code> and <code>.cursorrules</code> are where
+				Your <code>CLAUDE.md</code>, <code>.cursorrules</code> and <code>.windsurfrules</code> are where
 				your team writes down how the project works: never deploy on Friday, which tests to run, what
 				not to touch. A context tool that can wipe those is worse than no context tool at all.
 			</p>
@@ -281,7 +281,7 @@ Comments · suggestions · shares welcome.`;
 			<ul>
 				<li><strong>Version:</strong> grok-faf-mcp 2.2.4 (November 5, 2026), The Instructions Edition</li>
 				<li><strong>Where:</strong> npm · Homebrew · the MCP Registry</li>
-				<li><strong>Writer:</strong> faf-cli's <code>injectFafBlock</code> (faf-cli ^8.5.0)</li>
+				<li><strong>Writer:</strong> faf-cli's own (faf-cli ^8.5.0)</li>
 				<li>
 					<strong>Changes:</strong>
 					<a href="https://github.com/Wolfe-Jam/grok-faf-mcp/pull/186" target="_blank" rel="noopener">#186</a>
@@ -314,7 +314,7 @@ Comments · suggestions · shares welcome.`;
 		</section>
 
 		<section class="footer-note">
-			<p>Built with .faf ☑️ faf writes next to your words, never over them. 🏎️</p>
+			<p>Built with .faf ☑️ faf writes next to your words, never over them.</p>
 		</section>
 	</article>
 </div>
