@@ -13,23 +13,23 @@ cargo install rust-faf-mcp --version 0.9.0
 
 Help guide what we build —
 Comments · suggestions welcome.`;
-	const shareUrl = 'https://faf.one/blog/claude-md-stays-yours-rust';
+	const shareUrl = 'https://faf.one/blog/your-files-stay-yours-rust';
 	const xIntent = buildShareIntent({ text: shareText, url: shareUrl });
 </script>
 
 <svelte:head>
-	<title>Your CLAUDE.md stays yours, in Rust - rust-faf-mcp v0.9.0 | FAF</title>
+	<title>Your files stay yours, in Rust - rust-faf-mcp v0.9.0 | FAF</title>
 	<meta
 		name="description"
 		content="faf_sync keeps your hand-written CLAUDE.md, refuses what it can't write safely, and says so. rust-faf-mcp v0.9.0."
 	/>
-	<meta property="og:title" content="Your CLAUDE.md stays yours, in Rust - rust-faf-mcp v0.9.0" />
+	<meta property="og:title" content="Your files stay yours, in Rust - rust-faf-mcp v0.9.0" />
 	<meta
 		property="og:description"
 		content="faf_sync keeps your hand-written CLAUDE.md, refuses what it can't write safely, and says so."
 	/>
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="https://faf.one/blog/claude-md-stays-yours-rust" />
+	<meta property="og:url" content="https://faf.one/blog/your-files-stay-yours-rust" />
 	<meta property="og:site_name" content=".faf Format Authority" />
 	<meta property="og:image" content="https://faf.one/blog/claude-md-stays-yours-rust-hero.png" />
 	<meta property="og:image:secure_url" content="https://faf.one/blog/claude-md-stays-yours-rust-hero.png" />
@@ -40,7 +40,7 @@ Comments · suggestions welcome.`;
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@fafformat" />
 	<meta name="twitter:creator" content="@wolfe_jam" />
-	<meta name="twitter:title" content="Your CLAUDE.md stays yours, in Rust - rust-faf-mcp v0.9.0" />
+	<meta name="twitter:title" content="Your files stay yours, in Rust - rust-faf-mcp v0.9.0" />
 	<meta
 		name="twitter:description"
 		content="faf_sync keeps your hand-written CLAUDE.md, refuses what it can't write safely, and says so."
@@ -52,12 +52,12 @@ Comments · suggestions welcome.`;
 <div class="blog-post">
 	<header class="post-header">
 		<div class="breadcrumb">
-			<a href="/">Home</a> / <a href="/blog">Blog</a> / Your CLAUDE.md stays yours, in Rust
+			<a href="/">Home</a> / <a href="/blog">Blog</a> / Your files stay yours, in Rust
 		</div>
-		<h1>Your CLAUDE.md stays yours, in Rust</h1>
+		<h1>Your files stay yours, in Rust</h1>
 		<p class="version-tag">rust-faf-mcp v0.9.0 · The Your-Files-Stay-Yours Edition</p>
 		<p class="subtitle">
-			CLAUDE.md holds how you work. The Rust server now writes next to your words, never over them.
+			CLAUDE.md or AGENTS.md: faf writes next to your words, never over them.
 		</p>
 		<div class="meta">
 			<time datetime="2026-11-06">November 6, 2026</time>
@@ -166,6 +166,10 @@ Comments · suggestions welcome.`;
 				Every refusal comes back with MCP's <code>isError</code> flag and the reason. Writes land in
 				one step, and keep the file's permissions, a leading BOM and Windows line endings.
 				<code>faf_auto</code> and <code>faf_go</code> report a refusal instead of claiming success.
+			</p>
+			<p>
+				<code>faf_agents</code> writes AGENTS.md, the shared instructions file for coding agents, through the same rules.
+				Whatever your MCP client, your file stays yours.
 			</p>
 		</section>
 
