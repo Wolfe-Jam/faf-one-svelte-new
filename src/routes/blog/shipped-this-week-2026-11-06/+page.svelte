@@ -188,11 +188,7 @@ Comments · suggestions welcome.`;
 npx --yes <NpmPkg name="rust-faf-mcp" version="0.9.0" /></code
 				>
 			</div>
-			<p class="ship-notes">
-				<a href="https://github.com/Wolfe-Jam/rust-faf-mcp/releases/tag/v0.9.0" target="_blank" rel="noopener"
-					>Release notes</a
-				>
-			</p>
+			<p class="ship-notes"><a href="/blog/claude-md-stays-yours-rust">Read the post</a></p>
 		</section>
 
 		<section>
@@ -297,6 +293,14 @@ npx --yes <NpmPkg name="rust-faf-mcp" version="0.9.0" /></code
 				<a href="https://github.com/Wolfe-Jam/wjttc/releases/tag/v1.4.2" target="_blank" rel="noopener"
 					>Release notes</a
 				>
+			</p>
+		</section>
+
+		<section>
+			<h2>Thank you</h2>
+			<p>
+				FAF passed 200,000 downloads on November 3, and it's over 205,000 now. Every install, star and
+				comment helps. <a href="/blog/two-hundred-thousand">The 200,000 post</a>.
 			</p>
 		</section>
 
