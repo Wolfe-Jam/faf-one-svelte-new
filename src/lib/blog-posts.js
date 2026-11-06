@@ -16,6 +16,17 @@ export const posts = [
 		category: 'Release'
 	},
 	{
+		slug: 'blog/claude-md-stays-yours-rust',
+		title: 'Your CLAUDE.md stays yours, in Rust',
+		version: 'rust-faf-mcp v0.9.0',
+		date: 'November 6, 2026',
+		timestamp: '2026-11-06',
+		excerpt:
+			"faf_sync keeps your hand-written CLAUDE.md, refuses what it can't write safely, and says so.",
+		emoji: '✪',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/gemini-md-stays-yours',
 		title: 'Your GEMINI.md stays yours',
 		version: 'gemini-faf-mcp v3.1.2',
