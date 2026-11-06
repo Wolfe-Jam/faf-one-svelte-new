@@ -5,6 +5,30 @@
 
 export const posts = [
 	{
+		slug: 'blog/gemini-md-stays-yours',
+		title: 'Your GEMINI.md stays yours',
+		version: 'gemini-faf-mcp v3.1.2',
+		date: 'November 5, 2026',
+		timestamp: '2026-11-05',
+		excerpt:
+			"faf_gemini and faf_agents keep your hand-written GEMINI.md and AGENTS.md, and tell you what they couldn't write.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'Your GEMINI.md stays yours — gemini-faf-mcp v3.1.2'
+	},
+	{
+		slug: 'blog/birth-certificate-never-reissued',
+		title: 'One birth certificate, never reissued',
+		version: 'faf-mcp v4.1.2',
+		date: 'November 5, 2026',
+		timestamp: '2026-11-05',
+		excerpt:
+			'faf_write can no longer overwrite the birth certificate or your context files, and faf_dna never issues a second one.',
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'One birth certificate, never reissued — faf-mcp v4.1.2'
+	},
+	{
 		slug: 'blog/write-once-edition',
 		title: 'The Write-Once Edition',
 		version: 'faf-cli v8.9.0',
