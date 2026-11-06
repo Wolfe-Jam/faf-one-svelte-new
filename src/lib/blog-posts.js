@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/shipped-this-week-2026-11-06',
+		title: 'Shipped this Week — Nov 6, 2026',
+		version: 'October 30 – November 5, 2026',
+		date: 'November 6, 2026',
+		timestamp: '2026-11-06',
+		excerpt:
+			'21 releases across 10 apps. The one that matters most: one rule, now the same in five FAF tools — faf replaces only what it can prove it wrote.',
+		emoji: '☑️',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/your-files-stay-yours-rust',
 		title: 'Your files stay yours, in Rust',
 		version: 'rust-faf-mcp v0.9.0',
