@@ -56,14 +56,17 @@ Comments · suggestions welcome.`;
 	</header>
 
 	<div class="hero-image">
-		<img
-			src="/blog/shipped-this-week-2026-11-06-hero.png"
-			alt="Shipped this Week, November 6, 2026"
+		<video
+			src="/blog/shipped-this-week-2026-11-06-hero.mp4"
+			poster="/blog/shipped-this-week-2026-11-06-hero.png"
+			autoplay
+			loop
+			muted
+			playsinline
 			width="1200"
 			height="630"
-			loading="eager"
-			decoding="async"
-		/>
+			aria-label="Shipped this Week, October 30 to November 5: the list grows release by release, in the order they shipped, to 21."
+		></video>
 	</div>
 
 	<article class="post-content">
@@ -400,7 +403,8 @@ npx --yes <NpmPkg name="rust-faf-mcp" version="0.9.0" /></code
 		border-radius: 12px;
 		overflow: hidden;
 	}
-	.hero-image img {
+	.hero-image img,
+	.hero-image video {
 		width: 100%;
 		height: auto;
 		display: block;
