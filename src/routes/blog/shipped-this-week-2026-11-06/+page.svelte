@@ -188,7 +188,7 @@ Comments · suggestions welcome.`;
 npx --yes <NpmPkg name="rust-faf-mcp" version="0.9.0" /></code
 				>
 			</div>
-			<p class="ship-notes"><a href="/blog/claude-md-stays-yours-rust">Read the post</a></p>
+			<p class="ship-notes"><a href="/blog/your-files-stay-yours-rust">Read the post</a></p>
 		</section>
 
 		<section>
