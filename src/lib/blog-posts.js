@@ -16,8 +16,8 @@ export const posts = [
 		category: 'Release'
 	},
 	{
-		slug: 'blog/claude-md-stays-yours-rust',
-		title: 'Your CLAUDE.md stays yours, in Rust',
+		slug: 'blog/your-files-stay-yours-rust',
+		title: 'Your files stay yours, in Rust',
 		version: 'rust-faf-mcp v0.9.0',
 		date: 'November 6, 2026',
 		timestamp: '2026-11-06',
