@@ -248,6 +248,10 @@ Comments · suggestions · shares welcome.`;
 				<code>claude mcp add gemini-faf-mcp -- uvx gemini-faf-mcp==3.2.0</code>
 			</div>
 			<p class="muted-note">Then run <code>/faf:setup</code> in your project.</p>
+			<p class="muted-note">
+				gemini-faf-mcp is an MCP server, so the model is your client's choice: Gemini 3.1 Pro, Gemini
+				4 Argon, or any other.
+			</p>
 		</section>
 
 		<section>
