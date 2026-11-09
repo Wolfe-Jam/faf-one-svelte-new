@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/gemini-straight-answers-edition',
+		title: 'The Straight Answers Edition, for Gemini',
+		version: 'gemini-faf-mcp v3.2.0',
+		date: 'November 9, 2026',
+		timestamp: '2026-11-09',
+		excerpt:
+			"Every gemini-faf-mcp failure now reaches your client as an error: MCP's isError is set, the reason text is unchanged, and /faf:setup checks before it creates.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'The Straight Answers Edition — gemini-faf-mcp v3.2.0'
+	},
+	{
 		slug: 'blog/shipped-this-week-2026-11-06',
 		title: 'Shipped this Week — Nov 6, 2026',
 		version: 'October 30 – November 5, 2026',
