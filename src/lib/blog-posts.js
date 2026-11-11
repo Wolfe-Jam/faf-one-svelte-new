@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/agents-md-facts-0-2',
+		title: 'agents-md-facts v0.2.0',
+		version: 'agents-md-facts v0.2.0',
+		date: 'November 11, 2026',
+		timestamp: '2026-11-11',
+		excerpt:
+			'Everything 0.1.0 wrote into AGENTS.md is still written. 0.2.0 adds CI steps, release checks, Python entry points and checks, and what a repo lacks.',
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'agents-md-facts v0.2.0 — more facts, nothing taken away'
+	},
+	{
 		slug: 'blog/gemini-straight-answers-edition',
 		title: 'The Straight Answers Edition, for Gemini',
 		version: 'gemini-faf-mcp v3.2.0',
