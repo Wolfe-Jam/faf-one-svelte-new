@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/human-slots-edition',
+		title: 'The Human Slots Edition',
+		version: 'faf-cli v8.10.0',
+		date: 'November 13, 2026',
+		timestamp: '2026-11-13',
+		excerpt:
+			"AI suggests, you confirm. faf no longer writes your project's goal or six W's: it suggests them, and you confirm each one in faf go.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'The Human Slots Edition — faf-cli v8.10.0'
+	},
+	{
 		slug: 'blog/agents-md-facts-0-2',
 		title: 'agents-md-facts v0.2.0',
 		version: 'agents-md-facts v0.2.0',
