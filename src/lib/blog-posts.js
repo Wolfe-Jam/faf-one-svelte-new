@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/claude-human-slots-edition',
+		title: 'The Human Slots Edition (claude-faf-mcp)',
+		version: 'claude-faf-mcp v7.2.1',
+		date: 'November 13, 2026',
+		timestamp: '2026-11-13',
+		excerpt:
+			"Claude suggests, you confirm. claude-faf-mcp no longer writes your project's goal or six W's: faf_go shows each suggestion with its source, and only what you confirm is written.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'The Human Slots Edition — claude-faf-mcp v7.2.1'
+	},
+	{
 		slug: 'blog/human-slots-edition',
 		title: 'The Human Slots Edition',
 		version: 'faf-cli v8.10.0',
