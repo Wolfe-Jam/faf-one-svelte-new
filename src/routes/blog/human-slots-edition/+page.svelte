@@ -76,12 +76,17 @@ Comments · suggestions welcome.`;
 	</header>
 
 	<div class="hero-image">
-		<img
-			src="/blog/human-slots-edition-hero.png"
-			alt="faf-cli v8.10.0, The Human Slots Edition: AI suggests. You confirm."
+		<video
+			src="/blog/human-slots-edition-hero.mp4"
+			poster="/blog/human-slots-edition-hero.png"
+			autoplay
+			loop
+			muted
+			playsinline
 			width="1200"
 			height="630"
-		/>
+			aria-label="faf-cli v8.10.0, The Human Slots Edition: AI suggests, in gray. You confirm types in. Then AI suggests turns black."
+		></video>
 	</div>
 
 	<article class="post-content">
@@ -293,7 +298,8 @@ Comments · suggestions welcome.`;
 		border-radius: 12px;
 		overflow: hidden;
 	}
-	.hero-image img {
+	.hero-image img,
+	.hero-image video {
 		width: 100%;
 		height: auto;
 		display: block;
