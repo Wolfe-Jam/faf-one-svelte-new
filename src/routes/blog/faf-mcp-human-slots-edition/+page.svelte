@@ -79,7 +79,7 @@ Comments · suggestions welcome.`;
 			playsinline
 			width="1200"
 			height="630"
-			aria-label="faf-mcp v4.2.0, The Human Slots Edition: in project.faf, faf_go's suggestion for the goal appears in gray with its source. The user types their own words over it, confirms, and the score goes from 17% to 25%."
+			aria-label="faf-mcp v4.2.0, The Human Slots Edition: in project.faf, faf_go's suggestion for the goal types in, in gray, with its source. The user approves it, it turns solid, and the score goes from 17% to 25%."
 		></video>
 	</div>
 
@@ -126,8 +126,9 @@ Comments · suggestions welcome.`;
 				<code>{`  Updated 1 field(s) in project.faf · New Score: 25%`}</code>
 			</div>
 			<p class="muted-note">
-				Real output from the published faf-mcp 4.2.0, on a small repo. The user wrote their own
-				goal instead of the suggestion; that's the point. The film above is the same run.
+				Real output from the published faf-mcp 4.2.0, on a small repo. Here the user wrote their own
+				goal; the film above shows the suggestion approved as it is. Either way, only what you
+				confirm is written.
 			</p>
 		</section>
 
