@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/gemini-antigravity-edition',
+		title: 'The Antigravity Edition 🚀',
+		version: 'gemini-faf-mcp v3.3.0',
+		date: 'November 14, 2026',
+		timestamp: '2026-11-14',
+		excerpt:
+			'3.3.0 brings gemini-faf-mcp to Antigravity CLI: install it as a plugin and it works in your project. Simple.',
+		emoji: '🚀',
+		category: 'Release',
+		ticker: 'The Antigravity Edition 🚀 — gemini-faf-mcp v3.3.0'
+	},
+	{
 		slug: 'blog/faf-mcp-human-slots-edition',
 		title: 'The Human Slots Edition (faf-mcp)',
 		version: 'faf-mcp v4.2.0',
