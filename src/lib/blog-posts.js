@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/shipped-this-week-2026-11-15',
+		title: 'Shipped this Week — Nov 15, 2026',
+		version: 'November 6 – 15, 2026',
+		date: 'November 15, 2026',
+		timestamp: '2026-11-15',
+		excerpt:
+			"8 releases across 4 apps. The one that matters most: AI suggests, you confirm — FAF no longer writes your project's goal or six W's.",
+		emoji: '☑️',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/gemini-antigravity-edition',
 		title: 'The Antigravity Edition 🚀',
 		version: 'gemini-faf-mcp v3.3.0',
