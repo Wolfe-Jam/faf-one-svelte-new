@@ -73,12 +73,12 @@ Comments · suggestions welcome.`;
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> 8 releases across 4 apps. The one that matters most:
-				<strong>AI suggests, you confirm.</strong> FAF no longer writes your project's goal or six W's.
+				<strong><span class="ai-says">AI suggests,</span> <span class="you-say">you confirm.</span></strong> FAF no longer writes your project's goal or six W's.
 			</p>
 		</section>
 
 		<section>
-			<h2>AI suggests, you confirm</h2>
+			<h2><span class="ai-says">AI suggests,</span> <span class="you-say">you confirm</span></h2>
 			<p>
 				The goal and the six W's (who, what, why, where, when, how) are yours to say. FAF now suggests
 				each one with where it came from (<code>README.md § Why</code>,
@@ -197,6 +197,14 @@ Comments · suggestions welcome.`;
 <style>
 	:global(body) {
 		background: var(--faf-page-bg);
+	}
+
+	/* The headline in two voices: gray = the AI's suggestion (as in faf go), black = your confirmation. */
+	.ai-says {
+		color: var(--faf-gray);
+	}
+	.you-say {
+		color: var(--faf-black);
 	}
 
 	.blog-post {
