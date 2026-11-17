@@ -125,6 +125,22 @@ Comments · suggestions · shares welcome.`;
 		</section>
 
 		<section>
+			<h2>Since this post</h2>
+			<p>Two patches in the same edition. Install the latest, 3.3.3.</p>
+			<ul>
+				<li>
+					<strong>3.3.1</strong> (November 16) — <code>/setup</code> detects your stack; your goal and
+					six W's stay yours. Nothing is written into them unless you confirm it.
+				</li>
+				<li>
+					<strong>3.3.3</strong> (November 17) — one engine, one number, in the Python SDK too:
+					<code>validate_faf</code> gives the same score and tier as <code>faf_score</code> and
+					faf-cli, and the hosted badge uses faf-cli's tiers.
+				</li>
+			</ul>
+		</section>
+
+		<section>
 			<h2>Why it matters if you use Gemini</h2>
 			<p>
 				Gemini CLI is retired for individual users. If you move to Antigravity CLI, your project
@@ -238,11 +254,11 @@ Comments · suggestions · shares welcome.`;
 			</p>
 			<p><strong>Any other MCP client</strong> that runs a local server:</p>
 			<div class="terminal-block">
-				<code>{`{ "mcpServers": { "gemini-faf": { "command": "uvx", "args": ["gemini-faf-mcp==3.3.0"] } } }`}</code>
+				<code>{`{ "mcpServers": { "gemini-faf": { "command": "uvx", "args": ["gemini-faf-mcp==3.3.3"] } } }`}</code>
 			</div>
 			<p><strong>Claude Code:</strong></p>
 			<div class="terminal-block">
-				<code>claude mcp add gemini-faf-mcp -- uvx gemini-faf-mcp==3.3.0</code>
+				<code>claude mcp add gemini-faf-mcp -- uvx gemini-faf-mcp==3.3.3</code>
 			</div>
 			<p class="muted-note">
 				gemini-faf-mcp is an MCP server, so the model is your client's choice.
@@ -253,6 +269,12 @@ Comments · suggestions · shares welcome.`;
 			<h2>Technical details</h2>
 			<ul>
 				<li><strong>Version:</strong> gemini-faf-mcp 3.3.0 (November 14, 2026), The Antigravity Edition 🚀</li>
+				<li>
+					<strong>Latest:</strong> 3.3.3 (November 17, 2026), same edition ·
+					<a href="https://github.com/Wolfe-Jam/gemini-faf-mcp/releases/tag/v3.3.3" target="_blank" rel="noopener"
+						>release notes</a
+					>
+				</li>
 				<li><strong>Where:</strong> PyPI · the MCP Registry · GitHub (the plugin)</li>
 				<li>
 					<strong>Changes:</strong>
