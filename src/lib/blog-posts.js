@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/shipped-this-week-2026-11-20',
+		title: 'Shipped this Week — Nov 20, 2026',
+		version: 'November 16 – 20, 2026',
+		date: 'November 20, 2026',
+		timestamp: '2026-11-20',
+		excerpt:
+			'6 releases across 4 apps. The one that matters most: red runs get receipts — with faf-taf-git 2.7.0, a red CI run gets a FAILED receipt too.',
+		emoji: '☑️',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/shipped-this-week-2026-11-15',
 		title: 'Shipped this Week — Nov 15, 2026',
 		version: 'November 6 – 15, 2026',
