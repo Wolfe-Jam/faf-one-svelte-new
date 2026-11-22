@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/claude-faf-mcp-explained',
+		title: 'claude-faf-mcp, Explained',
+		date: 'November 22, 2026',
+		timestamp: '2026-11-22',
+		excerpt:
+			"claude-faf-mcp keeps project.faf, a small file of your project's facts, and writes it into CLAUDE.md, so Claude starts each session knowing your project. FAF defines. MD instructs. AI codes.",
+		emoji: '🧡',
+		version: 'claude-faf-mcp v7.2.2',
+		category: 'Release',
+		ticker: 'claude-faf-mcp, Explained — v7.2.2'
+	},
+	{
 		slug: 'blog/project-facts-edition',
 		title: 'The Project Facts Edition',
 		version: 'faf-cli v8.11.0',
