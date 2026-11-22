@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/project-facts-edition',
+		title: 'The Project Facts Edition',
+		version: 'faf-cli v8.11.0',
+		date: 'November 22, 2026',
+		timestamp: '2026-11-22',
+		excerpt:
+			"The six W's now reach every agent: AGENTS.md points to project.faf, and CLAUDE.md, GEMINI.md, .cursorrules, Copilot and llms.txt carry them, one rule, one line each.",
+		emoji: '☑️',
+		category: 'Release',
+		ticker: 'The Project Facts Edition — faf-cli v8.11.0'
+	},
+	{
 		slug: 'blog/shipped-this-week-2026-11-20',
 		title: 'Shipped this Week — Nov 20, 2026',
 		version: 'November 16 – 20, 2026',
