@@ -129,8 +129,8 @@ Comments · suggestions welcome.`;
 						<p class="layer-step">1 · FAF defines</p>
 						<p class="layer-file"><code>project.faf</code></p>
 						<p class="layer-body">
-							Your project's facts in YAML (IANA <code>application/vnd.faf+yaml</code>). The stack from
-							the repo; the goal and six W's from you. Scored 0–100%.
+							Your project's facts in YAML, IANA-registered. The stack from the repo; the goal and six W's
+							from you. Scored 0–100%.
 						</p>
 					</div>
 					<div class="arrow" aria-hidden="true">→</div>
@@ -503,7 +503,8 @@ Comments · suggestions welcome.`;
 	.span-body {
 		font-size: 0.88rem;
 	}
-	.span-bar code {
+	/* two classes deep: `.post-content code` (padding 0.4rem) comes later and would win */
+	.stack-diagram .span-bar code {
 		color: var(--faf-solid-fg);
 		background: none;
 		border: none;
