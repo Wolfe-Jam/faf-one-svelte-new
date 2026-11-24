@@ -5,6 +5,18 @@
 
 export const posts = [
 	{
+		slug: 'blog/one-source-edition',
+		title: 'The One Source Edition',
+		version: 'faf-cli v8.12.0',
+		date: 'November 24, 2026',
+		timestamp: '2026-11-24',
+		excerpt:
+			'Every agent file keeps to its lane: project.faf holds the facts, AGENTS.md instructs, and CLAUDE.md imports it. A deep dive into the three lanes, the import, faf-cli/fetch and the birth certificate.',
+		emoji: '🧭',
+		category: 'Release',
+		ticker: 'The One Source Edition — faf-cli v8.12.0'
+	},
+	{
 		slug: 'blog/claude-faf-mcp-explained',
 		title: 'claude-faf-mcp, Explained',
 		date: 'November 22, 2026',
