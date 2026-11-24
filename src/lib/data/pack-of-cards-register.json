@@ -1163,7 +1163,7 @@
      }
     },
     {
-     "label": "latest (10-01 trust merges)",
+     "label": "10-01 trust merges",
      "date": "2026-10-01",
      "ref": "769b17461dbc74ee2d7efc8461f0238b8aa39987",
      "sources": [
@@ -1238,6 +1238,86 @@
        "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
        "link": "https://github.com/Agent-Card/ai-catalog/blob/769b17461dbc74ee2d7efc8461f0238b8aa39987/specification/ai-catalog.md#L1482",
        "note": "CDDL CatalogEntry L1871 agrees. Required top-level catalog fields: specVersion, entries (L99-109; CDDL L1857)."
+      }
+     }
+    },
+    {
+     "label": "v0.9.0 release candidate",
+     "date": "2026-11-22",
+     "ref": "19208af2f8adbc0a6457e3ff36ce691a304fbd97",
+     "sources": [
+      "specification/ai-catalog.md"
+     ],
+     "why_checkpoint": "First tagged release: v0.9.0, the release candidate for v1.0 (GitHub release published 2026-11-22 UTC; the tag commit 19208af merged 2026-11-19). Implementations use specVersion \"0.9\"; v1.0 will use \"1.0\", and v0.9 is not an alias for it. Since 10-01: urn:air became {publisher}:{name}[:{kind}] (was {publisher}:{namespace}:{name}; #138), so pre-v0.9 ids keep a valid shape but read as name={namespace}, kind={name}; Trust Manifests moved from a singular trustManifest to a trustManifests array of independent contributions, each MUST carry contributor, an absolute URI (#117); catalog, entry, Host Info and Publisher objects are open to unrecognized members (ADR-0028, #131); a Policy URLs extension is defined. No tracked vocabulary value changed.",
+     "values": {
+      "naming": {
+       "value": {
+        "field": "displayName",
+        "required": false
+       },
+       "evidence": "? displayName: text,",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L2128",
+       "note": "CDDL CatalogEntry (L2126). Name resolution: entry displayName, then the artifact's own name (an MCP Server Card's title), then the urn:air {name} verbatim (L398-411)."
+      },
+      "identity": {
+       "value": "urn:air",
+       "evidence": "SHOULD use the AI Catalog-specific `urn:air` naming structure",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L245",
+       "note": "Open text; consumers treat unknown schemes as opaque (same line). Format `urn:air:{publisher}:{name}[:{kind}]` (L248): neither name nor kind contains a colon. Was {publisher}:{namespace}:{name} until v0.9 (#138)."
+      },
+      "discovery": {
+       "value": "/.well-known/ai-catalog.json",
+       "evidence": "/.well-known/ai-catalog.json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L1659",
+       "note": "MAY (L1656). Link relation discovery L1678. IANA sections: link relation L2058, well-known URI L2074. None is in the IANA registries (checked 2026-11-24)."
+      },
+      "type": {
+       "value": {
+        "media_type": "application/ai-catalog+json",
+        "status": "de-facto"
+       },
+       "evidence": "application/ai-catalog+json",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L129",
+       "note": "Registration section L2010. Not in the IANA application media-types registry (checked 2026-11-24); the spec says publishing it 'does not itself constitute IANA registration'."
+      },
+      "encoding": {
+       "value": "json",
+       "evidence": "An AI Catalog document is a JSON object that MUST contain the following",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L133",
+       "note": ""
+      },
+      "extension": {
+       "value": "extensions-map",
+       "evidence": "represent the extension type (namespace), and the corresponding value contains the extension data.",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L1391",
+       "note": "Keys 'MUST be a valid URL or a reverse-DNS string' (L1393-1394). Objects are also open to unrecognized members (ADR-0028)."
+      },
+      "trust": {
+       "value": "trust-manifest+jws",
+       "evidence": "array contains these independent contributions. Each manifest MUST contain",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L620",
+       "note": "`trustManifests` is an OPTIONAL array (L387), one manifest per contributor; `contributor` MUST be an absolute URI (L625). A manifest's `signature` is a detached compact JWS (L945). Level 3 Trusted Catalog L1751."
+      },
+      "versioning": {
+       "value": [
+        "specVersion"
+       ],
+       "evidence": "`specVersion`",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L136",
+       "note": "'Major.Minor' (L138); v0.9 RC uses \"0.9\" (L1603). Version Handling L1592."
+      },
+      "required_fields": {
+       "value": {
+        "fields": [
+         "identifier",
+         "type",
+         "url|data"
+        ],
+        "count": 3
+       },
+       "evidence": "minimum `identifier`, `type`, and exactly one of `url` or",
+       "link": "https://github.com/Agent-Card/ai-catalog/blob/19208af2f8adbc0a6457e3ff36ce691a304fbd97/specification/ai-catalog.md#L1736",
+       "note": "Level 1 (L1729). CDDL CatalogEntry L2126 agrees. Required top-level: specVersion, entries (L133-141; CDDL L2108)."
       }
      }
     }
@@ -2719,5 +2799,5 @@
    ]
   }
  },
- "as_of": "2026-10-06"
+ "as_of": "2026-11-22"
 }
