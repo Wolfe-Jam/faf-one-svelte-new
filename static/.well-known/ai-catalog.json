@@ -166,7 +166,6 @@
     {
       "identifier": "urn:air:faf.one:context-mcp",
       "type": "application/mcp-server-card+json",
-      "description": "Live MCP server carrying FAF context in its reverse-DNS _meta[\"one.faf/context\"] slot.",
       "tags": [
         "mcp",
         "server-card",
@@ -187,7 +186,8 @@
       ],
       "extensions": {
         "one.faf.former-identifiers": [
-          "urn:air:faf.one:mcp:context-server"
+          "urn:air:faf.one:mcp:context-server",
+          "urn:air:faf.one:mcp:context"
         ]
       }
     },
