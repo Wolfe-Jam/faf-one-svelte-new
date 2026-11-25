@@ -1,7 +1,7 @@
 /**
  * ZEPH's project.faf, served from faf.one with its registered media type.
  *
- * The AI Catalog lists it (urn:air:faf.one:context:zeph). GitHub's raw host serves every file as
+ * The AI Catalog lists it (urn:air:faf.one:zeph-context). GitHub's raw host serves every file as
  * text/plain, which breaks the catalog's "served with the type its entry declares". The source of
  * truth stays the xai-faf-zeph repo: this route reads it on request (edge-cached), so there is no
  * second copy to drift.
