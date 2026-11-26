@@ -197,10 +197,9 @@ Checked yours?`;
 				checker was v0.7.1, which follows AI Catalog v0.9.0; the November 20 count used v0.4.1 and
 				the October 12 count v0.1.1. Since October the CORS rule got stricter (v0.3.4, see above),
 				and since November 20 the schema snapshot gained the optional
-				<code>Remote.extensionsInfo</code> field (v0.5.0). The Server Card figures are in the
+				<code>Remote.extensionsInfo</code> field (v0.5.0). Every figure is in the
 				<a href="https://github.com/Wolfe-Jam/mcp-server-card-check/tree/main/docs/census">repository</a>,
-				with the scripts, so they can be reproduced. The AI Catalog figures were counted from the
-				same run's raw output, one catalog per host.
+				with the scripts, so it can be reproduced. AI Catalogs are counted once per host.
 			</p>
 			<p>We count every week now.</p>
 		</section>
