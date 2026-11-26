@@ -7,8 +7,8 @@ export const posts = [
 	{
 		slug: 'blog/five-times-over',
 		title: 'Five Times Over',
-		date: 'November 27, 2026',
-		timestamp: '2026-11-27',
+		date: 'November 26, 2026',
+		timestamp: '2026-11-26',
 		excerpt:
 			'Six weeks after the first count, endpoints with a valid MCP Server Card, outside the largest gateway, rose from 1.7% to 8.5%. And the first count of AI Catalogs: 4,144 found.',
 		emoji: '🃏',

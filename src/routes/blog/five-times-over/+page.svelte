@@ -1,9 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { buildShareIntent } from '#lib/shareIntent.js';
-
-	let mounted = false;
-	onMount(() => { mounted = true; });
 
 	const shareText = `MCP Server Cards, six weeks on.
 
@@ -23,7 +19,7 @@ Checked yours?`;
 	<meta property="og:title" content="Five Times Over - MCP Server Cards, Six Weeks On" />
 	<meta property="og:description" content="Endpoints with a valid MCP Server Card, outside the largest gateway: 1.7% to 8.5% in six weeks. And 4,144 AI Catalogs, counted for the first time." />
 	<meta property="og:type" content="article" />
-	<meta property="article:published_time" content="2026-11-27" />
+	<meta property="article:published_time" content="2026-11-26" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:image" content="https://faf.one/blog/five-times-over-hero.png" />
 	<meta name="twitter:image" content="https://faf.one/blog/five-times-over-hero.png" />
@@ -37,7 +33,7 @@ Checked yours?`;
 		<h1>Five Times Over</h1>
 		<p class="subtitle">MCP Server Cards, six weeks on</p>
 		<div class="meta">
-			<time datetime="2026-11-27">Published November 27, 2026</time>
+			<time datetime="2026-11-26">Published November 26, 2026</time>
 			<span class="separator">•</span>
 			<span class="category story">Story</span>
 		</div>
@@ -103,8 +99,8 @@ Checked yours?`;
 			</div>
 			<p>
 				<strong>Who is dealing.</strong> Three publishers carry 3,960 of the 5,973 valid cards: one
-				gateway (1,936) and two others (1,230 and 794). Their cards are real, but they are three
-				deployments. Leave all three out and 4.9% of hosts have a valid card (1,794 of 36,362),
+				gateway (1,936) and two others (1,230 and 794). Their cards are real, but they come from three
+				publishers. Leave all three out and 4.9% of hosts have a valid card (1,794 of 36,362),
 				still more than double October's 1.9%.
 			</p>
 			<figure class="dealers" aria-labelledby="dealers-cap">
@@ -127,14 +123,14 @@ Checked yours?`;
 			<ul>
 				<li>
 					<strong>Web pages where the card should be.</strong> 1,233 endpoints answer the card's
-					address with <code>200 OK</code> and an HTML page, usually a catch-all route. A client
-					asked for JSON and got a website.
+					address with <code>200 OK</code> and a body that isn't JSON. A client asked for a card
+					and got something else.
 				</li>
 				<li>
 					<strong>Browsers.</strong> Of 7,957 JSON cards, 6,538 send
-					<code>Access-Control-Allow-Origin: *</code>, but only <strong>1,320</strong> send all four
-					CORS headers the spec lists, up from 179 on October 12. The checker's rule is stricter now
-					than in October, so that rise is if anything understated.
+					<code>Access-Control-Allow-Origin: *</code>, but far fewer send all four CORS headers the
+					spec lists. By the rule we used on October 12, <strong>179 → 1,383</strong>. Under
+					today's stricter rule (the last two read from the preflight, as browsers do), 1,320.
 				</li>
 				<li>
 					<strong>Repeat visits.</strong> 3,655 cards answer a repeat request with
@@ -198,12 +194,13 @@ Checked yours?`;
 			<p>
 				Registry read at 16:37 UTC on November 25; checks ran until 20:12 UTC, with no errors. 451
 				addresses were templates (such as <code>&#123;tenant&#125;</code>) and were skipped. The
-				checker was v0.7.1, which follows AI Catalog v0.9.0; the earlier counts used v0.4.1. Two
-				things changed in between: the schema snapshot gained the optional
-				<code>Remote.extensionsInfo</code> field, and the CORS rule got stricter (see above). The
-				figures are in the
+				checker was v0.7.1, which follows AI Catalog v0.9.0; the November 20 count used v0.4.1 and
+				the October 12 count v0.1.1. Since October the CORS rule got stricter (v0.3.4, see above),
+				and since November 20 the schema snapshot gained the optional
+				<code>Remote.extensionsInfo</code> field (v0.5.0). The Server Card figures are in the
 				<a href="https://github.com/Wolfe-Jam/mcp-server-card-check/tree/main/docs/census">repository</a>,
-				with the scripts, so every number on this page can be reproduced.
+				with the scripts, so they can be reproduced. The AI Catalog figures were counted from the
+				same run's raw output, one catalog per host.
 			</p>
 			<p>We count every week now.</p>
 		</section>
@@ -386,21 +383,6 @@ Checked yours?`;
 		font-weight: 700;
 	}
 
-	.terminal-block {
-		background: var(--faf-solid-bg);
-		border-radius: 8px;
-		padding: 1.25rem 1.5rem;
-		margin: 1.25rem 0;
-		overflow-x: auto;
-	}
-	.terminal-block code {
-		background: none;
-		color: #00ff88;
-		font-size: 0.9rem;
-		line-height: 1.7;
-		padding: 0;
-	}
-
 
 	.share-section {
 		text-align: center;
@@ -417,14 +399,6 @@ Checked yours?`;
 	}
 	.share-btn:hover {
 		opacity: 0.85;
-	}
-
-	.footer-note {
-		text-align: center;
-		color: var(--faf-dark);
-		font-size: 0.95rem;
-		border-top: 1px solid var(--faf-border);
-		padding-top: 2rem;
 	}
 
 	@media (max-width: 600px) {
@@ -472,7 +446,7 @@ Checked yours?`;
 		white-space: nowrap;
 	}
 	.seg.three {
-		background: var(--faf-gray);
+		background: var(--faf-dark);
 		color: var(--faf-surface);
 	}
 	.seg.rest {
@@ -512,7 +486,7 @@ Checked yours?`;
 		border-radius: 3px;
 	}
 	.dealers .sw.three {
-		background: var(--faf-gray);
+		background: var(--faf-dark);
 	}
 	.dealers .sw.rest {
 		background: var(--faf-orange);
