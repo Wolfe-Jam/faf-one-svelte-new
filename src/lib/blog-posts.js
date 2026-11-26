@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/five-times-over',
+		title: 'Five Times Over',
+		date: 'November 26, 2026',
+		timestamp: '2026-11-26',
+		excerpt:
+			'Six weeks after the first count, endpoints with a valid MCP Server Card, outside the largest gateway, rose from 1.7% to 8.5%. And the first count of AI Catalogs: 4,144 found.',
+		emoji: '🃏',
+		category: 'Story',
+		ticker: 'Five Times Over — MCP Server Cards, six weeks on'
+	},
+	{
 		slug: 'blog/one-source-edition',
 		title: 'The One Source Edition',
 		version: 'faf-cli v8.12.0',
