@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/every-repo-edition',
+		title: 'The Every Repo Edition',
+		version: 'faf-cli v8.13.0',
+		date: 'November 26, 2026',
+		timestamp: '2026-11-26',
+		excerpt:
+			'faf auto knows Cargo workspaces and Agent Plugins, and AGENTS.md carries the release gate and the CI checks.',
+		emoji: '📦',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/five-times-over',
 		title: 'Five Times Over',
 		date: 'November 26, 2026',
