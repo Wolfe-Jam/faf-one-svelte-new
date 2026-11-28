@@ -83,6 +83,9 @@ Comments · suggestions · shares welcome.`;
 	</div>
 
 	<article class="post-content">
+		<p class="now-at">
+			<strong>Now at 1.10.2.</strong> <a href="/blog/mcp-context-card-1-10">What's changed since 1.0 →</a>
+		</p>
 		<section class="intro">
 			<p class="lead">
 				<strong>TL;DR:</strong> <code>mcp-context-card</code> is live at
@@ -362,6 +365,17 @@ Comments · suggestions · shares welcome.`;
 	.post-content p {
 		margin: 0 0 1rem;
 		color: #1a1a1a;
+	}
+
+	.now-at {
+		margin: 0 0 1.5rem;
+		padding: 0.75rem 1rem;
+		background: var(--faf-section-alt);
+		color: var(--faf-black);
+		border-radius: 8px;
+	}
+	.now-at a {
+		color: var(--faf-cyan-text);
 	}
 
 	.lead {
