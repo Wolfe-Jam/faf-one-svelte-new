@@ -165,6 +165,7 @@
     },
     {
       "identifier": "urn:air:faf.one:context-mcp",
+      "displayName": "FAF Context Endpoint",
       "type": "application/mcp-server-card+json",
       "tags": [
         "mcp",
