@@ -5,6 +5,17 @@
 
 export const posts = [
 	{
+		slug: 'blog/mcp-context-card-1-10',
+		title: 'mcp-context-card 1.10',
+		date: 'November 28, 2026',
+		timestamp: '2026-11-28',
+		excerpt:
+			"MCP server for a project's context (AGENTS.md), memory, and identity — base or drop-in extension. 1.10: AI Catalog v0.9 ids, and discovery that names only a host the operator vouches for.",
+		emoji: '🃏',
+		version: 'mcp-context-card v1.10.2',
+		category: 'Release'
+	},
+	{
 		slug: 'blog/five-times-over',
 		title: 'Five Times Over',
 		date: 'November 26, 2026',
